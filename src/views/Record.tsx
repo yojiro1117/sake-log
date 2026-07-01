@@ -1,11 +1,11 @@
-import { Camera, Copy, Download, Search, Share2, Sparkles } from 'lucide-react';
+import { Camera, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { RadarChart } from '../components/RadarChart';
 import { Field, Section } from '../components/Section';
 import { alcoholOptions, alcoholProfiles } from '../data/alcoholProfiles';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
-import { generatePostImage, fileToResizedBlob } from '../services/imageService';
+import { fileToResizedBlob } from '../services/imageService';
 import { historyPriceCandidates, searchRakutenPrices } from '../services/priceService';
 import { averageScore, correctedScore, evaluateValue, pairingSuggestions, summarizePrices } from '../services/scoring';
 import { generatePostText } from '../services/textGenerator';
@@ -41,8 +41,6 @@ export function Record() {
   const [priceImpression, setPriceImpression] = useState('');
   const [priceCandidates, setPriceCandidates] = useState<MarketPriceCandidate[]>([]);
   const [isSearching, setIsSearching] = useState(false);
-  const [generatedImageUrl, setGeneratedImageUrl] = useState('');
-  const [generatedText, setGeneratedText] = useState('');
   const [status, setStatus] = useState('');
 
   const profile = alcoholProfiles[alcoholType];
@@ -154,15 +152,6 @@ export function Record() {
     }
   }
 
-  async function generateAssets() {
-    const text = draftLog.generatedTexts.sns;
-    setGeneratedText(text);
-    const image = await generatePostImage(draftLog, photo);
-    if (generatedImageUrl) URL.revokeObjectURL(generatedImageUrl);
-    setGeneratedImageUrl(URL.createObjectURL(image));
-    setStatus('投稿文と投稿画像を生成しました。');
-  }
-
   async function saveLog() {
     if (!productName.trim()) {
       setStatus('銘柄名を入力してください。');
@@ -170,7 +159,6 @@ export function Record() {
     }
     const logId = crypto.randomUUID();
     const log = { ...draftLog, logId, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
-    let postImageBlob: Blob | undefined;
     if (photo) {
       const imageRecord: SakeImage = {
         imageId: crypto.randomUUID(),
@@ -182,21 +170,10 @@ export function Record() {
         createdAt: new Date().toISOString()
       };
       await db.images.put(imageRecord);
-      postImageBlob = await generatePostImage(log, photo);
     }
-    await db.logs.put({ ...log, postImagePath: postImageBlob ? 'indexeddb://images/posts/generated' : undefined });
+    await db.logs.put(log);
     await db.priceCandidates.bulkPut(priceCandidates);
     setStatus('保存しました。ログ画面から確認できます。');
-  }
-
-  async function shareDraft() {
-    if (!generatedText) await generateAssets();
-    if (navigator.share) {
-      await navigator.share({ title: productName || 'SAKEログ', text: generatedText || draftLog.generatedTexts.sns });
-    } else {
-      await navigator.clipboard.writeText(generatedText || draftLog.generatedTexts.sns);
-      setStatus('共有API非対応のため投稿文をコピーしました。');
-    }
   }
 
   function switchType(next: AlcoholType) {
@@ -208,7 +185,7 @@ export function Record() {
     <div className="space-y-5">
       <header>
         <p className="text-sm font-bold text-gold">記録フロー</p>
-        <h1 className="mt-1 text-2xl font-black">写真、評価、投稿素材まで一気に作成</h1>
+        <h1 className="mt-1 text-2xl font-black">写真と評価で、お酒の記録を作成</h1>
       </header>
 
       <Section title="1. 酒種選択">
@@ -315,7 +292,7 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="7. プレビュー">
+      <Section title="7. レーダーチャート">
         <div className="glass-panel rounded-lg p-4">
           <div className="h-72"><RadarChart type={alcoholType} scores={scores} /></div>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center">
@@ -324,30 +301,31 @@ export function Record() {
             <Metric label="コスパ" value={value.valueScore} />
           </div>
           <p className="mt-3 text-sm leading-6 text-rice/70">{correction.reason}</p>
-          <p className="mt-2 text-sm text-gold">提案料理：{pairings.join('、')}</p>
         </div>
       </Section>
 
-      <Section title="8. 投稿文・画像生成">
-        <div className="space-y-3">
-          <button className="flex w-full items-center justify-center gap-2 rounded-md bg-gold px-4 py-3 font-bold text-ink" onClick={generateAssets}>
-            <Sparkles size={18} />
-            投稿素材を生成
-          </button>
-          <textarea className={`${inputClass} min-h-36`} value={generatedText || draftLog.generatedTexts.sns} onChange={(event) => setGeneratedText(event.target.value)} />
-          {generatedImageUrl ? <img src={generatedImageUrl} className="rounded-lg" alt="SNS投稿画像" /> : null}
-          <div className="grid grid-cols-3 gap-2">
-            <button className="rounded-md bg-rice/8 px-2 py-3" onClick={() => navigator.clipboard.writeText(generatedText || draftLog.generatedTexts.sns)} title="コピー"><Copy className="mx-auto" /></button>
-            <a className="rounded-md bg-rice/8 px-2 py-3 text-center" href={generatedImageUrl || undefined} download="sake-log-post.png" title="画像保存"><Download className="mx-auto" /></a>
-            <button className="rounded-md bg-rice/8 px-2 py-3" onClick={shareDraft} title="共有"><Share2 className="mx-auto" /></button>
+      <Section title="8. 料理ペアリング">
+        <div className="rounded-lg bg-rice/8 p-4">
+          <p className="text-sm leading-6 text-rice/70">評価から相性の良さそうな料理を表示します。</p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {pairings.map((pairing) => (
+              <span key={pairing} className="rounded-full bg-gold/15 px-3 py-2 text-sm font-bold text-gold">
+                {pairing}
+              </span>
+            ))}
           </div>
         </div>
       </Section>
 
-      <Section title="9. メモ・保存">
+      <Section title="9. 感想メモ">
         <div className="grid gap-3">
           <Field label="タグ（カンマ区切り）"><input className={inputClass} value={tags} onChange={(event) => setTags(event.target.value)} /></Field>
-          <Field label="メモ"><textarea className={`${inputClass} min-h-24`} value={memo} onChange={(event) => setMemo(event.target.value)} /></Field>
+          <Field label="記録コメント"><textarea className={`${inputClass} min-h-24`} value={memo} onChange={(event) => setMemo(event.target.value)} /></Field>
+        </div>
+      </Section>
+
+      <Section title="10. 保存">
+        <div className="grid gap-3">
           <button className="rounded-md bg-rice px-4 py-4 font-black text-ink" onClick={saveLog}>保存</button>
           {status ? <p className="rounded-md bg-gold/15 p-3 text-sm text-gold">{status}</p> : null}
         </div>

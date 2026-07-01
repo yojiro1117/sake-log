@@ -16,7 +16,7 @@ export function Home({ onNavigate }: { onNavigate: (tab: Tab) => void }) {
     <div className="space-y-2">
       <div className="rounded-lg bg-rice p-5 text-ink shadow-glow">
         <p className="text-sm font-bold text-moss">SAKEログ</p>
-        <h1 className="mt-2 text-3xl font-black">今日の一杯を、記録から投稿まで。</h1>
+        <h1 className="mt-2 text-3xl font-black">今日の一杯を、手軽に記録。</h1>
         <button
           className="mt-5 flex w-full items-center justify-center gap-2 rounded-md bg-ink px-4 py-4 font-bold text-rice"
           onClick={() => onNavigate('record')}

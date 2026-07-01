@@ -88,7 +88,7 @@ export function Logs() {
             <h2 className="text-2xl font-black">{selected.productName}</h2>
             <p className="mt-1 text-gold">{alcoholProfiles[selected.alcoholType].label} / 満足度 {selected.satisfactionScore}/6 / コスパ {selected.valueScore}</p>
             <div className="mt-4 h-72"><RadarChart type={selected.alcoholType} scores={selected.baseScores} /></div>
-            <p className="mt-4 rounded-md bg-rice/8 p-4 text-sm leading-7">{selected.generatedTexts.sns}</p>
+            <p className="mt-4 rounded-md bg-rice/8 p-4 text-sm leading-7">{selected.memo || '感想メモは未入力です。'}</p>
             <p className="mt-3 text-sm text-rice/64">{selected.correctionReason}</p>
           </div>
         </div>

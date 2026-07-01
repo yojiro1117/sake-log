@@ -6,6 +6,7 @@ import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { downloadBlob, exportLocalData } from '../services/backupService';
 import type { PostTemplate, ToneSettings } from '../types';
+import { FEATURES } from '../config/features';
 
 const inputClass = 'w-full rounded-md border border-rice/12 bg-ink/70 px-3 py-3 text-rice outline-none focus:border-gold';
 
@@ -40,7 +41,7 @@ export function Settings() {
     <div className="space-y-4">
       <header>
         <p className="text-sm font-bold text-gold">設定</p>
-        <h1 className="mt-1 text-2xl font-black">無料運用と投稿文体を調整</h1>
+        <h1 className="mt-1 text-2xl font-black">記録とバックアップの設定</h1>
       </header>
 
       <Section title="20歳以上確認">
@@ -63,30 +64,33 @@ export function Settings() {
         </div>
       </Section>
 
-      <Section title="文体カスタム">
-        <div className="grid grid-cols-2 gap-3">
-          <Select label="口調" value={tone.voice} onChange={(value) => updateTone({ voice: value as ToneSettings['voice'] })} options={[['polite', '丁寧'], ['natural', '自然体'], ['casual', 'フランク'], ['expert', '専門家風']]} />
-          <Select label="文章量" value={tone.length} onChange={(value) => updateTone({ length: value as ToneSettings['length'] })} options={[['short', '短め'], ['standard', '標準'], ['detailed', '詳しめ']]} />
-          <Select label="テンション" value={tone.energy} onChange={(value) => updateTone({ energy: value as ToneSettings['energy'] })} options={[['calm', '落ち着き'], ['standard', '標準'], ['bright', '明るめ']]} />
-          <Select label="ハッシュタグ" value={tone.hashtag} onChange={(value) => updateTone({ hashtag: value as ToneSettings['hashtag'] })} options={[['none', 'なし'], ['few', '少なめ'], ['standard', '標準'], ['many', '多め']]} />
-        </div>
-      </Section>
+      {FEATURES.postTextGeneration ? (
+        <Section title="コメント文設定">
+          <div className="grid grid-cols-2 gap-3">
+            <Select label="口調" value={tone.voice} onChange={(value) => updateTone({ voice: value as ToneSettings['voice'] })} options={[['polite', '丁寧'], ['natural', '自然体'], ['casual', 'フランク'], ['expert', '専門家風']]} />
+            <Select label="文章量" value={tone.length} onChange={(value) => updateTone({ length: value as ToneSettings['length'] })} options={[['short', '短め'], ['standard', '標準'], ['detailed', '詳しめ']]} />
+            <Select label="テンション" value={tone.energy} onChange={(value) => updateTone({ energy: value as ToneSettings['energy'] })} options={[['calm', '落ち着き'], ['standard', '標準'], ['bright', '明るめ']]} />
+          </div>
+        </Section>
+      ) : null}
 
-      <Section title="投稿テンプレート管理">
-        <div className="space-y-3">
-          {templates.map((template) => (
-            <div key={template.templateId} className="rounded-lg bg-rice/8 p-4">
-              <p className="mb-2 font-bold text-gold">{template.templateName}</p>
-              <textarea className={`${inputClass} min-h-28`} value={template.body} onChange={(event) => updateTemplate(template, event.target.value)} />
-            </div>
-          ))}
-        </div>
-      </Section>
+      {FEATURES.commentTemplates ? (
+        <Section title="コメントテンプレート管理">
+          <div className="space-y-3">
+            {templates.map((template) => (
+              <div key={template.templateId} className="rounded-lg bg-rice/8 p-4">
+                <p className="mb-2 font-bold text-gold">{template.templateName}</p>
+                <textarea className={`${inputClass} min-h-28`} value={template.body} onChange={(event) => updateTemplate(template, event.target.value)} />
+              </div>
+            ))}
+          </div>
+        </Section>
+      ) : null}
 
       <Section title="診断">
         <div className="grid gap-3">
-          <Diagnosis title="性格診断" description="投稿文体の論理性、情報量、丁寧度、自然体などを後続実装で保存します。" />
-          <Diagnosis title="飲酒レビュー用プロフィール診断" description="香味探求、食中酒、コスパ実用、SNS映えなどのタイプ判定を後続実装しやすいストアに分離済みです。" />
+          <Diagnosis title="性格診断" description="感想の書き方や記録スタイルの傾向を、後続実装で保存できるようにしています。" />
+          <Diagnosis title="飲酒レビュー用プロフィール診断" description="香味探求、食中酒、コスパ実用、写真映えなどのタイプ判定を後続実装しやすいストアに分離済みです。" />
         </div>
       </Section>
 
