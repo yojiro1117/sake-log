@@ -1,5 +1,5 @@
 import { Camera, Search } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { RadarChart } from '../components/RadarChart';
 import { Field, Section } from '../components/Section';
 import { alcoholOptions, alcoholProfiles } from '../data/alcoholProfiles';
@@ -7,13 +7,14 @@ import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { fileToResizedBlob } from '../services/imageService';
 import { historyPriceCandidates, searchRakutenPrices } from '../services/priceService';
+import { createImportedPhotoDrafts } from '../services/photoImport';
 import { averageScore, correctedScore, evaluateValue, pairingSuggestions, summarizePrices } from '../services/scoring';
 import { generatePostText } from '../services/textGenerator';
-import type { AlcoholType, BackgroundMode, MarketPriceCandidate, SakeImage, SakeLog } from '../types';
+import type { AlcoholType, BackgroundMode, ImportedPhotoDraft, MarketPriceCandidate, PhotoImportCandidate, SakeImage, SakeLog } from '../types';
 
 const inputClass = 'w-full rounded-md border border-rice/12 bg-ink/70 px-3 py-3 text-rice outline-none focus:border-gold';
 
-export function Record() {
+export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: File[]; onImportQueueDone?: () => void }) {
   const settings = useLiveQuery(() => db.userSettings.get('default'), undefined);
   const templates = useLiveQuery(() => db.templates.toArray(), []);
   const logs = useLiveQuery(() => db.logs.toArray(), []);
@@ -31,6 +32,12 @@ export function Record() {
   const [backgroundMode, setBackgroundMode] = useState<BackgroundMode>('original');
   const [photo, setPhoto] = useState<Blob | undefined>();
   const [photoPreview, setPhotoPreview] = useState('');
+  const [photoTakenAt, setPhotoTakenAt] = useState<string | undefined>();
+  const [photoQueue, setPhotoQueue] = useState<ImportedPhotoDraft[]>([]);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const [ocrText, setOcrText] = useState('');
+  const [photoCandidates, setPhotoCandidates] = useState<PhotoImportCandidate[]>([]);
+  const [isImporting, setIsImporting] = useState(false);
   const [scores, setScores] = useState<Record<string, number>>(() => initialScores('sake'));
   const [satisfactionScore, setSatisfactionScore] = useState(4);
   const [repeatScore, setRepeatScore] = useState(4);
@@ -49,6 +56,22 @@ export function Record() {
   const value = evaluateValue(satisfactionScore, adoptedMarketPrice);
   const pairings = pairingSuggestions(alcoholType, scores);
   const defaultTemplate = templates[0];
+
+  useEffect(() => {
+    if (importFiles.length === 0) return;
+    setIsImporting(true);
+    createImportedPhotoDrafts(importFiles)
+      .then((drafts) => {
+        setPhotoQueue(drafts);
+        setActivePhotoIndex(0);
+        if (drafts[0]) applyImportedDraft(drafts[0], drafts.length);
+      })
+      .catch(() => setStatus('写真の読み込みに失敗しました。手入力で記録できます。'))
+      .finally(() => setIsImporting(false));
+    // Import files are supplied as a one-shot queue from the home screen.
+    // Re-running this effect for form-state helper changes would reset user edits.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [importFiles]);
 
   const draftLog = useMemo<SakeLog>(() => {
     const generatedTexts = defaultTemplate
@@ -73,6 +96,7 @@ export function Record() {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       drankAt,
+      photoTakenAt,
       alcoholType,
       productName,
       makerName,
@@ -113,6 +137,7 @@ export function Record() {
     glassType,
     makerName,
     memo,
+    photoTakenAt,
     priceCandidates,
     productName,
     purchasePrice,
@@ -127,12 +152,47 @@ export function Record() {
     volume
   ]);
 
-  async function handlePhoto(file?: File) {
-    if (!file) return;
-    const resized = await fileToResizedBlob(file);
-    setPhoto(resized);
+  function applyCandidate(candidate: PhotoImportCandidate) {
+    if (candidate.productName) setProductName(candidate.productName);
+    if (candidate.makerName) setMakerName(candidate.makerName);
+    if (candidate.volume) setVolume(candidate.volume);
+    if (candidate.abv) setAbv(candidate.abv);
+  }
+
+  function applyImportedDraft(draft: ImportedPhotoDraft, total = photoQueue.length) {
+    setPhoto(draft.resizedBlob);
     if (photoPreview) URL.revokeObjectURL(photoPreview);
-    setPhotoPreview(URL.createObjectURL(resized));
+    setPhotoPreview(draft.previewUrl);
+    const takenDate = draft.takenAt ?? new Date().toISOString().slice(0, 10);
+    setPhotoTakenAt(draft.takenAt);
+    setDrankAt(takenDate);
+    setOcrText(draft.ocrText ?? '');
+    setPhotoCandidates(draft.candidates);
+    if (draft.candidates[0]) applyCandidate(draft.candidates[0]);
+    setStatus(
+      draft.takenAt
+        ? `写真の撮影日を記録日に設定しました。${total > 1 ? `${total}枚中1枚目です。` : ''}`
+        : `撮影日を取得できなかったため、今日の日付を設定しました。${total > 1 ? `${total}枚中1枚目です。` : ''}`
+    );
+  }
+
+  async function handlePhotos(files: File[]) {
+    if (files.length === 0) return;
+    setIsImporting(true);
+    const drafts = await createImportedPhotoDrafts(files);
+    if (drafts[0]) {
+      setPhotoQueue(drafts);
+      setActivePhotoIndex(0);
+      applyImportedDraft(drafts[0], drafts.length);
+    } else {
+      const file = files[0];
+      const resized = await fileToResizedBlob(file);
+      setPhoto(resized);
+      if (photoPreview) URL.revokeObjectURL(photoPreview);
+      setPhotoPreview(URL.createObjectURL(resized));
+      setDrankAt(new Date().toISOString().slice(0, 10));
+    }
+    setIsImporting(false);
   }
 
   async function searchPrice() {
@@ -167,13 +227,22 @@ export function Record() {
         originalBlob: photo,
         processedBlob: photo,
         backgroundMode,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        takenAt: photoTakenAt
       };
       await db.images.put(imageRecord);
     }
     await db.logs.put(log);
     await db.priceCandidates.bulkPut(priceCandidates);
-    setStatus('保存しました。ログ画面から確認できます。');
+    if (photoQueue.length > activePhotoIndex + 1) {
+      const nextIndex = activePhotoIndex + 1;
+      setActivePhotoIndex(nextIndex);
+      applyImportedDraft(photoQueue[nextIndex], photoQueue.length);
+      setStatus(`保存しました。${photoQueue.length}枚中${nextIndex + 1}枚目を編集中です。`);
+    } else {
+      onImportQueueDone?.();
+      setStatus('保存しました。ログ画面から確認できます。');
+    }
   }
 
   function switchType(next: AlcoholType) {
@@ -188,7 +257,62 @@ export function Record() {
         <h1 className="mt-1 text-2xl font-black">写真と評価で、お酒の記録を作成</h1>
       </header>
 
-      <Section title="1. 酒種選択">
+      <Section title="1. 写真選択">
+        <div className="glass-panel rounded-lg p-4">
+          {photoQueue.length > 0 ? (
+            <p className="mb-3 rounded-md bg-gold/15 p-3 text-sm font-bold text-gold">
+              {photoQueue.length}枚中{activePhotoIndex + 1}枚目を編集中
+            </p>
+          ) : null}
+          {photoPreview ? <img src={photoPreview} className="mb-3 aspect-[4/3] w-full rounded-md object-cover" alt="登録写真" /> : null}
+          <div className="grid grid-cols-2 gap-3">
+            <label className="flex items-center justify-center gap-2 rounded-md bg-rice px-3 py-3 font-bold text-ink">
+              <Camera size={18} />
+              写真を選択
+              <input
+                className="hidden"
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={(event) => handlePhotos(Array.from(event.target.files ?? []))}
+              />
+            </label>
+            <select className={inputClass} value={backgroundMode} onChange={(event) => setBackgroundMode(event.target.value as BackgroundMode)}>
+              <option value="original">そのまま</option>
+              <option value="cutout">簡易切り抜き</option>
+              <option value="template">背景テンプレート</option>
+              <option value="solid">単色背景</option>
+              <option value="blur">ぼかし背景</option>
+            </select>
+          </div>
+        </div>
+      </Section>
+
+      <Section title="2. OCR解析">
+        <div className="rounded-lg bg-rice/8 p-4">
+          <p className="text-sm leading-6 text-rice/70">
+            {isImporting
+              ? '写真を解析中です。'
+              : ocrText
+                ? 'ラベルから読み取れた文字をもとに候補を表示しています。'
+                : 'OCRに対応したブラウザではラベル文字を読み取ります。読み取れない場合は候補から選ぶか手入力してください。'}
+          </p>
+          <p className="mt-2 text-sm text-gold">記録日：{drankAt}{photoTakenAt ? '（写真撮影日）' : '（初期値）'}</p>
+          {ocrText ? <pre className="mt-3 max-h-28 overflow-auto rounded-md bg-ink/70 p-3 text-xs text-rice/70">{ocrText}</pre> : null}
+          <div className="mt-3 grid gap-2">
+            {photoCandidates.map((candidate) => (
+              <button key={`${candidate.productName}-${candidate.reason}`} className="rounded-md bg-ink/70 p-3 text-left" onClick={() => applyCandidate(candidate)}>
+                <span className="block font-bold text-rice">{candidate.productName ?? '候補名なし'}</span>
+                <span className="text-xs text-rice/58">
+                  {candidate.reason} / 信頼度 {candidate.confidence}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section title="3. 酒種">
         <div className="grid grid-cols-4 gap-2">
           {alcoholOptions.map((option) => (
             <button
@@ -202,33 +326,13 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="2. 写真登録">
-        <div className="glass-panel rounded-lg p-4">
-          {photoPreview ? <img src={photoPreview} className="mb-3 aspect-[4/3] w-full rounded-md object-cover" alt="登録写真" /> : null}
-          <div className="grid grid-cols-2 gap-3">
-            <label className="flex items-center justify-center gap-2 rounded-md bg-rice px-3 py-3 font-bold text-ink">
-              <Camera size={18} />
-              写真を選択
-              <input className="hidden" type="file" accept="image/*" capture="environment" onChange={(event) => handlePhoto(event.target.files?.[0])} />
-            </label>
-            <select className={inputClass} value={backgroundMode} onChange={(event) => setBackgroundMode(event.target.value as BackgroundMode)}>
-              <option value="original">そのまま</option>
-              <option value="cutout">簡易切り抜き</option>
-              <option value="template">背景テンプレート</option>
-              <option value="solid">単色背景</option>
-              <option value="blur">ぼかし背景</option>
-            </select>
-          </div>
-        </div>
-      </Section>
-
-      <Section title="3. 銘柄情報">
+      <Section title="4. 銘柄・蔵元">
         <div className="grid gap-3">
           <Field label="銘柄名"><input className={inputClass} value={productName} onChange={(event) => setProductName(event.target.value)} /></Field>
-          <Field label="メーカー・酒造・ワイナリー・ブルワリー"><input className={inputClass} value={makerName} onChange={(event) => setMakerName(event.target.value)} /></Field>
+          <Field label="蔵元・メーカー"><input className={inputClass} value={makerName} onChange={(event) => setMakerName(event.target.value)} /></Field>
           <div className="grid grid-cols-2 gap-3">
             <Field label="産地"><input className={inputClass} value={region} onChange={(event) => setRegion(event.target.value)} /></Field>
-            <Field label="飲酒日"><input className={inputClass} type="date" value={drankAt} onChange={(event) => setDrankAt(event.target.value)} /></Field>
+            <Field label="記録日"><input className={inputClass} type="date" value={drankAt} onChange={(event) => setDrankAt(event.target.value)} /></Field>
           </div>
           <div className="grid grid-cols-3 gap-3">
             <Field label="容量ml"><input className={inputClass} type="number" value={volume ?? ''} onChange={(event) => setVolume(Number(event.target.value) || undefined)} /></Field>
@@ -238,7 +342,7 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="4. 市場価格取得">
+      <Section title="5. 市場価格取得">
         <div className="space-y-3">
           <button className="flex w-full items-center justify-center gap-2 rounded-md bg-moss px-4 py-3 font-bold" onClick={searchPrice} disabled={isSearching}>
             <Search size={18} />
@@ -256,7 +360,7 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="5. 酒種別評価">
+      <Section title="6. 評価入力・味覚評価">
         <div className="grid gap-4">
           {profile.axes.map((axis) => (
             <label key={axis.key} className="rounded-lg bg-rice/7 p-4">
@@ -280,7 +384,7 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="6. 補正・満足度">
+      <Section title="7. スコア補正・満足度">
         <div className="grid gap-3">
           <ScoreInput label="総合満足度" value={satisfactionScore} onChange={setSatisfactionScore} />
           <ScoreInput label="また飲みたい度" value={repeatScore} onChange={setRepeatScore} />
@@ -292,7 +396,7 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="7. レーダーチャート">
+      <Section title="8. レーダーチャート">
         <div className="glass-panel rounded-lg p-4">
           <div className="h-72"><RadarChart type={alcoholType} scores={scores} /></div>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center">
@@ -304,7 +408,7 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="8. 料理ペアリング">
+      <Section title="9. ペアリング">
         <div className="rounded-lg bg-rice/8 p-4">
           <p className="text-sm leading-6 text-rice/70">評価から相性の良さそうな料理を表示します。</p>
           <div className="mt-3 flex flex-wrap gap-2">
@@ -317,14 +421,14 @@ export function Record() {
         </div>
       </Section>
 
-      <Section title="9. 感想メモ">
+      <Section title="10. コメント">
         <div className="grid gap-3">
           <Field label="タグ（カンマ区切り）"><input className={inputClass} value={tags} onChange={(event) => setTags(event.target.value)} /></Field>
           <Field label="記録コメント"><textarea className={`${inputClass} min-h-24`} value={memo} onChange={(event) => setMemo(event.target.value)} /></Field>
         </div>
       </Section>
 
-      <Section title="10. 保存">
+      <Section title="11. 保存">
         <div className="grid gap-3">
           <button className="rounded-md bg-rice px-4 py-4 font-black text-ink" onClick={saveLog}>保存</button>
           {status ? <p className="rounded-md bg-gold/15 p-3 text-sm text-gold">{status}</p> : null}

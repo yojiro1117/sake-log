@@ -1,4 +1,4 @@
-import { Cloud, Plus } from 'lucide-react';
+import { Cloud, ImagePlus, Plus } from 'lucide-react';
 import { Section } from '../components/Section';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
@@ -6,7 +6,7 @@ import { analyzeLogs } from '../services/analysis';
 import { alcoholProfiles } from '../data/alcoholProfiles';
 import type { Tab } from '../components/BottomNav';
 
-export function Home({ onNavigate }: { onNavigate: (tab: Tab) => void }) {
+export function Home({ onNavigate, onImportPhotos }: { onNavigate: (tab: Tab) => void; onImportPhotos: (files: File[]) => void }) {
   const logs = useLiveQuery(() => db.logs.orderBy('drankAt').reverse().toArray(), []);
   const backup = useLiveQuery(() => db.backupStatus.get('default'), undefined);
   const analysis = analyzeLogs(logs);
@@ -24,6 +24,21 @@ export function Home({ onNavigate }: { onNavigate: (tab: Tab) => void }) {
           <Plus size={20} />
           今日のお酒を記録する
         </button>
+        <label className="mt-3 flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border border-ink/20 bg-moss px-4 py-4 font-bold text-rice">
+          <ImagePlus size={20} />
+          写真から記録する
+          <input
+            className="hidden"
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={(event) => {
+              const files = Array.from(event.target.files ?? []);
+              if (files.length > 0) onImportPhotos(files);
+              event.currentTarget.value = '';
+            }}
+          />
+        </label>
       </div>
 
       <Section title="最近記録したお酒">
@@ -52,15 +67,30 @@ export function Home({ onNavigate }: { onNavigate: (tab: Tab) => void }) {
         </div>
       </Section>
 
-      <Section title="高評価・コスパ上位">
+      <Section title="高評価ランキング">
         <div className="space-y-2">
           {logs
-            .filter((log) => log.satisfactionScore >= 5 || log.valueScore === 'S')
+            .filter((log) => log.satisfactionScore >= 5)
             .slice(0, 3)
             .map((log) => (
               <div key={log.logId} className="flex items-center justify-between rounded-md bg-rice/8 px-4 py-3">
                 <span className="font-semibold">{log.productName}</span>
                 <span className="text-sm text-gold">{log.valueScore} / {log.satisfactionScore}</span>
+              </div>
+            ))}
+          {logs.length === 0 && <Empty text="保存後にランキングが表示されます。" />}
+        </div>
+      </Section>
+
+      <Section title="コスパランキング">
+        <div className="space-y-2">
+          {logs
+            .filter((log) => log.valueScore === 'S' || log.valueScore === 'A')
+            .slice(0, 3)
+            .map((log) => (
+              <div key={log.logId} className="flex items-center justify-between rounded-md bg-rice/8 px-4 py-3">
+                <span className="font-semibold">{log.productName}</span>
+                <span className="text-sm text-gold">{log.valueScore} / {log.adoptedMarketPrice ? `${log.adoptedMarketPrice.toLocaleString()}円` : '価格未入力'}</span>
               </div>
             ))}
           {logs.length === 0 && <Empty text="保存後にランキングが表示されます。" />}

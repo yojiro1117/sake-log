@@ -1,4 +1,15 @@
-export type AlcoholType = 'sake' | 'wine' | 'shochu' | 'beer';
+export type AlcoholType =
+  | 'sake'
+  | 'shochu'
+  | 'beer'
+  | 'whisky'
+  | 'wine'
+  | 'gin'
+  | 'vodka'
+  | 'rum'
+  | 'tequila'
+  | 'liqueur'
+  | 'other';
 
 export type ImageType = 'frontLabel' | 'backLabel' | 'bottle' | 'other';
 export type BackgroundMode = 'original' | 'cutout' | 'template' | 'solid' | 'blur';
@@ -37,6 +48,27 @@ export interface SakeImage {
   backgroundMode: BackgroundMode;
   ocrText?: string;
   createdAt: string;
+  takenAt?: string;
+}
+
+export interface PhotoImportCandidate {
+  productName?: string;
+  makerName?: string;
+  volume?: number;
+  abv?: number;
+  confidence: 'high' | 'medium' | 'low';
+  reason: string;
+}
+
+export interface ImportedPhotoDraft {
+  id: string;
+  fileName: string;
+  originalFile: File;
+  resizedBlob: Blob;
+  previewUrl: string;
+  takenAt?: string;
+  ocrText?: string;
+  candidates: PhotoImportCandidate[];
 }
 
 export interface GeneratedTexts {
@@ -50,6 +82,7 @@ export interface SakeLog {
   createdAt: string;
   updatedAt: string;
   drankAt: string;
+  photoTakenAt?: string;
   alcoholType: AlcoholType;
   productName: string;
   makerName?: string;

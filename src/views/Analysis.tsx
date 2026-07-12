@@ -36,6 +36,15 @@ export function Analysis() {
         </div>
       </Section>
 
+      <Section title="サマリー">
+        <div className="grid grid-cols-2 gap-3">
+          <Metric label="好きな酒種類" value={analysis.favoriteType?.label ?? '記録待ち'} />
+          <Metric label="平均評価" value={analysis.averageRating ? `${analysis.averageRating}/6` : '記録待ち'} />
+          <Metric label="平均価格" value={analysis.averagePrice ? `${analysis.averagePrice.toLocaleString()}円` : '価格未入力'} />
+          <Metric label="記録数" value={`${logs.length}件`} />
+        </div>
+      </Section>
+
       <Section title="好きな傾向">
         <div className="grid grid-cols-2 gap-3">
           {analysis.favoriteFeatures.map((feature) => (
@@ -69,6 +78,35 @@ export function Analysis() {
           {logs.length === 0 ? <p className="text-rice/56">ログを保存すると分析が表示されます。</p> : null}
         </div>
       </Section>
+
+      <Section title="好きな蔵元">
+        <div className="space-y-2">
+          {analysis.favoriteMakers.map((maker) => (
+            <div key={maker.name} className="flex justify-between rounded-md bg-rice/8 px-4 py-3">
+              <span>{maker.name}</span>
+              <span className="text-gold">平均 {maker.average} / {maker.count}件</span>
+            </div>
+          ))}
+          {analysis.favoriteMakers.length === 0 ? <p className="text-rice/56">蔵元を入力すると表示されます。</p> : null}
+        </div>
+      </Section>
+
+      <Section title="価格帯分布">
+        <div className="grid grid-cols-2 gap-3">
+          {analysis.priceBands.map((band) => (
+            <Metric key={band.label} label={band.label} value={`${band.count}件`} />
+          ))}
+        </div>
+      </Section>
+    </div>
+  );
+}
+
+function Metric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-lg bg-rice/8 p-4">
+      <p className="text-xs text-rice/52">{label}</p>
+      <p className="mt-1 font-bold text-gold">{value}</p>
     </div>
   );
 }

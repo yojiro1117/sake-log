@@ -48,7 +48,60 @@ export const alcoholProfiles: Record<AlcoholType, AlcoholProfile> = {
       { key: 'mouthfeel', label: '口当たり', question: '炭酸・口当たりはどの程度印象的ですか？' },
       { key: 'afterglow', label: '余韻', question: '後味・余韻はどの程度残りますか？' }
     ]
+  },
+  whisky: {
+    type: 'whisky',
+    label: 'ウイスキー',
+    axes: [
+      { key: 'aroma', label: '香り', question: '香りはどの程度感じますか？' },
+      { key: 'sweetness', label: '甘味', question: '甘味はどの程度感じますか？' },
+      { key: 'smoky', label: 'スモーキー', question: 'スモーキーさはどの程度ありますか？' },
+      { key: 'body', label: 'ボディ', question: '味わいの厚みはどの程度ありますか？' },
+      { key: 'spice', label: 'スパイス感', question: 'スパイス感はどの程度ありますか？' },
+      { key: 'afterglow', label: '余韻', question: '余韻はどの程度残りますか？' }
+    ]
+  },
+  gin: {
+    type: 'gin',
+    label: 'ジン',
+    axes: commonAxes('ボタニカル')
+  },
+  vodka: {
+    type: 'vodka',
+    label: 'ウォッカ',
+    axes: commonAxes('クリアさ')
+  },
+  rum: {
+    type: 'rum',
+    label: 'ラム',
+    axes: commonAxes('甘香')
+  },
+  tequila: {
+    type: 'tequila',
+    label: 'テキーラ',
+    axes: commonAxes('原料感')
+  },
+  liqueur: {
+    type: 'liqueur',
+    label: 'リキュール',
+    axes: commonAxes('風味')
+  },
+  other: {
+    type: 'other',
+    label: 'その他',
+    axes: commonAxes('個性')
   }
 };
 
 export const alcoholOptions = Object.values(alcoholProfiles);
+
+function commonAxes(firstLabel: string) {
+  return [
+    { key: 'aroma', label: '香り', question: '香りはどの程度感じますか？' },
+    { key: 'character', label: firstLabel, question: `${firstLabel}はどの程度感じますか？` },
+    { key: 'sweetness', label: '甘味', question: '甘味はどの程度感じますか？' },
+    { key: 'body', label: '濃さ', question: '味の濃さ・厚みはどの程度ありますか？' },
+    { key: 'finish', label: 'キレ', question: '後味のキレはどの程度ありますか？' },
+    { key: 'afterglow', label: '余韻', question: '余韻はどの程度残りますか？' }
+  ];
+}
