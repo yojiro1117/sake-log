@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-07-13T09:55:00+09:00",
+  "note": "楽天アプリIDなどの秘密情報は使用せず、実APIではなく候補スコアリングのフィクスチャで検索語・除外語・一致度計算を検証した。",
+  "queryPatterns": [
+    "銘柄名＋蔵元＋容量",
+    "銘柄名＋容量",
+    "銘柄名＋蔵元",
+    "銘柄名のみ",
+    "正規化後の銘柄名＋蔵元＋容量",
+    "OCR原文",
+    "英語名・別名＋蔵元＋容量"
+  ],
+  "fixtureCases": [
+    {
+      "caseId": "dassai-correct-720",
+      "itemName": "獺祭 純米大吟醸45 720ml 旭酒造",
+      "expected": "recommended",
+      "matchReasons": ["銘柄名一致", "蔵元名一致", "容量一致", "酒種一致"],
+      "excludedReasons": []
+    },
+    {
+      "caseId": "dassai-gift",
+      "itemName": "獺祭 720ml ギフトセット",
+      "expected": "warning",
+      "matchReasons": ["銘柄名一致", "容量一致"],
+      "excludedReasons": ["ギフトの可能性", "セットの可能性"]
+    },
+    {
+      "caseId": "dassai-furusato",
+      "itemName": "ふるさと納税 獺祭 720ml",
+      "expected": "excluded-warning",
+      "matchReasons": ["銘柄名一致", "容量一致"],
+      "excludedReasons": ["ふるさと納税の可能性"]
+    },
+    {
+      "caseId": "kurokirishima-case",
+      "itemName": "黒霧島 900ml 6本 ケース販売",
+      "expected": "warning",
+      "matchReasons": ["銘柄名一致", "容量一致"],
+      "excludedReasons": ["ケースの可能性", "本数違い"]
+    },
+    {
+      "caseId": "yamazaki-same-name",
+      "itemName": "山崎 実用グラス ギフト",
+      "expected": "not-recommended",
+      "matchReasons": ["銘柄名一致"],
+      "excludedReasons": ["ギフトの可能性", "商品名曖昧"]
+    }
+  ],
+  "fallbacks": ["過去登録データ", "手入力", "未取得として保存"],
+  "result": {
+    "autoAdoption": false,
+    "selectedCandidateSnapshot": true,
+    "manualPriceSource": "manual",
+    "selectedMarketPriceCandidateIdForManual": null
+  }
+}

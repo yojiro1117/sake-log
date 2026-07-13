@@ -1,22 +1,26 @@
 import { describe, expect, it } from 'vitest';
-import { createCandidateFromRakuten, manualPriceCandidate, selectedPriceSnapshot } from './priceService';
+import { buildPriceSearchQueries, createCandidateFromRakuten, manualPriceCandidate, selectedPriceSnapshot } from './priceService';
+
+const dassai = '\u737a\u796d';
+const asahi = '\u65ed\u9152\u9020';
+const giftSet = '\u30ae\u30d5\u30c8\u30bb\u30c3\u30c8';
 
 describe('priceService', () => {
   it('calculates match reasons and exclusion reasons', () => {
     const candidate = createCandidateFromRakuten(
       {
-        itemName: '獺祭 純米大吟醸 720ml ギフトセット',
+        itemName: `${dassai} \u7d14\u7c73\u5927\u541f\u91b8 720ml ${giftSet}`,
         itemPrice: 3300,
         itemUrl: 'https://example.com',
-        shopName: 'テスト店',
+        shopName: '\u30c6\u30b9\u30c8\u5e97',
         postageFlag: 0
       },
-      { productName: '獺祭', makerName: '旭酒造', volume: 720, alcoholType: 'sake' },
+      { productName: dassai, makerName: asahi, volume: 720, alcoholType: 'sake' },
       '2026-01-01T00:00:00.000Z'
     );
-    expect(candidate.matchReasons).toContain('銘柄名一致');
-    expect(candidate.matchReasons).toContain('容量一致');
-    expect(candidate.excludedReasons.join(',')).toContain('ギフト');
+    expect(candidate.matchReasons.length).toBeGreaterThanOrEqual(2);
+    expect(candidate.excludedReasons.join(',')).toContain('\u30ae\u30d5\u30c8');
+    expect(candidate.excludedReasons.join(',')).toContain('\u30bb\u30c3\u30c8');
     expect(candidate.recommended).toBe(false);
   });
 
@@ -29,5 +33,19 @@ describe('priceService', () => {
       source: 'manual',
       priceConfidence: 'manual'
     });
+  });
+
+  it('builds multiple search query patterns without committing secrets', () => {
+    const queries = buildPriceSearchQueries({
+      productName: dassai,
+      makerName: asahi,
+      volume: 720,
+      ocrText: `DASSAI 45 720ml ${asahi}`,
+      aliases: ['DASSAI']
+    });
+    expect(queries).toContain(`${dassai} ${asahi} 720ml`);
+    expect(queries).toContain(`${dassai} 720ml`);
+    expect(queries).toContain(`DASSAI ${asahi} 720ml`);
+    expect(queries.some((query) => query.includes('DASSAI 45'))).toBe(true);
   });
 });

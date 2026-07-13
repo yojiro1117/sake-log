@@ -40,9 +40,7 @@ export async function searchRakutenPrices(params: {
   if (!params.productName.trim()) return { candidates: [], message: '銘柄名を入力すると価格候補を検索できます。' };
   if (!appId) return { candidates: [], message: '楽天アプリIDが未設定です。過去価格候補または手入力を使用してください。' };
 
-  const keyword = [params.productName, params.makerName, params.volume ? `${params.volume}ml` : undefined]
-    .filter(Boolean)
-    .join(' ');
+  const keyword = buildPriceSearchQueries(params)[0];
   const url = new URL('https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601');
   url.searchParams.set('applicationId', appId);
   url.searchParams.set('keyword', keyword);
@@ -64,6 +62,31 @@ export async function searchRakutenPrices(params: {
     candidates,
     message: candidates.length ? '価格候補を取得しました。採用する候補を選択してください。' : '一致する価格候補が見つかりませんでした。手入力できます。'
   };
+}
+
+export function buildPriceSearchQueries(params: {
+  productName: string;
+  makerName?: string;
+  volume?: number;
+  ocrText?: string;
+  aliases?: string[];
+}) {
+  const base = normalizeSpaces(params.productName);
+  const maker = normalizeSpaces(params.makerName ?? '');
+  const volume = params.volume ? `${params.volume}ml` : '';
+  const normalized = normalizeSpaces(base.normalize('NFKC'));
+  const aliases = params.aliases ?? [];
+  return [
+    [base, maker, volume],
+    [base, volume],
+    [base, maker],
+    [base],
+    [normalized, maker, volume],
+    [params.ocrText ? normalizeSpaces(params.ocrText).slice(0, 80) : ''],
+    ...aliases.map((alias) => [alias, maker, volume])
+  ]
+    .map((parts) => parts.filter(Boolean).join(' ').trim())
+    .filter((query, index, self) => query && self.indexOf(query) === index);
 }
 
 export function createCandidateFromRakuten(
@@ -267,4 +290,8 @@ function alcoholTypeKeyword(type: AlcoholType) {
 
 function normalize(value: string) {
   return value.normalize('NFKC').toLowerCase().replace(/\s/g, '');
+}
+
+function normalizeSpaces(value: string) {
+  return value.normalize('NFKC').replace(/\s+/g, ' ').trim();
 }
