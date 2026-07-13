@@ -12,7 +12,7 @@ export default defineConfig({
       manifest: {
         name: 'SAKEログ',
         short_name: 'SAKEログ',
-        description: '飲んだお酒を写真付きで記録し、評価、分析、SNS投稿素材をローカル生成する無料PWA。',
+        description: '飲んだお酒を写真付きで記録し、評価と味覚傾向を端末内で管理する無料PWA。',
         theme_color: '#07100d',
         background_color: '#07100d',
         display: 'standalone',

@@ -1,0 +1,2242 @@
+{
+  "summary": {
+    "total": 72,
+    "textHitRate": 1,
+    "candidateHitRate": 0.028,
+    "averageProcessingTimeMs": 1301,
+    "maxProcessingTimeMs": 4319
+  },
+  "results": [
+    {
+      "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "a 変\n\nのいいのが\n\nや\n\nZS\n\n7エア",
+        "confidence": 0.31,
+        "charCount": 22,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "a 変\n\nのいいのが\n\nや\n\nZS\n\n7エア",
+          "confidence": 0.31,
+          "charCount": 22,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 477,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "9衝 7\n\n* 。\n\nTHIS WAY A”\n\nーー\n\ni\n\n』\n\nーー\n\n断川ー\n\nンプ 4\n\n清二\n\nON TORY WHISKY\n\nh\n\nーー\n\nーーデ\n\nング 計",
+        "confidence": 0.33,
+        "charCount": 85,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "9衝 7\n\n* 。\n\nTHIS WAY A”\n\nーー\n\ni\n\n』\n\nーー\n\n断川ー\n\nンプ 4\n\n清二\n\nON TORY WHISKY\n\nh\n\nーー\n\nーーデ\n\nング 計",
+          "confidence": 0.33,
+          "charCount": 85,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 762,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "3780045A-CF34-4840-A568-B8E57175AA1D.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "4 ビ\n\n癌\n\nり\n\nーー am\n\n[T—=\n\nトト\n\n攻」\n\n枯。\n\nプア\n\n.演\n\nJ -。王\n\n705 way A\n\n}\n\n=e\n\nゃる\n\nWSKN\n\nーー上8 1\n\n=__ =\n\n/\n\nーー\n\nhe ja\n\nSak\n\n(I\n\nW\n\nY&\n\nANISH!\n\nBs\n\nnaj:\n\nSutdll\n\nで\n\n§AWe aay +\n\n §\n\nます\n\ny.\n\nいいを\n\nテー\n\nyreds",
+        "confidence": 0.25,
+        "charCount": 191,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "4 ビ\n\n癌\n\nり\n\nーー am\n\n[T—=\n\nトト\n\n攻」\n\n枯。\n\nプア\n\n.演\n\nJ -。王\n\n705 way A\n\n}\n\n=e\n\nゃる\n\nWSKN\n\nーー上8 1\n\n=__ =\n\n/\n\nーー\n\nhe ja\n\nSak\n\n(I\n\nW\n\nY&\n\nANISH!\n\nBs\n\nnaj:\n\nSutdll\n\nで\n\n§AWe aay +\n\n §\n\nます\n\ny.\n\nいいを\n\nテー\n\nyreds",
+          "confidence": 0.25,
+          "charCount": 191,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1665,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "CR\n\nJol\n\ni 1\n\nペングン\n\n, u\n\nドコ\n\nに>間\n\nTHIS WAY\n\nー\n\nYid\n\nーーと\n\nNN]\n\nーー ーー\n\n> 夫\n\n»\n\nーー §\n\nue\n\n党 放\n\nY -\n\n—\n\n多\n\nTM-\n\n &\n\nシ\n\nIHE) ¢\n\nトコ",
+        "confidence": 0.29,
+        "charCount": 125,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "CR\n\nJol\n\ni 1\n\nペングン\n\n, u\n\nドコ\n\nに>間\n\nTHIS WAY\n\nー\n\nYid\n\nーーと\n\nNN]\n\nーー ーー\n\n> 夫\n\n»\n\nーー §\n\nue\n\n党 放\n\nY -\n\n—\n\n多\n\nTM-\n\n &\n\nシ\n\nIHE) ¢\n\nトコ",
+          "confidence": 0.29,
+          "charCount": 125,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1157,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "5077832F-9F46-42EB-A4A6-DE4A9F57C672.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "マビ\n\nl\n\n=\n\n' *\n\nR\n\nSC\n\nん\n\n%\n\nに\n\nング",
+        "confidence": 0.2,
+        "charCount": 33,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "マビ\n\nl\n\n=\n\n' *\n\nR\n\nSC\n\nん\n\n%\n\nに\n\nング",
+          "confidence": 0.2,
+          "charCount": 33,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 497,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "id\n\nguf.\n\n(66\n\n上 。\n\nペンングケン\n\nー\n\n税を\n\n5 4\n\nbr\n\nSat\n\nAN\n\n受賞 id\n\nでキク\n\n陽一- 選 {H\n\nIE §\n\n太\n\nEs 3\n\n人\n\nh B",
+        "confidence": 0.25,
+        "charCount": 96,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "id\n\nguf.\n\n(66\n\n上 。\n\nペンングケン\n\nー\n\n税を\n\n5 4\n\nbr\n\nSat\n\nAN\n\n受賞 id\n\nでキク\n\n陽一- 選 {H\n\nIE §\n\n太\n\nEs 3\n\n人\n\nh B",
+          "confidence": 0.25,
+          "charCount": 96,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 940,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "/ゲだ\n\ny\n\nQ\n\nな\n\nのダ\n\npen\n\nENT TO HRH THE PRINCE OF Wase\n\npl\n\nANSTON &CO。 (LAPHROALIG) ISLE OF 1SLay\n\nNDSUPPLIER OF SINGLE MALT SCOTCH ws\n\nAPHROAI\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\nIRIP!\n\nTHPLEMATURED FOR PEAT\n\nGivr\n\n%t richly flavon\n\n1\n\nESTD 1\n\ns\n\nON\n\nISTtLrmn AND BOTTLED IN 800T\n\n の q\n\n『\n\n&Co, » LAPHROAIG DISTILL",
+        "confidence": 0.59,
+        "charCount": 313,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "/ゲだ\n\ny\n\nQ\n\nな\n\nのダ\n\npen\n\nENT TO HRH THE PRINCE OF Wase\n\npl\n\nANSTON &CO。 (LAPHROALIG) ISLE OF 1SLay\n\nNDSUPPLIER OF SINGLE MALT SCOTCH ws\n\nAPHROAI\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\nIRIP!\n\nTHPLEMATURED FOR PEAT\n\nGivr\n\n%t richly flavon\n\n1\n\nESTD 1\n\ns\n\nON\n\nISTtLrmn AND BOTTLED IN 800T\n\n の q\n\n『\n\n&Co, » LAPHROAIG DISTILL",
+          "confidence": 0.59,
+          "charCount": 313,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1542,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "0ー\n\nーー ーー 証詳\n\n=\n\nil -\n\n-’t\n\nTHIS WAY\n\n(3\n\n<\n\nFFEY\n\nWHIS Y\n\nンジ\n\nン / p\n\nNg\n\n顎ト\n\n山KKA\n\nCOF\n\n問語uuと一\n\nWHIS\n\nがクェモj\n\nalc.45\n\n74 が\n\n5\n\nag\n\n_— る。",
+        "confidence": 0.4,
+        "charCount": 136,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "0ー\n\nーー ーー 証詳\n\n=\n\nil -\n\n-’t\n\nTHIS WAY\n\n(3\n\n<\n\nFFEY\n\nWHIS Y\n\nンジ\n\nン / p\n\nNg\n\n顎ト\n\n山KKA\n\nCOF\n\n問語uuと一\n\nWHIS\n\nがクェモj\n\nalc.45\n\n74 が\n\n5\n\nag\n\n_— る。",
+          "confidence": 0.4,
+          "charCount": 136,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1190,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "B2B359C6-662B-4C7B-B971-773C9E2484C9.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "A 」\n\nad を\n\nか .\n\nh 7 R)\n\nか 3\n\nー ー\n\nー\n\n中\n\nに て\n\nMN\n\nK\n\nは\n\n隆\n\n( 2\n\nを人を\n\n/\n\n202¢\n\n=\n\nジー\n\nfxarhnanil\n\n用ーーミ\n\nドー\n\n~=\n\nX\n\n)\n\nドミンク\n\n美山釣",
+        "confidence": 0.37,
+        "charCount": 125,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "A 」\n\nad を\n\nか .\n\nh 7 R)\n\nか 3\n\nー ー\n\nー\n\n中\n\nに て\n\nMN\n\nK\n\nは\n\n隆\n\n( 2\n\nを人を\n\n/\n\n202¢\n\n=\n\nジー\n\nfxarhnanil\n\n用ーーミ\n\nドー\n\n~=\n\nX\n\n)\n\nドミンク\n\n美山釣",
+          "confidence": 0.37,
+          "charCount": 125,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1184,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "っああ\n\nTI®\n\nie\n\nTHIS WAY\n\nte)\n\nリガ\n\nルリ\n\nビー —\n\n=y\n\nwl\n\nり H\n\nー =\n\nてCレイン\n\n関にEiw iu",
+        "confidence": 0.32,
+        "charCount": 76,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "っああ\n\nTI®\n\nie\n\nTHIS WAY\n\nte)\n\nリガ\n\nルリ\n\nビー —\n\n=y\n\nwl\n\nり H\n\nー =\n\nてCレイン\n\n関にEiw iu",
+          "confidence": 0.32,
+          "charCount": 76,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 765,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "E8A1A542-94AE-4884-A368-8CCAC773FDA8.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "”\n\n)\n\n. am o!\n\n(6 6\n\n=\n\nーー一一\n\nべき\n\n»y\n\nls\n\nーー\n\nNR\n\n5 に コ\n\nTHIS WAY\n\nー3\n\nre\n\nも\n\nる\n\nー和解! ー\n\nae\n\n デーミーェ ーー\n\nじ (ンプ\n\nTHE\n\nYAMAZAKI\n\nSINGLE MALT\n\nJAPANESE WHISKY\n\nで\n\neee am\n\nYAzakr\n\nlery in Japan\n\nDISTILLERY\n\nwmeuous\n\nOF SUNTORY WHISKY.\n\n2キー\n\nイッ\n\n山崎蒸溜所護尋\n\nT\n\n1\n\n『\n\n[\n\nーー h\n\n:\n\n»\n\nの\n\nリムプリアム15識\n\nー\n\nと\n\n£1",
+        "confidence": 0.37,
+        "charCount": 295,
+        "candidateCount": 1,
+        "detectedProductName": "山崎",
+        "detectedMakerName": "サントリー",
+        "detectedAlcoholType": "whisky",
+        "matchReasons": [
+          "OCR別名一致: 山崎"
+        ],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "”\n\n)\n\n. am o!\n\n(6 6\n\n=\n\nーー一一\n\nべき\n\n»y\n\nls\n\nーー\n\nNR\n\n5 に コ\n\nTHIS WAY\n\nー3\n\nre\n\nも\n\nる\n\nー和解! ー\n\nae\n\n デーミーェ ーー\n\nじ (ンプ\n\nTHE\n\nYAMAZAKI\n\nSINGLE MALT\n\nJAPANESE WHISKY\n\nで\n\neee am\n\nYAzakr\n\nlery in Japan\n\nDISTILLERY\n\nwmeuous\n\nOF SUNTORY WHISKY.\n\n2キー\n\nイッ\n\n山崎蒸溜所護尋\n\nT\n\n1\n\n『\n\n[\n\nーー h\n\n:\n\n»\n\nの\n\nリムプリアム15識\n\nー\n\nと\n\n£1",
+          "confidence": 0.37,
+          "charCount": 295,
+          "candidateCount": 1,
+          "detectedProductName": "山崎",
+          "detectedMakerName": "サントリー",
+          "detectedAlcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: 山崎"
+          ]
+        }
+      ],
+      "processingTimeMs": 1976,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_1703.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "/\n\nしあら\n\nみる\n\n[ドド\n\nのーー\n\ni\n\nTHIS WAY\n\n(\n\nー\n\n[/\n\n[1}\n\nF\\\n\n0\n\n[\n\n0\n\n『 中\n\n4\n\nH\n\nEE\n\nNeセル\n\nCRE y\n\nfhiliy, TM",
+        "confidence": 0.31,
+        "charCount": 101,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "/\n\nしあら\n\nみる\n\n[ドド\n\nのーー\n\ni\n\nTHIS WAY\n\n(\n\nー\n\n[/\n\n[1}\n\nF\\\n\n0\n\n[\n\n0\n\n『 中\n\n4\n\nH\n\nEE\n\nNeセル\n\nCRE y\n\nfhiliy, TM",
+          "confidence": 0.31,
+          "charCount": 101,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 738,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_1704.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "—\n\nーー一\n\nf\n\nー\n\nしあら\n\nf\n\nかか\n\nし\n\nド J\n\nTHIS WaY\n\n fl\n\nEa\n\n(』\n\nル\n\n(l\n\nB\n\nn\n\n計\n\nud\n\nte :\n\n』\n\n純\n\nを の\n\n 時\n\nKUBoTA",
+        "confidence": 0.32,
+        "charCount": 104,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "—\n\nーー一\n\nf\n\nー\n\nしあら\n\nf\n\nかか\n\nし\n\nド J\n\nTHIS WaY\n\n fl\n\nEa\n\n(』\n\nル\n\n(l\n\nB\n\nn\n\n計\n\nud\n\nte :\n\n』\n\n純\n\nを の\n\n 時\n\nKUBoTA",
+          "confidence": 0.32,
+          "charCount": 104,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1205,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2048.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "L_4\n\nー\n\nww\n\n「 所本\n\n—\n\n\"\n\n[]\n\n—\n\n7\n\nK v\n\n\"\n\nEo\n\nーー\n\nーー\n\ng- ーー\n\n“d\n\n—\n\nーー\n\nに ーー\n\nンジ\n\n=\n\nN ー",
+        "confidence": 0.24,
+        "charCount": 88,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "L_4\n\nー\n\nww\n\n「 所本\n\n—\n\n\"\n\n[]\n\n—\n\n7\n\nK v\n\n\"\n\nEo\n\nーー\n\nーー\n\ng- ーー\n\n“d\n\n—\n\nーー\n\nに ーー\n\nンジ\n\n=\n\nN ー",
+          "confidence": 0.24,
+          "charCount": 88,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 864,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2050.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "アン\n\nデマて\n\nミ\n\n人6\n\n用\n\n1\n\n-\n\nW\n\nA - y\n\nや\n\nTHSway A”\n\n[A\n\nンテ\n\nJ\n\n-\n\nセー\n\nKA WHISKY\n\nINGLE MALT 賭一\n\nMIYAGIKYO\n\n[0\n\nia 4\n\nFRABT\n\n蒸溜所でつ\n\nルモルト\n\n»",
+        "confidence": 0.42,
+        "charCount": 135,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "アン\n\nデマて\n\nミ\n\n人6\n\n用\n\n1\n\n-\n\nW\n\nA - y\n\nや\n\nTHSway A”\n\n[A\n\nンテ\n\nJ\n\n-\n\nセー\n\nKA WHISKY\n\nINGLE MALT 賭一\n\nMIYAGIKYO\n\n[0\n\nia 4\n\nFRABT\n\n蒸溜所でつ\n\nルモルト\n\n»",
+          "confidence": 0.42,
+          "charCount": 135,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1287,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2051.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "§1\n\nーーツン\n\n突\n\ntim\n\n-~~\n\n“ik\n\nTHIS WAY A\n\n o\n\nず\n\nma\n\n——\n\nw\n\n——\n\nIBIKI\n\nORY WHISKY\n\nに\n\nJAPAN ESE HARMO\n\nSa\n\n40us bleng of the finest scle\n\nし て\n\n4\n\nZ",
+        "confidence": 0.43,
+        "charCount": 145,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "§1\n\nーーツン\n\n突\n\ntim\n\n-~~\n\n“ik\n\nTHIS WAY A\n\n o\n\nず\n\nma\n\n——\n\nw\n\n——\n\nIBIKI\n\nORY WHISKY\n\nに\n\nJAPAN ESE HARMO\n\nSa\n\n40us bleng of the finest scle\n\nし て\n\n4\n\nZ",
+          "confidence": 0.43,
+          "charCount": 145,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1156,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2268.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "時\n\n3\n\n9の りり ご. 了承 5\n\nビー\n\n。\n\n=a)\n\nリジンメグ\n\nSe\n\nNNで\n\nまこ\n\n~>=\n\nーー\n\n®w\n\n—\n\nO.Po\n\nTHE\n\nMAZAKI\n\nSNGLE, MAl\n\nNESE WHISKY\n\nJA]\n\nっaw 一\n\nンー\n\nに\n\nYEAT\n\nYa\n\nov\n\n'HennessY\n\nCognae\n\nウイ\n\nンタる\n\nグン\n\n_a\n\nmy\n\nでGO\n\nC 培\n\nのあのがの\n\nくキーー\n\nサントリーシンケルモルトウイスキー\n\n3\n\nの LE [25 43\n\n¥ 9300\n\n本 ーー",
+        "confidence": 0.48,
+        "charCount": 256,
+        "candidateCount": 3,
+        "detectedProductName": "山崎",
+        "detectedMakerName": "サントリー",
+        "detectedAlcoholType": "whisky",
+        "matchReasons": [
+          "蔵元一致"
+        ],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "時\n\n3\n\n9の りり ご. 了承 5\n\nビー\n\n。\n\n=a)\n\nリジンメグ\n\nSe\n\nNNで\n\nまこ\n\n~>=\n\nーー\n\n®w\n\n—\n\nO.Po\n\nTHE\n\nMAZAKI\n\nSNGLE, MAl\n\nNESE WHISKY\n\nJA]\n\nっaw 一\n\nンー\n\nに\n\nYEAT\n\nYa\n\nov\n\n'HennessY\n\nCognae\n\nウイ\n\nンタる\n\nグン\n\n_a\n\nmy\n\nでGO\n\nC 培\n\nのあのがの\n\nくキーー\n\nサントリーシンケルモルトウイスキー\n\n3\n\nの LE [25 43\n\n¥ 9300\n\n本 ーー",
+          "confidence": 0.48,
+          "charCount": 256,
+          "candidateCount": 3,
+          "detectedProductName": "山崎",
+          "detectedMakerName": "サントリー",
+          "detectedAlcoholType": "whisky",
+          "matchReasons": [
+            "蔵元一致"
+          ]
+        }
+      ],
+      "processingTimeMs": 1962,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2269.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "-f\n\n w\n\nL\n\nー\n\n-\n\nョー\n\n3ー\n\n< ご\n\nンンダク\n\nROYAL\n\nー\n\n-*\n\nーー\n\nに\n\n=\n\n~\n\nだ\n\nのた2カタッッッ\n\n/ &\n\nH\n\nCA\n\n$",
+        "confidence": 0.45,
+        "charCount": 89,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "-f\n\n w\n\nL\n\nー\n\n-\n\nョー\n\n3ー\n\n< ご\n\nンンダク\n\nROYAL\n\nー\n\n-*\n\nーー\n\nに\n\n=\n\n~\n\nだ\n\nのた2カタッッッ\n\n/ &\n\nH\n\nCA\n\n$",
+          "confidence": 0.45,
+          "charCount": 89,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 954,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2270.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "f\n\n1 4 AMSTHMVMYIN\n\nが\n\n4イ\n\nYdVI\n\nしもに) 9\n\nYIII\n\nの\n\nAMSIHM\n\n_ mv 人ヨコ30*\n\n1\n\n$\n\nゼタ\n\nビー\n\n4\n\n_45",
+        "confidence": 0.42,
+        "charCount": 91,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "f\n\n1 4 AMSTHMVMYIN\n\nが\n\n4イ\n\nYdVI\n\nしもに) 9\n\nYIII\n\nの\n\nAMSIHM\n\n_ mv 人ヨコ30*\n\n1\n\n$\n\nゼタ\n\nビー\n\n4\n\n_45",
+          "confidence": 0.42,
+          "charCount": 91,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 957,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2271.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "に\n\nーー\n\nビン\n\n—\n\n% §E J BY y\n\nHBA 557\n\n—¥Yy\n\nANSIHA,\n\nの2 oh i pcth\n\nTTLLSI VLIS\n\nASNOH3\n\nU RREER SDYIBY\n\n中\n\n4イエイクンズンズ絡)\n\nAISIHA 831\n\nvil\n\n10N\n\nLIH\n\nIH\n\n2て\n\nTHO1IO4\n\nLTVIW TDND\n\n4\n\nいん\n\nニン\n\n—\n\n=\n\n/ N志語\n\n7\n\nい",
+        "confidence": 0.25,
+        "charCount": 202,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "に\n\nーー\n\nビン\n\n—\n\n% §E J BY y\n\nHBA 557\n\n—¥Yy\n\nANSIHA,\n\nの2 oh i pcth\n\nTTLLSI VLIS\n\nASNOH3\n\nU RREER SDYIBY\n\n中\n\n4イエイクンズンズ絡)\n\nAISIHA 831\n\nvil\n\n10N\n\nLIH\n\nIH\n\n2て\n\nTHO1IO4\n\nLTVIW TDND\n\n4\n\nいん\n\nニン\n\n—\n\n=\n\n/ N志語\n\n7\n\nい",
+          "confidence": 0.25,
+          "charCount": 202,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1681,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2272.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ンク\n\n<\n\nし\n\nU1d\n\n« ita\n\nil ap\n\nc\n\nTHIS WAY A\n\n<\n\nMKK\n\nd. \\\n\nHIK\n\nCO\n\nWH\n\nがェ\n\n上",
+        "confidence": 0.4,
+        "charCount": 76,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ンク\n\n<\n\nし\n\nU1d\n\n« ita\n\nil ap\n\nc\n\nTHIS WAY A\n\n<\n\nMKK\n\nd. \\\n\nHIK\n\nCO\n\nWH\n\nがェ\n\n上",
+          "confidence": 0.4,
+          "charCount": 76,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 717,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2274.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ニンロー 導際\n\nmisihe\n\n=\n\n. 9\n\n-7\n\nTHS wAY A\n\nNIKK:\n\n. \\\n\nES \\\n\nf ー\n\n*a\n\nNIKK\n\nCOQF\n\nWHi\n\nkey",
+        "confidence": 0.31,
+        "charCount": 87,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ニンロー 導際\n\nmisihe\n\n=\n\n. 9\n\n-7\n\nTHS wAY A\n\nNIKK:\n\n. \\\n\nES \\\n\nf ー\n\n*a\n\nNIKK\n\nCOQF\n\nWHi\n\nkey",
+          "confidence": 0.31,
+          "charCount": 87,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 841,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2291.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "人の\n\n4\n\nED\n\nデ...、\n\nテテ一\n\n#2e\n\n —\n\n_-—\n\nの\n\n二ノ\n\n0\n\n天宮\n\nー 田\n\nロロ\n\n—\n\n』\n\nV\n\nー間.\n\n時\n\n4)\n\n4t\n\n\"名\n\nCpEE",
+        "confidence": 0.23,
+        "charCount": 93,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "人の\n\n4\n\nED\n\nデ...、\n\nテテ一\n\n#2e\n\n —\n\n_-—\n\nの\n\n二ノ\n\n0\n\n天宮\n\nー 田\n\nロロ\n\n—\n\n』\n\nV\n\nー間.\n\n時\n\n4)\n\n4t\n\n\"名\n\nCpEE",
+          "confidence": 0.23,
+          "charCount": 93,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1301,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2292.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ーー ~\n\nの\n\nビー\n\n. —\n\nのを\n\nf\n\n-_—\n\nin\n\n4タル\n\nos\n\n『\n\n/\n\n『\n\n4\n\n/\n\n5\n\n9\n\n-] d\n\nー jrE\n\n2,\n\n}",
+        "confidence": 0.29,
+        "charCount": 82,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ーー ~\n\nの\n\nビー\n\n. —\n\nのを\n\nf\n\n-_—\n\nin\n\n4タル\n\nos\n\n『\n\n/\n\n『\n\n4\n\n/\n\n5\n\n9\n\n-] d\n\nー jrE\n\n2,\n\n}",
+          "confidence": 0.29,
+          "charCount": 82,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 958,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2293.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "—\n\nし3\n\nginf\n\nペングン\n\n#\n\n-_\n\n -\n\nが: N THIS WAY\n\nhr\n\nAN\n\nーー 前\n\n関 ん\n\nZra)\n\n4]\n\n純\n\nR\n\n央2\n\nN\n\n* でまま\n\n%\n\nbi;ー\n\n包\n\n2\n\nーー\n\n0\n\nP\n\nを ss\n\n-—\n\n2\n\n[ine\n\nwi",
+        "confidence": 0.36,
+        "charCount": 140,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "—\n\nし3\n\nginf\n\nペングン\n\n#\n\n-_\n\n -\n\nが: N THIS WAY\n\nhr\n\nAN\n\nーー 前\n\n関 ん\n\nZra)\n\n4]\n\n純\n\nR\n\n央2\n\nN\n\n* でまま\n\n%\n\nbi;ー\n\n包\n\n2\n\nーー\n\n0\n\nP\n\nを ss\n\n-—\n\n2\n\n[ine\n\nwi",
+          "confidence": 0.36,
+          "charCount": 140,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1450,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2296.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "が\n\no 2 SN\n\ny ze\n\n- 0\n\nN\n\n時\n\nMI\n\n区\n\nwik\n\nIA\n\nニギ\n\nは\n\nIN\n\n—\n\n— ~\n\n922Ytms\n\nグ ー\n\nマノ\n\n\\\n\nWa\n\ny\n\n0\n\nZ\n\n\\ St\n\nング\n\nにこ\n\nング\n\nL4\n\na —\n\nーー msご\n\n=—/\n\n=\n\n5. 2 A\n\nー一\n\nーー\n\nと\n\n店芝\n\n~",
+        "confidence": 0.28,
+        "charCount": 164,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "が\n\no 2 SN\n\ny ze\n\n- 0\n\nN\n\n時\n\nMI\n\n区\n\nwik\n\nIA\n\nニギ\n\nは\n\nIN\n\n—\n\n— ~\n\n922Ytms\n\nグ ー\n\nマノ\n\n\\\n\nWa\n\ny\n\n0\n\nZ\n\n\\ St\n\nング\n\nにこ\n\nング\n\nL4\n\na —\n\nーー msご\n\n=—/\n\n=\n\n5. 2 A\n\nー一\n\nーー\n\nと\n\n店芝\n\n~",
+          "confidence": 0.28,
+          "charCount": 164,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1658,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2297.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "3\n\n-s\n\nト\n\nー\n\nへ\n\nト\n\nV 4\n\n1\n\n0\n\nNNー\n\n=\n\nア\n\nーー いき\n\nAN\n\n5\n\n/\n\n和W\n\nsk\n\nジテデン\n\nCV\n\nマデ\n\nSNy\n\nンー\n\nーー 、\n\n[2\n\nに\n\nコン\n\n【\n\nいい、\n\nN\n\nプ\n\n~\n\ny =\n\nーー\n\n<テ\n\nーー 放\n\nーー\n\n一るスマ\n\nー-\n\n=\n\n=\n\n=\n\nKa\n\nーーマー\n\n==",
+        "confidence": 0.29,
+        "charCount": 177,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "3\n\n-s\n\nト\n\nー\n\nへ\n\nト\n\nV 4\n\n1\n\n0\n\nNNー\n\n=\n\nア\n\nーー いき\n\nAN\n\n5\n\n/\n\n和W\n\nsk\n\nジテデン\n\nCV\n\nマデ\n\nSNy\n\nンー\n\nーー 、\n\n[2\n\nに\n\nコン\n\n【\n\nいい、\n\nN\n\nプ\n\n~\n\ny =\n\nーー\n\n<テ\n\nーー 放\n\nーー\n\n一るスマ\n\nー-\n\n=\n\n=\n\n=\n\nKa\n\nーーマー\n\n==",
+          "confidence": 0.29,
+          "charCount": 177,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1662,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2324.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "に3\n\nーー\n\nは\n\n<x\n\n]\n\nNIKKA wisgr\n\nSIN\n\nYOIC\n\nーーマー\n\n上\n\nB~\n\nLiy\n\nに\n\nご",
+        "confidence": 0.38,
+        "charCount": 64,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "に3\n\nーー\n\nは\n\n<x\n\n]\n\nNIKKA wisgr\n\nSIN\n\nYOIC\n\nーーマー\n\n上\n\nB~\n\nLiy\n\nに\n\nご",
+          "confidence": 0.38,
+          "charCount": 64,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 601,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2325.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "に\n\nEd 74\n\nb 、\n\n»'§\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\n¥\n\namy\n\nでつくられたモルト原清\n\nシングルモルト\n\nPRor\n\nKKA WHISKY\n\nPO\n\nJAPAN\n\nale®\n\nスキ",
+        "confidence": 0.61,
+        "charCount": 126,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "に\n\nEd 74\n\nb 、\n\n»'§\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\n¥\n\namy\n\nでつくられたモルト原清\n\nシングルモルト\n\nPRor\n\nKKA WHISKY\n\nPO\n\nJAPAN\n\nale®\n\nスキ",
+          "confidence": 0.61,
+          "charCount": 126,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 778,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2436.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ーー\n\nマー レン\n\nまま 敬\n\n加\n\nゲッ\n\nE w-\n\n___.\n\n0\n\n1\n\nt\n\n人 に\n\nTe)\n\n・ _3\n\nWm\n\n由。 。あ",
+        "confidence": 0.19,
+        "charCount": 70,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ーー\n\nマー レン\n\nまま 敬\n\n加\n\nゲッ\n\nE w-\n\n___.\n\n0\n\n1\n\nt\n\n人 に\n\nTe)\n\n・ _3\n\nWm\n\n由。 。あ",
+          "confidence": 0.19,
+          "charCount": 70,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 814,
+      "problemClassification": [
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2853.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ー 日\n\nどう\n\nーー\n\n7997\n\nke\n\nJ5\n\n(is\n\nた\n\n1 季\n\nフイン\n\nおいしい\n\nee や\n\nTHIS WRY\n\nE\n\n3IF\n\n連続\n\nE\n\nロー\n\n=J\n\n;_\n\nGO\n\nー\n\nー ー\n\nーー\n\nー\n\nきま\n\npa\n\n写っ\n\n(3\n\n4\n\n剛\n\nNIS\n\n昌明\n\n5\n\nに\n\nト",
+        "confidence": 0.3,
+        "charCount": 151,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ー 日\n\nどう\n\nーー\n\n7997\n\nke\n\nJ5\n\n(is\n\nた\n\n1 季\n\nフイン\n\nおいしい\n\nee や\n\nTHIS WRY\n\nE\n\n3IF\n\n連続\n\nE\n\nロー\n\n=J\n\n;_\n\nGO\n\nー\n\nー ー\n\nーー\n\nー\n\nきま\n\npa\n\n写っ\n\n(3\n\n4\n\n剛\n\nNIS\n\n昌明\n\n5\n\nに\n\nト",
+          "confidence": 0.3,
+          "charCount": 151,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1455,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2873.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "1馬上へ・ シビ 3提\n\nを —\n\n所\n\nビッ\n\nJol\n\n»\n\nmatsiie\n\n«\n\nTHIS Wny\n\nA\n\nーーも\n\n_\n\n~\n\n{\n\ni4\n\nil\n\nb O\n\nを1\n\nabeshir\n\nlew Me\n\nるもこお\n\nの洒\n\nーンジ答\n\n4\n\n唱えをが時\n\n方を\n\nし。\n\nがな\n\nBE\n\nるに\n\n#\n\nねーの性\n\n万申メ\n\nあ来た たにア\n\nずー様と\n\nYTERY\n\nそ然チに人バ\n\nま自引ぶる\n\nををと\n\nがが\n\nをーま\n\n5l3\n\nに",
+        "confidence": 0.38,
+        "charCount": 223,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "1馬上へ・ シビ 3提\n\nを —\n\n所\n\nビッ\n\nJol\n\n»\n\nmatsiie\n\n«\n\nTHIS Wny\n\nA\n\nーーも\n\n_\n\n~\n\n{\n\ni4\n\nil\n\nb O\n\nを1\n\nabeshir\n\nlew Me\n\nるもこお\n\nの洒\n\nーンジ答\n\n4\n\n唱えをが時\n\n方を\n\nし。\n\nがな\n\nBE\n\nるに\n\n#\n\nねーの性\n\n万申メ\n\nあ来た たにア\n\nずー様と\n\nYTERY\n\nそ然チに人バ\n\nま自引ぶる\n\nををと\n\nがが\n\nをーま\n\n5l3\n\nに",
+          "confidence": 0.38,
+          "charCount": 223,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1998,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2874.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "~NA\n\n/]\n\n記さ\n\nり ~3\n\no.\n\nJol\n\nの\n\nmiiey\n\n»-\n\nは\n\nて\n\ny\n\nのや\n\nTHIS way A\n\n。]\n\nルル\n\n7\n\nが\n\nー区4\n\nニー一\n\n3\n\nーー一\n\npeshr\n\nNew M\n\nb Z\n\nの酒\n\nIxm\n\n£5n\n\n発と栓\n\nなびり」の\n\nfi\n\nblpE\n\n来に\n\n申みか\n\nRB4\n\nチチ飛々\n\n8\n\nこバ\n\nT——\n\nんダチ\n\nがが\n\n慈ーす",
+        "confidence": 0.45,
+        "charCount": 198,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "~NA\n\n/]\n\n記さ\n\nり ~3\n\no.\n\nJol\n\nの\n\nmiiey\n\n»-\n\nは\n\nて\n\ny\n\nのや\n\nTHIS way A\n\n。]\n\nルル\n\n7\n\nが\n\nー区4\n\nニー一\n\n3\n\nーー一\n\npeshr\n\nNew M\n\nb Z\n\nの酒\n\nIxm\n\n£5n\n\n発と栓\n\nなびり」の\n\nfi\n\nblpE\n\n来に\n\n申みか\n\nRB4\n\nチチ飛々\n\n8\n\nこバ\n\nT——\n\nんダチ\n\nがが\n\n慈ーす",
+          "confidence": 0.45,
+          "charCount": 198,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1531,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2876.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "の\n\n&\n\n0\n\nーー\n\n—\n\nLJ\n\nfn\n\n1\n\nー ー\n\nx\n\n=\n\nお 1 §\n\n鷹,\n\nノリ\n\n)\n\n目!\n\nQL\n\nHAWK EYE\n\nーッ\n\nmopoer\n\nPA\n\nミコ\n\nLRE%\n\nリデンタラ\n\nーー ーー\n\nーー\n\nーーにや",
+        "confidence": 0.37,
+        "charCount": 122,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "の\n\n&\n\n0\n\nーー\n\n—\n\nLJ\n\nfn\n\n1\n\nー ー\n\nx\n\n=\n\nお 1 §\n\n鷹,\n\nノリ\n\n)\n\n目!\n\nQL\n\nHAWK EYE\n\nーッ\n\nmopoer\n\nPA\n\nミコ\n\nLRE%\n\nリデンタラ\n\nーー ーー\n\nーー\n\nーーにや",
+          "confidence": 0.37,
+          "charCount": 122,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1075,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2943.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "=\n\nq\n\n=\n\nへ\n\nす始sw\n\n県6 6\n\n»\n\n1\n\n全\n\nee 倒5\n\nl\n\nロロ\n\n直\n\nTHIS WAY\n\n見\n\nー\n\n=\n\nーー\n\n=\n\n=\n\nり)\n\nK\n\nす の\n\nザ\n\n£' §!\n\n7\n\n'&\n\nJ\n\n5\n\nAt\n\nb\n\nil\n\n2= 1\n\n%\n\n—\n\n* か\n\nZe no Mort\n\n中",
+        "confidence": 0.34,
+        "charCount": 155,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "=\n\nq\n\n=\n\nへ\n\nす始sw\n\n県6 6\n\n»\n\n1\n\n全\n\nee 倒5\n\nl\n\nロロ\n\n直\n\nTHIS WAY\n\n見\n\nー\n\n=\n\nーー\n\n=\n\n=\n\nり)\n\nK\n\nす の\n\nザ\n\n£' §!\n\n7\n\n'&\n\nJ\n\n5\n\nAt\n\nb\n\nil\n\n2= 1\n\n%\n\n—\n\n* か\n\nZe no Mort\n\n中",
+          "confidence": 0.34,
+          "charCount": 155,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1389,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3426.heic",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "央ド =\n\n——\n\nn",
+        "confidence": 0.08,
+        "charCount": 11,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "央ド =\n\n——\n\nn",
+          "confidence": 0.08,
+          "charCount": 11,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 562,
+      "problemClassification": [
+        "文字数不足",
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3427.heic",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ーーニー一一一 a\n\nき\n\n5\n\n=\n\nリ9\n\nどど\n\n時",
+        "confidence": 0.42,
+        "charCount": 29,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ーーニー一一一 a\n\nき\n\n5\n\n=\n\nリ9\n\nどど\n\n時",
+          "confidence": 0.42,
+          "charCount": 29,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 789,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3510.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ーー\n\n¢\n\nW\n\nDAI\n\nHAMAD\n\nJAP\n\nTRADITI\n\nHU\n\n5\n\n時",
+        "confidence": 0.65,
+        "charCount": 44,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ーー\n\n¢\n\nW\n\nDAI\n\nHAMAD\n\nJAP\n\nTRADITI\n\nHU\n\n5\n\n時",
+          "confidence": 0.65,
+          "charCount": 44,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 403,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3512.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "果\n\nl\n\nツ\n\n化\n\n —\n\n]\n\n#!\n\nxi\n\n”\n\n2\n\nできるだけお早め\n\n- 止\n\n式会社 名\n\n県中州市現過",
+        "confidence": 0.53,
+        "charCount": 61,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "果\n\nl\n\nツ\n\n化\n\n —\n\n]\n\n#!\n\nxi\n\n”\n\n2\n\nできるだけお早め\n\n- 止\n\n式会社 名\n\n県中州市現過",
+          "confidence": 0.53,
+          "charCount": 61,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 698,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3665.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ンー\n\nーー\n\nA\n\nN\n\n人hp\n\nam\n\n-\n\nNEー\n\nSinf\n\nNo\n\n“Yd\n\nヘンアン\n\n66,\n\nが\n\nこつ\n\n2こっ\n\nくさ4ws)\n\nー &\n\nみあ\n\n了\n\n pacd\n\nーー\n\nSN\n\nSS\n\n=\n\n=\n\nWAY\n\n—\n\ni\\\n\nle\n\nL]\n\nー\n\n』\n\nー\n\n人\n\n公 リリ\n\n/\n\nY ゅ\n\n山前\n\n7\n\n1lh] 1 \\ あせで5昌和\n\nFY\n\nH\n\neo\n\n赤米大吟醸\n\n“rald :\n\nーーデジ\n\nーー\n\nl\n\nボド OF\n\n¥\n\n[ii\n\nNL o8\n\n5\n\n0 E\n\nL)\n\n)\n\ny\n\nリ\n\nXS\n\nEi",
+        "confidence": 0.38,
+        "charCount": 273,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ンー\n\nーー\n\nA\n\nN\n\n人hp\n\nam\n\n-\n\nNEー\n\nSinf\n\nNo\n\n“Yd\n\nヘンアン\n\n66,\n\nが\n\nこつ\n\n2こっ\n\nくさ4ws)\n\nー &\n\nみあ\n\n了\n\n pacd\n\nーー\n\nSN\n\nSS\n\n=\n\n=\n\nWAY\n\n—\n\ni\\\n\nle\n\nL]\n\nー\n\n』\n\nー\n\n人\n\n公 リリ\n\n/\n\nY ゅ\n\n山前\n\n7\n\n1lh] 1 \\ あせで5昌和\n\nFY\n\nH\n\neo\n\n赤米大吟醸\n\n“rald :\n\nーーデジ\n\nーー\n\nl\n\nボド OF\n\n¥\n\n[ii\n\nNL o8\n\n5\n\n0 E\n\nL)\n\n)\n\ny\n\nリ\n\nXS\n\nEi",
+          "confidence": 0.38,
+          "charCount": 273,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2179,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3666.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "5\n\n\\\n\nー ト\n\nいら\n\n5)\n\n£\n\nる る\n\nJIlf\n\n[\n\n-—\n\n県 ー\n\nfSペ\n\nて g\n\nTHes way A\n\nREE\n\n—\n\nv\n\niL\n\nMS\n\n8 全品\n\nRe Je\n\nー\n\nー\n\nYA\n\nANISHIY\n\nB 、\n\nnajo:\n\nu\n\n21\n\nw\n\nや ,\n\nン因 a\n\nテー",
+        "confidence": 0.37,
+        "charCount": 153,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "5\n\n\\\n\nー ト\n\nいら\n\n5)\n\n£\n\nる る\n\nJIlf\n\n[\n\n-—\n\n県 ー\n\nfSペ\n\nて g\n\nTHes way A\n\nREE\n\n—\n\nv\n\niL\n\nMS\n\n8 全品\n\nRe Je\n\nー\n\nー\n\nYA\n\nANISHIY\n\nB 、\n\nnajo:\n\nu\n\n21\n\nw\n\nや ,\n\nン因 a\n\nテー",
+          "confidence": 0.37,
+          "charCount": 153,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1243,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3667.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "[5)\\\n\nS\n\nーー\n\nペー 拘\n\n£\n\nL L T\n\n1\n\n&\n\n5 だ\n\no\n\nに\n\nwb\n\nTHeS WAY A\n\n)\n\nL Y\n\n1814\n\nv-\n\nme [\n\n» .-\n\nL\n\nB N\n\nジッ\n\nに2\n\nーー\n\n§\n\nrl\n\nー",
+        "confidence": 0.21,
+        "charCount": 120,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "[5)\\\n\nS\n\nーー\n\nペー 拘\n\n£\n\nL L T\n\n1\n\n&\n\n5 だ\n\no\n\nに\n\nwb\n\nTHeS WAY A\n\n)\n\nL Y\n\n1814\n\nv-\n\nme [\n\n» .-\n\nL\n\nB N\n\nジッ\n\nに2\n\nーー\n\n§\n\nrl\n\nー",
+          "confidence": 0.21,
+          "charCount": 120,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1091,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3668.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "BRgsL\n\n\\\n\nー\n\nウッ\n\nー\n\nデマ\n\n1\n\nは )\n\n-\n\n‘«\n\nに\n\n アプ\n\n<\n\n» &\n\nnas way A\n\nシンンク\n\nンク\n\n4\n\nーー\n\n—\n\n—\n\nし\n\n妨 そも\n\n(ご8\n\n—\n\nな\n\nで\n\n会に 3\n\n%\n\nビルトマ\n\n公、\n\n欠\n\nの\n\nここ\n\n名\n\nき\n\nB N\n\nf\n\nA\n\n5\n\n5 か]\n\n:放\n\nは\n\n名\n\n%\n\nテー\n\nき王\n\nいい",
+        "confidence": 0.29,
+        "charCount": 190,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "BRgsL\n\n\\\n\nー\n\nウッ\n\nー\n\nデマ\n\n1\n\nは )\n\n-\n\n‘«\n\nに\n\n アプ\n\n<\n\n» &\n\nnas way A\n\nシンンク\n\nンク\n\n4\n\nーー\n\n—\n\n—\n\nし\n\n妨 そも\n\n(ご8\n\n—\n\nな\n\nで\n\n会に 3\n\n%\n\nビルトマ\n\n公、\n\n欠\n\nの\n\nここ\n\n名\n\nき\n\nB N\n\nf\n\nA\n\n5\n\n5 か]\n\n:放\n\nは\n\n名\n\n%\n\nテー\n\nき王\n\nいい",
+          "confidence": 0.29,
+          "charCount": 190,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1787,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3669.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "mm\n\nに\n\nSome\n\nN\n\n 4\n\nZ/2\n\no__\n\nー\n\nンーアン\n\n£\n\nIf\n\nee [})\n\nLU\n\n4^ーー\n\n4\n\n洛 3\n\nまっ\n\nTHIS WAY A\n\nh.N\n\nalh\n\nを\n\n\"\n\n7\n\nデア\n\n4 *\n\n(いり\n\nテ\n\n(pesmm\n\nーー\n\nで\n\nの\n\no e\n\nしー",
+        "confidence": 0.28,
+        "charCount": 149,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "mm\n\nに\n\nSome\n\nN\n\n 4\n\nZ/2\n\no__\n\nー\n\nンーアン\n\n£\n\nIf\n\nee [})\n\nLU\n\n4^ーー\n\n4\n\n洛 3\n\nまっ\n\nTHIS WAY A\n\nh.N\n\nalh\n\nを\n\n\"\n\n7\n\nデア\n\n4 *\n\n(いり\n\nテ\n\n(pesmm\n\nーー\n\nで\n\nの\n\no e\n\nしー",
+          "confidence": 0.28,
+          "charCount": 149,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1464,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3670.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "SM\n\nの\n\n2 に\n\n4\n\nンク\n\nを\n\nん\n\n旧\n\nさき\n\nwit)\n\nに J\n\nやてき\n\ny 6、\n\nTHIS way\n\n¥\n\nb\n\n£1\n\nツス<\n\n人 S\n\n_-—\n\nB»\n\nsd\n\n7\n\n7\n\n7\n\nクジ\n\n“Re\n\nh.",
+        "confidence": 0.26,
+        "charCount": 117,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "SM\n\nの\n\n2 に\n\n4\n\nンク\n\nを\n\nん\n\n旧\n\nさき\n\nwit)\n\nに J\n\nやてき\n\ny 6、\n\nTHIS way\n\n¥\n\nb\n\n£1\n\nツス<\n\n人 S\n\n_-—\n\nB»\n\nsd\n\n7\n\n7\n\n7\n\nクジ\n\n“Re\n\nh.",
+          "confidence": 0.26,
+          "charCount": 117,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1134,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3671.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "~\n\nうト\n\n。。 p\n\n、\n\n7\n\n7983\n\ni»\n\n<\n\nLe 1}\n\nPn\n\n5\n\nしーー\n\n アザ\n\nk旨\n\nabl\n\nTHeS way\n\nht\n\nve\n\nfoi3<\n\nciill\n\nEE\n\nトド\n\nー\n\n<の\n\n§\n\nSZON =\n\nal",
+        "confidence": 0.24,
+        "charCount": 125,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "~\n\nうト\n\n。。 p\n\n、\n\n7\n\n7983\n\ni»\n\n<\n\nLe 1}\n\nPn\n\n5\n\nしーー\n\n アザ\n\nk旨\n\nabl\n\nTHeS way\n\nht\n\nve\n\nfoi3<\n\nciill\n\nEE\n\nトド\n\nー\n\n<の\n\n§\n\nSZON =\n\nal",
+          "confidence": 0.24,
+          "charCount": 125,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1224,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3674.JPG",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "—\n\nビラ\n\nmm\n\nし nm\n\nで\n\n衣 計 ーー\n\nニー =Se==sar] トー\n\nXEN\n\njE———) 復 ー FE\n\n本\n\nn/\n\n/\n\n&9\n\n日\n\n1814\n\nの/二\n\nイ g\n\ni\n\nきき\n\n7\n\n17l:\n\n7\n\nクテ ー\n\ne",
+        "confidence": 0.28,
+        "charCount": 124,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "—\n\nビラ\n\nmm\n\nし nm\n\nで\n\n衣 計 ーー\n\nニー =Se==sar] トー\n\nXEN\n\njE———) 復 ー FE\n\n本\n\nn/\n\n/\n\n&9\n\n日\n\n1814\n\nの/二\n\nイ g\n\ni\n\nきき\n\n7\n\n17l:\n\n7\n\nクテ ー\n\ne",
+          "confidence": 0.28,
+          "charCount": 124,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1897,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3962.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "き\n\n則\n\n3\n\naa\n\n「 n\n\nしJ る\n\nター\n\nああ 一\n\n補語\"rew K\n\n『\n\nた\n\nし\n\n/\n\n@\n\nPe\n\n\\\n\nF-\n\nルン\n\nまん。 3\n\n_ «\n\nに",
+        "confidence": 0.36,
+        "charCount": 87,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "き\n\n則\n\n3\n\naa\n\n「 n\n\nしJ る\n\nター\n\nああ 一\n\n補語\"rew K\n\n『\n\nた\n\nし\n\n/\n\n@\n\nPe\n\n\\\n\nF-\n\nルン\n\nまん。 3\n\n_ «\n\nに",
+          "confidence": 0.36,
+          "charCount": 87,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1074,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3965.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "一\n\nべ\n\nA\n\nドロ r\n\n66\n\nWW本\n\nー ー\n\nB §\n\nー B\n\n «\n\nh J\n\nd\n\nー\n\nー -\n\n宮本\n\nい J\n\nーー\n\nや\n\nで\n\nこり0\n\nり\n\nし\n\n95\n\n{\n\nドー\n\njo1\n\nTakijiman\n\n9)\n\nみ\n\n2ペ\n\n【 も\n\n»\n\nB\n\nかと u K\n\nE.\n\nー\n\nTakijiman\n\nへ\n\n。 込\n\nhY\n\n』",
+        "confidence": 0.35,
+        "charCount": 177,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "一\n\nべ\n\nA\n\nドロ r\n\n66\n\nWW本\n\nー ー\n\nB §\n\nー B\n\n «\n\nh J\n\nd\n\nー\n\nー -\n\n宮本\n\nい J\n\nーー\n\nや\n\nで\n\nこり0\n\nり\n\nし\n\n95\n\n{\n\nドー\n\njo1\n\nTakijiman\n\n9)\n\nみ\n\n2ペ\n\n【 も\n\n»\n\nB\n\nかと u K\n\nE.\n\nー\n\nTakijiman\n\nへ\n\n。 込\n\nhY\n\n』",
+          "confidence": 0.35,
+          "charCount": 177,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1346,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4293.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "/ ペペ\n\n+ァ /\n\n5 F\n\nー\n\n物/\n\n脂\n\nし\n\n1\n\nいい\n\nーー\n\nー\n\n\\\n\n~\n\n//\n\nN\n\n2020\n\n1}\n\nfly2\n\nassstun\n\n1h\n\nジミ\n\nなー\n\n=\n\nの\n\nング\n\n人\n\n山錦\n\n/\n\n店5 odあッ 、",
+        "confidence": 0.31,
+        "charCount": 123,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "/ ペペ\n\n+ァ /\n\n5 F\n\nー\n\n物/\n\n脂\n\nし\n\n1\n\nいい\n\nーー\n\nー\n\n\\\n\n~\n\n//\n\nN\n\n2020\n\n1}\n\nfly2\n\nassstun\n\n1h\n\nジミ\n\nなー\n\n=\n\nの\n\nング\n\n人\n\n山錦\n\n/\n\n店5 odあッ 、",
+          "confidence": 0.31,
+          "charCount": 123,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1163,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4294.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "—_—~\n\nSE\n\nil\n\n全う\n\n”~ .\n\nに ¥\n\n=\n\nめい >\n\n-\n\nか ー\n\nーー\n\nウノ\n\n坦 >\n\n:\n\nNe\n\nTHE WEY\n\nし\n\n\\\n\nーB\n\n]\n\nーーっーー\n\n層\n\n$衣\n\n202094\n\nannnsenat\n\n§ 1\n\nジジミミ\n\nいちへ\n\nMe-\n\n6\n\n3\n\n)\n\nに5\n\n美山鈴",
+        "confidence": 0.29,
+        "charCount": 158,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "—_—~\n\nSE\n\nil\n\n全う\n\n”~ .\n\nに ¥\n\n=\n\nめい >\n\n-\n\nか ー\n\nーー\n\nウノ\n\n坦 >\n\n:\n\nNe\n\nTHE WEY\n\nし\n\n\\\n\nーB\n\n]\n\nーーっーー\n\n層\n\n$衣\n\n202094\n\nannnsenat\n\n§ 1\n\nジジミミ\n\nいちへ\n\nMe-\n\n6\n\n3\n\n)\n\nに5\n\n美山鈴",
+          "confidence": 0.29,
+          "charCount": 158,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1483,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4295.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "隊 せく\n\nNN\n\nN\n\ne\n\nー <\n\nの\n\nママ\n\nお 1\n\n!\n\nof\n\n7\n\n』\n\nifl\n\nし\n\nを ー使製\n\nFR\n\nSATN\n\nREREET\n\n中\n\n用写\n\n酵用米」\n\nghl\n\nBrE\n\nDEES\n\n師い\n\nめ史\n\nf&A\n\nEEEEES\n\n名名\n\nま\n\n2すさ\n\nL\n\n暁\n\nに\n\nがが\n\n2t\n\nき麹美米\n\nNA\n\nルリ\n\nFROR\n\nはが\n\n2\n\nLiieie\n\nリ\n\nRiey\n\nkG\n\n5の\n\nき ほぼ\n\nAEIN%51E\n\nリ\n\nすず\n\n’\n\n情\n\nー 滑\n\nBi\n\nLo\n\nBE0x\n\nきき\n\nが\n\n60 秋\n\n? 。\n\nwith Q\n\nは\n\nRyo 13\n\n用和\n\nもし\n\ni J\n\nゅ>う長の\n\nスでて\n\nET\n\nーー\n\nRighy\n\n Bimg 20CL—\n\n&\n\nは4\n\nn%R\n\n月 2021.03。\n\nを?\n\n剛生\n\n2021.04c\n\nひさや\n\ny!\n\nいき",
+        "confidence": 0.37,
+        "charCount": 401,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "隊 せく\n\nNN\n\nN\n\ne\n\nー <\n\nの\n\nママ\n\nお 1\n\n!\n\nof\n\n7\n\n』\n\nifl\n\nし\n\nを ー使製\n\nFR\n\nSATN\n\nREREET\n\n中\n\n用写\n\n酵用米」\n\nghl\n\nBrE\n\nDEES\n\n師い\n\nめ史\n\nf&A\n\nEEEEES\n\n名名\n\nま\n\n2すさ\n\nL\n\n暁\n\nに\n\nがが\n\n2t\n\nき麹美米\n\nNA\n\nルリ\n\nFROR\n\nはが\n\n2\n\nLiieie\n\nリ\n\nRiey\n\nkG\n\n5の\n\nき ほぼ\n\nAEIN%51E\n\nリ\n\nすず\n\n’\n\n情\n\nー 滑\n\nBi\n\nLo\n\nBE0x\n\nきき\n\nが\n\n60 秋\n\n? 。\n\nwith Q\n\nは\n\nRyo 13\n\n用和\n\nもし\n\ni J\n\nゅ>う長の\n\nスでて\n\nET\n\nーー\n\nRighy\n\n Bimg 20CL—\n\n&\n\nは4\n\nn%R\n\n月 2021.03。\n\nを?\n\n剛生\n\n2021.04c\n\nひさや\n\ny!\n\nいき",
+          "confidence": 0.37,
+          "charCount": 401,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2841,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4298.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "E\n\nA\n\n~\\\n\n66\n\n償\n\nのーー\n\nバー\n\n[を\n\n1\n\n5\n\nに\n\nA\n\n5)\n\nの\n\n4\n\n革7 は\n\nNS\n\nどン<ふ\n\n2 E]\n\nいら5\n\nにヘー\n\nいし(4痢",
+        "confidence": 0.27,
+        "charCount": 89,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "E\n\nA\n\n~\\\n\n66\n\n償\n\nのーー\n\nバー\n\n[を\n\n1\n\n5\n\nに\n\nA\n\n5)\n\nの\n\n4\n\n革7 は\n\nNS\n\nどン<ふ\n\n2 E]\n\nいら5\n\nにヘー\n\nいし(4痢",
+          "confidence": 0.27,
+          "charCount": 89,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1102,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4300.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "る 明\n\ne,\n\nー\n\n<月\n\nほほ 間\n\n66\n\n</\n\nペンンジン\n\n電紀\n\nきく4wsAラ\n\nRIC\n\ng / N」\n\nN\n\nS%\n\nーー\n\n7\n\nてくM)\n\nふ 略\n\n7/\n\n#\n\n出\n\nI\n\nは\n\n\\\n\n放す\n\nmt!\n\nヘーニーーテーー\n\n【導ー\n\n区\n\n』\n\n. &\n\nとっ\n\ncosa\n\nFRTng,\n\n」\n\n=\n\n—\n\n大\n\nに(カ\n\nンス\n\n埋学\n\n&7o7\n\n秀3\n\nWS\n\nサラ\n\n@\n\n/\n\n1",
+        "confidence": 0.29,
+        "charCount": 210,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "る 明\n\ne,\n\nー\n\n<月\n\nほほ 間\n\n66\n\n</\n\nペンンジン\n\n電紀\n\nきく4wsAラ\n\nRIC\n\ng / N」\n\nN\n\nS%\n\nーー\n\n7\n\nてくM)\n\nふ 略\n\n7/\n\n#\n\n出\n\nI\n\nは\n\n\\\n\n放す\n\nmt!\n\nヘーニーーテーー\n\n【導ー\n\n区\n\n』\n\n. &\n\nとっ\n\ncosa\n\nFRTng,\n\n」\n\n=\n\n—\n\n大\n\nに(カ\n\nンス\n\n埋学\n\n&7o7\n\n秀3\n\nWS\n\nサラ\n\n@\n\n/\n\n1",
+          "confidence": 0.29,
+          "charCount": 210,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1653,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4611.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "—\n\nり\n\n)り\n\nW\n\n)N\n\n2\n\nNT\n\nN\n\nOU\n\n21\n\nまる",
+        "confidence": 0.58,
+        "charCount": 37,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "—\n\nり\n\n)り\n\nW\n\n)N\n\n2\n\nNT\n\nN\n\nOU\n\n21\n\nまる",
+          "confidence": 0.58,
+          "charCount": 37,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 477,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4612.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "2\n\nのガ\n\nの\n\ny\n\nてや\n\nます\n\nも\n\n» ¥\n\nに\n\n2\n\nBt\n\nA\n\nを\n\nvw\n\nる\n\na\n\n隊の> :\n\nWy\n\nが\n\n3\n\n7\n\nめく\n\nW\n\n*a\n\nメッ\n\nY\n\n2と\n\nの\n\nンク\n\nグッ22\n\nPLe\n\nLA\n\nと2\n\nの\n\nー\n\n由\n\ncle\n\n2\n\nグ\n\nfe8\n\nメア\n\n2\n\n5\n\nン/ん\n\n/\n\n5t\n\n%\n\n7\n\n多鐘\n\n鐘\n\nを\n\n”\n\n7\n\nググ\n\nfi\n\n7の\n\n2\n\nMカ\n\nの\n\nクン/\n\n0\n\nと\n\n7\n\n£\n\n1il\n\nクン\n\nンク\n\n)\n\n7\n\nん",
+        "confidence": 0.21,
+        "charCount": 251,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "2\n\nのガ\n\nの\n\ny\n\nてや\n\nます\n\nも\n\n» ¥\n\nに\n\n2\n\nBt\n\nA\n\nを\n\nvw\n\nる\n\na\n\n隊の> :\n\nWy\n\nが\n\n3\n\n7\n\nめく\n\nW\n\n*a\n\nメッ\n\nY\n\n2と\n\nの\n\nンク\n\nグッ22\n\nPLe\n\nLA\n\nと2\n\nの\n\nー\n\n由\n\ncle\n\n2\n\nグ\n\nfe8\n\nメア\n\n2\n\n5\n\nン/ん\n\n/\n\n5t\n\n%\n\n7\n\n多鐘\n\n鐘\n\nを\n\n”\n\n7\n\nググ\n\nfi\n\n7の\n\n2\n\nMカ\n\nの\n\nクン/\n\n0\n\nと\n\n7\n\n£\n\n1il\n\nクン\n\nンク\n\n)\n\n7\n\nん",
+          "confidence": 0.21,
+          "charCount": 251,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1753,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4614.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "oo\n\nWT\n\nて\n\nと生 )\n\n(リ\n\nーー\n\n==\n\n66\n\n-@ 2\n\nー —\n\nンとる\n\nーー\n\n-y\n\nー\n\nム []\n\nー\n\nTHIS WAY\n\nーw\n\n-\n\nは\n\n\\\n\n\\d\n\n-\n\n/\n\n1\n\nー\n\n:1v3\n\n[\n\n人\n\nカリ\n\n[*\n\nト だ\n\n間\n\n~\n\n{:\n\n3\n\nー\n\nMOUNTAIN\n\n21\n\nBL\n\nへ<\n\n「\n\n“\n\n大ご\n\n> ー\n\n1",
+        "confidence": 0.37,
+        "charCount": 187,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "oo\n\nWT\n\nて\n\nと生 )\n\n(リ\n\nーー\n\n==\n\n66\n\n-@ 2\n\nー —\n\nンとる\n\nーー\n\n-y\n\nー\n\nム []\n\nー\n\nTHIS WAY\n\nーw\n\n-\n\nは\n\n\\\n\n\\d\n\n-\n\n/\n\n1\n\nー\n\n:1v3\n\n[\n\n人\n\nカリ\n\n[*\n\nト だ\n\n間\n\n~\n\n{:\n\n3\n\nー\n\nMOUNTAIN\n\n21\n\nBL\n\nへ<\n\n「\n\n“\n\n大ご\n\n> ー\n\n1",
+          "confidence": 0.37,
+          "charCount": 187,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1459,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4615 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "テス\n\n—\n\n-w! 。だへ\n\n P%\n\nfol\n\n66\n\nw\n\nLL)\n\nw-\n\nTHEWAY A\n\n.\n\nー N\n\n{\n\nーー\n\nE- 3\n\noy\n\nMoyNTAY\n\n2021",
+        "confidence": 0.3,
+        "charCount": 90,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "テス\n\n—\n\n-w! 。だへ\n\n P%\n\nfol\n\n66\n\nw\n\nLL)\n\nw-\n\nTHEWAY A\n\n.\n\nー N\n\n{\n\nーー\n\nE- 3\n\noy\n\nMoyNTAY\n\n2021",
+          "confidence": 0.3,
+          "charCount": 90,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 839,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4616 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "{\n\n\"ええ\n\nますかい\n\nABU MOUNT.\n\nBER [SaR2A] £ +oS806\n\nMRHREb T B L 1 日本酒仙\n\n記計のは、 TiheSHRS\n\nMo% Xini2A 2 ififb+ 5mENET) q\n\nSRSHB# T X 22y (MOUNTAIE\n\nは\n\nた日本洒で\n\n*山 5 MOUNTAINり を想像し父\n\nにお楽しみく ださ \\ae\n\nwwr が\n\nact.\n\nした新紀代の\n\nW\n\n2 8 Gkom) Oz\n\n材料名 R\n\n(0\n\nを ©:4#x4 & 6026 内\n\nz\n\n«®\n\nタ he\n\nR\n\nル分 14度 お酒は二\n\nにが2\n\nり\n\n府\n\n'2021 年7月\n\nL§\n\nCRETIRA\n\nFREeRAEL o00\n\nN\n\n$ミ+\n\n装手県盛岡市北飯同\n\n[ ォ\n\n乳期\n\nきら できる\n\n2\n\nRa%hg\n\n酒はお挫えくだこ\n\nがございま\n\no%\n\nせん\n\n内 鶴 720m!\n\n—",
+        "confidence": 0.44,
+        "charCount": 418,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "{\n\n\"ええ\n\nますかい\n\nABU MOUNT.\n\nBER [SaR2A] £ +oS806\n\nMRHREb T B L 1 日本酒仙\n\n記計のは、 TiheSHRS\n\nMo% Xini2A 2 ififb+ 5mENET) q\n\nSRSHB# T X 22y (MOUNTAIE\n\nは\n\nた日本洒で\n\n*山 5 MOUNTAINり を想像し父\n\nにお楽しみく ださ \\ae\n\nwwr が\n\nact.\n\nした新紀代の\n\nW\n\n2 8 Gkom) Oz\n\n材料名 R\n\n(0\n\nを ©:4#x4 & 6026 内\n\nz\n\n«®\n\nタ he\n\nR\n\nル分 14度 お酒は二\n\nにが2\n\nり\n\n府\n\n'2021 年7月\n\nL§\n\nCRETIRA\n\nFREeRAEL o00\n\nN\n\n$ミ+\n\n装手県盛岡市北飯同\n\n[ ォ\n\n乳期\n\nきら できる\n\n2\n\nRa%hg\n\n酒はお挫えくだこ\n\nがございま\n\no%\n\nせん\n\n内 鶴 720m!\n\n—",
+          "confidence": 0.44,
+          "charCount": 418,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 4155,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4617 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "いき\n\nSS\n\nNN\n\nヘン\n\nYo\n\nv -\n\n:\n\n18 wWh\n\ngiey\n\nVoog\n\nbonts\n\nLi\n\nk",
+        "confidence": 0.14,
+        "charCount": 60,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "いき\n\nSS\n\nNN\n\nヘン\n\nYo\n\nv -\n\n:\n\n18 wWh\n\ngiey\n\nVoog\n\nbonts\n\nLi\n\nk",
+          "confidence": 0.14,
+          "charCount": 60,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 543,
+      "problemClassification": [
+        "低信頼度",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4618 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "-の商品はク〇暑い真夏に「冷やして\n\n由仁込みの酒]」 というテーマで仕込ん\n\n*手です。夏に太陽に向かって咲くひまれ\n\n2し、ジジャイジ上 全虹8\n\nfyELE\n\nUEHAHR ERZ(E, LonY#ASE\n\nPEBMICLTRL Bos—BITI T\n\n< りたてのフレピラマジショな状態で出荷してと\n\n・ 谷えた状態でバランスが取れ\n\nるようが\n\n設計しているため、 HRMICEAY\n\nておりおば\n\nで お方好きの方はスルーしてくた\n\n材\n\nー\n\nL\n\nai\n\n田県産)、 回\n\nPl\n\n回\n\nーー\n\n的\n\n秋\n\n-\n\n)\n\nービ\n\n。\n\nig\n\n-\n\nロ\n\n合 55%\n\n=\n\n\\\n\n15度\n\nz\n\n株式会社\n\n>\n\nは\n\n—\n\nRa\n\n山\n\n山本\n\n7\n\n9\n\nZ\n\nー\n\n本郡八峰町八森字八森2\n\nになってから\n\nWas\n\n2021.7",
+        "confidence": 0.66,
+        "charCount": 376,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "-の商品はク〇暑い真夏に「冷やして\n\n由仁込みの酒]」 というテーマで仕込ん\n\n*手です。夏に太陽に向かって咲くひまれ\n\n2し、ジジャイジ上 全虹8\n\nfyELE\n\nUEHAHR ERZ(E, LonY#ASE\n\nPEBMICLTRL Bos—BITI T\n\n< りたてのフレピラマジショな状態で出荷してと\n\n・ 谷えた状態でバランスが取れ\n\nるようが\n\n設計しているため、 HRMICEAY\n\nておりおば\n\nで お方好きの方はスルーしてくた\n\n材\n\nー\n\nL\n\nai\n\n田県産)、 回\n\nPl\n\n回\n\nーー\n\n的\n\n秋\n\n-\n\n)\n\nービ\n\n。\n\nig\n\n-\n\nロ\n\n合 55%\n\n=\n\n\\\n\n15度\n\nz\n\n株式会社\n\n>\n\nは\n\n—\n\nRa\n\n山\n\n山本\n\n7\n\n9\n\nZ\n\nー\n\n本郡八峰町八森字八森2\n\nになってから\n\nWas\n\n2021.7",
+          "confidence": 0.66,
+          "charCount": 376,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2959,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4619 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "i ー\n\ngol\n\n_4\n\nで 07\n\nし店\n\ni-?\n\nL wey ®\n\n-\n\n\\\n\n#\n\nカ\n\n【\n\n4ル\n\nb\n\n ーー\n\n内\n\n4)\n\nMM\n\nご「得\n\nいい\n\nh\n\na\\\n\nj\\\n\nビ A",
+        "confidence": 0.27,
+        "charCount": 99,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "i ー\n\ngol\n\n_4\n\nで 07\n\nし店\n\ni-?\n\nL wey ®\n\n-\n\n\\\n\n#\n\nカ\n\n【\n\n4ル\n\nb\n\n ーー\n\n内\n\n4)\n\nMM\n\nご「得\n\nいい\n\nh\n\na\\\n\nj\\\n\nビ A",
+          "confidence": 0.27,
+          "charCount": 99,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 869,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4620 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "L#5(\n\nいいas Ba ルル\n\nIL, BERL, AXET,\n\nthaT EA\n\n上\n\n日本酒】 【内容量 720 m4】\n\n (回導拓涼次(国産) —\n\n歩合\n\nー\n\nか 16 度\n\n=\n\n13.06\n\n=\n\n=\n\nb ERTproR) Z\n\n 記 人\n\n株式会社\n\n—\n\nEERT seaeny\n\nMa {aid\n\n27)003) eiyl 2の0\n\nha\n\nこつでか\n\nHL y\n\nHitti\n\nWiiy 2[gcTH",
+        "confidence": 0.36,
+        "charCount": 215,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "L#5(\n\nいいas Ba ルル\n\nIL, BERL, AXET,\n\nthaT EA\n\n上\n\n日本酒】 【内容量 720 m4】\n\n (回導拓涼次(国産) —\n\n歩合\n\nー\n\nか 16 度\n\n=\n\n13.06\n\n=\n\n=\n\nb ERTproR) Z\n\n 記 人\n\n株式会社\n\n—\n\nEERT seaeny\n\nMa {aid\n\n27)003) eiyl 2の0\n\nha\n\nこつでか\n\nHL y\n\nHitti\n\nWiiy 2[gcTH",
+          "confidence": 0.36,
+          "charCount": 215,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2412,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4621.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "9ゃ\n\ninf)\n\n/\n\n介朋\n\n(ーー\n\n【記\n\n。]\n\n«\n\n». <\n\nTHIS WW\n\nTM,\n\nし\n\n0\n\ngf ー\n\n“8\n\nJapay, Brewing Society !\n\nNo.6\n\nTe Ottise ioh,\n\nクン多ンクン\n\nのRoprr\n\nFidd\n\n寺下",
+        "confidence": 0.25,
+        "charCount": 141,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "9ゃ\n\ninf)\n\n/\n\n介朋\n\n(ーー\n\n【記\n\n。]\n\n«\n\n». <\n\nTHIS WW\n\nTM,\n\nし\n\n0\n\ngf ー\n\n“8\n\nJapay, Brewing Society !\n\nNo.6\n\nTe Ottise ioh,\n\nクン多ンクン\n\nのRoprr\n\nFidd\n\n寺下",
+          "confidence": 0.25,
+          "charCount": 141,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1202,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4622 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "‘»\n\n_— TR,",
+        "confidence": 0.1,
+        "charCount": 10,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "‘»\n\n_— TR,",
+          "confidence": 0.1,
+          "charCount": 10,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 227,
+      "problemClassification": [
+        "文字数不足",
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4623 2.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "$\n\nJapan Brewing Soci 2\n\n66\n\nThe の2クンクン グ\n\nタンクン多ンルシ 9Bre\n\nYiscovered in 795\n\n周\n\nOE]\n\ni=Ld\n\nST\\\n\nPRODUCT OF AKITA\n\nMADE BY\n\nFr IL",
+        "confidence": 0.42,
+        "charCount": 128,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "$\n\nJapan Brewing Soci 2\n\n66\n\nThe の2クンクン グ\n\nタンクン多ンルシ 9Bre\n\nYiscovered in 795\n\n周\n\nOE]\n\ni=Ld\n\nST\\\n\nPRODUCT OF AKITA\n\nMADE BY\n\nFr IL",
+          "confidence": 0.42,
+          "charCount": 128,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 992,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5187.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ご\n\n5\n\n2\n\na i\n\n[i\n\no\n\nン >\n\nリー\n\nEL\n\n4\n\nすす\n\n/a\n\ni\n\nト ー\n\n\\\n\n,\n\nも\n\nB\n\nEd\n\n5\n\nNR\n\nウ\n\nE\n\n38\n\nーー一一一",
+        "confidence": 0.31,
+        "charCount": 91,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "ご\n\n5\n\n2\n\na i\n\n[i\n\no\n\nン >\n\nリー\n\nEL\n\n4\n\nすす\n\n/a\n\ni\n\nト ー\n\n\\\n\n,\n\nも\n\nB\n\nEd\n\n5\n\nNR\n\nウ\n\nE\n\n38\n\nーー一一一",
+          "confidence": 0.31,
+          "charCount": 91,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 762,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5188.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "- / 導\n\nビン\n\n身\n\n1 デ\n\nhe)\n\nI}\n\nーーコー\n\n由\n\n0J)\n\nJー=\n\nーー\n\n5\n\n_ニニーィー半",
+        "confidence": 0.3,
+        "charCount": 61,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "- / 導\n\nビン\n\n身\n\n1 デ\n\nhe)\n\nI}\n\nーーコー\n\n由\n\n0J)\n\nJー=\n\nーー\n\n5\n\n_ニニーィー半",
+          "confidence": 0.3,
+          "charCount": 61,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 635,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5189.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "L 3 FP\n\n大地\n\n_RRhag\n\n用 THoTR) $RALAkAYEg ー\n\nL30kLLRFOP THS NEKHoy\n\nムいう)信全のもと表家と我々の信頼関係により最訓9\n\nい\n\n可が作り久けられています。 HETEVIRUAEL\n\nいう第別な大地ー で永い時を刻み久けているか6\n\n)\n\nBLAARE RATSC LaTET ダラ\n\n『テディーに圧倒的な存在感を表現しフフ、 2\n\n替いい信しさきを書っているオリジナリティ\n\n—i\n\nな\n\n味わいをお楽しみいただ\n\nけけます:\n\nが\n\n時蔵牙所にて開栓後はおめにお\n\nLL\n\n iog, anseniontt\n\nでせの御礼ずし上げます。\n\n*米(国産) 、 AED\n\n=\n\nLH X:\n\nTiy\n\nペル和信\n\n*ぁな\n\n 5T 100%\n\n用\n\n16度以上 17 度本満\n\nビー\n\n2[\n\n「 アコ\n\nクー\n\nx\n\nTR\n\n回re\n\nKO021 0\n\nInstag! al",
+        "confidence": 0.51,
+        "charCount": 418,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "L 3 FP\n\n大地\n\n_RRhag\n\n用 THoTR) $RALAkAYEg ー\n\nL30kLLRFOP THS NEKHoy\n\nムいう)信全のもと表家と我々の信頼関係により最訓9\n\nい\n\n可が作り久けられています。 HETEVIRUAEL\n\nいう第別な大地ー で永い時を刻み久けているか6\n\n)\n\nBLAARE RATSC LaTET ダラ\n\n『テディーに圧倒的な存在感を表現しフフ、 2\n\n替いい信しさきを書っているオリジナリティ\n\n—i\n\nな\n\n味わいをお楽しみいただ\n\nけけます:\n\nが\n\n時蔵牙所にて開栓後はおめにお\n\nLL\n\n iog, anseniontt\n\nでせの御礼ずし上げます。\n\n*米(国産) 、 AED\n\n=\n\nLH X:\n\nTiy\n\nペル和信\n\n*ぁな\n\n 5T 100%\n\n用\n\n16度以上 17 度本満\n\nビー\n\n2[\n\n「 アコ\n\nクー\n\nx\n\nTR\n\n回re\n\nKO021 0\n\nInstag! al",
+          "confidence": 0.51,
+          "charCount": 418,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 4319,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5378.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "aa \\\n\nューニー\n\nムー\n\n@\n\nペーニン\n\n「 4\n\n»\n\nマー\n\n大 giif {\n\n誠 ー\n\n ゲ\n\n(TH\n\nョ「月PP月2\n\n‘S WIN\n\n>_v\n\n3\n\nWLECTi\n\nTEMp RANILLO\n\n し\n\n2018\n\n\\ Zaee /",
+        "confidence": 0.36,
+        "charCount": 126,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "aa \\\n\nューニー\n\nムー\n\n@\n\nペーニン\n\n「 4\n\n»\n\nマー\n\n大 giif {\n\n誠 ー\n\n ゲ\n\n(TH\n\nョ「月PP月2\n\n‘S WIN\n\n>_v\n\n3\n\nWLECTi\n\nTEMp RANILLO\n\n し\n\n2018\n\n\\ Zaee /",
+          "confidence": 0.36,
+          "charCount": 126,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1624,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7535.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "E\n\nNー\n\n.\n\nと\n\nwt f\n\nEs\n\n§\n\nir\n\nヘタ\n\n-o.\n\n。*電\n\nーー一\n\nズン\n\n»\n\n人\n\nに\n\nB\n\nか が\n\nWing SONSS\n\nが\n\n -\n\nの\n\n4)\n\nFrI5L",
+        "confidence": 0.23,
+        "charCount": 101,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "E\n\nNー\n\n.\n\nと\n\nwt f\n\nEs\n\n§\n\nir\n\nヘタ\n\n-o.\n\n。*電\n\nーー一\n\nズン\n\n»\n\n人\n\nに\n\nB\n\nか が\n\nWing SONSS\n\nが\n\n -\n\nの\n\n4)\n\nFrI5L",
+          "confidence": 0.23,
+          "charCount": 101,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1099,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7536.HEIC",
+      "cycle": 1,
+      "status": "success",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "SA、\n\n=\n\nSurf.\n\n\"nsJ\n\nペキン\n\n'\n\n, o\n\n )\n\nし\n\n—\n\nほ\n\nNo.6\n\nKEEP COOL\n\np——\n\n上\n\nィり\n\nJek\n\n1.\n\n'E\n\nて\n\nキ\n\n(診",
+        "confidence": 0.23,
+        "charCount": 97,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 1
+      },
+      "variants": [
+        {
+          "variant": "converted-resized",
+          "psm": "11",
+          "text": "SA、\n\n=\n\nSurf.\n\n\"nsJ\n\nペキン\n\n'\n\n, o\n\n )\n\nし\n\n—\n\nほ\n\nNo.6\n\nKEEP COOL\n\np——\n\n上\n\nィり\n\nJek\n\n1.\n\n'E\n\nて\n\nキ\n\n(診",
+          "confidence": 0.23,
+          "charCount": 97,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1035,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    }
+  ]
+}

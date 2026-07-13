@@ -1,6 +1,7 @@
 import { Download, Save } from 'lucide-react';
 import { useState } from 'react';
 import { Field, Section } from '../components/Section';
+import { BUILD_INFO } from '../config/buildInfo';
 import { FEATURES } from '../config/features';
 import { defaultToneSettings } from '../data/templates';
 import { db } from '../db/db';
@@ -100,6 +101,14 @@ export function Settings() {
             データエクスポート
           </button>
           <p className="text-sm leading-6 text-rice/62">Google Drive連携は後続実装です。現在は端末内データのローカル書き出しに対応しています。</p>
+        </div>
+      </Section>
+
+      <Section title="アプリ情報">
+        <div className="rounded-lg bg-rice/8 p-4 text-sm leading-7 text-rice/70">
+          <p><span className="font-bold text-rice">Version</span> {BUILD_INFO.version}</p>
+          <p><span className="font-bold text-rice">Build</span> {BUILD_INFO.commit}</p>
+          <p><span className="font-bold text-rice">Build time</span> {BUILD_INFO.buildTime}</p>
         </div>
       </Section>
 
