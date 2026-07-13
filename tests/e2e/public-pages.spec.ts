@@ -33,8 +33,10 @@ test('photo import runs OCR and shows confidence without auto confirmation', asy
 test('installed PWA shell can reload while offline', async ({ page, context }) => {
   await enterApp(page);
   await page.waitForTimeout(2500);
+  const appUrl = page.url();
+  await page.goto('about:blank');
   await context.setOffline(true);
-  await page.reload({ waitUntil: 'domcontentloaded' });
+  await page.goto(appUrl, { waitUntil: 'domcontentloaded' });
   await expect(page.getByText('SAKEログ').first()).toBeVisible();
   await context.setOffline(false);
 });
