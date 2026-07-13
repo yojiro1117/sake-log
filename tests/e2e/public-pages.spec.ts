@@ -32,7 +32,16 @@ test('photo import runs OCR and shows confidence without auto confirmation', asy
 
 test('installed PWA shell can reload while offline', async ({ page, context }) => {
   await enterApp(page);
-  await page.waitForTimeout(2500);
+  await page.evaluate(async () => {
+    await navigator.serviceWorker.ready;
+  });
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  await page.evaluate(async () => {
+    if (navigator.serviceWorker.controller) return;
+    await new Promise<void>((resolve) => {
+      navigator.serviceWorker.addEventListener('controllerchange', () => resolve(), { once: true });
+    });
+  });
   const appUrl = page.url();
   await page.goto('about:blank');
   await context.setOffline(true);
