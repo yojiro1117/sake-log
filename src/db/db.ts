@@ -15,6 +15,7 @@ class SakeLogDatabase extends Dexie {
 
   constructor() {
     super('sake-log-db');
+
     this.version(1).stores({
       logs: 'logId, createdAt, drankAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore',
       images: 'imageId, logId, imageType, createdAt',
@@ -26,6 +27,38 @@ class SakeLogDatabase extends Dexie {
       priceCandidates: 'id, source, fetchedAt',
       externalSources: 'id, type, createdAt'
     });
+
+    this.version(2)
+      .stores({
+        logs:
+          'logId, createdAt, updatedAt, drankAt, capturedAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore, selectedMarketPriceCandidateId, importMode',
+        images:
+          'imageId, logId, imageType, createdAt, capturedAt, imageHash, createdFromImport, sortOrder, fileName, mimeType',
+        userSettings: 'id',
+        templates: 'templateId, targetSns, updatedAt',
+        personalityResults: 'id, createdAt',
+        reviewProfileResults: 'id, createdAt',
+        backupStatus: 'id',
+        priceCandidates: 'id, logId, source, fetchedAt, recommended, matchScore',
+        externalSources: 'id, type, createdAt'
+      })
+      .upgrade(async (tx) => {
+        const logs = tx.table<SakeLog, string>('logs');
+        await logs.toCollection().modify((log) => {
+          if (!log.capturedAt && (log as SakeLog & { photoTakenAt?: string }).photoTakenAt) {
+            log.capturedAt = (log as SakeLog & { photoTakenAt?: string }).photoTakenAt;
+          }
+          if (log.generatedTexts && typeof log.generatedTexts !== 'object') log.generatedTexts = undefined;
+          log.selectedMarketPriceCandidateId ??= null;
+        });
+
+        const images = tx.table<SakeImage, string>('images');
+        await images.toCollection().modify((image) => {
+          image.imageType ??= 'frontLabel';
+          image.createdFromImport ??= false;
+          image.sortOrder ??= 0;
+        });
+      });
   }
 }
 
@@ -52,7 +85,7 @@ export async function ensureSeedData() {
     await db.backupStatus.put({
       id: 'default',
       googleDriveStatus: 'readyForFuture',
-      message: 'ローカル保存中。Google Driveバックアップは後続実装用にサービスを分離済みです。'
+      message: 'ローカル保存中です。Google Driveバックアップは後続実装で追加予定です。'
     });
   }
 }

@@ -61,36 +61,12 @@ export const alcoholProfiles: Record<AlcoholType, AlcoholProfile> = {
       { key: 'afterglow', label: '余韻', question: '余韻はどの程度残りますか？' }
     ]
   },
-  gin: {
-    type: 'gin',
-    label: 'ジン',
-    axes: commonAxes('ボタニカル')
-  },
-  vodka: {
-    type: 'vodka',
-    label: 'ウォッカ',
-    axes: commonAxes('クリアさ')
-  },
-  rum: {
-    type: 'rum',
-    label: 'ラム',
-    axes: commonAxes('甘香')
-  },
-  tequila: {
-    type: 'tequila',
-    label: 'テキーラ',
-    axes: commonAxes('原料感')
-  },
-  liqueur: {
-    type: 'liqueur',
-    label: 'リキュール',
-    axes: commonAxes('風味')
-  },
-  other: {
-    type: 'other',
-    label: 'その他',
-    axes: commonAxes('個性')
-  }
+  gin: { type: 'gin', label: 'ジン', axes: commonAxes('ボタニカル') },
+  vodka: { type: 'vodka', label: 'ウォッカ', axes: commonAxes('クリアさ') },
+  rum: { type: 'rum', label: 'ラム', axes: commonAxes('甘香') },
+  tequila: { type: 'tequila', label: 'テキーラ', axes: commonAxes('原料感') },
+  liqueur: { type: 'liqueur', label: 'リキュール', axes: commonAxes('風味') },
+  other: { type: 'other', label: 'その他', axes: commonAxes('個性') }
 };
 
 export const alcoholOptions = Object.values(alcoholProfiles);

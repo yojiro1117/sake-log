@@ -1,11 +1,5 @@
+import { BarElement, CategoryScale, Chart as ChartJS, LinearScale, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import {
-  BarElement,
-  CategoryScale,
-  Chart as ChartJS,
-  LinearScale,
-  Tooltip
-} from 'chart.js';
 import { Section } from '../components/Section';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
@@ -21,10 +15,10 @@ export function Analysis() {
     <div className="space-y-4">
       <header>
         <p className="text-sm font-bold text-gold">味覚傾向分析</p>
-        <h1 className="mt-1 text-2xl font-black">好みとコスパの輪郭を見る</h1>
+        <h1 className="mt-1 text-2xl font-black">好みとコスパの傾向を見る</h1>
       </header>
 
-      <Section title="酒種別平均評価">
+      <Section title="酒種類別平均評価">
         <div className="h-72 rounded-lg bg-rice p-4 text-ink">
           <Bar
             data={{
@@ -45,7 +39,7 @@ export function Analysis() {
         </div>
       </Section>
 
-      <Section title="好きな傾向">
+      <Section title="味覚傾向">
         <div className="grid grid-cols-2 gap-3">
           {analysis.favoriteFeatures.map((feature) => (
             <div key={feature.label} className="glass-panel rounded-lg p-4">
@@ -53,6 +47,7 @@ export function Analysis() {
               <p className="text-sm text-rice/66">平均 {feature.average}</p>
             </div>
           ))}
+          {analysis.favoriteFeatures.length === 0 ? <p className="text-rice/56">記録を保存すると傾向が表示されます。</p> : null}
         </div>
       </Section>
 
@@ -93,9 +88,7 @@ export function Analysis() {
 
       <Section title="価格帯分布">
         <div className="grid grid-cols-2 gap-3">
-          {analysis.priceBands.map((band) => (
-            <Metric key={band.label} label={band.label} value={`${band.count}件`} />
-          ))}
+          {analysis.priceBands.map((band) => <Metric key={band.label} label={band.label} value={`${band.count}件`} />)}
         </div>
       </Section>
     </div>

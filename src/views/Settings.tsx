@@ -1,12 +1,12 @@
 import { Download, Save } from 'lucide-react';
 import { useState } from 'react';
 import { Field, Section } from '../components/Section';
+import { FEATURES } from '../config/features';
 import { defaultToneSettings } from '../data/templates';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { downloadBlob, exportLocalData } from '../services/backupService';
 import type { PostTemplate, ToneSettings } from '../types';
-import { FEATURES } from '../config/features';
 
 const inputClass = 'w-full rounded-md border border-rice/12 bg-ink/70 px-3 py-3 text-rice outline-none focus:border-gold';
 
@@ -15,7 +15,6 @@ export function Settings() {
   const templates = useLiveQuery(() => db.templates.toArray(), []);
   const [status, setStatus] = useState('');
   const [rakutenId, setRakutenId] = useState('');
-
   const tone = settings?.toneSettings ?? defaultToneSettings;
 
   async function saveRakutenId() {
@@ -47,7 +46,7 @@ export function Settings() {
       <Section title="20歳以上確認">
         <div className="rounded-lg bg-rice/8 p-4">
           <p className="font-bold">{settings?.ageConfirmed ? '確認済み' : '未確認'}</p>
-          <p className="mt-2 text-sm text-rice/62">お酒は20歳になってから。飲酒運転や過度な飲酒を促す文章は生成しません。</p>
+          <p className="mt-2 text-sm text-rice/62">お酒は20歳になってから。過度な飲酒や飲酒運転を助長する文言は生成・表示しません。</p>
         </div>
       </Section>
 
@@ -60,7 +59,7 @@ export function Settings() {
             <Save size={18} />
             保存
           </button>
-          <p className="text-xs leading-5 text-rice/54">APIキー秘匿用サーバーは使わず、本人の端末内だけに保存します。</p>
+          <p className="text-xs leading-5 text-rice/54">APIキー秘匿用サーバーは使わず、本人の端末内だけに保存します。未設定でも手入力価格で記録できます。</p>
         </div>
       </Section>
 
@@ -89,8 +88,8 @@ export function Settings() {
 
       <Section title="診断">
         <div className="grid gap-3">
-          <Diagnosis title="性格診断" description="感想の書き方や記録スタイルの傾向を、後続実装で保存できるようにしています。" />
-          <Diagnosis title="飲酒レビュー用プロフィール診断" description="香味探求、食中酒、コスパ実用、写真映えなどのタイプ判定を後続実装しやすいストアに分離済みです。" />
+          <Diagnosis title="性格診断" description="感想の書き方や記録スタイルの傾向を、後続実装で端末内に保存できるようにします。" />
+          <Diagnosis title="飲酒レビュー用プロフィール診断" description="香味探求、食中酒、コスパ実用などのタイプ判定を後続実装で追加予定です。" />
         </div>
       </Section>
 
@@ -100,7 +99,7 @@ export function Settings() {
             <Download size={18} />
             データエクスポート
           </button>
-          <p className="text-sm leading-6 text-rice/62">Google Drive連携は後続実装です。保存先構成を想定し、backupService を分離しています。</p>
+          <p className="text-sm leading-6 text-rice/62">Google Drive連携は後続実装です。現在は端末内データのローカル書き出しに対応しています。</p>
         </div>
       </Section>
 

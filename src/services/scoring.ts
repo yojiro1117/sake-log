@@ -31,7 +31,7 @@ export function correctedScore(base: number, satisfaction: number, context: { fo
 }
 
 export function summarizePrices(candidates: MarketPriceCandidate[]) {
-  const prices = candidates.map((candidate) => candidate.itemPrice).filter((price) => price > 0).sort((a, b) => a - b);
+  const prices = candidates.map((candidate) => candidate.totalPrice ?? candidate.price).filter((price) => price > 0).sort((a, b) => a - b);
   if (prices.length === 0) return {};
   const sum = prices.reduce((total, price) => total + price, 0);
   const middle = Math.floor(prices.length / 2);
@@ -41,12 +41,12 @@ export function summarizePrices(candidates: MarketPriceCandidate[]) {
     marketPriceMin: prices[0],
     marketPriceMedian: Math.round(median),
     marketPriceAverage: Math.round(sum / prices.length),
-    adoptedMarketPrice: Math.round(median)
+    adoptedMarketPrice: undefined
   };
 }
 
 export function evaluateValue(satisfaction: number, adoptedPrice?: number): { valueScore: CostPerformance; priceConfidence: Confidence } {
-  if (!adoptedPrice) return { valueScore: 'B', priceConfidence: 'manual' };
+  if (!adoptedPrice) return { valueScore: 'D', priceConfidence: 'unknown' };
 
   const priceBandBonus = adoptedPrice <= 1000 ? 0.8 : adoptedPrice <= 2500 ? 0.35 : adoptedPrice <= 5000 ? 0 : -0.35;
   const adjusted = satisfaction + priceBandBonus;
@@ -54,7 +54,39 @@ export function evaluateValue(satisfaction: number, adoptedPrice?: number): { va
   if (adjusted >= 5.4) return { valueScore: 'S', priceConfidence: 'high' };
   if (adjusted >= 4.6) return { valueScore: 'A', priceConfidence: 'medium' };
   if (adjusted >= 3.6) return { valueScore: 'B', priceConfidence: 'medium' };
-  return { valueScore: 'C', priceConfidence: 'low' };
+  if (adjusted >= 2.6) return { valueScore: 'C', priceConfidence: 'low' };
+  return { valueScore: 'D', priceConfidence: 'low' };
+}
+
+export function highScoreRanking<T extends { satisfactionScore: number; correctedScore: number; repeatScore: number; drankAt?: string }>(logs: T[], limit = 3) {
+  return [...logs]
+    .sort((a, b) => {
+      if (b.satisfactionScore !== a.satisfactionScore) return b.satisfactionScore - a.satisfactionScore;
+      if (b.correctedScore !== a.correctedScore) return b.correctedScore - a.correctedScore;
+      if (b.repeatScore !== a.repeatScore) return b.repeatScore - a.repeatScore;
+      return dateTime(b.drankAt) - dateTime(a.drankAt);
+    })
+    .slice(0, limit);
+}
+
+const valueRank: Record<CostPerformance, number> = { S: 5, A: 4, B: 3, C: 2, D: 1 };
+
+export function valueRanking<T extends { valueScore?: CostPerformance; satisfactionScore: number; adoptedMarketPrice?: number; drankAt?: string }>(logs: T[], limit = 3) {
+  return [...logs]
+    .sort((a, b) => {
+      const rankDiff = valueRank[b.valueScore ?? 'D'] - valueRank[a.valueScore ?? 'D'];
+      if (rankDiff !== 0) return rankDiff;
+      if (b.satisfactionScore !== a.satisfactionScore) return b.satisfactionScore - a.satisfactionScore;
+      if ((a.adoptedMarketPrice ?? Number.MAX_SAFE_INTEGER) !== (b.adoptedMarketPrice ?? Number.MAX_SAFE_INTEGER)) {
+        return (a.adoptedMarketPrice ?? Number.MAX_SAFE_INTEGER) - (b.adoptedMarketPrice ?? Number.MAX_SAFE_INTEGER);
+      }
+      return dateTime(b.drankAt) - dateTime(a.drankAt);
+    })
+    .slice(0, limit);
+}
+
+function dateTime(value?: string) {
+  return value ? new Date(value).getTime() : 0;
 }
 
 export function getDominantFeature(scores: Record<string, number>, labels: Record<string, string>) {

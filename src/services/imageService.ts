@@ -54,11 +54,11 @@ export async function generatePostImage(log: SakeLog, photo?: Blob): Promise<Blo
 
   ctx.fillStyle = 'rgba(247,243,232,0.92)';
   ctx.font = '500 34px system-ui, sans-serif';
-  wrapText(ctx, log.generatedTexts.oneLine, 82, 820, 900, 46);
+  wrapText(ctx, log.generatedTexts?.oneLine ?? log.memo ?? '記録コメントは未入力です。', 82, 820, 900, 46);
 
   ctx.fillStyle = 'rgba(247,243,232,0.72)';
   ctx.font = '500 26px system-ui, sans-serif';
-  ctx.fillText(new Date(log.drankAt).toLocaleDateString('ja-JP'), 82, 1000);
+  ctx.fillText(log.drankAt ? new Date(log.drankAt).toLocaleDateString('ja-JP') : '飲酒日未設定', 82, 1000);
   ctx.fillText('SAKEログ / お酒は20歳になってから', 554, 1000);
 
   return await canvasToBlob(canvas, 'image/png', 0.95);

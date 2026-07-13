@@ -11,10 +11,12 @@ export type AlcoholType =
   | 'liqueur'
   | 'other';
 
-export type ImageType = 'frontLabel' | 'backLabel' | 'bottle' | 'other';
+export type ImageType = 'frontLabel' | 'backLabel' | 'bottle' | 'glass' | 'food' | 'receipt' | 'other';
 export type BackgroundMode = 'original' | 'cutout' | 'template' | 'solid' | 'blur';
-export type CostPerformance = 'S' | 'A' | 'B' | 'C';
-export type Confidence = 'high' | 'medium' | 'low' | 'manual';
+export type CostPerformance = 'S' | 'A' | 'B' | 'C' | 'D';
+export type Confidence = 'high' | 'medium' | 'low' | 'manual' | 'unknown';
+export type ImportMode = 'singleLog' | 'separateLogs';
+export type ImportStatus = 'pending' | 'processing' | 'success' | 'warning' | 'failed' | 'cancelled';
 
 export interface RatingAxis {
   key: string;
@@ -28,15 +30,61 @@ export interface AlcoholProfile {
   axes: RatingAxis[];
 }
 
+export interface AlcoholLabelCandidate {
+  productName: string;
+  makerName?: string;
+  alcoholType: AlcoholType;
+  aliases: string[];
+}
+
+export interface CandidateMatch {
+  productName?: string;
+  makerName?: string;
+  alcoholType?: AlcoholType;
+  volume?: number;
+  abv?: number;
+  confidence: Confidence;
+  matchReasons: string[];
+  warning?: string;
+}
+
 export interface MarketPriceCandidate {
   id: string;
-  itemName: string;
-  shopName: string;
-  itemPrice: number;
-  itemUrl: string;
+  logId?: string;
   source: 'rakuten' | 'history' | 'manual';
+  itemName: string;
+  shopName?: string;
+  itemUrl?: string;
+  price: number;
+  shippingFee?: number;
+  shippingIncluded?: boolean;
+  totalPrice?: number;
+  volumeMl?: number;
+  quantity?: number;
+  unitPricePerBottle?: number;
+  unitPricePer100ml?: number;
   fetchedAt: string;
-  confidence: Confidence;
+  matchScore: number;
+  matchReasons: string[];
+  excludedReasons: string[];
+  recommended: boolean;
+}
+
+export interface SelectedMarketPriceSnapshot {
+  candidateId: string | null;
+  adoptedMarketPrice?: number;
+  itemName?: string;
+  shopName?: string;
+  itemUrl?: string;
+  source: MarketPriceCandidate['source'] | 'unfetched';
+  fetchedAt?: string;
+  volumeMl?: number;
+  quantity?: number;
+  shippingFee?: number;
+  shippingIncluded?: boolean;
+  totalPrice?: number;
+  priceConfidence: Confidence;
+  matchReasons: string[];
 }
 
 export interface SakeImage {
@@ -46,18 +94,26 @@ export interface SakeImage {
   originalBlob: Blob;
   processedBlob?: Blob;
   backgroundMode: BackgroundMode;
+  fileName?: string;
+  mimeType?: string;
+  fileSize?: number;
+  width?: number;
+  height?: number;
+  capturedAt?: string;
+  imageHash?: string;
   ocrText?: string;
+  ocrConfidence?: number;
+  createdFromImport?: boolean;
+  sortOrder?: number;
   createdAt: string;
-  takenAt?: string;
 }
 
-export interface PhotoImportCandidate {
-  productName?: string;
-  makerName?: string;
-  volume?: number;
-  abv?: number;
-  confidence: 'high' | 'medium' | 'low';
-  reason: string;
+export interface OcrResult {
+  text: string;
+  confidence: number;
+  engine: 'textDetector' | 'tesseract' | 'none';
+  status: 'success' | 'empty' | 'failed' | 'cancelled';
+  message: string;
 }
 
 export interface ImportedPhotoDraft {
@@ -66,9 +122,16 @@ export interface ImportedPhotoDraft {
   originalFile: File;
   resizedBlob: Blob;
   previewUrl: string;
-  takenAt?: string;
-  ocrText?: string;
-  candidates: PhotoImportCandidate[];
+  capturedAt?: string;
+  imageHash: string;
+  width?: number;
+  height?: number;
+  ocr: OcrResult;
+  candidates: CandidateMatch[];
+  status: ImportStatus;
+  message?: string;
+  imageType: ImageType;
+  sortOrder: number;
 }
 
 export interface GeneratedTexts {
@@ -81,8 +144,11 @@ export interface SakeLog {
   logId: string;
   createdAt: string;
   updatedAt: string;
-  drankAt: string;
-  photoTakenAt?: string;
+  drankAt?: string;
+  capturedAt?: string;
+  importMode?: ImportMode;
+  selectedMarketPriceCandidateId?: string | null;
+  selectedMarketPriceSnapshot?: SelectedMarketPriceSnapshot;
   alcoholType: AlcoholType;
   productName: string;
   makerName?: string;
@@ -122,7 +188,7 @@ export interface SakeLog {
   correctionReason: string;
   radarImagePath?: string;
   postImagePath?: string;
-  generatedTexts: GeneratedTexts;
+  generatedTexts?: GeneratedTexts;
   memo?: string;
   tags: string[];
   sourceInfo?: string;

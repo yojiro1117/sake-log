@@ -13,7 +13,7 @@ export function Logs() {
   const logs = useLiveQuery(() => db.logs.orderBy('drankAt').reverse().toArray(), []);
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<AlcoholType | 'all'>('all');
-  const [sort, setSort] = useState<'date' | 'photoDate' | 'score' | 'price' | 'type'>('date');
+  const [sort, setSort] = useState<'date' | 'capturedAt' | 'score' | 'price' | 'type'>('date');
   const [selected, setSelected] = useState<SakeLog | undefined>();
 
   const filtered = useMemo(() => {
@@ -28,8 +28,8 @@ export function Logs() {
         if (sort === 'score') return b.satisfactionScore - a.satisfactionScore;
         if (sort === 'price') return (b.adoptedMarketPrice ?? 0) - (a.adoptedMarketPrice ?? 0);
         if (sort === 'type') return alcoholProfiles[a.alcoholType].label.localeCompare(alcoholProfiles[b.alcoholType].label, 'ja');
-        if (sort === 'photoDate') return new Date(b.photoTakenAt ?? b.drankAt).getTime() - new Date(a.photoTakenAt ?? a.drankAt).getTime();
-        return new Date(b.drankAt).getTime() - new Date(a.drankAt).getTime();
+        if (sort === 'capturedAt') return dateTime(b.capturedAt ?? b.drankAt) - dateTime(a.capturedAt ?? a.drankAt);
+        return dateTime(b.drankAt) - dateTime(a.drankAt);
       });
   }, [filter, logs, query, sort]);
 
@@ -54,9 +54,9 @@ export function Logs() {
           </select>
           <select className={inputClass} value={sort} onChange={(event) => setSort(event.target.value as typeof sort)}>
             <option value="date">記録日</option>
-            <option value="photoDate">撮影日</option>
-            <option value="score">評価順</option>
-            <option value="price">価格順</option>
+            <option value="capturedAt">撮影日</option>
+            <option value="score">評価</option>
+            <option value="price">価格</option>
             <option value="type">酒種類</option>
           </select>
         </div>
@@ -70,7 +70,7 @@ export function Logs() {
                 <div>
                   <p className="text-lg font-bold">{log.productName}</p>
                   <p className="mt-1 text-sm text-rice/60">{alcoholProfiles[log.alcoholType].label} / {log.makerName || '蔵元未入力'}</p>
-                  <p className="mt-1 text-xs text-rice/45">記録日 {log.drankAt}{log.photoTakenAt ? ` / 撮影日 ${log.photoTakenAt}` : ''}</p>
+                  <p className="mt-1 text-xs text-rice/45">記録日 {log.drankAt ?? '未設定'}{log.capturedAt ? ` / 撮影日 ${log.capturedAt}` : ''}</p>
                   <p className="mt-2 text-xs text-rice/48">{log.tags.map((tag) => `#${tag}`).join(' ')}</p>
                 </div>
                 <div className="text-right">
@@ -98,4 +98,8 @@ export function Logs() {
       ) : null}
     </div>
   );
+}
+
+function dateTime(value?: string) {
+  return value ? new Date(value).getTime() : 0;
 }

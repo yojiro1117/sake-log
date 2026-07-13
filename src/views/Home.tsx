@@ -3,24 +3,25 @@ import { Section } from '../components/Section';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { analyzeLogs } from '../services/analysis';
+import { highScoreRanking, valueRanking } from '../services/scoring';
 import { alcoholProfiles } from '../data/alcoholProfiles';
 import type { Tab } from '../components/BottomNav';
+import type { SakeLog } from '../types';
 
 export function Home({ onNavigate, onImportPhotos }: { onNavigate: (tab: Tab) => void; onImportPhotos: (files: File[]) => void }) {
   const logs = useLiveQuery(() => db.logs.orderBy('drankAt').reverse().toArray(), []);
   const backup = useLiveQuery(() => db.backupStatus.get('default'), undefined);
   const analysis = analyzeLogs(logs);
   const recent = logs[0];
+  const highScores = highScoreRanking(logs, 3);
+  const values = valueRanking(logs, 3);
 
   return (
     <div className="space-y-2">
       <div className="rounded-lg bg-rice p-5 text-ink shadow-glow">
         <p className="text-sm font-bold text-moss">SAKEログ</p>
         <h1 className="mt-2 text-3xl font-black">今日の一杯を、手軽に記録。</h1>
-        <button
-          className="mt-5 flex w-full items-center justify-center gap-2 rounded-md bg-ink px-4 py-4 font-bold text-rice"
-          onClick={() => onNavigate('record')}
-        >
+        <button className="mt-5 flex w-full items-center justify-center gap-2 rounded-md bg-ink px-4 py-4 font-bold text-rice" onClick={() => onNavigate('record')}>
           <Plus size={20} />
           今日のお酒を記録する
         </button>
@@ -30,7 +31,7 @@ export function Home({ onNavigate, onImportPhotos }: { onNavigate: (tab: Tab) =>
           <input
             className="hidden"
             type="file"
-            accept="image/*"
+            accept="image/*,.heic,.heif"
             multiple
             onChange={(event) => {
               const files = Array.from(event.target.files ?? []);
@@ -50,7 +51,7 @@ export function Home({ onNavigate, onImportPhotos }: { onNavigate: (tab: Tab) =>
             </p>
           </div>
         ) : (
-          <Empty text="まだ記録がありません。" />
+          <Empty text="まだ記録がありません。写真や評価を残すと、ここに最近の記録が表示されます。" />
         )}
       </Section>
 
@@ -63,38 +64,24 @@ export function Home({ onNavigate, onImportPhotos }: { onNavigate: (tab: Tab) =>
               <p className="text-sm text-rice/70">平均 {feature.average}</p>
             </div>
           ))}
-          {analysis.favoriteFeatures.length === 0 && <Empty text="記録が増えると傾向が出ます。" />}
+          {analysis.favoriteFeatures.length === 0 && <Empty text="記録が増えると味覚傾向が表示されます。" />}
         </div>
       </Section>
 
       <Section title="高評価ランキング">
-        <div className="space-y-2">
-          {logs
-            .filter((log) => log.satisfactionScore >= 5)
-            .slice(0, 3)
-            .map((log) => (
-              <div key={log.logId} className="flex items-center justify-between rounded-md bg-rice/8 px-4 py-3">
-                <span className="font-semibold">{log.productName}</span>
-                <span className="text-sm text-gold">{log.valueScore} / {log.satisfactionScore}</span>
-              </div>
-            ))}
-          {logs.length === 0 && <Empty text="保存後にランキングが表示されます。" />}
-        </div>
+        <RankingList
+          logs={highScores}
+          empty="保存後にランキングが表示されます。"
+          render={(log) => `${log.satisfactionScore}/6 / 補正後 ${log.correctedScore}`}
+        />
       </Section>
 
       <Section title="コスパランキング">
-        <div className="space-y-2">
-          {logs
-            .filter((log) => log.valueScore === 'S' || log.valueScore === 'A')
-            .slice(0, 3)
-            .map((log) => (
-              <div key={log.logId} className="flex items-center justify-between rounded-md bg-rice/8 px-4 py-3">
-                <span className="font-semibold">{log.productName}</span>
-                <span className="text-sm text-gold">{log.valueScore} / {log.adoptedMarketPrice ? `${log.adoptedMarketPrice.toLocaleString()}円` : '価格未入力'}</span>
-              </div>
-            ))}
-          {logs.length === 0 && <Empty text="保存後にランキングが表示されます。" />}
-        </div>
+        <RankingList
+          logs={values}
+          empty="保存後にランキングが表示されます。"
+          render={(log) => `${log.valueScore ?? 'D'} / ${log.adoptedMarketPrice ? `${log.adoptedMarketPrice.toLocaleString()}円` : '価格未取得'}`}
+        />
       </Section>
 
       <Section title="バックアップ状態">
@@ -103,6 +90,20 @@ export function Home({ onNavigate, onImportPhotos }: { onNavigate: (tab: Tab) =>
           <p className="text-sm leading-6 text-rice/78">{backup?.message ?? 'ローカル保存を準備中です。'}</p>
         </div>
       </Section>
+    </div>
+  );
+}
+
+function RankingList({ logs, empty, render }: { logs: SakeLog[]; empty: string; render: (log: SakeLog) => string }) {
+  if (logs.length === 0) return <Empty text={empty} />;
+  return (
+    <div className="space-y-2">
+      {logs.map((log, index) => (
+        <div key={log.logId} className="flex items-center justify-between rounded-md bg-rice/8 px-4 py-3">
+          <span className="font-semibold">{index + 1}. {log.productName}</span>
+          <span className="text-sm text-gold">{render(log)}</span>
+        </div>
+      ))}
     </div>
   );
 }

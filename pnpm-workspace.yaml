@@ -1,2 +1,4 @@
 allowBuilds:
   esbuild: true
+  exifreader: true
+  tesseract.js: true
