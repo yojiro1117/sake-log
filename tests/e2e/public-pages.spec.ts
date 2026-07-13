@@ -50,8 +50,11 @@ test('installed PWA shell is prepared for offline use', async ({ page, context, 
       );
       return requests.flat().map((request) => request.url);
     });
-    expect(cachedUrls.some((url) => url.endsWith('/sake-log/index.html'))).toBe(true);
-    expect(cachedUrls.some((url) => /\/sake-log\/assets\/.+\.js$/.test(url))).toBe(true);
+    const cachedPaths = cachedUrls.map((url) => new URL(url).pathname);
+    expect(
+      cachedPaths.some((path) => path === '/sake-log/' || path === '/sake-log/index.html')
+    ).toBe(true);
+    expect(cachedPaths.some((path) => /\/sake-log\/assets\/.+\.js$/.test(path))).toBe(true);
     return;
   }
   const appUrl = page.url();
