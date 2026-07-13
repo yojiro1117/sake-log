@@ -9,7 +9,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip);
 
 export function Analysis() {
   const logs = useLiveQuery(() => db.logs.toArray(), []);
-  const analysis = analyzeLogs(logs);
+  const analysis = analyzeLogs(logs.filter((log) => (log.status ?? 'complete') === 'complete'));
 
   return (
     <div className="space-y-4">

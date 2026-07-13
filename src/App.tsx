@@ -12,6 +12,7 @@ import { Settings } from './views/Settings';
 export default function App() {
   const [tab, setTab] = useState<Tab>('home');
   const [importFiles, setImportFiles] = useState<File[]>([]);
+  const [resumeDraftId, setResumeDraftId] = useState<string | undefined>();
   const settings = useLiveQuery(() => db.userSettings.get('default'), undefined);
 
   useEffect(() => {
@@ -27,13 +28,18 @@ export default function App() {
         {tab === 'home' && (
           <Home
             onNavigate={setTab}
+            onResumeDraft={(id) => {
+              setResumeDraftId(id);
+              setImportFiles([]);
+              setTab('record');
+            }}
             onImportPhotos={(files) => {
               setImportFiles(files);
               setTab('record');
             }}
           />
         )}
-        {tab === 'record' && <Record importFiles={importFiles} onImportQueueDone={() => setImportFiles([])} />}
+        {tab === 'record' && <Record importFiles={importFiles} resumeDraftId={resumeDraftId} onImportQueueDone={() => { setImportFiles([]); setResumeDraftId(undefined); }} />}
         {tab === 'logs' && <Logs />}
         {tab === 'analysis' && <Analysis />}
         {tab === 'settings' && <Settings />}

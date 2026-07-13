@@ -7,6 +7,9 @@ import { alcoholOptions, alcoholProfiles } from '../data/alcoholProfiles';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { findDuplicateLogs, saveLogTransaction } from '../services/logRepository';
+import { confidenceLabel } from '../services/confidenceService';
+import { deleteDraft, hydratePhotos, loadDraft, saveDraft, serializePhotos } from '../services/draftService';
+import { recordClassificationCorrection, recordOcrCorrection } from '../services/ocrLearning';
 import {
   createImportedPhotoDraftsSequential,
   imageTypeLabel,
@@ -30,7 +33,15 @@ import type {
 const inputClass = 'w-full rounded-md border border-rice/12 bg-ink/70 px-3 py-3 text-rice outline-none focus:border-gold';
 const imageTypeOptions: ImageType[] = ['frontLabel', 'backLabel', 'bottle', 'glass', 'food', 'receipt', 'other'];
 
-export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: File[]; onImportQueueDone?: () => void }) {
+export function Record({
+  importFiles = [],
+  resumeDraftId,
+  onImportQueueDone
+}: {
+  importFiles?: File[];
+  resumeDraftId?: string;
+  onImportQueueDone?: () => void;
+}) {
   const settings = useLiveQuery(() => db.userSettings.get('default'), undefined);
   const logs = useLiveQuery(() => db.logs.toArray(), []);
   const [form, setForm] = useState<RecordFormState>(() => createInitialFormState('sake'));
@@ -47,7 +58,11 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
   const [status, setStatus] = useState('');
   const [duplicateChoices, setDuplicateChoices] = useState<SakeLog[]>([]);
   const [savedLogId, setSavedLogId] = useState<string | undefined>();
+  const [draftId, setDraftId] = useState(() => resumeDraftId ?? crypto.randomUUID());
+  const [draftReady, setDraftReady] = useState(!resumeDraftId);
+  const [draftStatus, setDraftStatus] = useState('');
   const abortRef = useRef<AbortController | undefined>();
+  const draftsRef = useRef<ImportedPhotoDraft[]>([]);
 
   const activeDraft = drafts[activeIndex];
   const profile = alcoholProfiles[form.alcoholType];
@@ -76,6 +91,15 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
       productName: form.productName.trim(),
       makerName: form.makerName.trim() || undefined,
       region: form.region.trim() || undefined,
+      country: form.country.trim() || undefined,
+      prefecture: form.prefecture.trim() || undefined,
+      ingredients: form.ingredients.trim() || undefined,
+      ricePolishingRatio: form.ricePolishingRatio.trim() || undefined,
+      sakeMeterValue: form.sakeMeterValue.trim() || undefined,
+      acidity: form.acidity.trim() || undefined,
+      grapeVariety: form.grapeVariety.trim() || undefined,
+      shochuMaterial: form.shochuMaterial.trim() || undefined,
+      beerStyle: form.beerStyle.trim() || undefined,
       volume: form.volume,
       abv: form.abv,
       purchasePrice: form.purchasePrice,
@@ -100,7 +124,8 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
       postImagePath: FEATURES.postImageGeneration ? '' : undefined,
       memo: form.memo,
       tags: form.tags.split(',').map((tag) => tag.trim()).filter(Boolean),
-      userConfirmed: true
+      userConfirmed: true,
+      status: 'complete'
     } satisfies SakeLog;
   }, [adoptedMarketPrice, correction.reason, correction.score, form, importMode, priceCandidates, selectedCandidate, value.valueScore]);
 
@@ -112,11 +137,81 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
   }, [importFiles]);
 
   useEffect(() => {
+    if (!resumeDraftId) return;
+    let active = true;
+    void loadDraft(resumeDraftId).then(({ draft, error }) => {
+      if (!active) return;
+      if (draft) {
+        setForm({ ...createInitialFormState((draft.formState.alcoholType as AlcoholType | undefined) ?? 'sake'), ...(draft.formState as unknown as RecordFormState) });
+        setDrafts(hydratePhotos(draft.photos));
+        setImportMode(draft.importMode);
+        setActiveIndex(draft.activeImageIndex ?? 0);
+        setPriceCandidates((draft.formState.priceCandidates as MarketPriceCandidate[] | undefined) ?? []);
+        setDraftStatus('入力途中の記録を復元しました。');
+      } else if (error) setDraftStatus(error);
+      setDraftReady(true);
+    });
     return () => {
-      drafts.forEach((draft) => URL.revokeObjectURL(draft.previewUrl));
+      active = false;
+    };
+  }, [resumeDraftId]);
+
+  useEffect(() => {
+    draftsRef.current = drafts;
+  }, [drafts]);
+
+  useEffect(() => {
+    if (!draftReady || savedLogId || (!form.productName && !form.memo && drafts.length === 0)) return;
+    const timer = window.setTimeout(() => {
+      void persistCurrentDraft('editing');
+    }, 750);
+    return () => window.clearTimeout(timer);
+    // persistCurrentDraft intentionally reads the current render state.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeIndex, draftReady, drafts, form, importMode, priceCandidates, savedLogId]);
+
+  useEffect(() => {
+    const flush = () => {
+      if (document.visibilityState === 'hidden') void persistCurrentDraft('paused');
+    };
+    const pagehide = () => void persistCurrentDraft('paused');
+    document.addEventListener('visibilitychange', flush);
+    window.addEventListener('pagehide', pagehide);
+    return () => {
+      document.removeEventListener('visibilitychange', flush);
+      window.removeEventListener('pagehide', pagehide);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeIndex, draftId, drafts, form, importMode, priceCandidates]);
+
+  useEffect(() => {
+    return () => {
+      draftsRef.current.forEach((draft) => URL.revokeObjectURL(draft.previewUrl));
       abortRef.current?.abort();
     };
-  }, [drafts]);
+  }, []);
+
+  async function persistCurrentDraft(nextStatus: 'editing' | 'paused' | 'ready') {
+    if (!draftReady || savedLogId || (!form.productName && !form.memo && drafts.length === 0)) return;
+    try {
+      await saveDraft({
+        id: draftId,
+        source: drafts.length ? 'photo-import' : 'manual',
+        importMode,
+        formState: { ...form, priceCandidates },
+        photos: serializePhotos(drafts),
+        activeImageIndex: activeIndex,
+        queueState: { total: drafts.length + failures.length, processed: drafts.length, failed: failures.length },
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        status: nextStatus,
+        schemaVersion: 1
+      });
+      setDraftStatus('入力内容を端末内に自動保存しました。');
+    } catch {
+      setDraftStatus('自動保存に失敗しました。入力画面はそのまま保持しています。');
+    }
+  }
 
   function receiveFiles(files: File[]) {
     if (files.length > MAX_IMPORT_FILES) {
@@ -173,6 +268,8 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
     setDuplicateChoices([]);
     setSavedLogId(undefined);
     setStatus('');
+    setDraftId(crypto.randomUUID());
+    setDraftStatus('');
   }
 
   function applyDraftToForm(draft: ImportedPhotoDraft | undefined, mode: ImportMode) {
@@ -203,6 +300,14 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
       volume: candidate.volume ?? current.volume,
       abv: candidate.abv ?? current.abv
     }));
+    if (activeDraft?.ocr.text && candidate.productName) {
+      void recordOcrCorrection({
+        observedText: activeDraft.ocr.text,
+        productName: candidate.productName,
+        makerName: candidate.makerName,
+        alcoholType: candidate.alcoholType
+      });
+    }
   }
 
   function setCapturedDateAsDrankAt() {
@@ -230,10 +335,14 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
     }
   }
 
-  async function saveLog(allowDuplicate = false) {
+  async function saveLog(allowDuplicate = false, logStatus: 'complete' | 'incomplete' | 'needs_review' = 'complete') {
     if (isSaving || savedLogId) return;
-    if (!form.productName.trim()) {
+    if (logStatus === 'complete' && !form.productName.trim()) {
       setStatus('銘柄名を入力してください。');
+      return;
+    }
+    if (logStatus !== 'complete' && !form.productName.trim() && !activeDraft?.ocr.text && drafts.length === 0) {
+      setStatus('「あとで編集」で保存するには、写真・銘柄名・OCR文字列のいずれかが必要です。');
       return;
     }
 
@@ -257,9 +366,19 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
     try {
       const candidatesToSave =
         form.manualMarketPrice && !selectedCandidate ? [...priceCandidates, manualPriceCandidate(form.manualMarketPrice)] : priceCandidates;
-      await saveLogTransaction({ log: draftLog, images, priceCandidates: candidatesToSave });
+      const log = { ...draftLog, productName: draftLog.productName || '銘柄未入力', status: logStatus };
+      await saveLogTransaction({ log, images, priceCandidates: candidatesToSave });
+      if (activeDraft?.ocr.text && form.productName.trim()) {
+        await recordOcrCorrection({
+          observedText: activeDraft.ocr.text,
+          productName: form.productName,
+          makerName: form.makerName,
+          alcoholType: form.alcoholType
+        });
+      }
+      await deleteDraft(draftId);
       setSavedLogId(draftLog.logId);
-      setStatus('酒ログを保存しました。');
+      setStatus(logStatus === 'complete' ? '酒ログを保存しました。' : 'あとで編集する記録として保存しました。');
     } catch (error) {
       setStatus(error instanceof Error ? `保存に失敗しました。入力内容は保持しています。${error.message}` : '保存に失敗しました。入力内容は保持しています。');
     } finally {
@@ -306,7 +425,13 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
   }
 
   function updateDraftType(id: string, imageType: ImageType) {
-    setDrafts((current) => current.map((draft) => (draft.id === id ? { ...draft, imageType } : draft)));
+    setDrafts((current) => current.map((draft) => {
+      if (draft.id !== id) return draft;
+      if (draft.classification && draft.classification.type !== imageType) {
+        void recordClassificationCorrection(draft.ocr.text.slice(0, 32), draft.classification.type, imageType);
+      }
+      return { ...draft, imageType };
+    }));
   }
 
   if (savedLogId) {
@@ -394,6 +519,11 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
                 {(importMode === 'singleLog' ? drafts : activeDraft ? [activeDraft] : []).map((draft) => (
                   <div key={draft.id} className="rounded-md bg-rice/8 p-2">
                     <img src={draft.previewUrl} className="aspect-square w-full rounded object-cover" alt={draft.fileName} />
+                    {draft.classification ? (
+                      <p className="mt-2 text-xs text-gold">
+                        {imageTypeLabel(draft.classification.type)}の可能性 {draft.classification.confidence}%
+                      </p>
+                    ) : null}
                     <select className={`${inputClass} mt-2 text-xs`} value={draft.imageType} onChange={(event) => updateDraftType(draft.id, event.target.value as ImageType)}>
                       {imageTypeOptions.map((type) => <option key={type} value={type}>{imageTypeLabel(type)}</option>)}
                     </select>
@@ -415,11 +545,23 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
           <p className="mt-2 text-sm text-gold">撮影日: {form.capturedAt ?? '撮影日不明'}</p>
           {form.capturedAt ? <button className="mt-2 rounded-md bg-gold/15 px-3 py-2 text-sm font-bold text-gold" onClick={setCapturedDateAsDrankAt}>撮影日を飲酒日に設定</button> : null}
           {activeDraft?.ocr.text ? <textarea className={`${inputClass} mt-3 min-h-24`} value={activeDraft.ocr.text} readOnly /> : null}
+          {activeDraft ? (
+            <p className="mt-2 text-sm font-bold">
+              OCR信頼度 {Math.round(activeDraft.ocr.confidence * 100)}% / {confidenceLabel(activeDraft.ocr.confidence * 100)}
+            </p>
+          ) : null}
           <div className="mt-3 grid gap-2">
             {activeDraft?.candidates.map((candidate) => (
               <button key={`${candidate.productName}-${candidate.matchReasons.join(',')}`} className="rounded-md bg-ink/70 p-3 text-left" onClick={() => applyCandidate(candidate)}>
                 <span className="block font-bold">{candidate.productName ?? '候補名なし'}</span>
-                <span className="text-xs text-rice/60">{candidate.matchReasons.join(' / ')} / 信頼度 {candidate.confidence}</span>
+                <span className="text-xs text-rice/60">
+                  総合 {candidate.totalConfidence ?? 0}% / {confidenceLabel(candidate.totalConfidence ?? 0)} / {candidate.matchReasons.join(' / ')}
+                </span>
+                <span className="mt-1 block text-xs text-rice/50">
+                  銘柄 {candidate.productConfidence ?? 0}%・蔵元 {candidate.makerConfidence ?? 0}%・酒種 {candidate.alcoholTypeConfidence ?? 0}%・容量 {candidate.volumeConfidence ?? 0}%
+                </span>
+                {candidate.mismatchReasons?.length ? <span className="mt-1 block text-xs text-red-200">不一致: {candidate.mismatchReasons.join(' / ')}</span> : null}
+                <span className="mt-1 block text-xs text-gold">候補は自動確定されません。内容を確認してください。</span>
                 {candidate.warning ? <span className="mt-1 block text-xs text-gold">{candidate.warning}</span> : null}
               </button>
             ))}
@@ -449,11 +591,26 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
             <Field label="産地"><input className={inputClass} value={form.region} onChange={(event) => setForm({ ...form, region: event.target.value })} /></Field>
             <Field label="飲酒日"><input className={inputClass} type="date" value={form.drankAt} onChange={(event) => setForm({ ...form, drankAt: event.target.value })} /></Field>
           </div>
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="国"><input className={inputClass} value={form.country} onChange={(event) => setForm({ ...form, country: event.target.value })} /></Field>
+            <Field label="都道府県"><input className={inputClass} value={form.prefecture} onChange={(event) => setForm({ ...form, prefecture: event.target.value })} /></Field>
+          </div>
           <div className="grid grid-cols-3 gap-3">
             <Field label="容量ml"><input className={inputClass} type="number" value={form.volume ?? ''} onChange={(event) => setForm({ ...form, volume: Number(event.target.value) || undefined })} /></Field>
             <Field label="度数%"><input className={inputClass} type="number" value={form.abv ?? ''} onChange={(event) => setForm({ ...form, abv: Number(event.target.value) || undefined })} /></Field>
             <Field label="購入価格"><input className={inputClass} type="number" value={form.purchasePrice ?? ''} onChange={(event) => setForm({ ...form, purchasePrice: Number(event.target.value) || undefined })} /></Field>
           </div>
+          <Field label="原材料"><input className={inputClass} value={form.ingredients} onChange={(event) => setForm({ ...form, ingredients: event.target.value })} /></Field>
+          {form.alcoholType === 'sake' ? (
+            <div className="grid grid-cols-3 gap-3">
+              <Field label="精米歩合"><input className={inputClass} value={form.ricePolishingRatio} onChange={(event) => setForm({ ...form, ricePolishingRatio: event.target.value })} /></Field>
+              <Field label="日本酒度"><input className={inputClass} value={form.sakeMeterValue} onChange={(event) => setForm({ ...form, sakeMeterValue: event.target.value })} /></Field>
+              <Field label="酸度"><input className={inputClass} value={form.acidity} onChange={(event) => setForm({ ...form, acidity: event.target.value })} /></Field>
+            </div>
+          ) : null}
+          {form.alcoholType === 'wine' ? <Field label="品種"><input className={inputClass} value={form.grapeVariety} onChange={(event) => setForm({ ...form, grapeVariety: event.target.value })} /></Field> : null}
+          {form.alcoholType === 'shochu' ? <Field label="焼酎原料"><input className={inputClass} value={form.shochuMaterial} onChange={(event) => setForm({ ...form, shochuMaterial: event.target.value })} /></Field> : null}
+          {form.alcoholType === 'beer' ? <Field label="ビールスタイル"><input className={inputClass} value={form.beerStyle} onChange={(event) => setForm({ ...form, beerStyle: event.target.value })} /></Field> : null}
         </div>
       </Section>
 
@@ -553,6 +710,10 @@ export function Record({ importFiles = [], onImportQueueDone }: { importFiles?: 
           <button className="rounded-md bg-rice px-4 py-4 font-black text-ink disabled:opacity-50" onClick={() => void saveLog()} disabled={isSaving || Boolean(savedLogId)}>
             {isSaving ? '保存中…' : '保存'}
           </button>
+          <button className="rounded-md bg-moss px-4 py-4 font-black text-rice disabled:opacity-50" onClick={() => void saveLog(false, 'needs_review')} disabled={isSaving || Boolean(savedLogId)}>
+            あとで編集
+          </button>
+          {draftStatus ? <p className="rounded-md bg-rice/8 p-3 text-xs text-rice/70">{draftStatus}</p> : null}
           {status ? <p className="rounded-md bg-gold/15 p-3 text-sm text-gold">{status}</p> : null}
         </div>
       </Section>

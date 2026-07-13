@@ -17,6 +17,9 @@ export type CostPerformance = 'S' | 'A' | 'B' | 'C' | 'D';
 export type Confidence = 'high' | 'medium' | 'low' | 'manual' | 'unknown';
 export type ImportMode = 'singleLog' | 'separateLogs';
 export type ImportStatus = 'pending' | 'processing' | 'success' | 'warning' | 'failed' | 'cancelled';
+export type LogStatus = 'complete' | 'incomplete' | 'needs_review';
+export type DraftStatus = 'editing' | 'paused' | 'ready';
+export type ConfidenceLevel = 'high' | 'medium' | 'low';
 
 export interface RatingAxis {
   key: string;
@@ -46,6 +49,28 @@ export interface CandidateMatch {
   confidence: Confidence;
   matchReasons: string[];
   warning?: string;
+  ocrConfidence?: number;
+  productConfidence?: number;
+  makerConfidence?: number;
+  alcoholTypeConfidence?: number;
+  volumeConfidence?: number;
+  totalConfidence?: number;
+  mismatchReasons?: string[];
+  requiresConfirmation?: boolean;
+}
+
+export interface PhotoClassification {
+  type: ImageType;
+  confidence: number;
+  reasons: string[];
+  alternatives: Array<{ type: ImageType; confidence: number }>;
+  requiresConfirmation: boolean;
+}
+
+export interface VisualImageFeatures {
+  centerEdgeDensity: number;
+  outerEdgeDensity: number;
+  edgeSpread: number;
 }
 
 export interface MarketPriceCandidate {
@@ -131,7 +156,73 @@ export interface ImportedPhotoDraft {
   status: ImportStatus;
   message?: string;
   imageType: ImageType;
+  classification?: PhotoClassification;
   sortOrder: number;
+}
+
+export interface PersistedImportedPhoto {
+  id: string;
+  fileName: string;
+  originalFile: File;
+  resizedBlob: Blob;
+  capturedAt?: string;
+  imageHash: string;
+  width?: number;
+  height?: number;
+  ocr: OcrResult;
+  candidates: CandidateMatch[];
+  status: ImportStatus;
+  message?: string;
+  imageType: ImageType;
+  classification?: PhotoClassification;
+  sortOrder: number;
+}
+
+export interface SakeLogDraft {
+  id: string;
+  source: 'manual' | 'photo-import';
+  importMode?: ImportMode;
+  formState: Record<string, unknown>;
+  photos: PersistedImportedPhoto[];
+  activeImageIndex?: number;
+  queueState?: { total: number; processed: number; failed: number };
+  createdAt: string;
+  updatedAt: string;
+  expiresAt?: string;
+  status: DraftStatus;
+  schemaVersion: number;
+}
+
+export interface OcrCorrectionEntry {
+  id: string;
+  observedText: string;
+  correctedProductName: string;
+  correctedMakerName?: string;
+  correctedAlcoholType?: AlcoholType;
+  aliases: string[];
+  occurrenceCount: number;
+  acceptedCount: number;
+  rejectedCount: number;
+  lastUsedAt: string;
+  createdAt: string;
+  confidenceAdjustment: number;
+}
+
+export interface LabelAliasEntry {
+  id: string;
+  productName: string;
+  alias: string;
+  createdAt: string;
+}
+
+export interface ClassificationCorrection {
+  id: string;
+  fingerprint: string;
+  suggestedType: ImageType;
+  correctedType: ImageType;
+  acceptedCount: number;
+  rejectedCount: number;
+  updatedAt: string;
 }
 
 export interface GeneratedTexts {
@@ -193,6 +284,7 @@ export interface SakeLog {
   tags: string[];
   sourceInfo?: string;
   userConfirmed: boolean;
+  status?: LogStatus;
 }
 
 export interface ToneSettings {

@@ -1,10 +1,13 @@
 import { db } from '../db/db';
 
 export async function exportLocalData() {
-  const [logs, templates, settings] = await Promise.all([
+  const [logs, templates, settings, ocrCorrections, labelAliases, classificationCorrections] = await Promise.all([
     db.logs.toArray(),
     db.templates.toArray(),
-    db.userSettings.get('default')
+    db.userSettings.get('default'),
+    db.ocrCorrections.toArray(),
+    db.labelAliases.toArray(),
+    db.classificationCorrections.toArray()
   ]);
   const payload = {
     exportedAt: new Date().toISOString(),
@@ -12,7 +15,10 @@ export async function exportLocalData() {
     googleDriveFuturePath: 'SAKEログ_Backup/logs/sake_logs.json',
     logs,
     templates,
-    settings
+    settings,
+    ocrCorrections,
+    labelAliases,
+    classificationCorrections
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   await db.backupStatus.put({

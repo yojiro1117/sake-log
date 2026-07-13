@@ -1,6 +1,10 @@
 import { alcoholLabelCandidates } from '../data/alcoholCandidates';
 import { fileToResizedBlob } from './imageService';
 import { createOcrVariants, scoreOcrVariant, type OcrVariantKind } from './ocrPreprocessing';
+import { scoreCandidate } from './confidenceService';
+import { learningCandidates } from './ocrLearning';
+import { classifyPhoto, extractVisualImageFeatures } from './photoClassification';
+import { db } from '../db/db';
 import type { CandidateMatch, ImageType, ImportedPhotoDraft, OcrResult } from '../types';
 
 type DetectedText = { rawValue?: string };
@@ -65,8 +69,10 @@ async function createImportedPhotoDraft(
   throwIfAborted(options.signal);
 
   options.onProgress?.({ index, total, fileName: file.name, phase: 'metadata', message: '撮影日を確認中です。' });
+  const metadataPromise = readCapturedAt(file);
+  const imageHashPromise = hashFile(file);
   const { file: displayFile, warning } = await normalizeImageFile(file);
-  const [capturedAt, imageHash] = await Promise.all([readCapturedAt(displayFile), hashFile(displayFile)]);
+  const [capturedAt, imageHash] = await Promise.all([metadataPromise, imageHashPromise]);
 
   throwIfAborted(options.signal);
   options.onProgress?.({ index, total, fileName: file.name, phase: 'image', message: '画像を調整中です。' });
@@ -90,7 +96,18 @@ async function createImportedPhotoDraft(
   });
 
   options.onProgress?.({ index, total, fileName: file.name, phase: 'candidate', message: '候補を確認中です。' });
-  const candidates = buildCandidates(ocr.text);
+  const baseCandidates = buildCandidates(ocr.text, ocr.confidence);
+  const learnedCandidates = await learningCandidates(ocr.text);
+  const candidates = mergeCandidates(learnedCandidates, baseCandidates);
+  const classification = classifyPhoto({
+    ocrText: ocr.text,
+    width,
+    height,
+    knownCandidateCount: candidates.length,
+    ocrConfidence: ocr.confidence,
+    corrections: await db.classificationCorrections.toArray(),
+    visualFeatures: await extractVisualImageFeatures(resizedBlob)
+  });
   const status = ocr.status === 'success' && candidates.length > 0 ? 'success' : 'warning';
   const message =
     warning ??
@@ -98,12 +115,33 @@ async function createImportedPhotoDraft(
       ? 'OCR結果から候補を表示しました。内容を確認してください。'
       : '銘柄を特定できませんでした。手入力してください。');
 
+  await db.externalSources.put({
+    id: 'diagnostic:last-photo-import',
+    type: 'diagnostic',
+    payload: {
+      fileName: file.name,
+      mimeType: file.type || 'unknown',
+      capturedAt: capturedAt ?? null,
+      width,
+      height,
+      heicConverted: displayFile !== file,
+      ocrEngine: ocr.engine,
+      ocrStatus: ocr.status,
+      ocrConfidence: Math.round(ocr.confidence * 100),
+      ocrTextPreview: ocr.text.slice(0, 160),
+      classification: classification.type,
+      classificationConfidence: classification.confidence,
+      warning: warning ?? null
+    },
+    createdAt: new Date().toISOString()
+  }).catch(() => undefined);
+
   options.onProgress?.({ index, total, fileName: file.name, phase: 'done', message });
 
   return {
     id: crypto.randomUUID(),
     fileName: file.name,
-    originalFile: displayFile,
+    originalFile: file,
     resizedBlob,
     previewUrl: URL.createObjectURL(resizedBlob),
     capturedAt,
@@ -114,7 +152,8 @@ async function createImportedPhotoDraft(
     candidates,
     status,
     message,
-    imageType: index === 0 ? 'frontLabel' : 'other',
+    imageType: classification.type,
+    classification,
     sortOrder: index
   };
 }
@@ -224,7 +263,7 @@ async function readWithTesseractVariants(
   }
 }
 
-export function buildCandidates(ocrText?: string): CandidateMatch[] {
+export function buildCandidates(ocrText?: string, ocrConfidence = 0): CandidateMatch[] {
   const raw = ocrText ?? '';
   const correctedRaw = correctOcrConfusions(raw);
   const text = normalizeForMatch(correctedRaw);
@@ -247,6 +286,14 @@ export function buildCandidates(ocrText?: string): CandidateMatch[] {
       abv ? 'アルコール度数候補を抽出' : undefined
     ].filter(Boolean) as string[];
 
+    const productMatch = matchedAlias ? (aliasExact ? 100 : 78) : 55;
+    const scores = scoreCandidate({
+      ocrConfidence,
+      productMatch,
+      makerMatch: makerMatched ? 100 : 0,
+      alcoholTypeMatch: matchedAlias ? 85 : 0,
+      volumeMatch: volume ? 70 : 0
+    });
     candidates.push({
       productName: candidate.productName,
       makerName: candidate.makerName,
@@ -254,7 +301,9 @@ export function buildCandidates(ocrText?: string): CandidateMatch[] {
       volume,
       abv,
       confidence: matchedAlias && makerMatched ? 'high' : 'medium',
-      matchReasons
+      matchReasons,
+      mismatchReasons: [!makerMatched && candidate.makerName ? '蔵元名がOCR文字列と一致しません' : undefined].filter(Boolean) as string[],
+      ...scores
     });
   }
 
@@ -264,18 +313,31 @@ export function buildCandidates(ocrText?: string): CandidateMatch[] {
       .map((value) => value.trim())
       .find((value) => value.length >= 2 && value.length <= 24);
     if (line) {
+      const scores = scoreCandidate({ ocrConfidence, productMatch: 35, volumeMatch: volume ? 70 : 0 });
       candidates.push({
         productName: line,
         volume,
         abv,
         confidence: 'low',
         matchReasons: ['OCR文字列から抽出'],
+        mismatchReasons: ['候補マスターと一致しません'],
+        ...scores,
         warning: '候補マスターとは一致していません。必ず内容を確認してください。'
       });
     }
   }
 
-  return candidates.slice(0, 6);
+  return candidates.sort((a, b) => (b.totalConfidence ?? 0) - (a.totalConfidence ?? 0)).slice(0, 6);
+}
+
+function mergeCandidates(primary: CandidateMatch[], secondary: CandidateMatch[]) {
+  const seen = new Set<string>();
+  return [...primary, ...secondary].filter((candidate) => {
+    const key = `${candidate.productName ?? ''}|${candidate.makerName ?? ''}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  }).slice(0, 6);
 }
 
 async function normalizeImageFile(file: File): Promise<{ file: File; warning?: string }> {

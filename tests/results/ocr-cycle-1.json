@@ -3,8 +3,8 @@
     "total": 72,
     "textHitRate": 1,
     "candidateHitRate": 0.028,
-    "averageProcessingTimeMs": 1301,
-    "maxProcessingTimeMs": 4319
+    "averageProcessingTimeMs": 1205,
+    "maxProcessingTimeMs": 4069
   },
   "results": [
     {
@@ -32,7 +32,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 477,
+      "processingTimeMs": 422,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -62,7 +62,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 762,
+      "processingTimeMs": 745,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -93,7 +93,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1665,
+      "processingTimeMs": 1481,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -124,7 +124,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1157,
+      "processingTimeMs": 1117,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -155,7 +155,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 497,
+      "processingTimeMs": 452,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -186,7 +186,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 940,
+      "processingTimeMs": 848,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -216,7 +216,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1542,
+      "processingTimeMs": 1460,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -246,7 +246,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1190,
+      "processingTimeMs": 1100,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -276,7 +276,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1184,
+      "processingTimeMs": 1078,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -307,7 +307,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 765,
+      "processingTimeMs": 745,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -347,7 +347,7 @@
           ]
         }
       ],
-      "processingTimeMs": 1976,
+      "processingTimeMs": 1857,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -377,7 +377,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 738,
+      "processingTimeMs": 711,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -408,7 +408,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1205,
+      "processingTimeMs": 1108,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -439,7 +439,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 864,
+      "processingTimeMs": 823,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -470,7 +470,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1287,
+      "processingTimeMs": 1085,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -500,7 +500,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1156,
+      "processingTimeMs": 1011,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -540,7 +540,7 @@
           ]
         }
       ],
-      "processingTimeMs": 1962,
+      "processingTimeMs": 1814,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -570,7 +570,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 954,
+      "processingTimeMs": 872,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -601,7 +601,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 957,
+      "processingTimeMs": 914,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -631,7 +631,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1681,
+      "processingTimeMs": 1633,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -661,7 +661,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 717,
+      "processingTimeMs": 664,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -691,7 +691,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 841,
+      "processingTimeMs": 808,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -721,7 +721,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1301,
+      "processingTimeMs": 1164,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -752,7 +752,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 958,
+      "processingTimeMs": 886,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -783,7 +783,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1450,
+      "processingTimeMs": 1319,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -814,7 +814,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1658,
+      "processingTimeMs": 1486,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -845,7 +845,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1662,
+      "processingTimeMs": 1411,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -876,7 +876,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 601,
+      "processingTimeMs": 589,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -906,7 +906,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 778,
+      "processingTimeMs": 758,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -936,7 +936,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 814,
+      "processingTimeMs": 787,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多",
@@ -968,7 +968,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1455,
+      "processingTimeMs": 1301,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -999,7 +999,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1998,
+      "processingTimeMs": 1799,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1029,7 +1029,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1531,
+      "processingTimeMs": 1398,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1059,7 +1059,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1075,
+      "processingTimeMs": 1044,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1090,7 +1090,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1389,
+      "processingTimeMs": 1149,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1121,7 +1121,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 562,
+      "processingTimeMs": 525,
       "problemClassification": [
         "文字数不足",
         "低信頼度",
@@ -1154,7 +1154,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 789,
+      "processingTimeMs": 759,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1185,7 +1185,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 403,
+      "processingTimeMs": 393,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1215,7 +1215,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 698,
+      "processingTimeMs": 629,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1246,7 +1246,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2179,
+      "processingTimeMs": 2071,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1277,7 +1277,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1243,
+      "processingTimeMs": 1221,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1308,7 +1308,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1091,
+      "processingTimeMs": 1042,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1339,7 +1339,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1787,
+      "processingTimeMs": 1588,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1370,7 +1370,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1464,
+      "processingTimeMs": 1348,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1401,7 +1401,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1134,
+      "processingTimeMs": 981,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1432,7 +1432,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1224,
+      "processingTimeMs": 1096,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1463,7 +1463,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1897,
+      "processingTimeMs": 1865,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1494,7 +1494,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1074,
+      "processingTimeMs": 1015,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1525,7 +1525,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1346,
+      "processingTimeMs": 1273,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1556,7 +1556,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1163,
+      "processingTimeMs": 1104,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1587,7 +1587,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1483,
+      "processingTimeMs": 1410,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1618,7 +1618,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2841,
+      "processingTimeMs": 2780,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1648,7 +1648,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1102,
+      "processingTimeMs": 876,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1679,7 +1679,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1653,
+      "processingTimeMs": 1597,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1710,7 +1710,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 477,
+      "processingTimeMs": 422,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1741,7 +1741,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1753,
+      "processingTimeMs": 1633,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1772,7 +1772,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1459,
+      "processingTimeMs": 1351,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1803,7 +1803,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 839,
+      "processingTimeMs": 821,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1834,7 +1834,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4155,
+      "processingTimeMs": 3725,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1864,7 +1864,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 543,
+      "processingTimeMs": 496,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -1895,7 +1895,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2959,
+      "processingTimeMs": 2789,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1925,7 +1925,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 869,
+      "processingTimeMs": 848,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1956,7 +1956,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2412,
+      "processingTimeMs": 2293,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1986,7 +1986,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1202,
+      "processingTimeMs": 1002,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2016,7 +2016,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 227,
+      "processingTimeMs": 211,
       "problemClassification": [
         "文字数不足",
         "低信頼度",
@@ -2049,7 +2049,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 992,
+      "processingTimeMs": 914,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2079,7 +2079,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 762,
+      "processingTimeMs": 716,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2110,7 +2110,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 635,
+      "processingTimeMs": 672,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2141,7 +2141,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4319,
+      "processingTimeMs": 4069,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2171,7 +2171,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1624,
+      "processingTimeMs": 1492,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2201,7 +2201,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1099,
+      "processingTimeMs": 953,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2232,7 +2232,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1035,
+      "processingTimeMs": 917,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"

@@ -1,5 +1,16 @@
 import Dexie, { type Table } from 'dexie';
-import type { BackupStatus, MarketPriceCandidate, PostTemplate, SakeImage, SakeLog, UserSettings } from '../types';
+import type {
+  BackupStatus,
+  ClassificationCorrection,
+  LabelAliasEntry,
+  MarketPriceCandidate,
+  OcrCorrectionEntry,
+  PostTemplate,
+  SakeImage,
+  SakeLog,
+  SakeLogDraft,
+  UserSettings
+} from '../types';
 import { defaultTemplates, defaultToneSettings } from '../data/templates';
 
 class SakeLogDatabase extends Dexie {
@@ -12,6 +23,10 @@ class SakeLogDatabase extends Dexie {
   backupStatus!: Table<BackupStatus, string>;
   priceCandidates!: Table<MarketPriceCandidate, string>;
   externalSources!: Table<{ id: string; type: string; payload: unknown; createdAt: string }, string>;
+  drafts!: Table<SakeLogDraft, string>;
+  ocrCorrections!: Table<OcrCorrectionEntry, string>;
+  labelAliases!: Table<LabelAliasEntry, string>;
+  classificationCorrections!: Table<ClassificationCorrection, string>;
 
   constructor() {
     super('sake-log-db');
@@ -57,6 +72,30 @@ class SakeLogDatabase extends Dexie {
           image.imageType ??= 'frontLabel';
           image.createdFromImport ??= false;
           image.sortOrder ??= 0;
+        });
+      });
+
+    this.version(3)
+      .stores({
+        logs:
+          'logId, createdAt, updatedAt, drankAt, capturedAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore, selectedMarketPriceCandidateId, importMode, status',
+        images:
+          'imageId, logId, imageType, createdAt, capturedAt, imageHash, createdFromImport, sortOrder, fileName, mimeType',
+        userSettings: 'id',
+        templates: 'templateId, targetSns, updatedAt',
+        personalityResults: 'id, createdAt',
+        reviewProfileResults: 'id, createdAt',
+        backupStatus: 'id',
+        priceCandidates: 'id, logId, source, fetchedAt, recommended, matchScore',
+        externalSources: 'id, type, createdAt',
+        drafts: 'id, updatedAt, status, source',
+        ocrCorrections: 'id, observedText, correctedProductName, lastUsedAt',
+        labelAliases: 'id, alias, productName',
+        classificationCorrections: 'id, fingerprint, correctedType, updatedAt'
+      })
+      .upgrade(async (tx) => {
+        await tx.table<SakeLog, string>('logs').toCollection().modify((log) => {
+          log.status ??= 'complete';
         });
       });
   }

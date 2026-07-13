@@ -1,0 +1,2034 @@
+{
+  "summary": {
+    "total": 72,
+    "classifiedCount": 72,
+    "highConfidenceCount": 0,
+    "needsConfirmationCount": 72,
+    "distribution": {
+      "bottle": 71,
+      "receipt": 1
+    },
+    "accuracy": 0.625,
+    "accuracyNote": "expectedTypeは72枚のコンタクトシートを目視確認して付与。UIでは正解扱いで自動確定せず確認候補として表示します。"
+  },
+  "results": [
+    {
+      "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数292",
+        "縦横比1.21"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "other",
+      "correct": false
+    },
+    {
+      "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数176",
+        "縦横比1.00"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "3780045A-CF34-4840-A568-B8E57175AA1D.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数226",
+        "縦横比1.11"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数174",
+        "縦横比1.00"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "5077832F-9F46-42EB-A4A6-DE4A9F57C672.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数64",
+        "縦横比1.00"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数227",
+        "縦横比1.00"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数313",
+        "縦横比1.21"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数213",
+        "縦横比1.00"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "B2B359C6-662B-4C7B-B971-773C9E2484C9.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数214",
+        "縦横比1.25"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 43
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 19
+        },
+        {
+          "type": "other",
+          "confidence": 14
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数236",
+        "縦横比1.11"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "E8A1A542-94AE-4884-A368-8CCAC773FDA8.JPG",
+      "cycle": 2,
+      "predictedType": "receipt",
+      "confidence": 67,
+      "alternatives": [
+        {
+          "type": "receipt",
+          "confidence": 35
+        },
+        {
+          "type": "bottle",
+          "confidence": 29
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 13
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "レシート語句: tel",
+        "文字数298",
+        "縦横比1.00"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_1703.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数209",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_1704.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数104",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2048.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数427",
+        "縦横比1.78"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2050.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数224",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2051.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数137",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2268.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数256",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2269.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数227",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2270.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数179",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_2271.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数239",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_2272.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数210",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2274.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数181",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2291.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数167",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2292.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数238",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2293.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数194",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2296.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数263",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "glass",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_2297.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数462",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "glass",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_2324.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 60
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 13
+        },
+        {
+          "type": "other",
+          "confidence": 10
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数64",
+        "縦横比1.78"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_2325.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数127",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_2436.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数149",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2853.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数229",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_2873.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数261",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2874.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数228",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2876.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数254",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_2943.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数230",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3426.heic",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 60
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 13
+        },
+        {
+          "type": "other",
+          "confidence": 10
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数10",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3427.heic",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 60
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 13
+        },
+        {
+          "type": "other",
+          "confidence": 10
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数26",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3510.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数353",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_3512.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 60
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 13
+        },
+        {
+          "type": "other",
+          "confidence": 10
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数61",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_3665.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数273",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3666.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数216",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3667.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数172",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3668.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数263",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3669.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数158",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3670.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数139",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3671.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数175",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3674.JPG",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数189",
+        "縦横比1.78"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3962.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数175",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_3965.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数251",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4293.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数151",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4294.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数219",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4295.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数347",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "backLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_4298.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数305",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4300.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数238",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4611.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数260",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4612.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数240",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_4614.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数206",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4615 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数322",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4616 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数409",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "backLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_4617 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数225",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_4618 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数324",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "backLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_4619 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数181",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4620 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 41
+        },
+        {
+          "type": "backLabel",
+          "confidence": 28
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 13
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "裏ラベル語句: 内容量",
+        "文字数240",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "backLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_4621.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数158",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "bottle",
+      "correct": true
+    },
+    {
+      "fileName": "IMG_4622 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数186",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_4623 2.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数150",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_5187.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数228",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_5188.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数145",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "frontLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_5189.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数384",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "backLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_5378.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数239",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "glass",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_7535.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数256",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "backLabel",
+      "correct": false
+    },
+    {
+      "fileName": "IMG_7536.HEIC",
+      "cycle": 2,
+      "predictedType": "bottle",
+      "confidence": 72,
+      "alternatives": [
+        {
+          "type": "bottle",
+          "confidence": 52
+        },
+        {
+          "type": "frontLabel",
+          "confidence": 16
+        },
+        {
+          "type": "other",
+          "confidence": 12
+        }
+      ],
+      "requiresConfirmation": true,
+      "reasons": [
+        "文字数246",
+        "縦横比1.33"
+      ],
+      "groundTruthStatus": "unknown",
+      "expectedType": "backLabel",
+      "correct": false
+    }
+  ]
+}

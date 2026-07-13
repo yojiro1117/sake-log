@@ -1,4 +1,4 @@
-import { Download, Save } from 'lucide-react';
+import { Activity, Download, RefreshCw, Save, Trash2, Upload } from 'lucide-react';
 import { useState } from 'react';
 import { Field, Section } from '../components/Section';
 import { BUILD_INFO } from '../config/buildInfo';
@@ -7,16 +7,19 @@ import { defaultToneSettings } from '../data/templates';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { downloadBlob, exportLocalData } from '../services/backupService';
-import type { PostTemplate, ToneSettings } from '../types';
+import { checkServiceWorkerUpdate, clearApplicationCaches, createSafeDiagnostics, type SafeDiagnostics } from '../services/diagnosticsService';
+import type { OcrCorrectionEntry, PostTemplate, ToneSettings } from '../types';
 
 const inputClass = 'w-full rounded-md border border-rice/12 bg-ink/70 px-3 py-3 text-rice outline-none focus:border-gold';
 
 export function Settings() {
   const settings = useLiveQuery(() => db.userSettings.get('default'), undefined);
   const templates = useLiveQuery(() => db.templates.toArray(), []);
+  const corrections = useLiveQuery(() => db.ocrCorrections.orderBy('lastUsedAt').reverse().toArray(), []);
   const [status, setStatus] = useState('');
   const [rakutenId, setRakutenId] = useState('');
   const tone = settings?.toneSettings ?? defaultToneSettings;
+  const [diagnostics, setDiagnostics] = useState<SafeDiagnostics | undefined>();
 
   async function saveRakutenId() {
     await db.userSettings.update('default', { rakutenApplicationId: rakutenId || settings?.rakutenApplicationId });
@@ -35,6 +38,37 @@ export function Settings() {
 
   async function updateTemplate(template: PostTemplate, body: string) {
     await db.templates.put({ ...template, body, updatedAt: new Date().toISOString() });
+  }
+
+  async function exportCorrections() {
+    downloadBlob(new Blob([JSON.stringify(corrections, null, 2)], { type: 'application/json' }), 'sake-log-ocr-corrections.json');
+  }
+
+  async function importCorrections(file?: File) {
+    if (!file) return;
+    try {
+      const parsed = JSON.parse(await file.text()) as OcrCorrectionEntry[];
+      const valid = parsed.filter((entry) => entry.id && entry.observedText && entry.correctedProductName);
+      await db.ocrCorrections.bulkPut(valid);
+      setStatus(`${valid.length}件のOCR修正辞書を読み込みました。`);
+    } catch {
+      setStatus('OCR修正辞書を読み込めませんでした。JSON形式を確認してください。');
+    }
+  }
+
+  async function refreshDiagnostics() {
+    setDiagnostics(await createSafeDiagnostics());
+  }
+
+  async function copyDiagnostics() {
+    const value = diagnostics ?? await createSafeDiagnostics();
+    await navigator.clipboard.writeText(JSON.stringify(value, null, 2));
+    setStatus('機密情報を除外した診断情報をコピーしました。');
+  }
+
+  async function exportDiagnostics() {
+    const value = diagnostics ?? await createSafeDiagnostics();
+    downloadBlob(new Blob([JSON.stringify(value, null, 2)], { type: 'application/json' }), 'sake-log-diagnostics.json');
   }
 
   return (
@@ -91,6 +125,52 @@ export function Settings() {
         <div className="grid gap-3">
           <Diagnosis title="性格診断" description="感想の書き方や記録スタイルの傾向を、後続実装で端末内に保存できるようにします。" />
           <Diagnosis title="飲酒レビュー用プロフィール診断" description="香味探求、食中酒、コスパ実用などのタイプ判定を後続実装で追加予定です。" />
+        </div>
+      </Section>
+
+      <Section title="OCR修正辞書">
+        <div className="space-y-3">
+          {corrections.map((entry) => (
+            <div key={entry.id} className="rounded-lg bg-rice/8 p-4">
+              <p className="text-sm text-rice/60">誤認識: {entry.observedText.slice(0, 60)}</p>
+              <input
+                className={`${inputClass} mt-2`}
+                value={entry.correctedProductName}
+                onChange={(event) => void db.ocrCorrections.update(entry.id, { correctedProductName: event.target.value })}
+              />
+              <div className="mt-2 flex items-center justify-between text-xs text-rice/55">
+                <span>使用 {entry.occurrenceCount}回 / {new Date(entry.lastUsedAt).toLocaleDateString('ja-JP')}</span>
+                <button className="rounded p-2 text-red-200" title="削除" onClick={() => void db.ocrCorrections.delete(entry.id)}><Trash2 size={17} /></button>
+              </div>
+            </div>
+          ))}
+          {corrections.length === 0 ? <p className="text-sm text-rice/55">修正履歴はまだありません。</p> : null}
+          <div className="grid grid-cols-2 gap-2">
+            <button className="flex items-center justify-center gap-2 rounded-md bg-rice/10 px-3 py-3" onClick={exportCorrections}><Download size={17} />書き出し</button>
+            <label className="flex cursor-pointer items-center justify-center gap-2 rounded-md bg-rice/10 px-3 py-3">
+              <Upload size={17} />読み込み
+              <input className="hidden" type="file" accept="application/json" onChange={(event) => void importCorrections(event.target.files?.[0])} />
+            </label>
+          </div>
+          <button className="w-full rounded-md border border-red-300/20 px-3 py-3 text-red-200" onClick={() => void db.ocrCorrections.clear()}>辞書を全削除</button>
+        </div>
+      </Section>
+
+      <Section title="アプリ診断">
+        <div className="space-y-3 rounded-lg bg-rice/8 p-4 text-sm">
+          <button className="flex w-full items-center justify-center gap-2 rounded-md bg-gold px-3 py-3 font-bold text-ink" onClick={refreshDiagnostics}>
+            <Activity size={18} />診断情報を更新
+          </button>
+          {diagnostics ? <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-all rounded bg-ink/70 p-3 text-xs text-rice/70">{JSON.stringify(diagnostics, null, 2)}</pre> : null}
+          <div className="grid gap-2">
+            <button className="rounded-md bg-rice/10 px-3 py-3" onClick={copyDiagnostics}>診断情報をコピー</button>
+            <button className="rounded-md bg-rice/10 px-3 py-3" onClick={exportDiagnostics}>診断JSONを書き出し</button>
+            <button className="rounded-md bg-rice/10 px-3 py-3" onClick={() => void clearApplicationCaches().then((count) => setStatus(`${count}件のキャッシュを削除しました。`))}>キャッシュを削除</button>
+            <button className="flex items-center justify-center gap-2 rounded-md bg-rice/10 px-3 py-3" onClick={() => void checkServiceWorkerUpdate().then((waiting) => setStatus(waiting ? '新しいバージョンがあります。再読込してください。' : '現在のバージョンは最新です。'))}>
+              <RefreshCw size={17} />更新を確認
+            </button>
+          </div>
+          <p className="text-xs leading-5 text-rice/50">診断情報にはAPIキー、画像、コメント本文、酒ログ本文を含めません。外部送信もしません。</p>
         </div>
       </Section>
 

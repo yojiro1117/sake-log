@@ -6,6 +6,15 @@ export interface RecordFormState {
   productName: string;
   makerName: string;
   region: string;
+  country: string;
+  prefecture: string;
+  ingredients: string;
+  ricePolishingRatio: string;
+  sakeMeterValue: string;
+  acidity: string;
+  grapeVariety: string;
+  shochuMaterial: string;
+  beerStyle: string;
   volume?: number;
   abv?: number;
   purchasePrice?: number;
@@ -32,6 +41,15 @@ export function createInitialFormState(type: AlcoholType): RecordFormState {
     productName: '',
     makerName: '',
     region: '',
+    country: '',
+    prefecture: '',
+    ingredients: '',
+    ricePolishingRatio: '',
+    sakeMeterValue: '',
+    acidity: '',
+    grapeVariety: '',
+    shochuMaterial: '',
+    beerStyle: '',
     volume: undefined,
     abv: undefined,
     purchasePrice: undefined,
