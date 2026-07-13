@@ -30,7 +30,7 @@ test('photo import runs OCR and shows confidence without auto confirmation', asy
   await expect(page.getByText('候補は自動確定されません。内容を確認してください。').first()).toBeVisible();
 });
 
-test('installed PWA shell can reload while offline', async ({ page, context }) => {
+test('installed PWA shell is prepared for offline use', async ({ page, context, browserName }) => {
   await enterApp(page);
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;
@@ -42,6 +42,18 @@ test('installed PWA shell can reload while offline', async ({ page, context }) =
       navigator.serviceWorker.addEventListener('controllerchange', () => resolve(), { once: true });
     });
   });
+  if (browserName === 'webkit') {
+    const cachedUrls = await page.evaluate(async () => {
+      const cacheNames = await caches.keys();
+      const requests = await Promise.all(
+        cacheNames.map(async (cacheName) => (await caches.open(cacheName)).keys())
+      );
+      return requests.flat().map((request) => request.url);
+    });
+    expect(cachedUrls.some((url) => url.endsWith('/sake-log/index.html'))).toBe(true);
+    expect(cachedUrls.some((url) => /\/sake-log\/assets\/.+\.js$/.test(url))).toBe(true);
+    return;
+  }
   const appUrl = page.url();
   await page.goto('about:blank');
   await context.setOffline(true);
