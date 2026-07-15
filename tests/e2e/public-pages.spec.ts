@@ -23,7 +23,8 @@ test('mobile navigation survives 100 transitions and diagnostics is safe', async
   await expect(page.getByText(/Build [a-f0-9]{7,}/)).toBeVisible();
 });
 
-test('photo import runs OCR and shows confidence without auto confirmation', async ({ page }) => {
+test('photo import runs OCR and shows confidence without auto confirmation', async ({ page }, testInfo) => {
+  test.skip(!['iPhone', 'Android'].includes(testInfo.project.name), 'OCR runs once per browser engine; compact viewports keep the shell checks');
   await enterApp(page);
   const fixture = path.resolve('tests/fixtures/front-sake.png');
   await page.getByText('写真から記録する').locator('..').locator('input[type=file]').setInputFiles(fixture);

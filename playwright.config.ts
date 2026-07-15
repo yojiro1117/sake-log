@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: './tests/e2e',
   timeout: 150_000,
   expect: { timeout: 20_000 },
-  retries: 2,
+  retries: process.env.CI ? 1 : 0,
   workers: 1,
   use: {
     baseURL: process.env.E2E_BASE_URL ?? 'https://yojiro1117.github.io/sake-log/',
