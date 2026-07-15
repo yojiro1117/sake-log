@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "images": 72,
+    "confirmedTuningReferences": 19,
+    "repeatPhotoTests": 15,
+    "top1Accuracy": 0.13333333333333333,
+    "falsePositiveRate": 0,
+    "abstentionRate": 0.8666666666666667,
+    "threshold": 0.78,
+    "note": "Only the first tuning image in each group is used as a confirmed reference; validation and holdout images are not used as references."
+  },
+  "records": [
+    {
+      "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+      "expectedGroupId": "laphroaig-triple-wood",
+      "similarity": 0.5878079013171875,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_1703.HEIC",
+      "expectedGroupId": "karine-premium",
+      "similarity": 0.7798360906862745,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_2051.HEIC",
+      "expectedGroupId": "hibiki-harmony",
+      "similarity": 0.6411780024509803,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_2272.HEIC",
+      "expectedGroupId": "nikka-coffey-malt",
+      "similarity": 0.6647214111097078,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_2274.HEIC",
+      "expectedGroupId": "nikka-coffey-malt",
+      "similarity": 0.6586215336587274,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_2325.HEIC",
+      "expectedGroupId": "yoichi",
+      "similarity": 0.6041023284313726,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_2874.HEIC",
+      "expectedGroupId": "nabeshima-new-moon",
+      "topGroupId": "nabeshima-new-moon",
+      "similarity": 0.8006617647058822,
+      "correct": true,
+      "abstained": false
+    },
+    {
+      "fileName": "IMG_3427.heic",
+      "expectedGroupId": "taka",
+      "similarity": 0.704203431372549,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_3666.HEIC",
+      "expectedGroupId": "w-yamadanishiki",
+      "similarity": 0.7261764236274563,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_4293.HEIC",
+      "expectedGroupId": "aramasa-2020",
+      "similarity": 0.6722487745098039,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_4294.HEIC",
+      "expectedGroupId": "aramasa-2020",
+      "topGroupId": "aramasa-2020",
+      "similarity": 0.8300219215811385,
+      "correct": true,
+      "abstained": false
+    },
+    {
+      "fileName": "IMG_4295.HEIC",
+      "expectedGroupId": "sharaku",
+      "similarity": 0.6430698529411765,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_4618 2.HEIC",
+      "expectedGroupId": "yamamoto",
+      "similarity": 0.6569918970713347,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_4619 2.HEIC",
+      "expectedGroupId": "sharaku",
+      "similarity": 0.6949402573529412,
+      "correct": false,
+      "abstained": true
+    },
+    {
+      "fileName": "IMG_4620 2.HEIC",
+      "expectedGroupId": "sharaku",
+      "similarity": 0.6397400588360405,
+      "correct": false,
+      "abstained": true
+    }
+  ]
+}

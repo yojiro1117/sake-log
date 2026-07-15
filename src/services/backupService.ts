@@ -36,6 +36,10 @@ export async function exportLocalData() {
   addJson(entries, 'classification-corrections.json', tables.classificationCorrections);
   addJson(entries, 'external-sources.json', tables.externalSources);
   addJson(entries, 'device-validation-results.json', tables.deviceValidationResults);
+  addJson(entries, 'product-catalog.json', tables.productCatalog);
+  addJson(entries, 'reference-images.json', tables.referenceImages);
+  addJson(entries, 'identification-runs.json', tables.identificationRuns);
+  addJson(entries, 'learning-events.json', tables.learningEvents);
   addJson(entries, 'personality-results.json', tables.personalityResults);
   addJson(entries, 'review-profile-results.json', tables.reviewProfileResults);
   addJson(entries, 'backup-status.json', tables.backupStatus);
@@ -81,7 +85,9 @@ export async function exportLocalData() {
       drafts: tables.drafts.length,
       priceCandidates: tables.priceCandidates.length,
       ocrCorrections: tables.ocrCorrections.length,
-      classificationCorrections: tables.classificationCorrections.length
+      classificationCorrections: tables.classificationCorrections.length,
+      productCatalog: tables.productCatalog.length,
+      referenceImages: tables.referenceImages.length
     },
     totalSize: Object.values(entries).reduce((sum, value) => sum + value.byteLength, 0)
   };
@@ -122,6 +128,10 @@ export async function restoreLocalData(blob: Blob, mode: BackupMode) {
   const personalityResults = readOptionalJson<Parameters<typeof db.personalityResults.bulkPut>[0]>(entries, 'personality-results.json', []);
   const reviewProfileResults = readOptionalJson<Parameters<typeof db.reviewProfileResults.bulkPut>[0]>(entries, 'review-profile-results.json', []);
   const backupStatus = readOptionalJson<Parameters<typeof db.backupStatus.bulkPut>[0]>(entries, 'backup-status.json', []);
+  const productCatalog = readOptionalJson<Parameters<typeof db.productCatalog.bulkPut>[0]>(entries, 'product-catalog.json', []);
+  const referenceImages = readOptionalJson<Parameters<typeof db.referenceImages.bulkPut>[0]>(entries, 'reference-images.json', []);
+  const identificationRuns = readOptionalJson<Parameters<typeof db.identificationRuns.bulkPut>[0]>(entries, 'identification-runs.json', []);
+  const learningEvents = readOptionalJson<Parameters<typeof db.learningEvents.bulkPut>[0]>(entries, 'learning-events.json', []);
   const imageMetadata = readJson<Array<Record<string, unknown> & { originalPath: string; processedPath?: string }>>(entries, 'images.json');
   const draftMetadata = readJson<BackupDraftMetadata[]>(entries, 'drafts.json');
   const images = imageMetadata.map((item) => hydrateImage(item, entries));
@@ -144,18 +154,23 @@ export async function restoreLocalData(blob: Blob, mode: BackupMode) {
     await db.personalityResults.bulkPut(personalityResults);
     await db.reviewProfileResults.bulkPut(reviewProfileResults);
     await db.backupStatus.bulkPut(backupStatus);
+    await db.productCatalog.bulkPut(productCatalog);
+    await db.referenceImages.bulkPut(referenceImages);
+    await db.identificationRuns.bulkPut(identificationRuns);
+    await db.learningEvents.bulkPut(learningEvents);
     await db.drafts.bulkPut(drafts);
   });
   return manifest;
 }
 
 async function readAllTables() {
-  const [logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus] = await Promise.all([
+  const [logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus, productCatalog, referenceImages, identificationRuns, learningEvents] = await Promise.all([
     db.logs.toArray(), db.images.toArray(), db.drafts.toArray(), db.priceCandidates.toArray(), db.userSettings.toArray(), db.templates.toArray(),
     db.ocrCorrections.toArray(), db.labelAliases.toArray(), db.classificationCorrections.toArray(), db.externalSources.toArray(), db.deviceValidationResults.toArray(),
-    db.personalityResults.toArray(), db.reviewProfileResults.toArray(), db.backupStatus.toArray()
+    db.personalityResults.toArray(), db.reviewProfileResults.toArray(), db.backupStatus.toArray(),
+    db.productCatalog.toArray(), db.referenceImages.toArray(), db.identificationRuns.toArray(), db.learningEvents.toArray()
   ]);
-  return { logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus };
+  return { logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus, productCatalog, referenceImages, identificationRuns, learningEvents };
 }
 
 function addJson(entries: ZipEntries, path: string, value: unknown) {

@@ -3,8 +3,8 @@
     "total": 72,
     "textHitRate": 1,
     "candidateHitRate": 0.028,
-    "averageProcessingTimeMs": 1205,
-    "maxProcessingTimeMs": 4069
+    "averageProcessingTimeMs": 981,
+    "maxProcessingTimeMs": 3818
   },
   "results": [
     {
@@ -14,9 +14,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "a 変\n\nのいいのが\n\nや\n\nZS\n\n7エア",
-        "confidence": 0.31,
-        "charCount": 22,
+        "text": "いいっの\n\nの\n\nや\n\nZS\n\nTIL\n\nゃや",
+        "confidence": 0.57,
+        "charCount": 23,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -25,14 +25,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "a 変\n\nのいいのが\n\nや\n\nZS\n\n7エア",
-          "confidence": 0.31,
-          "charCount": 22,
+          "text": "いいっの\n\nの\n\nや\n\nZS\n\nTIL\n\nゃや",
+          "confidence": 0.57,
+          "charCount": 23,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 422,
+      "processingTimeMs": 364,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -44,9 +44,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "9衝 7\n\n* 。\n\nTHIS WAY A”\n\nーー\n\ni\n\n』\n\nーー\n\n断川ー\n\nンプ 4\n\n清二\n\nON TORY WHISKY\n\nh\n\nーー\n\nーーデ\n\nング 計",
-        "confidence": 0.33,
-        "charCount": 85,
+        "text": "o$5\n\nTHS waY A’\n\nミー\n\nココ川\n\n「\n\nHIpIKI\n\nONrony WHISKY\n\nneio JAPANES E HARMONY\n\nme\n\nblend of the finest\n\na\n\nクア",
+        "confidence": 0.43,
+        "charCount": 106,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -55,16 +55,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "9衝 7\n\n* 。\n\nTHIS WAY A”\n\nーー\n\ni\n\n』\n\nーー\n\n断川ー\n\nンプ 4\n\n清二\n\nON TORY WHISKY\n\nh\n\nーー\n\nーーデ\n\nング 計",
-          "confidence": 0.33,
-          "charCount": 85,
+          "text": "o$5\n\nTHS waY A’\n\nミー\n\nココ川\n\n「\n\nHIpIKI\n\nONrony WHISKY\n\nneio JAPANES E HARMONY\n\nme\n\nblend of the finest\n\na\n\nクア",
+          "confidence": 0.43,
+          "charCount": 106,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 745,
+      "processingTimeMs": 590,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -75,9 +74,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "4 ビ\n\n癌\n\nり\n\nーー am\n\n[T—=\n\nトト\n\n攻」\n\n枯。\n\nプア\n\n.演\n\nJ -。王\n\n705 way A\n\n}\n\n=e\n\nゃる\n\nWSKN\n\nーー上8 1\n\n=__ =\n\n/\n\nーー\n\nhe ja\n\nSak\n\n(I\n\nW\n\nY&\n\nANISH!\n\nBs\n\nnaj:\n\nSutdll\n\nで\n\n§AWe aay +\n\n §\n\nます\n\ny.\n\nいいを\n\nテー\n\nyreds",
-        "confidence": 0.25,
-        "charCount": 191,
+        "text": "R\n\nb'\n\nミーニー\n\n次\n\nh .\n\nーー-。衝\n\nが引 way A\n\nリ\n\nohs\n\n[597,\n\nゃる\n\nし\n\nSN\n\nーー お旦\n\nhe Ja\n\nSaki\n\nWI\n\nY,\n\nNH\n\nSutdll\n\n5 語\n\nーッ\n\nom -ya\n\nる\n\nk\n\n2 衝\n\n aTN\n\nッー\n\nも",
+        "confidence": 0.28,
+        "charCount": 143,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -86,14 +85,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "4 ビ\n\n癌\n\nり\n\nーー am\n\n[T—=\n\nトト\n\n攻」\n\n枯。\n\nプア\n\n.演\n\nJ -。王\n\n705 way A\n\n}\n\n=e\n\nゃる\n\nWSKN\n\nーー上8 1\n\n=__ =\n\n/\n\nーー\n\nhe ja\n\nSak\n\n(I\n\nW\n\nY&\n\nANISH!\n\nBs\n\nnaj:\n\nSutdll\n\nで\n\n§AWe aay +\n\n §\n\nます\n\ny.\n\nいいを\n\nテー\n\nyreds",
-          "confidence": 0.25,
-          "charCount": 191,
+          "text": "R\n\nb'\n\nミーニー\n\n次\n\nh .\n\nーー-。衝\n\nが引 way A\n\nリ\n\nohs\n\n[597,\n\nゃる\n\nし\n\nSN\n\nーー お旦\n\nhe Ja\n\nSaki\n\nWI\n\nY,\n\nNH\n\nSutdll\n\n5 語\n\nーッ\n\nom -ya\n\nる\n\nk\n\n2 衝\n\n aTN\n\nッー\n\nも",
+          "confidence": 0.28,
+          "charCount": 143,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1481,
+      "processingTimeMs": 1201,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -106,9 +105,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "CR\n\nJol\n\ni 1\n\nペングン\n\n, u\n\nドコ\n\nに>間\n\nTHIS WAY\n\nー\n\nYid\n\nーーと\n\nNN]\n\nーー ーー\n\n> 夫\n\n»\n\nーー §\n\nue\n\n党 放\n\nY -\n\n—\n\n多\n\nTM-\n\n &\n\nシ\n\nIHE) ¢\n\nトコ",
-        "confidence": 0.29,
-        "charCount": 125,
+        "text": "ド誠\n\nJol) e\n\nペッンンメン\n\nf2s\n\n>\n\nTHIS WAY\n\nアマンカ\n\nーージョ\n\n#\n\nーーが7\n\nW\n\np\n\niN\n\nW\n\nー 一一\n\n> ®\n\n® l\n\nhalt ー\n\n—\n\n6\n\n= P\n\n¥:\n\nーーを\n\n5\n\nも\n\n$:\n\n競馬\n\n&",
+        "confidence": 0.33,
+        "charCount": 131,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -117,14 +116,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "CR\n\nJol\n\ni 1\n\nペングン\n\n, u\n\nドコ\n\nに>間\n\nTHIS WAY\n\nー\n\nYid\n\nーーと\n\nNN]\n\nーー ーー\n\n> 夫\n\n»\n\nーー §\n\nue\n\n党 放\n\nY -\n\n—\n\n多\n\nTM-\n\n &\n\nシ\n\nIHE) ¢\n\nトコ",
-          "confidence": 0.29,
-          "charCount": 125,
+          "text": "ド誠\n\nJol) e\n\nペッンンメン\n\nf2s\n\n>\n\nTHIS WAY\n\nアマンカ\n\nーージョ\n\n#\n\nーーが7\n\nW\n\np\n\niN\n\nW\n\nー 一一\n\n> ®\n\n® l\n\nhalt ー\n\n—\n\n6\n\n= P\n\n¥:\n\nーーを\n\n5\n\nも\n\n$:\n\n競馬\n\n&",
+          "confidence": 0.33,
+          "charCount": 131,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1117,
+      "processingTimeMs": 1065,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -137,9 +136,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "マビ\n\nl\n\n=\n\n' *\n\nR\n\nSC\n\nん\n\n%\n\nに\n\nング",
+        "text": "-\n\nR\n\nSぐ\n\nmm\n\nAN\n\ny,\n\nいい全\n\n4",
         "confidence": 0.2,
-        "charCount": 33,
+        "charCount": 28,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -148,14 +147,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "マビ\n\nl\n\n=\n\n' *\n\nR\n\nSC\n\nん\n\n%\n\nに\n\nング",
+          "text": "-\n\nR\n\nSぐ\n\nmm\n\nAN\n\ny,\n\nいい全\n\n4",
           "confidence": 0.2,
-          "charCount": 33,
+          "charCount": 28,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 452,
+      "processingTimeMs": 352,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -168,9 +167,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "id\n\nguf.\n\n(66\n\n上 。\n\nペンングケン\n\nー\n\n税を\n\n5 4\n\nbr\n\nSat\n\nAN\n\n受賞 id\n\nでキク\n\n陽一- 選 {H\n\nIE §\n\n太\n\nEs 3\n\n人\n\nh B",
-        "confidence": 0.25,
-        "charCount": 96,
+        "text": "人ー 、\n\nJol\n\nヘッグン\n\nec\n\n所 。\n\nR =\n\n+ ti —\n\nがが ]\n\nTHIS WAY\n\nR\n\nbr\n\nた\n\nミラ\n\nIit\n\n太\n\n本\n\nト B",
+        "confidence": 0.37,
+        "charCount": 83,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -179,15 +178,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "id\n\nguf.\n\n(66\n\n上 。\n\nペンングケン\n\nー\n\n税を\n\n5 4\n\nbr\n\nSat\n\nAN\n\n受賞 id\n\nでキク\n\n陽一- 選 {H\n\nIE §\n\n太\n\nEs 3\n\n人\n\nh B",
-          "confidence": 0.25,
-          "charCount": 96,
+          "text": "人ー 、\n\nJol\n\nヘッグン\n\nec\n\n所 。\n\nR =\n\n+ ti —\n\nがが ]\n\nTHIS WAY\n\nR\n\nbr\n\nた\n\nミラ\n\nIit\n\n太\n\n本\n\nト B",
+          "confidence": 0.37,
+          "charCount": 83,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 848,
+      "processingTimeMs": 809,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -198,9 +198,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "/ゲだ\n\ny\n\nQ\n\nな\n\nのダ\n\npen\n\nENT TO HRH THE PRINCE OF Wase\n\npl\n\nANSTON &CO。 (LAPHROALIG) ISLE OF 1SLay\n\nNDSUPPLIER OF SINGLE MALT SCOTCH ws\n\nAPHROAI\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\nIRIP!\n\nTHPLEMATURED FOR PEAT\n\nGivr\n\n%t richly flavon\n\n1\n\nESTD 1\n\ns\n\nON\n\nISTtLrmn AND BOTTLED IN 800T\n\n の q\n\n『\n\n&Co, » LAPHROAIG DISTILL",
-        "confidence": 0.59,
-        "charCount": 313,
+        "text": "(をが\n\nQ\n\nId\n\nCSの7\n\nENTTO HRH THE PRINCE OF WarEe\n\nENSTON &CO。 (LAPHROAIG) ISLE OF isuay\n\nAND\n\nDSUPPLIER OF SINGLE MALT SCOTch ws\n\n\\PHROA\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\n11\n\nf\n\nTRIP\n\nTHPLEMATURED FOR PEAT\n\n【\n\nWost Tichly flavon\n\n3\n\n1\n\nESTD ー 軒\n\n3\n\nDammrmp AND BOTTLED IN 8007 -\n\n[4\n\nY &co, » LAPHROAIG DISTILE",
+        "confidence": 0.6,
+        "charCount": 310,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -209,14 +209,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "/ゲだ\n\ny\n\nQ\n\nな\n\nのダ\n\npen\n\nENT TO HRH THE PRINCE OF Wase\n\npl\n\nANSTON &CO。 (LAPHROALIG) ISLE OF 1SLay\n\nNDSUPPLIER OF SINGLE MALT SCOTCH ws\n\nAPHROAI\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\nIRIP!\n\nTHPLEMATURED FOR PEAT\n\nGivr\n\n%t richly flavon\n\n1\n\nESTD 1\n\ns\n\nON\n\nISTtLrmn AND BOTTLED IN 800T\n\n の q\n\n『\n\n&Co, » LAPHROAIG DISTILL",
-          "confidence": 0.59,
-          "charCount": 313,
+          "text": "(をが\n\nQ\n\nId\n\nCSの7\n\nENTTO HRH THE PRINCE OF WarEe\n\nENSTON &CO。 (LAPHROAIG) ISLE OF isuay\n\nAND\n\nDSUPPLIER OF SINGLE MALT SCOTch ws\n\n\\PHROA\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\n11\n\nf\n\nTRIP\n\nTHPLEMATURED FOR PEAT\n\n【\n\nWost Tichly flavon\n\n3\n\n1\n\nESTD ー 軒\n\n3\n\nDammrmp AND BOTTLED IN 8007 -\n\n[4\n\nY &co, » LAPHROAIG DISTILE",
+          "confidence": 0.6,
+          "charCount": 310,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1460,
+      "processingTimeMs": 1407,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -228,9 +228,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "0ー\n\nーー ーー 証詳\n\n=\n\nil -\n\n-’t\n\nTHIS WAY\n\n(3\n\n<\n\nFFEY\n\nWHIS Y\n\nンジ\n\nン / p\n\nNg\n\n顎ト\n\n山KKA\n\nCOF\n\n問語uuと一\n\nWHIS\n\nがクェモj\n\nalc.45\n\n74 が\n\n5\n\nag\n\n_— る。",
-        "confidence": 0.4,
-        "charCount": 136,
+        "text": "——\n\nP §\n\n ママ 7\n\nTHIS WAY\n\nド\n\ni.\n\nCOFFEY\n\nym\n\nWHI\n\nルルを\n\nー\n\nト Ng\n\n部[ー\n\nIIKKA\n\nCOF\n\nWHI\n\n4 ALT m==\n\nポクェモルト\n\nへNm\n\n/ 4",
+        "confidence": 0.41,
+        "charCount": 113,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -239,14 +239,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "0ー\n\nーー ーー 証詳\n\n=\n\nil -\n\n-’t\n\nTHIS WAY\n\n(3\n\n<\n\nFFEY\n\nWHIS Y\n\nンジ\n\nン / p\n\nNg\n\n顎ト\n\n山KKA\n\nCOF\n\n問語uuと一\n\nWHIS\n\nがクェモj\n\nalc.45\n\n74 が\n\n5\n\nag\n\n_— る。",
-          "confidence": 0.4,
-          "charCount": 136,
+          "text": "——\n\nP §\n\n ママ 7\n\nTHIS WAY\n\nド\n\ni.\n\nCOFFEY\n\nym\n\nWHI\n\nルルを\n\nー\n\nト Ng\n\n部[ー\n\nIIKKA\n\nCOF\n\nWHI\n\n4 ALT m==\n\nポクェモルト\n\nへNm\n\n/ 4",
+          "confidence": 0.41,
+          "charCount": 113,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1100,
+      "processingTimeMs": 818,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -258,9 +258,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "A 」\n\nad を\n\nか .\n\nh 7 R)\n\nか 3\n\nー ー\n\nー\n\n中\n\nに て\n\nMN\n\nK\n\nは\n\n隆\n\n( 2\n\nを人を\n\n/\n\n202¢\n\n=\n\nジー\n\nfxarhnanil\n\n用ーーミ\n\nドー\n\n~=\n\nX\n\n)\n\nドミンク\n\n美山釣",
-        "confidence": 0.37,
-        "charCount": 125,
+        "text": "5 J\n\n用yp *\n\n作 §\n\nLB)\n\n1%\n\n“Yh\n\nー\n\n電\n\n=\n\nー Wd\n\n'電2\n\nぎ\n\n』\n\nし ) ー\n\n用\n\nと 2\n\nore\n\n__B\n\nーB\n\nA\n\no\n\n202¢€\n\nービ\n\nPT\n\nジミ\n\np\n\nG\n\nX\n\nV\n\nング\n\n美山錦\n\n® /",
+        "confidence": 0.36,
+        "charCount": 135,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -269,14 +269,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "A 」\n\nad を\n\nか .\n\nh 7 R)\n\nか 3\n\nー ー\n\nー\n\n中\n\nに て\n\nMN\n\nK\n\nは\n\n隆\n\n( 2\n\nを人を\n\n/\n\n202¢\n\n=\n\nジー\n\nfxarhnanil\n\n用ーーミ\n\nドー\n\n~=\n\nX\n\n)\n\nドミンク\n\n美山釣",
-          "confidence": 0.37,
-          "charCount": 125,
+          "text": "5 J\n\n用yp *\n\n作 §\n\nLB)\n\n1%\n\n“Yh\n\nー\n\n電\n\n=\n\nー Wd\n\n'電2\n\nぎ\n\n』\n\nし ) ー\n\n用\n\nと 2\n\nore\n\n__B\n\nーB\n\nA\n\no\n\n202¢€\n\nービ\n\nPT\n\nジミ\n\np\n\nG\n\nX\n\nV\n\nング\n\n美山錦\n\n® /",
+          "confidence": 0.36,
+          "charCount": 135,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1078,
+      "processingTimeMs": 1226,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -289,9 +289,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "っああ\n\nTI®\n\nie\n\nTHIS WAY\n\nte)\n\nリガ\n\nルリ\n\nビー —\n\n=y\n\nwl\n\nり H\n\nー =\n\nてCレイン\n\n関にEiw iu",
-        "confidence": 0.32,
-        "charCount": 76,
+        "text": "f\n\nる *\n\n1 月放\n\nw\n\nに\n\n * y J\n\n4\n\nりー\n\n4\n\n del\n\nH\n\nCレアシ7ンバ\n\n委",
+        "confidence": 0.31,
+        "charCount": 57,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -300,15 +300,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "っああ\n\nTI®\n\nie\n\nTHIS WAY\n\nte)\n\nリガ\n\nルリ\n\nビー —\n\n=y\n\nwl\n\nり H\n\nー =\n\nてCレイン\n\n関にEiw iu",
-          "confidence": 0.32,
-          "charCount": 76,
+          "text": "f\n\nる *\n\n1 月放\n\nw\n\nに\n\n * y J\n\n4\n\nりー\n\n4\n\n del\n\nH\n\nCレアシ7ンバ\n\n委",
+          "confidence": 0.31,
+          "charCount": 57,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 745,
+      "processingTimeMs": 546,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -319,15 +320,15 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "”\n\n)\n\n. am o!\n\n(6 6\n\n=\n\nーー一一\n\nべき\n\n»y\n\nls\n\nーー\n\nNR\n\n5 に コ\n\nTHIS WAY\n\nー3\n\nre\n\nも\n\nる\n\nー和解! ー\n\nae\n\n デーミーェ ーー\n\nじ (ンプ\n\nTHE\n\nYAMAZAKI\n\nSINGLE MALT\n\nJAPANESE WHISKY\n\nで\n\neee am\n\nYAzakr\n\nlery in Japan\n\nDISTILLERY\n\nwmeuous\n\nOF SUNTORY WHISKY.\n\n2キー\n\nイッ\n\n山崎蒸溜所護尋\n\nT\n\n1\n\n『\n\n[\n\nーー h\n\n:\n\n»\n\nの\n\nリムプリアム15識\n\nー\n\nと\n\n£1",
-        "confidence": 0.37,
-        "charCount": 295,
+        "text": "に 』\n\n~\n\n内 で\n\no\n\nー =\n\nw —\n\n66\n\nal\n\nを\n\nー\n\n—\n\nPN\n\nTHIS WAY\n\n»\n\nIr\n\nー\n\nドン\n\n/<\n\n4 $\n\nくる\n\nテ\n\nンー\n\nー月\n\nae\n\nーー\n\nアイィン\n\nTHE\n\nJ)\n\nに\n\nYAMAZAKI\n\nSNGLE MALT\n\n2\n\nJAPANESE WHISKY\n\n0\n\nax\n\nTE\n\notyw\n\nイスキー\n\n。 の\n\n-\n\nMks 20 o B\n\nT\n\nリ\n\n哨 ー\n\nー\n\nーー \\\n\n—N\n\nレン\n\nアテ アー",
+        "confidence": 0.3,
+        "charCount": 239,
         "candidateCount": 1,
         "detectedProductName": "山崎",
         "detectedMakerName": "サントリー",
         "detectedAlcoholType": "whisky",
         "matchReasons": [
-          "OCR別名一致: 山崎"
+          "OCR別名一致: YAMAZAKI"
         ],
         "cycle": 1
       },
@@ -335,20 +336,21 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "”\n\n)\n\n. am o!\n\n(6 6\n\n=\n\nーー一一\n\nべき\n\n»y\n\nls\n\nーー\n\nNR\n\n5 に コ\n\nTHIS WAY\n\nー3\n\nre\n\nも\n\nる\n\nー和解! ー\n\nae\n\n デーミーェ ーー\n\nじ (ンプ\n\nTHE\n\nYAMAZAKI\n\nSINGLE MALT\n\nJAPANESE WHISKY\n\nで\n\neee am\n\nYAzakr\n\nlery in Japan\n\nDISTILLERY\n\nwmeuous\n\nOF SUNTORY WHISKY.\n\n2キー\n\nイッ\n\n山崎蒸溜所護尋\n\nT\n\n1\n\n『\n\n[\n\nーー h\n\n:\n\n»\n\nの\n\nリムプリアム15識\n\nー\n\nと\n\n£1",
-          "confidence": 0.37,
-          "charCount": 295,
+          "text": "に 』\n\n~\n\n内 で\n\no\n\nー =\n\nw —\n\n66\n\nal\n\nを\n\nー\n\n—\n\nPN\n\nTHIS WAY\n\n»\n\nIr\n\nー\n\nドン\n\n/<\n\n4 $\n\nくる\n\nテ\n\nンー\n\nー月\n\nae\n\nーー\n\nアイィン\n\nTHE\n\nJ)\n\nに\n\nYAMAZAKI\n\nSNGLE MALT\n\n2\n\nJAPANESE WHISKY\n\n0\n\nax\n\nTE\n\notyw\n\nイスキー\n\n。 の\n\n-\n\nMks 20 o B\n\nT\n\nリ\n\n哨 ー\n\nー\n\nーー \\\n\n—N\n\nレン\n\nアテ アー",
+          "confidence": 0.3,
+          "charCount": 239,
           "candidateCount": 1,
           "detectedProductName": "山崎",
           "detectedMakerName": "サントリー",
           "detectedAlcoholType": "whisky",
           "matchReasons": [
-            "OCR別名一致: 山崎"
+            "OCR別名一致: YAMAZAKI"
           ]
         }
       ],
-      "processingTimeMs": 1857,
+      "processingTimeMs": 1790,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -359,9 +361,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "/\n\nしあら\n\nみる\n\n[ドド\n\nのーー\n\ni\n\nTHIS WAY\n\n(\n\nー\n\n[/\n\n[1}\n\nF\\\n\n0\n\n[\n\n0\n\n『 中\n\n4\n\nH\n\nEE\n\nNeセル\n\nCRE y\n\nfhiliy, TM",
-        "confidence": 0.31,
-        "charCount": 101,
+        "text": "/\n\nしあ\n\n-\n\nh\n\nに\n\n<\n\nTHIS WAY\n\n}\n\nド\n\n/\n\n//\n\nーー\n\n人リ7\n\np\\\n\nB:\n\nに\n\n(グリ の ング4\n\nし放折衝\n\nitU り",
+        "confidence": 0.26,
+        "charCount": 84,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -370,14 +372,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "/\n\nしあら\n\nみる\n\n[ドド\n\nのーー\n\ni\n\nTHIS WAY\n\n(\n\nー\n\n[/\n\n[1}\n\nF\\\n\n0\n\n[\n\n0\n\n『 中\n\n4\n\nH\n\nEE\n\nNeセル\n\nCRE y\n\nfhiliy, TM",
-          "confidence": 0.31,
-          "charCount": 101,
+          "text": "/\n\nしあ\n\n-\n\nh\n\nに\n\n<\n\nTHIS WAY\n\n}\n\nド\n\n/\n\n//\n\nーー\n\n人リ7\n\np\\\n\nB:\n\nに\n\n(グリ の ング4\n\nし放折衝\n\nitU り",
+          "confidence": 0.26,
+          "charCount": 84,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 711,
+      "processingTimeMs": 677,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -390,9 +392,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "—\n\nーー一\n\nf\n\nー\n\nしあら\n\nf\n\nかか\n\nし\n\nド J\n\nTHIS WaY\n\n fl\n\nEa\n\n(』\n\nル\n\n(l\n\nB\n\nn\n\n計\n\nud\n\nte :\n\n』\n\n純\n\nを の\n\n 時\n\nKUBoTA",
-        "confidence": 0.32,
-        "charCount": 104,
+        "text": "N\n\n___=\"\n\nn\n\n所\n\n用(0\n\nTHIS WAY\n\nIy\n\nUE\n\n(』\n\nり\n\n計\n\naY)\n\nーー\n\n純\n\nママ\n\nt\n\nKUBoTa",
+        "confidence": 0.25,
+        "charCount": 74,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -401,14 +403,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "—\n\nーー一\n\nf\n\nー\n\nしあら\n\nf\n\nかか\n\nし\n\nド J\n\nTHIS WaY\n\n fl\n\nEa\n\n(』\n\nル\n\n(l\n\nB\n\nn\n\n計\n\nud\n\nte :\n\n』\n\n純\n\nを の\n\n 時\n\nKUBoTA",
-          "confidence": 0.32,
-          "charCount": 104,
+          "text": "N\n\n___=\"\n\nn\n\n所\n\n用(0\n\nTHIS WAY\n\nIy\n\nUE\n\n(』\n\nり\n\n計\n\naY)\n\nーー\n\n純\n\nママ\n\nt\n\nKUBoTa",
+          "confidence": 0.25,
+          "charCount": 74,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1108,
+      "processingTimeMs": 834,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -421,9 +423,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "L_4\n\nー\n\nww\n\n「 所本\n\n—\n\n\"\n\n[]\n\n—\n\n7\n\nK v\n\n\"\n\nEo\n\nーー\n\nーー\n\ng- ーー\n\n“d\n\n—\n\nーー\n\nに ーー\n\nンジ\n\n=\n\nN ー",
-        "confidence": 0.24,
-        "charCount": 88,
+        "text": "いいヽ、、、\n\n]\n\n回\n\np\n\nYo\n\n==—\n\na\n\n—\n\n—\n\n<\n\n2\n\nーー\n\nーー.\n\n本\n\npd\n\nいい、 ST\n\n> ニカング\n\n0 ー",
+        "confidence": 0.34,
+        "charCount": 76,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -432,14 +434,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "L_4\n\nー\n\nww\n\n「 所本\n\n—\n\n\"\n\n[]\n\n—\n\n7\n\nK v\n\n\"\n\nEo\n\nーー\n\nーー\n\ng- ーー\n\n“d\n\n—\n\nーー\n\nに ーー\n\nンジ\n\n=\n\nN ー",
-          "confidence": 0.24,
-          "charCount": 88,
+          "text": "いいヽ、、、\n\n]\n\n回\n\np\n\nYo\n\n==—\n\na\n\n—\n\n—\n\n<\n\n2\n\nーー\n\nーー.\n\n本\n\npd\n\nいい、 ST\n\n> ニカング\n\n0 ー",
+          "confidence": 0.34,
+          "charCount": 76,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 823,
+      "processingTimeMs": 914,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -452,9 +454,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "アン\n\nデマて\n\nミ\n\n人6\n\n用\n\n1\n\n-\n\nW\n\nA - y\n\nや\n\nTHSway A”\n\n[A\n\nンテ\n\nJ\n\n-\n\nセー\n\nKA WHISKY\n\nINGLE MALT 賭一\n\nMIYAGIKYO\n\n[0\n\nia 4\n\nFRABT\n\n蒸溜所でつ\n\nルモルト\n\n»",
-        "confidence": 0.42,
-        "charCount": 135,
+        "text": "の2\n\nデモ\n\nば\n\n=\n\n59\n\n1る 全\n\nW\n\nALLL\n\n———\n\n, lt\n\nN A\n\nTHIS WAY A\n\nンェ\n\nウー\n\nKA WHISKY\n\nMIYAGIKYO\n\nINGLE MALT 贈一\n\n'T'y\n\n5起り\n\nt\n\n峡燕汐\n\nング\n\nルト",
+        "confidence": 0.43,
+        "charCount": 131,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -463,14 +465,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "アン\n\nデマて\n\nミ\n\n人6\n\n用\n\n1\n\n-\n\nW\n\nA - y\n\nや\n\nTHSway A”\n\n[A\n\nンテ\n\nJ\n\n-\n\nセー\n\nKA WHISKY\n\nINGLE MALT 賭一\n\nMIYAGIKYO\n\n[0\n\nia 4\n\nFRABT\n\n蒸溜所でつ\n\nルモルト\n\n»",
-          "confidence": 0.42,
-          "charCount": 135,
+          "text": "の2\n\nデモ\n\nば\n\n=\n\n59\n\n1る 全\n\nW\n\nALLL\n\n———\n\n, lt\n\nN A\n\nTHIS WAY A\n\nンェ\n\nウー\n\nKA WHISKY\n\nMIYAGIKYO\n\nINGLE MALT 贈一\n\n'T'y\n\n5起り\n\nt\n\n峡燕汐\n\nング\n\nルト",
+          "confidence": 0.43,
+          "charCount": 131,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1085,
+      "processingTimeMs": 1000,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -482,9 +484,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "§1\n\nーーツン\n\n突\n\ntim\n\n-~~\n\n“ik\n\nTHIS WAY A\n\n o\n\nず\n\nma\n\n——\n\nw\n\n——\n\nIBIKI\n\nORY WHISKY\n\nに\n\nJAPAN ESE HARMO\n\nSa\n\n40us bleng of the finest scle\n\nし て\n\n4\n\nZ",
-        "confidence": 0.43,
-        "charCount": 145,
+        "text": "ーー\n\n6 6\n\nーーグン\n\n=\n\n-\n\n§\n\nや\n\nは\n\nINS WAY A®\n\n=y\n\nすす\n\nーー ms\n\n中\n\nHIpIKI\n\n'ORY WHISKY\n\nJAPANESE HARMONY\n\nicand\n\n oo blend ofhe finst s\n\n_a\n\na\n\n上",
+        "confidence": 0.39,
+        "charCount": 138,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -493,14 +495,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "§1\n\nーーツン\n\n突\n\ntim\n\n-~~\n\n“ik\n\nTHIS WAY A\n\n o\n\nず\n\nma\n\n——\n\nw\n\n——\n\nIBIKI\n\nORY WHISKY\n\nに\n\nJAPAN ESE HARMO\n\nSa\n\n40us bleng of the finest scle\n\nし て\n\n4\n\nZ",
-          "confidence": 0.43,
-          "charCount": 145,
+          "text": "ーー\n\n6 6\n\nーーグン\n\n=\n\n-\n\n§\n\nや\n\nは\n\nINS WAY A®\n\n=y\n\nすす\n\nーー ms\n\n中\n\nHIpIKI\n\n'ORY WHISKY\n\nJAPANESE HARMONY\n\nicand\n\n oo blend ofhe finst s\n\n_a\n\na\n\n上",
+          "confidence": 0.39,
+          "charCount": 138,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1011,
+      "processingTimeMs": 998,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -512,9 +514,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "時\n\n3\n\n9の りり ご. 了承 5\n\nビー\n\n。\n\n=a)\n\nリジンメグ\n\nSe\n\nNNで\n\nまこ\n\n~>=\n\nーー\n\n®w\n\n—\n\nO.Po\n\nTHE\n\nMAZAKI\n\nSNGLE, MAl\n\nNESE WHISKY\n\nJA]\n\nっaw 一\n\nンー\n\nに\n\nYEAT\n\nYa\n\nov\n\n'HennessY\n\nCognae\n\nウイ\n\nンタる\n\nグン\n\n_a\n\nmy\n\nでGO\n\nC 培\n\nのあのがの\n\nくキーー\n\nサントリーシンケルモルトウイスキー\n\n3\n\nの LE [25 43\n\n¥ 9300\n\n本 ーー",
-        "confidence": 0.48,
-        "charCount": 256,
+        "text": "lo”\n\nl\n\nッッ\n\nーー\n\nーー\n\nTHg\n\nWMAZAKI\n\nSE Wsxy\n\nJA\n\n'HennessY\n\nビッ\n\nMEGD\n\nサントリー>\n\nグルモルレト*ウイスキー\n\n43\n\nL MF 125 45\n\n¥ 9300\n\nJEE SE",
+        "confidence": 0.4,
+        "charCount": 121,
         "candidateCount": 3,
         "detectedProductName": "山崎",
         "detectedMakerName": "サントリー",
@@ -528,9 +530,9 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "時\n\n3\n\n9の りり ご. 了承 5\n\nビー\n\n。\n\n=a)\n\nリジンメグ\n\nSe\n\nNNで\n\nまこ\n\n~>=\n\nーー\n\n®w\n\n—\n\nO.Po\n\nTHE\n\nMAZAKI\n\nSNGLE, MAl\n\nNESE WHISKY\n\nJA]\n\nっaw 一\n\nンー\n\nに\n\nYEAT\n\nYa\n\nov\n\n'HennessY\n\nCognae\n\nウイ\n\nンタる\n\nグン\n\n_a\n\nmy\n\nでGO\n\nC 培\n\nのあのがの\n\nくキーー\n\nサントリーシンケルモルトウイスキー\n\n3\n\nの LE [25 43\n\n¥ 9300\n\n本 ーー",
-          "confidence": 0.48,
-          "charCount": 256,
+          "text": "lo”\n\nl\n\nッッ\n\nーー\n\nーー\n\nTHg\n\nWMAZAKI\n\nSE Wsxy\n\nJA\n\n'HennessY\n\nビッ\n\nMEGD\n\nサントリー>\n\nグルモルレト*ウイスキー\n\n43\n\nL MF 125 45\n\n¥ 9300\n\nJEE SE",
+          "confidence": 0.4,
+          "charCount": 121,
           "candidateCount": 3,
           "detectedProductName": "山崎",
           "detectedMakerName": "サントリー",
@@ -540,7 +542,7 @@
           ]
         }
       ],
-      "processingTimeMs": 1814,
+      "processingTimeMs": 943,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -552,9 +554,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "-f\n\n w\n\nL\n\nー\n\n-\n\nョー\n\n3ー\n\n< ご\n\nンンダク\n\nROYAL\n\nー\n\n-*\n\nーー\n\nに\n\n=\n\n~\n\nだ\n\nのた2カタッッッ\n\n/ &\n\nH\n\nCA\n\n$",
-        "confidence": 0.45,
-        "charCount": 89,
+        "text": "- f\n\n_B\n\nー\n\nョー\n\nーー\n\n町\n\n--\n\nーー\n\nシンンク\n\nROYAL\n\n贈\n\nI\n\n———\n\nテー\n\nミッグ 2が\n\n人5\n\nいで",
+        "confidence": 0.43,
+        "charCount": 73,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -563,14 +565,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "-f\n\n w\n\nL\n\nー\n\n-\n\nョー\n\n3ー\n\n< ご\n\nンンダク\n\nROYAL\n\nー\n\n-*\n\nーー\n\nに\n\n=\n\n~\n\nだ\n\nのた2カタッッッ\n\n/ &\n\nH\n\nCA\n\n$",
-          "confidence": 0.45,
-          "charCount": 89,
+          "text": "- f\n\n_B\n\nー\n\nョー\n\nーー\n\n町\n\n--\n\nーー\n\nシンンク\n\nROYAL\n\n贈\n\nI\n\n———\n\nテー\n\nミッグ 2が\n\n人5\n\nいで",
+          "confidence": 0.43,
+          "charCount": 73,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 872,
+      "processingTimeMs": 954,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -583,9 +585,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "f\n\n1 4 AMSTHMVMYIN\n\nが\n\n4イ\n\nYdVI\n\nしもに) 9\n\nYIII\n\nの\n\nAMSIHM\n\n_ mv 人ヨコ30*\n\n1\n\n$\n\nゼタ\n\nビー\n\n4\n\n_45",
-        "confidence": 0.42,
-        "charCount": 91,
+        "text": "/\n\n§ 424 信幸\n\n4イ4\n\nEMI ly fon\n\nAM STHM\n\nLIVW A34409\n\nゼッ\n\nー\n\n\\B\n\nビー\n\nA3\n\n4\n\n_ 窟",
+        "confidence": 0.37,
+        "charCount": 77,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -594,14 +596,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "f\n\n1 4 AMSTHMVMYIN\n\nが\n\n4イ\n\nYdVI\n\nしもに) 9\n\nYIII\n\nの\n\nAMSIHM\n\n_ mv 人ヨコ30*\n\n1\n\n$\n\nゼタ\n\nビー\n\n4\n\n_45",
-          "confidence": 0.42,
-          "charCount": 91,
+          "text": "/\n\n§ 424 信幸\n\n4イ4\n\nEMI ly fon\n\nAM STHM\n\nLIVW A34409\n\nゼッ\n\nー\n\n\\B\n\nビー\n\nA3\n\n4\n\n_ 窟",
+          "confidence": 0.37,
+          "charCount": 77,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 914,
+      "processingTimeMs": 756,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -613,9 +615,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "に\n\nーー\n\nビン\n\n—\n\n% §E J BY y\n\nHBA 557\n\n—¥Yy\n\nANSIHA,\n\nの2 oh i pcth\n\nTTLLSI VLIS\n\nASNOH3\n\nU RREER SDYIBY\n\n中\n\n4イエイクンズンズ絡)\n\nAISIHA 831\n\nvil\n\n10N\n\nLIH\n\nIH\n\n2て\n\nTHO1IO4\n\nLTVIW TDND\n\n4\n\nいん\n\nニン\n\n—\n\n=\n\n/ N志語\n\n7\n\nい",
-        "confidence": 0.25,
-        "charCount": 202,
+        "text": "ビー\n\nプク\n\n——\n\nl %97[\n\nー*y凡\n\nON\n\n10,\n\nsm WW\n\nAi\n\nHU\n\n万痢4イキマツ1\n\n4イエイヤの\n\nがが\n\nAISIHA 3S3N ー\n\nNIVY\n\nvil\n\nIH\n\n2Y e\n\nIHOIO!\n\nTV\n\nONIS\n\n会\n\n_——\n\nに っ\n\n人のいい:で) 7 5\n\n1 X ATONTS\n\nいい",
+        "confidence": 0.33,
+        "charCount": 166,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -624,14 +626,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "に\n\nーー\n\nビン\n\n—\n\n% §E J BY y\n\nHBA 557\n\n—¥Yy\n\nANSIHA,\n\nの2 oh i pcth\n\nTTLLSI VLIS\n\nASNOH3\n\nU RREER SDYIBY\n\n中\n\n4イエイクンズンズ絡)\n\nAISIHA 831\n\nvil\n\n10N\n\nLIH\n\nIH\n\n2て\n\nTHO1IO4\n\nLTVIW TDND\n\n4\n\nいん\n\nニン\n\n—\n\n=\n\n/ N志語\n\n7\n\nい",
-          "confidence": 0.25,
-          "charCount": 202,
+          "text": "ビー\n\nプク\n\n——\n\nl %97[\n\nー*y凡\n\nON\n\n10,\n\nsm WW\n\nAi\n\nHU\n\n万痢4イキマツ1\n\n4イエイヤの\n\nがが\n\nAISIHA 3S3N ー\n\nNIVY\n\nvil\n\nIH\n\n2Y e\n\nIHOIO!\n\nTV\n\nONIS\n\n会\n\n_——\n\nに っ\n\n人のいい:で) 7 5\n\n1 X ATONTS\n\nいい",
+          "confidence": 0.33,
+          "charCount": 166,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1633,
+      "processingTimeMs": 1237,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -643,9 +645,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ンク\n\n<\n\nし\n\nU1d\n\n« ita\n\nil ap\n\nc\n\nTHIS WAY A\n\n<\n\nMKK\n\nd. \\\n\nHIK\n\nCO\n\nWH\n\nがェ\n\n上",
-        "confidence": 0.4,
-        "charCount": 76,
+        "text": "N\n\n<\n\nmals\n\nN\n\nしリョ\n\no.J\n\n[ー\n\n~ THIS WAY A\n\n』 K\n\nd] \\\n\nIIK\n\nCO\n\nWHI\n\n7x.\n\nak.45",
+        "confidence": 0.54,
+        "charCount": 78,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -654,15 +656,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ンク\n\n<\n\nし\n\nU1d\n\n« ita\n\nil ap\n\nc\n\nTHIS WAY A\n\n<\n\nMKK\n\nd. \\\n\nHIK\n\nCO\n\nWH\n\nがェ\n\n上",
-          "confidence": 0.4,
-          "charCount": 76,
+          "text": "N\n\n<\n\nmals\n\nN\n\nしリョ\n\no.J\n\n[ー\n\n~ THIS WAY A\n\n』 K\n\nd] \\\n\nIIK\n\nCO\n\nWHI\n\n7x.\n\nak.45",
+          "confidence": 0.54,
+          "charCount": 78,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 664,
+      "processingTimeMs": 568,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -673,9 +676,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ニンロー 導際\n\nmisihe\n\n=\n\n. 9\n\n-7\n\nTHS wAY A\n\nNIKK:\n\n. \\\n\nES \\\n\nf ー\n\n*a\n\nNIKK\n\nCOQF\n\nWHi\n\nkey",
-        "confidence": 0.31,
-        "charCount": 87,
+        "text": "7\n\n=\" dBB\n\n=_\n\n 9\n\nTHS WAY A\n\n-\n\n® \\\n\n堆 \\\n\nf {\n\n*-h\n\nNIK\n\nCOF\n\nWHi\n\nクモ\n\n時 操 4\n\nkas %\n\n「 押",
+        "confidence": 0.36,
+        "charCount": 89,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -684,15 +687,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ニンロー 導際\n\nmisihe\n\n=\n\n. 9\n\n-7\n\nTHS wAY A\n\nNIKK:\n\n. \\\n\nES \\\n\nf ー\n\n*a\n\nNIKK\n\nCOQF\n\nWHi\n\nkey",
-          "confidence": 0.31,
-          "charCount": 87,
+          "text": "7\n\n=\" dBB\n\n=_\n\n 9\n\nTHS WAY A\n\n-\n\n® \\\n\n堆 \\\n\nf {\n\n*-h\n\nNIK\n\nCOF\n\nWHi\n\nクモ\n\n時 操 4\n\nkas %\n\n「 押",
+          "confidence": 0.36,
+          "charCount": 89,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 808,
+      "processingTimeMs": 822,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -703,9 +707,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "人の\n\n4\n\nED\n\nデ...、\n\nテテ一\n\n#2e\n\n —\n\n_-—\n\nの\n\n二ノ\n\n0\n\n天宮\n\nー 田\n\nロロ\n\n—\n\n』\n\nV\n\nー間.\n\n時\n\n4)\n\n4t\n\n\"名\n\nCpEE",
-        "confidence": 0.23,
-        "charCount": 93,
+        "text": "ES\n\nJul\n\nペタンクン\n\nmilh\n\nMhhe\n\nAF HEWY ん\n\n—\n\ny\n\n= =)\n\n貼り\n\n) 放\n\n=1\"",
+        "confidence": 0.15,
+        "charCount": 63,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -714,16 +718,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "人の\n\n4\n\nED\n\nデ...、\n\nテテ一\n\n#2e\n\n —\n\n_-—\n\nの\n\n二ノ\n\n0\n\n天宮\n\nー 田\n\nロロ\n\n—\n\n』\n\nV\n\nー間.\n\n時\n\n4)\n\n4t\n\n\"名\n\nCpEE",
-          "confidence": 0.23,
-          "charCount": 93,
+          "text": "ES\n\nJul\n\nペタンクン\n\nmilh\n\nMhhe\n\nAF HEWY ん\n\n—\n\ny\n\n= =)\n\n貼り\n\n) 放\n\n=1\"",
+          "confidence": 0.15,
+          "charCount": 63,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1164,
+      "processingTimeMs": 743,
       "problemClassification": [
-        "記号ノイズ過多",
+        "低信頼度",
         "小断片が多い"
       ]
     },
@@ -734,9 +738,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ーー ~\n\nの\n\nビー\n\n. —\n\nのを\n\nf\n\n-_—\n\nin\n\n4タル\n\nos\n\n『\n\n/\n\n『\n\n4\n\n/\n\n5\n\n9\n\n-] d\n\nー jrE\n\n2,\n\n}",
-        "confidence": 0.29,
-        "charCount": 82,
+        "text": "—\n\nで本\n\nノー —\n\nシィデー\n\nf\n\n-_—\n\n4 ル\n\n(\n\nfl\n\n『\n\nf\n\nーー\n\n/4)\n\n4\n\nー一誇\n\n3 o\n\n本",
+        "confidence": 0.19,
+        "charCount": 68,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -745,15 +749,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ーー ~\n\nの\n\nビー\n\n. —\n\nのを\n\nf\n\n-_—\n\nin\n\n4タル\n\nos\n\n『\n\n/\n\n『\n\n4\n\n/\n\n5\n\n9\n\n-] d\n\nー jrE\n\n2,\n\n}",
-          "confidence": 0.29,
-          "charCount": 82,
+          "text": "—\n\nで本\n\nノー —\n\nシィデー\n\nf\n\n-_—\n\n4 ル\n\n(\n\nfl\n\n『\n\nf\n\nーー\n\n/4)\n\n4\n\nー一誇\n\n3 o\n\n本",
+          "confidence": 0.19,
+          "charCount": 68,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 886,
+      "processingTimeMs": 851,
       "problemClassification": [
+        "低信頼度",
         "記号ノイズ過多",
         "小断片が多い"
       ]
@@ -765,9 +770,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "—\n\nし3\n\nginf\n\nペングン\n\n#\n\n-_\n\n -\n\nが: N THIS WAY\n\nhr\n\nAN\n\nーー 前\n\n関 ん\n\nZra)\n\n4]\n\n純\n\nR\n\n央2\n\nN\n\n* でまま\n\n%\n\nbi;ー\n\n包\n\n2\n\nーー\n\n0\n\nP\n\nを ss\n\n-—\n\n2\n\n[ine\n\nwi",
-        "confidence": 0.36,
-        "charCount": 140,
+        "text": "ON\n\nロンンク\n\nーー\n\n7983\n\nーー\n\n45 an\n\n5 WAY\n\nロ\n\nーーコー一\n\nmE\n\n—\n\n#\n\nNL\n\nの\n\n/)\n\nz\n\n; 殿\n\nまっ\n\n太\n\n*\n\nイン\n\nE",
+        "confidence": 0.31,
+        "charCount": 92,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -776,14 +781,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "—\n\nし3\n\nginf\n\nペングン\n\n#\n\n-_\n\n -\n\nが: N THIS WAY\n\nhr\n\nAN\n\nーー 前\n\n関 ん\n\nZra)\n\n4]\n\n純\n\nR\n\n央2\n\nN\n\n* でまま\n\n%\n\nbi;ー\n\n包\n\n2\n\nーー\n\n0\n\nP\n\nを ss\n\n-—\n\n2\n\n[ine\n\nwi",
-          "confidence": 0.36,
-          "charCount": 140,
+          "text": "ON\n\nロンンク\n\nーー\n\n7983\n\nーー\n\n45 an\n\n5 WAY\n\nロ\n\nーーコー一\n\nmE\n\n—\n\n#\n\nNL\n\nの\n\n/)\n\nz\n\n; 殿\n\nまっ\n\n太\n\n*\n\nイン\n\nE",
+          "confidence": 0.31,
+          "charCount": 92,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1319,
+      "processingTimeMs": 915,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -796,9 +801,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "が\n\no 2 SN\n\ny ze\n\n- 0\n\nN\n\n時\n\nMI\n\n区\n\nwik\n\nIA\n\nニギ\n\nは\n\nIN\n\n—\n\n— ~\n\n922Ytms\n\nグ ー\n\nマノ\n\n\\\n\nWa\n\ny\n\n0\n\nZ\n\n\\ St\n\nング\n\nにこ\n\nング\n\nL4\n\na —\n\nーー msご\n\n=—/\n\n=\n\n5. 2 A\n\nー一\n\nーー\n\nと\n\n店芝\n\n~",
-        "confidence": 0.28,
-        "charCount": 164,
+        "text": "にこる0\n\nN\n\nAL\n\n\\7\n\nMI\n\nN\n\nNN\n\nIA\n\nにっ5、\n\nMegrAny\n\no\n\n7 Ris\n\nMM\n\n0\n\n電。\n\nにいい\n\n0\n\nNs 朱\n\nロナンプ /\n\nンクング\n\nJ¥\n\nムー\n\nにーーキンノノ\n\nニーンジ\n\n——\n\n ング",
+        "confidence": 0.3,
+        "charCount": 126,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -807,16 +812,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "が\n\no 2 SN\n\ny ze\n\n- 0\n\nN\n\n時\n\nMI\n\n区\n\nwik\n\nIA\n\nニギ\n\nは\n\nIN\n\n—\n\n— ~\n\n922Ytms\n\nグ ー\n\nマノ\n\n\\\n\nWa\n\ny\n\n0\n\nZ\n\n\\ St\n\nング\n\nにこ\n\nング\n\nL4\n\na —\n\nーー msご\n\n=—/\n\n=\n\n5. 2 A\n\nー一\n\nーー\n\nと\n\n店芝\n\n~",
-          "confidence": 0.28,
-          "charCount": 164,
+          "text": "にこる0\n\nN\n\nAL\n\n\\7\n\nMI\n\nN\n\nNN\n\nIA\n\nにっ5、\n\nMegrAny\n\no\n\n7 Ris\n\nMM\n\n0\n\n電。\n\nにいい\n\n0\n\nNs 朱\n\nロナンプ /\n\nンクング\n\nJ¥\n\nムー\n\nにーーキンノノ\n\nニーンジ\n\n——\n\n ング",
+          "confidence": 0.3,
+          "charCount": 126,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1486,
+      "processingTimeMs": 1116,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -827,9 +831,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "3\n\n-s\n\nト\n\nー\n\nへ\n\nト\n\nV 4\n\n1\n\n0\n\nNNー\n\n=\n\nア\n\nーー いき\n\nAN\n\n5\n\n/\n\n和W\n\nsk\n\nジテデン\n\nCV\n\nマデ\n\nSNy\n\nンー\n\nーー 、\n\n[2\n\nに\n\nコン\n\n【\n\nいい、\n\nN\n\nプ\n\n~\n\ny =\n\nーー\n\n<テ\n\nーー 放\n\nーー\n\n一るスマ\n\nー-\n\n=\n\n=\n\n=\n\nKa\n\nーーマー\n\n==",
-        "confidence": 0.29,
-        "charCount": 177,
+        "text": "な\n\nヘン\n\nり I\\\n\nー\n\n=\n\nいい、\n\nUN\n\nN\n\nAN\n\n7\n\nNs\n\n人き\n\nミン\n\nいき\n\nas\n\ncd\n\nっ\n\nビて】\n\n—_K\n\nah\n\nここーー",
+        "confidence": 0.24,
+        "charCount": 83,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -838,14 +842,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "3\n\n-s\n\nト\n\nー\n\nへ\n\nト\n\nV 4\n\n1\n\n0\n\nNNー\n\n=\n\nア\n\nーー いき\n\nAN\n\n5\n\n/\n\n和W\n\nsk\n\nジテデン\n\nCV\n\nマデ\n\nSNy\n\nンー\n\nーー 、\n\n[2\n\nに\n\nコン\n\n【\n\nいい、\n\nN\n\nプ\n\n~\n\ny =\n\nーー\n\n<テ\n\nーー 放\n\nーー\n\n一るスマ\n\nー-\n\n=\n\n=\n\n=\n\nKa\n\nーーマー\n\n==",
-          "confidence": 0.29,
-          "charCount": 177,
+          "text": "な\n\nヘン\n\nり I\\\n\nー\n\n=\n\nいい、\n\nUN\n\nN\n\nAN\n\n7\n\nNs\n\n人き\n\nミン\n\nいき\n\nas\n\ncd\n\nっ\n\nビて】\n\n—_K\n\nah\n\nここーー",
+          "confidence": 0.24,
+          "charCount": 83,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1411,
+      "processingTimeMs": 810,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -858,9 +862,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "に3\n\nーー\n\nは\n\n<x\n\n]\n\nNIKKA wisgr\n\nSIN\n\nYOIC\n\nーーマー\n\n上\n\nB~\n\nLiy\n\nに\n\nご",
-        "confidence": 0.38,
-        "charCount": 64,
+        "text": "こき。\n\nmm\n\n上\n\n}\n\nNERA W\n\nSIN\n\nYOI\n\nーーマーー\n\nーー\n\n<\n\n5\n\nに -",
+        "confidence": 0.35,
+        "charCount": 53,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -869,15 +873,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "に3\n\nーー\n\nは\n\n<x\n\n]\n\nNIKKA wisgr\n\nSIN\n\nYOIC\n\nーーマー\n\n上\n\nB~\n\nLiy\n\nに\n\nご",
-          "confidence": 0.38,
-          "charCount": 64,
+          "text": "こき。\n\nmm\n\n上\n\n}\n\nNERA W\n\nSIN\n\nYOI\n\nーーマーー\n\nーー\n\n<\n\n5\n\nに -",
+          "confidence": 0.35,
+          "charCount": 53,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 589,
+      "processingTimeMs": 618,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -888,9 +893,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "に\n\nEd 74\n\nb 、\n\n»'§\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\n¥\n\namy\n\nでつくられたモルト原清\n\nシングルモルト\n\nPRor\n\nKKA WHISKY\n\nPO\n\nJAPAN\n\nale®\n\nスキ",
-        "confidence": 0.61,
-        "charCount": 126,
+        "text": "に 1\n\n> ー 74\n\nし\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\nビタ\n\n作\n\n所 シングルモルト\n\nD By\n\n所でつくられたモル\n\nro\n\n(スミ",
+        "confidence": 0.65,
+        "charCount": 97,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -899,14 +904,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "に\n\nEd 74\n\nb 、\n\n»'§\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\n¥\n\namy\n\nでつくられたモルト原清\n\nシングルモルト\n\nPRor\n\nKKA WHISKY\n\nPO\n\nJAPAN\n\nale®\n\nスキ",
-          "confidence": 0.61,
-          "charCount": 126,
+          "text": "に 1\n\n> ー 74\n\nし\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\nビタ\n\n作\n\n所 シングルモルト\n\nD By\n\n所でつくられたモル\n\nro\n\n(スミ",
+          "confidence": 0.65,
+          "charCount": 97,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 758,
+      "processingTimeMs": 603,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -918,9 +923,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ーー\n\nマー レン\n\nまま 敬\n\n加\n\nゲッ\n\nE w-\n\n___.\n\n0\n\n1\n\nt\n\n人 に\n\nTe)\n\n・ _3\n\nWm\n\n由。 。あ",
-        "confidence": 0.19,
-        "charCount": 70,
+        "text": "/ 王\n\n57\n\nーー ンク\n\n)\n\nのと Eer\n\n__、\n\nゅ\n\n人\n\n=- :\n\nWm",
+        "confidence": 0.35,
+        "charCount": 46,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -929,16 +934,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ーー\n\nマー レン\n\nまま 敬\n\n加\n\nゲッ\n\nE w-\n\n___.\n\n0\n\n1\n\nt\n\n人 に\n\nTe)\n\n・ _3\n\nWm\n\n由。 。あ",
-          "confidence": 0.19,
-          "charCount": 70,
+          "text": "/ 王\n\n57\n\nーー ンク\n\n)\n\nのと Eer\n\n__、\n\nゅ\n\n人\n\n=- :\n\nWm",
+          "confidence": 0.35,
+          "charCount": 46,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 787,
+      "processingTimeMs": 568,
       "problemClassification": [
-        "低信頼度",
         "記号ノイズ過多",
         "小断片が多い"
       ]
@@ -950,9 +954,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ー 日\n\nどう\n\nーー\n\n7997\n\nke\n\nJ5\n\n(is\n\nた\n\n1 季\n\nフイン\n\nおいしい\n\nee や\n\nTHIS WRY\n\nE\n\n3IF\n\n連続\n\nE\n\nロー\n\n=J\n\n;_\n\nGO\n\nー\n\nー ー\n\nーー\n\nー\n\nきま\n\npa\n\n写っ\n\n(3\n\n4\n\n剛\n\nNIS\n\n昌明\n\n5\n\nに\n\nト",
-        "confidence": 0.3,
-        "charCount": 151,
+        "text": "—\n\nTM87\n\nディ>\n\nSake!\n\nEi\n\n7\n\nP\n\nフイン\n\nいし\n\nTHIS way\n\nたっ\n\n3年運\n\n金賞\n\n受賞\n\n;_\n\nー\n\n本Ogg ー\n\nヲ\n\n。 ih 3\n\n中\n\nは4\n\n@\n\nき",
+        "confidence": 0.4,
+        "charCount": 104,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -961,16 +965,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ー 日\n\nどう\n\nーー\n\n7997\n\nke\n\nJ5\n\n(is\n\nた\n\n1 季\n\nフイン\n\nおいしい\n\nee や\n\nTHIS WRY\n\nE\n\n3IF\n\n連続\n\nE\n\nロー\n\n=J\n\n;_\n\nGO\n\nー\n\nー ー\n\nーー\n\nー\n\nきま\n\npa\n\n写っ\n\n(3\n\n4\n\n剛\n\nNIS\n\n昌明\n\n5\n\nに\n\nト",
-          "confidence": 0.3,
-          "charCount": 151,
+          "text": "—\n\nTM87\n\nディ>\n\nSake!\n\nEi\n\n7\n\nP\n\nフイン\n\nいし\n\nTHIS way\n\nたっ\n\n3年運\n\n金賞\n\n受賞\n\n;_\n\nー\n\n本Ogg ー\n\nヲ\n\n。 ih 3\n\n中\n\nは4\n\n@\n\nき",
+          "confidence": 0.4,
+          "charCount": 104,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1301,
+      "processingTimeMs": 891,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -981,9 +984,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "1馬上へ・ シビ 3提\n\nを —\n\n所\n\nビッ\n\nJol\n\n»\n\nmatsiie\n\n«\n\nTHIS Wny\n\nA\n\nーーも\n\n_\n\n~\n\n{\n\ni4\n\nil\n\nb O\n\nを1\n\nabeshir\n\nlew Me\n\nるもこお\n\nの洒\n\nーンジ答\n\n4\n\n唱えをが時\n\n方を\n\nし。\n\nがな\n\nBE\n\nるに\n\n#\n\nねーの性\n\n万申メ\n\nあ来た たにア\n\nずー様と\n\nYTERY\n\nそ然チに人バ\n\nま自引ぶる\n\nををと\n\nがが\n\nをーま\n\n5l3\n\nに",
-        "confidence": 0.38,
-        "charCount": 223,
+        "text": "2\n\n/]\n\n所\n\nレフ\n\n»\n\nmig\n\nは\n\nTHIS way 』\n\n_\n\n»\n\nうぅ\n\n記 ー\n\n《\n\nq\n\nーを4\n\npr.\n\neshir\n\nlew Mr\n\nタダをメ\n\nDiH)\n\n[3m\n\n人\n\nーRE »\n\nー2\n\nは発\n\nゎおの必\n\n[ー\n\n来:\n\nでチー飛\n\nにア\n\nえ自リサ\n\n®¥ T\n\nERAE)\n\nーー\n\nー 9\n\n刻ぁ",
+        "confidence": 0.39,
+        "charCount": 172,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -992,15 +995,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "1馬上へ・ シビ 3提\n\nを —\n\n所\n\nビッ\n\nJol\n\n»\n\nmatsiie\n\n«\n\nTHIS Wny\n\nA\n\nーーも\n\n_\n\n~\n\n{\n\ni4\n\nil\n\nb O\n\nを1\n\nabeshir\n\nlew Me\n\nるもこお\n\nの洒\n\nーンジ答\n\n4\n\n唱えをが時\n\n方を\n\nし。\n\nがな\n\nBE\n\nるに\n\n#\n\nねーの性\n\n万申メ\n\nあ来た たにア\n\nずー様と\n\nYTERY\n\nそ然チに人バ\n\nま自引ぶる\n\nををと\n\nがが\n\nをーま\n\n5l3\n\nに",
-          "confidence": 0.38,
-          "charCount": 223,
+          "text": "2\n\n/]\n\n所\n\nレフ\n\n»\n\nmig\n\nは\n\nTHIS way 』\n\n_\n\n»\n\nうぅ\n\n記 ー\n\n《\n\nq\n\nーを4\n\npr.\n\neshir\n\nlew Mr\n\nタダをメ\n\nDiH)\n\n[3m\n\n人\n\nーRE »\n\nー2\n\nは発\n\nゎおの必\n\n[ー\n\n来:\n\nでチー飛\n\nにア\n\nえ自リサ\n\n®¥ T\n\nERAE)\n\nーー\n\nー 9\n\n刻ぁ",
+          "confidence": 0.39,
+          "charCount": 172,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1799,
+      "processingTimeMs": 1414,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1011,9 +1015,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "~NA\n\n/]\n\n記さ\n\nり ~3\n\no.\n\nJol\n\nの\n\nmiiey\n\n»-\n\nは\n\nて\n\ny\n\nのや\n\nTHIS way A\n\n。]\n\nルル\n\n7\n\nが\n\nー区4\n\nニー一\n\n3\n\nーー一\n\npeshr\n\nNew M\n\nb Z\n\nの酒\n\nIxm\n\n£5n\n\n発と栓\n\nなびり」の\n\nfi\n\nblpE\n\n来に\n\n申みか\n\nRB4\n\nチチ飛々\n\n8\n\nこバ\n\nT——\n\nんダチ\n\nがが\n\n慈ーす",
-        "confidence": 0.45,
-        "charCount": 198,
+        "text": "\"半\n\n¥\n\nN\n\nJol\n\nご\n\nしJ 有り)\n\n-h\n\nEv\n\nーー\n\n(へ\n\n【\n\n区.\n\nTHIS way\n\n»\n\n7\n\nが\n\nU\n\n店 ー\n\n3\n\n4\n\n=\n\n. 4\n\n1\n\neshir\n\nNew M\n\n28e\n\nの清\n\n#zp\n\nF]\n\nだた}\n\nる\n\n2% 。\n\n来#\n\n遇か\n\nB3\n\n様と\n\neZ\n\nすす 飛々\n\nを\n\n#[37\n\n$1\n\nタターあ\n\nが\n\nだ\n\n$ ま",
+        "confidence": 0.37,
+        "charCount": 194,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1022,15 +1026,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "~NA\n\n/]\n\n記さ\n\nり ~3\n\no.\n\nJol\n\nの\n\nmiiey\n\n»-\n\nは\n\nて\n\ny\n\nのや\n\nTHIS way A\n\n。]\n\nルル\n\n7\n\nが\n\nー区4\n\nニー一\n\n3\n\nーー一\n\npeshr\n\nNew M\n\nb Z\n\nの酒\n\nIxm\n\n£5n\n\n発と栓\n\nなびり」の\n\nfi\n\nblpE\n\n来に\n\n申みか\n\nRB4\n\nチチ飛々\n\n8\n\nこバ\n\nT——\n\nんダチ\n\nがが\n\n慈ーす",
-          "confidence": 0.45,
-          "charCount": 198,
+          "text": "\"半\n\n¥\n\nN\n\nJol\n\nご\n\nしJ 有り)\n\n-h\n\nEv\n\nーー\n\n(へ\n\n【\n\n区.\n\nTHIS way\n\n»\n\n7\n\nが\n\nU\n\n店 ー\n\n3\n\n4\n\n=\n\n. 4\n\n1\n\neshir\n\nNew M\n\n28e\n\nの清\n\n#zp\n\nF]\n\nだた}\n\nる\n\n2% 。\n\n来#\n\n遇か\n\nB3\n\n様と\n\neZ\n\nすす 飛々\n\nを\n\n#[37\n\n$1\n\nタターあ\n\nが\n\nだ\n\n$ ま",
+          "confidence": 0.37,
+          "charCount": 194,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1398,
+      "processingTimeMs": 1244,
       "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1041,9 +1046,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "の\n\n&\n\n0\n\nーー\n\n—\n\nLJ\n\nfn\n\n1\n\nー ー\n\nx\n\n=\n\nお 1 §\n\n鷹,\n\nノリ\n\n)\n\n目!\n\nQL\n\nHAWK EYE\n\nーッ\n\nmopoer\n\nPA\n\nミコ\n\nLRE%\n\nリデンタラ\n\nーー ーー\n\nーー\n\nーーにや",
-        "confidence": 0.37,
-        "charCount": 122,
+        "text": "ゃう\n\nの\n\nイコ\n\nマッ\n\nに\n\n=\n\n4\n\nU\n\n間 ー\n\nリリ!\n\nと\n\n鷹,.\n\nNB\n\n)\n\n=\n\nHAWK EE\n\nSoce 31\n\n4\n\nに\n\n「 Mk\n\nノーテラシダ\n\n装着\n\n2の7の26 一ここー 、誠呈竹4",
+        "confidence": 0.26,
+        "charCount": 114,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1052,16 +1057,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "の\n\n&\n\n0\n\nーー\n\n—\n\nLJ\n\nfn\n\n1\n\nー ー\n\nx\n\n=\n\nお 1 §\n\n鷹,\n\nノリ\n\n)\n\n目!\n\nQL\n\nHAWK EYE\n\nーッ\n\nmopoer\n\nPA\n\nミコ\n\nLRE%\n\nリデンタラ\n\nーー ーー\n\nーー\n\nーーにや",
-          "confidence": 0.37,
-          "charCount": 122,
+          "text": "ゃう\n\nの\n\nイコ\n\nマッ\n\nに\n\n=\n\n4\n\nU\n\n間 ー\n\nリリ!\n\nと\n\n鷹,.\n\nNB\n\n)\n\n=\n\nHAWK EE\n\nSoce 31\n\n4\n\nに\n\n「 Mk\n\nノーテラシダ\n\n装着\n\n2の7の26 一ここー 、誠呈竹4",
+          "confidence": 0.26,
+          "charCount": 114,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1044,
+      "processingTimeMs": 850,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1072,9 +1076,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "=\n\nq\n\n=\n\nへ\n\nす始sw\n\n県6 6\n\n»\n\n1\n\n全\n\nee 倒5\n\nl\n\nロロ\n\n直\n\nTHIS WAY\n\n見\n\nー\n\n=\n\nーー\n\n=\n\n=\n\nり)\n\nK\n\nす の\n\nザ\n\n£' §!\n\n7\n\n'&\n\nJ\n\n5\n\nAt\n\nb\n\nil\n\n2= 1\n\n%\n\n—\n\n* か\n\nZe no Mort\n\n中",
-        "confidence": 0.34,
-        "charCount": 155,
+        "text": "ー\n\nJ0o\n\ngot\n\n66\n\n»>\n\n1\n\nー\n\nざマ^\n\nTHIS WAY\n\n\"\n\n還\n\nウ\n\nI\\\n\nっ\n\nに コ\n\nーー\n\n』",
+        "confidence": 0.29,
+        "charCount": 68,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1083,14 +1087,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "=\n\nq\n\n=\n\nへ\n\nす始sw\n\n県6 6\n\n»\n\n1\n\n全\n\nee 倒5\n\nl\n\nロロ\n\n直\n\nTHIS WAY\n\n見\n\nー\n\n=\n\nーー\n\n=\n\n=\n\nり)\n\nK\n\nす の\n\nザ\n\n£' §!\n\n7\n\n'&\n\nJ\n\n5\n\nAt\n\nb\n\nil\n\n2= 1\n\n%\n\n—\n\n* か\n\nZe no Mort\n\n中",
-          "confidence": 0.34,
-          "charCount": 155,
+          "text": "ー\n\nJ0o\n\ngot\n\n66\n\n»>\n\n1\n\nー\n\nざマ^\n\nTHIS WAY\n\n\"\n\n還\n\nウ\n\nI\\\n\nっ\n\nに コ\n\nーー\n\n』",
+          "confidence": 0.29,
+          "charCount": 68,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1149,
+      "processingTimeMs": 529,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1103,9 +1107,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "央ド =\n\n——\n\nn",
-        "confidence": 0.08,
-        "charCount": 11,
+        "text": "ーー\n\n時に\n\n\"0\n\n。\n\nに 】",
+        "confidence": 0.15,
+        "charCount": 18,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1114,16 +1118,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "央ド =\n\n——\n\nn",
-          "confidence": 0.08,
-          "charCount": 11,
+          "text": "ーー\n\n時に\n\n\"0\n\n。\n\nに 】",
+          "confidence": 0.15,
+          "charCount": 18,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 525,
+      "processingTimeMs": 448,
       "problemClassification": [
-        "文字数不足",
         "低信頼度",
         "記号ノイズ過多",
         "小断片が多い"
@@ -1136,9 +1139,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ーーニー一一一 a\n\nき\n\n5\n\n=\n\nリ9\n\nどど\n\n時",
+        "text": "ーー一一一一一邊md__ _o\n\nき\n\nラビーー\n\nしン ててに\n\n=\n\nクー pr\n\nN",
         "confidence": 0.42,
-        "charCount": 29,
+        "charCount": 45,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1147,16 +1150,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ーーニー一一一 a\n\nき\n\n5\n\n=\n\nリ9\n\nどど\n\n時",
+          "text": "ーー一一一一一邊md__ _o\n\nき\n\nラビーー\n\nしン ててに\n\n=\n\nクー pr\n\nN",
           "confidence": 0.42,
-          "charCount": 29,
+          "charCount": 45,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 759,
+      "processingTimeMs": 790,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1167,9 +1169,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ーー\n\n¢\n\nW\n\nDAI\n\nHAMAD\n\nJAP\n\nTRADITI\n\nHU\n\n5\n\n時",
-        "confidence": 0.65,
-        "charCount": 44,
+        "text": "ーー\n\n<本\n\nW\n\nに\n\nDAIL\n\nHAMAD.\n\nJAP\n\nRUり\n\nTRADITION\n\np",
+        "confidence": 0.51,
+        "charCount": 50,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1178,14 +1180,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ーー\n\n¢\n\nW\n\nDAI\n\nHAMAD\n\nJAP\n\nTRADITI\n\nHU\n\n5\n\n時",
-          "confidence": 0.65,
-          "charCount": 44,
+          "text": "ーー\n\n<本\n\nW\n\nに\n\nDAIL\n\nHAMAD.\n\nJAP\n\nRUり\n\nTRADITION\n\np",
+          "confidence": 0.51,
+          "charCount": 50,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 393,
+      "processingTimeMs": 404,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1197,9 +1199,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "果\n\nl\n\nツ\n\n化\n\n —\n\n]\n\n#!\n\nxi\n\n”\n\n2\n\nできるだけお早め\n\n- 止\n\n式会社 名\n\n県中州市現過",
-        "confidence": 0.53,
-        "charCount": 61,
+        "text": "思\n\nl\n\n化\n\n4mr\n\n%]\n\n#l\n\n[し\n\n2\n\nできるだけお早め\n\n県時州市中泌\n\n式会社多",
+        "confidence": 0.51,
+        "charCount": 51,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1208,16 +1210,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "果\n\nl\n\nツ\n\n化\n\n —\n\n]\n\n#!\n\nxi\n\n”\n\n2\n\nできるだけお早め\n\n- 止\n\n式会社 名\n\n県中州市現過",
-          "confidence": 0.53,
-          "charCount": 61,
+          "text": "思\n\nl\n\n化\n\n4mr\n\n%]\n\n#l\n\n[し\n\n2\n\nできるだけお早め\n\n県時州市中泌\n\n式会社多",
+          "confidence": 0.51,
+          "charCount": 51,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 629,
+      "processingTimeMs": 490,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1228,9 +1229,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ンー\n\nーー\n\nA\n\nN\n\n人hp\n\nam\n\n-\n\nNEー\n\nSinf\n\nNo\n\n“Yd\n\nヘンアン\n\n66,\n\nが\n\nこつ\n\n2こっ\n\nくさ4ws)\n\nー &\n\nみあ\n\n了\n\n pacd\n\nーー\n\nSN\n\nSS\n\n=\n\n=\n\nWAY\n\n—\n\ni\\\n\nle\n\nL]\n\nー\n\n』\n\nー\n\n人\n\n公 リリ\n\n/\n\nY ゅ\n\n山前\n\n7\n\n1lh] 1 \\ あせで5昌和\n\nFY\n\nH\n\neo\n\n赤米大吟醸\n\n“rald :\n\nーーデジ\n\nーー\n\nl\n\nボド OF\n\n¥\n\n[ii\n\nNL o8\n\n5\n\n0 E\n\nL)\n\n)\n\ny\n\nリ\n\nXS\n\nEi",
-        "confidence": 0.38,
-        "charCount": 273,
+        "text": "ーー 4\n\nの\n\nーーる\n\nJol\n\nー\n\nヘンングアン\n\nデミ\n\nE———\n\nit\n\nくさ\n\n層\n\nも\n\n1\n\nL\n\nZN\\\n\nリ\n\nf?\n\nW\n\n/\n\n町\n\n7\n\n(LiallY\n\nあせで5 0\n\n©\n\nまま\n\nMooN\n\n[ 、\n\nEL\n\nPs\n\nee\n\n『 [!\n\niL\n\nー\n\n¥\n\n有り 7旧\n\nいい\n\n'\n\nL)\n\n5\n\nすず\n\nリ\n\n5 4",
+        "confidence": 0.32,
+        "charCount": 178,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1239,14 +1240,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ンー\n\nーー\n\nA\n\nN\n\n人hp\n\nam\n\n-\n\nNEー\n\nSinf\n\nNo\n\n“Yd\n\nヘンアン\n\n66,\n\nが\n\nこつ\n\n2こっ\n\nくさ4ws)\n\nー &\n\nみあ\n\n了\n\n pacd\n\nーー\n\nSN\n\nSS\n\n=\n\n=\n\nWAY\n\n—\n\ni\\\n\nle\n\nL]\n\nー\n\n』\n\nー\n\n人\n\n公 リリ\n\n/\n\nY ゅ\n\n山前\n\n7\n\n1lh] 1 \\ あせで5昌和\n\nFY\n\nH\n\neo\n\n赤米大吟醸\n\n“rald :\n\nーーデジ\n\nーー\n\nl\n\nボド OF\n\n¥\n\n[ii\n\nNL o8\n\n5\n\n0 E\n\nL)\n\n)\n\ny\n\nリ\n\nXS\n\nEi",
-          "confidence": 0.38,
-          "charCount": 273,
+          "text": "ーー 4\n\nの\n\nーーる\n\nJol\n\nー\n\nヘンングアン\n\nデミ\n\nE———\n\nit\n\nくさ\n\n層\n\nも\n\n1\n\nL\n\nZN\\\n\nリ\n\nf?\n\nW\n\n/\n\n町\n\n7\n\n(LiallY\n\nあせで5 0\n\n©\n\nまま\n\nMooN\n\n[ 、\n\nEL\n\nPs\n\nee\n\n『 [!\n\niL\n\nー\n\n¥\n\n有り 7旧\n\nいい\n\n'\n\nL)\n\n5\n\nすず\n\nリ\n\n5 4",
+          "confidence": 0.32,
+          "charCount": 178,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2071,
+      "processingTimeMs": 1332,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1259,9 +1260,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "5\n\n\\\n\nー ト\n\nいら\n\n5)\n\n£\n\nる る\n\nJIlf\n\n[\n\n-—\n\n県 ー\n\nfSペ\n\nて g\n\nTHes way A\n\nREE\n\n—\n\nv\n\niL\n\nMS\n\n8 全品\n\nRe Je\n\nー\n\nー\n\nYA\n\nANISHIY\n\nB 、\n\nnajo:\n\nu\n\n21\n\nw\n\nや ,\n\nン因 a\n\nテー",
-        "confidence": 0.37,
-        "charCount": 153,
+        "text": "&\n\n1\n\nー\n\n66\n\n'\n\nvh\n\n\" -—\n\nっ\n\n-\n\nfs\n\nTHes way A\n\ny !\n\nSN\n\nSoRnmy\n\nーー 前\n\n./\n\nB .\n\nY&\n\nSHl\n\n“\n\nMi\n\nに\n\n-\n\nRd\n\n<\n\nラー\n\n引\n\nを\n\n#y",
+        "confidence": 0.29,
+        "charCount": 121,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1270,14 +1271,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "5\n\n\\\n\nー ト\n\nいら\n\n5)\n\n£\n\nる る\n\nJIlf\n\n[\n\n-—\n\n県 ー\n\nfSペ\n\nて g\n\nTHes way A\n\nREE\n\n—\n\nv\n\niL\n\nMS\n\n8 全品\n\nRe Je\n\nー\n\nー\n\nYA\n\nANISHIY\n\nB 、\n\nnajo:\n\nu\n\n21\n\nw\n\nや ,\n\nン因 a\n\nテー",
-          "confidence": 0.37,
-          "charCount": 153,
+          "text": "&\n\n1\n\nー\n\n66\n\n'\n\nvh\n\n\" -—\n\nっ\n\n-\n\nfs\n\nTHes way A\n\ny !\n\nSN\n\nSoRnmy\n\nーー 前\n\n./\n\nB .\n\nY&\n\nSHl\n\n“\n\nMi\n\nに\n\n-\n\nRd\n\n<\n\nラー\n\n引\n\nを\n\n#y",
+          "confidence": 0.29,
+          "charCount": 121,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1221,
+      "processingTimeMs": 973,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1290,9 +1291,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "[5)\\\n\nS\n\nーー\n\nペー 拘\n\n£\n\nL L T\n\n1\n\n&\n\n5 だ\n\no\n\nに\n\nwb\n\nTHeS WAY A\n\n)\n\nL Y\n\n1814\n\nv-\n\nme [\n\n» .-\n\nL\n\nB N\n\nジッ\n\nに2\n\nーー\n\n§\n\nrl\n\nー",
-        "confidence": 0.21,
-        "charCount": 120,
+        "text": "=>_a\n\nN\n\nW 3\n\nーー\n\nペープン\n\nーー\n\n6\n\nP' =\n\n—,\n\nf\n\nCLs\n\n&\n\n-—\n\nっ\n\nちア\n\n\"束。\"\n\nTHIS WaY\n\nAM\n\nve H\n\n-” 陽\n\n¢\n\nFa\n\nり\n\n謎 そゃ\n\n* 184\n\n—\n\nB\n\n—\n\n時\n\nKJ\n\n3\n\n0\n\ny -\n\n8",
+        "confidence": 0.18,
+        "charCount": 146,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1301,15 +1302,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "[5)\\\n\nS\n\nーー\n\nペー 拘\n\n£\n\nL L T\n\n1\n\n&\n\n5 だ\n\no\n\nに\n\nwb\n\nTHeS WAY A\n\n)\n\nL Y\n\n1814\n\nv-\n\nme [\n\n» .-\n\nL\n\nB N\n\nジッ\n\nに2\n\nーー\n\n§\n\nrl\n\nー",
-          "confidence": 0.21,
-          "charCount": 120,
+          "text": "=>_a\n\nN\n\nW 3\n\nーー\n\nペープン\n\nーー\n\n6\n\nP' =\n\n—,\n\nf\n\nCLs\n\n&\n\n-—\n\nっ\n\nちア\n\n\"束。\"\n\nTHIS WaY\n\nAM\n\nve H\n\n-” 陽\n\n¢\n\nFa\n\nり\n\n謎 そゃ\n\n* 184\n\n—\n\nB\n\n—\n\n時\n\nKJ\n\n3\n\n0\n\ny -\n\n8",
+          "confidence": 0.18,
+          "charCount": 146,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1042,
+      "processingTimeMs": 1318,
       "problemClassification": [
+        "低信頼度",
         "記号ノイズ過多",
         "小断片が多い"
       ]
@@ -1321,9 +1323,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "BRgsL\n\n\\\n\nー\n\nウッ\n\nー\n\nデマ\n\n1\n\nは )\n\n-\n\n‘«\n\nに\n\n アプ\n\n<\n\n» &\n\nnas way A\n\nシンンク\n\nンク\n\n4\n\nーー\n\n—\n\n—\n\nし\n\n妨 そも\n\n(ご8\n\n—\n\nな\n\nで\n\n会に 3\n\n%\n\nビルトマ\n\n公、\n\n欠\n\nの\n\nここ\n\n名\n\nき\n\nB N\n\nf\n\nA\n\n5\n\n5 か]\n\n:放\n\nは\n\n名\n\n%\n\nテー\n\nき王\n\nいい",
-        "confidence": 0.29,
-        "charCount": 190,
+        "text": "時\n\n3\n\nfirf,\n\n-—\n\n£\n\nLO\n\n-\n\noh THIS WAY\n\nアプ\n\nにきか\n\nに\n\nーー\n\nし\n\n編 もそ\n\n0に\n\nYr\n\n____\n\n(3\n\nゃご\n\n[iv\n\n[ .\n\nA\n\n4\n\nos\n\nWWる\n\nトドt",
+        "confidence": 0.27,
+        "charCount": 115,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1332,14 +1334,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "BRgsL\n\n\\\n\nー\n\nウッ\n\nー\n\nデマ\n\n1\n\nは )\n\n-\n\n‘«\n\nに\n\n アプ\n\n<\n\n» &\n\nnas way A\n\nシンンク\n\nンク\n\n4\n\nーー\n\n—\n\n—\n\nし\n\n妨 そも\n\n(ご8\n\n—\n\nな\n\nで\n\n会に 3\n\n%\n\nビルトマ\n\n公、\n\n欠\n\nの\n\nここ\n\n名\n\nき\n\nB N\n\nf\n\nA\n\n5\n\n5 か]\n\n:放\n\nは\n\n名\n\n%\n\nテー\n\nき王\n\nいい",
-          "confidence": 0.29,
-          "charCount": 190,
+          "text": "時\n\n3\n\nfirf,\n\n-—\n\n£\n\nLO\n\n-\n\noh THIS WAY\n\nアプ\n\nにきか\n\nに\n\nーー\n\nし\n\n編 もそ\n\n0に\n\nYr\n\n____\n\n(3\n\nゃご\n\n[iv\n\n[ .\n\nA\n\n4\n\nos\n\nWWる\n\nトドt",
+          "confidence": 0.27,
+          "charCount": 115,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1588,
+      "processingTimeMs": 959,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1352,9 +1354,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "mm\n\nに\n\nSome\n\nN\n\n 4\n\nZ/2\n\no__\n\nー\n\nンーアン\n\n£\n\nIf\n\nee [})\n\nLU\n\n4^ーー\n\n4\n\n洛 3\n\nまっ\n\nTHIS WAY A\n\nh.N\n\nalh\n\nを\n\n\"\n\n7\n\nデア\n\n4 *\n\n(いり\n\nテ\n\n(pesmm\n\nーー\n\nで\n\nの\n\no e\n\nしー",
-        "confidence": 0.28,
-        "charCount": 149,
+        "text": "—\n\np\n\n4\n\nN\n\nwf\n\n i\n\nms\n\nP=\n\n<\n\n6\n\n絢\n\nRICa,\n\nー\n\nハーンー\n\nSN\n\nッごやき\n\nは】\n\n(2\n\n E\n\nIh/~\n\nな の\n\n(3\n\nテ\n\n=———®\n\n==4",
+        "confidence": 0.26,
+        "charCount": 103,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1363,14 +1365,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "mm\n\nに\n\nSome\n\nN\n\n 4\n\nZ/2\n\no__\n\nー\n\nンーアン\n\n£\n\nIf\n\nee [})\n\nLU\n\n4^ーー\n\n4\n\n洛 3\n\nまっ\n\nTHIS WAY A\n\nh.N\n\nalh\n\nを\n\n\"\n\n7\n\nデア\n\n4 *\n\n(いり\n\nテ\n\n(pesmm\n\nーー\n\nで\n\nの\n\no e\n\nしー",
-          "confidence": 0.28,
-          "charCount": 149,
+          "text": "—\n\np\n\n4\n\nN\n\nwf\n\n i\n\nms\n\nP=\n\n<\n\n6\n\n絢\n\nRICa,\n\nー\n\nハーンー\n\nSN\n\nッごやき\n\nは】\n\n(2\n\n E\n\nIh/~\n\nな の\n\n(3\n\nテ\n\n=———®\n\n==4",
+          "confidence": 0.26,
+          "charCount": 103,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1348,
+      "processingTimeMs": 1025,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1383,9 +1385,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "SM\n\nの\n\n2 に\n\n4\n\nンク\n\nを\n\nん\n\n旧\n\nさき\n\nwit)\n\nに J\n\nやてき\n\ny 6、\n\nTHIS way\n\n¥\n\nb\n\n£1\n\nツス<\n\n人 S\n\n_-—\n\nB»\n\nsd\n\n7\n\n7\n\n7\n\nクジ\n\n“Re\n\nh.",
-        "confidence": 0.26,
-        "charCount": 117,
+        "text": "N\n\nクタ\n\n本\n\nを\n\n<\n\n アア\n\n&s\n\n -\n\nTHIS way\n\nh\n\nV-\n\n~\n\nlil\n\n7\n\nI5\n\nいこで\n\n-",
+        "confidence": 0.29,
+        "charCount": 67,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1394,14 +1396,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "SM\n\nの\n\n2 に\n\n4\n\nンク\n\nを\n\nん\n\n旧\n\nさき\n\nwit)\n\nに J\n\nやてき\n\ny 6、\n\nTHIS way\n\n¥\n\nb\n\n£1\n\nツス<\n\n人 S\n\n_-—\n\nB»\n\nsd\n\n7\n\n7\n\n7\n\nクジ\n\n“Re\n\nh.",
-          "confidence": 0.26,
-          "charCount": 117,
+          "text": "N\n\nクタ\n\n本\n\nを\n\n<\n\n アア\n\n&s\n\n -\n\nTHIS way\n\nh\n\nV-\n\n~\n\nlil\n\n7\n\nI5\n\nいこで\n\n-",
+          "confidence": 0.29,
+          "charCount": 67,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 981,
+      "processingTimeMs": 620,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1414,9 +1416,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "~\n\nうト\n\n。。 p\n\n、\n\n7\n\n7983\n\ni»\n\n<\n\nLe 1}\n\nPn\n\n5\n\nしーー\n\n アザ\n\nk旨\n\nabl\n\nTHeS way\n\nht\n\nve\n\nfoi3<\n\nciill\n\nEE\n\nトド\n\nー\n\n<の\n\n§\n\nSZON =\n\nal",
+        "text": "~\n\nws e\n\nらら pf\n\n y\n\nンタ\n\n7983\n\n夢 <\n\nに\n\n1\n\n<\n\nか ーー WAY\n\nV<\n\nーー\n\n的\n\nも\n\n7\n\nf&\n\nイッ\n\nNae\n\nだ\n\n45防",
         "confidence": 0.24,
-        "charCount": 125,
+        "charCount": 90,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1425,14 +1427,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "~\n\nうト\n\n。。 p\n\n、\n\n7\n\n7983\n\ni»\n\n<\n\nLe 1}\n\nPn\n\n5\n\nしーー\n\n アザ\n\nk旨\n\nabl\n\nTHeS way\n\nht\n\nve\n\nfoi3<\n\nciill\n\nEE\n\nトド\n\nー\n\n<の\n\n§\n\nSZON =\n\nal",
+          "text": "~\n\nws e\n\nらら pf\n\n y\n\nンタ\n\n7983\n\n夢 <\n\nに\n\n1\n\n<\n\nか ーー WAY\n\nV<\n\nーー\n\n的\n\nも\n\n7\n\nf&\n\nイッ\n\nNae\n\nだ\n\n45防",
           "confidence": 0.24,
-          "charCount": 125,
+          "charCount": 90,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1096,
+      "processingTimeMs": 848,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1445,9 +1447,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "—\n\nビラ\n\nmm\n\nし nm\n\nで\n\n衣 計 ーー\n\nニー =Se==sar] トー\n\nXEN\n\njE———) 復 ー FE\n\n本\n\nn/\n\n/\n\n&9\n\n日\n\n1814\n\nの/二\n\nイ g\n\ni\n\nきき\n\n7\n\n17l:\n\n7\n\nクテ ー\n\ne",
-        "confidence": 0.28,
-        "charCount": 124,
+        "text": "ロー\n\nしmm\n\nーー —\n\n—f\n\nWW\n\n[王后 和握 rg\n\nリ\n\n新滑\n\nいっ/\n\n2\n\n2\n\nシン\n\nf\n\nクデ\n\n4 =d\n\nRe",
+        "confidence": 0.33,
+        "charCount": 71,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1456,14 +1458,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "—\n\nビラ\n\nmm\n\nし nm\n\nで\n\n衣 計 ーー\n\nニー =Se==sar] トー\n\nXEN\n\njE———) 復 ー FE\n\n本\n\nn/\n\n/\n\n&9\n\n日\n\n1814\n\nの/二\n\nイ g\n\ni\n\nきき\n\n7\n\n17l:\n\n7\n\nクテ ー\n\ne",
-          "confidence": 0.28,
-          "charCount": 124,
+          "text": "ロー\n\nしmm\n\nーー —\n\n—f\n\nWW\n\n[王后 和握 rg\n\nリ\n\n新滑\n\nいっ/\n\n2\n\n2\n\nシン\n\nf\n\nクデ\n\n4 =d\n\nRe",
+          "confidence": 0.33,
+          "charCount": 71,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1865,
+      "processingTimeMs": 964,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1476,9 +1478,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "き\n\n則\n\n3\n\naa\n\n「 n\n\nしJ る\n\nター\n\nああ 一\n\n補語\"rew K\n\n『\n\nた\n\nし\n\n/\n\n@\n\nPe\n\n\\\n\nF-\n\nルン\n\nまん。 3\n\n_ «\n\nに",
-        "confidence": 0.36,
-        "charCount": 87,
+        "text": "‘m?\n\nツラ\n\nPa ーー\n\nしJJ MI 前6\n\n”\n\n—\n\nいい\n\nろう一\n\n-\n\n¥\n\n_\n\n1Z ゃをま\n\n'Fa\n\nR vw\n\nルン\n\n部 ヶ を\n\nご",
+        "confidence": 0.27,
+        "charCount": 82,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1487,14 +1489,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "き\n\n則\n\n3\n\naa\n\n「 n\n\nしJ る\n\nター\n\nああ 一\n\n補語\"rew K\n\n『\n\nた\n\nし\n\n/\n\n@\n\nPe\n\n\\\n\nF-\n\nルン\n\nまん。 3\n\n_ «\n\nに",
-          "confidence": 0.36,
-          "charCount": 87,
+          "text": "‘m?\n\nツラ\n\nPa ーー\n\nしJJ MI 前6\n\n”\n\n—\n\nいい\n\nろう一\n\n-\n\n¥\n\n_\n\n1Z ゃをま\n\n'Fa\n\nR vw\n\nルン\n\n部 ヶ を\n\nご",
+          "confidence": 0.27,
+          "charCount": 82,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1015,
+      "processingTimeMs": 884,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1507,9 +1509,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "一\n\nべ\n\nA\n\nドロ r\n\n66\n\nWW本\n\nー ー\n\nB §\n\nー B\n\n «\n\nh J\n\nd\n\nー\n\nー -\n\n宮本\n\nい J\n\nーー\n\nや\n\nで\n\nこり0\n\nり\n\nし\n\n95\n\n{\n\nドー\n\njo1\n\nTakijiman\n\n9)\n\nみ\n\n2ペ\n\n【 も\n\n»\n\nB\n\nかと u K\n\nE.\n\nー\n\nTakijiman\n\nへ\n\n。 込\n\nhY\n\n』",
-        "confidence": 0.35,
-        "charCount": 177,
+        "text": "M\n\nNi\n\n)\n\nィ 。 2\n\n66\n\n性)\n\nRIEH\n\nf\n\n-\n\nX\n\n<るy\n\n{\n\nに\n\n:\n\n<\n\nTakijiman\n\nみ\n\nパ\n\ni\n\nv\n\nd\n\nしWe\n\n#%\n\n\"w E\n\n.プ\n\nー\n\nTakijiman\n\nし\n\nッ アダ\n\n』",
+        "confidence": 0.34,
+        "charCount": 126,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1518,14 +1520,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "一\n\nべ\n\nA\n\nドロ r\n\n66\n\nWW本\n\nー ー\n\nB §\n\nー B\n\n «\n\nh J\n\nd\n\nー\n\nー -\n\n宮本\n\nい J\n\nーー\n\nや\n\nで\n\nこり0\n\nり\n\nし\n\n95\n\n{\n\nドー\n\njo1\n\nTakijiman\n\n9)\n\nみ\n\n2ペ\n\n【 も\n\n»\n\nB\n\nかと u K\n\nE.\n\nー\n\nTakijiman\n\nへ\n\n。 込\n\nhY\n\n』",
-          "confidence": 0.35,
-          "charCount": 177,
+          "text": "M\n\nNi\n\n)\n\nィ 。 2\n\n66\n\n性)\n\nRIEH\n\nf\n\n-\n\nX\n\n<るy\n\n{\n\nに\n\n:\n\n<\n\nTakijiman\n\nみ\n\nパ\n\ni\n\nv\n\nd\n\nしWe\n\n#%\n\n\"w E\n\n.プ\n\nー\n\nTakijiman\n\nし\n\nッ アダ\n\n』",
+          "confidence": 0.34,
+          "charCount": 126,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1273,
+      "processingTimeMs": 767,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1538,9 +1540,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "/ ペペ\n\n+ァ /\n\n5 F\n\nー\n\n物/\n\n脂\n\nし\n\n1\n\nいい\n\nーー\n\nー\n\n\\\n\n~\n\n//\n\nN\n\n2020\n\n1}\n\nfly2\n\nassstun\n\n1h\n\nジミ\n\nなー\n\n=\n\nの\n\nング\n\n人\n\n山錦\n\n/\n\n店5 odあッ 、",
+        "text": "7ペペ 3\n\n”~ ロ\n\n*y\n\n特/\n\nfat\n\nリリ\n\ns\n\nここ 全\n\nウム\n\nー\n\n\\\n\n~\n\nん\n\n2020\n\nー\n\nー\n\nー前\n\nMi\n\nー\n\nンー\n\nSN\n\nic &\n\n7 まい\n\nCr\n\nン\n\n3\n\n(雷\n\n山釣\n\nBEA テッ",
         "confidence": 0.31,
-        "charCount": 123,
+        "charCount": 122,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1549,14 +1551,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "/ ペペ\n\n+ァ /\n\n5 F\n\nー\n\n物/\n\n脂\n\nし\n\n1\n\nいい\n\nーー\n\nー\n\n\\\n\n~\n\n//\n\nN\n\n2020\n\n1}\n\nfly2\n\nassstun\n\n1h\n\nジミ\n\nなー\n\n=\n\nの\n\nング\n\n人\n\n山錦\n\n/\n\n店5 odあッ 、",
+          "text": "7ペペ 3\n\n”~ ロ\n\n*y\n\n特/\n\nfat\n\nリリ\n\ns\n\nここ 全\n\nウム\n\nー\n\n\\\n\n~\n\nん\n\n2020\n\nー\n\nー\n\nー前\n\nMi\n\nー\n\nンー\n\nSN\n\nic &\n\n7 まい\n\nCr\n\nン\n\n3\n\n(雷\n\n山釣\n\nBEA テッ",
           "confidence": 0.31,
-          "charCount": 123,
+          "charCount": 122,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1104,
+      "processingTimeMs": 1055,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1569,9 +1571,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "—_—~\n\nSE\n\nil\n\n全う\n\n”~ .\n\nに ¥\n\n=\n\nめい >\n\n-\n\nか ー\n\nーー\n\nウノ\n\n坦 >\n\n:\n\nNe\n\nTHE WEY\n\nし\n\n\\\n\nーB\n\n]\n\nーーっーー\n\n層\n\n$衣\n\n202094\n\nannnsenat\n\n§ 1\n\nジジミミ\n\nいちへ\n\nMe-\n\n6\n\n3\n\n)\n\nに5\n\n美山鈴",
-        "confidence": 0.29,
-        "charCount": 158,
+        "text": "—_—\n\nー\n\nーー ら\n\n21\\\n\nて tg\n\n”~ て\n\n-\n\nーッ!\n\n—\n\n_e\n\n4\n\nTHE WeY\n\n\\\n\nーB\n\nー\n\nーーロミマーゴヨ\n\nSR\n\n202¢€\n\nESTTTCL\n\nザマ\n\n3\n\nャ 羅\n\nK\n\n6\n\n3\n\nンク\n\n美山錦\n\nリ",
+        "confidence": 0.35,
+        "charCount": 129,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1580,14 +1582,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "—_—~\n\nSE\n\nil\n\n全う\n\n”~ .\n\nに ¥\n\n=\n\nめい >\n\n-\n\nか ー\n\nーー\n\nウノ\n\n坦 >\n\n:\n\nNe\n\nTHE WEY\n\nし\n\n\\\n\nーB\n\n]\n\nーーっーー\n\n層\n\n$衣\n\n202094\n\nannnsenat\n\n§ 1\n\nジジミミ\n\nいちへ\n\nMe-\n\n6\n\n3\n\n)\n\nに5\n\n美山鈴",
-          "confidence": 0.29,
-          "charCount": 158,
+          "text": "—_—\n\nー\n\nーー ら\n\n21\\\n\nて tg\n\n”~ て\n\n-\n\nーッ!\n\n—\n\n_e\n\n4\n\nTHE WeY\n\n\\\n\nーB\n\nー\n\nーーロミマーゴヨ\n\nSR\n\n202¢€\n\nESTTTCL\n\nザマ\n\n3\n\nャ 羅\n\nK\n\n6\n\n3\n\nンク\n\n美山錦\n\nリ",
+          "confidence": 0.35,
+          "charCount": 129,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1410,
+      "processingTimeMs": 1178,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1600,9 +1602,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "隊 せく\n\nNN\n\nN\n\ne\n\nー <\n\nの\n\nママ\n\nお 1\n\n!\n\nof\n\n7\n\n』\n\nifl\n\nし\n\nを ー使製\n\nFR\n\nSATN\n\nREREET\n\n中\n\n用写\n\n酵用米」\n\nghl\n\nBrE\n\nDEES\n\n師い\n\nめ史\n\nf&A\n\nEEEEES\n\n名名\n\nま\n\n2すさ\n\nL\n\n暁\n\nに\n\nがが\n\n2t\n\nき麹美米\n\nNA\n\nルリ\n\nFROR\n\nはが\n\n2\n\nLiieie\n\nリ\n\nRiey\n\nkG\n\n5の\n\nき ほぼ\n\nAEIN%51E\n\nリ\n\nすず\n\n’\n\n情\n\nー 滑\n\nBi\n\nLo\n\nBE0x\n\nきき\n\nが\n\n60 秋\n\n? 。\n\nwith Q\n\nは\n\nRyo 13\n\n用和\n\nもし\n\ni J\n\nゅ>う長の\n\nスでて\n\nET\n\nーー\n\nRighy\n\n Bimg 20CL—\n\n&\n\nは4\n\nn%R\n\n月 2021.03。\n\nを?\n\n剛生\n\n2021.04c\n\nひさや\n\ny!\n\nいき",
-        "confidence": 0.37,
-        "charCount": 401,
+        "text": "(&8\n\nKb ・\n\na]\n\nー <\n\nーーで\n\n」\n\ni\n\nもみ旧ロ\n\n使製\n\n製杜醸発使精 R\n\nのみ ッ\n\ns BEAK,\n\nり記かて\n\n回\n\n1[\\\n\nuki g\n\n瓶月\n\nELEEES 名名\n\noRhuk ーー\n\n= わ\n\n(めい\n\n半和が新析全林交2業2\n\n筐外 田政松和棚 ょ\n\nLag\n\nは\n\nigie\n\n清議2 5 00 2\n\nり\n\nちの\n\n別\n\nsauit\n\n2\n\nリグ\n\n年29\n\nBS\n\n号米\n\n%h\n\n0 %\n\n(il\n\nの時\n\nっ級\n\n—\n\nH\n\nine 20CL—03\n\ng\n\n3:t\n\n月 2021.03,\n\n月 2021.04c\n\n名 ひさや\n\ny!",
+        "confidence": 0.39,
+        "charCount": 292,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1611,14 +1613,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "隊 せく\n\nNN\n\nN\n\ne\n\nー <\n\nの\n\nママ\n\nお 1\n\n!\n\nof\n\n7\n\n』\n\nifl\n\nし\n\nを ー使製\n\nFR\n\nSATN\n\nREREET\n\n中\n\n用写\n\n酵用米」\n\nghl\n\nBrE\n\nDEES\n\n師い\n\nめ史\n\nf&A\n\nEEEEES\n\n名名\n\nま\n\n2すさ\n\nL\n\n暁\n\nに\n\nがが\n\n2t\n\nき麹美米\n\nNA\n\nルリ\n\nFROR\n\nはが\n\n2\n\nLiieie\n\nリ\n\nRiey\n\nkG\n\n5の\n\nき ほぼ\n\nAEIN%51E\n\nリ\n\nすず\n\n’\n\n情\n\nー 滑\n\nBi\n\nLo\n\nBE0x\n\nきき\n\nが\n\n60 秋\n\n? 。\n\nwith Q\n\nは\n\nRyo 13\n\n用和\n\nもし\n\ni J\n\nゅ>う長の\n\nスでて\n\nET\n\nーー\n\nRighy\n\n Bimg 20CL—\n\n&\n\nは4\n\nn%R\n\n月 2021.03。\n\nを?\n\n剛生\n\n2021.04c\n\nひさや\n\ny!\n\nいき",
-          "confidence": 0.37,
-          "charCount": 401,
+          "text": "(&8\n\nKb ・\n\na]\n\nー <\n\nーーで\n\n」\n\ni\n\nもみ旧ロ\n\n使製\n\n製杜醸発使精 R\n\nのみ ッ\n\ns BEAK,\n\nり記かて\n\n回\n\n1[\\\n\nuki g\n\n瓶月\n\nELEEES 名名\n\noRhuk ーー\n\n= わ\n\n(めい\n\n半和が新析全林交2業2\n\n筐外 田政松和棚 ょ\n\nLag\n\nは\n\nigie\n\n清議2 5 00 2\n\nり\n\nちの\n\n別\n\nsauit\n\n2\n\nリグ\n\n年29\n\nBS\n\n号米\n\n%h\n\n0 %\n\n(il\n\nの時\n\nっ級\n\n—\n\nH\n\nine 20CL—03\n\ng\n\n3:t\n\n月 2021.03,\n\n月 2021.04c\n\n名 ひさや\n\ny!",
+          "confidence": 0.39,
+          "charCount": 292,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2780,
+      "processingTimeMs": 2159,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1630,9 +1632,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "E\n\nA\n\n~\\\n\n66\n\n償\n\nのーー\n\nバー\n\n[を\n\n1\n\n5\n\nに\n\nA\n\n5)\n\nの\n\n4\n\n革7 は\n\nNS\n\nどン<ふ\n\n2 E]\n\nいら5\n\nにヘー\n\nいし(4痢",
-        "confidence": 0.27,
-        "charCount": 89,
+        "text": "B{\n\n\\党ポル.\n\n上\n\n修\n\nリリ\n\n¥4\n\n-\n\n回\"mw\n\nに\n\n】\n\nに\n\n?\\\n\nの\n\nA\n\n.3\n\nで\n\n—\n\n<をの\n\nや\n\nや <タイタダ)\n\nNe\n\n (ー 7多",
+        "confidence": 0.25,
+        "charCount": 91,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1641,14 +1643,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "E\n\nA\n\n~\\\n\n66\n\n償\n\nのーー\n\nバー\n\n[を\n\n1\n\n5\n\nに\n\nA\n\n5)\n\nの\n\n4\n\n革7 は\n\nNS\n\nどン<ふ\n\n2 E]\n\nいら5\n\nにヘー\n\nいし(4痢",
-          "confidence": 0.27,
-          "charCount": 89,
+          "text": "B{\n\n\\党ポル.\n\n上\n\n修\n\nリリ\n\n¥4\n\n-\n\n回\"mw\n\nに\n\n】\n\nに\n\n?\\\n\nの\n\nA\n\n.3\n\nで\n\n—\n\n<をの\n\nや\n\nや <タイタダ)\n\nNe\n\n (ー 7多",
+          "confidence": 0.25,
+          "charCount": 91,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 876,
+      "processingTimeMs": 847,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1661,9 +1663,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "る 明\n\ne,\n\nー\n\n<月\n\nほほ 間\n\n66\n\n</\n\nペンンジン\n\n電紀\n\nきく4wsAラ\n\nRIC\n\ng / N」\n\nN\n\nS%\n\nーー\n\n7\n\nてくM)\n\nふ 略\n\n7/\n\n#\n\n出\n\nI\n\nは\n\n\\\n\n放す\n\nmt!\n\nヘーニーーテーー\n\n【導ー\n\n区\n\n』\n\n. &\n\nとっ\n\ncosa\n\nFRTng,\n\n」\n\n=\n\n—\n\n大\n\nに(カ\n\nンス\n\n埋学\n\n&7o7\n\n秀3\n\nWS\n\nサラ\n\n@\n\n/\n\n1",
-        "confidence": 0.29,
-        "charCount": 210,
+        "text": "に -間\n\n\\ー\n\n4\\\n\n£466\n\nIRICE\n\noL__\n\n&nd ンア\n\nwsムラ\n\n7\n\nペー\n\n~\n\nW\n\n5\n\nにーー\n\n=\n\n。\n\n4\n\nE_\n\n-=\n\n1 -¥\n\nIt\n\n\\\n\n\\\n\ni\n\nFHTLS\n\nヘー一一\n\nA\n\n4 4d\n\nすす\n\nY 3\n\n<o7a\n\n y\n\nS 2\n\nLT\n\n目有\n\nーー\n\nE)\n\n記\n\n,\n\n%\n\nVy\n\nmt\n\nしも\n\n12\n\nビリ\n\nニューー\n\nアス\n\n B\n\nié",
+        "confidence": 0.26,
+        "charCount": 211,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1672,14 +1674,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "る 明\n\ne,\n\nー\n\n<月\n\nほほ 間\n\n66\n\n</\n\nペンンジン\n\n電紀\n\nきく4wsAラ\n\nRIC\n\ng / N」\n\nN\n\nS%\n\nーー\n\n7\n\nてくM)\n\nふ 略\n\n7/\n\n#\n\n出\n\nI\n\nは\n\n\\\n\n放す\n\nmt!\n\nヘーニーーテーー\n\n【導ー\n\n区\n\n』\n\n. &\n\nとっ\n\ncosa\n\nFRTng,\n\n」\n\n=\n\n—\n\n大\n\nに(カ\n\nンス\n\n埋学\n\n&7o7\n\n秀3\n\nWS\n\nサラ\n\n@\n\n/\n\n1",
-          "confidence": 0.29,
-          "charCount": 210,
+          "text": "に -間\n\n\\ー\n\n4\\\n\n£466\n\nIRICE\n\noL__\n\n&nd ンア\n\nwsムラ\n\n7\n\nペー\n\n~\n\nW\n\n5\n\nにーー\n\n=\n\n。\n\n4\n\nE_\n\n-=\n\n1 -¥\n\nIt\n\n\\\n\n\\\n\ni\n\nFHTLS\n\nヘー一一\n\nA\n\n4 4d\n\nすす\n\nY 3\n\n<o7a\n\n y\n\nS 2\n\nLT\n\n目有\n\nーー\n\nE)\n\n記\n\n,\n\n%\n\nVy\n\nmt\n\nしも\n\n12\n\nビリ\n\nニューー\n\nアス\n\n B\n\nié",
+          "confidence": 0.26,
+          "charCount": 211,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1597,
+      "processingTimeMs": 1641,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1692,9 +1694,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "—\n\nり\n\n)り\n\nW\n\n)N\n\n2\n\nNT\n\nN\n\nOU\n\n21\n\nまる",
-        "confidence": 0.58,
-        "charCount": 37,
+        "text": "り\n\n\\Jb\n\n2\n\n人\n\nmovU\n\nNT\n\n022\n\nJ る",
+        "confidence": 0.49,
+        "charCount": 32,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1703,16 +1705,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "—\n\nり\n\n)り\n\nW\n\n)N\n\n2\n\nNT\n\nN\n\nOU\n\n21\n\nまる",
-          "confidence": 0.58,
-          "charCount": 37,
+          "text": "り\n\n\\Jb\n\n2\n\n人\n\nmovU\n\nNT\n\n022\n\nJ る",
+          "confidence": 0.49,
+          "charCount": 32,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 422,
+      "processingTimeMs": 329,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1723,9 +1724,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "2\n\nのガ\n\nの\n\ny\n\nてや\n\nます\n\nも\n\n» ¥\n\nに\n\n2\n\nBt\n\nA\n\nを\n\nvw\n\nる\n\na\n\n隊の> :\n\nWy\n\nが\n\n3\n\n7\n\nめく\n\nW\n\n*a\n\nメッ\n\nY\n\n2と\n\nの\n\nンク\n\nグッ22\n\nPLe\n\nLA\n\nと2\n\nの\n\nー\n\n由\n\ncle\n\n2\n\nグ\n\nfe8\n\nメア\n\n2\n\n5\n\nン/ん\n\n/\n\n5t\n\n%\n\n7\n\n多鐘\n\n鐘\n\nを\n\n”\n\n7\n\nググ\n\nfi\n\n7の\n\n2\n\nMカ\n\nの\n\nクン/\n\n0\n\nと\n\n7\n\n£\n\n1il\n\nクン\n\nンク\n\n)\n\n7\n\nん",
-        "confidence": 0.21,
-        "charCount": 251,
+        "text": "K\n\n2\n\n%\n\nに\n\nシン\n\n(5\n\n誠\n\nみい\n\nいい\n\nX\n\n&\n\n=\n\nや\n\n§\n\nジグ\n\nof\n\nタグ\n\n7%\n\nYoast\n\n>\n\n2\n\nア\n\nhav\n\ni\n\n50\n\n5\n\nを\n\n多\n\n2\n\nン2\n\nング\n\nンタググ\n\n(多角\n\n(涼\n\n0\n\n7\n\n7\n\nn,\n\n”\n\n7\n\n47\n\n7\n\n&\n\n/i\n\n7\n\n7",
+        "confidence": 0.16,
+        "charCount": 162,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1734,15 +1735,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "2\n\nのガ\n\nの\n\ny\n\nてや\n\nます\n\nも\n\n» ¥\n\nに\n\n2\n\nBt\n\nA\n\nを\n\nvw\n\nる\n\na\n\n隊の> :\n\nWy\n\nが\n\n3\n\n7\n\nめく\n\nW\n\n*a\n\nメッ\n\nY\n\n2と\n\nの\n\nンク\n\nグッ22\n\nPLe\n\nLA\n\nと2\n\nの\n\nー\n\n由\n\ncle\n\n2\n\nグ\n\nfe8\n\nメア\n\n2\n\n5\n\nン/ん\n\n/\n\n5t\n\n%\n\n7\n\n多鐘\n\n鐘\n\nを\n\n”\n\n7\n\nググ\n\nfi\n\n7の\n\n2\n\nMカ\n\nの\n\nクン/\n\n0\n\nと\n\n7\n\n£\n\n1il\n\nクン\n\nンク\n\n)\n\n7\n\nん",
-          "confidence": 0.21,
-          "charCount": 251,
+          "text": "K\n\n2\n\n%\n\nに\n\nシン\n\n(5\n\n誠\n\nみい\n\nいい\n\nX\n\n&\n\n=\n\nや\n\n§\n\nジグ\n\nof\n\nタグ\n\n7%\n\nYoast\n\n>\n\n2\n\nア\n\nhav\n\ni\n\n50\n\n5\n\nを\n\n多\n\n2\n\nン2\n\nング\n\nンタググ\n\n(多角\n\n(涼\n\n0\n\n7\n\n7\n\nn,\n\n”\n\n7\n\n47\n\n7\n\n&\n\n/i\n\n7\n\n7",
+          "confidence": 0.16,
+          "charCount": 162,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1633,
+      "processingTimeMs": 1085,
       "problemClassification": [
+        "低信頼度",
         "記号ノイズ過多",
         "小断片が多い"
       ]
@@ -1754,9 +1756,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "oo\n\nWT\n\nて\n\nと生 )\n\n(リ\n\nーー\n\n==\n\n66\n\n-@ 2\n\nー —\n\nンとる\n\nーー\n\n-y\n\nー\n\nム []\n\nー\n\nTHIS WAY\n\nーw\n\n-\n\nは\n\n\\\n\n\\d\n\n-\n\n/\n\n1\n\nー\n\n:1v3\n\n[\n\n人\n\nカリ\n\n[*\n\nト だ\n\n間\n\n~\n\n{:\n\n3\n\nー\n\nMOUNTAIN\n\n21\n\nBL\n\nへ<\n\n「\n\n“\n\n大ご\n\n> ー\n\n1",
-        "confidence": 0.37,
-        "charCount": 187,
+        "text": "ーーでES\n\ni$-¥\n\nり\n\nペペ\n\n[リ\n\n攻\n\n=3\n\n66\n\n~\n\noyd\n\nー起ち\n\n-9.ヨ\n\nし 央居3\n\n【 1\n\nー\n\nKe\n\n人\n\nァップー\n\nTHIS WAY\n\n-\n\nW\n\nr\n\n1\n\n。で\n\nし\n\nペー\n\nいい\n\n“B\n\n\\o.6\n\n{8\n\nー\n\nNTAIN\n\n2021\n\n』\n\nhi\n\ngi\n\nり\n\ni4 崩\n\n7",
+        "confidence": 0.36,
+        "charCount": 170,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1765,14 +1767,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "oo\n\nWT\n\nて\n\nと生 )\n\n(リ\n\nーー\n\n==\n\n66\n\n-@ 2\n\nー —\n\nンとる\n\nーー\n\n-y\n\nー\n\nム []\n\nー\n\nTHIS WAY\n\nーw\n\n-\n\nは\n\n\\\n\n\\d\n\n-\n\n/\n\n1\n\nー\n\n:1v3\n\n[\n\n人\n\nカリ\n\n[*\n\nト だ\n\n間\n\n~\n\n{:\n\n3\n\nー\n\nMOUNTAIN\n\n21\n\nBL\n\nへ<\n\n「\n\n“\n\n大ご\n\n> ー\n\n1",
-          "confidence": 0.37,
-          "charCount": 187,
+          "text": "ーーでES\n\ni$-¥\n\nり\n\nペペ\n\n[リ\n\n攻\n\n=3\n\n66\n\n~\n\noyd\n\nー起ち\n\n-9.ヨ\n\nし 央居3\n\n【 1\n\nー\n\nKe\n\n人\n\nァップー\n\nTHIS WAY\n\n-\n\nW\n\nr\n\n1\n\n。で\n\nし\n\nペー\n\nいい\n\n“B\n\n\\o.6\n\n{8\n\nー\n\nNTAIN\n\n2021\n\n』\n\nhi\n\ngi\n\nり\n\ni4 崩\n\n7",
+          "confidence": 0.36,
+          "charCount": 170,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1351,
+      "processingTimeMs": 1099,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1785,9 +1787,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "テス\n\n—\n\n-w! 。だへ\n\n P%\n\nfol\n\n66\n\nw\n\nLL)\n\nw-\n\nTHEWAY A\n\n.\n\nー N\n\n{\n\nーー\n\nE- 3\n\noy\n\nMoyNTAY\n\n2021",
-        "confidence": 0.3,
-        "charCount": 90,
+        "text": "りり —\n\ngoc\n\nmEISTO\n\nリノ\n\nーー\n\nir居\n\na v\n\nTHEWAY A\n\n;\n\n上 ー\n\nF.\n\ni\n\n一\n\n7-。 3\n\n5\n\n20症\n\nWouNTA以\n\nKN\n\nや\n\n2021",
+        "confidence": 0.32,
+        "charCount": 100,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1796,16 +1798,15 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "テス\n\n—\n\n-w! 。だへ\n\n P%\n\nfol\n\n66\n\nw\n\nLL)\n\nw-\n\nTHEWAY A\n\n.\n\nー N\n\n{\n\nーー\n\nE- 3\n\noy\n\nMoyNTAY\n\n2021",
-          "confidence": 0.3,
-          "charCount": 90,
+          "text": "りり —\n\ngoc\n\nmEISTO\n\nリノ\n\nーー\n\nir居\n\na v\n\nTHEWAY A\n\n;\n\n上 ー\n\nF.\n\ni\n\n一\n\n7-。 3\n\n5\n\n20症\n\nWouNTA以\n\nKN\n\nや\n\n2021",
+          "confidence": 0.32,
+          "charCount": 100,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 821,
+      "processingTimeMs": 810,
       "problemClassification": [
-        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1816,9 +1817,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "{\n\n\"ええ\n\nますかい\n\nABU MOUNT.\n\nBER [SaR2A] £ +oS806\n\nMRHREb T B L 1 日本酒仙\n\n記計のは、 TiheSHRS\n\nMo% Xini2A 2 ififb+ 5mENET) q\n\nSRSHB# T X 22y (MOUNTAIE\n\nは\n\nた日本洒で\n\n*山 5 MOUNTAINり を想像し父\n\nにお楽しみく ださ \\ae\n\nwwr が\n\nact.\n\nした新紀代の\n\nW\n\n2 8 Gkom) Oz\n\n材料名 R\n\n(0\n\nを ©:4#x4 & 6026 内\n\nz\n\n«®\n\nタ he\n\nR\n\nル分 14度 お酒は二\n\nにが2\n\nり\n\n府\n\n'2021 年7月\n\nL§\n\nCRETIRA\n\nFREeRAEL o00\n\nN\n\n$ミ+\n\n装手県盛岡市北飯同\n\n[ ォ\n\n乳期\n\nきら できる\n\n2\n\nRa%hg\n\n酒はお挫えくだこ\n\nがございま\n\no%\n\nせん\n\n内 鶴 720m!\n\n—",
-        "confidence": 0.44,
-        "charCount": 418,
+        "text": "RABPU MOUNT\n\nEUER [F4Ede2A] 2 Puid\n\n依が魂を込めて醸した日本酒\n\n上昨すものは\n\n5,\n\nZHheTHR\n\nSoEARRA idl of 6 AEI, 』\n\nHE\n\nよく昌\n\n0で大な山 (MOUNTARS\n\nを山 5OUNTAIN を想像し\n\nにお楽しみください。\n\nゆめ\n\nした新紀代の\n\nact.\n\nョ 本酒(鈍未洒) @RAHIE\n\n£@\n\nドドは\n\nTha\n\n$六未歩合 6096\n\n内容\n\n8\n\nトド\n\n14度 @BiEI~\n\n$\n\n月: :2\n\n021年7月\n\n準滅店にて保存\n\nFREGRAEE o0\n\nAFpamiiied\n\nリル とくかな っ\n\nae\n\n#adSies { ださい\n\nS¥us\n\nぎざぎざいま\n\nRiy\n\n内 2% 720ml\n\n———",
+        "confidence": 0.46,
+        "charCount": 354,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1827,14 +1828,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "{\n\n\"ええ\n\nますかい\n\nABU MOUNT.\n\nBER [SaR2A] £ +oS806\n\nMRHREb T B L 1 日本酒仙\n\n記計のは、 TiheSHRS\n\nMo% Xini2A 2 ififb+ 5mENET) q\n\nSRSHB# T X 22y (MOUNTAIE\n\nは\n\nた日本洒で\n\n*山 5 MOUNTAINり を想像し父\n\nにお楽しみく ださ \\ae\n\nwwr が\n\nact.\n\nした新紀代の\n\nW\n\n2 8 Gkom) Oz\n\n材料名 R\n\n(0\n\nを ©:4#x4 & 6026 内\n\nz\n\n«®\n\nタ he\n\nR\n\nル分 14度 お酒は二\n\nにが2\n\nり\n\n府\n\n'2021 年7月\n\nL§\n\nCRETIRA\n\nFREeRAEL o00\n\nN\n\n$ミ+\n\n装手県盛岡市北飯同\n\n[ ォ\n\n乳期\n\nきら できる\n\n2\n\nRa%hg\n\n酒はお挫えくだこ\n\nがございま\n\no%\n\nせん\n\n内 鶴 720m!\n\n—",
-          "confidence": 0.44,
-          "charCount": 418,
+          "text": "RABPU MOUNT\n\nEUER [F4Ede2A] 2 Puid\n\n依が魂を込めて醸した日本酒\n\n上昨すものは\n\n5,\n\nZHheTHR\n\nSoEARRA idl of 6 AEI, 』\n\nHE\n\nよく昌\n\n0で大な山 (MOUNTARS\n\nを山 5OUNTAIN を想像し\n\nにお楽しみください。\n\nゆめ\n\nした新紀代の\n\nact.\n\nョ 本酒(鈍未洒) @RAHIE\n\n£@\n\nドドは\n\nTha\n\n$六未歩合 6096\n\n内容\n\n8\n\nトド\n\n14度 @BiEI~\n\n$\n\n月: :2\n\n021年7月\n\n準滅店にて保存\n\nFREGRAEE o0\n\nAFpamiiied\n\nリル とくかな っ\n\nae\n\n#adSies { ださい\n\nS¥us\n\nぎざぎざいま\n\nRiy\n\n内 2% 720ml\n\n———",
+          "confidence": 0.46,
+          "charCount": 354,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3725,
+      "processingTimeMs": 3070,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1846,9 +1847,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "いき\n\nSS\n\nNN\n\nヘン\n\nYo\n\nv -\n\n:\n\n18 wWh\n\ngiey\n\nVoog\n\nbonts\n\nLi\n\nk",
+        "text": "ドいき\n\nに\n\nSN\n\nジン\n\nb\n\nw\n\n.\n\n.\n\n:\n\n148 w\n\n5\n\n2\n\npe",
         "confidence": 0.14,
-        "charCount": 60,
+        "charCount": 46,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1857,16 +1858,17 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "いき\n\nSS\n\nNN\n\nヘン\n\nYo\n\nv -\n\n:\n\n18 wWh\n\ngiey\n\nVoog\n\nbonts\n\nLi\n\nk",
+          "text": "ドいき\n\nに\n\nSN\n\nジン\n\nb\n\nw\n\n.\n\n.\n\n:\n\n148 w\n\n5\n\n2\n\npe",
           "confidence": 0.14,
-          "charCount": 60,
+          "charCount": 46,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 496,
+      "processingTimeMs": 406,
       "problemClassification": [
         "低信頼度",
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -1877,9 +1879,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "-の商品はク〇暑い真夏に「冷やして\n\n由仁込みの酒]」 というテーマで仕込ん\n\n*手です。夏に太陽に向かって咲くひまれ\n\n2し、ジジャイジ上 全虹8\n\nfyELE\n\nUEHAHR ERZ(E, LonY#ASE\n\nPEBMICLTRL Bos—BITI T\n\n< りたてのフレピラマジショな状態で出荷してと\n\n・ 谷えた状態でバランスが取れ\n\nるようが\n\n設計しているため、 HRMICEAY\n\nておりおば\n\nで お方好きの方はスルーしてくた\n\n材\n\nー\n\nL\n\nai\n\n田県産)、 回\n\nPl\n\n回\n\nーー\n\n的\n\n秋\n\n-\n\n)\n\nービ\n\n。\n\nig\n\n-\n\nロ\n\n合 55%\n\n=\n\n\\\n\n15度\n\nz\n\n株式会社\n\n>\n\nは\n\n—\n\nRa\n\n山\n\n山本\n\n7\n\n9\n\nZ\n\nー\n\n本郡八峰町八森字八森2\n\nになってから\n\nWas\n\n2021.7",
-        "confidence": 0.66,
-        "charCount": 376,
+        "text": "-の商品はク〇暑い真夏に「冷やして9\n\n内仁込みの酒」というテーマで仕込\n\nRRCT. 夏に太陽に向かって咲くひまか\n\n*イメージじ、 サンシャイン イエロー\n\nけけまじだ\n\n山府仕込みと云えば、 しっかり熟成さぜ7\n\n0をおぉ贈にして楽しむのが一般的ですか\n\nて振りたてのフレッシュな状態で\n\n出朋レして6\n\n・谷えた状態でバランス\n\n=\n\nが取\n\nれるよう2\n\nE\n\nR:3\n\n計しているため、 BHIC\n\nは向いて be\n\nで SfFERERN—LT\n\niitig,\n\n1 a\n\n県産米\n\n米 He 県産)、 ElE\n\n-,\n\nロロ\n\n55%\n\n回\n\nロール\n\n15度\n\nZ\n\n用用\n\n0\n\n山\n\n式会社 山 西造店\n\nz\n\n&;\n\n郡八峰町八森字八森2\n\nWa 坦になってから\n\n2021.7",
+        "confidence": 0.71,
+        "charCount": 350,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1888,14 +1890,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "-の商品はク〇暑い真夏に「冷やして\n\n由仁込みの酒]」 というテーマで仕込ん\n\n*手です。夏に太陽に向かって咲くひまれ\n\n2し、ジジャイジ上 全虹8\n\nfyELE\n\nUEHAHR ERZ(E, LonY#ASE\n\nPEBMICLTRL Bos—BITI T\n\n< りたてのフレピラマジショな状態で出荷してと\n\n・ 谷えた状態でバランスが取れ\n\nるようが\n\n設計しているため、 HRMICEAY\n\nておりおば\n\nで お方好きの方はスルーしてくた\n\n材\n\nー\n\nL\n\nai\n\n田県産)、 回\n\nPl\n\n回\n\nーー\n\n的\n\n秋\n\n-\n\n)\n\nービ\n\n。\n\nig\n\n-\n\nロ\n\n合 55%\n\n=\n\n\\\n\n15度\n\nz\n\n株式会社\n\n>\n\nは\n\n—\n\nRa\n\n山\n\n山本\n\n7\n\n9\n\nZ\n\nー\n\n本郡八峰町八森字八森2\n\nになってから\n\nWas\n\n2021.7",
-          "confidence": 0.66,
-          "charCount": 376,
+          "text": "-の商品はク〇暑い真夏に「冷やして9\n\n内仁込みの酒」というテーマで仕込\n\nRRCT. 夏に太陽に向かって咲くひまか\n\n*イメージじ、 サンシャイン イエロー\n\nけけまじだ\n\n山府仕込みと云えば、 しっかり熟成さぜ7\n\n0をおぉ贈にして楽しむのが一般的ですか\n\nて振りたてのフレッシュな状態で\n\n出朋レして6\n\n・谷えた状態でバランス\n\n=\n\nが取\n\nれるよう2\n\nE\n\nR:3\n\n計しているため、 BHIC\n\nは向いて be\n\nで SfFERERN—LT\n\niitig,\n\n1 a\n\n県産米\n\n米 He 県産)、 ElE\n\n-,\n\nロロ\n\n55%\n\n回\n\nロール\n\n15度\n\nZ\n\n用用\n\n0\n\n山\n\n式会社 山 西造店\n\nz\n\n&;\n\n郡八峰町八森字八森2\n\nWa 坦になってから\n\n2021.7",
+          "confidence": 0.71,
+          "charCount": 350,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2789,
+      "processingTimeMs": 2368,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1907,9 +1909,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "i ー\n\ngol\n\n_4\n\nで 07\n\nし店\n\ni-?\n\nL wey ®\n\n-\n\n\\\n\n#\n\nカ\n\n【\n\n4ル\n\nb\n\n ーー\n\n内\n\n4)\n\nMM\n\nご「得\n\nいい\n\nh\n\na\\\n\nj\\\n\nビ A",
-        "confidence": 0.27,
-        "charCount": 99,
+        "text": "gol\n\n_4\n\ni”\n\n:\n\n1MWbWBY X\n\n-2\n\n;\n\n-\n\nリ\n\nじ\n\nん\n\n央\n\nA\n\n0\n\n0\n\nit\n\nいい\n\nーー\n\n人",
+        "confidence": 0.21,
+        "charCount": 71,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1918,14 +1920,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "i ー\n\ngol\n\n_4\n\nで 07\n\nし店\n\ni-?\n\nL wey ®\n\n-\n\n\\\n\n#\n\nカ\n\n【\n\n4ル\n\nb\n\n ーー\n\n内\n\n4)\n\nMM\n\nご「得\n\nいい\n\nh\n\na\\\n\nj\\\n\nビ A",
-          "confidence": 0.27,
-          "charCount": 99,
+          "text": "gol\n\n_4\n\ni”\n\n:\n\n1MWbWBY X\n\n-2\n\n;\n\n-\n\nリ\n\nじ\n\nん\n\n央\n\nA\n\n0\n\n0\n\nit\n\nいい\n\nーー\n\n人",
+          "confidence": 0.21,
+          "charCount": 71,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 848,
+      "processingTimeMs": 532,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1938,9 +1940,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "L#5(\n\nいいas Ba ルル\n\nIL, BERL, AXET,\n\nthaT EA\n\n上\n\n日本酒】 【内容量 720 m4】\n\n (回導拓涼次(国産) —\n\n歩合\n\nー\n\nか 16 度\n\n=\n\n13.06\n\n=\n\n=\n\nb ERTproR) Z\n\n 記 人\n\n株式会社\n\n—\n\nEERT seaeny\n\nMa {aid\n\n27)003) eiyl 2の0\n\nha\n\nこつでか\n\nHL y\n\nHitti\n\nWiiy 2[gcTH",
-        "confidence": 0.36,
-        "charCount": 215,
+        "text": "A\n\n%\n\n7マ\n\nJEX\n\nL+56[¢\n\n=\n\nE)\n\n業 を\n\n#okoh BR\n\nい\n\n%\n\n&\n\n720m/z\n\nMEL, BERL, AZRT\n\n2なさまに愛き本る酒を目指します\n\n【串\n\n昭和\n\n日本酒】 【内容量 720 m】\n\n 本(国産)、米麹(国産米)\n\n—\n\n歩合 50%\n\nアル\n\nコール\n\n分 16度\n\n=\n\no 朋\n\n03.06\n\n=\n\nいい BemGuou Fon) =\n\n=\n\nWM\n\n5 入銘酸株式会社\n\n8\n\n=\n\nー #\n\n4)\n\n242(\n\n松市東\n\n8=7\n\nHig)\n\n)0031 FAX 0242(27)00% ,\n\nのが\n\nは\n\n%525 :\n\nませんが包質等には則\n\ntd B[ECTH",
+        "confidence": 0.54,
+        "charCount": 319,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1949,14 +1951,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "L#5(\n\nいいas Ba ルル\n\nIL, BERL, AXET,\n\nthaT EA\n\n上\n\n日本酒】 【内容量 720 m4】\n\n (回導拓涼次(国産) —\n\n歩合\n\nー\n\nか 16 度\n\n=\n\n13.06\n\n=\n\n=\n\nb ERTproR) Z\n\n 記 人\n\n株式会社\n\n—\n\nEERT seaeny\n\nMa {aid\n\n27)003) eiyl 2の0\n\nha\n\nこつでか\n\nHL y\n\nHitti\n\nWiiy 2[gcTH",
-          "confidence": 0.36,
-          "charCount": 215,
+          "text": "A\n\n%\n\n7マ\n\nJEX\n\nL+56[¢\n\n=\n\nE)\n\n業 を\n\n#okoh BR\n\nい\n\n%\n\n&\n\n720m/z\n\nMEL, BERL, AZRT\n\n2なさまに愛き本る酒を目指します\n\n【串\n\n昭和\n\n日本酒】 【内容量 720 m】\n\n 本(国産)、米麹(国産米)\n\n—\n\n歩合 50%\n\nアル\n\nコール\n\n分 16度\n\n=\n\no 朋\n\n03.06\n\n=\n\nいい BemGuou Fon) =\n\n=\n\nWM\n\n5 入銘酸株式会社\n\n8\n\n=\n\nー #\n\n4)\n\n242(\n\n松市東\n\n8=7\n\nHig)\n\n)0031 FAX 0242(27)00% ,\n\nのが\n\nは\n\n%525 :\n\nませんが包質等には則\n\ntd B[ECTH",
+          "confidence": 0.54,
+          "charCount": 319,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2293,
+      "processingTimeMs": 2073,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1968,9 +1970,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "9ゃ\n\ninf)\n\n/\n\n介朋\n\n(ーー\n\n【記\n\n。]\n\n«\n\n». <\n\nTHIS WW\n\nTM,\n\nし\n\n0\n\ngf ー\n\n“8\n\nJapay, Brewing Society !\n\nNo.6\n\nTe Ottise ioh,\n\nクン多ンクン\n\nのRoprr\n\nFidd\n\n寺下",
-        "confidence": 0.25,
-        "charCount": 141,
+        "text": "19\n\nの\n\nアー ”\n\n/ノ\n\nmag\n\n[{.4\n\n»\n\n«\n\n\"て]\n\nるる、\n\nTHIS WY\n\nーーを\n\nし\n\n*¥\n\n“N\n\n2 Brewing 208の07\n\nNo.\n\nテウンン.ム\n\nクン\n\nLiscoveredy, アク?\n\n2\n\nFr-TL",
+        "confidence": 0.34,
+        "charCount": 130,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -1979,14 +1981,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "9ゃ\n\ninf)\n\n/\n\n介朋\n\n(ーー\n\n【記\n\n。]\n\n«\n\n». <\n\nTHIS WW\n\nTM,\n\nし\n\n0\n\ngf ー\n\n“8\n\nJapay, Brewing Society !\n\nNo.6\n\nTe Ottise ioh,\n\nクン多ンクン\n\nのRoprr\n\nFidd\n\n寺下",
-          "confidence": 0.25,
-          "charCount": 141,
+          "text": "19\n\nの\n\nアー ”\n\n/ノ\n\nmag\n\n[{.4\n\n»\n\n«\n\n\"て]\n\nるる、\n\nTHIS WY\n\nーーを\n\nし\n\n*¥\n\n“N\n\n2 Brewing 208の07\n\nNo.\n\nテウンン.ム\n\nクン\n\nLiscoveredy, アク?\n\n2\n\nFr-TL",
+          "confidence": 0.34,
+          "charCount": 130,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1002,
+      "processingTimeMs": 973,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1998,8 +2000,8 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "‘»\n\n_— TR,",
-        "confidence": 0.1,
+        "text": "— R,\n\nーー 一",
+        "confidence": 0.4,
         "charCount": 10,
         "candidateCount": 0,
         "matchReasons": [],
@@ -2009,17 +2011,16 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "‘»\n\n_— TR,",
-          "confidence": 0.1,
+          "text": "— R,\n\nーー 一",
+          "confidence": 0.4,
           "charCount": 10,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 211,
+      "processingTimeMs": 170,
       "problemClassification": [
         "文字数不足",
-        "低信頼度",
         "記号ノイズ過多",
         "小断片が多い"
       ]
@@ -2031,9 +2032,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "$\n\nJapan Brewing Soci 2\n\n66\n\nThe の2クンクン グ\n\nタンクン多ンルシ 9Bre\n\nYiscovered in 795\n\n周\n\nOE]\n\ni=Ld\n\nST\\\n\nPRODUCT OF AKITA\n\nMADE BY\n\nFr IL",
-        "confidence": 0.42,
-        "charCount": 128,
+        "text": "E\n\nJapan Brewing Societ,\n\nNo.6\n\nThe Olest Sihe 5.\n\nングンクグングンオクアク\n\nのネンウンンジンク 795\n\nBUEL\n\nBi;\n\nPRODUCT OF AKITA\n\n(のアア BY\n\nZrIX",
+        "confidence": 0.49,
+        "charCount": 122,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -2042,14 +2043,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "$\n\nJapan Brewing Soci 2\n\n66\n\nThe の2クンクン グ\n\nタンクン多ンルシ 9Bre\n\nYiscovered in 795\n\n周\n\nOE]\n\ni=Ld\n\nST\\\n\nPRODUCT OF AKITA\n\nMADE BY\n\nFr IL",
-          "confidence": 0.42,
-          "charCount": 128,
+          "text": "E\n\nJapan Brewing Societ,\n\nNo.6\n\nThe Olest Sihe 5.\n\nングンクグングンオクアク\n\nのネンウンンジンク 795\n\nBUEL\n\nBi;\n\nPRODUCT OF AKITA\n\n(のアア BY\n\nZrIX",
+          "confidence": 0.49,
+          "charCount": 122,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 914,
+      "processingTimeMs": 794,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2061,9 +2062,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "ご\n\n5\n\n2\n\na i\n\n[i\n\no\n\nン >\n\nリー\n\nEL\n\n4\n\nすす\n\n/a\n\ni\n\nト ー\n\n\\\n\n,\n\nも\n\nB\n\nEd\n\n5\n\nNR\n\nウ\n\nE\n\n38\n\nーー一一一",
-        "confidence": 0.31,
-        "charCount": 91,
+        "text": "—\n\nン\n\n。\n\n-\n\n—=\n\nッ<そ.ア\n\n前\n\nーーゞ B\n\n。 、詳\n\n*\n\n4at\n\n\"\n\nが\n\n和夫:\n\nーー",
+        "confidence": 0.28,
+        "charCount": 60,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -2072,14 +2073,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "ご\n\n5\n\n2\n\na i\n\n[i\n\no\n\nン >\n\nリー\n\nEL\n\n4\n\nすす\n\n/a\n\ni\n\nト ー\n\n\\\n\n,\n\nも\n\nB\n\nEd\n\n5\n\nNR\n\nウ\n\nE\n\n38\n\nーー一一一",
-          "confidence": 0.31,
-          "charCount": 91,
+          "text": "—\n\nン\n\n。\n\n-\n\n—=\n\nッ<そ.ア\n\n前\n\nーーゞ B\n\n。 、詳\n\n*\n\n4at\n\n\"\n\nが\n\n和夫:\n\nーー",
+          "confidence": 0.28,
+          "charCount": 60,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 716,
+      "processingTimeMs": 707,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2092,9 +2093,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "- / 導\n\nビン\n\n身\n\n1 デ\n\nhe)\n\nI}\n\nーーコー\n\n由\n\n0J)\n\nJー=\n\nーー\n\n5\n\n_ニニーィー半",
-        "confidence": 0.3,
-        "charCount": 61,
+        "text": "同\n\n-\n\nFA\n\n>\n\n5選\n\n\\\n\nA\n\n_ —",
+        "confidence": 0.22,
+        "charCount": 26,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -2103,14 +2104,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "- / 導\n\nビン\n\n身\n\n1 デ\n\nhe)\n\nI}\n\nーーコー\n\n由\n\n0J)\n\nJー=\n\nーー\n\n5\n\n_ニニーィー半",
-          "confidence": 0.3,
-          "charCount": 61,
+          "text": "同\n\n-\n\nFA\n\n>\n\n5選\n\n\\\n\nA\n\n_ —",
+          "confidence": 0.22,
+          "charCount": 26,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 672,
+      "processingTimeMs": 383,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2123,9 +2124,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "L 3 FP\n\n大地\n\n_RRhag\n\n用 THoTR) $RALAkAYEg ー\n\nL30kLLRFOP THS NEKHoy\n\nムいう)信全のもと表家と我々の信頼関係により最訓9\n\nい\n\n可が作り久けられています。 HETEVIRUAEL\n\nいう第別な大地ー で永い時を刻み久けているか6\n\n)\n\nBLAARE RATSC LaTET ダラ\n\n『テディーに圧倒的な存在感を表現しフフ、 2\n\n替いい信しさきを書っているオリジナリティ\n\n—i\n\nな\n\n味わいをお楽しみいただ\n\nけけます:\n\nが\n\n時蔵牙所にて開栓後はおめにお\n\nLL\n\n iog, anseniontt\n\nでせの御礼ずし上げます。\n\n*米(国産) 、 AED\n\n=\n\nLH X:\n\nTiy\n\nペル和信\n\n*ぁな\n\n 5T 100%\n\n用\n\n16度以上 17 度本満\n\nビー\n\n2[\n\n「 アコ\n\nクー\n\nx\n\nTR\n\n回re\n\nKO021 0\n\nInstag! al",
-        "confidence": 0.51,
-        "charCount": 418,
+        "text": ".3 EO\n\n大地\n\n寺本活\n\n4全介区導 THOTR] £RAL Akkvay\n\neoLLORED® T 6 s khotne\n\nnEA0LE RRERZ DERNELIREY\n\nBTRAED R 6 RTV F, HETL VI REFEL\n\nVIBA TRIE] TRVCEEERIARY TLEPELE\n\nは\n\nE幅所な存在世を表現することができまれ 月\n\n『『ィーに圧倒約な存在感を表現しフフ、そ7\n\n4で Di4\n\n内かいい優しきを娘っているオリ ジナリティー*\n\nな味わいをも楽しみいただけます\n\nri PREALTRiER pEOLE\n\nsLE\n\nこの度は、弊社商品をお3 ポのいた\n\nAO\n\nTiz.\n\n(国産) 、 PETEY\n\n=\n\n0\n\n He\n\n100%\n\n3 分・\n\nZ\n\n6度以上17 度未演\n\nA\n\nE\n\n=_\n\n3\n\nビー\n\nに\n\n中月\n\n回店\n\n2021.07\n\nTnstagr『 am",
+        "confidence": 0.43,
+        "charCount": 411,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -2134,14 +2135,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "L 3 FP\n\n大地\n\n_RRhag\n\n用 THoTR) $RALAkAYEg ー\n\nL30kLLRFOP THS NEKHoy\n\nムいう)信全のもと表家と我々の信頼関係により最訓9\n\nい\n\n可が作り久けられています。 HETEVIRUAEL\n\nいう第別な大地ー で永い時を刻み久けているか6\n\n)\n\nBLAARE RATSC LaTET ダラ\n\n『テディーに圧倒的な存在感を表現しフフ、 2\n\n替いい信しさきを書っているオリジナリティ\n\n—i\n\nな\n\n味わいをお楽しみいただ\n\nけけます:\n\nが\n\n時蔵牙所にて開栓後はおめにお\n\nLL\n\n iog, anseniontt\n\nでせの御礼ずし上げます。\n\n*米(国産) 、 AED\n\n=\n\nLH X:\n\nTiy\n\nペル和信\n\n*ぁな\n\n 5T 100%\n\n用\n\n16度以上 17 度本満\n\nビー\n\n2[\n\n「 アコ\n\nクー\n\nx\n\nTR\n\n回re\n\nKO021 0\n\nInstag! al",
-          "confidence": 0.51,
-          "charCount": 418,
+          "text": ".3 EO\n\n大地\n\n寺本活\n\n4全介区導 THOTR] £RAL Akkvay\n\neoLLORED® T 6 s khotne\n\nnEA0LE RRERZ DERNELIREY\n\nBTRAED R 6 RTV F, HETL VI REFEL\n\nVIBA TRIE] TRVCEEERIARY TLEPELE\n\nは\n\nE幅所な存在世を表現することができまれ 月\n\n『『ィーに圧倒約な存在感を表現しフフ、そ7\n\n4で Di4\n\n内かいい優しきを娘っているオリ ジナリティー*\n\nな味わいをも楽しみいただけます\n\nri PREALTRiER pEOLE\n\nsLE\n\nこの度は、弊社商品をお3 ポのいた\n\nAO\n\nTiz.\n\n(国産) 、 PETEY\n\n=\n\n0\n\n He\n\n100%\n\n3 分・\n\nZ\n\n6度以上17 度未演\n\nA\n\nE\n\n=_\n\n3\n\nビー\n\nに\n\n中月\n\n回店\n\n2021.07\n\nTnstagr『 am",
+          "confidence": 0.43,
+          "charCount": 411,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4069,
+      "processingTimeMs": 3818,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2153,9 +2154,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "aa \\\n\nューニー\n\nムー\n\n@\n\nペーニン\n\n「 4\n\n»\n\nマー\n\n大 giif {\n\n誠 ー\n\n ゲ\n\n(TH\n\nョ「月PP月2\n\n‘S WIN\n\n>_v\n\n3\n\nWLECTi\n\nTEMp RANILLO\n\n し\n\n2018\n\n\\ Zaee /",
-        "confidence": 0.36,
-        "charCount": 126,
+        "text": "@.H\n\ny なく\n\n第\n\nIE\n\nHE\n\n% TAPAS\n\ni ー\n\nOLLECTIO\n\nTEMPRANILL?\n\n2018\n\nデン:\n\nA\\ ¢ [8",
+        "confidence": 0.33,
+        "charCount": 77,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -2164,14 +2165,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "aa \\\n\nューニー\n\nムー\n\n@\n\nペーニン\n\n「 4\n\n»\n\nマー\n\n大 giif {\n\n誠 ー\n\n ゲ\n\n(TH\n\nョ「月PP月2\n\n‘S WIN\n\n>_v\n\n3\n\nWLECTi\n\nTEMp RANILLO\n\n し\n\n2018\n\n\\ Zaee /",
-          "confidence": 0.36,
-          "charCount": 126,
+          "text": "@.H\n\ny なく\n\n第\n\nIE\n\nHE\n\n% TAPAS\n\ni ー\n\nOLLECTIO\n\nTEMPRANILL?\n\n2018\n\nデン:\n\nA\\ ¢ [8",
+          "confidence": 0.33,
+          "charCount": 77,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1492,
+      "processingTimeMs": 754,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2183,9 +2184,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "E\n\nNー\n\n.\n\nと\n\nwt f\n\nEs\n\n§\n\nir\n\nヘタ\n\n-o.\n\n。*電\n\nーー一\n\nズン\n\n»\n\n人\n\nに\n\nB\n\nか が\n\nWing SONSS\n\nが\n\n -\n\nの\n\n4)\n\nFrI5L",
-        "confidence": 0.23,
-        "charCount": 101,
+        "text": "--.\n\nE\n\nルど\n\nー お抽\n\nの J\n\nデザ\n\nーーウン\n\n, '%\n\n。\n\nE\n\n—\n\nモーミミ\n\n#\n\nPD\n\nいひ\n\n0.0 J\n\ny/",
+        "confidence": 0.26,
+        "charCount": 74,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -2194,14 +2195,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "E\n\nNー\n\n.\n\nと\n\nwt f\n\nEs\n\n§\n\nir\n\nヘタ\n\n-o.\n\n。*電\n\nーー一\n\nズン\n\n»\n\n人\n\nに\n\nB\n\nか が\n\nWing SONSS\n\nが\n\n -\n\nの\n\n4)\n\nFrI5L",
-          "confidence": 0.23,
-          "charCount": 101,
+          "text": "--.\n\nE\n\nルど\n\nー お抽\n\nの J\n\nデザ\n\nーーウン\n\n, '%\n\n。\n\nE\n\n—\n\nモーミミ\n\n#\n\nPD\n\nいひ\n\n0.0 J\n\ny/",
+          "confidence": 0.26,
+          "charCount": 74,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 953,
+      "processingTimeMs": 649,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2214,9 +2215,9 @@
       "best": {
         "variant": "converted-resized",
         "psm": "11",
-        "text": "SA、\n\n=\n\nSurf.\n\n\"nsJ\n\nペキン\n\n'\n\n, o\n\n )\n\nし\n\n—\n\nほ\n\nNo.6\n\nKEEP COOL\n\np——\n\n上\n\nィり\n\nJek\n\n1.\n\n'E\n\nて\n\nキ\n\n(診",
-        "confidence": 0.23,
-        "charCount": 97,
+        "text": "林野\n\nR-\n\n~\n\nし。 J\n\nfi)\n\nーー\n\n“-\n\nL2\n\nーー一\n\nで 避\n\nいく 4\n\nほほ\n\nMV 6\n\n時 T\n\nKEEP\n\nE\n\n保管\n\n['E\n\n9\n\n以//\n\nJ",
+        "confidence": 0.27,
+        "charCount": 92,
         "candidateCount": 0,
         "matchReasons": [],
         "cycle": 1
@@ -2225,14 +2226,14 @@
         {
           "variant": "converted-resized",
           "psm": "11",
-          "text": "SA、\n\n=\n\nSurf.\n\n\"nsJ\n\nペキン\n\n'\n\n, o\n\n )\n\nし\n\n—\n\nほ\n\nNo.6\n\nKEEP COOL\n\np——\n\n上\n\nィり\n\nJek\n\n1.\n\n'E\n\nて\n\nキ\n\n(診",
-          "confidence": 0.23,
-          "charCount": 97,
+          "text": "林野\n\nR-\n\n~\n\nし。 J\n\nfi)\n\nーー\n\n“-\n\nL2\n\nーー一\n\nで 避\n\nいく 4\n\nほほ\n\nMV 6\n\n時 T\n\nKEEP\n\nE\n\n保管\n\n['E\n\n9\n\n以//\n\nJ",
+          "confidence": 0.27,
+          "charCount": 92,
           "candidateCount": 0,
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 917,
+      "processingTimeMs": 880,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"

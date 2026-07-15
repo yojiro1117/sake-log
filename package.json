@@ -18,10 +18,13 @@
     "validate:drive-images": "node scripts/validate-drive-images.mjs",
     "validate:photo-classification": "node scripts/validate-photo-classification.mjs",
     "extract:drive-image-features": "node scripts/extract-drive-image-features.mjs",
-    "recalculate:validation-metrics": "node scripts/recalculate-validation-metrics.mjs"
+    "recalculate:validation-metrics": "node scripts/recalculate-validation-metrics.mjs",
+    "benchmark:brand": "tsx scripts/benchmark-brand-identification.ts",
+    "benchmark:visual": "tsx scripts/benchmark-visual-matching.ts"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "@zxing/browser": "^0.2.1",
     "chart.js": "^4.4.7",
     "dexie": "^4.0.11",
     "exifreader": "^4.25.0",
@@ -52,6 +55,7 @@
     "jimp": "^1.6.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.1",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.18.2",
     "vitest": "^3.2.4"

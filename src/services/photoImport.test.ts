@@ -18,7 +18,7 @@ describe('photoImport candidates', () => {
   it('returns structured candidate with alcohol type when OCR text matches a master label', () => {
     const candidates = buildCandidates(`DASSAI 45 720ml ${asahi}`);
     expect(candidates[0]).toMatchObject({
-      productName: dassai,
+      productName: `${dassai} 純米大吟醸45`,
       makerName: asahi,
       alcoholType: 'sake',
       volume: 720

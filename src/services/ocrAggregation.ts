@@ -1,4 +1,5 @@
 import type { CandidateMatch, ImportedPhotoDraft } from '../types';
+import { identifyAlcoholProduct, repeatedOcrTerms } from './brandIdentification';
 
 export interface AggregatedOcrEvidence {
   text: string;
@@ -12,9 +13,17 @@ export function aggregatePhotoOcr(drafts: ImportedPhotoDraft[]): AggregatedOcrEv
   const ordered = [...drafts].sort((a, b) => evidencePriority(a) - evidencePriority(b));
   const text = ordered.map((draft) => draft.ocr.text.trim()).filter(Boolean).join('\n---\n');
   const candidateMap = new Map<string, CandidateMatch>();
+  const combined = identifyAlcoholProduct({
+    text,
+    ocrConfidence: ordered.reduce((sum, draft) => sum + draft.ocr.confidence, 0) / Math.max(1, ordered.length),
+    barcodeValues: [...new Set(ordered.flatMap((draft) => draft.barcodeValues ?? []))],
+    imageCount: ordered.length,
+    repeatedTerms: repeatedOcrTerms(ordered)
+  });
+  for (const candidate of combined) candidateMap.set(candidate.productId ?? `product:${candidate.productName}`, candidate);
   for (const draft of ordered) {
     for (const candidate of draft.candidates) {
-      const key = candidate.productName ? `product:${candidate.productName}` : `maker:${candidate.makerName ?? ''}`;
+      const key = candidate.productId ?? (candidate.productName ? `product:${candidate.productName}` : `maker:${candidate.makerName ?? ''}`);
       const existing = candidateMap.get(key);
       const sourceReason = `${imageLabel(draft.imageType)}: ${draft.fileName}`;
       if (!existing) candidateMap.set(key, { ...candidate, matchReasons: [...candidate.matchReasons, sourceReason] });

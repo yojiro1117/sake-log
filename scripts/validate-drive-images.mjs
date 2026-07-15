@@ -14,6 +14,7 @@ const fixturesDir = path.join(repoRoot, 'tests', 'fixtures');
 const tempDir = path.join(imageDir, '.converted-validation');
 const validationLimit = Number(process.env.VALIDATION_LIMIT ?? 0);
 const driveFileListPath = path.join(fixturesDir, 'google-drive-files.json');
+const groundTruthPath = path.join(fixturesDir, 'brand-identification-ground-truth.json');
 
 const driveFiles = JSON.parse(await readFile(driveFileListPath, 'utf8'))
   .map((file) => ({
@@ -24,6 +25,10 @@ const driveFiles = JSON.parse(await readFile(driveFileListPath, 'utf8'))
     sizeLabel: file.sizeLabel
   }))
   .slice(0, validationLimit > 0 ? validationLimit : undefined);
+const groundTruthDocument = JSON.parse(await readFile(groundTruthPath, 'utf8'));
+const groundTruthItems = Array.isArray(groundTruthDocument) ? groundTruthDocument : groundTruthDocument.images;
+if (!Array.isArray(groundTruthItems)) throw new Error('Brand ground truth must be an array or contain an images array.');
+const groundTruthByFile = new Map(groundTruthItems.map((item) => [item.fileName, item]));
 
 const candidateMaster = [
   { productName: '獺祭', makerName: '旭酒造', alcoholType: 'sake', aliases: ['獺祭', '獺祭45', 'DASSAI', 'DASSAI 45'] },
@@ -70,6 +75,7 @@ try {
     const exif = readExif(original);
     const converted = await normalizeImageBuffer(original, file);
     const image = await Jimp.read(converted.buffer);
+    const truth = groundTruthByFile.get(file.fileName) ?? {};
     const base = {
       ...file,
       fileSize: original.byteLength,
@@ -81,20 +87,23 @@ try {
       conversionStatus: converted.status,
       warnings: converted.warnings,
       errors: converted.errors,
-      groundTruthStatus: 'unknown'
+      groundTruthStatus: truth.groundTruthStatus ?? 'unknown',
+      expectedProductName: truth.expectedProductName,
+      expectedMakerName: truth.expectedMakerName,
+      expectedAlcoholType: truth.expectedAlcoholType,
+      expectedVolume: truth.expectedVolume,
+      expectedAbv: truth.expectedAbv,
+      split: truth.split
     };
 
-    const c1 = await runCycle(worker, file.fileName, 1, [{ name: 'converted-resized', buffer: await toResizedJpeg(image.clone(), 1200), psm: '11' }]);
+    const c1 = await runCycle(worker, file.fileName, 1, [
+      { name: 'converted-resized', buffer: await toResizedJpeg(image.clone(), 1000), psm: '11' }
+    ]);
     const c2 = await runCycle(worker, file.fileName, 2, [
-      { name: 'gray-contrast', buffer: await toGrayContrast(image.clone(), 1200), psm: '11' },
-      { name: 'center-crop-gray-contrast', buffer: await toCenterCrop(image.clone(), 1000), psm: '6' },
-      { name: 'threshold', buffer: await toThreshold(image.clone(), 1100), psm: '11' }
+      { name: 'center-label-gray-contrast', buffer: await toCenterCrop(image.clone(), 1100), psm: '6' }
     ]);
     const c3 = await runCycle(worker, file.fileName, 3, [
-      { name: 'top-label-crop', buffer: await toTopCrop(image.clone(), 1000), psm: '6' },
-      { name: 'split-left', buffer: await toSplit(image.clone(), 'left'), psm: '6' },
-      { name: 'split-right', buffer: await toSplit(image.clone(), 'right'), psm: '6' },
-      { name: 'numeric-pass', buffer: await toGrayContrast(image.clone(), 900), psm: '11', numericPass: true }
+      { name: 'label-band-crop', buffer: await toTopCrop(image.clone(), 1200), psm: '6' }
     ]);
 
     const best = chooseBest([c1.best, c2.best, c3.best]);
@@ -126,12 +135,13 @@ try {
       detectedAlcoholType: final.detectedAlcoholType,
       processingTimeMs: final.processingTimeMs,
       expectedFormat: expectedFormat(file.fileName, file.mimeType),
-      expectedProductName: undefined,
-      expectedMakerName: undefined,
-      expectedAlcoholType: undefined,
-      expectedVolume: undefined,
-      expectedAbv: undefined,
-      groundTruthStatus: 'unknown'
+      expectedProductName: base.expectedProductName,
+      expectedMakerName: base.expectedMakerName,
+      expectedAlcoholType: base.expectedAlcoholType,
+      expectedVolume: base.expectedVolume,
+      expectedAbv: base.expectedAbv,
+      groundTruthStatus: base.groundTruthStatus,
+      split: base.split
     });
     cycle1.push(c1);
     cycle2.push(c2);
@@ -251,36 +261,17 @@ async function toResizedJpeg(image, width) {
   return image.getBuffer(JimpMime.jpeg, { quality: 78 });
 }
 
-async function toGrayContrast(image, width) {
-  image.resize({ w: width }).greyscale().contrast(0.35).normalize();
-  return image.getBuffer(JimpMime.jpeg, { quality: 82 });
-}
-
 async function toCenterCrop(image, width) {
-  const crop = centeredCrop(image, 0.72, 0.62);
+  const crop = centeredCrop(image, 0.82, 0.58);
   crop.resize({ w: width }).greyscale().contrast(0.45).normalize();
   return crop.getBuffer(JimpMime.jpeg, { quality: 84 });
-}
-
-async function toThreshold(image, width) {
-  image.resize({ w: width }).greyscale().contrast(0.55).threshold({ max: 168 });
-  return image.getBuffer(JimpMime.jpeg, { quality: 88 });
 }
 
 async function toTopCrop(image, width) {
   const w = image.bitmap.width;
   const h = image.bitmap.height;
-  image.crop({ x: Math.round(w * 0.13), y: Math.round(h * 0.08), w: Math.round(w * 0.74), h: Math.round(h * 0.56) });
+  image.crop({ x: Math.round(w * 0.1), y: Math.round(h * 0.22), w: Math.round(w * 0.8), h: Math.round(h * 0.62) });
   image.resize({ w: width }).greyscale().contrast(0.5).normalize();
-  return image.getBuffer(JimpMime.jpeg, { quality: 84 });
-}
-
-async function toSplit(image, side) {
-  const w = image.bitmap.width;
-  const h = image.bitmap.height;
-  const x = side === 'left' ? Math.round(w * 0.04) : Math.round(w * 0.48);
-  image.crop({ x, y: Math.round(h * 0.08), w: Math.round(w * 0.48), h: Math.round(h * 0.84) });
-  image.resize({ w: 850 }).greyscale().contrast(0.45).normalize();
   return image.getBuffer(JimpMime.jpeg, { quality: 84 });
 }
 

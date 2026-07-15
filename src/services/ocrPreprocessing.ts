@@ -5,7 +5,10 @@ export type OcrVariantKind =
   | 'upscaleGray'
   | 'contrast'
   | 'threshold'
-  | 'sharpen';
+  | 'sharpen'
+  | 'gamma'
+  | 'adaptiveThreshold'
+  | 'rotate90';
 
 export interface OcrVariant {
   kind: OcrVariantKind;
@@ -20,18 +23,21 @@ export interface OcrVariantScoreInput {
   variantKind: OcrVariantKind;
 }
 
-export async function createOcrVariants(file: Blob): Promise<OcrVariant[]> {
+export async function createOcrVariants(file: Blob, quality?: { blurScore: number; brightnessScore: number; contrastScore: number; warnings: string[] }): Promise<OcrVariant[]> {
   const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' });
   try {
     const variants: OcrVariant[] = [
       { kind: 'original', label: '元画像', blob: file },
       { kind: 'orientation', label: 'EXIF Orientation補正', blob: await renderVariant(bitmap, { scale: 1, mode: 'normal' }) },
-      { kind: 'centerCrop', label: 'ラベル領域中央切り出し', blob: await renderVariant(bitmap, { scale: 1.8, mode: 'crop' }) },
-      { kind: 'upscaleGray', label: '拡大＋グレースケール', blob: await renderVariant(bitmap, { scale: 2, mode: 'gray' }) },
-      { kind: 'contrast', label: 'コントラスト補正', blob: await renderVariant(bitmap, { scale: 2, mode: 'contrast' }) },
-      { kind: 'threshold', label: '二値化', blob: await renderVariant(bitmap, { scale: 2, mode: 'threshold' }) },
-      { kind: 'sharpen', label: 'シャープ化', blob: await renderVariant(bitmap, { scale: 2, mode: 'sharpen' }) }
+      { kind: 'centerCrop', label: 'ラベル領域中央切り出し', blob: await renderVariant(bitmap, { scale: 1.8, mode: 'crop' }) }
     ];
+    if (!quality || quality.contrastScore < 0.55) variants.push({ kind: 'contrast', label: 'コントラスト補正', blob: await renderVariant(bitmap, { scale: 2, mode: 'contrast' }) });
+    if (!quality || quality.blurScore < 0.4) variants.push({ kind: 'sharpen', label: '拡大＋シャープ化', blob: await renderVariant(bitmap, { scale: 2, mode: 'sharpen' }) });
+    if (!quality || quality.brightnessScore < 0.55) variants.push({ kind: 'gamma', label: 'ガンマ・明るさ補正', blob: await renderVariant(bitmap, { scale: 2, mode: 'gamma' }) });
+    if (!quality || quality.contrastScore < 0.35) variants.push({ kind: 'adaptiveThreshold', label: '適応的二値化', blob: await renderVariant(bitmap, { scale: 2, mode: 'adaptiveThreshold' }) });
+    if (!quality) variants.push({ kind: 'upscaleGray', label: '拡大＋グレースケール', blob: await renderVariant(bitmap, { scale: 2, mode: 'gray' }) });
+    if (!quality) variants.push({ kind: 'threshold', label: '大津相当二値化', blob: await renderVariant(bitmap, { scale: 2, mode: 'threshold' }) });
+    if (bitmap.height > bitmap.width * 1.25) variants.push({ kind: 'rotate90', label: '縦書き向け90度回転', blob: await renderVariant(bitmap, { scale: 1.5, mode: 'rotate90' }) });
     return variants;
   } finally {
     bitmap.close?.();
@@ -49,17 +55,23 @@ export function scoreOcrVariant(input: OcrVariantScoreInput) {
 
 async function renderVariant(
   bitmap: ImageBitmap,
-  options: { scale: number; mode: 'normal' | 'crop' | 'gray' | 'contrast' | 'threshold' | 'sharpen' }
+  options: { scale: number; mode: 'normal' | 'crop' | 'gray' | 'contrast' | 'threshold' | 'sharpen' | 'gamma' | 'adaptiveThreshold' | 'rotate90' }
 ) {
   const source = cropSource(bitmap, options.mode === 'crop');
   const canvas = document.createElement('canvas');
-  canvas.width = Math.max(1, Math.round(source.width * options.scale));
-  canvas.height = Math.max(1, Math.round(source.height * options.scale));
+  const rotated = options.mode === 'rotate90';
+  canvas.width = Math.max(1, Math.round((rotated ? source.height : source.width) * options.scale));
+  canvas.height = Math.max(1, Math.round((rotated ? source.width : source.height) * options.scale));
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
   if (!ctx) throw new Error('OCR前処理用Canvasを初期化できませんでした。');
   ctx.imageSmoothingEnabled = true;
   ctx.imageSmoothingQuality = 'high';
-  ctx.drawImage(bitmap, source.x, source.y, source.width, source.height, 0, 0, canvas.width, canvas.height);
+  if (rotated) {
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate(Math.PI / 2);
+    ctx.drawImage(bitmap, source.x, source.y, source.width, source.height, -canvas.height / 2, -canvas.width / 2, canvas.height, canvas.width);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+  } else ctx.drawImage(bitmap, source.x, source.y, source.width, source.height, 0, 0, canvas.width, canvas.height);
 
   if (options.mode !== 'normal' && options.mode !== 'crop') {
     const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -67,10 +79,35 @@ async function renderVariant(
     if (options.mode === 'contrast') adjustContrast(image.data, 42, 12);
     if (options.mode === 'threshold') threshold(image.data);
     if (options.mode === 'sharpen') sharpen(image, canvas.width, canvas.height);
+    if (options.mode === 'gamma') adjustGamma(image.data, 0.72, 18);
+    if (options.mode === 'adaptiveThreshold') adaptiveThreshold(image, canvas.width, canvas.height);
     ctx.putImageData(image, 0, 0);
   }
 
   return canvasToBlob(canvas);
+}
+
+function adjustGamma(data: Uint8ClampedArray, gamma: number, brightness: number) {
+  const inverse = 1 / gamma;
+  for (let index = 0; index < data.length; index += 4) for (let channel = 0; channel < 3; channel += 1) {
+    data[index + channel] = clamp(255 * ((data[index + channel] + brightness) / 255) ** inverse);
+  }
+}
+
+function adaptiveThreshold(image: ImageData, width: number, height: number) {
+  toGray(image.data);
+  const source = new Uint8ClampedArray(image.data);
+  const radius = Math.max(4, Math.round(Math.min(width, height) / 80));
+  for (let y = 0; y < height; y += 1) for (let x = 0; x < width; x += 1) {
+    let sum = 0; let count = 0;
+    for (let sampleY = Math.max(0, y - radius); sampleY <= Math.min(height - 1, y + radius); sampleY += radius) {
+      for (let sampleX = Math.max(0, x - radius); sampleX <= Math.min(width - 1, x + radius); sampleX += radius) {
+        sum += source[(sampleY * width + sampleX) * 4]; count += 1;
+      }
+    }
+    const offset = (y * width + x) * 4; const value = source[offset] > sum / count - 9 ? 255 : 0;
+    image.data[offset] = value; image.data[offset + 1] = value; image.data[offset + 2] = value;
+  }
 }
 
 function cropSource(bitmap: ImageBitmap, crop: boolean) {

@@ -1,10 +1,14 @@
 import Dexie, { type Table } from 'dexie';
 import type {
   BackupStatus,
+  AlcoholProductCatalogEntry,
   ClassificationCorrection,
   DeviceValidationResult,
   LabelAliasEntry,
   MarketPriceCandidate,
+  ProductReferenceImage,
+  IdentificationRun,
+  IdentificationLearningEvent,
   OcrCorrectionEntry,
   PostTemplate,
   SakeImage,
@@ -29,6 +33,10 @@ export class SakeLogDatabase extends Dexie {
   labelAliases!: Table<LabelAliasEntry, string>;
   classificationCorrections!: Table<ClassificationCorrection, string>;
   deviceValidationResults!: Table<DeviceValidationResult, string>;
+  productCatalog!: Table<AlcoholProductCatalogEntry, string>;
+  referenceImages!: Table<ProductReferenceImage, string>;
+  identificationRuns!: Table<IdentificationRun, string>;
+  learningEvents!: Table<IdentificationLearningEvent, string>;
 
   constructor(databaseName = 'sake-log-db') {
     super(databaseName);
@@ -124,6 +132,30 @@ export class SakeLogDatabase extends Dexie {
         await tx.table<SakeLogDraft, string>('drafts').toCollection().modify((draft) => {
           draft.revision ??= 0;
         });
+      });
+
+    this.version(5)
+      .stores({
+        logs:
+          'logId, createdAt, updatedAt, drankAt, capturedAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore, selectedMarketPriceCandidateId, importMode, status, saveOperationId',
+        images:
+          'imageId, logId, imageType, createdAt, capturedAt, imageHash, createdFromImport, sortOrder, fileName, mimeType',
+        userSettings: 'id',
+        templates: 'templateId, targetSns, updatedAt',
+        personalityResults: 'id, createdAt',
+        reviewProfileResults: 'id, createdAt',
+        backupStatus: 'id',
+        priceCandidates: 'id, logId, source, fetchedAt, recommended, matchScore',
+        externalSources: 'id, type, createdAt',
+        drafts: 'id, updatedAt, status, source, revision',
+        ocrCorrections: 'id, observedText, correctedProductName, lastUsedAt',
+        labelAliases: 'id, alias, productName',
+        classificationCorrections: 'id, fingerprint, correctedType, updatedAt',
+        deviceValidationResults: 'id, updatedAt',
+        productCatalog: 'productId, brandFamily, canonicalProductName, makerName, alcoholType, source, userConfirmed, updatedAt, *janCodes',
+        referenceImages: 'id, productId, imageHash, userConfirmed, createdAt',
+        identificationRuns: 'id, createdAt, abstained, *imageIds, *candidateProductIds',
+        learningEvents: 'id, runId, proposedProductId, confirmedProductId, action, createdAt'
       });
   }
 }

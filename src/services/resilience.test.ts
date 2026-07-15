@@ -2,6 +2,7 @@ import 'fake-indexeddb/auto';
 import { afterEach, describe, expect, it } from 'vitest';
 import { strToU8, unzipSync, zipSync } from 'fflate';
 import { db } from '../db/db';
+import { builtInAlcoholProductCatalog } from '../data/alcoholProductCatalog';
 import type { ImportedPhotoDraft, SakeLog } from '../types';
 import { exportLocalData, inspectBackup, restoreLocalData } from './backupService';
 import { isDraftDirty, loadDraft, saveDraft } from './draftService';
@@ -78,7 +79,7 @@ describe('resilient data flows', () => {
     back.imageType = 'backLabel';
     back.candidates = [{ productName: '獺祭', makerName: '旭酒造', alcoholType: 'sake', volume: 720, abv: 16, confidence: 'high', matchReasons: ['蔵元名一致'], totalConfidence: 88, requiresConfirmation: true }];
     const result = aggregatePhotoOcr([front, back]);
-    expect(result.candidates[0]).toMatchObject({ productName: '獺祭', makerName: '旭酒造' });
+    expect(result.candidates[0]).toMatchObject({ productName: '獺祭 純米大吟醸45', makerName: '旭酒造' });
     expect(result.sources.volume).toContain('裏ラベル');
   });
 
@@ -110,6 +111,7 @@ describe('resilient data flows', () => {
     await db.logs.put(baseLog('log-replace', 'operation-replace'));
     await db.personalityResults.put({ id: 'personality', answers: { a: 4 }, createdAt: '2026-01-01' });
     await db.reviewProfileResults.put({ id: 'review', mainType: 'taste', subType: 'food', createdAt: '2026-01-01' });
+    await db.productCatalog.put({ ...builtInAlcoholProductCatalog[0], source: 'user-confirmed', userConfirmed: true });
     const backup = await exportLocalData();
     await db.logs.put(baseLog('log-remove', 'operation-remove'));
     await restoreLocalData(backup, 'replace');
@@ -117,5 +119,6 @@ describe('resilient data flows', () => {
     await expect(db.logs.get('log-remove')).resolves.toBeUndefined();
     await expect(db.personalityResults.get('personality')).resolves.toBeTruthy();
     await expect(db.reviewProfileResults.get('review')).resolves.toBeTruthy();
+    await expect(db.productCatalog.get(builtInAlcoholProductCatalog[0].productId)).resolves.toMatchObject({ userConfirmed: true });
   });
 });

@@ -4,11 +4,12 @@ import { Field, Section } from '../components/Section';
 import { BUILD_INFO } from '../config/buildInfo';
 import { FEATURES } from '../config/features';
 import { defaultToneSettings } from '../data/templates';
+import { builtInAlcoholProductCatalog, mergeCatalogEntries } from '../data/alcoholProductCatalog';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { downloadBlob, exportLocalData, inspectBackup, restoreLocalData } from '../services/backupService';
 import { checkServiceWorkerUpdate, clearApplicationCaches, createSafeDiagnostics, type SafeDiagnostics } from '../services/diagnosticsService';
-import type { OcrCorrectionEntry, PostTemplate, ToneSettings } from '../types';
+import type { AlcoholProductCatalogEntry, OcrCorrectionEntry, PostTemplate, ToneSettings } from '../types';
 import { testRakutenApplicationId } from '../services/priceService';
 
 const inputClass = 'w-full rounded-md border border-rice/12 bg-ink/70 px-3 py-3 text-rice outline-none focus:border-gold';
@@ -17,6 +18,7 @@ export function Settings() {
   const settings = useLiveQuery(() => db.userSettings.get('default'), undefined);
   const templates = useLiveQuery(() => db.templates.toArray(), []);
   const corrections = useLiveQuery(() => db.ocrCorrections.orderBy('lastUsedAt').reverse().toArray(), []);
+  const storedCatalog = useLiveQuery(() => db.productCatalog.toArray(), []);
   const [status, setStatus] = useState('');
   const [rakutenId, setRakutenId] = useState('');
   const [rakutenLoaded, setRakutenLoaded] = useState(false);
@@ -24,6 +26,9 @@ export function Settings() {
   const [deviceResults, setDeviceResults] = useState<Record<string, 'success' | 'failed' | 'untested'>>({});
   const tone = settings?.toneSettings ?? defaultToneSettings;
   const [diagnostics, setDiagnostics] = useState<SafeDiagnostics | undefined>();
+  const [catalogSearch, setCatalogSearch] = useState('');
+  const [editingProduct, setEditingProduct] = useState<AlcoholProductCatalogEntry>();
+  const catalog = mergeCatalogEntries(storedCatalog).filter((item) => `${item.canonicalProductName} ${item.makerName} ${item.aliases.join(' ')}`.toLowerCase().includes(catalogSearch.toLowerCase()));
 
   useEffect(() => {
     if (!settings || rakutenLoaded) return;
@@ -88,6 +93,34 @@ export function Settings() {
     } catch {
       setStatus('OCR修正辞書を読み込めませんでした。JSON形式を確認してください。');
     }
+  }
+
+  async function saveProduct(entry: AlcoholProductCatalogEntry) {
+    await db.productCatalog.put({ ...entry, source:'user-confirmed', userConfirmed:true, hidden:false, updatedAt:new Date().toISOString() });
+    setEditingProduct(undefined);
+    setStatus('商品マスターを保存しました。');
+  }
+
+  async function hideProduct(entry: AlcoholProductCatalogEntry) {
+    if (!window.confirm(`${entry.canonicalProductName}を候補から非表示にしますか？`)) return;
+    await db.productCatalog.put({ ...entry, hidden:true, updatedAt:new Date().toISOString() });
+    setStatus('商品を候補から非表示にしました。JSON読み込みで戻せます。');
+  }
+
+  function exportCatalog() {
+    downloadBlob(new Blob([JSON.stringify(storedCatalog, null, 2)], { type:'application/json' }), 'sake-log-product-catalog.json');
+  }
+
+  async function importCatalog(file?: File) {
+    if (!file) return;
+    try {
+      if (file.size > 2 * 1024 * 1024) throw new Error('商品マスターは2MB以下にしてください。');
+      const parsed = JSON.parse(await file.text()) as AlcoholProductCatalogEntry[];
+      const valid = parsed.filter((item) => item && typeof item.productId === 'string' && typeof item.canonicalProductName === 'string' && typeof item.makerName === 'string');
+      if (!window.confirm(`${valid.length}件をID単位で結合します。続行しますか？`)) return;
+      await db.productCatalog.bulkPut(valid.map((item) => ({ ...item, source:'imported', userConfirmed:true, updatedAt:new Date().toISOString() })));
+      setStatus(`${valid.length}件の商品マスターを読み込みました。`);
+    } catch (error) { setStatus(error instanceof Error ? error.message : '商品マスターを読み込めませんでした。'); }
   }
 
   async function updateDeviceResult(key: string, value: 'success' | 'failed' | 'untested') {
@@ -186,6 +219,27 @@ export function Settings() {
             </label>
           </div>
           <button className="w-full rounded-md border border-red-300/20 px-3 py-3 text-red-200" onClick={() => window.confirm('OCR修正辞書をすべて削除しますか？') && void db.ocrCorrections.clear()}>辞書を全削除</button>
+        </div>
+      </Section>
+
+      <Section title="確認済み商品マスター">
+        <div className="space-y-3">
+          <input className={inputClass} value={catalogSearch} onChange={(event) => setCatalogSearch(event.target.value)} placeholder="銘柄・蔵元・別名を検索" />
+          <p className="text-xs text-rice/55">内蔵 {builtInAlcoholProductCatalog.length}件 / 端末内の確認・編集 {storedCatalog.length}件。保存時にユーザーが確定した商品のみ学習します。</p>
+          <div className="max-h-96 space-y-2 overflow-auto">
+            {catalog.slice(0, 80).map((entry) => <div key={entry.productId} className="rounded-md bg-rice/8 p-3">
+              {editingProduct?.productId === entry.productId ? <div className="grid gap-2">
+                <input className={inputClass} value={editingProduct.canonicalProductName} onChange={(event) => setEditingProduct({ ...editingProduct, canonicalProductName:event.target.value })} />
+                <input className={inputClass} value={editingProduct.makerName} onChange={(event) => setEditingProduct({ ...editingProduct, makerName:event.target.value })} />
+                <input className={inputClass} value={editingProduct.aliases.join(', ')} onChange={(event) => setEditingProduct({ ...editingProduct, aliases:event.target.value.split(',').map((value) => value.trim()).filter(Boolean) })} />
+                <div className="grid grid-cols-2 gap-2"><button className="rounded bg-gold px-3 py-2 text-ink" onClick={() => void saveProduct(editingProduct)}>保存</button><button className="rounded bg-rice/10 px-3 py-2" onClick={() => setEditingProduct(undefined)}>キャンセル</button></div>
+              </div> : <>
+                <p className="font-bold">{entry.canonicalProductName}</p><p className="text-xs text-rice/55">{entry.makerName} / {entry.alcoholType} / {entry.source}</p>
+                <div className="mt-2 grid grid-cols-2 gap-2"><button className="rounded bg-rice/10 px-3 py-2 text-sm" onClick={() => setEditingProduct(entry)}>編集</button><button className="rounded border border-red-300/20 px-3 py-2 text-sm text-red-200" onClick={() => void hideProduct(entry)}>非表示</button></div>
+              </>}
+            </div>)}
+          </div>
+          <div className="grid grid-cols-2 gap-2"><button className="flex items-center justify-center gap-2 rounded bg-rice/10 px-3 py-3" onClick={exportCatalog}><Download size={17} />書き出し</button><label className="flex cursor-pointer items-center justify-center gap-2 rounded bg-rice/10 px-3 py-3"><Upload size={17} />読み込み<input className="hidden" type="file" accept="application/json" onChange={(event) => void importCatalog(event.target.files?.[0])} /></label></div>
         </div>
       </Section>
 

@@ -1,4 +1,4 @@
-import { Camera, CheckCircle2, Search, XCircle } from 'lucide-react';
+import { Camera, CheckCircle2, RotateCw, ScanLine, Search, XCircle } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { RadarChart } from '../components/RadarChart';
 import { Field, Section } from '../components/Section';
@@ -11,12 +11,14 @@ import { confidenceLabel } from '../services/confidenceService';
 import { deleteDraft, hydratePhotos, isDraftDirty, loadDraft, saveDraft, serializePhotos } from '../services/draftService';
 import { recordClassificationCorrection, recordOcrCorrection } from '../services/ocrLearning';
 import { aggregatePhotoOcr } from '../services/ocrAggregation';
+import { confirmCatalogCandidate, recordIdentificationRun } from '../services/brandIdentification';
 import { mergePhotoDraft, mergePhotoDrafts, uniqueImportFiles } from '../services/photoQueue';
 import {
   createImportedPhotoDraftsSequential,
   imageTypeLabel,
   MAX_IMPORT_FILES,
   photoFileKey,
+  reanalyzePhotoDraft,
   type PhotoImportProgress
 } from '../services/photoImport';
 import { historyPriceCandidates, manualPriceCandidate, searchRakutenPrices, selectedPriceSnapshot } from '../services/priceService';
@@ -64,12 +66,16 @@ export function Record({
   const [isSearching, setIsSearching] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [priceCandidates, setPriceCandidates] = useState<MarketPriceCandidate[]>([]);
+  const [selectedProductCandidate, setSelectedProductCandidate] = useState<CandidateMatch>();
   const [status, setStatus] = useState('');
   const [duplicateChoices, setDuplicateChoices] = useState<SakeLog[]>([]);
   const [savedLogId, setSavedLogId] = useState<string | undefined>();
   const [draftId, setDraftId] = useState(() => resumeDraftId ?? crypto.randomUUID());
   const [draftReady, setDraftReady] = useState(!resumeDraftId);
   const [draftStatus, setDraftStatus] = useState('');
+  const [crop, setCrop] = useState({ x:0.12, y:0.27, width:0.76, height:0.56 });
+  const [cropRotation, setCropRotation] = useState(0);
+  const [isReanalyzing, setIsReanalyzing] = useState(false);
   const abortRef = useRef<AbortController | undefined>();
   const draftsRef = useRef<ImportedPhotoDraft[]>([]);
   const draftCreatedAtRef = useRef(new Date().toISOString());
@@ -178,6 +184,11 @@ export function Record({
   useEffect(() => {
     draftsRef.current = drafts;
   }, [drafts]);
+
+  useEffect(() => {
+    const region = activeDraft?.labelRegions?.find((item) => item.kind === 'center' || item.kind === 'manual');
+    if (region) setCrop({ x:region.x, y:region.y, width:region.width, height:region.height });
+  }, [activeDraft?.id, activeDraft?.labelRegions]);
 
   useEffect(() => {
     if (!draftReady || savedLogId || !isDraftDirty(form as unknown as Record<string, unknown>, initialFormRef.current as unknown as Record<string, unknown>, drafts.length, priceCandidates.length)) return;
@@ -301,6 +312,7 @@ export function Record({
     setForm(initial);
     initialFormRef.current = initial;
     setPriceCandidates([]);
+    setSelectedProductCandidate(undefined);
     setDuplicateChoices([]);
     setSavedLogId(undefined);
     setStatus('');
@@ -331,6 +343,7 @@ export function Record({
   }
 
   function applyCandidate(candidate: CandidateMatch) {
+    setSelectedProductCandidate(candidate);
     setForm((current) => ({
       ...current,
       productName: candidate.productName ?? current.productName,
@@ -402,6 +415,16 @@ export function Record({
       const saved = await saveLogTransaction({ log, images, priceCandidates: candidatesToSave });
       setSavedLogId(saved.logId);
       const warnings: string[] = [];
+      if (selectedProductCandidate?.productId) {
+        const runId = await recordIdentificationRun({
+          imageIds: images.map((image) => image.imageId), text:aggregatedOcr.text,
+          barcodes:[...new Set(drafts.flatMap((draft) => draft.barcodeValues ?? []))],
+          candidates:displayedCandidates, processingTimeMs:drafts.reduce((sum, draft) => sum + (draft.processing?.totalMs ?? 0), 0)
+        });
+        const referenceDraft = activeDraft?.visualFingerprint ? activeDraft : drafts.find((draft) => draft.visualFingerprint);
+        await confirmCatalogCandidate(selectedProductCandidate, runId, 'accepted', referenceDraft?.visualFingerprint ? { imageHash:referenceDraft.imageHash, sourceImageId:referenceDraft.id, fingerprint:referenceDraft.visualFingerprint } : undefined)
+          .catch(() => warnings.push('確認済み商品マスターの更新だけ失敗しました。'));
+      }
       if (aggregatedOcr.text && form.productName.trim()) {
         const eventId = `${saved.logId}|${activeDraft?.imageHash ?? 'manual'}|${form.productName.trim()}`;
         await recordOcrCorrection({
@@ -472,6 +495,19 @@ export function Record({
       if (draft.id !== id) return draft;
       return { ...draft, imageType, classificationConfirmed: true };
     }));
+  }
+
+  async function reanalyze(mode: 'standard' | 'vertical' | 'latin') {
+    if (!activeDraft || isReanalyzing) return;
+    setIsReanalyzing(true);
+    setStatus(mode === 'vertical' ? '縦書きモデルを準備しています。' : mode === 'latin' ? '英字主体で再解析しています。' : '指定範囲を再解析しています。');
+    try {
+      const updated = await reanalyzePhotoDraft(activeDraft, { region:crop, rotateDegrees:cropRotation, mode });
+      setDrafts((current) => current.map((draft) => draft.id === updated.id ? updated : draft));
+      setStatus(updated.message ?? '再解析しました。');
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : '再解析できませんでした。');
+    } finally { setIsReanalyzing(false); }
   }
 
   if (savedLogId) {
@@ -590,6 +626,28 @@ export function Record({
             </p>
           ) : null}
           {activeDraft?.ocr.preprocessing?.length ? <p className="mt-1 text-xs text-rice/50">前処理: {activeDraft.ocr.preprocessing.join(' / ')}</p> : null}
+          {activeDraft?.quality ? (
+            <div className="mt-3 rounded-md bg-ink/50 p-3 text-xs text-rice/65">
+              <p className="font-bold text-gold">画像品質</p>
+              <p>鮮明度 {Math.round(activeDraft.quality.blurScore * 100)} / 明るさ {Math.round(activeDraft.quality.brightnessScore * 100)} / コントラスト {Math.round(activeDraft.quality.contrastScore * 100)}</p>
+              {activeDraft.quality.warnings.length ? <p className="mt-1 text-red-200">注意: {activeDraft.quality.warnings.join(' / ')}</p> : <p className="mt-1">重大な品質警告なし</p>}
+            </div>
+          ) : null}
+          {activeDraft && (displayedCandidates.length === 0 || (displayedCandidates[0]?.calibratedConfidence ?? 0) < 86) ? (
+            <div className="mt-4 space-y-3 rounded-md border border-gold/25 bg-ink/50 p-3">
+              <div className="flex items-center gap-2 font-bold text-gold"><ScanLine size={17} />ラベル範囲を指定して再解析</div>
+              <CropEditor draft={activeDraft} crop={crop} onChange={setCrop} />
+              <div className="grid grid-cols-[1fr_auto] gap-2">
+                <p className="text-xs text-rice/55">四隅をドラッグしてラベルだけを囲んでください。</p>
+                <button className="flex items-center gap-1 rounded bg-rice/10 px-3 py-2 text-xs" onClick={() => setCropRotation((current) => (current + 90) % 360)}><RotateCw size={15} />{cropRotation}°</button>
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                <button disabled={isReanalyzing} className="rounded bg-gold px-2 py-2 text-xs font-bold text-ink disabled:opacity-50" onClick={() => void reanalyze('standard')}>表ラベル</button>
+                <button disabled={isReanalyzing} className="rounded bg-rice/10 px-2 py-2 text-xs disabled:opacity-50" onClick={() => void reanalyze('vertical')}>縦書き</button>
+                <button disabled={isReanalyzing} className="rounded bg-rice/10 px-2 py-2 text-xs disabled:opacity-50" onClick={() => void reanalyze('latin')}>英字主体</button>
+              </div>
+            </div>
+          ) : null}
           {importMode === 'singleLog' && drafts.length > 1 ? (
             <div className="mt-3 rounded-md bg-ink/50 p-3 text-xs text-rice/65">
               <p className="font-bold text-gold">複数写真のOCRを統合</p>
@@ -766,6 +824,31 @@ export function Record({
       </Section>
     </div>
   );
+}
+
+function CropEditor({ draft, crop, onChange }: { draft: ImportedPhotoDraft; crop: { x:number; y:number; width:number; height:number }; onChange: (value: { x:number; y:number; width:number; height:number }) => void }) {
+  const move = (corner: 'nw' | 'ne' | 'sw' | 'se', event: React.PointerEvent<HTMLButtonElement>) => {
+    const container = event.currentTarget.parentElement;
+    if (!container) return;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    const update = (pointer: React.PointerEvent<HTMLButtonElement>) => {
+      const rect = container.getBoundingClientRect();
+      const x = Math.max(0, Math.min(1, (pointer.clientX - rect.left) / rect.width));
+      const y = Math.max(0, Math.min(1, (pointer.clientY - rect.top) / rect.height));
+      const right = crop.x + crop.width; const bottom = crop.y + crop.height; const min = 0.08;
+      if (corner === 'nw') onChange({ x:Math.min(x, right - min), y:Math.min(y, bottom - min), width:right - Math.min(x, right - min), height:bottom - Math.min(y, bottom - min) });
+      if (corner === 'ne') onChange({ x:crop.x, y:Math.min(y, bottom - min), width:Math.max(min, x - crop.x), height:bottom - Math.min(y, bottom - min) });
+      if (corner === 'sw') onChange({ x:Math.min(x, right - min), y:crop.y, width:right - Math.min(x, right - min), height:Math.max(min, y - crop.y) });
+      if (corner === 'se') onChange({ x:crop.x, y:crop.y, width:Math.max(min, x - crop.x), height:Math.max(min, y - crop.y) });
+    };
+    update(event);
+  };
+  const positions = { nw:{ left:crop.x, top:crop.y }, ne:{ left:crop.x + crop.width, top:crop.y }, sw:{ left:crop.x, top:crop.y + crop.height }, se:{ left:crop.x + crop.width, top:crop.y + crop.height } } as const;
+  return <div className="relative aspect-[4/5] overflow-hidden rounded bg-black/40 touch-none">
+    <img src={draft.previewUrl} alt="再解析するラベル範囲" className="h-full w-full object-contain" />
+    <div className="pointer-events-none absolute border-2 border-gold bg-gold/10" style={{ left:`${crop.x * 100}%`, top:`${crop.y * 100}%`, width:`${crop.width * 100}%`, height:`${crop.height * 100}%` }} />
+    {(Object.keys(positions) as Array<keyof typeof positions>).map((corner) => <button key={corner} aria-label={`${corner}の切り抜き位置`} className="absolute h-7 w-7 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-ink bg-gold shadow" style={{ left:`${positions[corner].left * 100}%`, top:`${positions[corner].top * 100}%` }} onPointerDown={(event) => move(corner, event)} onPointerMove={(event) => event.currentTarget.hasPointerCapture(event.pointerId) && move(corner, event)} />)}
+  </div>;
 }
 
 function ScoreInput({ label, value, onChange }: { label: string; value: number; onChange: (value: number) => void }) {

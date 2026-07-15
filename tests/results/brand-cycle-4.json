@@ -1,1092 +1,1526 @@
 {
-  "summary": {
-    "totalImages": 72,
-    "textHitRate": 1,
-    "emptyResultRate": 0,
-    "averageProcessingTimeMs": 5511,
-    "maxProcessingTimeMs": 13586,
-    "aggregation": "Distinct text from original, center-label and label-band OCR passes"
+  "cycle": 4,
+  "evaluatedAt": "2026-07-15T02:04:48.735Z",
+  "algorithmChange": "同一商品グループの表・裏・全体写真OCRを統合し反復根拠を加点",
+  "metricsBySplit": {
+    "tuning": {
+      "images": 40,
+      "knownImages": 34,
+      "exactProductDenominator": 23,
+      "candidateDisplayRate": 0.3824,
+      "top1Accuracy": 0.3913,
+      "top3Recall": 0.3913,
+      "top5Recall": 0.3913,
+      "brandFamilyAccuracy": 0.3824,
+      "makerAccuracy": 0.3824,
+      "alcoholTypeAccuracy": 0.3824,
+      "volumeAccuracy": 0,
+      "abvAccuracy": 0,
+      "falsePositiveRate": 0,
+      "unknownCandidateRate": 0.1667,
+      "abstentionRate": 0.65,
+      "missedCandidateRate": 0.6176,
+      "highConfidenceWrong": 0,
+      "p50ProcessingTimeMs": 5169,
+      "p95ProcessingTimeMs": 8890,
+      "averageIdentificationTimeMs": 0
+    },
+    "validation": {
+      "images": 16,
+      "knownImages": 15,
+      "exactProductDenominator": 12,
+      "candidateDisplayRate": 0.2,
+      "top1Accuracy": 0.1667,
+      "top3Recall": 0.1667,
+      "top5Recall": 0.25,
+      "brandFamilyAccuracy": 0.1333,
+      "makerAccuracy": 0.2,
+      "alcoholTypeAccuracy": 0.2,
+      "volumeAccuracy": null,
+      "abvAccuracy": 0,
+      "falsePositiveRate": 0.0667,
+      "unknownCandidateRate": 0,
+      "abstentionRate": 0.8125,
+      "missedCandidateRate": 0.8,
+      "highConfidenceWrong": 0,
+      "p50ProcessingTimeMs": 6008,
+      "p95ProcessingTimeMs": 9815,
+      "averageIdentificationTimeMs": 0
+    }
   },
-  "results": [
+  "holdoutSealed": true,
+  "records": [
     {
       "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "laphroaig-triple-wood",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "Laphroaig",
+      "expectedProductName": "Laphroaig Triple Wood",
+      "topCandidates": [
+        {
+          "productId": "whisky-laphroaig-triple-wood",
+          "brandFamily": "Laphroaig",
+          "productName": "Laphroaig Triple Wood",
+          "makerName": "Laphroaig Distillery",
+          "alcoholType": "whisky",
+          "confidence": 53,
+          "reasons": [
+            "ブランド一致: Laphroaig",
+            "バリエーション語一致: ISLAY"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "いいっの\n\nの\n\nや\n\nZS\n\nTIL\n\nゃや\n--- OCR VARIANT ---\n庫了 での\n ム 3 ー で2 ‘e.\n中 A\n\n。 9 『 N\na d の, &\n% at. td < TI 2\n= る\n--- OCR VARIANT ---\nno\n8 . 」』 ア ‘e.\n od \"\ns の <\nドコ - んのっ",
       "ocrConfidence": 0.57,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 2030,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.003400000001420267,
+      "abstained": false
     },
     {
       "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "hibiki-harmony",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "響",
+      "expectedProductName": "響 Japanese Harmony",
+      "topCandidates": [
+        {
+          "productId": "whisky-hibiki",
+          "brandFamily": "響",
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 44,
+          "reasons": [
+            "別名一致: HIBIKI"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "o$5\n\nTHS waY A’\n\nミー\n\nココ川\n\n「\n\nHIpIKI\n\nONrony WHISKY\n\nneio JAPANES E HARMONY\n\nme\n\nblend of the finest\n\na\n\nクア\n--- OCR VARIANT ---\n*\nUE— _\nConiiia\nンー\nデンーー年 で\nrmr ー 7計 wi 』\n剛ー 串間ー ー 。 ー\n、財!虹同 上 山川\n- E_. go — ー\n ー\n』 /\nHIBIKI ——\nSUNTORY wirsky\nmaa ANESE HARMON)\n--- OCR VARIANT ---\n部品半5\n1 、。 mm 且占革\nンプーー\nンー 4 _\nーー一-ニ一所\n帆遼間太ー人串ー\nLE\nN ー 、 =1\n有利ー 5 N f ー\n— _- ッッイム ー— _\n “_N\nHIpIKI K -—\n$UNTORY WHISKY h 』\nにOwnが0一\nL 。 で ーー テー 識",
       "ocrConfidence": 0.43,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3902,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0007000000041443855,
+      "abstained": false
     },
     {
       "fileName": "3780045A-CF34-4840-A568-B8E57175AA1D.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "w-yamadanishiki",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "W",
+      "expectedProductName": "W 純米 山田錦",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "R\n\nb'\n\nミーニー\n\n次\n\nh .\n\nーー-。衝\n\nが引 way A\n\nリ\n\nohs\n\n[597,\n\nゃる\n\nし\n\nSN\n\nーー お旦\n\nhe Ja\n\nSaki\n\nWI\n\nY,\n\nNH\n\nSutdll\n\n5 語\n\nーッ\n\nom -ya\n\nる\n\nk\n\n2 衝\n\n aTN\n\nッー\n\nも\n--- OCR VARIANT ---\n人操0 ,\n‘ THES way CT ー 。 . トム\n—— 41 = 4\nT =&\nー 計\n 癌表意 、 匠>\n\" oE ー ーー\n剛 N ー »\n ECT\nー . 癌所品こ mes\n ie ーッ\n7 全0\n; WM y pANISH R\nー 議 . ) ! ・ ) ー。 3 B— * に の\n--- OCR VARIANT ---\nルー 0 月 本\n THeS way {R y\n__! 本\nHE ~\n0\n し\n. 等\nー ・ 3\n. [So\ng . L.\ny Fi\nberin\n~ix Bm にがいる aa\n<oo N—\n ちち\" SaAa\n。和mem ske ] 。 ’5\nー : (ー ー Ga. 日\n JUNMAa pa — ny\nー h Sluzouect Er",
       "ocrConfidence": 0.28,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5408,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0004000000044470653,
+      "abstained": true
     },
     {
       "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nabeshima-purple",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鍋島",
+      "expectedProductName": "鍋島 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "ド誠\n\nJol) e\n\nペッンンメン\n\nf2s\n\n>\n\nTHIS WAY\n\nアマンカ\n\nーージョ\n\n#\n\nーーが7\n\nW\n\np\n\niN\n\nW\n\nー 一一\n\n> ®\n\n® l\n\nhalt ー\n\n—\n\n6\n\n= P\n\n¥:\n\nーーを\n\n5\n\nも\n\n$:\n\n競馬\n\n&\n--- OCR VARIANT ---\n2 [ー Ea\n\n WW ARRY ー NM 。\n/ ーーニーニニーー 4\ny \\ 1\n\n B リ ! V\n\n —\n\n ー i 4 s ー\n\n合計 E ー —\n\n= W ーー\n\n生還本 (0 ーー\n\n - BERLF. ー\n\n_ E\n--- OCR VARIANT ---\nQ mmm ー —\n\nBR 「5wy ASRY \\\nご ば 一 — 4\n\n\" ィ\n\nFsil R, (人 ー\n ー\n\n HYー —-—\n\n EEA.\n\naa— M 6 ーー ,\n\n間二一 「 (4うう e\n\n— 「 用 —\n\n回\n\n> と i ® ) 7 。",
       "ocrConfidence": 0.33,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 4328,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "5077832F-9F46-42EB-A4A6-DE4A9F57C672.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "kameshizuku",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "甕雫",
+      "expectedProductName": "甕雫",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "-\n\nR\n\nSぐ\n\nmm\n\nAN\n\ny,\n\nいい全\n\n4\n--- OCR VARIANT ---\nて 僚\nし湖上 2 5\nw=\n= ーージー ~J\n ・全、\n。 に、、\nh\n’ で4 E\n.. 7 =\nX\nNY\n<Y\nん パソ2\n【] 4\n6 ング\nミタアア\n ば のムシ\n--- OCR VARIANT ---\ny BI\n]\n S\nCow “A\n’\nに3\n0 ゃ> 導症 上\n* 。 .\n。 と2\nの 2\nロ 0\n0 ング\nミア\nの2タタ/ダ\n へ\n SS",
       "ocrConfidence": 0.34,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 2572,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": true
     },
     {
       "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "unknown-kikota",
+      "split": "validation",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "喜荒太",
+      "expectedProductName": "喜荒太",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "人ー 、\n\nJol\n\nヘッグン\n\nec\n\n所 。\n\nR =\n\n+ ti —\n\nがが ]\n\nTHIS WAY\n\nR\n\nbr\n\nた\n\nミラ\n\nIit\n\n太\n\n本\n\nト B\n--- OCR VARIANT ---\nにに ” , ツヲ4 . ー にと B—— } R,\nmswy A em ー\nー 金貸 話ヨーニーー一一\nに ba に\n§ 7 電\nONR +\n §\n— y Mt\nーー &\nAET § -\n= E [ 米 る\nak e s\n_— N] でラ 3\n【生三世ー\n一一 ーー . . A 7て 0 < 。 。\n ・平半\n--- OCR VARIANT ---\n. J! - も にニー ー 一 一目 - ) :\nTHisway X om, ym\nーー 4 ー [EY /\n—_—\nEil: — pe—\nnp b ( ee 4\nrEl\n1 / NM 、\n .9 量\n0al t\nW \\E\n—_— ー y/ \\ 純 & \\ B と を\n&t ぶ 米 と\nだこ のる ーー\n = ) = [ の の ー ーー一 >\n—— Pn— ご\n人 をづ :\n Tr P 上\n IERN\nーー - ー}\nEN v - .\nA Y ー *《 / ..",
       "ocrConfidence": 0.37,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5682,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "laphroaig-triple-wood",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "Laphroaig",
+      "expectedProductName": "Laphroaig Triple Wood",
+      "topCandidates": [
+        {
+          "productId": "whisky-laphroaig-triple-wood",
+          "brandFamily": "Laphroaig",
+          "productName": "Laphroaig Triple Wood",
+          "makerName": "Laphroaig Distillery",
+          "alcoholType": "whisky",
+          "confidence": 53,
+          "reasons": [
+            "ブランド一致: Laphroaig",
+            "バリエーション語一致: ISLAY"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "(をが\n\nQ\n\nId\n\nCSの7\n\nENTTO HRH THE PRINCE OF WarEe\n\nENSTON &CO。 (LAPHROAIG) ISLE OF isuay\n\nAND\n\nDSUPPLIER OF SINGLE MALT SCOTch ws\n\n\\PHROA\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\n11\n\nf\n\nTRIP\n\nTHPLEMATURED FOR PEAT\n\n【\n\nWost Tichly flavon\n\n3\n\n1\n\nESTD ー 軒\n\n3\n\nDammrmp AND BOTTLED IN 8007 -\n\n[4\n\nY &co, » LAPHROAIG DISTILE\n--- OCR VARIANT ---\nー isnAY SINGLE MALT\nIL SCOTCH WHISKY\n\"弟 TIPEMATURED FOR PEAT, DAK AND SUSTLE NH\nA d 』 fot Tichly flavoured of all geote? WP\n--- OCR VARIANT ---\n1 § sLAY SINGLE MALT\n』 SCOTCH WHISKY\n ー TRI P LE 1 ー ー\n作 jUHTTHHTDれUTUUEMIはNG\n。 ー 生u fienly flavoured of all Scote? ©\nF\nay wern §QTL por",
       "ocrConfidence": 0.6,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3280,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": false
     },
     {
       "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nikka-coffey-malt",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "ニッカ",
+      "expectedProductName": "ニッカ カフェモルト",
+      "topCandidates": [
+        {
+          "productId": "whisky-nikka-coffey-malt",
+          "brandFamily": "ニッカ",
+          "productName": "ニッカ カフェモルト",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 47,
+          "reasons": [
+            "別名一致: COFFEY MALT WHISKY"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
+      "abvTop1": false,
       "ocrText": "——\n\nP §\n\n ママ 7\n\nTHIS WAY\n\nド\n\ni.\n\nCOFFEY\n\nym\n\nWHI\n\nルルを\n\nー\n\nト Ng\n\n部[ー\n\nIIKKA\n\nCOF\n\nWHI\n\n4 ALT m==\n\nポクェモルト\n\nへNm\n\n/ 4\n--- OCR VARIANT ---\nー —\n。 のmv 上\nンー T -N\n等 —\n0 oe\n御:\nすー ー iM 骨\nHIKKA E—3\nCOFFEY MALT ==Jgmm\nWHISKY =\nの\n! がェモル ト Ns\nー ー Aedsy NIKKAWHISKY ウッ7が 。\n』\n= E\n--- OCR VARIANT ---\ne リリ 25 E\n ?\nE a. .\n/}\n/ & —hTMN &\n[ 人 & 9 4 ー 7 \"\nー 恒 ”\nLER ー 間\nHIKKA -\nCOFFEY MALT TM== —\nWHISKY S\nGo\n.LTD,, JAPAN 2 ツ\nがフェモルト -\n45% NIKKAWHISKY 7が\n 』\n. Y",
       "ocrConfidence": 0.41,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3559,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": false
     },
     {
       "fileName": "B2B359C6-662B-4C7B-B971-773C9E2484C9.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "aramasa-2020",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "新政",
+      "expectedProductName": "新政 2020 美山錦",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "5 J\n\n用yp *\n\n作 §\n\nLB)\n\n1%\n\n“Yh\n\nー\n\n電\n\n=\n\nー Wd\n\n'電2\n\nぎ\n\n』\n\nし ) ー\n\n用\n\nと 2\n\nore\n\n__B\n\nーB\n\nA\n\no\n\n202¢€\n\nービ\n\nPT\n\nジミ\n\np\n\nG\n\nX\n\nV\n\nング\n\n美山錦\n\n® /\n--- OCR VARIANT ---\n. ー #\nB T za\nHA 、\nる ー %\n則 ヶ\n」 ーー WW 計関\n N ご\n/ いい\n一 CR\n。 ーー\n LA N—\n/ al いい\n/ 地主 -\nリ いい科。 i\\\n本 / I /生 is\n\\ ! 3 b h \\ ¥\n: ud ー しい識ー もー\nーー一 /午全ー -\nーー = ー 4\nー に1\nam ー のワク2のひ。\ng. ' 28 リン\n 」 _ f\n-. . ー ——\n FETTEELLll リィ\n--- OCR VARIANT ---\n3 [ー\n。 、 由」\n ー 「 ンタ\n. ー t ア, 枯\n] MN )1\n/ \\ い ご\n/ TAN\n5 / ・. 電\ny/- —\n»i 14\" i\n/ TANR\n/ ー AR\n/ 電 計\n4 リィ 「 生l '\n__- am ;\nいで E 韻しー 衝\nーー王 中 -\n ー A ®\nL— a ¥ ー\n- 5 1\nまま .N 2020 P\"\n f ーー ーー _ai\n —a\nrraantenll EE リト\n。 導が\nA% o —~ -\n 3 \"4 Z ヘー a\nh, E",
       "ocrConfidence": 0.36,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6787,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0004000000044470653,
+      "abstained": true
     },
     {
       "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "karine-premium",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "香里音",
+      "expectedProductName": "香里音 karine PREMIUM",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "f\n\nる *\n\n1 月放\n\nw\n\nに\n\n * y J\n\n4\n\nりー\n\n4\n\n del\n\nH\n\nCレアシ7ンバ\n\n委\n--- OCR VARIANT ---\n町」 で ー mam - 3\nTHS WAY ん し 『 境。 -r\n[f R Ci\n# 【\n) 5 * \\ いい\n. y が をー は 作、\nE 4\nbo4 時 て\nー 1 \\ 中\n「 幼 2 1\n川上\n着 ー に ー 1 -\nーー mom ー ゝ\n35 すさ 1 則四eg\nまま は ゴゴ 画庫 e、\nソソ 。球うお\n» iv R Hgte むす\nmm つつ話 ー\n に\nー 衝\nE =\n/ _ 放 )\n/ 語ig [e 28.2 F\n--- OCR VARIANT ---\nHIS WAY ギヤ し B に いて 区\nmg 光\nー ~4 !生 へ\nー //す用 } »\nー / ー # A >\nLil ー \\ B\nTIYTR の4 で\n 芝 { \\ 計時\nf ) ー\n& [Ip E3 .\n 用 ー -\n3E すき は BEL ud — \\\nSECRERS 衝間 - ’\nr 部ー AY\nvid C, i — 。 j に\n { 人めの 』 ー (el は - N\nーー ー 訓 ーー か\nT— ー EE\n 用前\nー 衝\nSl h\nだ 里 音 —\n? グ . : ーー\n! ダグ a Am a Bq 急/ 上上 sod #",
       "ocrConfidence": 0.31,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6346,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "E8A1A542-94AE-4884-A368-8CCAC773FDA8.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "yamazaki",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "山崎",
+      "expectedProductName": "山崎",
+      "topCandidates": [
+        {
+          "productId": "whisky-yamazaki",
+          "brandFamily": "山崎",
+          "productName": "山崎",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 57,
+          "reasons": [
+            "正式商品名一致: 山崎"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-yamazaki-12",
+          "brandFamily": "山崎",
+          "productName": "山崎 12年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 41,
+          "reasons": [
+            "ブランド一致: 山崎"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-yamazaki-18",
+          "brandFamily": "山崎",
+          "productName": "山崎 18年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 41,
+          "reasons": [
+            "ブランド一致: 山崎"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "に 』\n\n~\n\n内 で\n\no\n\nー =\n\nw —\n\n66\n\nal\n\nを\n\nー\n\n—\n\nPN\n\nTHIS WAY\n\n»\n\nIr\n\nー\n\nドン\n\n/<\n\n4 $\n\nくる\n\nテ\n\nンー\n\nー月\n\nae\n\nーー\n\nアイィン\n\nTHE\n\nJ)\n\nに\n\nYAMAZAKI\n\nSNGLE MALT\n\n2\n\nJAPANESE WHISKY\n\n0\n\nax\n\nTE\n\notyw\n\nイスキー\n\n。 の\n\n-\n\nMks 20 o B\n\nT\n\nリ\n\n哨 ー\n\nー\n\nーー \\\n\n—N\n\nレン\n\nアテ アー\n--- OCR VARIANT ---\n9 ~ ーー ・問 5 4\nビー ー るお,\n =\nイク ンー\n\ne= fo— a@t\n\n[ ain ー ーー 4\nテーン 、/ THE [ 加計\nア WMAZAKI ん。 -\nSINGLE MALT / ー\n[ JAPANESE WHISKY & oL\n4 る )\n[EGG \"\nw Ta 2キー ンジ 1 当\naes 2 507 8 1 て - '3\n--- OCR VARIANT ---\n«\n- 1 M R.\n5 コミリー一一\nop 79 : ~ { y\n— 。 ーー 5 ーー ロ\n本 ーー ンー\n_ oe交m】 fifs も4 』 \\ )\nゃ io 間 2\nて -\nーー l _\n全て THE [ 73 - ] に\nーー間 AMAZAKI & -\ny SINGLE MALT 』 ;\n[ APANESE WHISKY & 0 ai7\nAN ~Q ciinn, g F\nHH :\n ビー が にーー ゃ\n 第 ー [に 】\n山崎蒸汐所痢 = Seal!\nuTR oTh .\nV) E——\n Pod .",
       "ocrConfidence": 0.31,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6426,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": false
     },
     {
       "fileName": "IMG_1703.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "karine-premium",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "香里音",
+      "expectedProductName": "香里音 karine PREMIUM",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "/\n\nしあ\n\n-\n\nh\n\nに\n\n<\n\nTHIS WAY\n\n}\n\nド\n\n/\n\n//\n\nーー\n\n人リ7\n\np\\\n\nB:\n\nに\n\n(グリ の ング4\n\nし放折衝\n\nitU り\n--- OCR VARIANT ---\n——— ー \\ a— + EM* 。。\n1 y/ の -\nkt flly ごが\n) / - キャきり\nNs WAY 4) mf二\n/ Ts 閣1\n/』弟gs 1\n に\n/ ー ,\nf 4 ー\nリー ー ー\n 記 3 』\n間 ]\n癌本 こい\nN し 加導ー Jhe\n w B l ;\n。 RTN ここ、まっ\nーー 。 YT El\nー と (ー ー ~\n. l 4\n. :\n剛 4ュー\n/ & 2 v E\n\\ テー Pid Ne A/\n--- OCR VARIANT ---\natmee が し mp f\n\" / 1\n1 uuまSN\nTHIS WAY WV / リ ド・ 1 ¥ *\nA——\ne \"R\n=8\nUEW\\d®\nf 昌幸/\n/ é1 ;\nーf 4 ー\n-c 直上 TM .\nie oN\n UNYS\nー 9 H ー リリ N i Bu ; :\nアリ に5 上55 大\n 川 で\n,\n凍り 9\n間 1 な\n‘) ; £ -\nだ\n、 2テアフィて\n{ 5識0邊洛しリリ",
       "ocrConfidence": 0.27,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6606,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_1704.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "kubota-senju",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "久保田",
+      "expectedProductName": "久保田 千寿 純米吟醸",
+      "topCandidates": [
+        {
+          "productId": "sake-kubota",
+          "brandFamily": "久保田",
+          "productName": "久保田",
+          "makerName": "朝日酒造",
+          "alcoholType": "sake",
+          "confidence": 40,
+          "reasons": [
+            "別名一致: KUBOTA"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "N\n\n___=\"\n\nn\n\n所\n\n用(0\n\nTHIS WAY\n\nIy\n\nUE\n\n(』\n\nり\n\n計\n\naY)\n\nーー\n\n純\n\nママ\n\nt\n\nKUBoTa\n--- OCR VARIANT ---\n二パーーに\nui 人\n(ll 4\nB f\n有川計ー S\n~ar rid\nB\nママ, 生 に\n米\n吟\n--- OCR VARIANT ---\nし生 J .ず リ 。 adl\nww 朋作\ne” —\n'N いい\nof 4\nー ) ー\ni252il まま B ヶ\nいて\n- 時 3\nー\n< B\n*\nT\nBR",
       "ocrConfidence": 0.25,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3256,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0004000000044470653,
+      "abstained": false
     },
     {
       "fileName": "IMG_2048.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "multi-hibiki-miyagikyo",
+      "split": "tuning",
+      "groundTruthStatus": "unknown",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": true,
       "ocrText": "いいヽ、、、\n\n]\n\n回\n\np\n\nYo\n\n==—\n\na\n\n—\n\n—\n\n<\n\n2\n\nーー\n\nーー.\n\n本\n\npd\n\nいい、 ST\n\n> ニカング\n\n0 ー\n--- OCR VARIANT ---\n生計 ーー 開 4 L # リンンー YO\nー [os Cgla , ッ \\ \\\" y ! ーー\n5 もンジーー\npd\n__mas ーー ーー\nーーンジーータテ/ グー\nーー = ンプ\nコ A j dd >\nー ビービビプイマツ 。\n { \\ 。 ー\nー一\n: ー ー ー § <\n=-—a= 各画。 」\nーー _ q-- - ーージマvm\n店 EN ーー ごーー ー ー すこ CE\nETR i . 』\nHEE] er il\n隊 剛 。\n! し:\n 半 皿\n し\nの\nいい』\n。\n1 上リリ\nー # 19\nー\nンー ym用導 .\n ペーンー\nト ーーイル —-—\n\"siョシンンプ\n--- OCR VARIANT ---\nレー 同人陰 ーー E=\" ~psewsmcon\n“5B Wgy —=——\nw —\nー ー ーー m を\naa ーー / »/ &F ~ 4\nヘッツン ルー &h\nー ・ I ーッ アア\n関時 モモキ7* 3\nに\n\n: - の Wi SeEE \\ ー } 1\nデーッー .基語語 ー 貞\n\n ジー Be. 5 4 ー / ーー ;\n= SE. [N ー\nrm B —\n1H] Blg in 回 ー\n邊引前 a ーー\n吉利旬 も a\nー ー て半 に\n 時 。\n。\n3\nキ\nに\n』 ー\n中 (\n. ー み\n\n~ しーー\n» ーーー7 d S P ~N\n\nー as て —\n\nで om T dd\nーー\n\n『 = — ーー\na /",
       "ocrConfidence": 0.34,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 8890,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_2050.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "miyagikyo",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "宮城峡",
+      "expectedProductName": "シングルモルト 宮城峡",
+      "topCandidates": [
+        {
+          "productId": "whisky-miyagikyo",
+          "brandFamily": "宮城峡",
+          "productName": "シングルモルト 宮城峡",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 49,
+          "reasons": [
+            "別名一致: MIYAGIKYO",
+            "バリエーション語一致: SINGLE MALT"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "の2\n\nデモ\n\nば\n\n=\n\n59\n\n1る 全\n\nW\n\nALLL\n\n———\n\n, lt\n\nN A\n\nTHIS WAY A\n\nンェ\n\nウー\n\nKA WHISKY\n\nMIYAGIKYO\n\nINGLE MALT 贈一\n\n'T'y\n\n5起り\n\nt\n\n峡燕汐\n\nング\n\nルト\n--- OCR VARIANT ---\na も KKA WHI ] ..\n』 GLE\n4 THIS waY A RG\nーー一サド -\n(PESELSNP\nー まき\nーロ 倫ー\nPe Vag\nga f= '\n 」\nペリーー一 一\nッッ に KA WHISKY\nd =98 SINGLE MALT —\n 』 MIYAGIKYO\n: E» ?\nリる,\n3\nE w ー\n 導 E\n(ジン ェョーー一\n回放導Onere w a\n--- OCR VARIANT ---\nい。\nNd Tp 』\nuu 凍)\nーーゴビ ー\n「 二王ーー ミミきす\nテーまそ\nプア - N\n’ : adる \\\nーー #A\nE ー fos \\ .\n Be\nー “5 —— — 1 一\n o*TMall KA WHISKY\n - に SINGLE MALT 剛一\n MIYAGIKYO\n- B —\n1 % ?\n :\nー & = S b た 1 de\nB C. (E\n導電了> 電孝\nー (必赤河所ジングルを - -\nter\n as j 。\n記イスキ ーー",
       "ocrConfidence": 0.43,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6008,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": false
     },
     {
       "fileName": "IMG_2051.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "hibiki-harmony",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "響",
+      "expectedProductName": "響 Japanese Harmony",
+      "topCandidates": [
+        {
+          "productId": "whisky-hibiki",
+          "brandFamily": "響",
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 44,
+          "reasons": [
+            "別名一致: HIBIKI"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "ーー\n\n6 6\n\nーーグン\n\n=\n\n-\n\n§\n\nや\n\nは\n\nINS WAY A®\n\n=y\n\nすす\n\nーー ms\n\n中\n\nHIpIKI\n\n'ORY WHISKY\n\nJAPANESE HARMONY\n\nicand\n\n oo blend ofhe finst s\n\n_a\n\na\n\n上\n--- OCR VARIANT ---\nニー E\n< アー っーー やマ\nーー\nーな nod\n‘h を\n用 ' . ゃ\nP—— = TRa 、\n. ーー で NJY\nf _rmie pe. E —X\nhY TTRE wi\n時 ー 川上ー し過\n匿ペーー ー\na\nSas\nu\n本\n—\ne 1\nに UNrokv wsxy # ar\nFone ie 5 はて 答\n An JAPANESE HARMONY をーー\nきき Ma blend of the finest selection of *\"\nに = に\n--- OCR VARIANT ---\nur 回 陸\nーー革\nfo\n ー ー\nL 。 ノ を :\nンー = So\n ーーミーテーで だ\ne EEE —. N\nー ニーデーニー一 ミー ーー で\nー B t ー 1 』 に ー\nー ー ー\n ー A由\n5\nこさで寺 ー\n本時 2 た\n B に\nS ー\nAA プ 上\n・間 f\nSHIBIKI“K に\nー還5 wmwy g 回学『マ\nR . ッ\n Tapanese HARMONY ーー 本\nて ーー blend of the finest selection 7 * Hi\nンー = に\n電 み\n、 m t» ーータマ ー ’",
       "ocrConfidence": 0.39,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6428,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": false
     },
     {
       "fileName": "IMG_2268.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "store-yamazaki12",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "山崎",
+      "expectedProductName": "山崎 12年",
+      "topCandidates": [
+        {
+          "productId": "whisky-chita",
+          "brandFamily": "知多",
+          "productName": "知多",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 64,
+          "reasons": [
+            "OCR一致: サントリー",
+            "蔵元・メーカー一致: サントリー"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-hibiki",
+          "brandFamily": "響",
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 64,
+          "reasons": [
+            "OCR一致: サントリー",
+            "蔵元・メーカー一致: サントリー"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-yamazaki",
+          "brandFamily": "山崎",
+          "productName": "山崎",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 64,
+          "reasons": [
+            "OCR一致: サントリー",
+            "蔵元・メーカー一致: サントリー"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-yamazaki-12",
+          "brandFamily": "山崎",
+          "productName": "山崎 12年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 64,
+          "reasons": [
+            "OCR一致: サントリー",
+            "蔵元・メーカー一致: サントリー"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-yamazaki-18",
+          "brandFamily": "山崎",
+          "productName": "山崎 18年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "confidence": 64,
+          "reasons": [
+            "OCR一致: サントリー",
+            "蔵元・メーカー一致: サントリー"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": true,
+      "brandTop1": false,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "lo”\n\nl\n\nッッ\n\nーー\n\nーー\n\nTHg\n\nWMAZAKI\n\nSE Wsxy\n\nJA\n\n'HennessY\n\nビッ\n\nMEGD\n\nサントリー>\n\nグルモルレト*ウイスキー\n\n43\n\nL MF 125 45\n\n¥ 9300\n\nJEE SE\n--- OCR VARIANT ---\n5 - / — v\nwev H\n= _.\n/ の\n(S。 P 2N\nN Ne ョ ルケアスPANESE Se \\\nが っ<ここ。。\nm -» . -\n-\nに V.S.0.P— ー\nTHE ぁと\nWMAZAKI\n則EMALT\nプイ ーー用 ANESE Whisky 條\nShe, ==\nンー 1 sl2 YEARS é\nHennessYー s:.\n日 IDGmmN\n(グンンクググク2 の、 row wmawy\nングタグググググクノノリ 塊\nんーッ i ee oos' _— =\n, 一一胸買 5\nウッンーズル ChampagTM®\nアンルンング\n上 ッッッッフィメタで伯計庫画 _ =\nUno. coaNAC w ma\nmwっ\npry\n--- OCR VARIANT ---\n_\n® - } ー\n ンー\n/ デア\n= EEEN\nNNでで eeee \\\nぁ ミー - ーー 。 1\n<でさて ーー E 。\n/oクZZC\n/クシン /メクタ2\nTM= V.S.0.P— ー\nwody\nWMAZAKI ー\nリ LE MALT\n2 3 ANESE WHIsKy 【 1\nZ—0n\"8\nHennessYーf2\nya\nー enn にTi\nングググ wow\n一 \" スキ\nングカクググググクノノ\nルス ルン ダン タッンジ ! aa 3\nニー 2識 。\n2 えズル ィタクンッング A\nんアンの\nのアアアンメアアー PROTTmmy _—\nWil COGNAC 計 % Tr———\nコグ\n5 )\n0 < ー 絡 人 4\n ae タの5\nP SIAT W wat 0 B a いい",
       "ocrConfidence": 0.4,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 8091,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": false
     },
     {
       "fileName": "IMG_2269.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "store-chita-coffey",
+      "split": "tuning",
+      "groundTruthStatus": "unknown",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": true,
       "ocrText": "- f\n\n_B\n\nー\n\nョー\n\nーー\n\n町\n\n--\n\nーー\n\nシンンク\n\nROYAL\n\n贈\n\nI\n\n———\n\nテー\n\nミッグ 2が\n\n人5\n\nいで\n--- OCR VARIANT ---\nEe ー ー 上 's\nSEiE ゴー ーー \\a!\n5 U\nいしい3ぷ ー ー を JROYAL\n l いいにム 』\nーー 上 CoFFgy MALTS “og\nWHisky Ja &\nノ www é IA k\n> D.JAPAN 6 5 cr E y »\n/ ェモルト ; ー 。\n2 1 NIKKAWRISKY 4 ド A の T\n -)\n— F\n= - em § 』\nao 引人衝放\nの\n_カフェモレトビ 2*\n ラッムロ ー HB /\n--- OCR VARIANT ---\nNe 1 ーー 7\n』 ー . -= \\ 5 ンク列 」 [ー\n 0\n2 e IRO\n ー Nik 』\n1 —\n, OFFEY MA同語本\n2 WH Is KY / 2 2d 5\n2 eeewnee 前 本 。 /\n AN に Er3\n ーー リロだ\n 1 』\nっ 。 of J\npR. 8 作 :\n ety a\nsahy\nイーで\n2の) .\nカフェモレト 2〆^\nぁ Z200 ー\n上 ・ 7500 B8\nザー 1 《",
       "ocrConfidence": 0.43,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5680,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00039999998989515007,
+      "abstained": true
     },
     {
       "fileName": "IMG_2270.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "multi-nikka",
+      "split": "tuning",
+      "groundTruthStatus": "unknown",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": true,
       "ocrText": "/\n\n§ 424 信幸\n\n4イ4\n\nEMI ly fon\n\nAM STHM\n\nLIVW A34409\n\nゼッ\n\nー\n\n\\B\n\nビー\n\nA3\n\n4\n\n_ 窟\n--- OCR VARIANT ---\nt 作業\nー =\n5 r :\n[ yル4 AMSTHAVAMIN cpp : ョ\n会 1イヤキィ\n中 NVdVI^Qr1“023 ONITLSI :\nは に SIHA VODIIN HL Ad q3)000% ; ~\nンク 『/\nAMSIHM 鹿\n11VM 人ヨコ3コ0フ 3\nvツ7IN\nー - ー\n--- OCR VARIANT ---\ni yr4 AMSTHMVMMIN cpp 。 』\nF Nー A( FTLY\nSme — ー\nHE vR NVAV{“aL1\"0d ONITISIO\n 5 AISIHA VOIIN HL Ag 03D0d0Hd に\nWs 2 』 ¥\nAMSIHM [F\n11VM 人ヨコヨコ0” § 3\nvメ\"リド 議",
       "ocrConfidence": 0.39,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3131,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": true
     },
     {
       "fileName": "IMG_2271.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "multi-nikka-upside-down",
+      "split": "tuning",
+      "groundTruthStatus": "unknown",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": true,
       "ocrText": "ビー\n\nプク\n\n——\n\nl %97[\n\nー*y凡\n\nON\n\n10,\n\nsm WW\n\nAi\n\nHU\n\n万痢4イキマツ1\n\n4イエイヤの\n\nがが\n\nAISIHA 3S3N ー\n\nNIVY\n\nvil\n\nIH\n\n2Y e\n\nIHOIO!\n\nTV\n\nONIS\n\n会\n\n_——\n\nに っ\n\n人のいい:で) 7 5\n\n1 X ATONTS\n\nいい\n--- OCR VARIANT ---\nニー ii 。\n*a \" ーー —\nCEESZI eneet —\nAIHA NO oisi MA L L て 5 9DNmm\nA0 ASNOH THLA0Y 94033nq\nawm議 へ 大導4イキマツザウ>っ誠居間 器\nN “B Ta AWUTNNG ZAZ si,\n s 人 の リウ 1イエキイグズスズ 基本電昌\n 用 がく\n; 中 さ シン\nM 194NWI ー\nノ Wi3l 計 て1\n ー &J\n4 : [HOIO0!\nTTYW TDN\n、 WDW\nの ~. ーーニンンプ\n~ A — ー\n--- OCR VARIANT ---\nー ーー ロ ーーーーー\nEd 4ヶ デー\n箇卓才 にをを mA 9アッ ーキ>\n mo\nTl の WE ACES/WD) C psiy g\n a y e 14イエイグズズ 用民多\nKN 四 前 9 8 傘\n_El E\nツン Og\nif\n151STHM 353NW ix\n NN ー . 4\nw ー <+V\nァィ2 : [HOIO!\nTTYW TDND\n 、 WP\n4 aa m— —\nし 了 ツ\n\\. 4” 4",
       "ocrConfidence": 0.33,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6108,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00010000000474974513,
+      "abstained": true
     },
     {
       "fileName": "IMG_2272.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nikka-coffey-malt",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "ニッカ",
+      "expectedProductName": "ニッカ カフェモルト",
+      "topCandidates": [
+        {
+          "productId": "whisky-nikka-coffey-malt",
+          "brandFamily": "ニッカ",
+          "productName": "ニッカ カフェモルト",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 47,
+          "reasons": [
+            "別名一致: COFFEY MALT WHISKY"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
+      "abvTop1": false,
       "ocrText": "N\n\n<\n\nmals\n\nN\n\nしリョ\n\no.J\n\n[ー\n\n~ THIS WAY A\n\n』 K\n\nd] \\\n\nIIK\n\nCO\n\nWHI\n\n7x.\n\nak.45\n--- OCR VARIANT ---\nTW weee. $ 1\n部 mw XO2\nCOFFEY MA}\nWHISKY この ne\nLas \\\n TEN\nS ーー ド\n キー本\n ー\nNIKKA ーー\nCOFFEY MALT —\nWHISKY 2\n—— — ー\nNG CO,LTD, JAPAN. B—3\nポわェモルト くす\n45% NIKKAWHISKY .彰\nn\n--- OCR VARIANT ---\nい るア\n中 「H5WNY や uk\nCOFFEY MAL\nWHISKY y pram——\nLim 較\n TEN\n7 * ー T \\\n11, TM\n1 ー \\ ー 前\nNIKKA 仙一\nCOFFEY MALT - a\nWHISKY F ー\nー WE\nががェモ ルト\n5% nixmawmisey ウイズ\nー - ll",
       "ocrConfidence": 0.54,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3784,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": false
     },
     {
       "fileName": "IMG_2274.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nikka-coffey-malt",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "ニッカ",
+      "expectedProductName": "ニッカ カフェモルト",
+      "topCandidates": [
+        {
+          "productId": "whisky-nikka-coffey-malt",
+          "brandFamily": "ニッカ",
+          "productName": "ニッカ カフェモルト",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 47,
+          "reasons": [
+            "別名一致: COFFEY MALT WHISKY"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
+      "abvTop1": false,
       "ocrText": "7\n\n=\" dBB\n\n=_\n\n 9\n\nTHS WAY A\n\n-\n\n® \\\n\n堆 \\\n\nf {\n\n*-h\n\nNIK\n\nCOF\n\nWHi\n\nクモ\n\n時 操 4\n\nkas %\n\n「 押\n--- OCR VARIANT ---\n, FRE.\nンド p—-\nに ピーコ\n。 ア ーー Re\nに 1\nし FER 、\nNIKKA ー ー\nCOFFEY MALT\nVHisky £2\nih\nNO & 158\nタクェモルト ば\n、 - =\n axgawmery 7 位 に =\n--- OCR VARIANT ---\nスロ\nデン と 人で\n{ し - « £A\n« £4\n」 「。 。潮\nNIKKA 」 。\nCOFF EY MAL\nHISKE ~\n&\n [ Bote\nタクェモルト : . 。。\n回語に。 テイ\neasy NIKKA WEISKY ウイ 9 と 覆",
       "ocrConfidence": 0.36,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3031,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": false
     },
     {
       "fileName": "IMG_2291.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nabeshima-purple",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鍋島",
+      "expectedProductName": "鍋島 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "ES\n\nJul\n\nペタンクン\n\nmilh\n\nMhhe\n\nAF HEWY ん\n\n—\n\ny\n\n= =)\n\n貼り\n\n) 放\n\n=1\"\n--- OCR VARIANT ---\nデジ ー ー Wis\ny f - y\nA mw X] まこ\nリノ 加で所ニニジローーペー と\nに- 4\n\n. * $ セ\n/ 5論 ー\nA\\ :\ny ー ーー S\n] -\n\n ーー 寺\n\nae_N B.\n\nに ) 8 し\n用語生\n--- OCR VARIANT ---\nンー 、記疾関牛をし 放\nー —=\n3仙一 ー - \\\n» THIS WAY ん -l \\ 2\n» \\ し っ ーー一一\nーー p\n/ ( 3 &\nルル = ぅ\n四 LL 上\n} 2 ーー - ’ に\n in\na_N 。\nPy o—\n3 I17 B%1 § 7 』 : - 的 !\n用由) ト Ol",
       "ocrConfidence": 0.31,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 4221,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0005999999993946403,
+      "abstained": true
     },
     {
       "fileName": "IMG_2292.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nabeshima-purple",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鍋島",
+      "expectedProductName": "鍋島 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "—\n\nで本\n\nノー —\n\nシィデー\n\nf\n\n-_—\n\n4 ル\n\n(\n\nfl\n\n『\n\nf\n\nーー\n\n/4)\n\n4\n\nー一誇\n\n3 o\n\n本\n--- OCR VARIANT ---\nIsー 上 。 リリ ーE uiな\ne \\Se ー 4\nta] ー 9\n。 7 ーー A\n rー —\nーー PERE— 衝\n= FERER~— ギ\nーー 誤間は\nド 「 < ]\nに ー Kis\n_ ii eE\n--- OCR VARIANT ---\nーー 店 誠導和生生拉\nー リー 玉 ー\nトド ん 引 も ー\n。 7 — 4\nyt 3 .\n_ 人1す _ 記\nH\n — §\n— 疾芝 q « 関癌 _\n— EL\nu = :\nM ー ~\nーー Y\n Me - —",
       "ocrConfidence": 0.24,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 4903,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_2293.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "unknown-kikota",
+      "split": "validation",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "喜荒太",
+      "expectedProductName": "喜荒太",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "ON\n\nロンンク\n\nーー\n\n7983\n\nーー\n\n45 an\n\n5 WAY\n\nロ\n\nーーコー一\n\nmE\n\n—\n\n#\n\nNL\n\nの\n\n/)\n\nz\n\n; 殿\n\nまっ\n\n太\n\n*\n\nイン\n\nE\n--- OCR VARIANT ---\n< fg\n1上ド詳ー W= d\nBE mswv l&\nPy 3 一\n. た や\n\\\nan l\nBE B v\nー L\n、純 。\n米 ・\nーデーー 陸一覧 でキク と\nめい記す\nペー g 上 ー\n5 ,\n!大 り . ご <\n3 商用 ETREF\nR\n--- OCR VARIANT ---\niam OE\n~TM~ ば i にただこ 一 しり7 。ず\nー ーGi # ・ ー -=— >\nn.2 Y ー し\n衣 mw l&\n~Ey -\nY\n\\\naaN ー\n_——\nf ) #4\n/、純 。\no * を\n宮本者衝 BY <k 天天= 一\nの誠一上\n— 上 ヒゴ #\n? IT oF\nSERE] .\nー)- ; p—\n3 g に ForTeedn\nた\nm mm",
       "ocrConfidence": 0.35,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5001,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_2296.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "chita",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "知多",
+      "expectedProductName": "知多",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "にこる0\n\nN\n\nAL\n\n\\7\n\nMI\n\nN\n\nNN\n\nIA\n\nにっ5、\n\nMegrAny\n\no\n\n7 Ris\n\nMM\n\n0\n\n電。\n\nにいい\n\n0\n\nNs 朱\n\nロナンプ /\n\nンクング\n\nJ¥\n\nムー\n\nにーーキンノノ\n\nニーンジ\n\n——\n\n ング\n--- OCR VARIANT ---\nTe on IN 用デー\na- H ¢\nTNal NN TA ®\n_—F oRy\nーーニー て、 : NEW ¢\n——AVGRCT &\nーー > OYE 7;\nキー JARDs\nるい いい\nN Z4 . g\n= ヘン 稚いs、\nで 人の アー\n5サー 導いさこへへ E\no7) へ。 ーーニニミーニラ\nンク本 ーー ーーニーニー\n 導ン詳ーー・ ミー\n—l .. ーー\nーー に を A ジン\n> ーー S_\n--- OCR VARIANT ---\n4 5や、 和音。。。 、! :\nム T0y ー\n )\n“ 4 ぁ * \\ » b f NN A\ns療- ン 和幸 ー RA\nいあ >誠\n\"ペイ 百本 GBN e :\nmm テンズー 本いいいこ 語半\n8 7ie U ww B (ER) 74\nる いい\nへ xt f RORY N y\nの し名 7 NA *4\n-4 a いい E) 3\nーー WR 、 Nll -\nング ao\nに へ ーーこミミーーー\nnosン ンス p y いこきき 。 トド . ーー\n y, Ta v マン\nーッ *、 で タッンプ\n間シーー Ca 。 ご 4\nュージーニニニー いいててこ アト —\n4\n- 3 §\n3 に に 5 a",
       "ocrConfidence": 0.3,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 9531,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00010000000474974513,
+      "abstained": true
     },
     {
       "fileName": "IMG_2297.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "chita",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "知多",
+      "expectedProductName": "知多",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "な\n\nヘン\n\nり I\\\n\nー\n\n=\n\nいい、\n\nUN\n\nN\n\nAN\n\n7\n\nNs\n\n人き\n\nミン\n\nいき\n\nas\n\ncd\n\nっ\n\nビて】\n\n—_K\n\nah\n\nここーー\n--- OCR VARIANT ---\nN N\n。、 導き MI\n~ N\nで い ud P EN\\ ! NN ー\n_a=me 、 り Ma\n- — 詞 : 革 - - : 0 Al ド\nング ジコ SLEPN / WW 。 記 NN マー\nERめ / 旧いいい だ\nン E] ーー it , Ns 5\nしeo ZVINN\n テー の いぶ 、 ンー\nーご必修き幸、\nーー aD ノル は ー の\nミン ル放融ぶヽ。 で\nw ちろちヽンクヨー ッッ __”\nSS琵ーーク 扶 c g\nNoy\nRa ae Aa ¢ =a ;\n_Ad _\n*\nーー ーー で、 EEE\n--- OCR VARIANT ---\nあき で 出 区\n<央 へWS Wー\n、 ぶさ W\nヘー NNW MNT\n» ie AL 明り 内 ト N\n=_f R d,\nE\n<ンー Veatw I Yag —_\ng に 交略 ky 58 ^\npre -・ リ// y (EN =3 ノ\nガニジン にいい、\n— A\\ v、 N S\nーー一 ンー 14 いぶ、ミ . ンー\n、 必修き ヘー\nング ここ 近の\n、ミセル/ー ー 三\nSN $ ンク # , <\no へ ペペ ジー て\n=\n- ¢\n_— EE\nE.. €\nーー —",
       "ocrConfidence": 0.24,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 9389,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_2324.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "yoichi",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "余市",
+      "expectedProductName": "シングルモルト 余市",
+      "topCandidates": [
+        {
+          "productId": "whisky-yoichi",
+          "brandFamily": "余市",
+          "productName": "シングルモルト 余市",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 55,
+          "reasons": [
+            "別名一致: YOICHI",
+            "バリエーション語一致: SINGLE MALT"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-miyagikyo",
+          "brandFamily": "宮城峡",
+          "productName": "シングルモルト 宮城峡",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 40,
+          "reasons": [
+            "類似文字 80%: シングルモルト 宮城峡",
+            "バリエーション語一致: SINGLE MALT"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "こき。\n\nmm\n\n上\n\n}\n\nNERA W\n\nSIN\n\nYOI\n\nーーマーー\n\nーー\n\n<\n\n5\n\nに -\n--- OCR VARIANT ---\n-\n店 を\nャーー一一一\n- ー ーー一\n\\ E=\nー = a 3\nすす = =\nE =\nいき 3\nトー * 』\n--- OCR VARIANT ---\n~ ー\n E\n ー aal)\nすす = .\nに < ドン .\nR ¥ :\n= 0 T ば",
       "ocrConfidence": 0.44,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 1946,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00010000000474974513,
+      "abstained": false
     },
     {
       "fileName": "IMG_2325.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "yoichi",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "余市",
+      "expectedProductName": "シングルモルト 余市",
+      "topCandidates": [
+        {
+          "productId": "whisky-yoichi",
+          "brandFamily": "余市",
+          "productName": "シングルモルト 余市",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 55,
+          "reasons": [
+            "別名一致: YOICHI",
+            "バリエーション語一致: SINGLE MALT"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "whisky-miyagikyo",
+          "brandFamily": "宮城峡",
+          "productName": "シングルモルト 宮城峡",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "confidence": 40,
+          "reasons": [
+            "類似文字 80%: シングルモルト 宮城峡",
+            "バリエーション語一致: SINGLE MALT"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "に 1\n\n> ー 74\n\nし\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\nビタ\n\n作\n\n所 シングルモルト\n\nD By\n\n所でつくられたモル\n\nro\n\n(スミ\n--- OCR VARIANT ---\n4 ー\n¢ NIKKA WHISKY\nと SINGLE MALT\n YOICHI ー\n‘ に ] ~ TM\nS\nm.\nTg シングルモル\nSiiagea\nの y\nウイスキこ 』\n--- OCR VARIANT ---\nい NIKKA WHISKY ー\nメ SINGLE MALT\n YOICHI\n3 $ ルト =\nEs\n人市 ト .\n具市蒸溜所シングルモル\nシングルgw\n7スキ Jdcd %",
       "ocrConfidence": 0.65,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 2195,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0004000000044470653,
+      "abstained": false
     },
     {
       "fileName": "IMG_2436.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "asian-beauty",
+      "split": "validation",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "Asian Beauty",
+      "expectedProductName": "Asian Beauty 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "/ 王\n\n57\n\nーー ンク\n\n)\n\nのと Eer\n\n__、\n\nゅ\n\n人\n\n=- :\n\nWm\n--- OCR VARIANT ---\ny___] に) 電\nこす ーー \"3\n。\nエa\n= ー\ne ー TEN\n3 \\ —\nーー ーー) ,\n。 。 攻匠\n ッ\nー ・ —\n--- OCR VARIANT ---\nーー / —.\n/ 「 ーーテテ v\n=l\nR キャマーンド ー ~i .\n 5\nLom\nーース ー 選\n * 「 アー ~ “-\n )\\\n一 ) )\nNi M\n -\n1 _\n— 回255",
       "ocrConfidence": 0.35,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 2590,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": true
     },
     {
       "fileName": "IMG_2853.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "toko-genshu",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "東光",
+      "expectedProductName": "東光 純米吟醸原酒",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "—\n\nTM87\n\nディ>\n\nSake!\n\nEi\n\n7\n\nP\n\nフイン\n\nいし\n\nTHIS way\n\nたっ\n\n3年運\n\n金賞\n\n受賞\n\n;_\n\nー\n\n本Ogg ー\n\nヲ\n\n。 ih 3\n\n中\n\nは4\n\n@\n\nき\n--- OCR VARIANT ---\nし [ 1 イイングラス<おぃ マー\nドに バ 吉でのいしい 』 c\nen ( マタ\nGOLD MEDATL WW\n。 てノ\n- ;\n中 ごジョ .\nJJ TE . .。、\n~ ー 5 >\n» ー ー\nr 圧電 4\n【 4 、 ーーで om 「\n。 ま H \\ NN タンンク ー 」 1\nMs <かニー ー =\n. 。 ihy#+ m Emp\nprmer / 際R m— mm C\nに 此紙 —\nここ EE は\nHER ~ea\n Ny\n 4\n上 . き ーー\n-.\n1 ペ ma も\n ]\n。 \\CiR ー 。\nIS\nN\nド輸mm」\n回 @\n--- OCR VARIANT ---\nh a\nンー ~ pall ® いしい E. \"Wee\nド > 酒ァ :\ny SWiY 3 ーックー 窟 ra\nGOLD MEDAT. 1\n。 「 u.\n—— .\nLJ ー 3\n~ ー が 、\n 4\n-— . 本の りソ 方\n1 時 5ニニジン3\n» » \" hts = EmpS\nアア WAY [= _=] = ルン\nに にいい mm た ー\n Hied D\nHI = ロ\nfu 4 9、 4\nivi ~ W—\nは E o=\nLin ーー グン 。\nき て トド — 5\nト、 .半間 5\n: 図 ヲ\n0 き\n き",
       "ocrConfidence": 0.4,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 7037,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": true
     },
     {
       "fileName": "IMG_2873.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nabeshima-new-moon",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鍋島",
+      "expectedProductName": "鍋島 New Moon",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "2\n\n/]\n\n所\n\nレフ\n\n»\n\nmig\n\nは\n\nTHIS way 』\n\n_\n\n»\n\nうぅ\n\n記 ー\n\n《\n\nq\n\nーを4\n\npr.\n\neshir\n\nlew Mr\n\nタダをメ\n\nDiH)\n\n[3m\n\n人\n\nーRE »\n\nー2\n\nは発\n\nゎおの必\n\n[ー\n\n来:\n\nでチー飛\n\nにア\n\nえ自リサ\n\n®¥ T\n\nERAE)\n\nーー\n\nー 9\n\n刻ぁ\n--- OCR VARIANT ---\n由衣ー # ーーブリ ーー 本杉閥ー\nが まま\ntm\n%\n1 を 多 ー ) ) 1 ー J\nmEy im\nf\\ { feeto ー\n3 E\n7 部 ー唱「ご\n— 」\n Nabeshim: &\n’ lew Mr\n & ー 「 。\n, B 全品 _ 。\nの l¥p ® テロ § gil 3 ;\nEedr ー 急 。\n--- OCR VARIANT ---\nLi話 ー ーー か\n人だ ^\nーー -\n】 4 1\n7 )\n3 N ー\nme{ fm\n, ART 2)\n3. ー方\n Y ー ー\nB—3 し 5\nー NabeshYns: J\n- lew M« ー\n: a [ _\n: ョ IP » e し\nL34 きき 日 B 導剛に\nji 上 計半所\n5る生の・ く k\n5 SN\nー艇を L » 』",
       "ocrConfidence": 0.39,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5219,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0000999999901978299,
+      "abstained": true
     },
     {
       "fileName": "IMG_2874.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "nabeshima-new-moon",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鍋島",
+      "expectedProductName": "鍋島 New Moon",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "\"半\n\n¥\n\nN\n\nJol\n\nご\n\nしJ 有り)\n\n-h\n\nEv\n\nーー\n\n(へ\n\n【\n\n区.\n\nTHIS way\n\n»\n\n7\n\nが\n\nU\n\n店 ー\n\n3\n\n4\n\n=\n\n. 4\n\n1\n\neshir\n\nNew M\n\n28e\n\nの清\n\n#zp\n\nF]\n\nだた}\n\nる\n\n2% 。\n\n来#\n\n遇か\n\nB3\n\n様と\n\neZ\n\nすす 飛々\n\nを\n\n#[37\n\n$1\n\nタターあ\n\nが\n\nだ\n\n$ ま\n--- OCR VARIANT ---\n本 -と ー」 。 人\n...、 き\n @ ] っ\n / ー -\ni 4 し選\n5, 'B\nー は\n4! R\n, ) \\ ー _\nー Nabeshim ー B\nN :\nE と ー ささ\n。 。 £5 ー 1\n$0 § a R\n{E 名\n--- OCR VARIANT ---\n上 ーー e— アアでまあ\n諸mw、 ) に\n/ — *\n S N\n/ 内 、\n© Sul wm 朋\ng\n% , ll\n’.. 上 Ia\ny 思 ー 一\n , 用 ー\nー Nabeshim ー . る\nー4 New_ Mr 』\nー ロー ミ\n . % ー アデ。\n人まれ 日 B w 4\n1 目導半2\ngF 8ー ー\nだ や\nは逢計独加症ー 記 :",
       "ocrConfidence": 0.37,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5260,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_2876.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "ゃう\n\nの\n\nイコ\n\nマッ\n\nに\n\n=\n\n4\n\nU\n\n間 ー\n\nリリ!\n\nと\n\n鷹,.\n\nNB\n\n)\n\n=\n\nHAWK EE\n\nSoce 31\n\n4\n\nに\n\n「 Mk\n\nノーテラシダ\n\n装着\n\n2の7の26 一ここー 、誠呈竹4\n--- OCR VARIANT ---\nが ー Wis\n ®\n l T\nf E ーー ー W\nー\nー\nー\nー\nー\nー\n? <へ、 座。\nーー ー a@ 7 L\nンジ は 、 a\n9 ーー A HU EE\n。 回 SR 5ciors NIE E\n--- OCR VARIANT ---\nZ ンー\n4 ー うい\na ノンノ ーー\nー = ;\nm =\nリ ー ー\nー 1\nー\nー\n ー 昌利林間誕利放ビニ .\nF\n E,\n E& 4 ’ 【\n5 ー いい\n5 にスン HU EE\nと ケーんア -\nて ー wepoerornew — 。\ni4 て . ダダ",
-      "ocrConfidence": 0.32,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 3488,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": true
     },
     {
       "fileName": "IMG_2943.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "kaze-no-mori",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "風の森",
+      "expectedProductName": "風の森",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "ー\n\nJ0o\n\ngot\n\n66\n\n»>\n\n1\n\nー\n\nざマ^\n\nTHIS WAY\n\n\"\n\n還\n\nウ\n\nI\\\n\nっ\n\nに コ\n\nーー\n\n』\n--- OCR VARIANT ---\n1 WWWtam'\n党 WW (\n W\n\" に , 」 $-\n\\い」 \\—\n4 1 My (— ドド\n W リ /\n- ー 7\n Li i -\n- ii . 電電敵 WM 。\nリー ー 家過 &\nesly ー aY :\nHig ゆず し区 / 疾軸MV f 2 ぁ :\n敵にルンン導導放カル\n山側 7天才ジア/ ーー A\nUp 。 EEL \"\nIb 4- # - i W 7 y. スズ WE 5 を] し\n[「 鉛上 2 FEA . o.\nSR EE , i ay プー =\n--- OCR VARIANT ---\n{ ——— (SUORIES . o\nFEENWICE\nリー リ \\ まこ f5\nーー ー NN し\nmw 1 Y ハー\nは 一攻和や\n器 1 導き *ゝ\n\\ A\\_S\n0 [ 0 ー -\n ー He\n ー 。 . 』 -\n— 。 BUANVL . 訪 -\nー ー aY\n“ls ウツ# =RUNRAY す\n上 0 用 W 候 /調 fl) 7 W ® ルカ w »\nL>= E))-\nWo 。 GEi)\nオー 箇姜必-癌誠に\nB. (人企 4 EERIA .\n3 人 EEy ズ\nLi 弟症7\nX ENG Kaze no Morl 』 5議 3 、",
       "ocrConfidence": 0.29,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 7176,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_3426.heic",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "taka",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "貴",
+      "expectedProductName": "貴 特別純米 60",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "ーー\n\n時に\n\n\"0\n\n。\n\nに 】\n--- OCR VARIANT ---\nL\nまま マ が\n (の導\nR\nfa\n \\ 「\n--- OCR VARIANT ---\nー L\nま で が\nを\nLIR\n ー",
       "ocrConfidence": 0.52,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 1044,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": true
     },
     {
       "fileName": "IMG_3427.heic",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "taka",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "貴",
+      "expectedProductName": "貴 特別純米 60",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "ーー一一一一一邊md__ _o\n\nき\n\nラビーー\n\nしン ててに\n\n=\n\nクー pr\n\nN\n--- OCR VARIANT ---\n= ___M\" N\n* 「層」 -.- *\n..\n\nスス ー x\n\n&.\n, R\n___ 1\nr—\nし rhy 1 Nog\nは\n-\n- Eo\n--- OCR VARIANT ---\nmm mTER.\n’ ー -—\n\nベベ x\n/ & .\n\n» 。 欄間\n- ,\nJu *\n\nづけ ] EE\n\nに\n\n -",
       "ocrConfidence": 0.42,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 2770,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": true
     },
     {
       "fileName": "IMG_3510.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "daiyame",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "だいやめ",
+      "expectedProductName": "だいやめ DAIYAME",
+      "topCandidates": [
+        {
+          "productId": "shochu-daiyame",
+          "brandFamily": "だいやめ",
+          "productName": "だいやめ DAIYAME",
+          "makerName": "濵田酒造",
+          "alcoholType": "shochu",
+          "confidence": 46,
+          "reasons": [
+            "別名一致: DAIYAME"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "ーー\n\n<本\n\nW\n\nに\n\nDAIL\n\nHAMAD.\n\nJAP\n\nRUり\n\nTRADITION\n\np\n--- OCR VARIANT ---\n。\n隊 ー 0 上\n。\n/ ーー\n固ジンー\n次 Fvd CE\nI gE E\n[ i= 3 E ーー :\n5た し VERSR z.\nと\nが で放導\na= ンー\nー 359 RTc i\nSs 4 2\n 人\nEe\n[ に : amed\nae\n; GlEme\nDAIYAME\n: SEEE\nHAMADA SYUZOU\nJAPANESE ._\n TRADITIONAESHGEHU\ne\ni o ': に\nーー\n】 がスンの本\n EA\nol\nKBL B E タテ\n> o\n 3 Eea\n& 人\n3 5 4 b ;\n“Z\n Z aEet\n』 を —\nンー »\n--- OCR VARIANT ---\n四作ジン -—\n STAEET.\nにーー a\nREs orE\n\\ ) Pass Th\nの Er)\nge\nだ にジー\n 半。\ny s) をーー\n JE ンー\n2 ーー a\nf Ey] ンー 癌\n/ = N\nas が\n無 SeT\naan と た て\n クンーーの\nAN ンジに設計\nー 選 ンー\nば 3衝\nwE\n: sid\n がて> T\nE =\n: le\nE\n3本科\nDAIYA\ni っ\nンーフン人\n 2 AeYUZOU\n HAMADA SYUZOU\nー JAPANESE\np 0\n1 でが\n』 BEVERLGARY, E\n) tREE の\n4 W= o\nALLET\n他 ジー\n導呈倫 ミラー\n』 he\n4 ーールル Geceg\nj 科褒本 ンー\nw 用\n 5 ーー CEe\n2 = ンー\n2 BSST\nEEL i\nソ Bes) ニーンク\nで 補 3\n = . の\n : るの\n上 隊 ンク\nA d 3 ケンーータタの\nr. - ンー\n紀 に 4 CEARIT",
       "ocrConfidence": 0.51,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 10060,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": false
     },
     {
       "fileName": "IMG_3512.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "koshu-wine",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "甲州",
+      "expectedProductName": "甲州 酸化防止剤無添加",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "思\n\nl\n\n化\n\n4mr\n\n%]\n\n#l\n\n[し\n\n2\n\nできるだけお早め\n\n県時州市中泌\n\n式会社多\n--- OCR VARIANT ---\nー の\n4 化\nっ ~-\n[ ー i\nー L 。 /\n。 V\\ #l /\nA 2. * ー\n x が 4\n 半生 いき る\n- 量 2 -\nンジ ー ・ ン\n- ド - omirsnE, 2r 4t\n\\ee\n--- OCR VARIANT ---\nー ル\n」 fE fw\n -9\n1 —\nボ + (\nRoBl\n1 * ー\nB ad <\nピッ Kや\n \\ もい & 。 の\nア 。 ー\n N . 2\n0",
       "ocrConfidence": 0.51,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3260,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": true
     },
     {
       "fileName": "IMG_3665.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "multi-six-sake",
+      "split": "validation",
+      "groundTruthStatus": "unknown",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": true,
       "ocrText": "ーー 4\n\nの\n\nーーる\n\nJol\n\nー\n\nヘンングアン\n\nデミ\n\nE———\n\nit\n\nくさ\n\n層\n\nも\n\n1\n\nL\n\nZN\\\n\nリ\n\nf?\n\nW\n\n/\n\n町\n\n7\n\n(LiallY\n\nあせで5 0\n\n©\n\nまま\n\nMooN\n\n[ 、\n\nEL\n\nPs\n\nee\n\n『 [!\n\niL\n\nー\n\n¥\n\n有り 7旧\n\nいい\n\n'\n\nL)\n\n5\n\nすず\n\nリ\n\n5 4\n--- OCR VARIANT ---\n5 —— 2 本 到 メ\n\n 維\nに « 間導ーーンー\ntf 計 C\nLoWFld THE waY A BR ーー = a\n= i= ー 頑 = —\n ー 由 リリ ま\n\n5詳 ー ] 間邊ー 用に 時還\n\n0 Poll\n/ / マタ ザー / \\ /\n\nY fl NSAN Z\nりらm剛人 ーー\n=P { i 0 (あせぐらで昌和 HE :\nDlem ー\n\n BWO).\nB1 Lal\n\n、 HL 2の8 で ] 際誠\n\n = q y ct 出[5\n\nー - wa , \\ p 、 ま\nR.— J -— 7 7\nl ー oo mEE\n--- OCR VARIANT ---\n7983 4 y/410UTE へ ーー\ntans 9 E3\n馬上に層ー gg —— Eammecl\n; =1 )4\nTART ーー EL\n-タ0.く THis way A_ , ー § = re\n== F=. ー ー モニ R 7oab\n\nー ー _ リー ミト\n ー R y. -\nEEASTT AIE\nCHVEL[ H\n wiNgr 4\n7 / 。 r ンダ2を \\\n9 / が ¥, >\nすす シイ\nTHITY L A マー\nー —_ リ 則 1 svesan 上日庫 』\nShmm バリ\n 1 [AYW\n; 7 . uar 4 4 d リリ 。 [ 詩作\nー P 0 “oomm ad ー si\ne=tr 4 / Gank EE\n\nEEE Alb\n\n* ー : 1 ーー ・\n\nー # f Eras l\n\n& 失笑 KOの ビビご 革*\n\n) AL mu放 \"HR i [ー に",
       "ocrConfidence": 0.32,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 9672,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_3666.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "w-yamadanishiki",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "W",
+      "expectedProductName": "W 純米 山田錦",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "&\n\n1\n\nー\n\n66\n\n'\n\nvh\n\n\" -—\n\nっ\n\n-\n\nfs\n\nTHes way A\n\ny !\n\nSN\n\nSoRnmy\n\nーー 前\n\n./\n\nB .\n\nY&\n\nSHl\n\n“\n\nMi\n\nに\n\n-\n\nRd\n\n<\n\nラー\n\n引\n\nを\n\n#y\n--- OCR VARIANT ---\n5誠 7 ー gee\n4 Toes way 4 f けら5さきで\n難 *】\n2 & ¥ B4/ 4\n9 AA\n( 了 - 人る\n5 Ee_\n W >\n2 ー\nニニーー , : BlL\nee : タル sMN 5\n1 8 $ に\n_ ー 仙\nー INMAT y いい RI\nいい パパ B ー\n\\ E. で\n--- OCR VARIANT ---\nPi生半 0一080\n調 * - oe\n の way 4 1 ー 公 へが\n& ー 。 -%\n\\ ー i に を、 用\n9 ー. シコ\n; 。 る\n £ ER\nE\ns ー 5 き\n/。 :\n—\nーー ー {\ned 1w SNY ー\n5 ー\nーー 回品3\nE. 。 p-\n5 ul にdk\nWaiane 1 で 』 -\nー C\n» - &\n\\ ARN",
       "ocrConfidence": 0.29,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5319,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0004000000044470653,
+      "abstained": true
     },
     {
       "fileName": "IMG_3667.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "tentaka-1814",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "天鷹",
+      "expectedProductName": "天鷹 夢ささら 1814",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "=>_a\n\nN\n\nW 3\n\nーー\n\nペープン\n\nーー\n\n6\n\nP' =\n\n—,\n\nf\n\nCLs\n\n&\n\n-—\n\nっ\n\nちア\n\n\"束。\"\n\nTHIS WaY\n\nAM\n\nve H\n\n-” 陽\n\n¢\n\nFa\n\nり\n\n謎 そゃ\n\n* 184\n\n—\n\nB\n\n—\n\n時\n\nKJ\n\n3\n\n0\n\ny -\n\n8\n--- OCR VARIANT ---\nにのmm ーe V mreleRLASE\nTEE 衣= 箇隊AN\nJ 「3 すす 央 ば * -\n4 < 店 \\ リ +=ー ー に *\n四半ー: て\n し ム JE\nAーB\n 1\n *igu\ncramsseSIN— Ba\nにas WW\nmm in ®\n ンー\n— p\nZ で EE-\n。 % 『\n1n. _ ¥ EE. = 抽 :\n--- OCR VARIANT ---\n5 ーッ」 。 ー/KE ーー 天井0\nClk ーB = “g\nLlR ー=3 Jeh\n4 < 705 WAY 4 リ 生 電 気ゝ >\n¢E 5 へ\nと し本 6 _>\n 酒\n_— v\n=\n と、 の ー\n—__SETEN\nVM e0 —\nー > いて ーー\n。 @ さき\n央 前 ー まぁ に。 & . W2d",
       "ocrConfidence": 0.26,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6326,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00010000000474974513,
+      "abstained": true
     },
     {
       "fileName": "IMG_3668.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "sharaku",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "寫樂",
+      "expectedProductName": "寫樂 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "時\n\n3\n\nfirf,\n\n-—\n\n£\n\nLO\n\n-\n\noh THIS WAY\n\nアプ\n\nにきか\n\nに\n\nーー\n\nし\n\n編 もそ\n\n0に\n\nYr\n\n____\n\n(3\n\nゃご\n\n[iv\n\n[ .\n\nA\n\n4\n\nos\n\nWWる\n\nトドt\n--- OCR VARIANT ---\nーーヤー mmmmmmm計且 mmンーンリ7 O\ni : »\nk “ Ri ) ンン — -\nー 回 の { る ンジ参用 中 こ? に\nmsway \\\"UR っっ \"れれ\nンク な\n/ &Z\nフースジ —\nクジギー 融 -\n; # F へ r\n¢ ー.\n— ー\n1 に と\nにmeでこ幸二\n— EER B\nTERRT= *\n- Eim vA won\nCa B ー\nBiss Ad\ni ミ\nラー で\nに i» ® :. FE\nLe? e\nfo WS lamg ~ J.\n--- OCR VARIANT ---\n< ーーリリ —_—_\nTEA C きき\nー ーー { py —=. 」 。 【 二\n» « ジジーー ソ\nTis way 4 リーウン ー そそ へお\nンジ作ー\nンプンー\n人ン\n ダイ 放電 _»\nーー \" し\nuu\nーー ー\nーー ト ニニニ\nET 2 ihm\n半生イー に\nビーニー 5 5% 区 。 。\nis 7T e.\n。 » - も>、 vA P\n人 ク\n (にで 貞\nTETR.ー F R\nPe p.\n1) ルン . :\nリラタダラー IESET\n(02 多\nーまま i 次> 。 :\nに をデラーー\n 名5 表ー 由\n- ‘ ) B= w : Rar .3\nーー 5 ERNL\nN A =I ラーテリ _",
       "ocrConfidence": 0.27,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 8083,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_3669.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "denshu",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "田酒",
+      "expectedProductName": "田酒 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "—\n\np\n\n4\n\nN\n\nwf\n\n i\n\nms\n\nP=\n\n<\n\n6\n\n絢\n\nRICa,\n\nー\n\nハーンー\n\nSN\n\nッごやき\n\nは】\n\n(2\n\n E\n\nIh/~\n\nな の\n\n(3\n\nテ\n\n=———®\n\n==4\n--- OCR VARIANT ---\nーー E\n THIS WAY A / > ~ 所へ\n(2 っ\n7 1 に\n\n ・ < ンジ\n2 ~\n.\n/ \" §\n{ziim - 柳\n区 N 埋ミ\n f .\n\nー 4 ¥\n\n2 ’\n』 。 34 > +1\n\n{( Ad 。 に\n--- OCR VARIANT ---\nR SRL -\nw.AN- k£. ーー私だ\n 4 THIS wAY A リ ーー 7S2 y\n人 まくへ1 と\n NXE 部\nなへ 証\n/ &\n=\n§ E\naAl YA .\n 』 ¥ -E\nし .】 2\nププ ーー\nB 用時",
       "ocrConfidence": 0.26,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 4507,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_3670.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "N\n\nクタ\n\n本\n\nを\n\n<\n\n アア\n\n&s\n\n -\n\nTHIS way\n\nh\n\nV-\n\n~\n\nlil\n\n7\n\nI5\n\nいこで\n\n-\n--- OCR VARIANT ---\nーー ー 2 d ~¥\nE usway \\ ー ー $N %\n4 。 \"6\n人プ レコ\n. i n , -\n1 J3\n4 1 .\n(\n v\nー vN\nGus A キネ\nif 純 H* 4 B\n9 米 を-\nmg 「革計\n 内 ー上に 押護 . A\n 本\nik 」 伴\n--- OCR VARIANT ---\nの5WAY { [ー ¥ 3\n\\ a\nー a~\n. ー i めく r\n上 a ー\ni\n. ー 4 1\n: w ®\nLU お\n: き\nes >a\nMI 純 舞 リ >\n の欄間。 <-\n、 大 旬 [ 、\n 本四\" ( 。'\nー 評 放\nに 生 0\nレレ。 SEY 天天ー\nッッ デー",
-      "ocrConfidence": 0.35,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 3493,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_3671.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "~\n\nws e\n\nらら pf\n\n y\n\nンタ\n\n7983\n\n夢 <\n\nに\n\n1\n\n<\n\nか ーー WAY\n\nV<\n\nーー\n\n的\n\nも\n\n7\n\nf&\n\nイッ\n\nNae\n\nだ\n\n45防\n--- OCR VARIANT ---\nprinl にに?\nHes way 人 たい.\n4 8 ー ル。\n7 ー ~\nし7 ン F\n... Pa 敵の\n.\nーーター\nにうみ E\nー一 (\n. an\n 4 “\n7 77\n1 』 / て し て -\n誤り の 系\naG, 7 E\nーックラ バーグで に\nをを 2こき AS 、\nペン\nくいWW き坦 ア計\nEaN<e. 00 o レ\n2多きーー SATER\n ーー誰科で\n--- OCR VARIANT ---\nーー w 了 し に\nDi5 WAY ] ー v\nN u\nキネ ’\n/ ~”\n: p\n。 I] v F\n。 { ーー =\nー一 。\n 4 。\nァ <グ3 [\n a o\nBifs, t WT\n20 の Sa 7 : ー\nクイーーググ ゃ\nを欠とさてSS ト\nペンクー T\nWSv es 2 £ て映 ます\nAS いい 1 y\nS S\n: アンの かme てて\nの/\n店 の き",
-      "ocrConfidence": 0.28,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 5260,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_3674.JPG",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "ロー\n\nしmm\n\nーー —\n\n—f\n\nWW\n\n[王后 和握 rg\n\nリ\n\n新滑\n\nいっ/\n\n2\n\n2\n\nシン\n\nf\n\nクデ\n\n4 =d\n\nRe\n--- OCR VARIANT ---\n—————\nIm .\n\n生き\nーード <表維に ー\nリー ーー ーー一\nドッ\nv 内 = 次 -— 』\nロビ リ/ 前\n\n A AA\nで : a .\n井佑 2\nMM 上 YRa\ny が WRLTE\n--- OCR VARIANT ---\nmm\n—————————1 ~\n\n% T _ - : N == ー\ni A' a —\n—-mE—\nー ーー 5 = - ud\n『 しタク 』\nv ー ー v 5 —-— i\nl し ー リリ\n 新m\n\n. ロロ F®H テー フ *\n £\nE [\n MP ] ; ) ; 』 に\n/ o7- MRLT\n4 ー こぐ1 =",
-      "ocrConfidence": 0.33,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 5177,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_3962.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "tarumizu",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "垂氷",
+      "expectedProductName": "垂氷",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "‘m?\n\nツラ\n\nPa ーー\n\nしJJ MI 前6\n\n”\n\n—\n\nいい\n\nろう一\n\n-\n\n¥\n\n_\n\n1Z ゃをま\n\n'Fa\n\nR vw\n\nルン\n\n部 ヶ を\n\nご\n--- OCR VARIANT ---\n470訓導NN ン\n「 \\玉吾る\n / ビー\nも _革\nF w\n\nビー - -\n に 提 -\nwIER\nを 本5\n* 、ンー RESE\nぁ> の。 蘭誤\n\na 4\n--- OCR VARIANT ---\nmwmK でてで了間間間\n/ で\n。 .\n/ のっ\n5\n— 0\nーーた \\-\n>m 5\n% る\nWeJ 失\n&\n。 区 a2\n3 ¥ K -\ne g の\n R ー は",
       "ocrConfidence": 0.27,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 4096,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_3965.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "M\n\nNi\n\n)\n\nィ 。 2\n\n66\n\n性)\n\nRIEH\n\nf\n\n-\n\nX\n\n<るy\n\n{\n\nに\n\n:\n\n<\n\nTakijiman\n\nみ\n\nパ\n\ni\n\nv\n\nd\n\nしWe\n\n#%\n\n\"w E\n\n.プ\n\nー\n\nTakijiman\n\nし\n\nッ アダ\n\n』\n--- OCR VARIANT ---\nーー 生8\n\nLe Llg (RE\n\n@® _ 名 。 に ー\n\nビ) w ー Yo\n\n6 に A y\" -\n\n hy (WEE\nた 3 .\n\nBEV, . C\n\nも 起 0 性 G 1aY . ー\n\nて 7' 0\n\n& QL ] ー \\ i - し\n\n( Takijiman _ _ 7 5\n\n 」 , 分議\n 導い 回\n』 ー - p 1 *\n\nー T aa\n\nー ー ん 條で\n--- OCR VARIANT ---\nー ー」 上壮uu\n- . -、、\n® t : W 4ね\n8 w 1 hs:\n$ Tk E. ).#\n上 ー 還導唄い\n 。 B =\n¢ ー ーー 識A A\nー! 起人/ y 。\n[ すま ー f に\n¢s 隊「\nRo QLD ー ー ・ 1 L1 S :\nTakijiman —. j. 人 ;\n M ) { 属\nー 暫 pr h\n] 和信 d\n ー h a\nー ー o 。 叱!",
-      "ocrConfidence": 0.34,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 4860,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00019999999494757503,
+      "abstained": true
     },
     {
       "fileName": "IMG_4293.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "aramasa-2020",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "新政",
+      "expectedProductName": "新政 2020 美山錦",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "7ペペ 3\n\n”~ ロ\n\n*y\n\n特/\n\nfat\n\nリリ\n\ns\n\nここ 全\n\nウム\n\nー\n\n\\\n\n~\n\nん\n\n2020\n\nー\n\nー\n\nー前\n\nMi\n\nー\n\nンー\n\nSN\n\nic &\n\n7 まい\n\nCr\n\nン\n\n3\n\n(雷\n\n山釣\n\nBEA テッ\n--- OCR VARIANT ---\n。 \\l \\ 上 の 2 -\n ny e n M L\n; 喘 いい4\nし用 X\n1R ; n や\nJBl oN uu で\nBN u\nj/ 8 )\n/ / トト て内 、\n )\n202 の ー K)\nse ー w :\nN — 3 。』\nra 2 <\n--- OCR VARIANT ---\no2 居/ 中 埋__記拉記\n A\\ まいる\nーッ 用 \\ ぷす*\nザ が ー z ー . E マ\n : bs すす、 a *\n/ / / が ー と ¢ “\n(EIN) 頭 己\n/ - INS ハル W\nリリ +<3 g-\nTE \\\n-{3 。\n20208% A 5 !\nーー 。 ー\n aanRaniE ー rill ス :\nFw 2\n居 ご 。 ツリ に ー\n. マッグ 識 。\nE — ミミクジ ーi",
       "ocrConfidence": 0.31,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5169,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_4294.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "aramasa-2020",
+      "split": "tuning",
+      "groundTruthStatus": "partially_confirmed",
+      "expectedBrandFamily": "新政",
+      "expectedProductName": "新政 2020 美山錦",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "—_—\n\nー\n\nーー ら\n\n21\\\n\nて tg\n\n”~ て\n\n-\n\nーッ!\n\n—\n\n_e\n\n4\n\nTHE WeY\n\n\\\n\nーB\n\nー\n\nーーロミマーゴヨ\n\nSR\n\n202¢€\n\nESTTTCL\n\nザマ\n\n3\n\nャ 羅\n\nK\n\n6\n\n3\n\nンク\n\n美山錦\n\nリ\n--- OCR VARIANT ---\n-. i 4 y\n人 ー »\nー -\nー\n ダン\nmr 記\nさき 補幸吉\n昭和ーー一\nA a 3\n/ ー 2% 4 My ミ 内\nー ik た\n3 4 きき > 枯 *\n すま\n— y\nリリ Ct\nー ー 1 。 』\nうっ間計2222\n. ー -— —— ~ '\n 新雪栖和株式会笠衣衣 ーー ョ に\n--- OCR VARIANT ---\n剛内WW\nA 2 ー\nー ー ー -\nー — でぎ\n る B\n \\ ー ー 7X\n/ NM -\n/ MM \\o\n5 1\ner\nーー 電 年\nオーすい 1 ー ィ\n& bj\n1 ———-—\" § “f は\nーー リリ] ー JE\n2 T\n. ままて * * R",
       "ocrConfidence": 0.35,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5060,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": true
     },
     {
       "fileName": "IMG_4295.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "sharaku",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "寫樂",
+      "expectedProductName": "寫樂 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
+      "volumeTop1": false,
+      "abvTop1": false,
       "ocrText": "(&8\n\nKb ・\n\na]\n\nー <\n\nーーで\n\n」\n\ni\n\nもみ旧ロ\n\n使製\n\n製杜醸発使精 R\n\nのみ ッ\n\ns BEAK,\n\nり記かて\n\n回\n\n1[\\\n\nuki g\n\n瓶月\n\nELEEES 名名\n\noRhuk ーー\n\n= わ\n\n(めい\n\n半和が新析全林交2業2\n\n筐外 田政松和棚 ょ\n\nLag\n\nは\n\nigie\n\n清議2 5 00 2\n\nり\n\nちの\n\n別\n\nsauit\n\n2\n\nリグ\n\n年29\n\nBS\n\n号米\n\n%h\n\n0 %\n\n(il\n\nの時\n\nっ級\n\n—\n\nH\n\nine 20CL—03\n\ng\n\n3:t\n\n月 2021.03,\n\n月 2021.04c\n\n名 ひさや\n\ny!\n--- OCR VARIANT ---\nり 半生\nー cE ¢\nBE\nB a E\nー EE\naffe h5\nーーテー 11] ー\ndihRY wampwn RRALEー Cl\n9を ッ ーAE waBEAR His fall\nWNNEIAEE E TR\nWholBn wemsss srEA) の識\nRpEw ーon ーーてここことと半味ー l\nVIED ー暁劉秋新植信木き麹2美米7!用ー に本\nリサ 筐外田牙松林 Sk © dig 2 Usge) ERoMER\n計にに県洒語 2 5 60 2 見上0り度 の5) SLIEE\nBiale 記秋宮人酒写か0.」 RME 細 あぁ胡\nの5名日間下失人 途 いく和を を g xー) Tai\nGlakE 市代 Eeewull Sai\nWWsokR 大会 pEsREgL THOK\nMasS 町台 合 60秋合名 ーんご\nMrholE Nt8 %EgR Eー#\nTa きき & (\nDS 8 B B2OK ag\n計り ー 2 きき ¥4 補\nDi し る - A\nであーニーニーニー一一一 7%\nょかがょりり Wa as し\nNa mRo0cL-03 ] Z 4\nWE oo¥H2021.03, ー o\n--- OCR VARIANT ---\n人 hE\nE 抽\n『り BT 和\nー R b ¥\nー fl &\nー ー vE by\nな寺原原 >答\n 使精 区 訓 psty\n\"E 木(使製 1 拉 Fat\n[44%0 R2 ERESgs 2EIH ー\\\nhog , Rg i= 信息 るる 交了 思 レジ\nトキ おお と間計 ー\nXahok o BF の: *38 2RR 13 117$01 i\n誠に 災新植念木き 0台秋6族導 リル\n 骨才入村 し .\n人はい ー筐外田ょ F23)05%8 洒 リム\nH BEYf T0%z15\" すれ\n謀交史記 入造人酒号 0= &% ¢5i\n主計 sEke Enenul ん\n店5の思は Tx F22eY x% } Fh\nNAES = 式 度ご 60 秋多碧 # ルリ\n幸いっ報 也 大会 度 %EEk B 大\n誤き5S ー RE S CRA 2 Agy\nnefsー@ T に £2 & Aii\n時9で に バボ S = 1 7\nGgsー o8 § x :\nLas仮で 2 ペー 半\n5し 35 [] ) ]\nで ーー一< セク\nーー が\n mome 20CL—-03 - y\n meeg 2021. 03, ー\n tmeg 2021.04< ー .\n科年月 %.\nizg ひさや",
       "ocrConfidence": 0.39,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 13586,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4298.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "B{\n\n\\党ポル.\n\n上\n\n修\n\nリリ\n\n¥4\n\n-\n\n回\"mw\n\nに\n\n】\n\nに\n\n?\\\n\nの\n\nA\n\n.3\n\nで\n\n—\n\n<をの\n\nや\n\nや <タイタダ)\n\nNe\n\n (ー 7多\n--- OCR VARIANT ---\nあご\nル q ララ\nー ーー l ノミ\n 1 ]\n問二um だ:\n5 欠\n/ 者\nf Cg —.\ni f X, \\% まき は SH]\nー @ ,\n5記す [ kt ーー\n+ 岬: 匠) 3 名\n回只 s ぁ\nEE 人\n T\n し きき\n: E. ぷ も )\n3 YY/ と\" まま\n# y 0 [7\nーー ー 2香\n上中 ののを衝スク\nいて 可 ドンジマ本 *\n. Svのmw\nャイ1 CSUNERe\n--- OCR VARIANT ---\n導 し ~, -\n A ~\n= 1 ア\n \\ p.\nが もも ) 生導\n W\nil\nーー一 ・財\n『\nが . 杜夫 =:\nJPN' \\R¥\n 5 1\n ー\nーー一 ( NTL . -\n。 輸放 ーッ\n* 8ip , »\nる\n—a Y ぼ\n. ~— y ; ト 』\nままは ; r!\n1 Vie {f\nに 305 — MS o\n\\ トド ー £i) { To ′\n\\ a TTA 、\n。 を 久光4がくae Nd ング 3 』\n \\ : \\Z Sty, N\nk: ENTS L NS 、\nャイイ7 SC 較\n 本 人で\nー n ペン で",
-      "ocrConfidence": 0.25,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 6342,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4300.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "に -間\n\n\\ー\n\n4\\\n\n£466\n\nIRICE\n\noL__\n\n&nd ンア\n\nwsムラ\n\n7\n\nペー\n\n~\n\nW\n\n5\n\nにーー\n\n=\n\n。\n\n4\n\nE_\n\n-=\n\n1 -¥\n\nIt\n\n\\\n\n\\\n\ni\n\nFHTLS\n\nヘー一一\n\nA\n\n4 4d\n\nすす\n\nY 3\n\n<o7a\n\n y\n\nS 2\n\nLT\n\n目有\n\nーー\n\nE)\n\n記\n\n,\n\n%\n\nVy\n\nmt\n\nしも\n\n12\n\nビリ\n\nニューー\n\nアス\n\n B\n\nié\n--- OCR VARIANT ---\nAf し -ly\n3 か == . ー B\n= 」 R \\ = E — pR— W」\nR 本所 剛ー < -2\n ~ 本 。計 1\nod 自 の必\nWhve\\ を / \\=\nFe 暫く WE\nAA wol 4\ns0.0% \\ 「\n52う 時 いて\n ien ンー り1 \\ ] { g\n7 すま 2\nビー 導 @ 8 -淫 y_\n1いいを ニー ol/\ni 仁あ022 っンー ESNTE]\nBENGEE Rc E ー がーー\n$ 目 用の\nリー ここ ® o 前 るささ\n> ツジ @ 。 YE\n7 , Li 1 用 .\n--- OCR VARIANT ---\nP! - て きき /4\n<、 bd 因 へき5 —\nNENE__E\n: 4 4 さき NN \\ j ー — TTTIV 3 \" 時 』\n§R h i\n2o>8 & 2a\n= ー 誠司ー\n6 MN と ン ー ー i y) _ /\n? Ki に会 一4 ドー\nで 1 = ー\nN 3 \\ ロー\n。 N ) 2 E2=7\n9なの - \\ 7 1\nぅがらう いい\n.- \\w\n も っ\nE ,/ しに に條\nし 半生話導ー\nIAE 「\n-<Y 208 . 4. BE .\n 2 SE\n\\§ § る Sa0; So N\nE ) 中 eE=\n> E : ん\nv ー . ー\nb oa 直り 「枯5間者\nリン 本要ののりの導出 生生mm",
-      "ocrConfidence": 0.26,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 9815,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_4611.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "multi-akabu-sharaku",
+      "split": "tuning",
+      "groundTruthStatus": "unknown",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": true,
       "ocrText": "り\n\n\\Jb\n\n2\n\n人\n\nmovU\n\nNT\n\n022\n\nJ る\n--- OCR VARIANT ---\n『 る\n- r\nE . 1\nー /\nに 0 《 ー\n% 。 2\nEUETURN\n 9 避織 』\n。 g 5 1\nに\n健、\nf 、 b き \\\nRa 導 ー\nに . 1\n遇ー 』 ]\nE 間 $ 4\n N 上 &で A\no ー © -\n& h\\.\n ッッ 用\nA wp 9 > ト\n4 (なを放ヨ\nマ : Ni 甘口 { E ) ー\nNT CES\n18] 内 ®\n て(し1+」 Ae 1\n--- OCR VARIANT ---\n四和ーー 0 、 LAR\niN : :\nジン か \\\nと _江江机 店\np oN\nE a\nod UNEE\nE. 9\n§\nE 記間 アル 計\nE 3\nEEEenE / &\n内\nba = N .\nES半計いい . 。\n2とる寺 B ては\n半いい、 で\n0才革、\nSN\n>拓MS 。\nhe )\nEE 則 1 (\nps き e 記 y\nNE MM\n際ら ) 2\n陸前 き\n, X¥ 0 受 ;\nERR 0\n導く R\nE で ー ss l\nE \\ & o¢ “i \\\nE ー 3\n \\ d\n~ wER d と\n較にーン2 鞭2 )\n:導ジジ \\ 5 3\na/ ゃ が 4\n/ が 【\n: (箕作\nw. 3 。\n Ra 革 ~\nG: e.\noUNY = や\n\"さき\nMOUOゎ1 p.\nの人 に 2",
       "ocrConfidence": 0.49,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6948,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4612.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "K\n\n2\n\n%\n\nに\n\nシン\n\n(5\n\n誠\n\nみい\n\nいい\n\nX\n\n&\n\n=\n\nや\n\n§\n\nジグ\n\nof\n\nタグ\n\n7%\n\nYoast\n\n>\n\n2\n\nア\n\nhav\n\ni\n\n50\n\n5\n\nを\n\n多\n\n2\n\nン2\n\nング\n\nンタググ\n\n(多角\n\n(涼\n\n0\n\n7\n\n7\n\nn,\n\n”\n\n7\n\n47\n\n7\n\n&\n\n/i\n\n7\n\n7\n--- OCR VARIANT ---\n/A4 <\nを で .\n~ _\nPIC 《\nン\nD, G\nBY . てて お\noy -\ntae\n0 4\n2 X ¢ :\n“Y 5 ルー WW\nを 、 のや\nタン “A\ne ッッ\n名作 0いせ1\n{% 9 0\nの2だ2が 7 1ア9\n4 [ir (y ー 人 が\n 4 )\n0 [ AE\no 交人か。 当 [てと p 1\npeld Wer\nEB A\nYkdioA } § 1 b ina\n分シンが Japa Brewing Society Yoast ’ 人\nンク 』\nHa ー\n[用グッの 本 No.6\nアンルン\n菩軍クッルク . The: Oldese Siche 2を\nLn E N g\no が NN の/ eo\n--- OCR VARIANT ---\nー =-\nyal\n- §\n いて ¢\n~~ —~ ロ\nは7 /\n% ~. JE $ $00 お\nみみ勿 0\n家 [L¥\na \\\nクタ 0\nFn\nA\niie 池\nルンの\n2 メアング。 [\nhs 7s, pet\n2多多る間 ング ゃやき\n人 Y '提才\n0o交診 タイ\n2 時デ\n0 8補え 。 ¢ 秩 てる!\n陸交2 y AY\n人を じロ { ー h) L\nBtemly * Pe\nー 格 AR\nペッ\nしらら. 困 人 導\n関と で ンーング\nPlase. ¢ 3 レス アア\n移7 。 職 っ20\nAfsq i428 Japa Brewing Society Qeast > P\nバア\nSR, :\nA \\\n & No.6 \\\ni eY; の\nw クン The: 222ンク を\n2 #, るの クン> GBrew’\nググ の ーー Discovered in 7950 とタク\nの/ \\ ” *\n2 電 \\",
-      "ocrConfidence": 0.22,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 8970,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_4614.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "multi-four-sake",
+      "split": "tuning",
+      "groundTruthStatus": "unknown",
+      "topCandidates": [
+        {
+          "productId": "sake-aramasa-no6",
+          "brandFamily": "新政",
+          "productName": "新政 No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "confidence": 48,
+          "reasons": [
+            "別名一致: No.6",
+            "バリエーション語一致: 6"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "ーーでES\n\ni$-¥\n\nり\n\nペペ\n\n[リ\n\n攻\n\n=3\n\n66\n\n~\n\noyd\n\nー起ち\n\n-9.ヨ\n\nし 央居3\n\n【 1\n\nー\n\nKe\n\n人\n\nァップー\n\nTHIS WAY\n\n-\n\nW\n\nr\n\n1\n\n。で\n\nし\n\nペー\n\nいい\n\n“B\n\n\\o.6\n\n{8\n\nー\n\nNTAIN\n\n2021\n\n』\n\nhi\n\ngi\n\nり\n\ni4 崩\n\n7\n--- OCR VARIANT ---\n(ー 前 ー や 1 ー 70R【本 Is\ni . ・ = ーーCaa 人 ー\nee ー i ー\nー THISWAY J ー 也、 ー \\ ー\nー ー a に 1\nF 1 } $ 4 / § 』 ]\nの ー B\nー 匠\ne 径 ー :\n< SES ー ー\nLi 6 ー い\n 4 k ー L wll .\nIN p 66 リ 『 、 ー\nて本 ー Prd 4 ,」 民\nーー。 卓上 ご ー MouNTAIN ー 時本\nき : 1 2021 ーー\n--- OCR VARIANT ---\n員 ー は r ISTERIEA ー\ni ー\ns ーヨ ・ ー ノロ ー\n\\ otile—1 ー ー uly\nii THISwaY M ー \\ s § 4 y\nー ー > \\\nー 1 :\nん 1 7 WM / し半 3\n4 「 . 散\n, 1 N ー _&\n» f& ] 3\n 日 ー £\n~9 t 町\nりー ー ー 4\n3 ー 794 Brewing Society ー ~\nIn ー ~ 用 }\npi No.6 i A ) ー\nを リンンジンー 本\n。 :凍皿 <ご2 vountary ー 上症の\n® \\ 2021 3\n U へ 』\n時ジョルー / ー",
       "ocrConfidence": 0.36,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 5868,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4615 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "りり —\n\ngoc\n\nmEISTO\n\nリノ\n\nーー\n\nir居\n\na v\n\nTHEWAY A\n\n;\n\n上 ー\n\nF.\n\ni\n\n一\n\n7-。 3\n\n5\n\n20症\n\nWouNTA以\n\nKN\n\nや\n\n2021\n--- OCR VARIANT ---\n2 i し TMS\nすす ー 4\n'8 t p\n/ ム\n1 ー\n:\nb\n- 3 A :\nmw全の - 遍笠\n: / .\nー ー\n; 3 ー 編 Moms 半 ーー —al に 5・\n--- OCR VARIANT ---\nバ ー E\nお\nf かム\n¥ 1\nd\na\n明記\n」 と 1ゼ\n・ yo か po, J\n- » / EER\n — ( 中\n0 yrary AE 、\npres) 。\n5 ouNTAT 0\nう02う1 uu",
-      "ocrConfidence": 0.32,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 3486,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4616 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "RABPU MOUNT\n\nEUER [F4Ede2A] 2 Puid\n\n依が魂を込めて醸した日本酒\n\n上昨すものは\n\n5,\n\nZHheTHR\n\nSoEARRA idl of 6 AEI, 』\n\nHE\n\nよく昌\n\n0で大な山 (MOUNTARS\n\nを山 5OUNTAIN を想像し\n\nにお楽しみください。\n\nゆめ\n\nした新紀代の\n\nact.\n\nョ 本酒(鈍未洒) @RAHIE\n\n£@\n\nドドは\n\nTha\n\n$六未歩合 6096\n\n内容\n\n8\n\nトド\n\n14度 @BiEI~\n\n$\n\n月: :2\n\n021年7月\n\n準滅店にて保存\n\nFREGRAEE o0\n\nAFpamiiied\n\nリル とくかな っ\n\nae\n\n#adSies { ださい\n\nS¥us\n\nぎざぎざいま\n\nRiy\n\n内 2% 720ml\n\n———\n--- OCR VARIANT ---\n品 fANADU ーー ーーいよ ]\nBERTEam2A] & vohil ー\nを込めて醒した本洒 介肝ー\n「 ー頻すものは、 支協せす企を2計ー\n ーっを大区に日々進化する済間 属す\n\nは 私的で壮大な帆 (MOUNTAIVE ー\n\nー 村 た日本酒です。 ‘l\n\n4 が アルONTAIN) を想保しで n\n\nてにお楽しみください。 Kog,\nCABO が読匠した新間作曲本 か\nーー prery(\nVig IERD @RHIS\nを @irkop 4 6096 HES\nM9 1ag @pimr=\nEnCETE\n生計 U の\n FRmehAEE o\nきい EFRgmase ! a\nきゃで二ミーー A\n--- OCR VARIANT ---\nh_F~ TRAVANISEE\né ; - - - — = por\nLRER [EERZA #pald béー\nHRAESETREAWI-EY-. l\n ETbou, 2iheFaRa0E])\n“ot Riizg ZBb+ 2iEE] 7 』\n。 放り\nいく負私的で柱入な山 (MOUNTAIE ー\nた本洒です.\nジッoonrai caplg ー\nAKABU にお楽しみください.。 Kogfl\nいさか\nAB 林洒 (純未酒) @F サガる を\n$70 @upip 4 60% @ か\ntt人 1an @umua=+\nVeoal202187g\n て保存\nに 人寺 T SeT 188\nSu 、 呂手県盛岡市北飯周\nNaきにをーー ら ゃ ~ '\neE Ree ¢2 ,",
-      "ocrConfidence": 0.46,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 10376,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00010000000474974513,
+      "abstained": false
     },
     {
       "fileName": "IMG_4617 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "yamamoto",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "山本",
+      "expectedProductName": "山本",
+      "topCandidates": [
+        {
+          "productId": "sake-yamamoto",
+          "brandFamily": "山本",
+          "productName": "山本",
+          "makerName": "山本酒造店",
+          "alcoholType": "sake",
+          "confidence": 90,
+          "reasons": [
+            "正式商品名一致: 山本",
+            "蔵元・メーカー一致: 山本酒造店"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "sake-w-yamadanishiki",
+          "brandFamily": "W",
+          "productName": "W 純米 山田錦",
+          "makerName": "渡辺酒造店",
+          "alcoholType": "sake",
+          "confidence": 51,
+          "reasons": [
+            "ブランド一致: W"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "ドいき\n\nに\n\nSN\n\nジン\n\nb\n\nw\n\n.\n\n.\n\n:\n\n148 w\n\n5\n\n2\n\npe\n--- OCR VARIANT ---\np ¥ - Foo 韻 1 wa\n1448 W : 9\n 了 いい 【二\nf &\ne ー . 4\n「 1にる\nE & K\nョ いい 生き\n ’\nWak\nae ビー\n『\ni8 ー\n( ー\n3 者 』 i\nーー A 、\n。 5 近拉りりい\nーー 薄 と E 人 し\n \" w\nンー\nパー パロ\nー 。 §\n\\ 7\n人や E に\n」 ーメ\nゃ E.\nらい\n~\nさり\n--- OCR VARIANT ---\n= Jeeiy * A prs §\nET w § た :過\n誠: 5\nf 【。\nF. : 4\ny キー\n5 し - 3\nー 「計5\n\"5 ーー\ni 5 E\nA § p\nb\n 1\ni 2 4 iF\nを [ 4 。\n4 5\n。 ー B B \"3\n- n *\n - E 際 Ld\n ? _a\nf 上\nし\n7 で と 人\nN 9\nA E に\n 世 。\nゃ ーー\nに & ©",
       "ocrConfidence": 0.25,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 4732,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": false
     },
     {
       "fileName": "IMG_4618 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "yamamoto",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "山本",
+      "expectedProductName": "山本",
+      "topCandidates": [
+        {
+          "productId": "sake-yamamoto",
+          "brandFamily": "山本",
+          "productName": "山本",
+          "makerName": "山本酒造店",
+          "alcoholType": "sake",
+          "confidence": 90,
+          "reasons": [
+            "正式商品名一致: 山本",
+            "蔵元・メーカー一致: 山本酒造店"
+          ],
+          "mismatchReasons": []
+        },
+        {
+          "productId": "sake-w-yamadanishiki",
+          "brandFamily": "W",
+          "productName": "W 純米 山田錦",
+          "makerName": "渡辺酒造店",
+          "alcoholType": "sake",
+          "confidence": 51,
+          "reasons": [
+            "ブランド一致: W"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
+      "volumeTop1": false,
+      "abvTop1": false,
       "ocrText": "-の商品はク〇暑い真夏に「冷やして9\n\n内仁込みの酒」というテーマで仕込\n\nRRCT. 夏に太陽に向かって咲くひまか\n\n*イメージじ、 サンシャイン イエロー\n\nけけまじだ\n\n山府仕込みと云えば、 しっかり熟成さぜ7\n\n0をおぉ贈にして楽しむのが一般的ですか\n\nて振りたてのフレッシュな状態で\n\n出朋レして6\n\n・谷えた状態でバランス\n\n=\n\nが取\n\nれるよう2\n\nE\n\nR:3\n\n計しているため、 BHIC\n\nは向いて be\n\nで SfFERERN—LT\n\niitig,\n\n1 a\n\n県産米\n\n米 He 県産)、 ElE\n\n-,\n\nロロ\n\n55%\n\n回\n\nロール\n\n15度\n\nZ\n\n用用\n\n0\n\n山\n\n式会社 山 西造店\n\nz\n\n&;\n\n郡八峰町八森字八森2\n\nWa 坦になってから\n\n2021.7\n--- OCR VARIANT ---\n-の商品はク〇暑い真夏に「冷やして鈴\n由仁込みの酒」 というテーマで仕入ん5 [8\n二です。夏に太陽に向かって咲くひまね\nをイメージし、サンシャイン イエロー\n則ました。 ーー\n由論仕込みと云えば、 しっかり熟成させた:\nをおぉ料にして楽しむのが一般的ですか %\nて捧りたてのフレッシュな状態で出荷レバ\n計。 冷えた状態でバランスが取れるよノン\n放設計しているため、 HMICEAVTE\nので お増好きの方はスルーしてくた\n科名 (秋田県 器 っ\n店 g8\nな 5和ai\nア ルコール分 15度 回 L 山 z\n論* 株式人直木酒造店 ご\nbas 株式会社 山本酒造店 —\nSs 條都八峰町八森字八森2?\" T\n--- OCR VARIANT ---\n-の商品はク〇暑い真夏に「冷やして鈴\n二仁込みの酒」というテーマで仕込ん5 P\n夫てす 夏に太陽に向かって咲くひま\n) 6 x N —t4\nをイメージし、サンシャイン イエロ\n則ました。 —\n内仕込みと云えば、 ルン *\nEemicLTRLGonEHTIT\nSETOLys a RETHT\nは $えた状態でパランスが諏れ2\n起設計しているため、 SMIC はだ\n\"ので、お増好きの方はスルー .\n結衣名 米 (秋田県産)、 回叶四\n志和田県産米) Takd 用\nの あ合 55% 回高中 ン\nMs分 5度 ャン\nVa 株式会社 山本酒場 —\nas者八峰町八森字八森2\nWs 蘭になってから",
       "ocrConfidence": 0.71,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 7687,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": false
     },
     {
       "fileName": "IMG_4619 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "sharaku",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "寫樂",
+      "expectedProductName": "寫樂 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "gol\n\n_4\n\ni”\n\n:\n\n1MWbWBY X\n\n-2\n\n;\n\n-\n\nリ\n\nじ\n\nん\n\n央\n\nA\n\n0\n\n0\n\nit\n\nいい\n\nーー\n\n人\n--- OCR VARIANT ---\n販いッッリー 1\nRRー —\nー ? く\nー) 7 __\nAm\nー 1 ー\nる _\n- がこと —\nl W5 * ー\nye 関間0\n & 4 =\nいた A\n(革ー N 』\nは 9 いい導 し\n較 : /全み\n! 2し\n--- OCR VARIANT ---\n4 9 + ET NM\n(wi だ 1 】\n)\nh \\\n 4 )\nー) R)\n 1\n困\nる ーー 当\n B ) テー おら\nー i p A \"\n 8 ウス w いい\n碧にいて lEN\nて E 。\n! \" 。。\nり 2\nー ¢ ロン\n昌 。 7と\nli go ご\nドー =1 w",
       "ocrConfidence": 0.24,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 3908,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_4620 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "sharaku",
+      "split": "tuning",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "寫樂",
+      "expectedProductName": "寫樂 純米吟醸",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
+      "volumeTop1": false,
+      "abvTop1": false,
       "ocrText": "A\n\n%\n\n7マ\n\nJEX\n\nL+56[¢\n\n=\n\nE)\n\n業 を\n\n#okoh BR\n\nい\n\n%\n\n&\n\n720m/z\n\nMEL, BERL, AZRT\n\n2なさまに愛き本る酒を目指します\n\n【串\n\n昭和\n\n日本酒】 【内容量 720 m】\n\n 本(国産)、米麹(国産米)\n\n—\n\n歩合 50%\n\nアル\n\nコール\n\n分 16度\n\n=\n\no 朋\n\n03.06\n\n=\n\nいい BemGuou Fon) =\n\n=\n\nWM\n\n5 入銘酸株式会社\n\n8\n\n=\n\nー #\n\n4)\n\n242(\n\n松市東\n\n8=7\n\nHig)\n\n)0031 FAX 0242(27)00% ,\n\nのが\n\nは\n\n%525 :\n\nませんが包質等には則\n\ntd B[ECTH\n--- OCR VARIANT ---\n9 2 —\n介炒内 7o0mz\n多肉酸 :3 N 720友ー\nREL BERL, 人を愛す。\n2なさまに愛き導る酒を昌指します。 4\nーー一 EERRR - —\nEg < 【内容量 720 mg】\nメみさ 礎(国産)、米麹(国産米) —=\nBREa 50% =\nコール分 16E =\nig p =\nWW pg 用\nbigy 表倫蔵(10C以下で保存) =Z\nCihReARE =\n上 =\n[内05ぶ電装松市吉攻reニーニー\n--- OCR VARIANT ---\nO ( :\nsaad. 23 720m%\nはえい、 酒を愛し、人を愛す.\nHH 5 +ail rveem 20nl]\nで 米(国産)、米麹(国産米) ジジ\n人 50% =\nコール分 ==\niy 16度 =\nty a 用\n時 13.06 =\ny ー表論蔵(10じ以下で保存 =\nws SRARR 2A =\nNlseen =\nMs2270031 東栄町8-7 0 —\nー居衝倫政 に な » HIRS 4 tatc の方 はお ィ ・",
       "ocrConfidence": 0.54,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 6807,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4621.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "19\n\nの\n\nアー ”\n\n/ノ\n\nmag\n\n[{.4\n\n»\n\n«\n\n\"て]\n\nるる、\n\nTHIS WY\n\nーーを\n\nし\n\n*¥\n\n“N\n\n2 Brewing 208の07\n\nNo.\n\nテウンン.ム\n\nクン\n\nLiscoveredy, アク?\n\n2\n\nFr-TL\n--- OCR VARIANT ---\n5導 ii5Wi7 ' ビー ey 7\n5る\nて\nー ERR\n遇\n\"y 訂\n.」] 6\n--- OCR VARIANT ---\n語 HGWY © 加計 カ ( 加\nの\n ー, “ ー\nー4\n]\ny \"\nまさ\n: すま 3 %\noo Brewing Society の\n oc\n- ーータタ。 ワク/んリンニン ウジ",
-      "ocrConfidence": 0.34,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 2455,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4622 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "— R,\n\nーー 一\n--- OCR VARIANT ---\n。 。 A\nー -g ず\nP ; 。\nに 1\nが 5 ー\nu。 ー ー\ne. 3\n E\nic - 8\nCaal\ngm E\nE\n』 ーー ー\n--- OCR VARIANT ---\n」 ー\nbr : an\na し .\nE Bs. § 4 \"\n、 ー\ni3 ー\nig\n剛。\n院- 3\nfiim B\n 7\nS- こさ\n r E\nー E\n語- 78\nに -3\nーー\n1\n攻- トーマ\n も\n E\nj\nー",
-      "ocrConfidence": 0.4,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 2278,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_4623 2.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "E\n\nJapan Brewing Societ,\n\nNo.6\n\nThe Olest Sihe 5.\n\nングンクグングンオクアク\n\nのネンウンンジンク 795\n\nBUEL\n\nBi;\n\nPRODUCT OF AKITA\n\n(のアア BY\n\nZrIX\n--- OCR VARIANT ---\nJapan Brewing Society us\nNo.6\nThe Olttose Sirhe クッ\nUsed i Modlerss GBrew\nDiscoveredie 7950\nEE\n上\nいい &\nのmp ハクリーペー ティ\n--- OCR VARIANT ---\nJapan Brewing Society us\nNo.6\nThe の2タンクン クッ\nレアングクンクンクンノックアング\nの4ウッンジクル 7950\nEIELN\nhi\n=\\B\nば PRODUCT OF AKITA\nMADE BY",
-      "ocrConfidence": 0.49,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 2732,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.0005999999993946403,
+      "abstained": true
     },
     {
       "fileName": "IMG_5187.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "hououbiden",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鳳凰美田",
+      "expectedProductName": "鳳凰美田 純米吟醸 雄町",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "—\n\nン\n\n。\n\n-\n\n—=\n\nッ<そ.ア\n\n前\n\nーーゞ B\n\n。 、詳\n\n*\n\n4at\n\n\"\n\nが\n\n和夫:\n\nーー\n--- OCR VARIANT ---\n& h E Npaany トト ジア\n ー ヨ F\n9 マッ £ - に -\n人 てき アー =\nas 1 に :\n\\% R =\n : w ¢\n1 -. ue を\n・ E\n・・ぅ 葵 に 4\na RAN\n= 上 B 記 —\n~ 3 』 人倫 al - 公 、 ーー\n‘ » う 。沿 層 < . h= 3\nツイ \\ _ 5 = ビ & N » boe\n婦 « ーー ¢ p : Cha\nAl ーー 衝 - ーー 当\n~thh : —=\nB] ESaE ~&\nSi 5 ーー\nA R* € & E\nと ふさ 、、 へ邊 &\nded = a pi Ey - _el\n. に + .\nの 上 \\ a\n h! ー .当\n』 3 ーーンクジの\nak \\ - R F\n , - E v\nE & ) : 内\nが革 F 4 ーー\nA — みみで*\n--- OCR VARIANT ---\nA きど Re com— = =\nk LANEN = E\nゴ ー - . 2 っ\nTEE- T\n -= U 5 るの :当\n- Et N =\n -. 2\nE E 時\n(2 邊の \"活遇\nが 3 に 4\n- に BN a— =\nB s ー ー BA ~ ーー\nコ E ・ 誠導5科各 ーーる本\n# ーー た つと っ 格計デー\nの。 し みみ ー\n= oYy «©\n C ーー\n \\ A トド e こ —=\n。 ーー :\nB3 N = =\nで E & =\n[ SEe っ =\n: 』 。 SS ——\ni id 8 * ーーミミな E\n aa al\n: や 、\n To a\n. E = € Ee\nー il ンジクジ\n人 a — « 5\ns RaE 0\nの は 党幸 b 3\n区 で\nー J —_ ます 税\ne と —_— 4\nF 。ま a -\n。 、 学",
       "ocrConfidence": 0.28,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 10251,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_5188.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "hououbiden",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鳳凰美田",
+      "expectedProductName": "鳳凰美田 純米吟醸 雄町",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
       "ocrText": "同\n\n-\n\nFA\n\n>\n\n5選\n\n\\\n\nA\n\n_ —\n--- OCR VARIANT ---\nん\nー も\n , Pt ー\n問 jn /\nー ーー T==ril ¥y\n--- OCR VARIANT ---\nー\n\nー [オヨ\n\nー ヲ\n\n F/\n\n , て 4\nに : ーー T『攻2 【) 3\n\n : /\n\nnl 1 ュ だ\n\n、、凶軽g瑞 アグー\n\n —— 7 B",
       "ocrConfidence": 0.25,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 1843,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     },
     {
       "fileName": "IMG_5189.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
+      "groupId": "hououbiden",
+      "split": "validation",
+      "groundTruthStatus": "confirmed",
+      "expectedBrandFamily": "鳳凰美田",
+      "expectedProductName": "鳳凰美田 純米吟醸 雄町",
+      "topCandidates": [],
+      "correctTop1": false,
+      "correctTop3": false,
+      "correctTop5": false,
+      "brandTop1": false,
+      "makerTop1": false,
+      "alcoholTypeTop1": false,
+      "abvTop1": false,
       "ocrText": ".3 EO\n\n大地\n\n寺本活\n\n4全介区導 THOTR] £RAL Akkvay\n\neoLLORED® T 6 s khotne\n\nnEA0LE RRERZ DERNELIREY\n\nBTRAED R 6 RTV F, HETL VI REFEL\n\nVIBA TRIE] TRVCEEERIARY TLEPELE\n\nは\n\nE幅所な存在世を表現することができまれ 月\n\n『『ィーに圧倒約な存在感を表現しフフ、そ7\n\n4で Di4\n\n内かいい優しきを娘っているオリ ジナリティー*\n\nな味わいをも楽しみいただけます\n\nri PREALTRiER pEOLE\n\nsLE\n\nこの度は、弊社商品をお3 ポのいた\n\nAO\n\nTiz.\n\n(国産) 、 PETEY\n\n=\n\n0\n\n He\n\n100%\n\n3 分・\n\nZ\n\n6度以上17 度未演\n\nA\n\nE\n\n=_\n\n3\n\nビー\n\nに\n\n中月\n\n回店\n\n2021.07\n\nTnstagr『 am\n--- OCR VARIANT ---\n肖出和赤参凶を イーイイ寺合\n+の美しいめ風燥の中で作られる本物の誰可を\nいう)信念のもと表家と我々の信頼関係により最9\nが作り持けられています。礁町というネは/ 上\nいう)特別な [大地]ー で永い時を刻み銃けているか6\n8交な看在島を表現することができます#\n4ーに圧個約な存在感を表現しっつの、それでいい\n\n較 いい信しを法っているオリシナリティー導し\n\n電王ネわいをもち来しみいただけます 。\n\n半生議導にて机松後はお手のにおる\nいい。ての度は、葛往商品をおまめいた bog\n5 ーー\nPiEk@e) xmmad\nTR 4BET 10096 Z\n--- OCR VARIANT ---\nJsp美しい風時の中で作られる本物の共加を\nEALE REEADERRL L1AS\ne e srrvikuEE 上\nBTENE b hTV, しwit B\nい半[大地 で いい時を称み拓け 8\nALEABERRT §I LHTITTC\nFroLERsLEEBERRL2\n稚い優しきを纏っているオリジナリティ\nてを味わいをお楽しみいただけます。 が -\nRaccmieasFEE “\nMetony gamassiont .\ntxmg ramat B3\nLU Rither 10096 ー Z\nSs E\nsa E\nに ;",
       "ocrConfidence": 0.49,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
       "processingTimeMs": 9815,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_5378.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "@.H\n\ny なく\n\n第\n\nIE\n\nHE\n\n% TAPAS\n\ni ー\n\nOLLECTIO\n\nTEMPRANILL?\n\n2018\n\nデン:\n\nA\\ ¢ [8\n--- OCR VARIANT ---\nWe & 3\nリリ 特 天\n§ リリ 。 Ji; お 上 ー 還 ーー %\nelRE THE\n2 THPH2\n- __% wiINE\nWuLECTI0陸\n5 1生 ーー 詳\nこと\n--- OCR VARIANT ---\npre lpre « ョ\n: g いい T H 3 »\nTP\n~ _ ンー WINER\n\nWugrrin\n邊(5タ wwr計",
-      "ocrConfidence": 0.33,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 3792,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_7535.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "--.\n\nE\n\nルど\n\nー お抽\n\nの J\n\nデザ\n\nーーウン\n\n, '%\n\n。\n\nE\n\n—\n\nモーミミ\n\n#\n\nPD\n\nいひ\n\n0.0 J\n\ny/\n--- OCR VARIANT ---\nL #HE W 。\n- . — と\n区革\nNo.6 “\nー 2e P\n ー 殿決吉 。\n1 yハさま B\n ] { Rk 4\n義人 上\n— 保答 則。\nd v 4 』 > 5\n生生 mmm ー ーー\n。 開語人R放基限 1\ny¢ 2021F 6A%E ー §\n- EEESGERAE 。\né . お飲みください 計 .\na 【裏面もみずすご覧下さい】 」\nの\noy \\\n6\n-\n--- OCR VARIANT ---\n本 Ve し &\nv\nンー\nー Wo.6 【\nー W 1\nた J の COOL ー&\nFe yA 3\n。 用 女滞成島\nーーー RrLaa\nw— EZNEE I\n ー h JA\nEu au E ー 。5和0\n# 品質保証期限 し\nピロ 回問202ー年6月 __ B $\ne までに速やかに . g\n- お飲みください 。 得\nー 【亡面もみずすご覧下さい】 に o\nヅ A\nE ー a ー\n ge -\nと =. 'Y\ny N\nv'E ジー\n寺。 憶 』\nJH =\n ap\nDd G=n 2 7\nnTy) の",
-      "ocrConfidence": 0.34,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 5381,
-      "warnings": [],
-      "errors": []
-    },
-    {
-      "fileName": "IMG_7536.HEIC",
-      "status": "success",
-      "bestCycle": "combined",
-      "bestVariant": "converted-resized+center-label-gray-contrast+label-band-crop",
-      "ocrText": "林野\n\nR-\n\n~\n\nし。 J\n\nfi)\n\nーー\n\n“-\n\nL2\n\nーー一\n\nで 避\n\nいく 4\n\nほほ\n\nMV 6\n\n時 T\n\nKEEP\n\nE\n\n保管\n\n['E\n\n9\n\n以//\n\nJ\n--- OCR VARIANT ---\nムー リン り\nる の6 ー\nる7 ーー\nー\n»—T2%\nE や\nー P-\nーー wa\no > Pi yム、 CO 3\n_ Cett? 居 k B\nデーーー 一届 保管 =\n—E ar\n本 』 ご\n# [ー 品質保証期限 」\n【 。 店 2021% 6ARE b B\n® かお償みがさい。 。 肛 。\nビ 【真向もみす=臣下*】 。 詳 と 攻 .\n、 ー 4 \\ を\n_基に\nっ 、 at\n る\n過\n--- OCR VARIANT ---\n. に *\n テ 『 放 る。 議 し\ny ¢ - めこ リリ\nいで し 7\nー 3\n- 2R\nー No.6 きき <\nーー一スム ー Xom \\\n§ i 70 COOL 』 。\n- § ゃ人 < B\nーー ae pey\nーー ここニ吊 保* が e\nて ~ E B !\n; 」 す\n_ - zー 1 3\n 埋 品質保証期限\n‘s 開ー の27oxa B 1\né ー rc W\n(iE om 】 E 。 訪\n、 、 fow\n E o “e\nE 2 \\\nF -d re L + §\nーー 。\nyY B\n% h &F ‘\nN\nQ =\nW\n i S08",
-      "ocrConfidence": 0.29,
-      "candidateReasons": [
-        "複数前処理結果を統合"
-      ],
-      "candidateCount": 0,
-      "processingTimeMs": 6267,
-      "warnings": [],
-      "errors": []
+      "identificationTimeMs": 0.00029999999969732016,
+      "abstained": true
     }
   ]
 }

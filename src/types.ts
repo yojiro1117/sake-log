@@ -40,7 +40,107 @@ export interface AlcoholLabelCandidate {
   aliases: string[];
 }
 
+export type CatalogSource = 'built-in' | 'user-confirmed' | 'rakuten-confirmed' | 'imported';
+
+export interface AlcoholProductCatalogEntry {
+  productId: string;
+  brandFamily: string;
+  canonicalProductName: string;
+  variantName?: string;
+  makerName: string;
+  alcoholType: AlcoholType;
+  aliases: string[];
+  kanaAliases: string[];
+  latinAliases: string[];
+  commonOcrErrors: string[];
+  volumesMl: number[];
+  abvMin?: number;
+  abvMax?: number;
+  janCodes: string[];
+  keywords: string[];
+  exclusionKeywords: string[];
+  referenceImageIds: string[];
+  source: CatalogSource;
+  userConfirmed: boolean;
+  hidden?: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CandidateEvidence {
+  kind: 'jan' | 'exact' | 'alias' | 'maker' | 'type' | 'volume' | 'abv' | 'ocr-repeat' | 'multi-photo' | 'visual' | 'history' | 'fuzzy';
+  score: number;
+  detail: string;
+  sourceImageId?: string;
+}
+
+export interface PhotoQualityAnalysis {
+  blurScore: number;
+  brightnessScore: number;
+  contrastScore: number;
+  glareScore: number;
+  skewAngle?: number;
+  labelCoverage?: number;
+  textSizeEstimate?: number;
+  width: number;
+  height: number;
+  warnings: string[];
+  recommendedActions: string[];
+}
+
+export interface LabelRegion {
+  id: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  confidence: number;
+  kind: 'front' | 'back' | 'neck' | 'barcode' | 'manual' | 'center';
+  reasons: string[];
+}
+
+export interface VisualFingerprint {
+  hash: string;
+  luminance: number[];
+  colorHistogram: number[];
+  aspectRatio: number;
+}
+
+export interface ProductReferenceImage {
+  id: string;
+  productId: string;
+  imageHash: string;
+  fingerprint: VisualFingerprint;
+  sourceImageId?: string;
+  userConfirmed: boolean;
+  createdAt: string;
+}
+
+export interface IdentificationRun {
+  id: string;
+  imageIds: string[];
+  ocrText: string;
+  barcodeValues: string[];
+  candidateProductIds: string[];
+  topConfidence?: number;
+  abstained: boolean;
+  processingTimeMs: number;
+  createdAt: string;
+}
+
+export interface IdentificationLearningEvent {
+  id: string;
+  runId: string;
+  proposedProductId?: string;
+  confirmedProductId?: string;
+  action: 'accepted' | 'corrected' | 'rejected';
+  createdAt: string;
+}
+
 export interface CandidateMatch {
+  productId?: string;
+  brandFamily?: string;
+  variantName?: string;
   productName?: string;
   makerName?: string;
   alcoholType?: AlcoholType;
@@ -57,6 +157,11 @@ export interface CandidateMatch {
   totalConfidence?: number;
   mismatchReasons?: string[];
   requiresConfirmation?: boolean;
+  rank?: number;
+  calibratedConfidence?: number;
+  evidences?: CandidateEvidence[];
+  barcode?: string;
+  visualSimilarity?: number;
 }
 
 export interface PhotoClassification {
@@ -163,6 +268,10 @@ export interface ImportedPhotoDraft {
   fileKey?: string;
   classificationConfirmed?: boolean;
   processing?: PhotoProcessingMetrics;
+  quality?: PhotoQualityAnalysis;
+  labelRegions?: LabelRegion[];
+  barcodeValues?: string[];
+  visualFingerprint?: VisualFingerprint;
 }
 
 export interface PersistedImportedPhoto {
