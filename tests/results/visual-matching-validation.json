@@ -1,25 +1,79 @@
 {
-  "evaluatedAt": "2026-07-15T04:49:07.931Z",
+  "evaluatedAt": "2026-07-15T07:42:54.318Z",
   "imageCount": 151,
-  "decodedImages": 151,
+  "decodedImages": 32,
   "referenceGroups": 17,
   "failures": [],
   "legacy": {
     "mode": "legacy",
     "threshold": 0.78,
     "summary": {
-      "evaluated": 15,
-      "top1Accuracy": 0.06666666666666667,
+      "evaluated": 25,
+      "top1Accuracy": 0.08,
       "falsePositiveRate": 0,
-      "abstentionRate": 0.9333333333333333
+      "abstentionRate": 0.92
     },
     "records": [
+      {
+        "driveFileId": "1xem5i5_pReFqb9bHkpkf1DZ2eqSGQFzi",
+        "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
+        "split": "tuning",
+        "expectedGroupId": "laphroaig-triple-wood",
+        "similarity": 0.6290215506191025,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1uLaILvF1cpWtOCr5RGbKaAcnvYWxbxUp",
+        "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
+        "split": "tuning",
+        "expectedGroupId": "hibiki-harmony",
+        "similarity": 0.6534007352941177,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1ib6AHmLLVzi9UaDFqyvFsytLlMUqOOIB",
+        "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.7321308210784313,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1MJYL3PjpvetNE6VPyjmwcqksNYmoynfy",
+        "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
+        "split": "tuning",
+        "expectedGroupId": "unknown-kikota",
+        "similarity": 0.7321308210784313,
+        "correct": false,
+        "abstained": true
+      },
       {
         "driveFileId": "12fYhKeAd9NpjiWeKDasfa66WE4bl1au9",
         "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
         "split": "tuning",
         "expectedGroupId": "laphroaig-triple-wood",
-        "similarity": 0.5647822132113819,
+        "similarity": 0.5926077028002869,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1_rtmxLfD2X_ERkBggn4LjVO7NnjuSO8_",
+        "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.6682643995098039,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1MeLIadwZdVgBsosBsij1CPzN7Bv6PfRI",
+        "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
+        "split": "tuning",
+        "expectedGroupId": "karine-premium",
+        "similarity": 0.7247067656742913,
         "correct": false,
         "abstained": true
       },
@@ -37,7 +91,7 @@
         "fileName": "IMG_2051.HEIC",
         "split": "tuning",
         "expectedGroupId": "hibiki-harmony",
-        "similarity": 0.6411780024509803,
+        "similarity": 0.6501685049019608,
         "correct": false,
         "abstained": true
       },
@@ -55,7 +109,7 @@
         "fileName": "IMG_2274.HEIC",
         "split": "tuning",
         "expectedGroupId": "nikka-coffey-malt",
-        "similarity": 0.6586215336587274,
+        "similarity": 0.6763878676470588,
         "correct": false,
         "abstained": true
       },
@@ -64,7 +118,7 @@
         "fileName": "IMG_2291.HEIC",
         "split": "tuning",
         "expectedGroupId": "nabeshima-purple",
-        "similarity": 0.6669747812077471,
+        "similarity": 0.7348177083333333,
         "correct": false,
         "abstained": true
       },
@@ -82,9 +136,20 @@
         "fileName": "IMG_2293.HEIC",
         "split": "tuning",
         "expectedGroupId": "unknown-kikota",
-        "similarity": 0.635473555717551,
+        "similarity": 0.7348177083333333,
         "correct": false,
         "abstained": true
+      },
+      {
+        "driveFileId": "110yFY40XHgvu6FwDZzPNsa6imhzEd5Y4",
+        "fileName": "IMG_2873.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-new-moon",
+        "topGroupId": "nabeshima-new-moon",
+        "referenceDriveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
+        "similarity": 0.8006617647058822,
+        "correct": true,
+        "abstained": false
       },
       {
         "driveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
@@ -98,11 +163,29 @@
         "abstained": false
       },
       {
+        "driveFileId": "1rvWu4alCWCNNJ-u4lhzzJw9GAZ1GFdtg",
+        "fileName": "IMG_3668.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.7333823529411765,
+        "correct": false,
+        "abstained": true
+      },
+      {
         "driveFileId": "1_VpshPZ-SKenMTfVfyU5tPcRVccnUYzP",
         "fileName": "IMG_4295.HEIC",
         "split": "tuning",
         "expectedGroupId": "sharaku",
-        "similarity": 0.6430698529411765,
+        "similarity": 0.645891544117647,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1j44iy4Jjl2zQCreHHvZM5ooc7spzO25-",
+        "fileName": "IMG_4617 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "yamamoto",
+        "similarity": 0.6891590073529412,
         "correct": false,
         "abstained": true
       },
@@ -111,7 +194,7 @@
         "fileName": "IMG_4618 2.HEIC",
         "split": "tuning",
         "expectedGroupId": "yamamoto",
-        "similarity": 0.6322594975490196,
+        "similarity": 0.7414399509803922,
         "correct": false,
         "abstained": true
       },
@@ -120,7 +203,7 @@
         "fileName": "IMG_4619 2.HEIC",
         "split": "tuning",
         "expectedGroupId": "sharaku",
-        "similarity": 0.6949402573529412,
+        "similarity": 0.7013357843137255,
         "correct": false,
         "abstained": true
       },
@@ -129,7 +212,16 @@
         "fileName": "IMG_4620 2.HEIC",
         "split": "tuning",
         "expectedGroupId": "sharaku",
-        "similarity": 0.6392233455882353,
+        "similarity": 0.7414399509803922,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1STRboEd6zIbc_Z9GjKNpnGqrsezdgkCs",
+        "fileName": "IMG_5187.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6077958596391196,
         "correct": false,
         "abstained": true
       },
@@ -138,7 +230,7 @@
         "fileName": "IMG_5188.HEIC",
         "split": "tuning",
         "expectedGroupId": "hououbiden",
-        "similarity": 0.6053799019607843,
+        "similarity": 0.6383593750000001,
         "correct": false,
         "abstained": true
       },
@@ -157,18 +249,72 @@
     "mode": "composite",
     "threshold": 0.84,
     "summary": {
-      "evaluated": 15,
-      "top1Accuracy": 0.06666666666666667,
+      "evaluated": 25,
+      "top1Accuracy": 0.08,
       "falsePositiveRate": 0,
-      "abstentionRate": 0.9333333333333333
+      "abstentionRate": 0.92
     },
     "records": [
+      {
+        "driveFileId": "1xem5i5_pReFqb9bHkpkf1DZ2eqSGQFzi",
+        "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
+        "split": "tuning",
+        "expectedGroupId": "laphroaig-triple-wood",
+        "similarity": 0.6721525444985301,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1uLaILvF1cpWtOCr5RGbKaAcnvYWxbxUp",
+        "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
+        "split": "tuning",
+        "expectedGroupId": "hibiki-harmony",
+        "similarity": 0.6963775234807169,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1ib6AHmLLVzi9UaDFqyvFsytLlMUqOOIB",
+        "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.7834205956581596,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1MJYL3PjpvetNE6VPyjmwcqksNYmoynfy",
+        "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
+        "split": "tuning",
+        "expectedGroupId": "unknown-kikota",
+        "similarity": 0.7834205956581596,
+        "correct": false,
+        "abstained": true
+      },
       {
         "driveFileId": "12fYhKeAd9NpjiWeKDasfa66WE4bl1au9",
         "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
         "split": "tuning",
         "expectedGroupId": "laphroaig-triple-wood",
-        "similarity": 0.621006756597125,
+        "similarity": 0.6509170813931209,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1_rtmxLfD2X_ERkBggn4LjVO7NnjuSO8_",
+        "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.7051058833582022,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1MeLIadwZdVgBsosBsij1CPzN7Bv6PfRI",
+        "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
+        "split": "tuning",
+        "expectedGroupId": "karine-premium",
+        "similarity": 0.7444188073268426,
         "correct": false,
         "abstained": true
       },
@@ -186,7 +332,7 @@
         "fileName": "IMG_2051.HEIC",
         "split": "tuning",
         "expectedGroupId": "hibiki-harmony",
-        "similarity": 0.6960326447909781,
+        "similarity": 0.7111640682611385,
         "correct": false,
         "abstained": true
       },
@@ -204,7 +350,7 @@
         "fileName": "IMG_2274.HEIC",
         "split": "tuning",
         "expectedGroupId": "nikka-coffey-malt",
-        "similarity": 0.7051058833582022,
+        "similarity": 0.7237316667812845,
         "correct": false,
         "abstained": true
       },
@@ -213,7 +359,7 @@
         "fileName": "IMG_2291.HEIC",
         "split": "tuning",
         "expectedGroupId": "nabeshima-purple",
-        "similarity": 0.7276310999604128,
+        "similarity": 0.7985808034876978,
         "correct": false,
         "abstained": true
       },
@@ -231,9 +377,20 @@
         "fileName": "IMG_2293.HEIC",
         "split": "tuning",
         "expectedGroupId": "unknown-kikota",
-        "similarity": 0.7143379261342204,
+        "similarity": 0.7985808034876978,
         "correct": false,
         "abstained": true
+      },
+      {
+        "driveFileId": "110yFY40XHgvu6FwDZzPNsa6imhzEd5Y4",
+        "fileName": "IMG_2873.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-new-moon",
+        "topGroupId": "nabeshima-new-moon",
+        "referenceDriveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
+        "similarity": 0.8537985634530709,
+        "correct": true,
+        "abstained": false
       },
       {
         "driveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
@@ -247,6 +404,15 @@
         "abstained": false
       },
       {
+        "driveFileId": "1rvWu4alCWCNNJ-u4lhzzJw9GAZ1GFdtg",
+        "fileName": "IMG_3668.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.8010971125653417,
+        "correct": false,
+        "abstained": true
+      },
+      {
         "driveFileId": "1_VpshPZ-SKenMTfVfyU5tPcRVccnUYzP",
         "fileName": "IMG_4295.HEIC",
         "split": "tuning",
@@ -256,11 +422,20 @@
         "abstained": true
       },
       {
+        "driveFileId": "1j44iy4Jjl2zQCreHHvZM5ooc7spzO25-",
+        "fileName": "IMG_4617 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "yamamoto",
+        "similarity": 0.7269878118269665,
+        "correct": false,
+        "abstained": true
+      },
+      {
         "driveFileId": "1G-vSJby7u-6D7n-U9Pd-cBFbPGJdNb21",
         "fileName": "IMG_4618 2.HEIC",
         "split": "tuning",
         "expectedGroupId": "yamamoto",
-        "similarity": 0.6721525444985301,
+        "similarity": 0.7772735136519836,
         "correct": false,
         "abstained": true
       },
@@ -278,7 +453,16 @@
         "fileName": "IMG_4620 2.HEIC",
         "split": "tuning",
         "expectedGroupId": "sharaku",
-        "similarity": 0.6719282715782586,
+        "similarity": 0.7772735136519836,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1STRboEd6zIbc_Z9GjKNpnGqrsezdgkCs",
+        "fileName": "IMG_5187.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6434383347336083,
         "correct": false,
         "abstained": true
       },
@@ -287,7 +471,7 @@
         "fileName": "IMG_5188.HEIC",
         "split": "tuning",
         "expectedGroupId": "hououbiden",
-        "similarity": 0.6504111056125456,
+        "similarity": 0.6738528521041963,
         "correct": false,
         "abstained": true
       },
@@ -302,11 +486,252 @@
       }
     ]
   },
+  "multiCrop": {
+    "mode": "multi-crop",
+    "threshold": 0.84,
+    "summary": {
+      "evaluated": 25,
+      "top1Accuracy": 0.08,
+      "falsePositiveRate": 0,
+      "abstentionRate": 0.92
+    },
+    "records": [
+      {
+        "driveFileId": "1xem5i5_pReFqb9bHkpkf1DZ2eqSGQFzi",
+        "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
+        "split": "tuning",
+        "expectedGroupId": "laphroaig-triple-wood",
+        "similarity": 0.6721525444985301,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1uLaILvF1cpWtOCr5RGbKaAcnvYWxbxUp",
+        "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
+        "split": "tuning",
+        "expectedGroupId": "hibiki-harmony",
+        "similarity": 0.6963775234807169,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1ib6AHmLLVzi9UaDFqyvFsytLlMUqOOIB",
+        "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.7834205956581596,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1MJYL3PjpvetNE6VPyjmwcqksNYmoynfy",
+        "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
+        "split": "tuning",
+        "expectedGroupId": "unknown-kikota",
+        "similarity": 0.7834205956581596,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "12fYhKeAd9NpjiWeKDasfa66WE4bl1au9",
+        "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+        "split": "tuning",
+        "expectedGroupId": "laphroaig-triple-wood",
+        "similarity": 0.6509170813931209,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1_rtmxLfD2X_ERkBggn4LjVO7NnjuSO8_",
+        "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.7051058833582022,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1MeLIadwZdVgBsosBsij1CPzN7Bv6PfRI",
+        "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
+        "split": "tuning",
+        "expectedGroupId": "karine-premium",
+        "similarity": 0.7588396929220477,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1GG0eZ2T48PUzb2XwKC_uXGAi5O2YpSLG",
+        "fileName": "IMG_1703.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "karine-premium",
+        "similarity": 0.8074273831729488,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1M7F3DNH9gJv5xsdTZFc4_1jcoXgH9zOy",
+        "fileName": "IMG_2051.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hibiki-harmony",
+        "similarity": 0.7111640682611385,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1J67mlbitmz29m9wabfQK8JzyrP0sEGPd",
+        "fileName": "IMG_2272.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.8376264047503597,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1GFBdQgmgjAKeYw98PtvVSs_G-nDSN_X6",
+        "fileName": "IMG_2274.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.7237316667812845,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1QIFqVrlJxh4uh5HP9weUjk4h9qLkn66P",
+        "fileName": "IMG_2291.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.7985808034876978,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1HpZkc1BuNn9SsUGIsNaPmSXivrGeFyVn",
+        "fileName": "IMG_2292.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.8010971125653417,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1hJLGDTSN23EWr8Vcuj0KIckXBuy8yZs3",
+        "fileName": "IMG_2293.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "unknown-kikota",
+        "similarity": 0.7985808034876978,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "110yFY40XHgvu6FwDZzPNsa6imhzEd5Y4",
+        "fileName": "IMG_2873.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-new-moon",
+        "topGroupId": "nabeshima-new-moon",
+        "referenceDriveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
+        "similarity": 0.8537985634530709,
+        "correct": true,
+        "abstained": false
+      },
+      {
+        "driveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
+        "fileName": "IMG_2874.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-new-moon",
+        "topGroupId": "nabeshima-new-moon",
+        "referenceDriveFileId": "110yFY40XHgvu6FwDZzPNsa6imhzEd5Y4",
+        "similarity": 0.8537985634530709,
+        "correct": true,
+        "abstained": false
+      },
+      {
+        "driveFileId": "1rvWu4alCWCNNJ-u4lhzzJw9GAZ1GFdtg",
+        "fileName": "IMG_3668.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.8010971125653417,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1_VpshPZ-SKenMTfVfyU5tPcRVccnUYzP",
+        "fileName": "IMG_4295.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.6991336865586633,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1j44iy4Jjl2zQCreHHvZM5ooc7spzO25-",
+        "fileName": "IMG_4617 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "yamamoto",
+        "similarity": 0.7269878118269665,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1G-vSJby7u-6D7n-U9Pd-cBFbPGJdNb21",
+        "fileName": "IMG_4618 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "yamamoto",
+        "similarity": 0.7772735136519836,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1YUl9g1LOB85BIXFEMhjep7Trj66nuIUF",
+        "fileName": "IMG_4619 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.7624355404373824,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "151M8GmeqHILTxOwckhoi7Vgj8zUooIWR",
+        "fileName": "IMG_4620 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.7772735136519836,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1STRboEd6zIbc_Z9GjKNpnGqrsezdgkCs",
+        "fileName": "IMG_5187.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6434383347336083,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1ZroFvTmFNXOrJ1nuzeWgLhsoacOUQ9XB",
+        "fileName": "IMG_5188.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6738528521041963,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "11bcScj3KruqCVke1wdpROe2ZL15Oe0lb",
+        "fileName": "IMG_5189.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6652325988812117,
+        "correct": false,
+        "abstained": true
+      }
+    ]
+  },
   "improvement": {
     "top1AccuracyPoints": 0,
     "falsePositivePoints": 0
   },
-  "note": "Only user-reviewed tuning images are references. Validation and holdout images never become references.",
-  "recalibratedAt": "2026-07-15T04:55:09.940Z",
-  "recalibrationSource": "Stored all-image similarity records from the 0.78 run; no image was decoded again."
+  "note": "Seen-before leave-one-photo-out evaluation. Only other user-reviewed tuning images are references; the query image, validation, and holdout images never become references.",
+  "recalibratedAt": "2026-07-15T07:53:35.769Z",
+  "recalibrationSource": "Stored seen-before multi-crop similarity records from cycle 3; no image was decoded again."
 }

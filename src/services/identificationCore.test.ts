@@ -14,7 +14,7 @@ const entry: AlcoholProductCatalogEntry = {
   hidden: false, createdAt: '2026-01-01', updatedAt: '2026-01-01'
 };
 
-describe('brand identification core', () => {
+describe('identification pipeline core', () => {
   it('normalizes OCR confusions and extracts volume and ABV', () => {
     const normalized = normalizeOcrForIdentification('ＴＨＥ　YAMAZAK1 700 ml Alcohol 43%');
     expect(normalized.searchable).toContain('theyamazaki');

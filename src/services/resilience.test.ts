@@ -72,15 +72,15 @@ describe('resilient data flows', () => {
     expect((await db.classificationCorrections.toArray())[0].acceptedCount).toBe(1);
   });
 
-  it('combines evidence from multiple photos', () => {
+  it('combines evidence from multiple photos through the production pipeline', async () => {
     const front = photo('p1', 'success', '獺祭');
     front.candidates = [{ productName: '獺祭', alcoholType: 'sake', confidence: 'high', matchReasons: ['銘柄名一致'], totalConfidence: 90, requiresConfirmation: true }];
     const back = photo('p2', 'success', '旭酒造 内容量720ml アルコール分16%');
     back.imageType = 'backLabel';
     back.candidates = [{ productName: '獺祭', makerName: '旭酒造', alcoholType: 'sake', volume: 720, abv: 16, confidence: 'high', matchReasons: ['蔵元名一致'], totalConfidence: 88, requiresConfirmation: true }];
-    const result = aggregatePhotoOcr([front, back]);
+    const result = await aggregatePhotoOcr([front, back]);
     expect(result.candidates[0]).toMatchObject({ productName: '獺祭 純米大吟醸45', makerName: '旭酒造' });
-    expect(result.sources.volume).toContain('裏ラベル');
+    expect(result.sources.volume).toBe('複数写真の統合証拠');
   });
 
   it('backs up and restores images, drafts and checksums', async () => {

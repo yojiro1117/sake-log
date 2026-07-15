@@ -1,7 +1,7 @@
 {
   "name": "sake-log",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "packageManager": "pnpm@11.7.0",
   "scripts": {
@@ -12,7 +12,11 @@
     "lint": "eslint .",
     "test": "vitest run src",
     "test:integration": "vitest run src/services/qualityFeatures.test.ts src/services/logRepository.test.ts src/services/resilience.test.ts",
+    "test:identification": "vitest run src/services/identificationPipeline.test.ts src/services/identificationCore.test.ts src/services/identificationComponents.test.ts",
+    "test:migration": "vitest run src/db/migration.test.ts",
     "test:e2e": "playwright test",
+    "check:licenses": "node scripts/check-client-licenses.mjs",
+    "check:bundle": "node scripts/check-bundle-size.mjs",
     "prepare:drive-list": "node scripts/prepare-drive-validation-list.mjs",
     "download:drive-images": "node scripts/download-drive-images.mjs",
     "build:drive-fixtures": "node scripts/build-drive-identification-fixtures.mjs",

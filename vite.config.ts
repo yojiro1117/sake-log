@@ -4,6 +4,16 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   base: '/sake-log/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/tesseract.js') || id.includes('node_modules/tesseract.js-core')) return 'tesseract';
+          return undefined;
+        }
+      }
+    }
+  },
   plugins: [
     react(),
     VitePWA({
@@ -22,7 +32,16 @@ export default defineConfig({
         icons: [{ src: 'favicon.svg', sizes: '64x64', type: 'image/svg+xml', purpose: 'any' }]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globIgnores: ['**/heic2any-*.js', '**/tesseract-*.js'],
+        runtimeCaching: [{
+          urlPattern: /\/assets\/(?:heic2any|tesseract)-[^/]+\.js$/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'sake-log-image-processing-v1',
+            expiration: { maxEntries: 4, maxAgeSeconds: 60 * 60 * 24 * 30 }
+          }
+        }]
       }
     })
   ]

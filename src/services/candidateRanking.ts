@@ -37,7 +37,9 @@ export function rankCatalogCandidates(retrieved: RetrievedCatalogCandidate[], co
     if (context.alcoholTypeHint === entry.alcoholType) add('type', 5, `酒種一致: ${entry.alcoholType}`);
     if ((context.imageCount ?? 1) > 1 && context.repeatedTerms?.some((term) => normalizeCatalogTerm(term).includes(brand))) add('multi-photo', 12, '複数写真でブランド文字が反復');
     const visual = context.visualScores?.[entry.productId];
-    if (visual !== undefined && visual >= 0.84) add('visual', Math.min(18, visual * 18), `確認済み写真との視覚類似 ${Math.round(visual * 100)}%`);
+    if (visual !== undefined && visual >= 0.56) add('visual', Math.min(34, visual * 34), `確認済み写真との視覚類似 ${Math.round(visual * 100)}%`);
+    if (retrievalReasons.some((reason) => reason.includes('過去ログ'))) add('history', 24, '過去ログの確認済み銘柄と一致');
+    if (retrievalReasons.some((reason) => reason.includes('修正履歴'))) add('history', 30, 'ユーザー修正履歴と一致');
     for (const keyword of entry.keywords) if (normalized.searchable.includes(normalizeCatalogTerm(keyword))) add('alias', 5, `バリエーション語一致: ${keyword}`);
 
     let raw = evidences.reduce((sum, item) => sum + item.score, 0);
@@ -53,9 +55,11 @@ export function rankCatalogCandidates(retrieved: RetrievedCatalogCandidate[], co
       productId: entry.productId, brandFamily: entry.brandFamily, productName: entry.canonicalProductName,
       variantName: entry.variantName, makerName: entry.makerName, alcoholType: entry.alcoholType,
       volume, abv, barcode, evidences, matchReasons: evidences.map((item) => item.detail), mismatchReasons,
-      productConfidence: Math.round(Math.min(100, retrievalScore)), makerConfidence: evidences.some((item) => item.kind === 'maker') ? 100 : 0,
+      productConfidence: Math.round(Math.min(100, retrievalScore)),
+      makerConfidence:evidences.some((item) => item.kind === 'maker') ? Math.round(70 + Math.max(0, Math.min(1, context.ocrConfidence)) * 22) : undefined,
       alcoholTypeConfidence: evidences.some((item) => item.kind === 'type') ? 100 : 55,
-      volumeConfidence: volume ? 100 : 0, ocrConfidence: context.ocrConfidence,
+      volumeConfidence:volume ? Math.round(78 + Math.max(0, Math.min(1, context.ocrConfidence)) * 18) : undefined,
+      ocrConfidence:context.ocrConfidence,
       totalConfidence: calibrated, calibratedConfidence: calibrated,
       confidence: calibrated >= 86 ? 'high' as const : calibrated >= 62 ? 'medium' as const : 'low' as const,
       requiresConfirmation: true, visualSimilarity: visual

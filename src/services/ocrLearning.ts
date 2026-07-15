@@ -8,7 +8,7 @@ export async function recordOcrCorrection(input: {
   alcoholType?: AlcoholType;
   learningEventId: string;
 }) {
-  const observedText = input.observedText.trim().slice(0, 200);
+  const observedText = selectCorrectionPhrase(input.observedText, input.productName, input.makerName);
   if (!observedText || !input.productName.trim()) return;
   const alreadyRecorded = await db.ocrCorrections.filter((entry) => entry.learningEventIds?.includes(input.learningEventId) ?? false).first();
   if (alreadyRecorded) return alreadyRecorded;
@@ -44,6 +44,22 @@ export async function recordOcrCorrection(input: {
       };
   await db.ocrCorrections.put(entry);
   return entry;
+}
+
+export function selectCorrectionPhrase(value:string, productName:string, makerName?:string) {
+  const normalize = (text:string) => text.normalize('NFKC').replace(/[\s\p{P}\p{S}]+/gu, '').toLowerCase();
+  const targets = [productName, makerName ?? ''].map(normalize).filter((item) => item.length >= 2);
+  const phrases = extractObservedAliases(value);
+  return phrases
+    .map((phrase) => {
+      const normalized = normalize(phrase);
+      const score = Math.max(0, ...targets.map((target) => normalized.includes(target) || target.includes(normalized)
+        ? 100
+        : [...new Set(normalized)].filter((character) => target.includes(character)).length / Math.max(target.length, normalized.length) * 100));
+      return { phrase, score };
+    })
+    .filter((item) => item.score >= 45)
+    .sort((left, right) => right.score - left.score || left.phrase.length - right.phrase.length)[0]?.phrase;
 }
 
 export async function learningCandidates(ocrText: string): Promise<CandidateMatch[]> {

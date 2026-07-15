@@ -1,7 +1,9 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { performance } from 'node:perf_hooks';
-import { identifyAlcoholProductAtCycle } from '../src/services/brandIdentification';
+import { builtInAlcoholProductCatalog } from '../src/data/alcoholProductCatalog';
+import { rankCatalogCandidates } from '../src/services/candidateRanking';
+import { retrieveCatalogCandidates } from '../src/services/candidateRetrieval';
 import { normalizeCatalogTerm } from '../src/services/ocrNormalization';
 import type { CandidateMatch } from '../src/types';
 
@@ -38,8 +40,8 @@ for (const cycle of cycles) {
     const group = truth.filter((item) => item.groupId === groupId);
     const text = group.map((item) => ocr.get(item.driveFileId)?.ocrText ?? '').join('\n---\n');
     const repeatedTerms = [...new Set(text.split(/\s+/).map(normalizeCatalogTerm).filter((term) => term.length >= 2 && text.split(term).length > 2))];
-    const combined = identifyAlcoholProductAtCycle({ text, ocrConfidence:average(group.map((item) => ocr.get(item.driveFileId)?.ocrConfidence ?? 0)), imageCount:group.length, repeatedTerms }, cycle);
-    const individual = group.flatMap((item) => identifyAlcoholProductAtCycle({ text:ocr.get(item.driveFileId)?.ocrText ?? '', ocrConfidence:ocr.get(item.driveFileId)?.ocrConfidence ?? 0 }, cycle));
+    const combined = identifyAtCycle({ text, ocrConfidence:average(group.map((item) => ocr.get(item.driveFileId)?.ocrConfidence ?? 0)), imageCount:group.length, repeatedTerms }, cycle);
+    const individual = group.flatMap((item) => identifyAtCycle({ text:ocr.get(item.driveFileId)?.ocrText ?? '', ocrConfidence:ocr.get(item.driveFileId)?.ocrConfidence ?? 0 }, cycle));
     const merged = new Map<string,CandidateMatch>();
     for (const candidate of [...combined,...individual]) {
       const key = candidate.productId ?? candidate.productName ?? '';
@@ -51,7 +53,7 @@ for (const cycle of cycles) {
   const records: BenchmarkRecord[] = truth.map((item) => {
     const raw = ocr.get(item.driveFileId);
     const started = performance.now();
-    const candidates = cycle >= 4 ? groupCandidates.get(item.groupId) ?? [] : identifyAlcoholProductAtCycle({ text:raw?.ocrText ?? '', ocrConfidence:raw?.ocrConfidence ?? 0 }, cycle);
+    const candidates = cycle >= 4 ? groupCandidates.get(item.groupId) ?? [] : identifyAtCycle({ text:raw?.ocrText ?? '', ocrConfidence:raw?.ocrConfidence ?? 0 }, cycle);
     const identificationTimeMs = performance.now() - started;
     return {
       fileName:item.fileName, groupId:item.groupId, split:item.split, groundTruthStatus:item.groundTruthStatus,
@@ -95,6 +97,26 @@ for (const cycle of cycles) {
   }
   await writeFile(path.join(resultDir, `identification-cycle-${cycle}.json`), `${JSON.stringify(payload,null,2)}\n`);
   console.log(`cycle ${cycle}`, JSON.stringify(metricsBySplit));
+}
+
+function identifyAtCycle(
+  input:{ text:string; ocrConfidence:number; imageCount?:number; repeatedTerms?:string[] },
+  cycle:1 | 2 | 3 | 4 | 5 | 6
+): CandidateMatch[] {
+  const retrieved = retrieveCatalogCandidates(input.text, builtInAlcoholProductCatalog, cycle >= 5 ? 50 : 20);
+  if (cycle === 1) return retrieved.filter((item) => item.retrievalScore >= 88).slice(0, 5).map((item, index) => ({
+    productId:item.entry.productId,
+    brandFamily:item.entry.brandFamily,
+    productName:item.entry.canonicalProductName,
+    makerName:item.entry.makerName,
+    alcoholType:item.entry.alcoholType,
+    confidence:'medium',
+    totalConfidence:item.retrievalScore,
+    matchReasons:item.retrievalReasons,
+    rank:index + 1,
+    requiresConfirmation:true
+  }));
+  return rankCatalogCandidates(retrieved, input);
 }
 
 function metrics(records: BenchmarkRecord[]) {

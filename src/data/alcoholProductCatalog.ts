@@ -38,7 +38,15 @@ export const builtInAlcoholProductCatalog: AlcoholProductCatalogEntry[] = [
   entry('sake-takijiman-daiginjo','瀧自慢','瀧自慢 大吟醸','瀧自慢酒造','sake',{ variantName:'大吟醸', latinAliases:['TAKIJIMAN'], keywords:['大吟醸'] }),
   entry('sake-takanome','鷹ノ目','鷹ノ目','はつもみぢ','sake',{ latinAliases:['TAKANOME','HAWK EYE'] }),
   entry('sake-kaze-no-mori','風の森','風の森','油長酒造','sake',{ latinAliases:['KAZE NO MORI'] }),
-  entry('shochu-kameshizuku','甕雫','甕雫','京屋酒造','shochu',{ latinAliases:['KAMESHIZUKU'], keywords:['本格焼酎'] })
+  entry('shochu-kameshizuku','甕雫','甕雫','京屋酒造','shochu',{ latinAliases:['KAMESHIZUKU'], keywords:['本格焼酎'] }),
+  entry('sake-kikota','喜荒太','喜荒太','不明','sake',{ aliases:['喜荒太','純米 喜荒太','喜荒太 初代'], keywords:['純米','初代'] }),
+  entry('sake-karine-premium','香里音','香里音 karine PREMIUM','不明','sake',{ aliases:['香里音','香里音 PREMIUM'], latinAliases:['KARINE PREMIUM'], keywords:['PREMIUM'] }),
+  entry('sake-asian-beauty','Asian Beauty','Asian Beauty 純米吟醸','不明','sake',{ latinAliases:['ASIAN BEAUTY'], keywords:['純米吟醸'] }),
+  entry('sake-taka-60','貴','貴 特別純米 60','永山本家酒造場','sake',{ aliases:['貴 特別純米','貴 60'], latinAliases:['TAKA'], keywords:['特別純米','60'] }),
+  entry('wine-koshu-no-antioxidant','甲州','甲州 酸化防止剤無添加','不明','wine',{ aliases:['甲州 無添加'], keywords:['酸化防止剤無添加','中口'] }),
+  entry('sake-tentaka-1814','天鷹','天鷹 夢ささら 1814','天鷹酒造','sake',{ latinAliases:['TENTAKA 1814'], keywords:['夢ささら','1814'] }),
+  entry('sake-tarumizu','垂氷','垂氷','不明','sake',{ aliases:['垂氷 吟醸生'], keywords:['吟醸生'] }),
+  entry('wine-tapas-tempranillo-2018','THE TAPAS WINE COLLECTION','THE TAPAS WINE COLLECTION TEMPRANILLO 2018','不明','wine',{ latinAliases:['TAPAS WINE','TEMPRANILLO 2018'], keywords:['TEMPRANILLO','2018'] })
 ];
 
 export function mergeCatalogEntries(stored: AlcoholProductCatalogEntry[] = []) {

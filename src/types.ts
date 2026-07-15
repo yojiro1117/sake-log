@@ -76,6 +76,25 @@ export interface CandidateEvidence {
   sourceImageId?: string;
   sourceRegionId?: string;
   confidence?: number;
+  rawValue?: string | number;
+  normalizedValue?: string | number;
+  method?: IdentificationEvidence['method'];
+  sourcePhotoType?: IdentificationPhotoType;
+  preprocessing?: string;
+  engine?: OcrResult['engine'] | 'catalog' | 'history';
+  boundingBox?: { x: number; y: number; width: number; height: number };
+  conflict?: string;
+}
+
+export type CandidateSource = 'text' | 'barcode' | 'visual' | 'history' | 'correction' | 'multi-photo';
+
+export interface CandidateRetrievalSummary {
+  textCandidates: string[];
+  barcodeCandidates: string[];
+  visualCandidates: string[];
+  historyCandidates: string[];
+  correctionCandidates: string[];
+  multiPhotoCandidates: string[];
 }
 
 export interface PhotoQualityAnalysis {
@@ -126,6 +145,8 @@ export interface ProductReferenceImage {
   imageHash: string;
   fingerprint: VisualFingerprint;
   sourceImageId?: string;
+  photoType?: IdentificationPhotoType;
+  qualityLevel?: PhotoQualityAnalysis['qualityLevel'];
   userConfirmed: boolean;
   createdAt: string;
 }
@@ -169,6 +190,16 @@ export interface IdentificationResult {
   processingTimeMs: number;
   warnings: string[];
   errors: string[];
+  retrieval?: CandidateRetrievalSummary;
+  stageTimings?: Record<string, number>;
+}
+
+export interface PerspectivePoint { x:number; y:number }
+export interface PerspectiveQuad {
+  nw:PerspectivePoint;
+  ne:PerspectivePoint;
+  se:PerspectivePoint;
+  sw:PerspectivePoint;
 }
 
 export interface ProductAliasEntry {
@@ -213,9 +244,13 @@ export interface IdentificationLearningEvent {
   runId: string;
   proposedProductId?: string;
   confirmedProductId?: string;
-  action: 'accepted' | 'corrected' | 'rejected';
+  action: LearningDecision;
+  finalProductName?: string;
+  finalMakerName?: string;
   createdAt: string;
 }
+
+export type LearningDecision = 'accepted' | 'corrected' | 'rejected' | 'manual-new';
 
 export interface CandidateMatch {
   productId?: string;

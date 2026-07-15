@@ -1,16 +1,17 @@
 import { fileToResizedBlob } from './imageService';
 import { createOcrVariants, scoreOcrVariant, type OcrVariantKind } from './imagePreprocessingService';
-import { learningCandidates } from './ocrLearning';
 import { classifyIdentificationPhoto, classifyPhoto, extractVisualImageFeatures } from './photoClassificationService';
 import { db } from '../db/db';
-import type { CandidateMatch, ImageType, ImportedPhotoDraft, OcrResult } from '../types';
+import type { CandidateMatch, ImageType, ImportedPhotoDraft, OcrResult, PerspectiveQuad } from '../types';
 import { OcrWorkerSession } from './ocrWorkerSession';
 import { analyzePhotoQuality } from './imageQualityService';
-import { cropRegion, detectLabelRegionsFromImage } from './labelRegionService';
+import { cropPerspectiveQuad, cropRegion, detectLabelRegionsFromImage } from './labelRegionService';
 import { createVisualFingerprint } from './visualFeatureService';
 import { readProductBarcodes } from './barcodeService';
-import { identifyAlcoholProduct } from './brandIdentification';
-import { identifyLocalAlcoholProduct } from './identificationPipeline';
+import { builtInAlcoholProductCatalog } from '../data/alcoholProductCatalog';
+import { rankCatalogCandidates } from './candidateRanking';
+import { retrieveCatalogCandidates } from './candidateRetrieval';
+import { identifyAlcoholProductPipeline } from './identificationPipeline';
 
 type DetectedText = { rawValue?: string };
 type TextDetectorCtor = new () => { detect: (source: ImageBitmapSource) => Promise<DetectedText[]> };
@@ -98,17 +99,22 @@ async function createImportedPhotoDraft(
   throwIfAborted(options.signal);
   options.onProgress?.({ index, total, fileName: file.name, phase: 'image', message: '画像を調整中です。' });
   const resizeStarted = performance.now();
-  const resizedBlob = await fileToResizedBlob(displayFile, 1600, 0.86);
+  const resizedBlob = await fileToResizedBlob(displayFile, 1400, 0.84);
   const { width, height } = await readImageSize(resizedBlob);
   const resizeMs = performance.now() - resizeStarted;
   const previewUrl = URL.createObjectURL(resizedBlob);
   options.onProgress?.({ index, total, fileName: file.name, phase: 'quality', message: '写真の品質を確認しています。' });
-  const [quality, visualFingerprint, barcode] = await Promise.all([
+  const [quality, visualFingerprint, barcode, classificationVisual] = await Promise.all([
     analyzePhotoQuality(resizedBlob),
     createVisualFingerprint(resizedBlob),
-    readProductBarcodes(resizedBlob)
+    readProductBarcodes(resizedBlob),
+    extractVisualImageFeatures(resizedBlob)
   ]);
   const labelRegions = await detectLabelRegionsFromImage(resizedBlob, quality);
+  const preliminaryClassification = classifyPhoto({
+    ocrText:'', width, height, knownCandidateCount:0, ocrConfidence:0,
+    corrections:await db.classificationCorrections.toArray(), visualFeatures:classificationVisual
+  });
   options.onProgress?.({ index, total, fileName: file.name, phase: 'region', message: 'ラベル領域を探しています。' });
   const pendingDraft: ImportedPhotoDraft = {
     id,
@@ -149,7 +155,12 @@ async function createImportedPhotoDraft(
   throwIfAborted(options.signal);
   options.onProgress?.({ index, total, fileName: file.name, phase: 'ocr', message: '文字を読み取り中です。', ocrProgress: 0 });
   const ocrStarted = performance.now();
-  const ocr = await readImageText(resizedBlob, {
+  const skipHeavyOcr = (preliminaryClassification.type === 'glass' || preliminaryClassification.type === 'food')
+    && preliminaryClassification.confidence >= 80;
+  const ocr = skipHeavyOcr ? {
+    text:'', confidence:0, engine:'none' as const, status:'empty' as const,
+    message:'ラベル写真ではない可能性が高いため、重いOCRを省略しました。'
+  } : await readImageText(resizedBlob, {
     signal: options.signal,
     session: options.ocrSession,
     quality,
@@ -166,23 +177,12 @@ async function createImportedPhotoDraft(
   });
   const ocrMs = performance.now() - ocrStarted;
 
-  options.onProgress?.({ index, total, fileName: file.name, phase: 'fusion', message: '文字・バーコード・ラベル特徴を統合しています。' });
-  const candidateStarted = performance.now();
-  const identification = await identifyLocalAlcoholProduct({
-    images: [{ imageId: id, imageType: 'unknown', ocrText: ocr.text, ocrConfidence: ocr.confidence, barcodeValues: barcode.values, fingerprint: visualFingerprint }],
-    signal: options.signal
-  });
-  const baseCandidates = identification.candidates;
-  const learnedCandidates = await learningCandidates(ocr.text);
-  const candidates = mergeCandidates(learnedCandidates, baseCandidates);
-  const candidateMs = performance.now() - candidateStarted;
   const classificationStarted = performance.now();
-  const classificationVisual = await extractVisualImageFeatures(resizedBlob);
   const classification = classifyPhoto({
     ocrText: ocr.text,
     width,
     height,
-    knownCandidateCount: candidates.length,
+    knownCandidateCount: 0,
     ocrConfidence: ocr.confidence,
     corrections: await db.classificationCorrections.toArray(),
     visualFeatures: classificationVisual
@@ -197,6 +197,14 @@ async function createImportedPhotoDraft(
     visualFeatures: classificationVisual
   });
   const classificationMs = performance.now() - classificationStarted;
+  options.onProgress?.({ index, total, fileName: file.name, phase: 'fusion', message: '文字・バーコード・ラベル特徴を統合しています。' });
+  const candidateStarted = performance.now();
+  const identification = await identifyAlcoholProductPipeline({
+    images: [{ imageId:id, imageType:detailedClassification.type, ocrText:ocr.text, ocrConfidence:ocr.confidence, barcodeValues:barcode.values, fingerprint:visualFingerprint }],
+    signal:options.signal
+  });
+  const candidates = identification.candidates;
+  const candidateMs = performance.now() - candidateStarted;
   const status = ocr.status === 'success' && candidates.length > 0 ? 'success' : 'warning';
   const message =
     warning ??
@@ -377,7 +385,7 @@ async function readWithTesseractVariants(
     }
 
     const variants = await createOcrVariants(file, options.quality).catch(() => [{ kind: 'original' as OcrVariantKind, label: '元画像', blob: file }]);
-    const fallbackVariants = variants.filter((variant) => variant.kind !== 'original').slice(0, 6);
+    const fallbackVariants = variants.filter((variant) => variant.kind !== 'original').slice(0, 4);
 
     for (const [index, variant] of fallbackVariants.entries()) {
       throwIfAborted(options.signal);
@@ -412,17 +420,8 @@ async function readWithTesseractVariants(
 }
 
 export function buildCandidates(ocrText?: string, ocrConfidence = 0): CandidateMatch[] {
-  return identifyAlcoholProduct({ text: ocrText ?? '', ocrConfidence });
-}
-
-function mergeCandidates(primary: CandidateMatch[], secondary: CandidateMatch[]) {
-  const seen = new Set<string>();
-  return [...primary, ...secondary].filter((candidate) => {
-    const key = `${candidate.productName ?? ''}|${candidate.makerName ?? ''}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  }).slice(0, 6);
+  const text = ocrText ?? '';
+  return rankCatalogCandidates(retrieveCatalogCandidates(text, builtInAlcoholProductCatalog), { text, ocrConfidence });
 }
 
 async function normalizeImageFile(file: File): Promise<{ file: File; warning?: string }> {
@@ -461,18 +460,28 @@ export function imageTypeLabel(type: ImageType) {
 
 export async function reanalyzePhotoDraft(
   draft: ImportedPhotoDraft,
-  options: { region?: { x: number; y: number; width: number; height: number }; rotateDegrees?: number; mode?: 'standard' | 'vertical' | 'latin' }
+  options: { region?: { x: number; y: number; width: number; height: number }; quad?:PerspectiveQuad; rotateDegrees?: number; mode?: 'standard' | 'vertical' | 'latin' }
 ) {
   const region = options.region ? { id:'manual', kind:'manual' as const, confidence:1, reasons:['ユーザー指定範囲'], ...options.region } : undefined;
-  const input = region ? await cropRegion(draft.resizedBlob, region, options.rotateDegrees ?? 0) : draft.resizedBlob;
+  const input = options.quad
+    ? await cropPerspectiveQuad(draft.resizedBlob, options.quad, options.rotateDegrees ?? 0)
+    : region ? await cropRegion(draft.resizedBlob, region, options.rotateDegrees ?? 0) : draft.resizedBlob;
   const quality = await analyzePhotoQuality(input);
   const [ocr, barcode, fingerprint] = await Promise.all([
     readImageText(input, { quality, mode: options.mode }),
     readProductBarcodes(input),
     createVisualFingerprint(input)
   ]);
-  const identification = await identifyLocalAlcoholProduct({
-    images: [{ imageId: draft.id, imageType: draft.imageType, ocrText: ocr.text, ocrConfidence: ocr.confidence, barcodeValues: barcode.values, fingerprint }]
+  const detailedClassification = classifyIdentificationPhoto({
+    baseType:draft.imageType,
+    baseConfidence:draft.classification?.confidence ?? 50,
+    ocrText:ocr.text,
+    barcodeValues:barcode.values,
+    width:draft.width,
+    height:draft.height
+  });
+  const identification = await identifyAlcoholProductPipeline({
+    images: [{ imageId:draft.id, imageType:detailedClassification.type, ocrText:ocr.text, ocrConfidence:ocr.confidence, barcodeValues:barcode.values, fingerprint }]
   });
   const candidates = identification.candidates;
   return {

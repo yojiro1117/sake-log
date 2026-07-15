@@ -46,11 +46,23 @@ jobs:
       - name: Unit test
         run: pnpm run test
 
+      - name: Identification test
+        run: pnpm run test:identification
+
       - name: Integration test
         run: pnpm run test:integration
 
+      - name: Database migration test
+        run: pnpm run test:migration
+
+      - name: Client dependency license check
+        run: pnpm run check:licenses
+
       - name: Brand identification benchmark
         run: pnpm run benchmark:brand
+
+      - name: Recalibrate visual matching validation
+        run: pnpm run recalibrate:visual
 
       - name: Verify real-image identification results
         run: pnpm run verify:identification
@@ -62,6 +74,9 @@ jobs:
         run: pnpm run build
         env:
           VITE_GIT_COMMIT: ${{ github.sha }}
+
+      - name: Bundle size budget
+        run: pnpm run check:bundle
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

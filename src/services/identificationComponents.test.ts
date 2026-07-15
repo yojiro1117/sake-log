@@ -12,7 +12,7 @@ function candidate(kinds: NonNullable<CandidateMatch['evidences']>[number]['kind
   };
 }
 
-describe('local alcohol product identification engine', () => {
+describe('identification pipeline components', () => {
   it('abstains from a visual-only candidate even when its raw score is high', () => {
     const result = calibrateIdentificationCandidates([candidate(['visual'], 95), candidate(['fuzzy'], 92)]);
     expect(result.abstained).toBe(true);

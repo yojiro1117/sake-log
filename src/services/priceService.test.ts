@@ -22,6 +22,16 @@ describe('priceService', () => {
     expect(candidate.excludedReasons.join(',')).toContain('\u30ae\u30d5\u30c8');
     expect(candidate.excludedReasons.join(',')).toContain('\u30bb\u30c3\u30c8');
     expect(candidate.recommended).toBe(false);
+    expect(candidate.totalPrice).toBeUndefined();
+  });
+
+  it('keeps shipping-included totals separate from unknown shipping', () => {
+    const included = createCandidateFromRakuten(
+      { itemName:`${dassai} 720ml`, itemPrice:3300, itemUrl:'https://example.com/1', shopName:'店', postageFlag:1 },
+      { productName:dassai, volume:720, alcoholType:'sake' },
+      '2026-01-01T00:00:00.000Z'
+    );
+    expect(included).toMatchObject({ shippingIncluded:true, totalPrice:3300 });
   });
 
   it('saves manual price as manual source with null selected candidate', () => {

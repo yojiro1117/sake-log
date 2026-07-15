@@ -7,11 +7,11 @@ import { alcoholOptions, alcoholProfiles } from '../data/alcoholProfiles';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { findDuplicateLogs, saveLogTransaction } from '../services/logRepository';
-import { confidenceLabel } from '../services/confidenceService';
 import { deleteDraft, hydratePhotos, isDraftDirty, loadDraft, saveDraft, serializePhotos } from '../services/draftService';
 import { recordClassificationCorrection, recordOcrCorrection } from '../services/ocrLearning';
-import { aggregatePhotoOcr } from '../services/ocrAggregation';
-import { confirmCatalogCandidate, recordIdentificationRun } from '../services/brandIdentification';
+import { cropPerspectiveQuad } from '../services/labelRegionService';
+import { aggregatePhotoOcr, emptyAggregatedOcr } from '../services/ocrAggregation';
+import { determineLearningDecision, recordIdentificationRun, recordLearningDecision } from '../services/identificationLearningService';
 import { mergePhotoDraft, mergePhotoDrafts, uniqueImportFiles } from '../services/photoQueue';
 import {
   createImportedPhotoDraftsSequential,
@@ -32,6 +32,7 @@ import type {
   IdentificationPhotoType,
   ImportMode,
   MarketPriceCandidate,
+  PerspectiveQuad,
   SakeImage,
   SakeLog
 } from '../types';
@@ -74,7 +75,7 @@ export function Record({
   const [draftId, setDraftId] = useState(() => resumeDraftId ?? crypto.randomUUID());
   const [draftReady, setDraftReady] = useState(!resumeDraftId);
   const [draftStatus, setDraftStatus] = useState('');
-  const [crop, setCrop] = useState({ x:0.12, y:0.27, width:0.76, height:0.56 });
+  const [cropQuad, setCropQuad] = useState<PerspectiveQuad>(() => defaultCropQuad());
   const [cropRotation, setCropRotation] = useState(0);
   const [isReanalyzing, setIsReanalyzing] = useState(false);
   const [showLensAssist, setShowLensAssist] = useState(false);
@@ -87,7 +88,7 @@ export function Record({
   const initialFormRef = useRef(createInitialFormState('sake'));
 
   const activeDraft = drafts[activeIndex];
-  const aggregatedOcr = useMemo(() => aggregatePhotoOcr(importMode === 'singleLog' ? drafts : activeDraft ? [activeDraft] : []), [activeDraft, drafts, importMode]);
+  const [aggregatedOcr, setAggregatedOcr] = useState(emptyAggregatedOcr);
   const displayedCandidates = importMode === 'singleLog' ? aggregatedOcr.candidates : activeDraft?.candidates ?? [];
   const profile = alcoholProfiles[form.alcoholType];
   const baseAverage = averageScore(form.scores);
@@ -188,8 +189,19 @@ export function Record({
   }, [drafts]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const selectedDrafts = importMode === 'singleLog' ? drafts : activeDraft ? [activeDraft] : [];
+    void aggregatePhotoOcr(selectedDrafts, controller.signal)
+      .then(setAggregatedOcr)
+      .catch((error) => {
+        if (!(error instanceof DOMException && error.name === 'AbortError')) setAggregatedOcr(emptyAggregatedOcr);
+      });
+    return () => controller.abort();
+  }, [activeDraft, drafts, importMode]);
+
+  useEffect(() => {
     const region = activeDraft?.labelRegions?.find((item) => item.kind === 'center' || item.kind === 'manual');
-    if (region) setCrop({ x:region.x, y:region.y, width:region.width, height:region.height });
+    if (region) setCropQuad(quadFromRegion(region));
   }, [activeDraft?.id, activeDraft?.labelRegions]);
 
   useEffect(() => {
@@ -417,19 +429,30 @@ export function Record({
       const saved = await saveLogTransaction({ log, images, priceCandidates: candidatesToSave });
       setSavedLogId(saved.logId);
       const warnings: string[] = [];
-      if (selectedProductCandidate?.productId) {
+      if (form.productName.trim()) {
         const runId = await recordIdentificationRun({
           imageIds: images.map((image) => image.imageId), text:aggregatedOcr.text,
           barcodes:[...new Set(drafts.flatMap((draft) => draft.barcodeValues ?? []))],
           candidates:displayedCandidates, processingTimeMs:drafts.reduce((sum, draft) => sum + (draft.processing?.totalMs ?? 0), 0)
         });
         const referenceDraft = activeDraft?.visualFingerprint ? activeDraft : drafts.find((draft) => draft.visualFingerprint);
-        await confirmCatalogCandidate(selectedProductCandidate, runId, 'accepted', referenceDraft?.visualFingerprint ? {
-          imageHash:referenceDraft.imageHash,
-          sourceImageId:referenceDraft.id,
-          fingerprint:referenceDraft.visualFingerprint,
-          learningEventId:`${saved.logId}|${referenceDraft.imageHash}|${selectedProductCandidate.productId}`
-        } : undefined)
+        const decision = determineLearningDecision(selectedProductCandidate, { productName:form.productName, makerName:form.makerName });
+        await recordLearningDecision({
+          candidate:selectedProductCandidate,
+          runId,
+          decision,
+          finalProductName:form.productName,
+          finalMakerName:form.makerName,
+          finalAlcoholType:form.alcoholType,
+          reference:referenceDraft?.visualFingerprint ? {
+            imageHash:referenceDraft.imageHash,
+            sourceImageId:referenceDraft.id,
+            fingerprint:referenceDraft.visualFingerprint,
+            photoType:referenceDraft.identificationPhotoType ?? referenceDraft.imageType,
+            qualityLevel:referenceDraft.quality?.qualityLevel,
+            learningEventId:`${saved.logId}|${referenceDraft.imageHash}|${selectedProductCandidate?.productId ?? form.productName}`
+          } : undefined
+        })
           .catch(() => warnings.push('確認済み商品マスターの更新だけ失敗しました。'));
       }
       if (aggregatedOcr.text && form.productName.trim()) {
@@ -509,7 +532,7 @@ export function Record({
     setIsReanalyzing(true);
     setStatus(mode === 'vertical' ? '縦書きモデルを準備しています。' : mode === 'latin' ? '英字主体で再解析しています。' : '指定範囲を再解析しています。');
     try {
-      const updated = await reanalyzePhotoDraft(activeDraft, { region:crop, rotateDegrees:cropRotation, mode });
+      const updated = await reanalyzePhotoDraft(activeDraft, { quad:cropQuad, rotateDegrees:cropRotation, mode });
       setDrafts((current) => current.map((draft) => draft.id === updated.id ? updated : draft));
       setStatus(updated.message ?? '再解析しました。');
     } catch (error) {
@@ -517,12 +540,20 @@ export function Record({
     } finally { setIsReanalyzing(false); }
   }
 
-  function exportLabelForManualCheck() {
+  async function exportLabelForManualCheck() {
     if (!activeDraft) return;
-    const url = URL.createObjectURL(activeDraft.resizedBlob);
+    const blob = await cropPerspectiveQuad(activeDraft.resizedBlob, cropQuad, cropRotation);
+    const file = new File([blob], `sake-label-${activeDraft.imageHash.slice(0,10)}.jpg`, { type:'image/jpeg' });
+    if (navigator.canShare?.({ files:[file] })) {
+      await navigator.share({ files:[file], title:'SAKEログ ラベル確認用画像' });
+      setStatus('端末の共有先を開きました。外部サービスへ渡す操作は共有先で確認してください。');
+      setShowLensAssist(false);
+      return;
+    }
+    const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
     anchor.href = url;
-    anchor.download = `sake-label-${activeDraft.imageHash.slice(0, 10)}.jpg`;
+    anchor.download = file.name;
     anchor.click();
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
     setStatus('ラベル画像を書き出しました。Google Lensアプリで画像を選び、確認結果を銘柄欄へ入力してください。');
@@ -633,7 +664,7 @@ export function Record({
               <p className="font-bold text-gold">外部アプリで確認</p>
               <p className="mt-2 leading-6 text-rice/70">この操作では、選択したラベル画像を端末へ書き出します。画像は自動的には送信されません。Google Lensへの読込みと検索結果の確認は、ご自身の操作で行ってください。</p>
               <div className="mt-3 grid grid-cols-2 gap-2">
-                <button className="rounded bg-gold px-3 py-2 font-bold text-ink" onClick={exportLabelForManualCheck}>画像を書き出す</button>
+                <button className="rounded bg-gold px-3 py-2 font-bold text-ink" onClick={() => void exportLabelForManualCheck()}>共有先を選ぶ</button>
                 <button className="rounded bg-rice/10 px-3 py-2" onClick={() => setShowLensAssist(false)}>閉じる</button>
               </div>
             </div>
@@ -654,7 +685,7 @@ export function Record({
           {activeDraft?.ocr.text ? <textarea className={`${inputClass} mt-3 min-h-24`} value={activeDraft.ocr.text} readOnly /> : null}
           {activeDraft ? (
             <p className="mt-2 text-sm font-bold">
-              OCR信頼度 {Math.round(activeDraft.ocr.confidence * 100)}% / {confidenceLabel(activeDraft.ocr.confidence * 100)}
+              OCRエンジン信頼度 {Math.round(activeDraft.ocr.confidence * 100)}%
             </p>
           ) : null}
           {activeDraft?.identificationPath ? <p className="mt-1 text-xs text-rice/50">解析経路: {activeDraft.identificationPath === 'fast' ? '高速' : activeDraft.identificationPath === 'standard' ? '標準' : '詳細'}</p> : null}
@@ -669,10 +700,17 @@ export function Record({
           {activeDraft && (displayedCandidates.length === 0 || (displayedCandidates[0]?.calibratedConfidence ?? 0) < 86) ? (
             <div className="mt-4 space-y-3 rounded-md border border-gold/25 bg-ink/50 p-3">
               <div className="flex items-center gap-2 font-bold text-gold"><ScanLine size={17} />ラベル範囲を指定して再解析</div>
-              <CropEditor draft={activeDraft} crop={crop} onChange={setCrop} />
+              <CropEditor draft={activeDraft} quad={cropQuad} onChange={setCropQuad} />
               <div className="grid grid-cols-[1fr_auto] gap-2">
                 <p className="text-xs text-rice/55">四隅をドラッグしてラベルだけを囲んでください。</p>
                 <button className="flex items-center gap-1 rounded bg-rice/10 px-3 py-2 text-xs" onClick={() => setCropRotation((current) => (current + 90) % 360)}><RotateCw size={15} />{cropRotation}°</button>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <button className="rounded bg-rice/10 px-3 py-2 text-xs" onClick={() => setCropQuad(defaultCropQuad())}>範囲をリセット</button>
+                <button className="rounded bg-rice/10 px-3 py-2 text-xs" onClick={() => {
+                  const region=activeDraft.labelRegions?.[0];
+                  if (region) setCropQuad(quadFromRegion(region));
+                }}>自動範囲を使う</button>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <button disabled={isReanalyzing} className="rounded bg-gold px-2 py-2 text-xs font-bold text-ink disabled:opacity-50" onClick={() => void reanalyze('standard')}>表ラベル</button>
@@ -698,10 +736,10 @@ export function Record({
               <button key={`${candidate.productName}-${candidate.matchReasons.join(',')}`} className="rounded-md bg-ink/70 p-3 text-left" onClick={() => applyCandidate(candidate)}>
                 <span className="block font-bold">{candidate.productName ?? '候補名なし'}</span>
                 <span className="text-xs text-rice/60">
-                  総合 {candidate.totalConfidence ?? 0}% / {confidenceLabel(candidate.totalConfidence ?? 0)} / {candidate.matchReasons.join(' / ')}
+                  一致スコア {candidate.totalConfidence ?? 0} / 100・要確認 / {candidate.matchReasons.join(' / ')}
                 </span>
                 <span className="mt-1 block text-xs text-rice/50">
-                  銘柄 {candidate.productConfidence ?? 0}%・蔵元 {candidate.makerConfidence ?? 0}%・酒種 {candidate.alcoholTypeConfidence ?? 0}%・容量 {candidate.volumeConfidence ?? 0}%
+                  OCR {Math.round((candidate.ocrConfidence ?? 0) * 100)}%・銘柄一致 {candidate.productConfidence ?? 0}{candidate.makerConfidence !== undefined ? `・蔵元根拠 ${candidate.makerConfidence}` : ''}{candidate.volumeConfidence !== undefined ? `・容量根拠 ${candidate.volumeConfidence}` : ''}
                 </span>
                 {candidate.mismatchReasons?.length ? <span className="mt-1 block text-xs text-red-200">不一致: {candidate.mismatchReasons.join(' / ')}</span> : null}
                 <span className="mt-1 block text-xs text-gold">候補は自動確定されません。内容を確認してください。</span>
@@ -864,8 +902,8 @@ export function Record({
   );
 }
 
-function CropEditor({ draft, crop, onChange }: { draft: ImportedPhotoDraft; crop: { x:number; y:number; width:number; height:number }; onChange: (value: { x:number; y:number; width:number; height:number }) => void }) {
-  const move = (corner: 'nw' | 'ne' | 'sw' | 'se', event: React.PointerEvent<HTMLButtonElement>) => {
+function CropEditor({ draft, quad, onChange }: { draft: ImportedPhotoDraft; quad:PerspectiveQuad; onChange:(value:PerspectiveQuad)=>void }) {
+  const move = (corner:keyof PerspectiveQuad, event:React.PointerEvent<HTMLButtonElement>) => {
     const container = event.currentTarget.parentElement;
     if (!container) return;
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -873,20 +911,24 @@ function CropEditor({ draft, crop, onChange }: { draft: ImportedPhotoDraft; crop
       const rect = container.getBoundingClientRect();
       const x = Math.max(0, Math.min(1, (pointer.clientX - rect.left) / rect.width));
       const y = Math.max(0, Math.min(1, (pointer.clientY - rect.top) / rect.height));
-      const right = crop.x + crop.width; const bottom = crop.y + crop.height; const min = 0.08;
-      if (corner === 'nw') onChange({ x:Math.min(x, right - min), y:Math.min(y, bottom - min), width:right - Math.min(x, right - min), height:bottom - Math.min(y, bottom - min) });
-      if (corner === 'ne') onChange({ x:crop.x, y:Math.min(y, bottom - min), width:Math.max(min, x - crop.x), height:bottom - Math.min(y, bottom - min) });
-      if (corner === 'sw') onChange({ x:Math.min(x, right - min), y:crop.y, width:right - Math.min(x, right - min), height:Math.max(min, y - crop.y) });
-      if (corner === 'se') onChange({ x:crop.x, y:crop.y, width:Math.max(min, x - crop.x), height:Math.max(min, y - crop.y) });
+      onChange({ ...quad, [corner]:{ x, y } });
     };
     update(event);
   };
-  const positions = { nw:{ left:crop.x, top:crop.y }, ne:{ left:crop.x + crop.width, top:crop.y }, sw:{ left:crop.x, top:crop.y + crop.height }, se:{ left:crop.x + crop.width, top:crop.y + crop.height } } as const;
+  const polygon=`${quad.nw.x*100}% ${quad.nw.y*100}%,${quad.ne.x*100}% ${quad.ne.y*100}%,${quad.se.x*100}% ${quad.se.y*100}%,${quad.sw.x*100}% ${quad.sw.y*100}%`;
   return <div className="relative aspect-[4/5] overflow-hidden rounded bg-black/40 touch-none">
     <img src={draft.previewUrl} alt="再解析するラベル範囲" className="h-full w-full object-contain" />
-    <div className="pointer-events-none absolute border-2 border-gold bg-gold/10" style={{ left:`${crop.x * 100}%`, top:`${crop.y * 100}%`, width:`${crop.width * 100}%`, height:`${crop.height * 100}%` }} />
-    {(Object.keys(positions) as Array<keyof typeof positions>).map((corner) => <button key={corner} aria-label={`${corner}の切り抜き位置`} className="absolute h-7 w-7 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-ink bg-gold shadow" style={{ left:`${positions[corner].left * 100}%`, top:`${positions[corner].top * 100}%` }} onPointerDown={(event) => move(corner, event)} onPointerMove={(event) => event.currentTarget.hasPointerCapture(event.pointerId) && move(corner, event)} />)}
+    <div className="pointer-events-none absolute inset-0 border-2 border-gold bg-gold/10" style={{ clipPath:`polygon(${polygon})` }} />
+    {(Object.keys(quad) as Array<keyof PerspectiveQuad>).map((corner) => <button key={corner} aria-label={`${corner}の切り抜き位置`} className="absolute h-7 w-7 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-ink bg-gold shadow" style={{ left:`${quad[corner].x * 100}%`, top:`${quad[corner].y * 100}%` }} onPointerDown={(event) => move(corner,event)} onPointerMove={(event) => event.currentTarget.hasPointerCapture(event.pointerId)&&move(corner,event)} />)}
   </div>;
+}
+
+function defaultCropQuad():PerspectiveQuad {
+  return { nw:{x:0.12,y:0.27}, ne:{x:0.88,y:0.27}, se:{x:0.88,y:0.83}, sw:{x:0.12,y:0.83} };
+}
+
+function quadFromRegion(region:{x:number;y:number;width:number;height:number}):PerspectiveQuad {
+  return { nw:{x:region.x,y:region.y}, ne:{x:region.x+region.width,y:region.y}, se:{x:region.x+region.width,y:region.y+region.height}, sw:{x:region.x,y:region.y+region.height} };
 }
 
 function ScoreInput({ label, value, onChange }: { label: string; value: number; onChange: (value: number) => void }) {

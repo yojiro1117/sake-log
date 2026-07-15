@@ -40,27 +40,44 @@ export async function searchRakutenPrices(params: {
   if (!params.productName.trim()) return { candidates: [], message: '銘柄名を入力すると価格候補を検索できます。' };
   if (!appId) return { candidates: [], message: '楽天アプリIDが未設定です。過去価格候補または手入力を使用してください。' };
 
-  const keyword = buildPriceSearchQueries(params)[0];
-  const url = new URL('https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601');
-  url.searchParams.set('applicationId', appId);
-  url.searchParams.set('keyword', keyword);
-  url.searchParams.set('genreId', '510901');
-  url.searchParams.set('hits', '20');
-  url.searchParams.set('format', 'json');
-
-  const response = await fetch(url);
-  if (!response.ok) return { candidates: [], message: '楽天市場APIから価格候補を取得できませんでした。手入力できます。' };
-
-  const data = (await response.json()) as RakutenResponse;
+  const queries = buildPriceSearchQueries(params).slice(0, 5);
+  const responses = await Promise.allSettled(queries.map(async (keyword) => {
+    const url = new URL('https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601');
+    url.searchParams.set('applicationId', appId);
+    url.searchParams.set('keyword', keyword);
+    url.searchParams.set('genreId', '510901');
+    url.searchParams.set('hits', '20');
+    url.searchParams.set('format', 'json');
+    const response = await fetch(url, { signal:AbortSignal.timeout(12_000) });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return { keyword, data:(await response.json()) as RakutenResponse };
+  }));
   const fetchedAt = new Date().toISOString();
-  const candidates = (data.Items ?? [])
-    .map(({ Item }) => createCandidateFromRakuten(Item, params, fetchedAt))
+  const uniqueItems = new Map<string, { item:RakutenItem; queries:string[] }>();
+  for (const response of responses) if (response.status === 'fulfilled') {
+    for (const { Item } of response.value.data.Items ?? []) {
+      const key = Item.itemUrl || `${Item.shopName}|${Item.itemName}|${Item.itemPrice}`;
+      const existing = uniqueItems.get(key);
+      uniqueItems.set(key, { item:Item, queries:[...new Set([...(existing?.queries ?? []), response.value.keyword])] });
+    }
+  }
+  const candidates = [...uniqueItems.values()]
+    .map(({ item, queries:matchedQueries }) => {
+      const candidate = createCandidateFromRakuten(item, params, fetchedAt);
+      candidate.matchReasons.push(`検索語: ${matchedQueries[0]}`);
+      if (matchedQueries.length > 1) candidate.matchReasons.push(`${matchedQueries.length}種類の検索語で取得`);
+      return candidate;
+    })
     .sort((a, b) => b.matchScore - a.matchScore)
     .slice(0, 8);
 
   return {
     candidates,
-    message: candidates.length ? '価格候補を取得しました。採用する候補を選択してください。' : '一致する価格候補が見つかりませんでした。手入力できます。'
+    message:candidates.length
+      ? '複数の検索語で価格候補を照合しました。採用する候補を選択してください。'
+      : responses.every((response) => response.status === 'rejected')
+        ? '楽天市場APIから価格候補を取得できませんでした。過去価格または手入力を使用できます。'
+        : '一致する価格候補が見つかりませんでした。過去価格または手入力を使用できます。'
   };
 }
 
@@ -162,19 +179,20 @@ export function createCandidateFromRakuten(
     excludedReasons.push('送料別または送料不明');
   }
 
-  const totalPrice = item.itemPrice;
+  const shippingIncluded = item.postageFlag === 1;
+  const totalPrice = shippingIncluded ? item.itemPrice : undefined;
   return {
     id: crypto.randomUUID(),
     itemName: item.itemName,
     shopName: item.shopName,
     itemUrl: item.itemUrl,
     price: item.itemPrice,
-    shippingIncluded: item.postageFlag === 1,
+    shippingIncluded,
     totalPrice,
     volumeMl: volume,
     quantity,
-    unitPricePerBottle: quantity > 0 ? Math.round(totalPrice / quantity) : totalPrice,
-    unitPricePer100ml: volume ? Math.round((totalPrice / volume) * 100) : undefined,
+    unitPricePerBottle:quantity > 0 ? Math.round(item.itemPrice / quantity) : item.itemPrice,
+    unitPricePer100ml:volume ? Math.round((item.itemPrice / volume) * 100) : undefined,
     source: 'rakuten',
     fetchedAt,
     matchScore: Math.max(0, Math.min(100, score)),

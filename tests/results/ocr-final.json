@@ -11,9 +11,9 @@
     "emptyResultRate": 0,
     "heicConversionSuccessRate": 1,
     "exifCapturedAtRate": 0.901,
-    "averageProcessingTimeMs": 6479,
-    "maxProcessingTimeMs": 27039,
-    "peakRssMb": 1300,
+    "averageProcessingTimeMs": 6145,
+    "maxProcessingTimeMs": 26154,
+    "peakRssMb": 1222,
     "groundTruthNote": "正解値は画像から機械的に確定せず、groundTruthStatus unknown のため完全一致率・部分一致率の分母から除外しました。"
   },
   "results": [
@@ -27,7 +27,7 @@
       "ocrConfidence": 0.57,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 1943,
+      "processingTimeMs": 1778,
       "warnings": [
         "ネイティブ形式のままOCR",
         "小断片が多い"
@@ -49,7 +49,7 @@
         "OCR別名一致: HIBIKI"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 4251,
+      "processingTimeMs": 3828,
       "warnings": [
         "ネイティブ形式のままOCR",
         "低信頼度",
@@ -67,7 +67,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5740,
+      "processingTimeMs": 5208,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多",
@@ -85,7 +85,7 @@
       "ocrConfidence": 0.33,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4468,
+      "processingTimeMs": 4148,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多",
@@ -103,7 +103,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 11647,
+      "processingTimeMs": 10497,
       "warnings": [
         "ネイティブ形式のままOCR",
         "小断片が多い"
@@ -120,7 +120,7 @@
       "ocrConfidence": 0.31,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2693,
+      "processingTimeMs": 2441,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多",
@@ -138,7 +138,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5824,
+      "processingTimeMs": 5309,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多"
@@ -155,7 +155,7 @@
       "ocrConfidence": 0.6,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3470,
+      "processingTimeMs": 3142,
       "warnings": [
         "ネイティブ形式のままOCR",
         "小断片が多い"
@@ -172,7 +172,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6007,
+      "processingTimeMs": 5452,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多",
@@ -190,7 +190,7 @@
       "ocrConfidence": 0.4,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3737,
+      "processingTimeMs": 3364,
       "warnings": [
         "ネイティブ形式のままOCR",
         "小断片が多い"
@@ -207,7 +207,7 @@
       "ocrConfidence": 0.3,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6608,
+      "processingTimeMs": 5939,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多"
@@ -224,7 +224,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6106,
+      "processingTimeMs": 5583,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多"
@@ -241,7 +241,7 @@
       "ocrConfidence": 0.3,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7003,
+      "processingTimeMs": 6392,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多"
@@ -258,7 +258,7 @@
       "ocrConfidence": 0.63,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 12495,
+      "processingTimeMs": 11545,
       "warnings": [
         "ネイティブ形式のままOCR",
         "小断片が多い"
@@ -275,7 +275,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6714,
+      "processingTimeMs": 5976,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多"
@@ -297,7 +297,7 @@
         "OCR別名一致: YAMAZAKI"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 6260,
+      "processingTimeMs": 5681,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多",
@@ -320,7 +320,7 @@
         "蔵元一致"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 2303,
+      "processingTimeMs": 2052,
       "warnings": [
         "ネイティブ形式のままOCR",
         "小断片が多い"
@@ -337,7 +337,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6757,
+      "processingTimeMs": 6256,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -355,7 +355,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3537,
+      "processingTimeMs": 3104,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -372,7 +372,7 @@
       "ocrConfidence": 0.3,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 9262,
+      "processingTimeMs": 8343,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多",
@@ -390,7 +390,7 @@
       "ocrConfidence": 0.24,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6282,
+      "processingTimeMs": 5678,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -412,7 +412,7 @@
         "OCR別名一致: HIBIKI"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 6503,
+      "processingTimeMs": 6040,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -429,7 +429,7 @@
       "ocrConfidence": 0.33,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4646,
+      "processingTimeMs": 4240,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -451,7 +451,7 @@
         "蔵元一致"
       ],
       "candidateCount": 3,
-      "processingTimeMs": 7861,
+      "processingTimeMs": 7335,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -468,7 +468,7 @@
       "ocrConfidence": 0.34,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5366,
+      "processingTimeMs": 5260,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -485,7 +485,7 @@
       "ocrConfidence": 0.39,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3122,
+      "processingTimeMs": 2961,
       "warnings": [
         "heic-convertでJPEGへ変換"
       ],
@@ -501,7 +501,7 @@
       "ocrConfidence": 0.31,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6455,
+      "processingTimeMs": 5947,
       "warnings": [
         "heic-convertでJPEGへ変換"
       ],
@@ -517,7 +517,7 @@
       "ocrConfidence": 0.43,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3798,
+      "processingTimeMs": 3642,
       "warnings": [
         "heic-convertでJPEGへ変換"
       ],
@@ -533,7 +533,7 @@
       "ocrConfidence": 0.36,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3133,
+      "processingTimeMs": 2973,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -550,7 +550,7 @@
       "ocrConfidence": 0.31,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4222,
+      "processingTimeMs": 4047,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -567,7 +567,7 @@
       "ocrConfidence": 0.24,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4600,
+      "processingTimeMs": 4398,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -585,7 +585,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5195,
+      "processingTimeMs": 4867,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -603,7 +603,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 9506,
+      "processingTimeMs": 9189,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -620,7 +620,7 @@
       "ocrConfidence": 0.22,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 9152,
+      "processingTimeMs": 8731,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -638,7 +638,7 @@
       "ocrConfidence": 0.44,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2078,
+      "processingTimeMs": 1943,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多"
@@ -655,7 +655,7 @@
       "ocrConfidence": 0.65,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2522,
+      "processingTimeMs": 2188,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -672,7 +672,7 @@
       "ocrConfidence": 0.29,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2757,
+      "processingTimeMs": 2551,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -690,7 +690,7 @@
       "ocrConfidence": 0.42,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2737,
+      "processingTimeMs": 2554,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -708,7 +708,7 @@
       "ocrConfidence": 0.21,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4253,
+      "processingTimeMs": 4061,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -730,7 +730,7 @@
         "蔵元一致"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 7544,
+      "processingTimeMs": 7171,
       "warnings": [
         "heic-convertでJPEGへ変換"
       ],
@@ -746,7 +746,7 @@
       "ocrConfidence": 0.41,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3764,
+      "processingTimeMs": 3578,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -769,7 +769,7 @@
         "蔵元一致"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 2345,
+      "processingTimeMs": 2195,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -786,7 +786,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2271,
+      "processingTimeMs": 2132,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -803,7 +803,7 @@
       "ocrConfidence": 0.56,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3041,
+      "processingTimeMs": 2888,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -820,7 +820,7 @@
       "ocrConfidence": 0.69,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5112,
+      "processingTimeMs": 4942,
       "warnings": [
         "heic-convertでJPEGへ変換"
       ],
@@ -836,7 +836,7 @@
       "ocrConfidence": 0.3,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3917,
+      "processingTimeMs": 3747,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -854,7 +854,7 @@
       "ocrConfidence": 0.33,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 8659,
+      "processingTimeMs": 8259,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -872,7 +872,7 @@
       "ocrConfidence": 0.66,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 13899,
+      "processingTimeMs": 12902,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -889,7 +889,7 @@
       "ocrConfidence": 0.23,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4407,
+      "processingTimeMs": 4164,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -907,7 +907,7 @@
       "ocrConfidence": 0.59,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7804,
+      "processingTimeMs": 7482,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -924,7 +924,7 @@
       "ocrConfidence": 0.35,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5502,
+      "processingTimeMs": 5186,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -941,7 +941,7 @@
       "ocrConfidence": 0.7,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 8493,
+      "processingTimeMs": 7928,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -958,7 +958,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3012,
+      "processingTimeMs": 2830,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -976,7 +976,7 @@
       "ocrConfidence": 0.31,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7426,
+      "processingTimeMs": 7007,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -994,7 +994,7 @@
       "ocrConfidence": 0.39,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5436,
+      "processingTimeMs": 5139,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1012,7 +1012,7 @@
       "ocrConfidence": 0.37,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5504,
+      "processingTimeMs": 5116,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1030,7 +1030,7 @@
       "ocrConfidence": 0.32,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3664,
+      "processingTimeMs": 3450,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1048,7 +1048,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7250,
+      "processingTimeMs": 6885,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1066,7 +1066,7 @@
       "ocrConfidence": 0.29,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5712,
+      "processingTimeMs": 5459,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1084,7 +1084,7 @@
       "ocrConfidence": 0.19,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 21797,
+      "processingTimeMs": 20677,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度",
@@ -1102,7 +1102,7 @@
       "ocrConfidence": 0.18,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3323,
+      "processingTimeMs": 3092,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度",
@@ -1121,7 +1121,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 8568,
+      "processingTimeMs": 8170,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1138,7 +1138,7 @@
       "ocrConfidence": 0.21,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3981,
+      "processingTimeMs": 3598,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1156,7 +1156,7 @@
       "ocrConfidence": 0.52,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 1123,
+      "processingTimeMs": 1039,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1174,7 +1174,7 @@
       "ocrConfidence": 0.42,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2917,
+      "processingTimeMs": 2753,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1191,7 +1191,7 @@
       "ocrConfidence": 0.17,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 10348,
+      "processingTimeMs": 9867,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度",
@@ -1209,7 +1209,7 @@
       "ocrConfidence": 0.51,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3432,
+      "processingTimeMs": 3236,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1226,7 +1226,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4791,
+      "processingTimeMs": 4560,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -1248,7 +1248,7 @@
         "OCR別名一致: 田酒"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 1729,
+      "processingTimeMs": 1600,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1265,7 +1265,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3402,
+      "processingTimeMs": 3341,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1288,7 +1288,7 @@
         "蔵元一致"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 2035,
+      "processingTimeMs": 1974,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1305,7 +1305,7 @@
       "ocrConfidence": 0.22,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 10058,
+      "processingTimeMs": 9656,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1323,7 +1323,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5763,
+      "processingTimeMs": 5321,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1341,7 +1341,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7003,
+      "processingTimeMs": 6347,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1359,7 +1359,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 8490,
+      "processingTimeMs": 8122,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1377,7 +1377,7 @@
       "ocrConfidence": 0.24,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4675,
+      "processingTimeMs": 4445,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1395,7 +1395,7 @@
       "ocrConfidence": 0.35,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3729,
+      "processingTimeMs": 3478,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1413,7 +1413,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5539,
+      "processingTimeMs": 5268,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1430,7 +1430,7 @@
       "ocrConfidence": 0.3,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5407,
+      "processingTimeMs": 5163,
       "warnings": [
         "ネイティブ形式のままOCR",
         "記号ノイズ過多",
@@ -1448,7 +1448,7 @@
       "ocrConfidence": 0.42,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2092,
+      "processingTimeMs": 1995,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1465,7 +1465,7 @@
       "ocrConfidence": 0.62,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7853,
+      "processingTimeMs": 7471,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1482,7 +1482,7 @@
       "ocrConfidence": 0.6,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 871,
+      "processingTimeMs": 844,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "文字数不足",
@@ -1500,7 +1500,7 @@
       "ocrConfidence": 0.58,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 11146,
+      "processingTimeMs": 10619,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1517,7 +1517,7 @@
       "ocrConfidence": 0.36,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4292,
+      "processingTimeMs": 4138,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1535,7 +1535,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4307,
+      "processingTimeMs": 4099,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1553,7 +1553,7 @@
       "ocrConfidence": 0.31,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5194,
+      "processingTimeMs": 4828,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1576,7 +1576,7 @@
         "蔵元一致"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 9263,
+      "processingTimeMs": 9001,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1593,7 +1593,7 @@
       "ocrConfidence": 0.43,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 1433,
+      "processingTimeMs": 1381,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1611,7 +1611,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6293,
+      "processingTimeMs": 5954,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1629,7 +1629,7 @@
       "ocrConfidence": 0.38,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 1603,
+      "processingTimeMs": 1517,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1652,7 +1652,7 @@
         "OCR別名一致: 新政"
       ],
       "candidateCount": 2,
-      "processingTimeMs": 3641,
+      "processingTimeMs": 3464,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1669,7 +1669,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5444,
+      "processingTimeMs": 5193,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -1686,7 +1686,7 @@
       "ocrConfidence": 0.35,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5249,
+      "processingTimeMs": 4981,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1704,7 +1704,7 @@
       "ocrConfidence": 0.39,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 14250,
+      "processingTimeMs": 13611,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1721,7 +1721,7 @@
       "ocrConfidence": 0.23,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6641,
+      "processingTimeMs": 6292,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1739,7 +1739,7 @@
       "ocrConfidence": 0.24,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 10535,
+      "processingTimeMs": 9804,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -1756,7 +1756,7 @@
       "ocrConfidence": 0.39,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 15857,
+      "processingTimeMs": 15128,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1773,7 +1773,7 @@
       "ocrConfidence": 0.41,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 14702,
+      "processingTimeMs": 14193,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1790,7 +1790,7 @@
       "ocrConfidence": 0.43,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 13574,
+      "processingTimeMs": 12735,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1807,7 +1807,7 @@
       "ocrConfidence": 0.31,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4074,
+      "processingTimeMs": 3692,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1825,7 +1825,7 @@
       "ocrConfidence": 0.24,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4183,
+      "processingTimeMs": 3989,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1842,7 +1842,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 14845,
+      "processingTimeMs": 14062,
       "warnings": [
         "heic-convertでJPEGへ変換"
       ],
@@ -1858,7 +1858,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7271,
+      "processingTimeMs": 7000,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1876,7 +1876,7 @@
       "ocrConfidence": 0.22,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 9316,
+      "processingTimeMs": 9262,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1893,7 +1893,7 @@
       "ocrConfidence": 0.35,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6121,
+      "processingTimeMs": 5837,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -1910,7 +1910,7 @@
       "ocrConfidence": 0.32,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3642,
+      "processingTimeMs": 3505,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1927,7 +1927,7 @@
       "ocrConfidence": 0.46,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 10799,
+      "processingTimeMs": 10552,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1944,7 +1944,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4892,
+      "processingTimeMs": 4737,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -1962,7 +1962,7 @@
       "ocrConfidence": 0.71,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 8067,
+      "processingTimeMs": 7627,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -1979,7 +1979,7 @@
       "ocrConfidence": 0.19,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4056,
+      "processingTimeMs": 3967,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度",
@@ -1998,7 +1998,7 @@
       "ocrConfidence": 0.54,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7155,
+      "processingTimeMs": 6898,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2015,7 +2015,7 @@
       "ocrConfidence": 0.34,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2592,
+      "processingTimeMs": 2487,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2032,7 +2032,7 @@
       "ocrConfidence": 0.19,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2397,
+      "processingTimeMs": 2298,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度",
@@ -2051,7 +2051,7 @@
       "ocrConfidence": 0.49,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2913,
+      "processingTimeMs": 2783,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2086,7 +2086,7 @@
       "ocrConfidence": 0.64,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 27039,
+      "processingTimeMs": 26154,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2103,7 +2103,7 @@
       "ocrConfidence": 0.29,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4803,
+      "processingTimeMs": 4634,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2121,7 +2121,7 @@
       "ocrConfidence": 0.32,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5757,
+      "processingTimeMs": 5543,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2144,7 +2144,7 @@
         "OCR別名一致: JUYONDAI"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 5555,
+      "processingTimeMs": 5407,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2161,7 +2161,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 12309,
+      "processingTimeMs": 11932,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2178,7 +2178,7 @@
       "ocrConfidence": 0.19,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 10556,
+      "processingTimeMs": 10325,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度",
@@ -2196,7 +2196,7 @@
       "ocrConfidence": 0.25,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 1942,
+      "processingTimeMs": 1895,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2214,7 +2214,7 @@
       "ocrConfidence": 0.49,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 10181,
+      "processingTimeMs": 9908,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2231,7 +2231,7 @@
       "ocrConfidence": 0.43,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4493,
+      "processingTimeMs": 4338,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2248,7 +2248,7 @@
       "ocrConfidence": 0.57,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4967,
+      "processingTimeMs": 4823,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2265,7 +2265,7 @@
       "ocrConfidence": 0.33,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3945,
+      "processingTimeMs": 3821,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2282,7 +2282,7 @@
       "ocrConfidence": 0.3,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 15758,
+      "processingTimeMs": 15183,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2299,7 +2299,7 @@
       "ocrConfidence": 0.24,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 12220,
+      "processingTimeMs": 11832,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -2316,7 +2316,7 @@
       "ocrConfidence": 0.64,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6786,
+      "processingTimeMs": 6801,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2333,7 +2333,7 @@
       "ocrConfidence": 0.29,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5526,
+      "processingTimeMs": 5359,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -2350,7 +2350,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 11670,
+      "processingTimeMs": 11412,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2368,7 +2368,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2409,
+      "processingTimeMs": 2234,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2386,7 +2386,7 @@
       "ocrConfidence": 0.24,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 8162,
+      "processingTimeMs": 7803,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2404,7 +2404,7 @@
       "ocrConfidence": 0.28,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 2958,
+      "processingTimeMs": 2789,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2422,7 +2422,7 @@
       "ocrConfidence": 0.27,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 8860,
+      "processingTimeMs": 8684,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2439,7 +2439,7 @@
       "ocrConfidence": 0.51,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 13435,
+      "processingTimeMs": 13031,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2457,7 +2457,7 @@
       "ocrConfidence": 0.38,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3870,
+      "processingTimeMs": 3774,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2475,7 +2475,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 15573,
+      "processingTimeMs": 14702,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2492,7 +2492,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 15358,
+      "processingTimeMs": 14680,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2509,7 +2509,7 @@
       "ocrConfidence": 0.36,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 12281,
+      "processingTimeMs": 11708,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2526,7 +2526,7 @@
       "ocrConfidence": 0.35,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4318,
+      "processingTimeMs": 4128,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2549,7 +2549,7 @@
         "蔵元一致"
       ],
       "candidateCount": 1,
-      "processingTimeMs": 2930,
+      "processingTimeMs": 2845,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2566,7 +2566,7 @@
       "ocrConfidence": 0.31,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 4430,
+      "processingTimeMs": 4322,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多"
@@ -2583,7 +2583,7 @@
       "ocrConfidence": 0.34,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5596,
+      "processingTimeMs": 5463,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2600,7 +2600,7 @@
       "ocrConfidence": 0.29,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7247,
+      "processingTimeMs": 6322,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2618,7 +2618,7 @@
       "ocrConfidence": 0.32,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 3530,
+      "processingTimeMs": 3440,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",
@@ -2636,7 +2636,7 @@
       "ocrConfidence": 0.19,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 6369,
+      "processingTimeMs": 6147,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度",
@@ -2655,7 +2655,7 @@
       "ocrConfidence": 0.34,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7739,
+      "processingTimeMs": 7550,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2672,7 +2672,7 @@
       "ocrConfidence": 0.19,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 10888,
+      "processingTimeMs": 10432,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "低信頼度"
@@ -2689,7 +2689,7 @@
       "ocrConfidence": 0.47,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 7267,
+      "processingTimeMs": 6824,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
@@ -2706,7 +2706,7 @@
       "ocrConfidence": 0.26,
       "candidateReasons": [],
       "candidateCount": 0,
-      "processingTimeMs": 5212,
+      "processingTimeMs": 4872,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "記号ノイズ過多",

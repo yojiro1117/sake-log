@@ -1,1 +1,1 @@
-export { cropRegion, detectLabelRegions, detectLabelRegionsFromImage } from './labelDetection';
+export { cropPerspectiveQuad, cropRegion, detectLabelRegions, detectLabelRegionsFromImage } from './labelDetection';
