@@ -655,6 +655,11 @@ export function Record({
               {aggregatedOcr.sources.abv ? <p>度数: {aggregatedOcr.sources.abv}</p> : null}
             </div>
           ) : null}
+          {activeDraft && displayedCandidates.length === 0 && !isReanalyzing ? (
+            <p className="mt-3 rounded-md border border-gold/25 bg-ink/60 p-3 text-sm text-rice/75">
+              銘柄を特定できませんでした。手入力してください。
+            </p>
+          ) : null}
           <div className="mt-3 grid gap-2">
             {displayedCandidates.map((candidate) => (
               <button key={`${candidate.productName}-${candidate.matchReasons.join(',')}`} className="rounded-md bg-ink/70 p-3 text-left" onClick={() => applyCandidate(candidate)}>
