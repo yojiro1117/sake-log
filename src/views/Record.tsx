@@ -29,6 +29,7 @@ import type {
   CandidateMatch,
   ImageType,
   ImportedPhotoDraft,
+  IdentificationPhotoType,
   ImportMode,
   MarketPriceCandidate,
   SakeImage,
@@ -76,6 +77,7 @@ export function Record({
   const [crop, setCrop] = useState({ x:0.12, y:0.27, width:0.76, height:0.56 });
   const [cropRotation, setCropRotation] = useState(0);
   const [isReanalyzing, setIsReanalyzing] = useState(false);
+  const [showLensAssist, setShowLensAssist] = useState(false);
   const abortRef = useRef<AbortController | undefined>();
   const draftsRef = useRef<ImportedPhotoDraft[]>([]);
   const draftCreatedAtRef = useRef(new Date().toISOString());
@@ -422,7 +424,12 @@ export function Record({
           candidates:displayedCandidates, processingTimeMs:drafts.reduce((sum, draft) => sum + (draft.processing?.totalMs ?? 0), 0)
         });
         const referenceDraft = activeDraft?.visualFingerprint ? activeDraft : drafts.find((draft) => draft.visualFingerprint);
-        await confirmCatalogCandidate(selectedProductCandidate, runId, 'accepted', referenceDraft?.visualFingerprint ? { imageHash:referenceDraft.imageHash, sourceImageId:referenceDraft.id, fingerprint:referenceDraft.visualFingerprint } : undefined)
+        await confirmCatalogCandidate(selectedProductCandidate, runId, 'accepted', referenceDraft?.visualFingerprint ? {
+          imageHash:referenceDraft.imageHash,
+          sourceImageId:referenceDraft.id,
+          fingerprint:referenceDraft.visualFingerprint,
+          learningEventId:`${saved.logId}|${referenceDraft.imageHash}|${selectedProductCandidate.productId}`
+        } : undefined)
           .catch(() => warnings.push('確認済み商品マスターの更新だけ失敗しました。'));
       }
       if (aggregatedOcr.text && form.productName.trim()) {
@@ -508,6 +515,18 @@ export function Record({
     } catch (error) {
       setStatus(error instanceof Error ? error.message : '再解析できませんでした。');
     } finally { setIsReanalyzing(false); }
+  }
+
+  function exportLabelForManualCheck() {
+    if (!activeDraft) return;
+    const url = URL.createObjectURL(activeDraft.resizedBlob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = `sake-label-${activeDraft.imageHash.slice(0, 10)}.jpg`;
+    anchor.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    setStatus('ラベル画像を書き出しました。Google Lensアプリで画像を選び、確認結果を銘柄欄へ入力してください。');
+    setShowLensAssist(false);
   }
 
   if (savedLogId) {
@@ -598,6 +617,7 @@ export function Record({
                         {imageTypeLabel(draft.classification.type)}の可能性 {draft.classification.confidence}%
                       </p>
                     ) : null}
+                    {draft.identificationPhotoType && draft.identificationPhotoType !== draft.imageType ? <p className="mt-1 text-[11px] text-rice/55">詳細分類: {identificationPhotoTypeLabel(draft.identificationPhotoType)} {draft.identificationPhotoTypeConfidence ?? 0}%</p> : null}
                     <select className={`${inputClass} mt-2 text-xs`} value={draft.imageType} onChange={(event) => updateDraftType(draft.id, event.target.value as ImageType)}>
                       {imageTypeOptions.map((type) => <option key={type} value={type}>{imageTypeLabel(type)}</option>)}
                     </select>
@@ -605,13 +625,25 @@ export function Record({
                   </div>
                 ))}
               </div>
+              {FEATURES.manualLensAssist ? <button className="w-full rounded bg-rice/10 px-3 py-2 text-xs font-bold" onClick={() => setShowLensAssist(true)}>Google Lensで手動確認</button> : null}
+            </div>
+          ) : null}
+          {showLensAssist && activeDraft ? (
+            <div className="mt-4 rounded-md border border-gold/35 bg-ink p-4 text-sm">
+              <p className="font-bold text-gold">外部アプリで確認</p>
+              <p className="mt-2 leading-6 text-rice/70">この操作では、選択したラベル画像を端末へ書き出します。画像は自動的には送信されません。Google Lensへの読込みと検索結果の確認は、ご自身の操作で行ってください。</p>
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                <button className="rounded bg-gold px-3 py-2 font-bold text-ink" onClick={exportLabelForManualCheck}>画像を書き出す</button>
+                <button className="rounded bg-rice/10 px-3 py-2" onClick={() => setShowLensAssist(false)}>閉じる</button>
+              </div>
             </div>
           ) : null}
         </div>
       </Section>
 
-      <Section title="2. OCR解析">
+      <Section title="2. ローカル銘柄識別">
         <div className="rounded-lg bg-rice/8 p-4">
+          <p className="mb-3 rounded-md bg-moss/35 p-3 text-xs leading-5 text-rice/80">画像解析は端末内で実行されます。画像は外部サーバーへ送信されません。</p>
           <p className="text-sm text-rice/70">
             {activeDraft
               ? activeDraft.ocr.message
@@ -625,6 +657,7 @@ export function Record({
               OCR信頼度 {Math.round(activeDraft.ocr.confidence * 100)}% / {confidenceLabel(activeDraft.ocr.confidence * 100)}
             </p>
           ) : null}
+          {activeDraft?.identificationPath ? <p className="mt-1 text-xs text-rice/50">解析経路: {activeDraft.identificationPath === 'fast' ? '高速' : activeDraft.identificationPath === 'standard' ? '標準' : '詳細'}</p> : null}
           {activeDraft?.ocr.preprocessing?.length ? <p className="mt-1 text-xs text-rice/50">前処理: {activeDraft.ocr.preprocessing.join(' / ')}</p> : null}
           {activeDraft?.quality ? (
             <div className="mt-3 rounded-md bg-ink/50 p-3 text-xs text-rice/65">
@@ -650,7 +683,7 @@ export function Record({
           ) : null}
           {importMode === 'singleLog' && drafts.length > 1 ? (
             <div className="mt-3 rounded-md bg-ink/50 p-3 text-xs text-rice/65">
-              <p className="font-bold text-gold">複数写真のOCRを統合</p>
+              <p className="font-bold text-gold">複数写真の証拠を統合</p>
               {aggregatedOcr.sources.volume ? <p>容量: {aggregatedOcr.sources.volume}</p> : null}
               {aggregatedOcr.sources.abv ? <p>度数: {aggregatedOcr.sources.abv}</p> : null}
             </div>
@@ -875,4 +908,12 @@ function Metric({ label, value }: { label: string; value: string | number }) {
       <p className="mt-1 text-xl font-black text-gold">{value}</p>
     </div>
   );
+}
+
+function identificationPhotoTypeLabel(type: IdentificationPhotoType) {
+  const labels: Record<IdentificationPhotoType, string> = {
+    frontLabel:'表ラベル', backLabel:'裏ラベル', bottle:'ボトル全体', neckLabel:'首ラベル', cap:'キャップ', barcode:'バーコード',
+    receipt:'レシート', glass:'グラス', food:'料理', shelf:'棚', multipleBottles:'複数ボトル', other:'その他', unknown:'不明'
+  };
+  return labels[type];
 }

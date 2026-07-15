@@ -1,3 +1,5 @@
-# JAN/EAN検証
+# Barcode Validation
 
-BarcodeDetectorを第一経路、`@zxing/browser`をフォールバックとして実装した。EAN-8/EAN-13のチェックディジットを検証し、無効コードは候補根拠にしない。実画像72枚では確定可能なJANを取得できなかったため、バーコード単独の実画像精度は算出していない。標準EAN-13の正常・異常値は単体テストで検証した。
+The production path first uses `BarcodeDetector` when available, then dynamic ZXing fallback. ZXing retries 0, 90, 180, and 270 degree rotations. Each result records engine, format, raw value, confidence, rotation, processing time, and warnings.
+
+The Drive set contains rear labels and barcodes, but this Node image-validation run did not execute the browser BarcodeDetector implementation. Unit tests cover native success, fallback, rotation/cancellation boundaries, and no-result continuation. A detected value becomes strong identity evidence only when it matches a confirmed local product barcode. Unmapped values are shown for confirmation and never auto-create catalog mappings.

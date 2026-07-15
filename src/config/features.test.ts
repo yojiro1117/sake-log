@@ -7,5 +7,6 @@ describe('feature flags', () => {
     expect(FEATURES.share).toBe(false);
     expect(FEATURES.postTextGeneration).toBe(false);
     expect(FEATURES.postImageGeneration).toBe(false);
+    expect(FEATURES.manualLensAssist).toBe(true);
   });
 });

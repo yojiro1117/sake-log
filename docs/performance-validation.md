@@ -1,7 +1,13 @@
-# Performance validation
+# Performance Validation
 
-The 72-image Node-assisted baseline averaged 12,977 ms per image and peaked at 26,393 ms. Node RSS is not used as an iPhone memory claim.
+- Dataset: 151 images, processed sequentially.
+- OCR average: 6,479ms/image.
+- OCR maximum: 27,039ms/image.
+- OCR p50 / p95 from identification records: approximately 5.4s / 15.6s on validation.
+- Peak Node validation RSS: about 1.3GB.
+- Full OCR validation wall time: 1,773 seconds.
+- Composite visual extraction wall time: 367 seconds before threshold recalibration.
 
-Browser changes reduce retained data and work: preview is emitted before OCR, input is resized to a 1600px bound, a single worker is terminated after use, confident first-pass OCR skips extra variants, and object URLs are revoked. The HEIC dynamic chunk is about 1.35 MB minified; it is loaded only for HEIC/HEIF input.
+Production constraints derived from these measurements: maximum 10 selected files, concurrency 1, first image first, adaptive retry only for weak OCR, cancellation, per-file failure continuation, worker termination, object URL revocation, and no eager model load.
 
-The production E2E records whether ten real images complete without UI lockup. Browser process memory is runner-specific and must not be presented as physical-device memory.
+Playwright WebKit/Chromium emulate iPhone/Android widths, but physical-device heat, memory pressure, and camera/photo-library integration remain manual release checks.

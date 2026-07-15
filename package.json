@@ -1,7 +1,7 @@
 {
   "name": "sake-log",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "type": "module",
   "packageManager": "pnpm@11.7.0",
   "scripts": {
@@ -15,12 +15,15 @@
     "test:e2e": "playwright test",
     "prepare:drive-list": "node scripts/prepare-drive-validation-list.mjs",
     "download:drive-images": "node scripts/download-drive-images.mjs",
+    "build:drive-fixtures": "node scripts/build-drive-identification-fixtures.mjs",
     "validate:drive-images": "node scripts/validate-drive-images.mjs",
     "validate:photo-classification": "node scripts/validate-photo-classification.mjs",
     "extract:drive-image-features": "node scripts/extract-drive-image-features.mjs",
     "recalculate:validation-metrics": "node scripts/recalculate-validation-metrics.mjs",
     "benchmark:brand": "tsx scripts/benchmark-brand-identification.ts",
-    "benchmark:visual": "tsx scripts/benchmark-visual-matching.ts"
+    "benchmark:visual": "tsx scripts/benchmark-visual-matching.ts",
+    "recalibrate:visual": "node scripts/recalibrate-visual-validation.mjs",
+    "verify:identification": "node scripts/verify-identification-validation.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

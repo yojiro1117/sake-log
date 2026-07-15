@@ -1,16 +1,16 @@
 import { fileToResizedBlob } from './imageService';
-import { createOcrVariants, scoreOcrVariant, type OcrVariantKind } from './ocrPreprocessing';
+import { createOcrVariants, scoreOcrVariant, type OcrVariantKind } from './imagePreprocessingService';
 import { learningCandidates } from './ocrLearning';
-import { classifyPhoto, extractVisualImageFeatures } from './photoClassification';
+import { classifyIdentificationPhoto, classifyPhoto, extractVisualImageFeatures } from './photoClassificationService';
 import { db } from '../db/db';
 import type { CandidateMatch, ImageType, ImportedPhotoDraft, OcrResult } from '../types';
 import { OcrWorkerSession } from './ocrWorkerSession';
-import { analyzePhotoQuality } from './imageQuality';
-import { detectLabelRegions } from './labelDetection';
-import { cropRegion } from './labelDetection';
-import { createVisualFingerprint } from './visualMatching';
+import { analyzePhotoQuality } from './imageQualityService';
+import { cropRegion, detectLabelRegionsFromImage } from './labelRegionService';
+import { createVisualFingerprint } from './visualFeatureService';
 import { readProductBarcodes } from './barcodeService';
-import { identifyAlcoholProduct, identifyAlcoholProductWithLocalData } from './brandIdentification';
+import { identifyAlcoholProduct } from './brandIdentification';
+import { identifyLocalAlcoholProduct } from './identificationPipeline';
 
 type DetectedText = { rawValue?: string };
 type TextDetectorCtor = new () => { detect: (source: ImageBitmapSource) => Promise<DetectedText[]> };
@@ -21,7 +21,7 @@ export interface PhotoImportProgress {
   index: number;
   total: number;
   fileName: string;
-  phase: 'metadata' | 'image' | 'ocr' | 'candidate' | 'done' | 'failed' | 'cancelled';
+  phase: 'metadata' | 'image' | 'quality' | 'region' | 'ocr' | 'barcode' | 'visual' | 'fusion' | 'candidate' | 'done' | 'failed' | 'cancelled';
   message: string;
   ocrProgress?: number;
 }
@@ -102,12 +102,14 @@ async function createImportedPhotoDraft(
   const { width, height } = await readImageSize(resizedBlob);
   const resizeMs = performance.now() - resizeStarted;
   const previewUrl = URL.createObjectURL(resizedBlob);
+  options.onProgress?.({ index, total, fileName: file.name, phase: 'quality', message: '写真の品質を確認しています。' });
   const [quality, visualFingerprint, barcode] = await Promise.all([
     analyzePhotoQuality(resizedBlob),
     createVisualFingerprint(resizedBlob),
     readProductBarcodes(resizedBlob)
   ]);
-  const labelRegions = detectLabelRegions(quality);
+  const labelRegions = await detectLabelRegionsFromImage(resizedBlob, quality);
+  options.onProgress?.({ index, total, fileName: file.name, phase: 'region', message: 'ラベル領域を探しています。' });
   const pendingDraft: ImportedPhotoDraft = {
     id,
     fileName: file.name,
@@ -164,18 +166,18 @@ async function createImportedPhotoDraft(
   });
   const ocrMs = performance.now() - ocrStarted;
 
-  options.onProgress?.({ index, total, fileName: file.name, phase: 'candidate', message: '候補を確認中です。' });
+  options.onProgress?.({ index, total, fileName: file.name, phase: 'fusion', message: '文字・バーコード・ラベル特徴を統合しています。' });
   const candidateStarted = performance.now();
-  const baseCandidates = await identifyAlcoholProductWithLocalData({
-    text: ocr.text,
-    ocrConfidence: ocr.confidence,
-    barcodeValues: barcode.values,
-    fingerprint: visualFingerprint
+  const identification = await identifyLocalAlcoholProduct({
+    images: [{ imageId: id, imageType: 'unknown', ocrText: ocr.text, ocrConfidence: ocr.confidence, barcodeValues: barcode.values, fingerprint: visualFingerprint }],
+    signal: options.signal
   });
+  const baseCandidates = identification.candidates;
   const learnedCandidates = await learningCandidates(ocr.text);
   const candidates = mergeCandidates(learnedCandidates, baseCandidates);
   const candidateMs = performance.now() - candidateStarted;
   const classificationStarted = performance.now();
+  const classificationVisual = await extractVisualImageFeatures(resizedBlob);
   const classification = classifyPhoto({
     ocrText: ocr.text,
     width,
@@ -183,7 +185,16 @@ async function createImportedPhotoDraft(
     knownCandidateCount: candidates.length,
     ocrConfidence: ocr.confidence,
     corrections: await db.classificationCorrections.toArray(),
-    visualFeatures: await extractVisualImageFeatures(resizedBlob)
+    visualFeatures: classificationVisual
+  });
+  const detailedClassification = classifyIdentificationPhoto({
+    baseType: classification.type,
+    baseConfidence: classification.confidence,
+    ocrText: ocr.text,
+    barcodeValues: barcode.values,
+    width,
+    height,
+    visualFeatures: classificationVisual
   });
   const classificationMs = performance.now() - classificationStarted;
   const status = ocr.status === 'success' && candidates.length > 0 ? 'success' : 'warning';
@@ -246,7 +257,11 @@ async function createImportedPhotoDraft(
     quality,
     labelRegions,
     barcodeValues: barcode.values,
-    visualFingerprint
+    visualFingerprint,
+    identificationRunId: identification.runId,
+    identificationPath: identification.path,
+    identificationPhotoType: detailedClassification.type,
+    identificationPhotoTypeConfidence: detailedClassification.confidence
   };
   options.onDraftUpdate?.(completedDraft);
   return completedDraft;
@@ -456,7 +471,10 @@ export async function reanalyzePhotoDraft(
     readProductBarcodes(input),
     createVisualFingerprint(input)
   ]);
-  const candidates = await identifyAlcoholProductWithLocalData({ text:ocr.text, ocrConfidence:ocr.confidence, barcodeValues:barcode.values, fingerprint });
+  const identification = await identifyLocalAlcoholProduct({
+    images: [{ imageId: draft.id, imageType: draft.imageType, ocrText: ocr.text, ocrConfidence: ocr.confidence, barcodeValues: barcode.values, fingerprint }]
+  });
+  const candidates = identification.candidates;
   return {
     ...draft,
     ocr,
@@ -464,7 +482,9 @@ export async function reanalyzePhotoDraft(
     quality,
     barcodeValues: barcode.values,
     visualFingerprint: fingerprint,
-    labelRegions: region ? [region] : detectLabelRegions(quality),
+    identificationRunId: identification.runId,
+    identificationPath: identification.path,
+    labelRegions: region ? [region] : await detectLabelRegionsFromImage(input, quality),
     status: candidates.length ? 'success' as const : 'warning' as const,
     message: candidates.length ? `${options.mode ?? 'standard'}設定で再解析しました。候補を確認してください。` : '銘柄を特定できませんでした。範囲や向きを変えるか手入力してください。'
   };

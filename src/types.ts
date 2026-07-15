@@ -20,6 +20,8 @@ export type ImportStatus = 'pending' | 'processing' | 'success' | 'warning' | 'f
 export type LogStatus = 'complete' | 'incomplete' | 'needs_review';
 export type DraftStatus = 'editing' | 'paused' | 'ready';
 export type ConfidenceLevel = 'high' | 'medium' | 'low';
+export type IdentificationPhotoType = ImageType | 'neckLabel' | 'cap' | 'barcode' | 'shelf' | 'multipleBottles' | 'unknown';
+export type IdentificationPath = 'fast' | 'standard' | 'deep';
 
 export interface RatingAxis {
   key: string;
@@ -68,10 +70,12 @@ export interface AlcoholProductCatalogEntry {
 }
 
 export interface CandidateEvidence {
-  kind: 'jan' | 'exact' | 'alias' | 'maker' | 'type' | 'volume' | 'abv' | 'ocr-repeat' | 'multi-photo' | 'visual' | 'history' | 'fuzzy';
+  kind: 'jan' | 'exact' | 'alias' | 'maker' | 'type' | 'volume' | 'abv' | 'ocr-repeat' | 'multi-photo' | 'visual' | 'layout' | 'history' | 'fuzzy';
   score: number;
   detail: string;
   sourceImageId?: string;
+  sourceRegionId?: string;
+  confidence?: number;
 }
 
 export interface PhotoQualityAnalysis {
@@ -86,6 +90,11 @@ export interface PhotoQualityAnalysis {
   height: number;
   warnings: string[];
   recommendedActions: string[];
+  qualityLevel?: 'good' | 'fair' | 'poor';
+  whiteClipRatio?: number;
+  blackClipRatio?: number;
+  compressionScore?: number;
+  estimatedTextSize?: number;
 }
 
 export interface LabelRegion {
@@ -101,8 +110,13 @@ export interface LabelRegion {
 
 export interface VisualFingerprint {
   hash: string;
+  averageHash?: string;
+  perceptualHash?: string;
   luminance: number[];
   colorHistogram: number[];
+  edgeHistogram?: number[];
+  dominantColors?: string[];
+  layoutSignature?: number[];
   aspectRatio: number;
 }
 
@@ -126,6 +140,72 @@ export interface IdentificationRun {
   abstained: boolean;
   processingTimeMs: number;
   createdAt: string;
+  path?: IdentificationPath;
+  status?: 'running' | 'completed' | 'cancelled' | 'failed';
+  photoTypes?: IdentificationPhotoType[];
+  warnings?: string[];
+  errors?: string[];
+}
+
+export interface IdentificationEvidence {
+  id: string;
+  runId: string;
+  field: 'brand' | 'product' | 'variant' | 'maker' | 'volume' | 'abv' | 'barcode' | 'price' | 'visual';
+  value: string | number;
+  sourceImageId: string;
+  sourceRegionId?: string;
+  method: 'ocr' | 'barcode' | 'visual' | 'receipt' | 'history';
+  confidence: number;
+  createdAt: string;
+}
+
+export interface IdentificationResult {
+  runId: string;
+  candidates: CandidateMatch[];
+  evidences: IdentificationEvidence[];
+  abstained: boolean;
+  path: IdentificationPath;
+  firstCandidateMs?: number;
+  processingTimeMs: number;
+  warnings: string[];
+  errors: string[];
+}
+
+export interface ProductAliasEntry {
+  id: string;
+  productId: string;
+  alias: string;
+  kind: 'canonical' | 'kana' | 'latin' | 'ocr-error' | 'user-confirmed';
+  confirmed: boolean;
+  updatedAt: string;
+}
+
+export interface ProductBarcodeEntry {
+  id: string;
+  productId: string;
+  codeType: string;
+  rawValue: string;
+  confirmed: boolean;
+  updatedAt: string;
+}
+
+export interface StoredVisualFeature {
+  id: string;
+  productId?: string;
+  imageHash: string;
+  fingerprint: VisualFingerprint;
+  userConfirmed: boolean;
+  createdAt: string;
+}
+
+export interface IdentificationSettings {
+  id: 'default';
+  deepAnalysisEnabled: boolean;
+  localOnly: true;
+  maxReferenceImages: number;
+  highConfidenceThreshold: number;
+  mediumConfidenceThreshold: number;
+  updatedAt: string;
 }
 
 export interface IdentificationLearningEvent {
@@ -272,6 +352,10 @@ export interface ImportedPhotoDraft {
   labelRegions?: LabelRegion[];
   barcodeValues?: string[];
   visualFingerprint?: VisualFingerprint;
+  identificationRunId?: string;
+  identificationPath?: IdentificationPath;
+  identificationPhotoType?: IdentificationPhotoType;
+  identificationPhotoTypeConfidence?: number;
 }
 
 export interface PersistedImportedPhoto {

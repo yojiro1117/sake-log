@@ -37,7 +37,7 @@ export function rankCatalogCandidates(retrieved: RetrievedCatalogCandidate[], co
     if (context.alcoholTypeHint === entry.alcoholType) add('type', 5, `酒種一致: ${entry.alcoholType}`);
     if ((context.imageCount ?? 1) > 1 && context.repeatedTerms?.some((term) => normalizeCatalogTerm(term).includes(brand))) add('multi-photo', 12, '複数写真でブランド文字が反復');
     const visual = context.visualScores?.[entry.productId];
-    if (visual !== undefined && visual >= 0.78) add('visual', Math.min(18, visual * 18), `確認済み写真との視覚類似 ${Math.round(visual * 100)}%`);
+    if (visual !== undefined && visual >= 0.84) add('visual', Math.min(18, visual * 18), `確認済み写真との視覚類似 ${Math.round(visual * 100)}%`);
     for (const keyword of entry.keywords) if (normalized.searchable.includes(normalizeCatalogTerm(keyword))) add('alias', 5, `バリエーション語一致: ${keyword}`);
 
     let raw = evidences.reduce((sum, item) => sum + item.score, 0);

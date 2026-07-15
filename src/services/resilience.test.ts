@@ -112,6 +112,8 @@ describe('resilient data flows', () => {
     await db.personalityResults.put({ id: 'personality', answers: { a: 4 }, createdAt: '2026-01-01' });
     await db.reviewProfileResults.put({ id: 'review', mainType: 'taste', subType: 'food', createdAt: '2026-01-01' });
     await db.productCatalog.put({ ...builtInAlcoholProductCatalog[0], source: 'user-confirmed', userConfirmed: true });
+    await db.productAliases.put({ id:'alias-1', productId:builtInAlcoholProductCatalog[0].productId, alias:'confirmed alias', kind:'user-confirmed', confirmed:true, updatedAt:'2026-01-01' });
+    await db.identificationEvidence.put({ id:'evidence-1', runId:'run-1', field:'product', value:'confirmed', sourceImageId:'image-1', method:'ocr', confidence:0.9, createdAt:'2026-01-01' });
     const backup = await exportLocalData();
     await db.logs.put(baseLog('log-remove', 'operation-remove'));
     await restoreLocalData(backup, 'replace');
@@ -120,5 +122,7 @@ describe('resilient data flows', () => {
     await expect(db.personalityResults.get('personality')).resolves.toBeTruthy();
     await expect(db.reviewProfileResults.get('review')).resolves.toBeTruthy();
     await expect(db.productCatalog.get(builtInAlcoholProductCatalog[0].productId)).resolves.toMatchObject({ userConfirmed: true });
+    await expect(db.productAliases.get('alias-1')).resolves.toMatchObject({ confirmed:true });
+    await expect(db.identificationEvidence.get('evidence-1')).resolves.toMatchObject({ method:'ocr' });
   });
 });

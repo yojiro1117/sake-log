@@ -3,7 +3,7 @@ import { BUILD_INFO } from '../config/buildInfo';
 import { db } from '../db/db';
 import type { PersistedImportedPhoto, SakeImage, SakeLogDraft } from '../types';
 
-export const BACKUP_FORMAT_VERSION = 2;
+export const BACKUP_FORMAT_VERSION = 3;
 
 type BackupMode = 'merge' | 'replace';
 type ZipEntries = Record<string, Uint8Array>;
@@ -40,6 +40,11 @@ export async function exportLocalData() {
   addJson(entries, 'reference-images.json', tables.referenceImages);
   addJson(entries, 'identification-runs.json', tables.identificationRuns);
   addJson(entries, 'learning-events.json', tables.learningEvents);
+  addJson(entries, 'product-aliases.json', tables.productAliases);
+  addJson(entries, 'product-barcodes.json', tables.productBarcodes);
+  addJson(entries, 'visual-features.json', tables.visualFeatures);
+  addJson(entries, 'identification-evidence.json', tables.identificationEvidence);
+  addJson(entries, 'identification-settings.json', tables.identificationSettings);
   addJson(entries, 'personality-results.json', tables.personalityResults);
   addJson(entries, 'review-profile-results.json', tables.reviewProfileResults);
   addJson(entries, 'backup-status.json', tables.backupStatus);
@@ -87,7 +92,9 @@ export async function exportLocalData() {
       ocrCorrections: tables.ocrCorrections.length,
       classificationCorrections: tables.classificationCorrections.length,
       productCatalog: tables.productCatalog.length,
-      referenceImages: tables.referenceImages.length
+      referenceImages: tables.referenceImages.length,
+      identificationEvidence: tables.identificationEvidence.length,
+      visualFeatures: tables.visualFeatures.length
     },
     totalSize: Object.values(entries).reduce((sum, value) => sum + value.byteLength, 0)
   };
@@ -132,6 +139,11 @@ export async function restoreLocalData(blob: Blob, mode: BackupMode) {
   const referenceImages = readOptionalJson<Parameters<typeof db.referenceImages.bulkPut>[0]>(entries, 'reference-images.json', []);
   const identificationRuns = readOptionalJson<Parameters<typeof db.identificationRuns.bulkPut>[0]>(entries, 'identification-runs.json', []);
   const learningEvents = readOptionalJson<Parameters<typeof db.learningEvents.bulkPut>[0]>(entries, 'learning-events.json', []);
+  const productAliases = readOptionalJson<Parameters<typeof db.productAliases.bulkPut>[0]>(entries, 'product-aliases.json', []);
+  const productBarcodes = readOptionalJson<Parameters<typeof db.productBarcodes.bulkPut>[0]>(entries, 'product-barcodes.json', []);
+  const visualFeatures = readOptionalJson<Parameters<typeof db.visualFeatures.bulkPut>[0]>(entries, 'visual-features.json', []);
+  const identificationEvidence = readOptionalJson<Parameters<typeof db.identificationEvidence.bulkPut>[0]>(entries, 'identification-evidence.json', []);
+  const identificationSettings = readOptionalJson<Parameters<typeof db.identificationSettings.bulkPut>[0]>(entries, 'identification-settings.json', []);
   const imageMetadata = readJson<Array<Record<string, unknown> & { originalPath: string; processedPath?: string }>>(entries, 'images.json');
   const draftMetadata = readJson<BackupDraftMetadata[]>(entries, 'drafts.json');
   const images = imageMetadata.map((item) => hydrateImage(item, entries));
@@ -158,19 +170,25 @@ export async function restoreLocalData(blob: Blob, mode: BackupMode) {
     await db.referenceImages.bulkPut(referenceImages);
     await db.identificationRuns.bulkPut(identificationRuns);
     await db.learningEvents.bulkPut(learningEvents);
+    await db.productAliases.bulkPut(productAliases);
+    await db.productBarcodes.bulkPut(productBarcodes);
+    await db.visualFeatures.bulkPut(visualFeatures);
+    await db.identificationEvidence.bulkPut(identificationEvidence);
+    await db.identificationSettings.bulkPut(identificationSettings);
     await db.drafts.bulkPut(drafts);
   });
   return manifest;
 }
 
 async function readAllTables() {
-  const [logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus, productCatalog, referenceImages, identificationRuns, learningEvents] = await Promise.all([
+  const [logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus, productCatalog, referenceImages, identificationRuns, learningEvents, productAliases, productBarcodes, visualFeatures, identificationEvidence, identificationSettings] = await Promise.all([
     db.logs.toArray(), db.images.toArray(), db.drafts.toArray(), db.priceCandidates.toArray(), db.userSettings.toArray(), db.templates.toArray(),
     db.ocrCorrections.toArray(), db.labelAliases.toArray(), db.classificationCorrections.toArray(), db.externalSources.toArray(), db.deviceValidationResults.toArray(),
     db.personalityResults.toArray(), db.reviewProfileResults.toArray(), db.backupStatus.toArray(),
-    db.productCatalog.toArray(), db.referenceImages.toArray(), db.identificationRuns.toArray(), db.learningEvents.toArray()
+    db.productCatalog.toArray(), db.referenceImages.toArray(), db.identificationRuns.toArray(), db.learningEvents.toArray(),
+    db.productAliases.toArray(), db.productBarcodes.toArray(), db.visualFeatures.toArray(), db.identificationEvidence.toArray(), db.identificationSettings.toArray()
   ]);
-  return { logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus, productCatalog, referenceImages, identificationRuns, learningEvents };
+  return { logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus, productCatalog, referenceImages, identificationRuns, learningEvents, productAliases, productBarcodes, visualFeatures, identificationEvidence, identificationSettings };
 }
 
 function addJson(entries: ZipEntries, path: string, value: unknown) {

@@ -3,5 +3,6 @@ export const FEATURES = {
   share: false,
   postTextGeneration: false,
   postImageGeneration: false,
-  commentTemplates: false
+  commentTemplates: false,
+  manualLensAssist: true
 } as const;

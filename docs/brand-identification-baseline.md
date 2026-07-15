@@ -1,14 +1,3 @@
-# 銘柄特定ベースライン
+# Brand Identification Baseline
 
-## データ
-
-- Google Drive実画像: 72枚（HEIC/HEIF 58、JPEG 14）
-- 正解状態: confirmed 48、partially_confirmed 15、unknown 9
-- グループ単位分割: tuning 40、validation 16、holdout 16
-- 画像本体はリポジトリへ保存していない
-
-## ベースライン
-
-単純な正規化前部分一致は、調整用Top1 8.7%、Top5 17.4%、誤候補73.5%だった。候補を出しやすい一方、メーカー名だけで別商品を誤提示する問題があった。
-
-正解不明画像は完全一致率の分母から除外した。分割は同一商品グループを跨がせず、holdoutは最終サイクルまで閾値調整に使用していない。
+Current dataset: 151 Drive images (131 HEIC/HEIF, 20 JPEG). Cycle 1 used simple normalized substring matching. Validation candidate display was 90.9%, product Top-1 33.3%, false positives 54.6%, and unknown-image candidate rate 63.2%. This baseline is rejected because it optimizes candidate volume rather than trustworthy identification. See `identification-baseline.md` and `identification-cycle-*.md` for the six-cycle replacement.

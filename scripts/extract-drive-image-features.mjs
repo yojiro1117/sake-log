@@ -6,10 +6,12 @@ import { Jimp } from 'jimp';
 const root = process.cwd();
 const imageDir = path.resolve(root, process.env.DRIVE_IMAGE_DIR ?? '../drive-image-temp');
 const files = JSON.parse(await readFile(path.join(root, 'tests/fixtures/google-drive-files.json'), 'utf8'));
+const downloadResults = JSON.parse(await readFile(path.join(imageDir, 'download-results.json'), 'utf8').catch(() => '[]'));
+const localNameById = new Map(downloadResults.map((item) => [item.driveFileId, item.localFileName]));
 const results = [];
 
 for (const file of files) {
-  const raw = await readFile(path.join(imageDir, file.fileName));
+  const raw = await readFile(path.join(imageDir, localNameById.get(file.driveFileId) ?? file.fileName));
   const bytes = /\.hei[cf]$/i.test(file.fileName) ? await convert({ buffer: raw, format: 'JPEG', quality: 0.65 }) : raw;
   const image = await Jimp.read(bytes);
   image.resize({ w: 64, h: 64 });

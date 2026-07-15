@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total": 72,
+    "total": 151,
     "textHitRate": 1,
-    "candidateHitRate": 0.028,
-    "averageProcessingTimeMs": 2461,
-    "maxProcessingTimeMs": 6174
+    "candidateHitRate": 0.073,
+    "averageProcessingTimeMs": 2874,
+    "maxProcessingTimeMs": 15892
   },
   "results": [
     {
@@ -32,7 +32,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 743,
+      "processingTimeMs": 663,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多"
@@ -63,7 +63,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1989,
+      "processingTimeMs": 2059,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -93,7 +93,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2204,
+      "processingTimeMs": 2404,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -124,9 +124,39 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1743,
+      "processingTimeMs": 1790,
       "problemClassification": [
         "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "4494288B-563B-4AD8-B556-FA97F692428A.JPG",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ーー 。。 論d鐘 ー-.\nf a はで 関計っ5\n NEE\\\n LET 7 ーー ンー\n導いNN計\n。 が NEEES / 」 (\n 人か ルンジンンアー ー\n— AN <が NGSL 7 “B 3 I Te\nd JiF Nd/ L C e\nる Y\n 0 をュパー オ 人 i>\nMalda@rn)\ne 。 oridNBlened Whis ー\n C) クーン / E.\n上 SSS (EAL 3\npkgiao Ad of che ihichibu Di\n- Re\". ー He ey of [シン 4\nAL 。 ny casky to pegfect his cn\nデー in addiedm to hiCHchik singlé falc\n7g his ss S orld Nb ded Yhisky\nー\nー Non Ch & Non (loloured : 。\nkt ;\n; ¢\n1r\n 4896\n】 lty ~ ジン _ammm",
+        "confidence": 0.27,
+        "charCount": 419,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ーー 。。 論d鐘 ー-.\nf a はで 関計っ5\n NEE\\\n LET 7 ーー ンー\n導いNN計\n。 が NEEES / 」 (\n 人か ルンジンンアー ー\n— AN <が NGSL 7 “B 3 I Te\nd JiF Nd/ L C e\nる Y\n 0 をュパー オ 人 i>\nMalda@rn)\ne 。 oridNBlened Whis ー\n C) クーン / E.\n上 SSS (EAL 3\npkgiao Ad of che ihichibu Di\n- Re\". ー He ey of [シン 4\nAL 。 ny casky to pegfect his cn\nデー in addiedm to hiCHchik singlé falc\n7g his ss S orld Nb ded Yhisky\nー\nー Non Ch & Non (loloured : 。\nkt ;\n; ¢\n1r\n 4896\n】 lty ~ ジン _ammm",
+          "confidence": 0.27,
+          "charCount": 419,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 5151,
+      "problemClassification": [
         "小断片が多い"
       ]
     },
@@ -155,7 +185,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1113,
+      "processingTimeMs": 1106,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -185,7 +215,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2789,
+      "processingTimeMs": 2821,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -215,8 +245,39 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1227,
+      "processingTimeMs": 1224,
       "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "6577BD8F-A573-43F8-AA7E-C237F22C2118.JPG",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ー 計半\nl !\n - ー の\nTS J 2) ー w 所2\n= り 4 て\n a\nocl\n”う EE\n \\\nタク (に ーー\n2 { / 7 E ー\nー / 科す\n[(放三rrw 人 0 ー # 1 rg , 。\n開 aaa甘み衝 ン\n[ごーニーー L 』 ー j。 ば\n 稲生 ーー\n2708",
+        "confidence": 0.2,
+        "charCount": 148,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ー 計半\nl !\n - ー の\nTS J 2) ー w 所2\n= り 4 て\n a\nocl\n”う EE\n \\\nタク (に ーー\n2 { / 7 E ー\nー / 科す\n[(放三rrw 人 0 ー # 1 rg , 。\n開 aaa甘み衝 ン\n[ごーニーー L 』 ー j。 ば\n 稲生 ーー\n2708",
+          "confidence": 0.2,
+          "charCount": 148,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2157,
+      "problemClassification": [
+        "記号ノイズ過多",
         "小断片が多い"
       ]
     },
@@ -245,9 +306,69 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1327,
+      "processingTimeMs": 1391,
       "problemClassification": [
         "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "A0CFB8EB-5406-4ED8-A7ED-B52C734D9917.JPG",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "LT Jmy c IPUR —\n THISway 八 / ー\n) * / に い 』\no ¢\nンー £24 l\n/ / RG .\n/ \\ ーー\n4ず4 『 1\n/ - ー キ\nー :ー « きき\nSIEE. m\n人な ー リリーー\nに 鉛 & ーー S J\n4f [ のア\nBー CTRRE\nか 0 B\nどじ k 【 を 4 較\n (6ー 他世本 一>\nー , ) pi—J 7 q\n\\34 IEEY\n E2=Rany\n$。。 ーーアン 2 ー志を短表ラサ\nー 6 4 E——",
+        "confidence": 0.3,
+        "charCount": 238,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "LT Jmy c IPUR —\n THISway 八 / ー\n) * / に い 』\no ¢\nンー £24 l\n/ / RG .\n/ \\ ーー\n4ず4 『 1\n/ - ー キ\nー :ー « きき\nSIEE. m\n人な ー リリーー\nに 鉛 & ーー S J\n4f [ のア\nBー CTRRE\nか 0 B\nどじ k 【 を 4 較\n (6ー 他世本 一>\nー , ) pi—J 7 q\n\\34 IEEY\n E2=Rany\n$。。 ーーアン 2 ー志を短表ラサ\nー 6 4 E——",
+          "confidence": 0.3,
+          "charCount": 238,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2991,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "A21AE476-AC95-435E-8AAE-CE2C69A21DD3.JPG",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "- 'y W —\nルリ \" ——\n“«1 \\\nルリWM <でご\n選 っ\nノ k : き —\nA } 3 、\nfl I\nm [0eR\nf ー\nー ii\nKO — -\n“higglvat CC、 <の 名\n0 Mi vVR * 区 t\nwaNbe BOuiy\n Y ジ liy\n: . Z / £ 時 4 3 4 AN \\ ¢ 上 。 0\nの本 2 映 En\nを ー N -\n2の : foe. に n\n() ーh 本 にーー、 . ¥ a",
+        "confidence": 0.28,
+        "charCount": 218,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "- 'y W —\nルリ \" ——\n“«1 \\\nルリWM <でご\n選 っ\nノ k : き —\nA } 3 、\nfl I\nm [0eR\nf ー\nー ii\nKO — -\n“higglvat CC、 <の 名\n0 Mi vVR * 区 t\nwaNbe BOuiy\n Y ジ liy\n: . Z / £ 時 4 3 4 AN \\ ¢ 上 。 0\nの本 2 映 En\nを ー N -\n2の : foe. に n\n() ーh 本 にーー、 . ¥ a",
+          "confidence": 0.28,
+          "charCount": 218,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2850,
+      "problemClassification": [
+        "記号ノイズ過多"
       ]
     },
     {
@@ -275,9 +396,39 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3063,
+      "processingTimeMs": 3126,
       "problemClassification": [
         "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "DAAAD20B-44B1-4CB4-8814-51CDB9758698.JPG",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ーーサリローズ科欄ーン .層\nリバカン7交時シルェカッッ ド\nLi SrEoR _ ー\n ーー - E ー\n有明 rt & に\n 3菩っききー... ー\n目 電光 て ー\nプーく4 ーー &\n。 ず と 科 。\nー テン\n\n— N GE ーー\n 台台電名:英国製造国内製造(ルトウイスキー) ー\n前モト、クルーシアルコール分:48% AERTE8\nー 会社ベンチャーウイスキー 埼玉県匠人市がり %\n3 岩.閉析信市みとCDが4番1 dl\n』 AR 4en 、\n 紀なの同味を大切にするために、 ue 3 B\n\ni な りません。この為、一般品に比べて沈殿 Met\n\nA ルクが 時 また、キャップに天然コルクを必須9\n のGR次にいこことがあります。 これらは、 旧の9 we\no* am EBDEth, 尚、ボリルは立てて ua\n~ aroアゲアー\n — \"\na § 5 本 pio=",
+        "confidence": 0.47,
+        "charCount": 394,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ーーサリローズ科欄ーン .層\nリバカン7交時シルェカッッ ド\nLi SrEoR _ ー\n ーー - E ー\n有明 rt & に\n 3菩っききー... ー\n目 電光 て ー\nプーく4 ーー &\n。 ず と 科 。\nー テン\n\n— N GE ーー\n 台台電名:英国製造国内製造(ルトウイスキー) ー\n前モト、クルーシアルコール分:48% AERTE8\nー 会社ベンチャーウイスキー 埼玉県匠人市がり %\n3 岩.閉析信市みとCDが4番1 dl\n』 AR 4en 、\n 紀なの同味を大切にするために、 ue 3 B\n\ni な りません。この為、一般品に比べて沈殿 Met\n\nA ルクが 時 また、キャップに天然コルクを必須9\n のGR次にいこことがあります。 これらは、 旧の9 we\no* am EBDEth, 尚、ボリルは立てて ua\n~ aroアゲアー\n — \"\na § 5 本 pio=",
+          "confidence": 0.47,
+          "charCount": 394,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 4681,
+      "problemClassification": [
+        "小断片が多い"
       ]
     },
     {
@@ -305,7 +456,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3169,
+      "processingTimeMs": 3209,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -345,8 +496,33 @@
           ]
         }
       ],
-      "processingTimeMs": 2921,
+      "processingTimeMs": 2578,
       "problemClassification": []
+    },
+    {
+      "fileName": "EF2F894B-8876-4A2C-AC88-FC24F7462935.JPG",
+      "cycle": 3,
+      "status": "reused",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "1。.\n\nBie.\n\nを\n\n日腐 低温貯蔵酒\n\n技と革新の技術を駆使し、低星雌\n\n、さわやかな味わいと米の旨みを\n\n引き出した芳酵型本 fitio\n\nHANIH ormAms\n\n米、 米麹、\n\n造アルコール\n\n米: 国産米100%使用\n\n=)\n\n15度\n\n1.8L\n\n者:高木酒造株式会社\n\nI\n\nす山市大学賞\n\n並182\n\nめに\n\nおし\n\n保存方法: 冷暗所に保管し、\n\nBifi\n\n320\n\n年月は表貼りに記載)\n\n上\n\nなってから。\n\nJILL\n\n日月限定酒",
+        "confidence": 0.7,
+        "charCount": 232,
+        "candidateCount": 1,
+        "detectedProductName": "十四代",
+        "detectedMakerName": "高木酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "蔵元一致"
+        ],
+        "cycle": 3
+      },
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "standard-path accepted previous result"
+      ]
     },
     {
       "fileName": "IMG_1703.HEIC",
@@ -373,7 +549,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2961,
+      "processingTimeMs": 3076,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -403,7 +579,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1322,
+      "processingTimeMs": 1440,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -433,7 +609,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4454,
+      "processingTimeMs": 4489,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -464,7 +640,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2850,
+      "processingTimeMs": 2952,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -504,7 +680,37 @@
           ]
         }
       ],
-      "processingTimeMs": 2952,
+      "processingTimeMs": 3030,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2128.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ー aa \\!\n/ w\nー = / ー\n が )\n: Falih -\nve ( [ AEEE \\\n7 N\nR m ( E awSs\nのest の 】 He\ny Gral [1 ー ー p ー 上 』 ー\n\\ 2 y ! § '坊 0の 1\nSl pfi ELC\ns A\n ] ー\nうき\nE 」導\nン うち 議 。\n> hya ui テッンド ocEAN NINETY NINE の ア\n』 ByRTY :\n、 Jen iy \\\nri 8 ーーーニー一",
+        "confidence": 0.33,
+        "charCount": 225,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ー aa \\!\n/ w\nー = / ー\n が )\n: Falih -\nve ( [ AEEE \\\n7 N\nR m ( E awSs\nのest の 】 He\ny Gral [1 ー ー p ー 上 』 ー\n\\ 2 y ! § '坊 0の 1\nSl pfi ELC\ns A\n ] ー\nうき\nE 」導\nン うち 議 。\n> hya ui テッンド ocEAN NINETY NINE の ア\n』 ByRTY :\n、 Jen iy \\\nri 8 ーーーニー一",
+          "confidence": 0.33,
+          "charCount": 225,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2319,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -534,7 +740,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4184,
+      "processingTimeMs": 3929,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -564,7 +770,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2406,
+      "processingTimeMs": 2321,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -594,7 +800,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1227,
+      "processingTimeMs": 1203,
       "problemClassification": []
     },
     {
@@ -622,7 +828,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2426,
+      "processingTimeMs": 2704,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -652,7 +858,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1579,
+      "processingTimeMs": 1584,
       "problemClassification": []
     },
     {
@@ -680,7 +886,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1025,
+      "processingTimeMs": 1050,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -710,7 +916,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1970,
+      "processingTimeMs": 1915,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -740,7 +946,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2276,
+      "processingTimeMs": 1943,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -771,7 +977,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2419,
+      "processingTimeMs": 2420,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -802,7 +1008,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4469,
+      "processingTimeMs": 4462,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -832,7 +1038,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4449,
+      "processingTimeMs": 4322,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -863,7 +1069,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 572,
+      "processingTimeMs": 598,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -894,7 +1100,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 778,
+      "processingTimeMs": 913,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -924,7 +1130,491 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1116,
+      "processingTimeMs": 1173,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2519.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "て 上韻間川間\n中 ー ー ー 」貞\n» 5 Aame\nダ uu\nー mA 4\npc e S0\n Eendl\n きき 3F\nや 4 A\nA ー\n BRY\n あえ",
+        "confidence": 0.21,
+        "charCount": 80,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "て 上韻間川間\n中 ー ー ー 」貞\n» 5 Aame\nダ uu\nー mA 4\npc e S0\n Eendl\n きき 3F\nや 4 A\nA ー\n BRY\n あえ",
+          "confidence": 0.21,
+          "charCount": 80,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1329,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_2522.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "でて補半きき計 スウ っ\nの語3モーてで ロコ\nーー記丘店科税ーーブイバニ 。\nーー pemek Ss )\nて し ta 人\n<' 4 kd\na & <\n所 /\nきき 。 と\nmu 誠吉 4. ー\nX\nー き /\nーー で まま\n »\n1 WM' し n*",
+        "confidence": 0.21,
+        "charCount": 128,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "でて補半きき計 スウ っ\nの語3モーてで ロコ\nーー記丘店科税ーーブイバニ 。\nーー pemek Ss )\nて し ta 人\n<' 4 kd\na & <\n所 /\nきき 。 と\nmu 誠吉 4. ー\nX\nー き /\nーー で まま\n »\n1 WM' し n*",
+          "confidence": 0.21,
+          "charCount": 128,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1927,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2523.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "さそ\n: ドド JCYGoNDA ド\n_填四億蘭上 白雲去来 §\nBErT TERINAE\nELL SERuLEE 革\nBLLE ZSURIE d\n原材料禁: 米(国導) kHlm)\n精米歩堆: 35% ;\n原料米: SRREURL A HIX 22 1L ESL00%EEF\nアァアルコール分 : 15度 内容量: 720ml\n製造者高木酒造株式会社\n 山形県村山市大学富並1826邊す\n保存方法: 必ず冷蔵庫(-5て5て)で際との\nお早めにお召し上がり下さい。 大\nお酒は20歳になってから。 fr 7\nrp— 2022.\n ーー",
+        "confidence": 0.52,
+        "charCount": 267,
+        "candidateCount": 1,
+        "detectedProductName": "十四代",
+        "detectedMakerName": "高木酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "蔵元一致"
+        ],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "さそ\n: ドド JCYGoNDA ド\n_填四億蘭上 白雲去来 §\nBErT TERINAE\nELL SERuLEE 革\nBLLE ZSURIE d\n原材料禁: 米(国導) kHlm)\n精米歩堆: 35% ;\n原料米: SRREURL A HIX 22 1L ESL00%EEF\nアァアルコール分 : 15度 内容量: 720ml\n製造者高木酒造株式会社\n 山形県村山市大学富並1826邊す\n保存方法: 必ず冷蔵庫(-5て5て)で際との\nお早めにお召し上がり下さい。 大\nお酒は20歳になってから。 fr 7\nrp— 2022.\n ーー",
+          "confidence": 0.52,
+          "charCount": 267,
+          "candidateCount": 1,
+          "detectedProductName": "十四代",
+          "detectedMakerName": "高木酒造",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "蔵元一致"
+          ]
+        }
+      ],
+      "processingTimeMs": 3011,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_2554.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "_ 3 \"whe 0 / B NM ー ー\n{ ロ ーー\n5 a\n/ f =4 私\n志門で*\nー\nー\n【 ー\n ー\nS_ ーー\nETY\nーー プレー -\n、 JE デミ\nco>\n[.» ー E oe\n » 6Y mm",
+        "confidence": 0.41,
+        "charCount": 108,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "_ 3 \"whe 0 / B NM ー ー\n{ ロ ーー\n5 a\n/ f =4 私\n志門で*\nー\nー\n【 ー\n ー\nS_ ーー\nETY\nーー プレー -\n、 JE デミ\nco>\n[.» ー E oe\n » 6Y mm",
+          "confidence": 0.41,
+          "charCount": 108,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1388,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2556.HEIC",
+      "cycle": 3,
+      "status": "reused",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "計\n\nCS\n\n\\\n\no UI\n\nJUYONDAL\n\n¥\n\nLREH\n\niif & on& LW RERAs\n\nスのどれた繊細な味わいの\n\n酒。\n\n本酒 ・幼米大吟醸\n\n米(国産) 、米次(国産米)\n\nit 米100%使用\n\n本\n\n分: 15度 内容量:1.8L\n\n者:高木酒造株式会社\n\n山形県村山市大学\n\n富並1826番叱\n\n保存方\n\nし、\n\n必ず冷蔵庫(-5て一5C)で 論\n\nお早めにお召し上がり下さい。\n\n(製造年月は表貼り\n\n5\n\nお酒は20歳になっで\n\nも\n\n0 v",
+        "confidence": 0.69,
+        "charCount": 239,
+        "candidateCount": 1,
+        "detectedProductName": "十四代",
+        "detectedMakerName": "高木酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "蔵元一致"
+        ],
+        "cycle": 3
+      },
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "standard-path accepted previous result"
+      ]
+    },
+    {
+      "fileName": "IMG_2557.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "も5 vm\ng\n/ ー\nー\nー\n%\n[}\na\n¥\n[]\n£\n内\n8 i ・ 導電\n中 §22\n. , : 3 ELS n\n7 ;\n- g ;\n. 1\nWhンp。。 ke5202",
+        "confidence": 0.31,
+        "charCount": 88,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "も5 vm\ng\n/ ー\nー\nー\n%\n[}\na\n¥\n[]\n£\n内\n8 i ・ 導電\n中 §22\n. , : 3 ELS n\n7 ;\n- g ;\n. 1\nWhンp。。 ke5202",
+          "confidence": 0.31,
+          "charCount": 88,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 924,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2558.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "7 26\n3 4\n» 3\n J : W ®\n A 8\n 本\nあー人\n が 着用:\n 2 まる\nF )m\nmmンpzero ke5 202",
+        "confidence": 0.32,
+        "charCount": 68,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "7 26\n3 4\n» 3\n J : W ®\n A 8\n 本\nあー人\n が 着用:\n 2 まる\nF )m\nmmンpzero ke5 202",
+          "confidence": 0.32,
+          "charCount": 68,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1368,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2559.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "斉:日本酒\n\n原材料名・ 米・米麹\n\n原村料品種 米島産無農薬山田件100y\n\nァルコール分 13度\n\n内容量 : 720ml\n\nWEER© 2022.9\n\n製造者・有限会社白炒酒造\n\n福岡県糸島市本1986\n画 OZ5i/ /開松注意 用\n\n操し上がりの際は必ずよく冷やしてください 用\nー がのガス圧でお酒が噴き出す場合があります Z\n\nくだを少しづつ抜きながらゆっくりと開#して Z\n回間<なさい 用\n_ 関電 。 7\nー Ma ”歳になってから。おいしく適 ク\n\nWWwshiraiio.com 7:",
+        "confidence": 0.68,
+        "charCount": 254,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "斉:日本酒\n\n原材料名・ 米・米麹\n\n原村料品種 米島産無農薬山田件100y\n\nァルコール分 13度\n\n内容量 : 720ml\n\nWEER© 2022.9\n\n製造者・有限会社白炒酒造\n\n福岡県糸島市本1986\n画 OZ5i/ /開松注意 用\n\n操し上がりの際は必ずよく冷やしてください 用\nー がのガス圧でお酒が噴き出す場合があります Z\n\nくだを少しづつ抜きながらゆっくりと開#して Z\n回間<なさい 用\n_ 関電 。 7\nー Ma ”歳になってから。おいしく適 ク\n\nWWwshiraiio.com 7:",
+          "confidence": 0.68,
+          "charCount": 254,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1873,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2569.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ーー 衝 ー\n® n PEE.A,\n7全品 ーーーーー一一 =\nー Iidi ~\n/ JRY に<\nwi h\n— 上 』 - ¢\nる\nB 問有。\n r\nA ー\n— — b. ;\nE Q% . *\nS Ichj ド Malt & TM\nuE, まっ\n_ 『、 を。\n で ーー\nを 3\nー\n = の —",
+        "confidence": 0.3,
+        "charCount": 150,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ーー 衝 ー\n® n PEE.A,\n7全品 ーーーーー一一 =\nー Iidi ~\n/ JRY に<\nwi h\n— 上 』 - ¢\nる\nB 問有。\n r\nA ー\n— — b. ;\nE Q% . *\nS Ichj ド Malt & TM\nuE, まっ\n_ 『、 を。\n で ーー\nを 3\nー\n = の —",
+          "confidence": 0.3,
+          "charCount": 150,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2043,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2574.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "。 > 、 ーー 5\nの 、ー 2 イィ\nー ーー レッ ]\n記参涼凛 :\n — ry\nn ]\nが77 。\n/ 2isiima { ~-\\\nるらい冷きが\nと大 條)ケ 6\n0 0 い*\nDE で5ある\nー る\n © ’\n2 。 を\nー リレー 5*\n5) にー SPARKLING 。\n2> A Ee\nLid 4信。 。 : 時 . る 。 「\n ョ W\nerogtied BN STERN _aF ,\nーー Eel S 7\n いりソ較\nメン 二 CURELTTIT v of\nアッ のgo 、\nー 本間証0 2\n5誠 詞S\n ~\n# . F-bs\nが 5 W て 塊aWi に 中 ーー >",
+        "confidence": 0.23,
+        "charCount": 296,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "。 > 、 ーー 5\nの 、ー 2 イィ\nー ーー レッ ]\n記参涼凛 :\n — ry\nn ]\nが77 。\n/ 2isiima { ~-\\\nるらい冷きが\nと大 條)ケ 6\n0 0 い*\nDE で5ある\nー る\n © ’\n2 。 を\nー リレー 5*\n5) にー SPARKLING 。\n2> A Ee\nLid 4信。 。 : 時 . る 。 「\n ョ W\nerogtied BN STERN _aF ,\nーー Eel S 7\n いりソ較\nメン 二 CURELTTIT v of\nアッ のgo 、\nー 本間証0 2\n5誠 詞S\n ~\n# . F-bs\nが 5 W て 塊aWi に 中 ーー >",
+          "confidence": 0.23,
+          "charCount": 296,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3759,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2576.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "牡員が滞 で1でざさ) く BRU 7208 修販 でくす.\n昌指すものは、立協せずす仕込みひとっ\nいとつき大切に日々進化する酒造りて4\n6名特日本泊@ 原村料名米(国産)米夫\n(国道米)@原料米 吟さんが100%使用8\n精米歩公5Q96@剖造盾月は枠下部へきアル\nコール分13度お酒は二十歳になってかり\n$内容量750mle保大方法\nNP= =ドい > 5 . ~\nReg AKBiE 株式会社\n岩手県盛岡市北飯岡1-8-60\nBo(sr-wy ドド白 の れいる oe 5 Dp x め\nきめく〈 夜空に思わず息をのむ銀河の美し<。\nゃて 優しく弾ける泡と酸がご地よて浪過 :\nなおりかて x 酸味甘味の調和したグリー\nは酸、キ、こっ 桁母からは泡、想から。 ~\n・ T ティソックテアコロ半上人る に ーー\nなx そお素 ——\n、 * \"テラ用\n條年 ゥ用\nTM~ 2022.9 <用用\nお酒はこ\n e =\nー ま守のさて期の飲酒はお挫えくだたさい ーー",
+        "confidence": 0.56,
+        "charCount": 430,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "牡員が滞 で1でざさ) く BRU 7208 修販 でくす.\n昌指すものは、立協せずす仕込みひとっ\nいとつき大切に日々進化する酒造りて4\n6名特日本泊@ 原村料名米(国産)米夫\n(国道米)@原料米 吟さんが100%使用8\n精米歩公5Q96@剖造盾月は枠下部へきアル\nコール分13度お酒は二十歳になってかり\n$内容量750mle保大方法\nNP= =ドい > 5 . ~\nReg AKBiE 株式会社\n岩手県盛岡市北飯岡1-8-60\nBo(sr-wy ドド白 の れいる oe 5 Dp x め\nきめく〈 夜空に思わず息をのむ銀河の美し<。\nゃて 優しく弾ける泡と酸がご地よて浪過 :\nなおりかて x 酸味甘味の調和したグリー\nは酸、キ、こっ 桁母からは泡、想から。 ~\n・ T ティソックテアコロ半上人る に ーー\nなx そお素 ——\n、 * \"テラ用\n條年 ゥ用\nTM~ 2022.9 <用用\nお酒はこ\n e =\nー ま守のさて期の飲酒はお挫えくだたさい ーー",
+          "confidence": 0.56,
+          "charCount": 430,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 5641,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_2706.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "¢ -\nTHIS WASRN i\nー * 計 ー ー ¥\nルルっすすーー\nyy「\n みん$ ー 。\nw\nは\nてさむ\ntogs のき\n-— 第\n. Au\nー b.r TEEb\n: f る\" E\n の L\nの と 4)\nw を\nーーを 2 >\na の 2 ーー で 3\n1 fe リ i\n- 4関識 4\n! ーー タン <(須ー- 0",
+        "confidence": 0.23,
+        "charCount": 165,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "¢ -\nTHIS WASRN i\nー * 計 ー ー ¥\nルルっすすーー\nyy「\n みん$ ー 。\nw\nは\nてさむ\ntogs のき\n-— 第\n. Au\nー b.r TEEb\n: f る\" E\n の L\nの と 4)\nw を\nーーを 2 >\na の 2 ーー で 3\n1 fe リ i\n- 4関識 4\n! ーー タン <(須ー- 0",
+          "confidence": 0.23,
+          "charCount": 165,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1952,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2707.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "gg Aannn 症諾2 区ー 4\n{soxmn SE F\nGarsEls 攻攻\n『識 き田 R\n\nB: EoE 革)\n\n滑計り 人ー\n4 B E\n本 E\nLEE ー\n\nZN » 洒\n 清\nWEE 720mー B_/ 品目 H\nOketnyrs segimkcitt]\ni E3 そのためオリの出ることが\n放店には問題ありません。また開人人\n中のため約首きで保管下さい",
+        "confidence": 0.35,
+        "charCount": 184,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "gg Aannn 症諾2 区ー 4\n{soxmn SE F\nGarsEls 攻攻\n『識 き田 R\n\nB: EoE 革)\n\n滑計り 人ー\n4 B E\n本 E\nLEE ー\n\nZN » 洒\n 清\nWEE 720mー B_/ 品目 H\nOketnyrs segimkcitt]\ni E3 そのためオリの出ることが\n放店には問題ありません。また開人人\n中のため約首きで保管下さい",
+          "confidence": 0.35,
+          "charCount": 184,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2740,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2708.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": ", ー _\nA7 U し\nンー 14\nの っ ミでやゃ .\nR P ’\nヶ v デ 5 1 - 3\n0 fr\nLY しをて e ロ ー ® ーー一ーー\n. は ~ る リカ =*\nao <. d\n. -\nを { N \\\n 一 了 ; ーー\nーー 8 49 \\ ー\n。 e)\nーー特 ー = 」\nー - %hes. g\n' B 4 ンタ\nー の大全二員\n 」 al . p\n。 店\n: に ( 人A _ ag\nー ンズ 6\n3 9 .",
+        "confidence": 0.35,
+        "charCount": 216,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": ", ー _\nA7 U し\nンー 14\nの っ ミでやゃ .\nR P ’\nヶ v デ 5 1 - 3\n0 fr\nLY しをて e ロ ー ® ーー一ーー\n. は ~ る リカ =*\nao <. d\n. -\nを { N \\\n 一 了 ; ーー\nーー 8 49 \\ ー\n。 e)\nーー特 ー = 」\nー - %hes. g\n' B 4 ンタ\nー の大全二員\n 」 al . p\n。 店\n: に ( 人A _ ag\nー ンズ 6\n3 9 .",
+          "confidence": 0.35,
+          "charCount": 216,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2474,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_2709.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "音k Hawgo ー U\nKK 也 4\n沙半拘など末材の喘詳いを生かすため\n. 4所欠甘母で仕込み、舞議員・無加水で仕上\nirUE . 生間\nメル世載半務のない加選馬前は一切使用してぉ\n95せん(人素剤醸造乳酸村上剤など)。\n原材料名 米(国産)』米麹(国産\n精米歩合 60% ©\nルコール分 15度\n53 洒 5時\n1月1皿 720m\nはげ\n風味を生かすため 無濾過無水て仕上\nOzsgrrn muamnktlsr\n部質には問題ありません。 = ;\nVitx o\n合名会社大木代吉本店\nB 償島県西白河郡矢吹町本町?\n6活は えい。\n人を所てか 間作にはすダはブを ー\nwir [R\nLl y\nRl0670071913 は\n 人 。(半導ー",
+        "confidence": 0.46,
+        "charCount": 321,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "音k Hawgo ー U\nKK 也 4\n沙半拘など末材の喘詳いを生かすため\n. 4所欠甘母で仕込み、舞議員・無加水で仕上\nirUE . 生間\nメル世載半務のない加選馬前は一切使用してぉ\n95せん(人素剤醸造乳酸村上剤など)。\n原材料名 米(国産)』米麹(国産\n精米歩合 60% ©\nルコール分 15度\n53 洒 5時\n1月1皿 720m\nはげ\n風味を生かすため 無濾過無水て仕上\nOzsgrrn muamnktlsr\n部質には問題ありません。 = ;\nVitx o\n合名会社大木代吉本店\nB 償島県西白河郡矢吹町本町?\n6活は えい。\n人を所てか 間作にはすダはブを ー\nwir [R\nLl y\nRl0670071913 は\n 人 。(半導ー",
+          "confidence": 0.46,
+          "charCount": 321,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3778,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_2716.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ー < JE\nr r\n1, ア」 大\nザー\n中時 (の\n2時リー ー\ny/e s\n- 。 。\n val 訪、 [上\nサ Fga rl\n(人 F\n(0\n、 \\ U 、、\nky .",
+        "confidence": 0.27,
+        "charCount": 88,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ー < JE\nr r\n1, ア」 大\nザー\n中時 (の\n2時リー ー\ny/e s\n- 。 。\n val 訪、 [上\nサ Fga rl\n(人 F\n(0\n、 \\ U 、、\nky .",
+          "confidence": 0.27,
+          "charCount": 88,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1469,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -955,7 +1645,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2881,
+      "processingTimeMs": 3052,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -985,7 +1675,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2102,
+      "processingTimeMs": 2162,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -1015,7 +1705,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2283,
+      "processingTimeMs": 2257,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1046,7 +1736,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1440,
+      "processingTimeMs": 1463,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1077,8 +1767,160 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3729,
+      "processingTimeMs": 3816,
       "problemClassification": []
+    },
+    {
+      "fileName": "IMG_2996.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "= ご\nMPガザ 79不注 Azg 7\nRipz のの N\nタカ B4 s 0る S\n タラ 76居 =\nk IN 509 —\nAiga SLLTI きき\n2を =\n5のの\n0 てか E 6 すう\noy Cs\nWa 、 27] =\nSs 和夫\n25 の",
+        "confidence": 0.23,
+        "charCount": 126,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "= ご\nMPガザ 79不注 Azg 7\nRipz のの N\nタカ B4 s 0る S\n タラ 76居 =\nk IN 509 —\nAiga SLLTI きき\n2を =\n5のの\n0 てか E 6 すう\noy Cs\nWa 、 27] =\nSs 和夫\n25 の",
+          "confidence": 0.23,
+          "charCount": 126,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1994,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_2997.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "PREP:-- - - E o——. * やご基放 ーーンプ\n会ラー ぐさ ニーューニー . 3 —\n! fi3 Sa = PEsaayT —R ダー -\n NEEN ーー記さ まこだ 2 ーー ーーー\n( (Sp CSTEain RE s — ーー\nSSEE YRRR ここ 、 っ ーッマー >で全4 で py\n回症語雲2 C - ヽ、大こい Ee ~ — -\n関本がーー ーー ーー ーーページーー -\nN oELe L N k et =\nデー AGAN ーーででミ本語 ミミーーラー\nて ” 半 。 て: =F _<. ーーペー ミー ンー\nをここペを に こく Ses ~ SS <ミミ e X ーー\n“ SRRE 人 SRNE ae 5\nし s, E LB ・作 * Re gN ATAEE =5.Nd ニーデーニー _\nTERENS 0っ h == 4 ーー\n半め。 vLEoEETS uche o Ny ー\n: SiraE Nh 、ここ、で :\n9 . Saa pEa Se\nヾ ささ 、 ーーてミ全ーー ==\n3 ーー ここ 姜ニー\nSS 開き:\n ーッ ~ BASE- SSSE SSiet\n& - 、 きい 、 ミミ内 = た\n, & : : = こさこさ 天馬ーーニーニー一\n』 ーー\n ーー 誠さいさて Re y\nA デー ミーでーー ESS 』\n8 RRN 、、へでて ででーー半生SS 4\nー 8 s LUSTTIIETTRS : ー\n5) ; E 』\n- ・ 生き /\n議: ー <ででさき ご\n ー ・ 代半 Fs /\n3 る! に 店 2\n3 &5 。\n0 : を\n。 『 3\n ーージ .\n』 さき\n』 Bs ーー:拓 e\n3 ドー いて -\no 3 【 As 』\n \" 詳 fie\nSTRE_ * = Pa,\nE に :半際 に\n» N - & ーー\nド 区ぶ、 pY\nー ー 、 b 9 &",
+        "confidence": 0.2,
+        "charCount": 816,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "PREP:-- - - E o——. * やご基放 ーーンプ\n会ラー ぐさ ニーューニー . 3 —\n! fi3 Sa = PEsaayT —R ダー -\n NEEN ーー記さ まこだ 2 ーー ーーー\n( (Sp CSTEain RE s — ーー\nSSEE YRRR ここ 、 っ ーッマー >で全4 で py\n回症語雲2 C - ヽ、大こい Ee ~ — -\n関本がーー ーー ーー ーーページーー -\nN oELe L N k et =\nデー AGAN ーーででミ本語 ミミーーラー\nて ” 半 。 て: =F _<. ーーペー ミー ンー\nをここペを に こく Ses ~ SS <ミミ e X ーー\n“ SRRE 人 SRNE ae 5\nし s, E LB ・作 * Re gN ATAEE =5.Nd ニーデーニー _\nTERENS 0っ h == 4 ーー\n半め。 vLEoEETS uche o Ny ー\n: SiraE Nh 、ここ、で :\n9 . Saa pEa Se\nヾ ささ 、 ーーてミ全ーー ==\n3 ーー ここ 姜ニー\nSS 開き:\n ーッ ~ BASE- SSSE SSiet\n& - 、 きい 、 ミミ内 = た\n, & : : = こさこさ 天馬ーーニーニー一\n』 ーー\n ーー 誠さいさて Re y\nA デー ミーでーー ESS 』\n8 RRN 、、へでて ででーー半生SS 4\nー 8 s LUSTTIIETTRS : ー\n5) ; E 』\n- ・ 生き /\n議: ー <ででさき ご\n ー ・ 代半 Fs /\n3 る! に 店 2\n3 &5 。\n0 : を\n。 『 3\n ーージ .\n』 さき\n』 Bs ーー:拓 e\n3 ドー いて -\no 3 【 As 』\n \" 詳 fie\nSTRE_ * = Pa,\nE に :半際 に\n» N - & ーー\nド 区ぶ、 pY\nー ー 、 b 9 &",
+          "confidence": 0.2,
+          "charCount": 816,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 11952,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_3153.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "-\nンー きき y ーーの0の\nNN ) Ss\n、さ : 4 マブ\nA 全 4 E\nーー 作 リッ\na€aNy -\nは 0\n I&\n 3 E ia i\n2 3 )a a\n /\n上 5 半\n . .\n.\n. を ペー、,\n7 tyr\np\n]\nター",
+        "confidence": 0.18,
+        "charCount": 122,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "-\nンー きき y ーーの0の\nNN ) Ss\n、さ : 4 マブ\nA 全 4 E\nーー 作 リッ\na€aNy -\nは 0\n I&\n 3 E ia i\n2 3 )a a\n /\n上 5 半\n . .\n.\n. を ペー、,\n7 tyr\np\n]\nター",
+          "confidence": 0.18,
+          "charCount": 122,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1750,
+      "problemClassification": [
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3154.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "Ass AGRpy, の も\n (yo422 マスが\nブー か 4下/\n0 Bo /\ni 知夫 過大 BXE) ssmpt22g 』\nーー きx て生礁朱 /\n0 ルミ 。 3 760py y\ne フーテム 』\nhs 3&(rg) )/4\nane ルン\nがネ fy ー 3 2ダラ0 0をを y/\n[a Gos 人 Remrama /4\n\nリ タタ 0あー /4\n\n」 y, をを 世蟹 y /\n\n49さす だ\n\nR /\n\nee 天頂 a) 幼\n\nに 2o220 0\n\nいもんを",
+        "confidence": 0.19,
+        "charCount": 239,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "Ass AGRpy, の も\n (yo422 マスが\nブー か 4下/\n0 Bo /\ni 知夫 過大 BXE) ssmpt22g 』\nーー きx て生礁朱 /\n0 ルミ 。 3 760py y\ne フーテム 』\nhs 3&(rg) )/4\nane ルン\nがネ fy ー 3 2ダラ0 0をを y/\n[a Gos 人 Remrama /4\n\nリ タタ 0あー /4\n\n」 y, をを 世蟹 y /\n\n49さす だ\n\nR /\n\nee 天頂 a) 幼\n\nに 2o220 0\n\nいもんを",
+          "confidence": 0.19,
+          "charCount": 239,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3063,
+      "problemClassification": [
+        "低信頼度",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3155.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": ".3 i aa\n順 騰\n リル 菩\n 員 に\n。 リリ 且\nー [\ni ー\nid\n用 i I. ai\nー E : L 4 まま]\nの衝 ャーー\n) ー ]\n ー\n。 1 5 ー I で b\n“ ー リリ\n_ 。 5夫衣1 ー 5 す\n'\\AE\n「\nし ] 6 [。\nぃ b\ni . E\n_ 前\n市 . . -\nごジジ いり 識 g =\n E 。",
+        "confidence": 0.21,
+        "charCount": 172,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": ".3 i aa\n順 騰\n リル 菩\n 員 に\n。 リリ 且\nー [\ni ー\nid\n用 i I. ai\nー E : L 4 まま]\nの衝 ャーー\n) ー ]\n ー\n。 1 5 ー I で b\n“ ー リリ\n_ 。 5夫衣1 ー 5 す\n'\\AE\n「\nし ] 6 [。\nぃ b\ni . E\n_ 前\n市 . . -\nごジジ いり 識 g =\n E 。",
+          "confidence": 0.21,
+          "charCount": 172,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2114,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
     },
     {
       "fileName": "IMG_3426.heic",
@@ -1105,7 +1947,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 297,
+      "processingTimeMs": 320,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1136,7 +1978,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 929,
+      "processingTimeMs": 949,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1167,7 +2009,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 6174,
+      "processingTimeMs": 6306,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -1198,9 +2040,120 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1402,
+      "processingTimeMs": 1451,
       "problemClassification": [
         "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_3640.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "作ら 識科 Be E— T\nie ー ー 7 iC¢\nーー 細 \\銘 y\nRy 」 Te\n~ EER C\n 。 取 ハラ\nq %\nye X\n; ー ー ュョーー一 !\n- [ ーー 朋各な\n CY ー ご\n』 d a \" *\n¥ » A\nー ヤラ科目 5\n( 』 E0 r\n! ー 誠。 ~ <\n: F\nB Eo",
+        "confidence": 0.28,
+        "charCount": 156,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "作ら 識科 Be E— T\nie ー ー 7 iC¢\nーー 細 \\銘 y\nRy 」 Te\n~ EER C\n 。 取 ハラ\nq %\nye X\n; ー ー ュョーー一 !\n- [ ーー 朋各な\n CY ー ご\n』 d a \" *\n¥ » A\nー ヤラ科目 5\n( 』 E0 r\n! ー 誠。 ~ <\n: F\nB Eo",
+          "confidence": 0.28,
+          "charCount": 156,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1949,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_3642.HEIC",
+      "cycle": 3,
+      "status": "reused",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "[<4\n\n取\n\nが\n\n田酒 HARR;\n\n7ロ\n\nン購入後は品質保持の為、直\n\nけ、冷蔵で\n\n『\n\nの保存をお願いいたしまず 開\n\nかかわらず』\n\nできるだけお早めにお召し\n\nさい。\n\n【\n\nにcd\n\no\n\n日本\n\n~\n\n{\n\n西 本\n\nアルュール分 16度\n\nBH#Z 米(国産)\n\nRoIU (国産\n\n&$ & 40%\n\n利和月\n\n者\n\nXo\n\nN\n\n西田 酒\n\n店\n\n詩赤市大学 wlFk\n\nな\n\n8i\n\n中\n\n期の飲酒!\n\n條3\n\n4\n\n58\n\n過中\n\nに",
+        "confidence": 0.64,
+        "charCount": 232,
+        "candidateCount": 1,
+        "detectedProductName": "田酒",
+        "detectedMakerName": "西田酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: 田酒"
+        ],
+        "cycle": 3
+      },
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "standard-path accepted previous result"
+      ]
+    },
+    {
+      "fileName": "IMG_3643.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "\\ ; E Ji\\ にーーー 回 は 誠なご\nVoo 2 ゃ本- (3\n : B ジ きき ノ\n放問 n B\nーー 「 <\n革あっq ! 3\nーー B 1 ー にテャ\nーご 且 /\nD \"\nest —— しン\n表記ょ p\n*】\nA",
+        "confidence": 0.26,
+        "charCount": 115,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "\\ ; E Ji\\ にーーー 回 は 誠なご\nVoo 2 ゃ本- (3\n : B ジ きき ノ\n放問 n B\nーー 「 <\n革あっq ! 3\nーー B 1 ー にテャ\nーご 且 /\nD \"\nest —— しン\n表記ょ p\n*】\nA",
+          "confidence": 0.26,
+          "charCount": 115,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1486,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3645.HEIC",
+      "cycle": 3,
+      "status": "reused",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "6\n\nァテ\n\nJUYO!\n\n水温貯蔵大極\n\nノ七垂\n\nニニ十貰\n\nm\n\n本)\n\n吟醸洒\n\n原材料名: 米(国産)、\n\n(国産米)\n\n精米歩合: 35%\n\n原料米: 兵庫県特A地較\n\n田錦100\n\nアルコール分 : 16度 ” 内容量: 720m\n\n製造者高木酒造株式会社\n\n山形県村山市大学富並1820\n\n電信法: 必ず冷蔵庫(=5て5て)で\n\nめにお召し上がりり市きい。\n\nma rho\n\n生計 要)〉 SIE",
+        "confidence": 0.66,
+        "charCount": 206,
+        "candidateCount": 1,
+        "detectedProductName": "十四代",
+        "detectedMakerName": "高木酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "蔵元一致"
+        ],
+        "cycle": 3
+      },
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "standard-path accepted previous result"
       ]
     },
     {
@@ -1228,7 +2181,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4719,
+      "processingTimeMs": 4909,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1258,7 +2211,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2531,
+      "processingTimeMs": 2841,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1289,7 +2242,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2372,
+      "processingTimeMs": 2535,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1320,7 +2273,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4380,
+      "processingTimeMs": 4620,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1351,7 +2304,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1864,
+      "processingTimeMs": 1942,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1381,7 +2334,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1448,
+      "processingTimeMs": 1515,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1412,7 +2365,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2141,
+      "processingTimeMs": 2306,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1442,8 +2395,162 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2136,
+      "processingTimeMs": 2193,
       "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3882.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "/ \\\nノン の\nァン 枯誠ー\nし\nA : C\n=P::\n— ぃ り\n用\nREWN\n. O A\n人間\n~、",
+        "confidence": 0.37,
+        "charCount": 53,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "/ \\\nノン の\nァン 枯誠ー\nし\nA : C\n=P::\n— ぃ り\n用\nREWN\n. O A\n人間\n~、",
+          "confidence": 0.37,
+          "charCount": 53,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 824,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3883.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "っ 一衝生本gc 中 w a\nCEAN2RYmMYTYEHy\nER DTED AKT\nsepLclorzor @\n\"TBLEBES Cora, WY\nくくこをすしり少良田部ぉ 人\nLES \"たこ量質にに6 P\nもさ 込 た軽 をなて 5\nK い め 味 Hh みす X 年\n\" た わな醸水 > 細ひ\n導 いななしを 創 eU\n と飲でて久 業 %)\n% みいい 全02\n者 ロロ まハ 酒こ\n上 ご です .\n品. BAHE こ\n容量:720ml り\n央幸名:米・米麹\n用素名:長野県産ひとごこち100%使用\n折歩合.麹米55%掛米70% 区\nアルコール分: 15度 00227 BF\n箕年月.2022 6 蔵元出荷年月:\n尼寺:賠崎酒造株式会社 ー\nー\n長野県上田市中央4-7-33 ー\nRT者放 . 5リス 6",
+        "confidence": 0.51,
+        "charCount": 358,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "っ 一衝生本gc 中 w a\nCEAN2RYmMYTYEHy\nER DTED AKT\nsepLclorzor @\n\"TBLEBES Cora, WY\nくくこをすしり少良田部ぉ 人\nLES \"たこ量質にに6 P\nもさ 込 た軽 をなて 5\nK い め 味 Hh みす X 年\n\" た わな醸水 > 細ひ\n導 いななしを 創 eU\n と飲でて久 業 %)\n% みいい 全02\n者 ロロ まハ 酒こ\n上 ご です .\n品. BAHE こ\n容量:720ml り\n央幸名:米・米麹\n用素名:長野県産ひとごこち100%使用\n折歩合.麹米55%掛米70% 区\nアルコール分: 15度 00227 BF\n箕年月.2022 6 蔵元出荷年月:\n尼寺:賠崎酒造株式会社 ー\nー\n長野県上田市中央4-7-33 ー\nRT者放 . 5リス 6",
+          "confidence": 0.51,
+          "charCount": 358,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3237,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3885.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "i ー ー ー",
+        "confidence": 0.6,
+        "charCount": 7,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "i ー ー ー",
+          "confidence": 0.6,
+          "charCount": 7,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 384,
+      "problemClassification": [
+        "文字数不足",
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_3886.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "『U) Jced 1\nテ統的な技術をベースに\n「他\"】 の伝統的 ペースズに、草新的>、\n\nン に Ra § NN RE\n[orAFy FTB=XIAS ELL Boein Bar\nまれたコレクション。 て\n仙合当だるまが、ユナイテッドアローズで生\n中醸酒メにごうり酒の限定で酸された祝い洒て、 ー\n\nご注意きき\n\n信痢に和対に振らないでください。\n 雪韻品はえ所で活性なもろみを科ごしし、瓶夫めいい8たか\n\nいております。 そのため、本体を接にしない様お願いし1け\nO) きながらの梨法で醸造するため、哉の注意をれっておは\n\nゃいます.克折には問題がございませんので、到り床いてや3の\n\npt if て保存の上、お酒が落ち着いてからお8しよりいで\nPik 株式会社せんさん の ー 回\n栃木昌さくら市二場 106\n\n材料名 未(国彦)、米こうじ(国彦 DEE\nBk FA—3 3(5 Lash de\nN (栃木県きくら市産) 100X mM\n精未歩合 909% SS\nルー 4な ーー 中\n。 千 ユナイテッドアロース 只さ\nRoE せんきん Le\n洛江回\n\nペ ァ科セー は、拉て\n内なさこ ) セ税乳甚の伯池いい\n*2 720ml ちるそれがありますのでとご",
+        "confidence": 0.55,
+        "charCount": 532,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "『U) Jced 1\nテ統的な技術をベースに\n「他\"】 の伝統的 ペースズに、草新的>、\n\nン に Ra § NN RE\n[orAFy FTB=XIAS ELL Boein Bar\nまれたコレクション。 て\n仙合当だるまが、ユナイテッドアローズで生\n中醸酒メにごうり酒の限定で酸された祝い洒て、 ー\n\nご注意きき\n\n信痢に和対に振らないでください。\n 雪韻品はえ所で活性なもろみを科ごしし、瓶夫めいい8たか\n\nいております。 そのため、本体を接にしない様お願いし1け\nO) きながらの梨法で醸造するため、哉の注意をれっておは\n\nゃいます.克折には問題がございませんので、到り床いてや3の\n\npt if て保存の上、お酒が落ち着いてからお8しよりいで\nPik 株式会社せんさん の ー 回\n栃木昌さくら市二場 106\n\n材料名 未(国彦)、米こうじ(国彦 DEE\nBk FA—3 3(5 Lash de\nN (栃木県きくら市産) 100X mM\n精未歩合 909% SS\nルー 4な ーー 中\n。 千 ユナイテッドアロース 只さ\nRoE せんきん Le\n洛江回\n\nペ ァ科セー は、拉て\n内なさこ ) セ税乳甚の伯池いい\n*2 720ml ちるそれがありますのでとご",
+          "confidence": 0.55,
+          "charCount": 532,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 4235,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_3892.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "a8 - B’\nPiciw ー ー JN\nY - ; p\n1 4 に\n呈 4l\" <\ns A Y———\nー 間語了\nトー 月 - .\n尾上g思 』\nm が\n. “ [ー A ア ヴ\nー -—\nIl\nレラ\n» I\n 放.",
+        "confidence": 0.18,
+        "charCount": 109,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "a8 - B’\nPiciw ー ー JN\nY - ; p\n1 4 に\n呈 4l\" <\ns A Y———\nー 間語了\nトー 月 - .\n尾上g思 』\nm が\n. “ [ー A ア ヴ\nー -—\nIl\nレラ\n» I\n 放.",
+          "confidence": 0.18,
+          "charCount": 109,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1964,
+      "problemClassification": [
+        "低信頼度",
         "記号ノイズ過多",
         "小断片が多い"
       ]
@@ -1473,7 +2580,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1688,
+      "processingTimeMs": 1760,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1504,9 +2611,166 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2077,
+      "processingTimeMs": 2245,
       "problemClassification": [
         "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_4010.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "—- いい eeNR ERLY\n LuEm —iimn\nB\n4泊の、必ず准歳庫(-5てご5C)で保管し\nー 年月より3ヶ月以内にお大 し上がり下きい。\nー pn HARIE espanmE\n同和名:米(国産)、米弟(国産米)\n4a 精米歩合35% 0 本 謗\nー 5科米: 山形県産龍の落とし子80%全\n\\ がコール分16工 コロで\nB 者:高木酒造株式会社\n訂 の DのCi\n生油・ (製造年月は表貼りに『\n{ BRAE お商は20艇にな2てかの",
+        "confidence": 0.54,
+        "charCount": 224,
+        "candidateCount": 1,
+        "detectedProductName": "十四代",
+        "detectedMakerName": "高木酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "蔵元一致"
+        ],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "—- いい eeNR ERLY\n LuEm —iimn\nB\n4泊の、必ず准歳庫(-5てご5C)で保管し\nー 年月より3ヶ月以内にお大 し上がり下きい。\nー pn HARIE espanmE\n同和名:米(国産)、米弟(国産米)\n4a 精米歩合35% 0 本 謗\nー 5科米: 山形県産龍の落とし子80%全\n\\ がコール分16工 コロで\nB 者:高木酒造株式会社\n訂 の DのCi\n生油・ (製造年月は表貼りに『\n{ BRAE お商は20艇にな2てかの",
+          "confidence": 0.54,
+          "charCount": 224,
+          "candidateCount": 1,
+          "detectedProductName": "十四代",
+          "detectedMakerName": "高木酒造",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "蔵元一致"
+          ]
+        }
+      ],
+      "processingTimeMs": 3081,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4011.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "は\nた &\nっ の\nょて 次\n *\nーー ge\n 。 L\n sg",
+        "confidence": 0.31,
+        "charCount": 32,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "は\nた &\nっ の\nょて 次\n *\nーー ge\n 。 L\n sg",
+          "confidence": 0.31,
+          "charCount": 32,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 547,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4014.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "アノ S 。 E\n’ 4 2 に\n p EE\nP y \\\\ )\nr D \\ .\n= 』 ブラ ” » w’\nテー の ー\n】 /dx 州 ー 上\n半々2 \" . 。\nーーャァ の が A /\n~ PO e YE\nメ : i : ” ~ y\n ORR . 3 ;\no 本 eo 4 N 2 é\n EEEE C 、 J\nに に 本あ・・、ム ~\nBey 5 43 y い も $ マ\nを 1 ’ を < ャッッも\n _ 最島ス ト が\n導いさま 人\n “ の\n{ . ノ ロ / 1 :\nR wA } ¢\n KS き ; : ゝ",
+        "confidence": 0.24,
+        "charCount": 262,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "アノ S 。 E\n’ 4 2 に\n p EE\nP y \\\\ )\nr D \\ .\n= 』 ブラ ” » w’\nテー の ー\n】 /dx 州 ー 上\n半々2 \" . 。\nーーャァ の が A /\n~ PO e YE\nメ : i : ” ~ y\n ORR . 3 ;\no 本 eo 4 N 2 é\n EEEE C 、 J\nに に 本あ・・、ム ~\nBey 5 43 y い も $ マ\nを 1 ’ を < ャッッも\n _ 最島ス ト が\n導いさま 人\n “ の\n{ . ノ ロ / 1 :\nR wA } ¢\n KS き ; : ゝ",
+          "confidence": 0.24,
+          "charCount": 262,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3046,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_4130.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ステ \\\nBR\n和信、\nVN\n9 や\n本\n年 g\n純 ー\n米 し\nし\nばぼ\n)\nた ー\n こ。",
+        "confidence": 0.38,
+        "charCount": 47,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ステ \\\nBR\n和信、\nVN\n9 や\n本\n年 g\n純 ー\n米 し\nし\nばぼ\n)\nた ー\n こ。",
+          "confidence": 0.38,
+          "charCount": 47,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 663,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4133.HEIC",
+      "cycle": 3,
+      "status": "reused",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "g tre\n\n新年\n\n純米しぼりたて 2.\n\nea\n\nse 1\n\nムー\n\n-0軸は、年の瀬から新年\n\nげばてしばったお洒*\n\nに出共いたじます縁\n\nい和生酒です。\n\n順い、秋上量市9\n\nRRRERORMER - F\n\nたものです。\n\n幸山三吉神社でご祈本\n\nL0 mH\n\nET EERAKRD\n\n大号酵午にて財\n\nwARUEE\n\nSRHRHOMA% RARIC RAT\n\n( AAR\n\nYALT80 B kacEBLT OF\n\npiabhEY\n\nREAILIY) BRR (727\n\nR 災\n\n日本酒(\n\n純米\n\nロール人人\n\nRoty x\n\n12度 (原酒)\n\n(wm\n\nEFIN\n\n米 (秋田県産) 、 米半\n\nRy\n\n60% (麹米、掛米ともに60\n\nX 4\n\n秋田酒とまち100%使用\n\nし\n\nきょうかい6号\n\nき ょ*\n\n新政酒追株式会社 秋田軸\n\n大町が\n\n時年\n\n2023年1月1日\n\nは\n\n023年3月31昌\n\n規特約店で お買い求めくださり",
+        "confidence": 0.55,
+        "charCount": 429,
+        "candidateCount": 2,
+        "detectedProductName": "新政",
+        "detectedMakerName": "新政酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: 新政"
+        ],
+        "cycle": 3
+      },
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "standard-path accepted previous result"
       ]
     },
     {
@@ -1534,7 +2798,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2281,
+      "processingTimeMs": 2381,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -1564,7 +2828,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1798,
+      "processingTimeMs": 1904,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1595,7 +2859,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 5705,
+      "processingTimeMs": 5970,
       "problemClassification": []
     },
     {
@@ -1623,7 +2887,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3234,
+      "processingTimeMs": 3330,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1654,10 +2918,182 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4674,
+      "processingTimeMs": 4947,
       "problemClassification": [
         "記号ノイズ過多"
       ]
+    },
+    {
+      "fileName": "IMG_4383.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "PAGIE hLen eE 0 人称 い x\nに ーー\n』 AERRER rm beT\nH リントー ンー 4\n『 B cu Es \"\nー ¥ REREEN X EATa E3tty\nー ERAR B u LauiEi\n: Go BEAX H wETEian\nv tRramy w 料でル利 ー較D\n RENEES £ awE 0\n。 1 ee ee ae e ジジ 37 #ぉ 人ル\n BHEIESK % 27 EiA igxg は\n FABRHMLK # 秋 oR 本ーし時軸\n[計上4大うる2 寿半0 れれ\n 誠人洒るかの1通全上 、洒(が半\nー cee\"E3) (ExEBE ' §oau\nー 年 て者 EE ERR\n上ー る f sEEoxR ERah\n上ー ー 75 S Tamg 0x% & ーied\nを 選 のごが 攻、 0? 0\n有 5 ーーるみ 四 前\n{ & 5 て信 483\n2 きき を 0ie\n{ \"O ~ きる aE ー\n『 る ーー 9 で Hagl\n「 —_ *48 i\nー 謙 2 EE は前\nー B- 442 ー衝 。 導科\nee * 了\nUNo012g 7 5 し",
+        "confidence": 0.2,
+        "charCount": 502,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "PAGIE hLen eE 0 人称 い x\nに ーー\n』 AERRER rm beT\nH リントー ンー 4\n『 B cu Es \"\nー ¥ REREEN X EATa E3tty\nー ERAR B u LauiEi\n: Go BEAX H wETEian\nv tRramy w 料でル利 ー較D\n RENEES £ awE 0\n。 1 ee ee ae e ジジ 37 #ぉ 人ル\n BHEIESK % 27 EiA igxg は\n FABRHMLK # 秋 oR 本ーし時軸\n[計上4大うる2 寿半0 れれ\n 誠人洒るかの1通全上 、洒(が半\nー cee\"E3) (ExEBE ' §oau\nー 年 て者 EE ERR\n上ー る f sEEoxR ERah\n上ー ー 75 S Tamg 0x% & ーied\nを 選 のごが 攻、 0? 0\n有 5 ーーるみ 四 前\n{ & 5 て信 483\n2 きき を 0ie\n{ \"O ~ きる aE ー\n『 る ーー 9 で Hagl\n「 —_ *48 i\nー 謙 2 EE は前\nー B- 442 ー衝 。 導科\nee * 了\nUNo012g 7 5 し",
+          "confidence": 0.2,
+          "charCount": 502,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 7073,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_4384.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "の\n F に .\n』 (TR EDR ; if- S 放置 y\nリルリラ2水 調名続の拓 25Amo Bl y\nSRE BesiI0F\n内 (ガル昌 gifuRE 2 な し: N\n了 sup fe2dx Suscip,\n¥ ERTHgrdn, -\npiair 2X H FiiuElale xx 癌\n引合にまき chpafong Pl\nlt 0 TrTEs3R258 §\n4 上 き くきよそ > つの\nし8 酒 Fes pErm VE に\nH f Roph Bl\n用に0 い JE 2 ミ酸 人高の- * B\nHTH ie2717208H ]\nいて 條あずスる洒でる 上5 « B\nFY ga ー とこぶをな 瀬能 議\n講汰 どっで済々し議5攻\nー 4 の さに今で華E誕引\n、 い の ン あ封回佳ー £ ad\n\"上語m癌た ] 騰\nー 関与 ー に\n. Abg 2R L3S 上 ma 1f\n ー STNEE 四\n』 %T widlax N 記入\n。 5な<すけす旭大識",
+        "confidence": 0.21,
+        "charCount": 439,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "の\n F に .\n』 (TR EDR ; if- S 放置 y\nリルリラ2水 調名続の拓 25Amo Bl y\nSRE BesiI0F\n内 (ガル昌 gifuRE 2 な し: N\n了 sup fe2dx Suscip,\n¥ ERTHgrdn, -\npiair 2X H FiiuElale xx 癌\n引合にまき chpafong Pl\nlt 0 TrTEs3R258 §\n4 上 き くきよそ > つの\nし8 酒 Fes pErm VE に\nH f Roph Bl\n用に0 い JE 2 ミ酸 人高の- * B\nHTH ie2717208H ]\nいて 條あずスる洒でる 上5 « B\nFY ga ー とこぶをな 瀬能 議\n講汰 どっで済々し議5攻\nー 4 の さに今で華E誕引\n、 い の ン あ封回佳ー £ ad\n\"上語m癌た ] 騰\nー 関与 ー に\n. Abg 2R L3S 上 ma 1f\n ー STNEE 四\n』 %T widlax N 記入\n。 5な<すけす旭大識",
+          "confidence": 0.21,
+          "charCount": 439,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 5824,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_4385.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ーー ・ !汗\n=Teniel\nmm ー\nn いい3 20219099 *% J »\n・ すす i sSad 当 Seasony] Theme : 1 ー\n 信和 o の SES ー\nf Era\n; ドミ基き手話 ・し 酒 e ガル 半\n和仁且 人\n 要り\nPULN 5ox 1 ィ\n避さすに = B し\n£U82 のの: E\n82本 詞\n因 なサナ [ 払\n: hirsile と 洒 ミラ\n基如な度当 ダク件 て 3 交 1\n』ぁダナングらの K -\njlizETE rE 5.\ncraale = FE\niEacHE EE =\nSILTTLY ] =\n; FilryEd no\n) )さ 2っ込二 て 味 の 造 ロ - -\nank たル 8 EEZ )\nlxied : R .\nCEiELyE り オル7 4 。\n て則をれ8 0 -SY\n1",
+        "confidence": 0.24,
+        "charCount": 374,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ーー ・ !汗\n=Teniel\nmm ー\nn いい3 20219099 *% J »\n・ すす i sSad 当 Seasony] Theme : 1 ー\n 信和 o の SES ー\nf Era\n; ドミ基き手話 ・し 酒 e ガル 半\n和仁且 人\n 要り\nPULN 5ox 1 ィ\n避さすに = B し\n£U82 のの: E\n82本 詞\n因 なサナ [ 払\n: hirsile と 洒 ミラ\n基如な度当 ダク件 て 3 交 1\n』ぁダナングらの K -\njlizETE rE 5.\ncraale = FE\niEacHE EE =\nSILTTLY ] =\n; FilryEd no\n) )さ 2っ込二 て 味 の 造 ロ - -\nank たル 8 EEZ )\nlxied : R .\nCEiELyE り オル7 4 。\n て則をれ8 0 -SY\n1",
+          "confidence": 0.24,
+          "charCount": 374,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 5114,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_4387.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "/ 放\nリリ F ¥\nAd E\n_ faA\nfi.z .\nし7 / # 4\n3 WM\n# ー %\nが も6 ー\n5., EEE\n2 SEEE EEEEN\ny& «\nry~\n§ 5= ー\n % ーー\n4 &\n) / 7, 上 議\n7 E 上7",
+        "confidence": 0.2,
+        "charCount": 120,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "/ 放\nリリ F ¥\nAd E\n_ faA\nfi.z .\nし7 / # 4\n3 WM\n# ー %\nが も6 ー\n5., EEE\n2 SEEE EEEEN\ny& «\nry~\n§ 5= ー\n % ーー\n4 &\n) / 7, 上 議\n7 E 上7",
+          "confidence": 0.2,
+          "charCount": 120,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1959,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_4528.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "[\nF \\!\n< ー4 K ; の\nー R\nん いこ\nン 了 翌議。 更mmp\nmw ー 中\n kid の i»\n——errl\n 5 of ©\n ー き こっ\n\\ ぶ タタ\nンタ \\ 発\nny W 則 リリ\nの し か: 上 \\ に(和央\n N\nw wm Q\n: L 、\nが 過失\ngoee. \\ T\nルッタイ - ご\n導林主夫 ノン a",
+        "confidence": 0.24,
+        "charCount": 169,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "[\nF \\!\n< ー4 K ; の\nー R\nん いこ\nン 了 翌議。 更mmp\nmw ー 中\n kid の i»\n——errl\n 5 of ©\n ー き こっ\n\\ ぶ タタ\nンタ \\ 発\nny W 則 リリ\nの し か: 上 \\ に(和央\n N\nw wm Q\n: L 、\nが 過失\ngoee. \\ T\nルッタイ - ご\n導林主夫 ノン a",
+          "confidence": 0.24,
+          "charCount": 169,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2194,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4597.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "- RS o t し /詳し) に 央 -\n ー 了\nig f ー\n§ — — ク ーー\n » ーーでーー ーッ< < てつてで\nンジ — ーー こき\nング ーー ニテで SS\n/ > ag ~. さき、 F へさけ\n ( ミンミク\nB ンス 2\nRs コバ TINEA\n,o ンー\n唱 』 ! 條が に\n ー W ー {LA8!\nSp W % Y ーlR\n導い RRONS T\nに LLgs C oedie NTEC:\n te P s クベ \"4\n8 ARRFE いい 剖ー ささ r V\n: 信和 Jby ギヤ ー 」\nf 5 ー 廊 リ / FINE QUALITY ー\nーー 攻め) LTM\n-— * 生 ー ー ー 1 N -\n: 4 Te y= TI 。 証。\na e. に幼 Tihichn B:\ne 5 の S * , 用導1 ンー n\n pemie の i 』 、 J 11 ー\n科半ゲー 義\n[招いーー p ー\n8 2 aa のーー 剛\n財 ーー 也 E ume / 導革\n2) 人 - {\n[eal wprt/ f\nBbL RO . y\nで (3 ov の さく ー ilfl ~\nCo REEERE oie ー 1 ーー\n- との衝放下っ ーー メ 鐘 い にこま pe\nンーっっっ いい>ちら っ 0 a a\nにーーミワー y ジン M ーー ー 6",
+        "confidence": 0.26,
+        "charCount": 588,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "- RS o t し /詳し) に 央 -\n ー 了\nig f ー\n§ — — ク ーー\n » ーーでーー ーッ< < てつてで\nンジ — ーー こき\nング ーー ニテで SS\n/ > ag ~. さき、 F へさけ\n ( ミンミク\nB ンス 2\nRs コバ TINEA\n,o ンー\n唱 』 ! 條が に\n ー W ー {LA8!\nSp W % Y ーlR\n導い RRONS T\nに LLgs C oedie NTEC:\n te P s クベ \"4\n8 ARRFE いい 剖ー ささ r V\n: 信和 Jby ギヤ ー 」\nf 5 ー 廊 リ / FINE QUALITY ー\nーー 攻め) LTM\n-— * 生 ー ー ー 1 N -\n: 4 Te y= TI 。 証。\na e. に幼 Tihichn B:\ne 5 の S * , 用導1 ンー n\n pemie の i 』 、 J 11 ー\n科半ゲー 義\n[招いーー p ー\n8 2 aa のーー 剛\n財 ーー 也 E ume / 導革\n2) 人 - {\n[eal wprt/ f\nBbL RO . y\nで (3 ov の さく ー ilfl ~\nCo REEERE oie ー 1 ーー\n- との衝放下っ ーー メ 鐘 い にこま pe\nンーっっっ いい>ちら っ 0 a a\nにーーミワー y ジン M ーー ー 6",
+          "confidence": 0.26,
+          "charCount": 588,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 7632,
+      "problemClassification": []
     },
     {
       "fileName": "IMG_4611.HEIC",
@@ -1684,7 +3120,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4326,
+      "processingTimeMs": 4468,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -1715,7 +3151,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 4481,
+      "processingTimeMs": 4656,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -1746,7 +3182,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2781,
+      "processingTimeMs": 2890,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -1776,7 +3212,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1338,
+      "processingTimeMs": 1416,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1806,7 +3242,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3985,
+      "processingTimeMs": 4128,
       "problemClassification": []
     },
     {
@@ -1834,7 +3270,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2254,
+      "processingTimeMs": 2336,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1865,7 +3301,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2683,
+      "processingTimeMs": 2767,
       "problemClassification": []
     },
     {
@@ -1893,7 +3329,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1824,
+      "processingTimeMs": 1884,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多",
@@ -1925,7 +3361,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2225,
+      "processingTimeMs": 2322,
       "problemClassification": []
     },
     {
@@ -1953,7 +3389,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 864,
+      "processingTimeMs": 900,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1983,7 +3419,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1382,
+      "processingTimeMs": 1435,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多",
@@ -2015,10 +3451,186 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 858,
+      "processingTimeMs": 898,
       "problemClassification": [
         "小断片が多い"
       ]
+    },
+    {
+      "fileName": "IMG_4935.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ーー 前半 ーー 4 絡半ー\n中 #\n回衣。 いい N\nす\nー -8\nー P\nー 』\nが I\nf 市 か 8\n3 維\n.調 5 ー ~ 4 —\nべべ & E = = a o に\n人\nE @\nE ~ &\n4 が\nv ーー B Zs =eae 本\nて ーーある am N <\nー E~\\V gl V 4\nア四リンも リザがケガプ\nリア 作 すす F4 &\nリプしき 夕 劉\n] E 、 ア ー\n帳 3 ダ h\nAMVA た 作剛\n£ 大 ーー\n& :\nー\n3\n- 4\n /\nFo \\ A J)\nーー \\ » イル 6 1\nいい 1 2 r\nE r",
+        "confidence": 0.25,
+        "charCount": 271,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ーー 前半 ーー 4 絡半ー\n中 #\n回衣。 いい N\nす\nー -8\nー P\nー 』\nが I\nf 市 か 8\n3 維\n.調 5 ー ~ 4 —\nべべ & E = = a o に\n人\nE @\nE ~ &\n4 が\nv ーー B Zs =eae 本\nて ーーある am N <\nー E~\\V gl V 4\nア四リンも リザがケガプ\nリア 作 すす F4 &\nリプしき 夕 劉\n] E 、 ア ー\n帳 3 ダ h\nAMVA た 作剛\n£ 大 ーー\n& :\nー\n3\n- 4\n /\nFo \\ A J)\nーー \\ » イル 6 1\nいい 1 2 r\nE r",
+          "confidence": 0.25,
+          "charCount": 271,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3887,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4936.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "E W\\ H ー\nー ンー 、\n中し ーー\n』J / ンー -\nil Booae ロン\n[ if リンリ\n 1Y ンー\n用 ー 中 .\n2 本のンーンンンン\nー して止 ロロ にNE\n ー 目・日本聞\nー レン\nH S 220ml _アレコロー\n7所 ー 全量・ /« 20ml アレコー\n に _\n邊、) 紀 和ー ・こへ /同ー ヘレン\no 7リリ 4 れれ 名:米(国産) ー 。 ー テテ\n病 の すり 委任・プいい回 症ポー\nyr夫ど た TL AG5\n 系念・6502 20000\nー 歩合65\nンー\nー 子方法: 冷暗所に保存\nー 方法 : 冷暗所に AF リ\nュー -\nに ーーティーーーテニレニコーニン\nー 年 F ー : 枠外- Soeel\nー 倍刀上月・4和ギクトドPD号車\nー ーー\nE 考・ 山の幸洒導等\n 中 ・ロリンンジン衣:(目 季 R T)\nーーシー\nンー 二拉上目 一 ギ-\nーースロ和本 久 DSL 市-\n__ 人伯問押大匠不遇-\n§ ンー\n ン ンー 一人7\nに ンー リプ ココ 中人\nー = -_ —\nーー ーー @\nギー ーーー ンー -\nThe リープチュー て 衝 多角\n みのり感- が- リンジーシリ\nに なレンリルレネ や拓 6 ジンー\n。 姓中 ーー\n', 潮\"いい錠孔効の交人性は赤ちゃんの健応\nー 信洒とち換ええ7ださい 叫店導基の放褒ー\n- 系(目そお補え<ださい 上叫感維持の為.\nー ていたで 。 mH MEI COG (TER\n ーー レレ 作る\n[ WERITE2EE-A F2ID\nー 年 と2ーワ日にお白レビクン\nー nm\nー 電 当 ~ /r- =\nー ==5dq 02\nー リロー\nーーニニニニーー\nプー\nー & mu レー\n B\n FE: 04 -\nー 023.\nーー —",
+        "confidence": 0.34,
+        "charCount": 777,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "E W\\ H ー\nー ンー 、\n中し ーー\n』J / ンー -\nil Booae ロン\n[ if リンリ\n 1Y ンー\n用 ー 中 .\n2 本のンーンンンン\nー して止 ロロ にNE\n ー 目・日本聞\nー レン\nH S 220ml _アレコロー\n7所 ー 全量・ /« 20ml アレコー\n に _\n邊、) 紀 和ー ・こへ /同ー ヘレン\no 7リリ 4 れれ 名:米(国産) ー 。 ー テテ\n病 の すり 委任・プいい回 症ポー\nyr夫ど た TL AG5\n 系念・6502 20000\nー 歩合65\nンー\nー 子方法: 冷暗所に保存\nー 方法 : 冷暗所に AF リ\nュー -\nに ーーティーーーテニレニコーニン\nー 年 F ー : 枠外- Soeel\nー 倍刀上月・4和ギクトドPD号車\nー ーー\nE 考・ 山の幸洒導等\n 中 ・ロリンンジン衣:(目 季 R T)\nーーシー\nンー 二拉上目 一 ギ-\nーースロ和本 久 DSL 市-\n__ 人伯問押大匠不遇-\n§ ンー\n ン ンー 一人7\nに ンー リプ ココ 中人\nー = -_ —\nーー ーー @\nギー ーーー ンー -\nThe リープチュー て 衝 多角\n みのり感- が- リンジーシリ\nに なレンリルレネ や拓 6 ジンー\n。 姓中 ーー\n', 潮\"いい錠孔効の交人性は赤ちゃんの健応\nー 信洒とち換ええ7ださい 叫店導基の放褒ー\n- 系(目そお補え<ださい 上叫感維持の為.\nー ていたで 。 mH MEI COG (TER\n ーー レレ 作る\n[ WERITE2EE-A F2ID\nー 年 と2ーワ日にお白レビクン\nー nm\nー 電 当 ~ /r- =\nー ==5dq 02\nー リロー\nーーニニニニーー\nプー\nー & mu レー\n B\n FE: 04 -\nー 023.\nーー —",
+          "confidence": 0.34,
+          "charCount": 777,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 15892,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_4937.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "'(} ー ー mm\n*3 1 [ ー ー 本 Ad\n1 ご\n\"5あ ー\neavey [ ー\n/ \\\nる ー' 時 替\na ¢\"Y INEN fa \\\nン , ん の / ー 。\n: ェ / ー\n- ー [し 細\nー 。 ¢, へ ー JR\ne <.』4 BW\n5 1 店\n諾。 。。。 し\nー ろうろ 関税\nは 2 に\n W1T\nl \" =\n上 に 1,\n\" i a ー\n~ §\nA\n1 ;",
+        "confidence": 0.29,
+        "charCount": 196,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "'(} ー ー mm\n*3 1 [ ー ー 本 Ad\n1 ご\n\"5あ ー\neavey [ ー\n/ \\\nる ー' 時 替\na ¢\"Y INEN fa \\\nン , ん の / ー 。\n: ェ / ー\n- ー [し 細\nー 。 ¢, へ ー JR\ne <.』4 BW\n5 1 店\n諾。 。。。 し\nー ろうろ 関税\nは 2 に\n W1T\nl \" =\n上 に 1,\n\" i a ー\n~ §\nA\n1 ;",
+          "confidence": 0.29,
+          "charCount": 196,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2215,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5168.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ーー — : H に p\n=—— EAS 本\nーネ。 = し\n_ Rl : 【)\n用 a,\np Ea\nGb=\nFA= 55 ] 。\n3 店 こ L) k2 - .\nA\n(\n. に\n一 5\n し mm\n—= = 2 ー :\nーー一 ^\n0 に ぁ ら\nジー = ー\n= = 2\n 1 )\n2 i ーー一一一ーー一一一一\n— <ェ』\n 寺 『い ー\nで 4 S 2 i < ー\n に Mo NE 1 4 $\nテー 二 4 E\n= —— 45 )\nPN o e §\n— — em /\n== N -—",
+        "confidence": 0.32,
+        "charCount": 246,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ーー — : H に p\n=—— EAS 本\nーネ。 = し\n_ Rl : 【)\n用 a,\np Ea\nGb=\nFA= 55 ] 。\n3 店 こ L) k2 - .\nA\n(\n. に\n一 5\n し mm\n—= = 2 ー :\nーー一 ^\n0 に ぁ ら\nジー = ー\n= = 2\n 1 )\n2 i ーー一一一ーー一一一一\n— <ェ』\n 寺 『い ー\nで 4 S 2 i < ー\n に Mo NE 1 4 $\nテー 二 4 E\n= —— 45 )\nPN o e §\n— — em /\n== N -—",
+          "confidence": 0.32,
+          "charCount": 246,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3176,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5170.HEIC",
+      "cycle": 3,
+      "status": "reused",
+      "best": {
+        "variant": "center-label-gray-contrast",
+        "psm": "6",
+        "text": "T¥\nを\nJUYONDAI\n本代 中取り純吟 播州山田鈴\n揚げ槽時、 香味のバランスが最良の補を集\nめることから「中取り」と呼ばれ、酒米の#\n2 味わいを充分に堪能できる葬酒\n曲:日 本酒 。純米吟醸酒\n作料名 : 米(国産) 、米麺(国産米\n半生:50% -\n7ルル 米兵庫県特A地区産山田錦100%\niy きど分 ) 5度 内容量 1.8L\n* 合:高2 酒造 \\\nB o r\nN {方 法 は 必ず冷蔵庫 (-5てー5C)で名\n、 お叶めにお妊し上がり下“人\n (製造年月は表周りに\"",
+        "confidence": 0.65,
+        "charCount": 245,
+        "candidateCount": 1,
+        "detectedProductName": "十四代",
+        "detectedMakerName": "高木酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: JUYONDAI"
+        ],
+        "cycle": 3
+      },
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "standard-path accepted previous result"
+      ]
+    },
+    {
+      "fileName": "IMG_5183.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "\" a 短 ー 情\nの のテー\n_ ヴ 74 Tar3 IaN\n— : —_ ノブ ーー\n S- 導 1E 天候\n 『朋。 。 で) 。 N\n用/ る\nー & 』 ノ E ー\nT r 1 VN\nE N HITA に\n ー 答目 * 7 C AIN yy 抽\nAl 13 GLEGRO sKY Gr\nー ー あき NE WH b ー\nー — ¥ に [ere\nZ を ソー + E だ\n& c 、ダ\nA < A8 ¥ リ 1 LN y\n =cmy 。 .ま7放り全開 osresam\n= ョーー 計=ミ一三ぎ リ か\na= 大 f -\n A g\n/敵ー - 』 (IN ~\n9 N 万大 / し ー\n』、高- ー リン / ー _L mamamn\nNa R ンカ 5 3\nきき=忌避一考 名 § # de- Ae LAL\n{ —= -== —. - A ー すす F = 人\n5 { L — ママ 8\ni IN j が 区衝 ミニーーニー ニーマミ\n5 P全ラン欄0ミミミミ ミニーー一\nB wrs [ー ー ここーーミーンー一 一でEデーー\nリー本 Wr BEE T— aaa",
+        "confidence": 0.25,
+        "charCount": 488,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "\" a 短 ー 情\nの のテー\n_ ヴ 74 Tar3 IaN\n— : —_ ノブ ーー\n S- 導 1E 天候\n 『朋。 。 で) 。 N\n用/ る\nー & 』 ノ E ー\nT r 1 VN\nE N HITA に\n ー 答目 * 7 C AIN yy 抽\nAl 13 GLEGRO sKY Gr\nー ー あき NE WH b ー\nー — ¥ に [ere\nZ を ソー + E だ\n& c 、ダ\nA < A8 ¥ リ 1 LN y\n =cmy 。 .ま7放り全開 osresam\n= ョーー 計=ミ一三ぎ リ か\na= 大 f -\n A g\n/敵ー - 』 (IN ~\n9 N 万大 / し ー\n』、高- ー リン / ー _L mamamn\nNa R ンカ 5 3\nきき=忌避一考 名 § # de- Ae LAL\n{ —= -== —. - A ー すす F = 人\n5 { L — ママ 8\ni IN j が 区衝 ミニーーニー ニーマミ\n5 P全ラン欄0ミミミミ ミニーー一\nB wrs [ー ー ここーーミーンー一 一でEデーー\nリー本 Wr BEE T— aaa",
+          "confidence": 0.25,
+          "charCount": 488,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 6697,
+      "problemClassification": []
     },
     {
       "fileName": "IMG_5187.HEIC",
@@ -2045,7 +3657,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 5337,
+      "processingTimeMs": 5499,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多"
@@ -2076,7 +3688,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 963,
+      "processingTimeMs": 994,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2107,8 +3719,68 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2913,
+      "processingTimeMs": 3007,
       "problemClassification": []
+    },
+    {
+      "fileName": "IMG_5203.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "に/ 4 - 5 めすずっうで圧 hdss WF: 7\nA Bt\nー リ Crcin\n SC8 蘭\n ANCE\nくままい\nだるる関\nらら購おに 。\nー \"Rary ー\nは吹おの\nWATAT \\\nああに (2022 3 、\n49 1 b\nタツ ーの、\n。 ー ー\n1 り\n[4\nの r\nL]\n。$ j\nや 3\n-\n ー SIRIUS ー\nY ンーンク\n 。 m ‘\nにジン",
+        "confidence": 0.43,
+        "charCount": 185,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "に/ 4 - 5 めすずっうで圧 hdss WF: 7\nA Bt\nー リ Crcin\n SC8 蘭\n ANCE\nくままい\nだるる関\nらら購おに 。\nー \"Rary ー\nは吹おの\nWATAT \\\nああに (2022 3 、\n49 1 b\nタツ ーの、\n。 ー ー\n1 り\n[4\nの r\nL]\n。$ j\nや 3\n-\n ー SIRIUS ー\nY ンーンク\n 。 m ‘\nにジン",
+          "confidence": 0.43,
+          "charCount": 185,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1768,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5207.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "1i1 -9¢\n久作新\n和志 当り\nバ林息 [較\ni 』\n#ら人る [E . :\n人を 誕生年月\n5 た米 2022年12月\nー 条こ 出荷日\n5 8 3 2023年4月18日 \\\n1 £U ガス圧の関係から出荷\n5 Hge 日より1ヶ月以内の飲酒\n5 2% をおススメします.\nz 7 アルコール分:13度 も\nリ gs 語生\n3 $ 合星\n上放上 生酒時\n6\nlm\nf\n. 地 4 四則山上",
+        "confidence": 0.54,
+        "charCount": 197,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "1i1 -9¢\n久作新\n和志 当り\nバ林息 [較\ni 』\n#ら人る [E . :\n人を 誕生年月\n5 た米 2022年12月\nー 条こ 出荷日\n5 8 3 2023年4月18日 \\\n1 £U ガス圧の関係から出荷\n5 Hge 日より1ヶ月以内の飲酒\n5 2% をおススメします.\nz 7 アルコール分:13度 も\nリ gs 語生\n3 $ 合星\n上放上 生酒時\n6\nlm\nf\n. 地 4 四則山上",
+          "confidence": 0.54,
+          "charCount": 197,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1685,
+      "problemClassification": [
+        "小断片が多い"
+      ]
     },
     {
       "fileName": "IMG_5378.HEIC",
@@ -2135,9 +3807,513 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1275,
+      "processingTimeMs": 1345,
       "problemClassification": [
         "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5577.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ーー多 人金 —e FEERL\n ーー 5\n1 ! 導半レ=s。 ー\nー e AE\nぷー SEK \\\nリ 半吸 E\ndd\nー 0' 、]\nwa osa \\\n A) '\n8 Ta っ\n_A TR\n, ® w_cicy の -\n上 £\n= - ーー\n&n リリ ーー SS=CEF ーー\n) ー・ 1 ーー aa—\n4でG の生生 5\n* NO*E “ER\nを の ーo) ai\n\\ RRLT 記 4\nウーニーーニ一ニテデー\" い\"\n 用 —= N\\U\nE ンー 0\n/ /アーッ = さき\nンクがでいて\n、S 1 二話>八L ー ・\nン二は知加仙人スる人め 人\nし ガオ ーーニー ーー ug\nA : リー ーッ\n ーー p\nに も の本 O1 D sd ー\nh ) Dyy y 5\nSSRS PULTENEY [8\nに\nsme \"\nG HE\n』 tE MALT SCOTCH WE\nGep 中\n1 ue pory or MELTL,\n\\ *Y Maturedover neet cee\n: 2 sz [E\nYs ンタ . すすすすうす ー\n の ー § ま ® © & 誤 & & w F\n『 N ar ir\nNEN— ALLY cnArrEp FoR RICH と 補間 : ー\n(バドミーニーー\nい 人Nm拓0 且\nの有り or sc ンプ 。\naig ーーンジジジ : .\nーー SSでーー - y - :\nミミ会 にーー 5",
+        "confidence": 0.28,
+        "charCount": 616,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ーー多 人金 —e FEERL\n ーー 5\n1 ! 導半レ=s。 ー\nー e AE\nぷー SEK \\\nリ 半吸 E\ndd\nー 0' 、]\nwa osa \\\n A) '\n8 Ta っ\n_A TR\n, ® w_cicy の -\n上 £\n= - ーー\n&n リリ ーー SS=CEF ーー\n) ー・ 1 ーー aa—\n4でG の生生 5\n* NO*E “ER\nを の ーo) ai\n\\ RRLT 記 4\nウーニーーニ一ニテデー\" い\"\n 用 —= N\\U\nE ンー 0\n/ /アーッ = さき\nンクがでいて\n、S 1 二話>八L ー ・\nン二は知加仙人スる人め 人\nし ガオ ーーニー ーー ug\nA : リー ーッ\n ーー p\nに も の本 O1 D sd ー\nh ) Dyy y 5\nSSRS PULTENEY [8\nに\nsme \"\nG HE\n』 tE MALT SCOTCH WE\nGep 中\n1 ue pory or MELTL,\n\\ *Y Maturedover neet cee\n: 2 sz [E\nYs ンタ . すすすすうす ー\n の ー § ま ® © & 誤 & & w F\n『 N ar ir\nNEN— ALLY cnArrEp FoR RICH と 補間 : ー\n(バドミーニーー\nい 人Nm拓0 且\nの有り or sc ンプ 。\naig ーーンジジジ : .\nーー SSでーー - y - :\nミミ会 にーー 5",
+          "confidence": 0.28,
+          "charCount": 616,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 7872,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_5800.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "\" が も\n人が の人 qT\n §a 9 。\np - - し > 5 。 ー\n i 0 S y\n、 区 、 前\n町 フ 区 \\\n(s ー 導\n“ f.Y 3 Tl >\nlKde _ Folad\n@ し だ 。 ー\n» ー y 6 。 前\n+ キャ 10 — 衝\nゅ 作 。\ne ー TWS E l\nし る EE 可5 »20EXZ0 上 B\n =p o クマさんが 中\nー » T 居 / Al p o に : の\nw —~——h ; ec ~\n まい = 0\n・ー加デビーーンー 也・ 商\nfo Ab 5 ーー 中 EE ー\nーー ——aril = 1\nLm— =8 . o. “E\n時 ッッ 5 、 敵開ー 上m E 昌\n_5 ; 関し H & - . § :\nif 』 1 E ] - y i g 2\n 2 B a\n4 所 いい 8 4\n 7 \\Y ー : L\n3 ) Y “EY いい 敵\nAA、~ Kae D qu n 5 FIS 4 ! :\n\\ A at、 h 2. 5)\n> JBEL-Q)\n—= _% TEe\\ Bl 。 ざ 7/2 人\nBe. '=T = So UR 1 CGCベへ , N J i T\nーーント = w NEE2 ント に / \\ /ブ 7\n== =. と 人 = A R A M 1 Made In [\n時義和 トー a リー\nーーデシジン — o e y 2 3\nトー fi 0 5 kg / LEes\n ご",
+        "confidence": 0.24,
+        "charCount": 624,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "\" が も\n人が の人 qT\n §a 9 。\np - - し > 5 。 ー\n i 0 S y\n、 区 、 前\n町 フ 区 \\\n(s ー 導\n“ f.Y 3 Tl >\nlKde _ Folad\n@ し だ 。 ー\n» ー y 6 。 前\n+ キャ 10 — 衝\nゅ 作 。\ne ー TWS E l\nし る EE 可5 »20EXZ0 上 B\n =p o クマさんが 中\nー » T 居 / Al p o に : の\nw —~——h ; ec ~\n まい = 0\n・ー加デビーーンー 也・ 商\nfo Ab 5 ーー 中 EE ー\nーー ——aril = 1\nLm— =8 . o. “E\n時 ッッ 5 、 敵開ー 上m E 昌\n_5 ; 関し H & - . § :\nif 』 1 E ] - y i g 2\n 2 B a\n4 所 いい 8 4\n 7 \\Y ー : L\n3 ) Y “EY いい 敵\nAA、~ Kae D qu n 5 FIS 4 ! :\n\\ A at、 h 2. 5)\n> JBEL-Q)\n—= _% TEe\\ Bl 。 ざ 7/2 人\nBe. '=T = So UR 1 CGCベへ , N J i T\nーーント = w NEE2 ント に / \\ /ブ 7\n== =. と 人 = A R A M 1 Made In [\n時義和 トー a リー\nーーデシジン — o e y 2 3\nトー fi 0 5 kg / LEes\n ご",
+          "confidence": 0.24,
+          "charCount": 624,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 6845,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_5801.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ー 町生 邦表\ng > の -\nLLEEE 員 g\nowienk 純 8\niB 要560米特選 nm (.\n上 Baenhy K は\n 「電\n£A 米\n吹代 #\n\nS\n町本 導\n5 店 x\n\n5 二 油\n\nasm (半)。。消\n\n Qu ンー kcltY\nて いを生かす ため、鳥濾過無加ポ があま\nすめます そのためオリの出るとととっ\nには則昌ありません まだた開析\nりリドのため縦府きで保管下さ 。",
+        "confidence": 0.42,
+        "charCount": 201,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ー 町生 邦表\ng > の -\nLLEEE 員 g\nowienk 純 8\niB 要560米特選 nm (.\n上 Baenhy K は\n 「電\n£A 米\n吹代 #\n\nS\n町本 導\n5 店 x\n\n5 二 油\n\nasm (半)。。消\n\n Qu ンー kcltY\nて いを生かす ため、鳥濾過無加ポ があま\nすめます そのためオリの出るとととっ\nには則昌ありません まだた開析\nりリドのため縦府きで保管下さ 。",
+          "confidence": 0.42,
+          "charCount": 201,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2478,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_6289.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "「「き 0\nりあ (1\n間征 夢 界 %\n9\nこンジッツ科シクジンテテー \\E ー\nWM疹2 ィ ー\nN= § L\n@/ . E d\nーー ) *\n2 ガル 関関本=\n2出馬= で\n2用多才 -~\no 。 Z\nA q.ccy 3\nっ ' ー いぶ\n> e\n B\n( p.\nA98 RAEN\nnY : か h. 上 き\n« に\nF) TINON",
+        "confidence": 0.22,
+        "charCount": 171,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "「「き 0\nりあ (1\n間征 夢 界 %\n9\nこンジッツ科シクジンテテー \\E ー\nWM疹2 ィ ー\nN= § L\n@/ . E d\nーー ) *\n2 ガル 関関本=\n2出馬= で\n2用多才 -~\no 。 Z\nA q.ccy 3\nっ ' ー いぶ\n> e\n B\n( p.\nA98 RAEN\nnY : か h. 上 き\n« に\nF) TINON",
+          "confidence": 0.22,
+          "charCount": 171,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2477,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_6290.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "。 i ッ A\n: 。 ーー : 3\nず 滞 b!\nヨ ux 褒詳に 「 電\nー まま\n』 区 e まま 5 - に\n ® ーーこき\np 。 ヘタ\n部し 6 。\n1 Cipa® &\n Yy\nーーっーーー ー\n— = ュー\n— ーーーニー セー\n— :\nドジジジジニーー 'W\" . の\n— ーー e=\"\n S テテ /ン/7 — 3 , ms、\nーー ニブ ーー ? 。 デー にたーー\n HE . . にに ーー\n— // 王手若里、 ーー\nrY = E—\n HoE § —\nIo (/—— Ey— —\n =//) ———= . —— —\n= = =———\nディ =— — 2 =———— ——\n——— e= — 。 ==——==\n= ——— 5 ジンーー\n— == = —\n=—=— _ ーー\nーー aolh リーニー\nーー にーーイ\n—=—- — —==3 1 = —",
+        "confidence": 0.26,
+        "charCount": 387,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "。 i ッ A\n: 。 ーー : 3\nず 滞 b!\nヨ ux 褒詳に 「 電\nー まま\n』 区 e まま 5 - に\n ® ーーこき\np 。 ヘタ\n部し 6 。\n1 Cipa® &\n Yy\nーーっーーー ー\n— = ュー\n— ーーーニー セー\n— :\nドジジジジニーー 'W\" . の\n— ーー e=\"\n S テテ /ン/7 — 3 , ms、\nーー ニブ ーー ? 。 デー にたーー\n HE . . にに ーー\n— // 王手若里、 ーー\nrY = E—\n HoE § —\nIo (/—— Ey— —\n =//) ———= . —— —\n= = =———\nディ =— — 2 =———— ——\n——— e= — 。 ==——==\n= ——— 5 ジンーー\n— == = —\n=—=— _ ーー\nーー aolh リーニー\nーー にーーイ\n—=—- — —==3 1 = —",
+          "confidence": 0.26,
+          "charCount": 387,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 6306,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_6293.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "\\ \\F きせ \\\n F WEWN\n. t 3 ー\nを し 四 -\nき ; 3\n-¥ \\\nH § \\\n2 を\n ー い\n r i ー\n\\ し",
+        "confidence": 0.26,
+        "charCount": 70,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "\\ \\F きせ \\\n F WEWN\n. t 3 ー\nを し 四 -\nき ; 3\n-¥ \\\nH § \\\n2 を\n ー い\n r i ー\n\\ し",
+          "confidence": 0.26,
+          "charCount": 70,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 911,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_6343.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "に 内、 さあで\"本拓司語に てーー\nSS Ng計 さき38 3$2\nSN 2a まさ 3 二\n-) £- に FE QE\nーー一 ー 。 5 V補 = に 当 かを<\n 4 SS・ ョ ーー\n! で半計。\nで きるを 4\n E—= Ege\ni 1 ‘ < \\ TTNELS\n[ones § i8 ! %\nPt £ MI :\n\\ / % 。 5 。\n\\ . 4 上\nVi ー ¢ 。 ? 、\n8 ー\n<a 1I\nSh ー 、\njs電 ー\ni E\nも ] ー\nに5 過\n£J\n& 還能\nー E N\n§ ドドを M —\n i\n \\\n® Z .iA 7\n7. \\Y\\$O <\"\nML ルリ 0\nPN @\nクジ 】 j - ムー ー GF\n72e VaLY ーー\ngr る “N 19,\nー - \"wn .",
+        "confidence": 0.24,
+        "charCount": 349,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "に 内、 さあで\"本拓司語に てーー\nSS Ng計 さき38 3$2\nSN 2a まさ 3 二\n-) £- に FE QE\nーー一 ー 。 5 V補 = に 当 かを<\n 4 SS・ ョ ーー\n! で半計。\nで きるを 4\n E—= Ege\ni 1 ‘ < \\ TTNELS\n[ones § i8 ! %\nPt £ MI :\n\\ / % 。 5 。\n\\ . 4 上\nVi ー ¢ 。 ? 、\n8 ー\n<a 1I\nSh ー 、\njs電 ー\ni E\nも ] ー\nに5 過\n£J\n& 還能\nー E N\n§ ドドを M —\n i\n \\\n® Z .iA 7\n7. \\Y\\$O <\"\nML ルリ 0\nPN @\nクジ 】 j - ムー ー GF\n72e VaLY ーー\ngr る “N 19,\nー - \"wn .",
+          "confidence": 0.24,
+          "charCount": 349,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 4065,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_6348.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "_d 9こき\n2 w=p Vi\n5ごか\nいい3フク/\nる",
+        "confidence": 0.28,
+        "charCount": 28,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "_d 9こき\n2 w=p Vi\n5ごか\nいい3フク/\nる",
+          "confidence": 0.28,
+          "charCount": 28,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 985,
+      "problemClassification": []
+    },
+    {
+      "fileName": "IMG_6456.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "ンー ーー 夫、 グー\nーー NW os\nw I9 SAH #\n2\ni XX y Sn なぶ d\nATIEAN is2 © ー\n EE Y Z=UAS RFCの\nr,: JASDE ZAWAS REG4 の\nOF - ッーー YWha & p>\n® ) = り 772 (の\n? Yis Z,. 、 Y/ w13= N\n1 1た * クス & RY ー\nいい ‘q しみる ンミ\nー に ー p\n_— 1 ACEDL ー BLENDED SCOTCH\nN ー = = = WHISKY w= 。\nof QASREC4 上に、、 _ Eaie\nV ー) org ー Dod ドア\nN 」 &itra \\ PY -i\nL\nENDED SCO\nE WHISKY に EEEN ーー\n —a Be",
+        "confidence": 0.27,
+        "charCount": 344,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "ンー ーー 夫、 グー\nーー NW os\nw I9 SAH #\n2\ni XX y Sn なぶ d\nATIEAN is2 © ー\n EE Y Z=UAS RFCの\nr,: JASDE ZAWAS REG4 の\nOF - ッーー YWha & p>\n® ) = り 772 (の\n? Yis Z,. 、 Y/ w13= N\n1 1た * クス & RY ー\nいい ‘q しみる ンミ\nー に ー p\n_— 1 ACEDL ー BLENDED SCOTCH\nN ー = = = WHISKY w= 。\nof QASREC4 上に、、 _ Eaie\nV ー) org ー Dod ドア\nN 」 &itra \\ PY -i\nL\nENDED SCO\nE WHISKY に EEEN ーー\n —a Be",
+          "confidence": 0.27,
+          "charCount": 344,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 4284,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_6494.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "—— ———\nーー一\nビー一一 2 ーー一\nビー一一 —\n l - が いい ーー一\n- ー ーーマー —————————————————\nン — ーー一 ら ー ーー一一一一\nー : : ーー一ーー ーー 一一一一\nり か 4 ーー ーー一一一一一一\nー ん 誕衣 ーー一一一\n 本一一一\n—— —\nmd [ ! ーー一一一一mm\n 。 ーー一一一mn\nリー一一一 \"ーー一\n5 ーー ニー一ニニ\n友 ー ー ーー N 内 。 ニニーー一\neE - にこここーー\nが が5拍\n5 bo Ss oCE ッッ 4 —\nー ポ 4 Ta ! ええ\nBii の 人 AM 』 3 % ~-\nSAN 2f Ns E\nで 本AS S “N\nales S S0s か ンク % )\nG ー 4 \\ { J \" 4 o か\nさく相生Er れき @ T\nERIPEY NeE © 0 h » EEEESEEN",
+        "confidence": 0.37,
+        "charCount": 396,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "—— ———\nーー一\nビー一一 2 ーー一\nビー一一 —\n l - が いい ーー一\n- ー ーーマー —————————————————\nン — ーー一 ら ー ーー一一一一\nー : : ーー一ーー ーー 一一一一\nり か 4 ーー ーー一一一一一一\nー ん 誕衣 ーー一一一\n 本一一一\n—— —\nmd [ ! ーー一一一一mm\n 。 ーー一一一mn\nリー一一一 \"ーー一\n5 ーー ニー一ニニ\n友 ー ー ーー N 内 。 ニニーー一\neE - にこここーー\nが が5拍\n5 bo Ss oCE ッッ 4 —\nー ポ 4 Ta ! ええ\nBii の 人 AM 』 3 % ~-\nSAN 2f Ns E\nで 本AS S “N\nales S S0s か ンク % )\nG ー 4 \\ { J \" 4 o か\nさく相生Er れき @ T\nERIPEY NeE © 0 h » EEEESEEN",
+          "confidence": 0.37,
+          "charCount": 396,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 6162,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_6496.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "業 \\ を クッ\n導い \"\"生, て\n人 ん 2人まあ 族。。 J\n、 だ 、 きず い\nT\n~1% .\n2 ー\nすら \\\nシ t U\n。、。ンノラ a\np y いい ぎ\n& \\ ) 玉音1\n用いいいり\nWa W ー k\nAl 人 リリ トン4",
+        "confidence": 0.3,
+        "charCount": 122,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "業 \\ を クッ\n導い \"\"生, て\n人 ん 2人まあ 族。。 J\n、 だ 、 きず い\nT\n~1% .\n2 ー\nすら \\\nシ t U\n。、。ンノラ a\np y いい ぎ\n& \\ ) 玉音1\n用いいいり\nWa W ー k\nAl 人 リリ トン4",
+          "confidence": 0.3,
+          "charCount": 122,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1827,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7083.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "hw _ 本\n- - - § mw\n* ; ー We -\nKi We .\nーー TLTT\n+ 3 4る: iu T\nテリ\nー y 隊 { ー\n へ F の ミミ き 9 ・ — E\nー ー —gl ASE—\n) [ B : i . 、。 ® -\n ' ー SAE s\nいい Q\n1 ~ rms\nだ ーー —2ild L\ne 4 ニー Fl e o d (リリニー 一一ーー\n3 ! o のに H SSSENaY ー: をもをおき\nー YR NJ 1 「。 上 7/ タッミ 導用 ミ三\nー i \\Gprhak 4 ガザ 了 * ー 攻 ドミ\nー — “a 。ガ 用護s ご の且\n 由記才/へ導電 2 pdill If も こーー こ*\nN橋記 っ <が中屋 >\n央本周ー ーー のリマ デコ\nza し ー 必キ ーー鳥 0 0\nー + & > AN\ny に,赦v9 『 ます\n! FMEROMN REEy\n; RW間口mozをだ\nき る) mTE\nELEEN , ——g]\nーー 「マネッマッて・\n5ー ーー きる に\nRi LE AND AGED in THE BULLELT Bo No 4 rea\n BULLEIT'BOU に1 KE Yoi\nB rRoNTIER WH! n— -\nRENTUCKY stRAIGHT souRsOn isdy * B\nゝ でいいいいンー さい a\n= UN\nっーー ae 6\nヾで — ーー ミル\nts ヘー\nドReぶ、ーこーー ミー ーーか0半デーーの ;\n§ R アン",
+        "confidence": 0.26,
+        "charCount": 658,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "hw _ 本\n- - - § mw\n* ; ー We -\nKi We .\nーー TLTT\n+ 3 4る: iu T\nテリ\nー y 隊 { ー\n へ F の ミミ き 9 ・ — E\nー ー —gl ASE—\n) [ B : i . 、。 ® -\n ' ー SAE s\nいい Q\n1 ~ rms\nだ ーー —2ild L\ne 4 ニー Fl e o d (リリニー 一一ーー\n3 ! o のに H SSSENaY ー: をもをおき\nー YR NJ 1 「。 上 7/ タッミ 導用 ミ三\nー i \\Gprhak 4 ガザ 了 * ー 攻 ドミ\nー — “a 。ガ 用護s ご の且\n 由記才/へ導電 2 pdill If も こーー こ*\nN橋記 っ <が中屋 >\n央本周ー ーー のリマ デコ\nza し ー 必キ ーー鳥 0 0\nー + & > AN\ny に,赦v9 『 ます\n! FMEROMN REEy\n; RW間口mozをだ\nき る) mTE\nELEEN , ——g]\nーー 「マネッマッて・\n5ー ーー きる に\nRi LE AND AGED in THE BULLELT Bo No 4 rea\n BULLEIT'BOU に1 KE Yoi\nB rRoNTIER WH! n— -\nRENTUCKY stRAIGHT souRsOn isdy * B\nゝ でいいいいンー さい a\n= UN\nっーー ae 6\nヾで — ーー ミル\nts ヘー\nドReぶ、ーこーー ミー ーーか0半デーーの ;\n§ R アン",
+          "confidence": 0.26,
+          "charCount": 658,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 8306,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7083.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "hw _ 本\n- - - § mw\n* ; ー We -\nKi We .\nーー TLTT\n+ 3 4る: iu T\nテリ\nー y 隊 { ー\n へ F の ミミ き 9 ・ — E\nー ー —gl ASE—\n) [ B : i . 、。 ® -\n ' ー SAE s\nいい Q\n1 ~ rms\nだ ーー —2ild L\ne 4 ニー Fl e o d (リリニー 一一ーー\n3 ! o のに H SSSENaY ー: をもをおき\nー YR NJ 1 「。 上 7/ タッミ 導用 ミ三\nー i \\Gprhak 4 ガザ 了 * ー 攻 ドミ\nー — “a 。ガ 用護s ご の且\n 由記才/へ導電 2 pdill If も こーー こ*\nN橋記 っ <が中屋 >\n央本周ー ーー のリマ デコ\nza し ー 必キ ーー鳥 0 0\nー + & > AN\ny に,赦v9 『 ます\n! FMEROMN REEy\n; RW間口mozをだ\nき る) mTE\nELEEN , ——g]\nーー 「マネッマッて・\n5ー ーー きる に\nRi LE AND AGED in THE BULLELT Bo No 4 rea\n BULLEIT'BOU に1 KE Yoi\nB rRoNTIER WH! n— -\nRENTUCKY stRAIGHT souRsOn isdy * B\nゝ でいいいいンー さい a\n= UN\nっーー ae 6\nヾで — ーー ミル\nts ヘー\nドReぶ、ーこーー ミー ーーか0半デーーの ;\n§ R アン",
+        "confidence": 0.26,
+        "charCount": 658,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "hw _ 本\n- - - § mw\n* ; ー We -\nKi We .\nーー TLTT\n+ 3 4る: iu T\nテリ\nー y 隊 { ー\n へ F の ミミ き 9 ・ — E\nー ー —gl ASE—\n) [ B : i . 、。 ® -\n ' ー SAE s\nいい Q\n1 ~ rms\nだ ーー —2ild L\ne 4 ニー Fl e o d (リリニー 一一ーー\n3 ! o のに H SSSENaY ー: をもをおき\nー YR NJ 1 「。 上 7/ タッミ 導用 ミ三\nー i \\Gprhak 4 ガザ 了 * ー 攻 ドミ\nー — “a 。ガ 用護s ご の且\n 由記才/へ導電 2 pdill If も こーー こ*\nN橋記 っ <が中屋 >\n央本周ー ーー のリマ デコ\nza し ー 必キ ーー鳥 0 0\nー + & > AN\ny に,赦v9 『 ます\n! FMEROMN REEy\n; RW間口mozをだ\nき る) mTE\nELEEN , ——g]\nーー 「マネッマッて・\n5ー ーー きる に\nRi LE AND AGED in THE BULLELT Bo No 4 rea\n BULLEIT'BOU に1 KE Yoi\nB rRoNTIER WH! n— -\nRENTUCKY stRAIGHT souRsOn isdy * B\nゝ でいいいいンー さい a\n= UN\nっーー ae 6\nヾで — ーー ミル\nts ヘー\nドReぶ、ーこーー ミー ーーか0半デーーの ;\n§ R アン",
+          "confidence": 0.26,
+          "charCount": 658,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 8066,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7085.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "『 トー ーー 「\n 151% 4\n4 中アメリカな間\nす ー 、。五阪全社 マッダ\niR先ー軌間市南区旧愉4-31-26\nに TEL (092)589-5317\nド 木成年者の修潤は法律で然じられています\n時 池は20成になってから\nゞ る 誠 『 $\n ミ紙、 害 1プラ キャップ\nニテンプ ム人る人2 ノ7\nーー、\nーー\nTTATTTュナナーーニー ーー\nーー一一一一 ADO POR 一 : ジジ\niMpORIED BYJIMPORIO AN\nWl=AD) S20d—{ー— “THE BULLEITDIS NILLING CRDAM — :ー攻デジ\n回ニー MOLENWERE 12,1014 BSペデェニーー ジジ\nL STIEEY L Te ES) LENWERY uFRIANDS 三星 : ンジ\nさこーーさこニニTTF NPTHPRDA と2 =\nlm UI ニニミニーーEvpOTIFLLADO POR_ ミー\nSORNNON ー E i : E きこ\numlul記ー",
+        "confidence": 0.36,
+        "charCount": 445,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "『 トー ーー 「\n 151% 4\n4 中アメリカな間\nす ー 、。五阪全社 マッダ\niR先ー軌間市南区旧愉4-31-26\nに TEL (092)589-5317\nド 木成年者の修潤は法律で然じられています\n時 池は20成になってから\nゞ る 誠 『 $\n ミ紙、 害 1プラ キャップ\nニテンプ ム人る人2 ノ7\nーー、\nーー\nTTATTTュナナーーニー ーー\nーー一一一一 ADO POR 一 : ジジ\niMpORIED BYJIMPORIO AN\nWl=AD) S20d—{ー— “THE BULLEITDIS NILLING CRDAM — :ー攻デジ\n回ニー MOLENWERE 12,1014 BSペデェニーー ジジ\nL STIEEY L Te ES) LENWERY uFRIANDS 三星 : ンジ\nさこーーさこニニTTF NPTHPRDA と2 =\nlm UI ニニミニーーEvpOTIFLLADO POR_ ミー\nSORNNON ー E i : E きこ\numlul記ー",
+          "confidence": 0.36,
+          "charCount": 445,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 5327,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7090.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "f ー\n @さ\nalg\n回 ;\n— ys\nー > Da に 條 / . —\n S ビ 4 ) — て\n・ 村人\nー2 ー...\nNN が\nて ー",
+        "confidence": 0.24,
+        "charCount": 72,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "f ー\n @さ\nalg\n回 ;\n— ys\nー > Da に 條 / . —\n S ビ 4 ) — て\n・ 村人\nー2 ー...\nNN が\nて ー",
+          "confidence": 0.24,
+          "charCount": 72,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1189,
+      "problemClassification": [
+        "記号ノイズ過多"
+      ]
+    },
+    {
+      "fileName": "IMG_7093.HEIC",
+      "cycle": 3,
+      "status": "reused",
+      "best": {
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "-\n\nJUYOND!\n\n上四代 中取り純吟 播州重田釣\n\n揚げ槽時、 香味のバラ ンス》ヵ\n\nDFEE\n\nめることから「中取り」と呼ばれ、酒米の持\n\n2カカ、味わいを充分に堪能できる艶洒。\n\n串:日本酒 。細米吟醸酒\n\nルル レン 米麹(国産米)\n\n x: TL\n\n#\n\nコール分 : 15度 内容量:1.8L\n\n 者: 高木酒造\n\n山形県村山市大字富並1826草\n\n人方法:\n\n必ず冷蔵庫(-5て一5て)で\n\nYo\n\nB\n\nの お召し上がり上人\n\n(製造年月は表由のりに『\n\n【\n\nお酒は20歳になっ でかの\n\n-",
+        "confidence": 0.67,
+        "charCount": 258,
+        "candidateCount": 1,
+        "detectedProductName": "十四代",
+        "detectedMakerName": "高木酒造",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "蔵元一致"
+        ],
+        "cycle": 3
+      },
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "standard-path accepted previous result"
+      ]
+    },
+    {
+      "fileName": "IMG_7094.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "-ニず ua ,\nンー * E\nー P jqeea -\nAENIMNNt きる 4 ¢\n3 。 A g l %\nーー 5、 =\n。 大) は\nは VA\n= ー afh T—\n。 咽< 2前 .\n, B [ 5 =\n] @ g と 瑞生\n 4 H”. \\ ;\n、 # : N\nA i ー\n; Yamamet。 由 '\n§ .y",
+        "confidence": 0.21,
+        "charCount": 162,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "-ニず ua ,\nンー * E\nー P jqeea -\nAENIMNNt きる 4 ¢\n3 。 A g l %\nーー 5、 =\n。 大) は\nは VA\n= ー afh T—\n。 咽< 2前 .\n, B [ 5 =\n] @ g と 瑞生\n 4 H”. \\ ;\n、 # : N\nA i ー\n; Yamamet。 由 '\n§ .y",
+          "confidence": 0.21,
+          "charCount": 162,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1846,
+      "problemClassification": [
+        "記号ノイズ過多"
       ]
     },
     {
@@ -2165,7 +4341,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2650,
+      "processingTimeMs": 2754,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2195,7 +4371,191 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3053,
+      "processingTimeMs": 3658,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7586.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "or でム\nf 4\nT 大 1E%\nき オ 4\nリゼ -2\"\n\n_ 本間。\n\n ン 3 %\\、 ず に\n\n: T~— い\n\n\" ー\n\nA y oo\nSW 部めい\nいいのを.\n\n 2",
+        "confidence": 0.32,
+        "charCount": 90,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "or でム\nf 4\nT 大 1E%\nき オ 4\nリゼ -2\"\n\n_ 本間。\n\n ン 3 %\\、 ず に\n\n: T~— い\n\n\" ー\n\nA y oo\nSW 部めい\nいいのを.\n\n 2",
+          "confidence": 0.32,
+          "charCount": 90,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 1823,
+      "problemClassification": [
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7612.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "nway \\ ー ー { 3\n人\nー りり\n ーー 首 £ -.\nりき 。\n\"ー 居\n4がら4省\nay/ A\nmL ー\n央較較\nー: ^ま区 ・a ビデテマ3半\n4 で し ーーつっ\n_\n て 「'」-、 訓各詳 ーー\n YU\n、 内\n0 的 )\nきりは all\n (を -\n~ ンタ B\nAMる 2] の F .\nBEE\nR ペ 0 ーー 。\n0 e\n が ー\nーー Y >C A \\ 4 ーー 机放二衝ー",
+        "confidence": 0.19,
+        "charCount": 204,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "nway \\ ー ー { 3\n人\nー りり\n ーー 首 £ -.\nりき 。\n\"ー 居\n4がら4省\nay/ A\nmL ー\n央較較\nー: ^ま区 ・a ビデテマ3半\n4 で し ーーつっ\n_\n て 「'」-、 訓各詳 ーー\n YU\n、 内\n0 的 )\nきりは all\n (を -\n~ ンタ B\nAMる 2] の F .\nBEE\nR ペ 0 ーー 。\n0 e\n が ー\nーー Y >C A \\ 4 ーー 机放二衝ー",
+          "confidence": 0.19,
+          "charCount": 204,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2842,
+      "problemClassification": [
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_7618.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "Fe S 日\nーー\n【』 ンーンマヤ 4\n‘ ty ( E ー AA—\nタケ: まま\nか0 2 革n\n上 。 上 . の る 7 人\nのの\n/ 4 7 リ し\nwayy / .\nの 放 1 m\nまますず .\n飼い、\nSS 了 ーー : ーー\nmm っ 5\n陀 'n い AFene 全をここ\nathunー SeN UIERE ー\na ー しトミー の 人。 きる1 キキモミ <\n。 てペッ ー すまー-則人ののGあで\n$ R ~ てできZ_N /\n人 , さハ 4 《 『 。 』 て\nZanmN. ー / ググ /\nー \\J IS 。 \\A .\nN ンク 7 NN\n時 ) 衣 缶 【 と ノノ NM",
+        "confidence": 0.24,
+        "charCount": 302,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "Fe S 日\nーー\n【』 ンーンマヤ 4\n‘ ty ( E ー AA—\nタケ: まま\nか0 2 革n\n上 。 上 . の る 7 人\nのの\n/ 4 7 リ し\nwayy / .\nの 放 1 m\nまますず .\n飼い、\nSS 了 ーー : ーー\nmm っ 5\n陀 'n い AFene 全をここ\nathunー SeN UIERE ー\na ー しトミー の 人。 きる1 キキモミ <\n。 てペッ ー すまー-則人ののGあで\n$ R ~ てできZ_N /\n人 , さハ 4 《 『 。 』 て\nZanmN. ー / ググ /\nー \\J IS 。 \\A .\nN ンク 7 NN\n時 ) 衣 缶 【 と ノノ NM",
+          "confidence": 0.24,
+          "charCount": 302,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3557,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_8283.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "RSの てイプ Ape\nTa m _§\nR のが\n。 c ンジジン 誠。\nの入スと7テン ルクンタ\n【生半ー リウン 還 ンジンク0\nR- リ ンジング\nz で5 a 7 ンジ リン\ni T. ン須\nRa - 2 ンタ 2\n: で を ンジ リン\nAa ンジジンジジジンジン\ndir\nm :\n& P —\nタラ /a\n Fy ンプ\n& /\n# : の d 4 AT\n. LIY]\n? RC -\nBag cet I\njs L DE\nsg % に ーータイ fo @\n。 る2分 /グ多\n.』 » L - ; Er ” へ\nに Wtak -/2\nー ドド » S\nトド h ; グン 人 < 1\n 2 WMaz 18\n。 E\nD 1\nTrag AO ー\nRuiz x@\na< 8\nワレ 』\nPn. Tend\n43 74 』\n・ 3\nー Tinie\nEY",
+        "confidence": 0.19,
+        "charCount": 373,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "RSの てイプ Ape\nTa m _§\nR のが\n。 c ンジジン 誠。\nの入スと7テン ルクンタ\n【生半ー リウン 還 ンジンク0\nR- リ ンジング\nz で5 a 7 ンジ リン\ni T. ン須\nRa - 2 ンタ 2\n: で を ンジ リン\nAa ンジジンジジジンジン\ndir\nm :\n& P —\nタラ /a\n Fy ンプ\n& /\n# : の d 4 AT\n. LIY]\n? RC -\nBag cet I\njs L DE\nsg % に ーータイ fo @\n。 る2分 /グ多\n.』 » L - ; Er ” へ\nに Wtak -/2\nー ドド » S\nトド h ; グン 人 < 1\n 2 WMaz 18\n。 E\nD 1\nTrag AO ー\nRuiz x@\na< 8\nワレ 』\nPn. Tend\n43 74 』\n・ 3\nー Tinie\nEY",
+          "confidence": 0.19,
+          "charCount": 373,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 5470,
+      "problemClassification": [
+        "低信頼度"
+      ]
+    },
+    {
+      "fileName": "IMG_8284.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "剛\n 品目 H Z57H 52 だ\n— 4 内容量 720ml S に\n’ アルコール分 14% 7\n 精米歩合50光上\n 原材料名 ke@h _\n3 XI>e@mmn\nN ESTeee :\n\n5 e Fai q7\nH * 飲酒は20歳になうるが\n{ Bm ¥\n\nー 7 テー\n\nま 3 知県土佐市出剛2馬 る\n4 色造年月 用 §\n\n。 a\n\n 3 zoze. 3 ERE\n\n」 。\n\n_ 思中\n\n0 * 骨由ー",
+        "confidence": 0.34,
+        "charCount": 207,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "剛\n 品目 H Z57H 52 だ\n— 4 内容量 720ml S に\n’ アルコール分 14% 7\n 精米歩合50光上\n 原材料名 ke@h _\n3 XI>e@mmn\nN ESTeee :\n\n5 e Fai q7\nH * 飲酒は20歳になうるが\n{ Bm ¥\n\nー 7 テー\n\nま 3 知県土佐市出剛2馬 る\n4 色造年月 用 §\n\n。 a\n\n 3 zoze. 3 ERE\n\n」 。\n\n_ 思中\n\n0 * 骨由ー",
+          "confidence": 0.34,
+          "charCount": 207,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2999,
+      "problemClassification": [
+        "小断片が多い"
+      ]
+    },
+    {
+      "fileName": "IMG_9647.HEIC",
+      "cycle": 3,
+      "status": "success",
+      "best": {
+        "variant": "label-band-crop",
+        "psm": "6",
+        "text": "___ARAR N ygを \\ B \\\nリ § ー いいー —\n放さき罰\"一\n。 0\nms と 3\nー箇\n— * & —\nAEE Ih\n// 9 N\n- / に 7\nceey : 9\n ー\nー トル\n導 、 当 ー\n u [©) ., - —\nii \\ Z 問\n BL- ー\nchio'sValt\n WIREs ; Eee \"\n花、 od 』\nl B SYSを he を ¥\n: ー\n庫和きき人。\n- T Tie ra\n®",
+        "confidence": 0.26,
+        "charCount": 211,
+        "candidateCount": 0,
+        "matchReasons": [],
+        "cycle": 3
+      },
+      "variants": [
+        {
+          "variant": "label-band-crop",
+          "psm": "6",
+          "text": "___ARAR N ygを \\ B \\\nリ § ー いいー —\n放さき罰\"一\n。 0\nms と 3\nー箇\n— * & —\nAEE Ih\n// 9 N\n- / に 7\nceey : 9\n ー\nー トル\n導 、 当 ー\n u [©) ., - —\nii \\ Z 問\n BL- ー\nchio'sValt\n WIREs ; Eee \"\n花、 od 』\nl B SYSを he を ¥\n: ー\n庫和きき人。\n- T Tie ra\n®",
+          "confidence": 0.26,
+          "charCount": 211,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 2672,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"

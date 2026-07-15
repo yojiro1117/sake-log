@@ -46,5 +46,14 @@ export async function analyzePhotoQuality(blob: Blob): Promise<PhotoQualityAnaly
   if (glareScore > 0.3) { warnings.push('反射または白飛び'); recommendedActions.push('色チャンネル分離と反射抑制'); }
   if (black / luminance.length > 0.3) { warnings.push('黒つぶれ'); recommendedActions.push('シャドウ補正'); }
   if (sourceWidth < 900 || sourceHeight < 900) { warnings.push('解像度が低い'); recommendedActions.push('2倍拡大'); }
-  return { blurScore, brightnessScore, contrastScore, glareScore, width: sourceWidth, height: sourceHeight, warnings, recommendedActions: [...new Set(recommendedActions)] };
+  const whiteClipRatio = white / luminance.length;
+  const blackClipRatio = black / luminance.length;
+  const compressionScore = Math.max(0, Math.min(1, 1 - Math.abs(contrast - 38) / 90));
+  const qualityLevel = warnings.length >= 3 || blurScore < 0.16 ? 'poor' : warnings.length ? 'fair' : 'good';
+  return {
+    blurScore, brightnessScore, contrastScore, glareScore, width: sourceWidth, height: sourceHeight,
+    whiteClipRatio, blackClipRatio, compressionScore, qualityLevel,
+    estimatedTextSize: Math.round(Math.min(sourceWidth, sourceHeight) * Math.max(0.012, Math.min(0.06, contrastScore * 0.04))),
+    warnings, recommendedActions: [...new Set(recommendedActions)]
+  };
 }

@@ -1,210 +1,72 @@
 # OCR Validation
 
-SAKEログのOCR、写真インポート、HEIC変換、EXIF取得、銘柄候補抽出を、Google Driveに置かれた実画像72枚で検証した記録です。画像本体は公開リポジトリへ保存せず、一時領域だけで使用しました。
+Google Drive folder `1d3XLdTF1Z52n1tHumGqeJEY68gAy6ESr`の実画像151枚を2026-07-15に検証しました。画像本体とコンタクトシートはGit管理外の一時領域だけで使用し、リポジトリにはメタデータ、SHA-256、EXIF、OCR、信頼度、時間、警告・エラーだけを保存します。
 
-## テスト画像一覧
+## Dataset
 
-- 取得元: Google Drive共有フォルダ `1d3XLdTF1Z52n1tHumGqeJEY68gAy6ESr`
-- 使用枚数: 72枚
-- 形式内訳: HEIC/HEIF 58枚、JPEG 14枚
-- 保存した情報: ファイル名、Drive file id、MIME、ファイルサイズ、SHA-256、EXIF、OCR結果、信頼度、処理時間、成否
-- 画像本体: `drive-image-temp` の一時領域のみで使用し、GitHubには保存しない
-
-対象リストは `tests/fixtures/google-drive-files.json`、実画像検証結果は `tests/fixtures/google-drive-test-manifest.json` と `tests/results/ocr-*.json` に保存しています。
-
-## 使用したOCR方式
-
-アプリ本体では `TextDetector` を高速経路として試し、未対応・空結果・低信頼度・候補抽出不足の場合は `Tesseract.js` をdynamic importしてフォールバックします。検証ではNode上で `tesseract.js` の `jpn+eng` workerを使い、同じ思想の複数前処理OCRを実行しました。
-
-OCR結果は自動確定しません。銘柄候補は一致理由と信頼度を表示し、ユーザー確認を必須にします。OCRが空の場合、無関係な固定銘柄候補は表示しません。
-
-## 使用した前処理
-
-- HEIC/HEIFのJPEG変換
-- EXIF DateTimeOriginal / DateTimeDigitized / CreateDate / DateTime の読取
-- Orientation読取
-- リサイズ
-- グレースケール
-- コントラスト強調
-- 正規化
-- 二値化
-- 中央ラベル領域の切り出し
-- 上部ラベル領域の切り出し
-- 左右分割
-- 数値抽出向けパス
-- Tesseract PSM 11 と PSM 6 の切替
-- OCR文字列の正規化
-- OCR誤認識補正
-- N-gram類似度
-- レーベンシュタイン距離
-
-## 第1回結果
-
-条件: 変換後画像またはJPEG原画像を1000px幅へリサイズし、PSM 11でOCR。
-
-| 指標 | 結果 |
+| Item | Count |
 | --- | ---: |
-| 対象画像 | 72 |
-| OCRが1文字以上取得できた割合 | 100.0% |
-| 候補抽出率 | 2.8% |
-| 平均処理時間 | 981ms |
-| 最大処理時間 | 3,818ms |
+| Total | 151 |
+| HEIC/HEIF | 131 |
+| JPEG | 20 |
+| Unique SHA-256 | 150 |
+| Confirmed / partial / unknown ground truth | 48 / 15 / 88 |
 
-### 第1回の問題点
+表ラベル、裏ラベル、ボトル全体、棚、複数瓶、反射、暗所、ぼけ、斜め、縦書き、筆文字、日本語英語混在を含みます。正解不明画像は完全一致率の分母へ含めません。
 
-- ボトル全体写真ではラベル文字が小さく、商品名より背景・模様・ノイズを拾った
-- HEIC画像は変換後に読めたが、ラベル領域以外が大きい画像で精度が低かった
-- 日本語筆文字、縦書き、反射の強い画像では候補マスターに結びつきにくかった
-- PSM 11のみでは散在テキストを拾う一方、銘柄のまとまりが崩れた
+## OCR paths
 
-## 第2回の変更内容
+アプリはTextDetectorを高速経路として試し、未対応、空、低信頼度、識別文字不足の場合にdynamic importしたTesseract.js `jpn+eng` workerへフォールバックします。進捗・キャンセル・worker terminateに対応し、1枚の失敗でキュー全体を止めません。
 
-- グレースケール + コントラスト + 正規化
-- 中央ラベル領域の切り出し（1100px）
-- PSM 6を追加
-- 複数結果を信頼度、文字数、候補一致数、ノイズ量で比較
+検証では同じTesseractモデルで、結果が弱い画像だけ次の前処理へ進めました。
 
-## 第2回結果
+1. Orientation補正後、1000pxへ縮小、PSM 11。
+2. 中央ラベルcrop、グレースケール、コントラスト、1100px、PSM 6。
+3. 広いラベル帯crop、1200px、PSM 6。前経路と信頼度・文字数・候補数・ノイズを比較。
 
-詳細は `tests/results/ocr-cycle-2.json` に保存しています。平均2,069ms、最大5,722msでした。高解像度の総当たりは20分で40/72枚に留まったため、通常経路は中央ラベル切り出しへ絞りました。
+## Three OCR cycles
 
-改善内容:
+| Cycle | Text hit | Catalog candidate hit | Average | Maximum |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 100.0% | 5.3% | 1,214ms | 4,611ms |
+| 2 | 100.0% | 6.0% | 2,392ms | 9,555ms |
+| 3 | 100.0% | 7.3% | 2,874ms | 15,892ms |
+| Final integrated | 100.0% | 8.6% | 6,479ms | 27,039ms |
 
-- ボトル全体や背景文字混入画像で、中央切り出しが有効だった
-- ラベルの細字・裏ラベルではコントラスト強調が有効だった
-- 反射が強い画像では二値化が有効なケースと逆効果のケースが分かれた
+文字取得率は高い一方、商品候補へ結びつく率は低く、OCR単独では不十分です。背景文字、蔵元だけの一致、棚の別商品、筆文字、縦書き、曲面、反射が主な失敗原因でした。この結果が、バーコード・構造化カタログ・複数写真・確認済み視覚参照・履歴を統合する設計根拠です。
 
-## 第3回の変更内容
+## HEIC and EXIF
 
-- ラベル帯領域の切り出し（1200px）
-- PSM 6の領域別適用
-- 複数OCR結果の最終スコア統合
+- HEIC conversion: 131/131 (100%)
+- EXIF captured date: 136/151 (90.1%)
+- Date priority: DateTimeOriginal, DateTimeDigitized, CreateDate, DateTime
+- ファイル更新日時を撮影日として断定しない
+- `capturedAt`と`drankAt`は分離し、明示ボタンでのみ反映する
 
-## 第3回結果
+Node検証は`heic-convert`、ブラウザ本体は直接decode後に`heic2any`フォールバックを使用します。変換失敗はファイル単位のエラーにして残りを継続します。
 
-| 指標 | 結果 |
-| --- | ---: |
-| 対象画像 | 72 |
-| OCRが1文字以上取得できた割合 | 100.0% |
-| OCR3経路統合後の調整用Top1 | 39.1% |
-| ホールドアウトのブランド系列一致率 | 71.4% |
-| ホールドアウト製品Top1 | 15.4% |
-| OCR空結果率 | 0.0% |
-| 誤候補件数 | 0 |
-| HEIC変換成功率 | 100.0% |
-| EXIF撮影日取得率 | 87.5% |
-| 平均処理時間 | 5,511ms |
-| 最大処理時間 | 13,586ms |
-| 最大RSS目安 | 807MB |
+## Load observations
 
-目視で正解を確定できた48枚、部分確認15枚、確定不能9枚に分類しました。確定不能画像は完全一致率の分母から除外しています。同一商品グループを跨がない tuning / validation / holdout 分割を使用しました。
+- Peak desktop RSS: about 1,300MB
+- 151 images processed sequentially: 1,773 seconds
+- The first validation attempt used the wrong temporary directory and failed in summary aggregation. The path was corrected and all 151 images were rerun successfully.
+- Tesseract emitted small-text and extraneous-JPEG-byte warnings on some images; processing continued and warnings are retained per image.
 
-## 画像ごとの最終結果
+iPhone Safari実機とAndroid Chrome実機はこの環境から操作できないため、PlaywrightのiPhone/Android相当WebKit/Chromium、375px/390px、production buildで代替します。端末本体の熱・メモリは未測定です。この実測から、アプリは最大10枚、同時実行1、低品質時のみ再解析を採用します。
 
-画像ごとの詳細は `tests/results/ocr-final.json` に保存しています。代表例:
+## Alternative methods tried
 
-- `1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG`: `HIBIKI` を読み取り、候補「響」を表示
-- `IMG_4618 2.HEIC`: HEIC変換、EXIF取得、二値化OCRが成功
-- `IMG_3426.heic`: OCR文字数が10文字と少なく、文字数不足として警告
-- 複数画像で `Image too small to scale` や `Corrupt JPEG data` のTesseract警告が出たが、個別処理は継続
+- TextDetector fast path and Tesseract fallback
+- Three preprocessing/PSM variants
+- Manual crop, rotation, vertical, Latin-priority reanalysis
+- BarcodeDetector then ZXing with 0/90/180/270 degree attempts
+- Legacy dHash/color and composite aHash/pHash/color/edge/layout comparison
+- Exact/alias/n-gram/Levenshtein catalog retrieval
 
-## 写真分類の3サイクル
+The composite visual threshold 0.78 increased false positives without increasing Top-1. It was rejected and recalibrated to 0.84. Visual evidence remains auxiliary.
 
-72枚を18枚ずつのコンタクトシートで目視確認し、`frontLabel`、`backLabel`、`bottle`、`glass`、`other` のground truthを設定しました。画像本体とコンタクトシートは一時領域だけで使用しました。
+## Adopted behavior
 
-| サイクル | 変更 | 正解率 | 問題 |
-| --- | --- | ---: | --- |
-| 1 | OCR語句のみ | 22.2% | 根拠がない画像をほぼ表ラベルへ分類 |
-| 2 | ボトルを既定候補、文字量・縦横比を追加 | 62.5% | ラベル接写をボトルへ分類しすぎた |
-| 3 | 中央・外周の輪郭密度、OCR信頼度、説明文密度を追加 | 80.6% | グラスと一部の接写は区別困難 |
+OCR text and candidates are editable. No result is automatically confirmed. If no grounded candidate survives calibration, the UI displays that the brand could not be identified and asks for manual input. Fixed famous-brand fallbacks are not used.
 
-最終方式でも分類は自動確定せず、72枚すべてを「要確認」としました。ユーザーの手動修正は`classificationCorrections`へ保存し、次回候補の重みに利用します。詳細は`tests/results/classification-cycle-*.json`と`tests/results/image-features.json`に保存しています。
-
-## HEIC変換結果
-
-- HEIC/HEIF対象: 58枚
-- 変換成功: 58枚
-- 変換失敗: 0枚
-- 検証方式: Node検証では `heic-convert`、アプリ本体ではブラウザ用 `heic2any`
-
-## EXIF取得結果
-
-- 撮影日取得率: 87.5%
-- 取得優先順位: DateTimeOriginal、DateTimeDigitized、CreateDate、DateTime
-- EXIFがない画像は撮影日不明とし、ファイル更新日時を撮影日として断定しない
-- `capturedAt` と `drankAt` は分離し、「撮影日を飲酒日に設定」ボタンでのみ反映する
-
-## 処理時間
-
-- 平均: 5,511ms
-- 最大: 13,586ms
-- iPhone Safari相当、Android Chrome相当では実機確認ではなく、ブラウザPWA設計とNode検証で代替
-- OCRは1枚ずつ逐次キューで処理し、1枚の失敗で全体を止めない
-- アプリ本体では10枚上限、進捗表示、キャンセル、worker terminateを行う
-
-## 採用した最終方式
-
-1. TextDetectorを試す
-2. 空結果または候補不足ならTesseract.jsへフォールバック
-3. HEIC/HEIFはブラウザ内でJPEGへ変換
-4. EXIFと画像サイズを取得
-5. 複数前処理パターンでOCR
-6. 3経路のOCR文字列を重複除去して統合する
-7. 構造化カタログ、JAN/EAN、複数写真、確認済み参照写真と照合する
-8. 独立証拠と不一致理由で順位付けし、証拠不足なら棄却する
-9. 候補は自動確定せず、ユーザーが選択する
-
-## 市場価格照合の反復検証
-
-楽天アプリIDはユーザー端末内保存で、秘密情報をGitHubへ入れません。実APIキーなしの検証では `tests/results/price-results.json` に検索語パターンと除外ルールの比較結果を保存しています。
-
-比較した検索語:
-
-- 銘柄名
-- 銘柄名 + 蔵元
-- 銘柄名 + 容量
-- 銘柄名 + 蔵元 + 容量
-- OCR原文
-- 正規化OCR文字
-- 英語名
-- 別名
-
-除外・減点:
-
-- 容量違い
-- セット販売
-- ギフト
-- 箱付き
-- ふるさと納税
-- 定期購入
-- 飲み比べ
-- ミニボトル
-- 業務用
-- 本数違い
-- 送料不明
-
-## 実装した代替案
-
-- TextDetector非対応時: Tesseract.jsへ自動フォールバック
-- HEIC未対応時: heic2anyでブラウザ内変換
-- Node検証時: heic-convertで一時JPEG化
-- OCR低精度時: 複数前処理、領域分割、PSM変更
-- 候補不明時: 固定候補ではなく手入力案内
-- 市場価格未取得時: 過去履歴、手入力、未取得保存
-
-## 残る問題
-
-- 実画像72枚では文字取得できたが、製品バリエーション完全一致はholdoutで15.4%に留まる
-- ラベル領域が小さい、反射が強い、筆文字、縦書き、ボトル曲面歪みでは候補抽出が弱い
-- 未登録銘柄はカタログ照合できず、ブランド系列までの特定に留まる
-- iPhone Safari実機、Android Chrome実機での手動操作確認は未実施
-
-## 今後改善可能な項目
-
-- ユーザーがラベル範囲を指で指定できるUI
-- バーコード読み取り
-- OCR後の手動修正履歴を候補学習に使う
-- 銘柄候補マスターの拡充
-- 縦書き専用前処理
-- 曲面歪み補正
-- 実画像への人手ground truth付与
+Raw results: `tests/results/ocr-cycle-1.json`, `ocr-cycle-2.json`, `ocr-cycle-3.json`, `ocr-final.json`. Identification results: `identification-cycle-1.json` through `identification-cycle-6.json` and `identification-holdout-final.json`.

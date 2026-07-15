@@ -7,11 +7,11 @@ import type { CandidateMatch } from '../src/types';
 
 type Split = 'tuning' | 'validation' | 'holdout';
 type GroundTruth = {
-  fileName:string; groupId:string; split:Split; groundTruthStatus:'confirmed'|'partially_confirmed'|'unknown';
+  driveFileId:string; fileName:string; groupId:string; split:Split; groundTruthStatus:'confirmed'|'partiallyConfirmed'|'unknown';
   expectedBrandFamily?:string; expectedProductName?:string; expectedVariant?:string; expectedMakerName?:string;
   expectedAlcoholType?:string; expectedVolumeMl?:number; expectedAbv?:number; visibleText?:string;
 };
-type OcrRecord = { fileName:string; ocrText:string; ocrConfidence:number; processingTimeMs:number; status:string };
+type OcrRecord = { driveFileId:string; fileName:string; ocrText:string; ocrConfidence:number; processingTimeMs:number; status:string };
 type BenchmarkRecord = {
   fileName:string; groupId:string; split:Split; groundTruthStatus:GroundTruth['groundTruthStatus']; expectedBrandFamily?:string; expectedProductName?:string;
   topCandidates:Array<{ confidence?:number; [key:string]:unknown }>;
@@ -20,9 +20,9 @@ type BenchmarkRecord = {
 };
 
 const root = process.cwd();
-const truth = JSON.parse(await readFile(path.join(root, 'tests/fixtures/brand-identification-ground-truth.json'), 'utf8')) as GroundTruth[];
+const truth = JSON.parse(await readFile(path.join(root, 'tests/fixtures/product-identification-ground-truth.json'), 'utf8')) as GroundTruth[];
 const ocrJson = JSON.parse(await readFile(path.join(root, 'tests/results/ocr-final.json'), 'utf8')) as { results:OcrRecord[] };
-const ocr = new Map(ocrJson.results.map((item) => [item.fileName, item]));
+const ocr = new Map(ocrJson.results.map((item) => [item.driveFileId ?? item.fileName, item]));
 const resultDir = path.join(root, 'tests/results');
 await mkdir(resultDir, { recursive:true });
 
@@ -31,15 +31,15 @@ function contains(left?:string, right?:string) { const a=normalizeCatalogTerm(le
 function candidateMatches(item:CandidateMatch | undefined, expected?:string) { return Boolean(item && same(item.productName, expected)); }
 function brandMatches(item:CandidateMatch | undefined, expected?:string) { return Boolean(item && (same(item.brandFamily, expected) || contains(item.productName, expected))); }
 
-const cycles = [1,2,3,4,5] as const;
+const cycles = [1,2,3,4,5,6] as const;
 for (const cycle of cycles) {
   const groupCandidates = new Map<string, CandidateMatch[]>();
   if (cycle >= 4) for (const groupId of new Set(truth.map((item) => item.groupId))) {
     const group = truth.filter((item) => item.groupId === groupId);
-    const text = group.map((item) => ocr.get(item.fileName)?.ocrText ?? '').join('\n---\n');
+    const text = group.map((item) => ocr.get(item.driveFileId)?.ocrText ?? '').join('\n---\n');
     const repeatedTerms = [...new Set(text.split(/\s+/).map(normalizeCatalogTerm).filter((term) => term.length >= 2 && text.split(term).length > 2))];
-    const combined = identifyAlcoholProductAtCycle({ text, ocrConfidence:average(group.map((item) => ocr.get(item.fileName)?.ocrConfidence ?? 0)), imageCount:group.length, repeatedTerms }, cycle);
-    const individual = group.flatMap((item) => identifyAlcoholProductAtCycle({ text:ocr.get(item.fileName)?.ocrText ?? '', ocrConfidence:ocr.get(item.fileName)?.ocrConfidence ?? 0 }, cycle));
+    const combined = identifyAlcoholProductAtCycle({ text, ocrConfidence:average(group.map((item) => ocr.get(item.driveFileId)?.ocrConfidence ?? 0)), imageCount:group.length, repeatedTerms }, cycle);
+    const individual = group.flatMap((item) => identifyAlcoholProductAtCycle({ text:ocr.get(item.driveFileId)?.ocrText ?? '', ocrConfidence:ocr.get(item.driveFileId)?.ocrConfidence ?? 0 }, cycle));
     const merged = new Map<string,CandidateMatch>();
     for (const candidate of [...combined,...individual]) {
       const key = candidate.productId ?? candidate.productName ?? '';
@@ -49,7 +49,7 @@ for (const cycle of cycles) {
     groupCandidates.set(groupId,[...merged.values()].sort((a,b)=>(b.totalConfidence ?? 0)-(a.totalConfidence ?? 0)).slice(0,5));
   }
   const records: BenchmarkRecord[] = truth.map((item) => {
-    const raw = ocr.get(item.fileName);
+    const raw = ocr.get(item.driveFileId);
     const started = performance.now();
     const candidates = cycle >= 4 ? groupCandidates.get(item.groupId) ?? [] : identifyAlcoholProductAtCycle({ text:raw?.ocrText ?? '', ocrConfidence:raw?.ocrConfidence ?? 0 }, cycle);
     const identificationTimeMs = performance.now() - started;
@@ -75,11 +75,12 @@ for (const cycle of cycles) {
     cycle,
     evaluatedAt:new Date().toISOString(),
     algorithmChange:[
-      'NFKC後の単純部分一致による基準測定',
-      '日本語・英字・OCR誤り正規化とN-gram/LevenshteinのRecall重視Top20検索',
-      '商品名・蔵元・容量・ABV・酒種・除外語によるPrecision重視再ランキング',
-      '同一商品グループの表・裏・全体写真OCRを統合し反復根拠を加点',
-      '校正信頼度・候補間margin・根拠種別で低根拠候補をabstain'
+      'NFKC normalization and exact alias matching establish the baseline.',
+      'OCR confusion correction plus n-gram and Levenshtein retrieval improve recall.',
+      'Maker, volume, ABV, alcohol type, and exclusion evidence rerank candidates.',
+      'Multiple photos in the same product group fuse front, back, and bottle evidence.',
+      'Confirmed visual similarity and wider local-catalog retrieval add non-text evidence.',
+      'Validation-calibrated confidence, evidence diversity, and margin enforce abstention.'
     ][cycle - 1],
     metricsBySplit,
     holdoutSealed:true,
@@ -87,10 +88,12 @@ for (const cycle of cycles) {
   };
   await writeFile(path.join(resultDir, `brand-cycle-${cycle}.json`), `${JSON.stringify(payload,null,2)}\n`);
   if (cycle === 1) await writeFile(path.join(resultDir, 'brand-baseline.json'), `${JSON.stringify(payload,null,2)}\n`);
-  if (cycle === 5) {
+  if (cycle === 6) {
     const holdoutRecords = records.filter((item) => item.split === 'holdout');
-    await writeFile(path.join(resultDir, 'brand-holdout-final.json'), `${JSON.stringify({ evaluatedAt:new Date().toISOString(), cycle:5, metrics:metrics(holdoutRecords), records:holdoutRecords },null,2)}\n`);
+    await writeFile(path.join(resultDir, 'brand-holdout-final.json'), `${JSON.stringify({ evaluatedAt:new Date().toISOString(), cycle:6, metrics:metrics(holdoutRecords), records:holdoutRecords },null,2)}\n`);
+    await writeFile(path.join(resultDir, 'identification-holdout-final.json'), `${JSON.stringify({ evaluatedAt:new Date().toISOString(), cycle:6, metrics:metrics(holdoutRecords), records:holdoutRecords },null,2)}\n`);
   }
+  await writeFile(path.join(resultDir, `identification-cycle-${cycle}.json`), `${JSON.stringify(payload,null,2)}\n`);
   console.log(`cycle ${cycle}`, JSON.stringify(metricsBySplit));
 }
 

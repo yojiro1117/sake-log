@@ -14,7 +14,7 @@ const fixturesDir = path.join(repoRoot, 'tests', 'fixtures');
 const tempDir = path.join(imageDir, '.converted-validation');
 const validationLimit = Number(process.env.VALIDATION_LIMIT ?? 0);
 const driveFileListPath = path.join(fixturesDir, 'google-drive-files.json');
-const groundTruthPath = path.join(fixturesDir, 'brand-identification-ground-truth.json');
+const groundTruthPath = path.join(fixturesDir, 'product-identification-ground-truth.json');
 
 const driveFiles = JSON.parse(await readFile(driveFileListPath, 'utf8'))
   .map((file) => ({
@@ -25,10 +25,12 @@ const driveFiles = JSON.parse(await readFile(driveFileListPath, 'utf8'))
     sizeLabel: file.sizeLabel
   }))
   .slice(0, validationLimit > 0 ? validationLimit : undefined);
+const downloadResults = JSON.parse(await readFile(path.join(imageDir, 'download-results.json'), 'utf8').catch(() => '[]'));
+const localNameById = new Map(downloadResults.map((item) => [item.driveFileId, item.localFileName]));
 const groundTruthDocument = JSON.parse(await readFile(groundTruthPath, 'utf8'));
 const groundTruthItems = Array.isArray(groundTruthDocument) ? groundTruthDocument : groundTruthDocument.images;
 if (!Array.isArray(groundTruthItems)) throw new Error('Brand ground truth must be an array or contain an images array.');
-const groundTruthByFile = new Map(groundTruthItems.map((item) => [item.fileName, item]));
+const groundTruthById = new Map(groundTruthItems.map((item) => [item.driveFileId, item]));
 
 const candidateMaster = [
   { productName: '獺祭', makerName: '旭酒造', alcoholType: 'sake', aliases: ['獺祭', '獺祭45', 'DASSAI', 'DASSAI 45'] },
@@ -58,8 +60,9 @@ try {
   const finalResults = [];
 
   for (const file of driveFiles) {
-    const sourcePath = path.join(imageDir, file.fileName);
-    const exists = available.has(file.fileName);
+    const localFileName = localNameById.get(file.driveFileId) ?? file.fileName;
+    const sourcePath = path.join(imageDir, localFileName);
+    const exists = available.has(localFileName);
     if (!exists) {
       const missing = baseManifest(file, { errors: ['downloaded file was not found in temporary directory'] });
       manifest.push(missing);
@@ -74,8 +77,8 @@ try {
     const sha256 = createHash('sha256').update(original).digest('hex');
     const exif = readExif(original);
     const converted = await normalizeImageBuffer(original, file);
-    const image = await Jimp.read(converted.buffer);
-    const truth = groundTruthByFile.get(file.fileName) ?? {};
+    const image = await Jimp.fromBuffer(converted.buffer, { 'image/jpeg': { maxMemoryUsageInMB: 1024, maxResolutionInMP: 100 } });
+    const truth = groundTruthById.get(file.driveFileId) ?? {};
     const base = {
       ...file,
       fileSize: original.byteLength,
@@ -99,16 +102,18 @@ try {
     const c1 = await runCycle(worker, file.fileName, 1, [
       { name: 'converted-resized', buffer: await toResizedJpeg(image.clone(), 1000), psm: '11' }
     ]);
-    const c2 = await runCycle(worker, file.fileName, 2, [
-      { name: 'center-label-gray-contrast', buffer: await toCenterCrop(image.clone(), 1100), psm: '6' }
-    ]);
-    const c3 = await runCycle(worker, file.fileName, 3, [
-      { name: 'label-band-crop', buffer: await toTopCrop(image.clone(), 1200), psm: '6' }
-    ]);
+    const c2 = needsImprovement(c1.best)
+      ? await runCycle(worker, file.fileName, 2, [{ name: 'center-label-gray-contrast', buffer: await toCenterCrop(image.clone(), 1100), psm: '6' }])
+      : reuseCycle(file.fileName, 2, c1.best, 'fast-path accepted cycle 1');
+    const bestAfterCycle2 = chooseBest([c1.best, c2.best]);
+    const c3 = needsImprovement(bestAfterCycle2)
+      ? await runCycle(worker, file.fileName, 3, [{ name: 'label-band-crop', buffer: await toTopCrop(image.clone(), 1200), psm: '6' }])
+      : reuseCycle(file.fileName, 3, bestAfterCycle2, 'standard-path accepted previous result');
 
     const best = chooseBest([c1.best, c2.best, c3.best]);
     const candidates = buildCandidates(best.text);
     const final = {
+      driveFileId: file.driveFileId,
       fileName: file.fileName,
       status: best.text ? 'success' : 'warning',
       bestCycle: best.cycle,
@@ -374,6 +379,14 @@ function chooseBest(results) {
   return results
     .filter(Boolean)
     .toSorted((a, b) => scoreOcr(b) - scoreOcr(a))[0] ?? { cycle: 0, variant: 'none', text: '', confidence: 0, candidateCount: 0 };
+}
+
+function needsImprovement(result) {
+  return !result?.text || result.confidence < 0.52 || result.candidateCount === 0;
+}
+
+function reuseCycle(fileName, cycle, best, reason) {
+  return { fileName, cycle, status:'reused', best:{ ...best, cycle }, variants:[], processingTimeMs:0, problemClassification:[reason] };
 }
 
 function scoreOcr(result) {

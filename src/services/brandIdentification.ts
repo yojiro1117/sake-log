@@ -18,17 +18,17 @@ export interface IdentificationInput {
 }
 
 export function identifyAlcoholProduct(input: IdentificationInput): CandidateMatch[] {
-  return identifyAlcoholProductAtCycle(input, 5);
+  return identifyAlcoholProductAtCycle(input, 6);
 }
 
-export function identifyAlcoholProductAtCycle(input: IdentificationInput, cycle: 1 | 2 | 3 | 4 | 5): CandidateMatch[] {
+export function identifyAlcoholProductAtCycle(input: IdentificationInput, cycle: 1 | 2 | 3 | 4 | 5 | 6): CandidateMatch[] {
   const catalog = input.catalog ?? builtInAlcoholProductCatalog;
   if (cycle === 1) {
     const searchable = input.text.normalize('NFKC').toLowerCase().replace(/\s/g, '');
     return catalog.filter((entry) => [entry.brandFamily, ...entry.aliases, ...entry.latinAliases].some((term) => searchable.includes(term.normalize('NFKC').toLowerCase().replace(/\s/g, ''))))
       .slice(0, 5).map((entry, index) => ({ productId:entry.productId, brandFamily:entry.brandFamily, productName:entry.canonicalProductName, makerName:entry.makerName, alcoholType:entry.alcoholType, confidence:'medium', matchReasons:['正規化前の部分一致'], totalConfidence:58, rank:index + 1, requiresConfirmation:true }));
   }
-  const retrieved = retrieveCatalogCandidates(input.text, catalog, 20);
+  const retrieved = retrieveCatalogCandidates(input.text, catalog, cycle >= 5 ? 50 : 20);
   if (cycle === 2) return retrieved.slice(0, 5).map((item, index) => ({
     productId:item.entry.productId, brandFamily:item.entry.brandFamily, productName:item.entry.canonicalProductName,
     variantName:item.entry.variantName, makerName:item.entry.makerName, alcoholType:item.entry.alcoholType,
@@ -37,7 +37,7 @@ export function identifyAlcoholProductAtCycle(input: IdentificationInput, cycle:
   }));
   const context = cycle === 3 ? { text:input.text, ocrConfidence:input.ocrConfidence } : cycle === 4 ? { ...input, visualScores:undefined, fingerprint:undefined } : input;
   const ranked = rankCatalogCandidates(retrieved, context);
-  if (cycle < 5 || ranked.length === 0) return ranked;
+  if (cycle < 6 || ranked.length === 0) return ranked;
   const top = ranked[0].calibratedConfidence ?? 0;
   const margin = top - (ranked[1]?.calibratedConfidence ?? 0);
   const evidenceKinds = new Set(ranked[0].evidences?.map((item) => item.kind));
@@ -76,12 +76,21 @@ export async function recordIdentificationRun(input: {
   return id;
 }
 
-export async function confirmCatalogCandidate(candidate: CandidateMatch, runId: string, action: 'accepted' | 'corrected' | 'rejected', reference?: { imageHash: string; sourceImageId: string; fingerprint: VisualFingerprint }) {
-  await db.learningEvents.put({ id:crypto.randomUUID(), runId, proposedProductId:candidate.productId, confirmedProductId:action === 'accepted' ? candidate.productId : undefined, action, createdAt:new Date().toISOString() });
-  if (action !== 'accepted' || !candidate.productId) return;
-  const existing = await db.productCatalog.get(candidate.productId);
-  const builtIn = builtInAlcoholProductCatalog.find((item) => item.productId === candidate.productId);
-  if (existing) await db.productCatalog.update(candidate.productId, { userConfirmed:true, source:'user-confirmed', updatedAt:new Date().toISOString() });
-  else if (builtIn) await db.productCatalog.put({ ...builtIn, userConfirmed:true, source:'user-confirmed', updatedAt:new Date().toISOString() });
-  if (reference) await db.referenceImages.put({ id:`${candidate.productId}:${reference.imageHash}`, productId:candidate.productId, imageHash:reference.imageHash, fingerprint:reference.fingerprint, sourceImageId:reference.sourceImageId, userConfirmed:true, createdAt:new Date().toISOString() });
+export async function confirmCatalogCandidate(
+  candidate: CandidateMatch,
+  runId: string,
+  action: 'accepted' | 'corrected' | 'rejected',
+  reference?: { imageHash: string; sourceImageId: string; fingerprint: VisualFingerprint; learningEventId?: string }
+) {
+  const eventId = reference?.learningEventId ?? `${runId}:${reference?.imageHash ?? 'no-image'}:${candidate.productId ?? candidate.productName}:${action}`;
+  await db.transaction('rw', db.learningEvents, db.productCatalog, db.referenceImages, async () => {
+    if (await db.learningEvents.get(eventId)) return;
+    await db.learningEvents.put({ id:eventId, runId, proposedProductId:candidate.productId, confirmedProductId:action === 'accepted' ? candidate.productId : undefined, action, createdAt:new Date().toISOString() });
+    if (action !== 'accepted' || !candidate.productId) return;
+    const existing = await db.productCatalog.get(candidate.productId);
+    const builtIn = builtInAlcoholProductCatalog.find((item) => item.productId === candidate.productId);
+    if (existing) await db.productCatalog.update(candidate.productId, { userConfirmed:true, source:'user-confirmed', updatedAt:new Date().toISOString() });
+    else if (builtIn) await db.productCatalog.put({ ...builtIn, userConfirmed:true, source:'user-confirmed', updatedAt:new Date().toISOString() });
+    if (reference) await db.referenceImages.put({ id:`${candidate.productId}:${reference.imageHash}`, productId:candidate.productId, imageHash:reference.imageHash, fingerprint:reference.fingerprint, sourceImageId:reference.sourceImageId, userConfirmed:true, createdAt:new Date().toISOString() });
+  });
 }

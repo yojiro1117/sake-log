@@ -1,121 +1,312 @@
 {
-  "summary": {
-    "images": 72,
-    "confirmedTuningReferences": 19,
-    "repeatPhotoTests": 15,
-    "top1Accuracy": 0.13333333333333333,
-    "falsePositiveRate": 0,
-    "abstentionRate": 0.8666666666666667,
+  "evaluatedAt": "2026-07-15T04:49:07.931Z",
+  "imageCount": 151,
+  "decodedImages": 151,
+  "referenceGroups": 17,
+  "failures": [],
+  "legacy": {
+    "mode": "legacy",
     "threshold": 0.78,
-    "note": "Only the first tuning image in each group is used as a confirmed reference; validation and holdout images are not used as references."
+    "summary": {
+      "evaluated": 15,
+      "top1Accuracy": 0.06666666666666667,
+      "falsePositiveRate": 0,
+      "abstentionRate": 0.9333333333333333
+    },
+    "records": [
+      {
+        "driveFileId": "12fYhKeAd9NpjiWeKDasfa66WE4bl1au9",
+        "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+        "split": "tuning",
+        "expectedGroupId": "laphroaig-triple-wood",
+        "similarity": 0.5647822132113819,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1GG0eZ2T48PUzb2XwKC_uXGAi5O2YpSLG",
+        "fileName": "IMG_1703.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "karine-premium",
+        "similarity": 0.7798360906862745,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1M7F3DNH9gJv5xsdTZFc4_1jcoXgH9zOy",
+        "fileName": "IMG_2051.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hibiki-harmony",
+        "similarity": 0.6411780024509803,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1J67mlbitmz29m9wabfQK8JzyrP0sEGPd",
+        "fileName": "IMG_2272.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.7753293504901961,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1GFBdQgmgjAKeYw98PtvVSs_G-nDSN_X6",
+        "fileName": "IMG_2274.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.6586215336587274,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1QIFqVrlJxh4uh5HP9weUjk4h9qLkn66P",
+        "fileName": "IMG_2291.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.6669747812077471,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1HpZkc1BuNn9SsUGIsNaPmSXivrGeFyVn",
+        "fileName": "IMG_2292.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.7333823529411765,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1hJLGDTSN23EWr8Vcuj0KIckXBuy8yZs3",
+        "fileName": "IMG_2293.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "unknown-kikota",
+        "similarity": 0.635473555717551,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
+        "fileName": "IMG_2874.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-new-moon",
+        "topGroupId": "nabeshima-new-moon",
+        "referenceDriveFileId": "110yFY40XHgvu6FwDZzPNsa6imhzEd5Y4",
+        "similarity": 0.8006617647058822,
+        "correct": true,
+        "abstained": false
+      },
+      {
+        "driveFileId": "1_VpshPZ-SKenMTfVfyU5tPcRVccnUYzP",
+        "fileName": "IMG_4295.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.6430698529411765,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1G-vSJby7u-6D7n-U9Pd-cBFbPGJdNb21",
+        "fileName": "IMG_4618 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "yamamoto",
+        "similarity": 0.6322594975490196,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1YUl9g1LOB85BIXFEMhjep7Trj66nuIUF",
+        "fileName": "IMG_4619 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.6949402573529412,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "151M8GmeqHILTxOwckhoi7Vgj8zUooIWR",
+        "fileName": "IMG_4620 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.6392233455882353,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1ZroFvTmFNXOrJ1nuzeWgLhsoacOUQ9XB",
+        "fileName": "IMG_5188.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6053799019607843,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "11bcScj3KruqCVke1wdpROe2ZL15Oe0lb",
+        "fileName": "IMG_5189.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6137760416666667,
+        "correct": false,
+        "abstained": true
+      }
+    ]
   },
-  "records": [
-    {
-      "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
-      "expectedGroupId": "laphroaig-triple-wood",
-      "similarity": 0.5878079013171875,
-      "correct": false,
-      "abstained": true
+  "composite": {
+    "mode": "composite",
+    "threshold": 0.84,
+    "summary": {
+      "evaluated": 15,
+      "top1Accuracy": 0.06666666666666667,
+      "falsePositiveRate": 0,
+      "abstentionRate": 0.9333333333333333
     },
-    {
-      "fileName": "IMG_1703.HEIC",
-      "expectedGroupId": "karine-premium",
-      "similarity": 0.7798360906862745,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_2051.HEIC",
-      "expectedGroupId": "hibiki-harmony",
-      "similarity": 0.6411780024509803,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_2272.HEIC",
-      "expectedGroupId": "nikka-coffey-malt",
-      "similarity": 0.6647214111097078,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_2274.HEIC",
-      "expectedGroupId": "nikka-coffey-malt",
-      "similarity": 0.6586215336587274,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_2325.HEIC",
-      "expectedGroupId": "yoichi",
-      "similarity": 0.6041023284313726,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_2874.HEIC",
-      "expectedGroupId": "nabeshima-new-moon",
-      "topGroupId": "nabeshima-new-moon",
-      "similarity": 0.8006617647058822,
-      "correct": true,
-      "abstained": false
-    },
-    {
-      "fileName": "IMG_3427.heic",
-      "expectedGroupId": "taka",
-      "similarity": 0.704203431372549,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_3666.HEIC",
-      "expectedGroupId": "w-yamadanishiki",
-      "similarity": 0.7261764236274563,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_4293.HEIC",
-      "expectedGroupId": "aramasa-2020",
-      "similarity": 0.6722487745098039,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_4294.HEIC",
-      "expectedGroupId": "aramasa-2020",
-      "topGroupId": "aramasa-2020",
-      "similarity": 0.8300219215811385,
-      "correct": true,
-      "abstained": false
-    },
-    {
-      "fileName": "IMG_4295.HEIC",
-      "expectedGroupId": "sharaku",
-      "similarity": 0.6430698529411765,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_4618 2.HEIC",
-      "expectedGroupId": "yamamoto",
-      "similarity": 0.6569918970713347,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_4619 2.HEIC",
-      "expectedGroupId": "sharaku",
-      "similarity": 0.6949402573529412,
-      "correct": false,
-      "abstained": true
-    },
-    {
-      "fileName": "IMG_4620 2.HEIC",
-      "expectedGroupId": "sharaku",
-      "similarity": 0.6397400588360405,
-      "correct": false,
-      "abstained": true
-    }
-  ]
+    "records": [
+      {
+        "driveFileId": "12fYhKeAd9NpjiWeKDasfa66WE4bl1au9",
+        "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+        "split": "tuning",
+        "expectedGroupId": "laphroaig-triple-wood",
+        "similarity": 0.621006756597125,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1GG0eZ2T48PUzb2XwKC_uXGAi5O2YpSLG",
+        "fileName": "IMG_1703.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "karine-premium",
+        "similarity": 0.8074273831729488,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1M7F3DNH9gJv5xsdTZFc4_1jcoXgH9zOy",
+        "fileName": "IMG_2051.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hibiki-harmony",
+        "similarity": 0.6960326447909781,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1J67mlbitmz29m9wabfQK8JzyrP0sEGPd",
+        "fileName": "IMG_2272.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.8376264047503597,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1GFBdQgmgjAKeYw98PtvVSs_G-nDSN_X6",
+        "fileName": "IMG_2274.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nikka-coffey-malt",
+        "similarity": 0.7051058833582022,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1QIFqVrlJxh4uh5HP9weUjk4h9qLkn66P",
+        "fileName": "IMG_2291.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.7276310999604128,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1HpZkc1BuNn9SsUGIsNaPmSXivrGeFyVn",
+        "fileName": "IMG_2292.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-purple",
+        "similarity": 0.8010971125653417,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1hJLGDTSN23EWr8Vcuj0KIckXBuy8yZs3",
+        "fileName": "IMG_2293.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "unknown-kikota",
+        "similarity": 0.7143379261342204,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
+        "fileName": "IMG_2874.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "nabeshima-new-moon",
+        "topGroupId": "nabeshima-new-moon",
+        "referenceDriveFileId": "110yFY40XHgvu6FwDZzPNsa6imhzEd5Y4",
+        "similarity": 0.8537985634530709,
+        "correct": true,
+        "abstained": false
+      },
+      {
+        "driveFileId": "1_VpshPZ-SKenMTfVfyU5tPcRVccnUYzP",
+        "fileName": "IMG_4295.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.6991336865586633,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1G-vSJby7u-6D7n-U9Pd-cBFbPGJdNb21",
+        "fileName": "IMG_4618 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "yamamoto",
+        "similarity": 0.6721525444985301,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1YUl9g1LOB85BIXFEMhjep7Trj66nuIUF",
+        "fileName": "IMG_4619 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.7624355404373824,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "151M8GmeqHILTxOwckhoi7Vgj8zUooIWR",
+        "fileName": "IMG_4620 2.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "sharaku",
+        "similarity": 0.6719282715782586,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "1ZroFvTmFNXOrJ1nuzeWgLhsoacOUQ9XB",
+        "fileName": "IMG_5188.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.6504111056125456,
+        "correct": false,
+        "abstained": true
+      },
+      {
+        "driveFileId": "11bcScj3KruqCVke1wdpROe2ZL15Oe0lb",
+        "fileName": "IMG_5189.HEIC",
+        "split": "tuning",
+        "expectedGroupId": "hououbiden",
+        "similarity": 0.652489777688251,
+        "correct": false,
+        "abstained": true
+      }
+    ]
+  },
+  "improvement": {
+    "top1AccuracyPoints": 0,
+    "falsePositivePoints": 0
+  },
+  "note": "Only user-reviewed tuning images are references. Validation and holdout images never become references.",
+  "recalibratedAt": "2026-07-15T04:55:09.940Z",
+  "recalibrationSource": "Stored all-image similarity records from the 0.78 run; no image was decoded again."
 }

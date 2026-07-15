@@ -1,3 +1,10 @@
-# 視覚照合検証
+# Visual Matching Validation
 
-確認済み調整用画像19件を参照とし、同一グループの残り15件をdHashと色ヒストグラムで照合した。閾値0.78でTop1 13.3%、誤候補0%、棄却86.7%。表裏・構図・照明差に弱いため主判定にはせず、OCR等と組み合わせる補助証拠に限定した。validation/holdout画像は参照へ使用していない。
+All 151 Drive images decoded successfully for feature extraction. Evaluation used 15 repeated, reviewed product photos and tuning-only references.
+
+- Legacy dHash + color, threshold 0.78: Top-1 6.7%, false positives 0%, abstention 93.3%.
+- Composite dHash + aHash + local pHash + color + edge + layout, threshold 0.78: Top-1 6.7%, false positives 20.0%, abstention 73.3%.
+- The 0.78 composite threshold was rejected.
+- Recalibrated composite threshold 0.84: one correct match survived and no wrong match exceeded the threshold in this set.
+
+Visual matching is therefore auxiliary only. References must be user-confirmed, and a visual score cannot automatically identify or learn a product.

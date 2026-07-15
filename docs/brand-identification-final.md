@@ -1,7 +1,3 @@
-# 銘柄自動特定 最終設計
+# Brand Identification Final
 
-最終経路は TextDetector（利用可能時）、Tesseract.js `jpn+eng`、3種の画像前処理、OCR文字統合、構造化カタログ検索、根拠別再順位付け、複数写真統合、JAN/EAN、確認済み参照写真、信頼度校正、ユーザー確認で構成する。
-
-72枚はすべて処理済み。OCR文字取得100%、HEIC変換100%、EXIF取得87.5%、平均5,511ms、最大13,586ms。高解像度8経路は20分で40枚に留まり重すぎたため、通常経路は3経路へ削減し、高解像度は手動再解析時だけ使用する。
-
-候補は自動確定しない。OCR空・未登録・証拠不足では固定候補を表示しない。ユーザーが確認して保存した銘柄だけを端末内カタログと参照画像へ学習する。DB v5は既存データを削除せずストアを追加する。
+All 151 images were processed. OCR text hit and HEIC conversion were 100%; EXIF captured-date retrieval was 90.1%; average/max OCR time was 6,479/27,039ms. The final six-cycle engine combines OCR, barcode, structured catalog, multi-photo evidence, confirmed visual references, and correction history, then abstains on insufficient evidence. Sealed holdout brand-family accuracy was 30.0%, exact-product Top-1 0.0%, false positives 0%, and abstention 81.8%. These limited recall values are retained honestly; fixed famous-brand suggestions are not used.
