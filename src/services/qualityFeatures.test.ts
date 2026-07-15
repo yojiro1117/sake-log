@@ -27,14 +27,14 @@ describe('quality features', () => {
   });
 
   it('persists classification corrections and uses them on the next classification', async () => {
-    await recordClassificationCorrection('glass-test', 'other', 'glass');
+    await recordClassificationCorrection('glass-test', 'other', 'glass', 'classification-event-1');
     const corrections = await db.classificationCorrections.toArray();
     const result = classifyPhoto({ ocrText: 'glass-test', width: 800, height: 800, corrections });
     expect(result.alternatives.some((item) => item.type === 'glass')).toBe(true);
   });
 
   it('stores OCR corrections locally and raises a grounded candidate without auto-confirming', async () => {
-    await recordOcrCorrection({ observedText: '黒霧鳥', productName: '黒霧島', makerName: '霧島酒造', alcoholType: 'shochu' });
+    await recordOcrCorrection({ observedText: '黒霧鳥', productName: '黒霧島', makerName: '霧島酒造', alcoholType: 'shochu', learningEventId: 'ocr-event-1' });
     const candidates = await learningCandidates('ラベル 黒霧鳥 900ml');
     expect(candidates[0]).toMatchObject({ productName: '黒霧島', requiresConfirmation: true });
     expect(candidates[0].matchReasons).toContain('過去の修正履歴');
@@ -62,7 +62,7 @@ describe('quality features', () => {
   });
 
   it('keeps database migration version and new stores without deleting existing tables', () => {
-    expect(db.verno).toBe(3);
+    expect(db.verno).toBe(4);
     expect(db.tables.map((table) => table.name)).toEqual(expect.arrayContaining(['logs', 'images', 'drafts', 'ocrCorrections', 'labelAliases', 'classificationCorrections']));
   });
 });

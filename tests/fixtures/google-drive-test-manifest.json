@@ -37,7 +37,7 @@
       "ネイティブ形式のままOCR"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "wWr\n\nN 4 ーー\n\nビー\n\nミー\n\n上\n\nリ\n\n5 生\n\nー\n\n[ー\n\nー\n\n間 ー\n\nンプ 4\n\nー\n\n和み\n\nHIBIKI\n\nSUNTORY wursky\n\n了bp\n\nAmeticy),\n\nKN ESE AR\n\nend of the fin\n\nいいっ\n\n5\n\nダテ\n\n==\n\nK Ay,\n\nGy ©\n\nY nilps\n\nミミテー\n\n-\n\nいい",
     "ocrConfidence": 0.39,
@@ -45,7 +45,11 @@
     "detectedMakerName": "サントリー",
     "detectedAlcoholType": "whisky",
     "processingTimeMs": 10776,
-    "expectedFormat": "JPEG"
+    "expectedFormat": "JPEG",
+    "expectedProductName": "響",
+    "expectedMakerName": "サントリー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "3780045A-CF34-4840-A568-B8E57175AA1D.JPG",
@@ -63,12 +67,16 @@
       "ネイティブ形式のままOCR"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "ー ー を\nw-1 :\n 6 i 0 A 1 1 と ’\ns way て 炉 Ib\nLicmmsy -§ リ 』 pi 4 (\n・梓ー\n a し\nL F 2 J\na bi ー 1 ー\nーー ーー % 7 ッ / BIL\n- し E= ——=\nーー Bey は ーー .\nーー _ 0 BRE a\n\\ [ . ンー\nー The Jas Sake. / i f.\nnt MV ー\nNMAr yy paNISH!\nWiacane. $ =outen Ca >",
     "ocrConfidence": 0.3,
     "processingTimeMs": 14499,
-    "expectedFormat": "JPEG"
+    "expectedFormat": "JPEG",
+    "expectedProductName": "W",
+    "expectedMakerName": "渡辺酒造店",
+    "expectedAlcoholType": "sake",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
@@ -271,12 +279,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "リ いり 償 証 -\nmm ー \\ maisn; 3\n A ( 9\nド5 WAY め いい る\n7'fge #\n(r 生生\nガリ I ー - し\n( (ア \\\n[ § 導き 0 ー L 。 。\n用 ー\n菩 ーー\nY TET ご に\n較 ババ 虐同。\nN 1 上間ー 5 /g\nし 3 s » 4 きす\n 補 ンプWM wirir B\n TEE\n。 il 4\nMT 上ー .\n」衝 本\nだ E. 。 ,\nいくクツ リン2",
     "ocrConfidence": 0.3,
     "processingTimeMs": 11566,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "刈穂",
+    "expectedMakerName": "秋田清酒",
+    "expectedAlcoholType": "sake",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_1704.HEIC",
@@ -294,12 +306,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "—\n\nーー一\n\nf\n\nー\n\nしあら\n\nf\n\nかか\n\nし\n\nド J\n\nTHIS WaY\n\n fl\n\nEa\n\n(』\n\nル\n\n(l\n\nB\n\nn\n\n計\n\nud\n\nte :\n\n』\n\n純\n\nを の\n\n 時\n\nKUBoTA",
     "ocrConfidence": 0.32,
     "processingTimeMs": 7712,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "久保田",
+    "expectedMakerName": "朝日酒造",
+    "expectedAlcoholType": "sake",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2048.JPG",
@@ -339,12 +355,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "島 /, ]\nar ( c c) IED\n. 1 , イマ ,\n出 5ニーグッ) 0か\nーー 、馬に の て\n) -— PY L !\nKA WHISKY 【\nGLE [1 ; )\ny AGI 】 3 ぎ\nBー — ー 0\n\\ ー\nミー\n=>\n\" a\nに - ーー ーー 4 . E §\n'HISKY\nLE MALT 時一\nGIKYO\n? Sea———\n’\nTe Ty C\ncul\n所ジジシグルモルト\nにでつくられたルト 誠\nTSと p JE L »",
     "ocrConfidence": 0.33,
     "processingTimeMs": 13843,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "宮城峡",
+    "expectedMakerName": "ニッカウヰスキー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2051.HEIC",
@@ -362,7 +382,7 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "リン\n\n(el\n\nる6 ーー\n\nは)\n\n»!\n\ny. THIS WAY A\n\nきき\n\nーニーー 会ョーー一\n\n編川ー\n\n「\n\nHIBIKI\n\nORY WHISKY\n\nJAPANESE HARMO\n\nいい\n\nblend of the fi\n\nりお\n\n「\n\nうみ\n\nーー\n\nあー",
     "ocrConfidence": 0.48,
@@ -370,7 +390,11 @@
     "detectedMakerName": "サントリー",
     "detectedAlcoholType": "whisky",
     "processingTimeMs": 13768,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "響",
+    "expectedMakerName": "サントリー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2268.HEIC",
@@ -414,12 +438,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "ーー & 用計\n1 W 。\n ー ー ー NI\nL ー\nーーギコ wi\n -\n4 kd ー ー >\n...・ IBICT =\n a ー 0\ngt 6 ー ー ー 幸二\n \\<K\nてる 問 CoFF\nゃも wHis\n4 セミモルト\nYS45x NIKー\nRL] ーー ®\npa— に\ncez RT «\n4 s * : た 放絞 際 ま\n0才5\nT CIMEABL SCR Y\nリッアンスの Se\nは4 ジー\n2の\nご ご ーー ニー\n_カフェモレ\n未 6C",
     "ocrConfidence": 0.33,
     "processingTimeMs": 13764,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "ニッカ カフェモルト",
+    "expectedMakerName": "ニッカウヰスキー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2270.HEIC",
@@ -460,12 +488,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "£d rrmmmmmmi E ーーで\nに ー いい “=\nCTTESZI m .\nASIHAANONW ANSIH An\n40 ASNOH IHLHoY .\n_— AaTsamm議 んの MIHIN A2 S08 0) C L lnig\n: 四/ 人へ イエイヤの2クズズ人拓朗\n® 用 が7コ ーー\n) -4 ) 9\n ! E\n3 SIHA 3S3NW R&d\np RRISEL = .\nv1HY X\nを ー <\nタテ : THOI(\nすすケイてテーュエーテテテテrr NMT",
     "ocrConfidence": 0.31,
     "processingTimeMs": 12961,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "ニッカ カフェモルト",
+    "expectedMakerName": "ニッカウヰスキー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2272.HEIC",
@@ -483,12 +515,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "ター\n\nゅ、起\n\nのの\n\n“»\n\no\n\nーー\n\n6 6\n\n-\n\nド っ\n\n1 —\n\nス\n\n« ile\n\nAX\n\nTHIS WAY\n\nNIKKA\n\n記し 、\n\n<\n\nCOFFEY MAL\n\nWHISKY\n\nーー\n\nし\n\n上\n\nに\n\np\n\n-.\n\n®\n\nー\n\nNIKKA\n\nCOFFEY MALT m=umm\n\nWHISKY\n\nWE NIKKA WHISKY\n\nモルト\n\nak.45\n\nNIKKAWHISKY 2ウィ\n\n»\"",
     "ocrConfidence": 0.49,
     "processingTimeMs": 10417,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "ニッカ カフェモルト",
+    "expectedMakerName": "ニッカウヰスキー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2274.HEIC",
@@ -529,12 +565,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "—— / -s\n- ESE\n> ーー と 66) \\ 3\nーー Wfly ©\n_ee—— 2i 9\n3 ——— で は\n Zih\n\\ マーデーー ば フンデ\n{ と §\n;C _\nー \\ \\ » ー\n{ fi ド ー\nし 4\n6 y\n3ー =\nP, —\n § ー\n—— g\n¥ dhd\n; て、 - x\nーー 本\n イフ\n導いいいいい",
     "ocrConfidence": 0.31,
     "processingTimeMs": 11513,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "鍋島",
+    "expectedMakerName": "富久千代酒造",
+    "expectedAlcoholType": "sake",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2292.HEIC",
@@ -552,12 +592,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": ". EE— いれ て4\nここ。 297\nVetbidh . w ー A (v\n=—a (56) wiwt\n= SMOSRGE .\n 一 $ 4\nし Am 4\n】 上 ー\n—— pdy\nWe me ーー 4 2\nー 者\nif \\ 3 %\nF\\ —T\n[ A— ーー\nムッ P\nまこ\n# 5 2\nルレ4 —— -\nが 1\"\n-\nー まさ と\n上 —T. て\n mc 1\nR\nPRT——Y m\nトー 電\n。 4\nー いい\n・王いさ ;\n N\n PVE §\nいい § C\nuu PRS",
     "ocrConfidence": 0.24,
     "processingTimeMs": 11569,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "鍋島",
+    "expectedMakerName": "富久千代酒造",
+    "expectedAlcoholType": "sake",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2293.HEIC",
@@ -598,12 +642,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "いいいいる\n\nd\n\nリリ\n\nり\n\nに\n\nーー aa\n\nN\n\nN\n\nミ\n\n條\n\nMI\n\n[\n\nNN\n\nIT,\n\nA P82\n\nンーンコ\n\nAN\n\nIN\n\nJ\n\n2 Sky\n\nン\n\nノル\n\n\\h\n\nMA\n\nリ\n\nWa\n\nNN\n\n今 と\n\nーー のN、\n\nにうら\n\nいる\n\nfl\n\n、\n\ny\n\nれれレプ\n\nペー\n\nye\n\nMWyiske\n\neorsnet\n\nT3D-\n\nw &)\n\n=Y\n\nにや\n\nるーー\n\nーー\n\nで 、\n\n=\n\n5\n\nきみ\n\nゃへ\n\n-\n\nヘー\n\nに\n\nにきい\n\nの 間\n\nロー 。 、 ンー\n\n持誠5\n\n-=E",
     "ocrConfidence": 0.3,
     "processingTimeMs": 18604,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "知多",
+    "expectedMakerName": "サントリー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2297.HEIC",
@@ -621,12 +669,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "ー -\n とー\n ぶ、\nTN ペ\nhS NN\nアー ヽ . でて 中 ー\n Y soN N\\ B\nいい いい り NN\n、 いあ9 [) .// , 4\n—. '1\n-\\ ジーミー し B\nンレン用愛生 へー\nロン seo のこさ ww り て\nV & y _r や ヾ い、 ん MN\n{4 クロ\n人ンプ a 2 ». ンク リ/ A\nーー 上導 ランン 0め A\n y A 4 ソリ\n—= ンク\n導ャーンニー一 s R\\\n- Z1Wis\nンーに I 人\n—— # F\n5 、 ンプルル\nいいここつのいい ンー\np -\\ いや 5 ーー 、 に Il っ R\n; ヾき いぶこき と や y S # プア 4\nで = y a\nいぶ 4=_ i\n: ーー sd 2\nj\n でて = ne =\ns=so.- o\nの 計、。 ミミこさ提 &\n* = Se で i aeg L . ad %\nーー\nーー で0吉時\nーー ーーで 生計符\ne ーー ででで生二夫\nang ーー =% 等 ss 対人 = :\n: 0\nーー半ミー、、 、",
     "ocrConfidence": 0.24,
     "processingTimeMs": 20736,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "知多",
+    "expectedMakerName": "サントリー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2324.JPG",
@@ -666,12 +718,16 @@
       "heic-convertでJPEGへ変換"
     ],
     "errors": [],
-    "groundTruthStatus": "unknown",
+    "groundTruthStatus": "confirmed",
     "ocrStatus": "success",
     "ocrText": "Y\n\no /\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/ 4\n\nYOICHI\n\n北海』\n\n余市3\n\nLd\n\n所シングルモルト\n\n『でつくられたモルト原滑\n\nLLING でGov\n\nKKA WHISKY\n\nJAPAN\n\nウイスキーー\n\n &",
     "ocrConfidence": 0.66,
     "processingTimeMs": 5262,
-    "expectedFormat": "HEIC/HEIF"
+    "expectedFormat": "HEIC/HEIF",
+    "expectedProductName": "余市",
+    "expectedMakerName": "ニッカウヰスキー",
+    "expectedAlcoholType": "whisky",
+    "groundTruthSource": "manual visual review of temporary contact sheet, 2026-07-15"
   },
   {
     "fileName": "IMG_2436.HEIC",

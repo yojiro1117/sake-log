@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
 import path from 'node:path';
 
 async function enterApp(page: import('@playwright/test').Page) {
@@ -63,4 +64,11 @@ test('installed PWA shell is prepared for offline use', async ({ page, context, 
   await page.goto(appUrl, { waitUntil: 'domcontentloaded' });
   await expect(page.getByText('SAKEログ').first()).toBeVisible();
   await context.setOffline(false);
+});
+
+test('mobile app has no serious or critical accessibility violations', async ({ page }) => {
+  await enterApp(page);
+  const results = await new AxeBuilder({ page }).analyze();
+  const blocking = results.violations.filter((violation) => violation.impact === 'serious' || violation.impact === 'critical');
+  expect(blocking, blocking.map((item) => `${item.id}: ${item.help}`).join('\n')).toEqual([]);
 });

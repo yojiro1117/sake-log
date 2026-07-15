@@ -1,0 +1,985 @@
+{
+  "generatedAt": "2026-07-14T23:53:36.083Z",
+  "source": {
+    "file": "tests/results/ocr-final.json",
+    "sha256": "a60083d02d4578cd14118fd4cc291fcb421145dfb020ea76e910e17e641176e8",
+    "recordCount": 72
+  },
+  "definitions": {
+    "textHit": "OCR text contains at least one non-whitespace character",
+    "meaningfulText": "confidence is at least 0.25 and text contains a plausible word, volume, or ABV token",
+    "candidateExtraction": "at least one structured master alias is present in normalized OCR text",
+    "correctnessDenominator": "only records whose groundTruthStatus is confirmed"
+  },
+  "metrics": {
+    "total": 72,
+    "textHitRate": 1,
+    "meaningfulTextRate": 0.75,
+    "candidateExtractionRate": 0.222,
+    "noCandidateRate": 0.778,
+    "groundTruthConfirmed": 14,
+    "correctCandidateIncludedRate": 0.357,
+    "correctCandidateTop1Rate": 0.357,
+    "falseCandidateCount": 0,
+    "averageProcessingTimeMs": 12977,
+    "maxProcessingTimeMs": 26393
+  },
+  "records": [
+    {
+      "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
+      "ocrConfidence": 0.13,
+      "processingTimeMs": 7117,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
+      "ocrConfidence": 0.39,
+      "processingTimeMs": 10776,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "HIBIKI"
+          ]
+        }
+      ],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": true,
+      "correctCandidateTop1": true
+    },
+    {
+      "fileName": "3780045A-CF34-4840-A568-B8E57175AA1D.JPG",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 14499,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
+      "ocrConfidence": 0.31,
+      "processingTimeMs": 11345,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "5077832F-9F46-42EB-A4A6-DE4A9F57C672.JPG",
+      "ocrConfidence": 0.4,
+      "processingTimeMs": 4712,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
+      "ocrConfidence": 0.27,
+      "processingTimeMs": 12565,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+      "ocrConfidence": 0.59,
+      "processingTimeMs": 11401,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "ラフロイグ",
+          "makerName": "ラフロイグ蒸溜所",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "LAPHROAIG",
+            "ISLAY SINGLE MALT"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
+      "ocrConfidence": 0.39,
+      "processingTimeMs": 11771,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "ニッカ カフェモルト",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "COFFEY MALT"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "B2B359C6-662B-4C7B-B971-773C9E2484C9.JPG",
+      "ocrConfidence": 0.24,
+      "processingTimeMs": 16022,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [
+        {
+          "productName": "新政",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchedAliases": [
+            "新政"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 13447,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "E8A1A542-94AE-4884-A368-8CCAC773FDA8.JPG",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 15405,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "山崎",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "山崎"
+          ]
+        },
+        {
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "響"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_1703.HEIC",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 11566,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_1704.HEIC",
+      "ocrConfidence": 0.32,
+      "processingTimeMs": 7712,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "久保田",
+          "makerName": "朝日酒造",
+          "alcoholType": "sake",
+          "matchedAliases": [
+            "KUBOTA"
+          ]
+        }
+      ],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": true,
+      "correctCandidateTop1": true
+    },
+    {
+      "fileName": "IMG_2048.JPG",
+      "ocrConfidence": 0.25,
+      "processingTimeMs": 18590,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2050.HEIC",
+      "ocrConfidence": 0.33,
+      "processingTimeMs": 13843,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_2051.HEIC",
+      "ocrConfidence": 0.48,
+      "processingTimeMs": 13768,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "HIBIKI"
+          ]
+        }
+      ],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": true,
+      "correctCandidateTop1": true
+    },
+    {
+      "fileName": "IMG_2268.HEIC",
+      "ocrConfidence": 0.48,
+      "processingTimeMs": 13220,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2269.HEIC",
+      "ocrConfidence": 0.33,
+      "processingTimeMs": 13764,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_2270.HEIC",
+      "ocrConfidence": 0.41,
+      "processingTimeMs": 8705,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2271.HEIC",
+      "ocrConfidence": 0.31,
+      "processingTimeMs": 12961,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_2272.HEIC",
+      "ocrConfidence": 0.49,
+      "processingTimeMs": 10417,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "ニッカ カフェモルト",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "NIKKA COFFEY MALT",
+            "COFFEY MALT"
+          ]
+        }
+      ],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": true,
+      "correctCandidateTop1": true
+    },
+    {
+      "fileName": "IMG_2274.HEIC",
+      "ocrConfidence": 0.39,
+      "processingTimeMs": 9649,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "ニッカ カフェモルト",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "NIKKA COFFEY MALT",
+            "COFFEY MALT"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2291.HEIC",
+      "ocrConfidence": 0.31,
+      "processingTimeMs": 11513,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_2292.HEIC",
+      "ocrConfidence": 0.24,
+      "processingTimeMs": 11569,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_2293.HEIC",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 12084,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2296.HEIC",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 18604,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_2297.HEIC",
+      "ocrConfidence": 0.24,
+      "processingTimeMs": 20736,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": false,
+      "correctCandidateTop1": false
+    },
+    {
+      "fileName": "IMG_2324.JPG",
+      "ocrConfidence": 0.38,
+      "processingTimeMs": 4687,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2325.HEIC",
+      "ocrConfidence": 0.66,
+      "processingTimeMs": 5262,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "余市",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "余市",
+            "YOICHI"
+          ]
+        }
+      ],
+      "groundTruthStatus": "confirmed",
+      "correctCandidateIncluded": true,
+      "correctCandidateTop1": true
+    },
+    {
+      "fileName": "IMG_2436.HEIC",
+      "ocrConfidence": 0.32,
+      "processingTimeMs": 6797,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2853.HEIC",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 15456,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2873.HEIC",
+      "ocrConfidence": 0.42,
+      "processingTimeMs": 15258,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2874.HEIC",
+      "ocrConfidence": 0.39,
+      "processingTimeMs": 13824,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2876.HEIC",
+      "ocrConfidence": 0.34,
+      "processingTimeMs": 12564,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_2943.HEIC",
+      "ocrConfidence": 0.25,
+      "processingTimeMs": 13868,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3426.heic",
+      "ocrConfidence": 0.52,
+      "processingTimeMs": 2824,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3427.heic",
+      "ocrConfidence": 0.46,
+      "processingTimeMs": 4556,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3510.HEIC",
+      "ocrConfidence": 0.16,
+      "processingTimeMs": 20719,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3512.HEIC",
+      "ocrConfidence": 0.53,
+      "processingTimeMs": 6501,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3665.HEIC",
+      "ocrConfidence": 0.38,
+      "processingTimeMs": 22573,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3666.HEIC",
+      "ocrConfidence": 0.29,
+      "processingTimeMs": 12952,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3667.HEIC",
+      "ocrConfidence": 0.24,
+      "processingTimeMs": 11736,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3668.HEIC",
+      "ocrConfidence": 0.31,
+      "processingTimeMs": 19557,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3669.HEIC",
+      "ocrConfidence": 0.31,
+      "processingTimeMs": 11381,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3670.HEIC",
+      "ocrConfidence": 0.38,
+      "processingTimeMs": 9631,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3671.HEIC",
+      "ocrConfidence": 0.36,
+      "processingTimeMs": 11381,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3674.JPG",
+      "ocrConfidence": 0.25,
+      "processingTimeMs": 16720,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3962.HEIC",
+      "ocrConfidence": 0.22,
+      "processingTimeMs": 9709,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_3965.HEIC",
+      "ocrConfidence": 0.26,
+      "processingTimeMs": 11750,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4293.HEIC",
+      "ocrConfidence": 0.29,
+      "processingTimeMs": 12527,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "新政",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchedAliases": [
+            "新政"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4294.HEIC",
+      "ocrConfidence": 0.2,
+      "processingTimeMs": 12844,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4295.HEIC",
+      "ocrConfidence": 0.41,
+      "processingTimeMs": 26393,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4298.HEIC",
+      "ocrConfidence": 0.27,
+      "processingTimeMs": 13680,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4300.HEIC",
+      "ocrConfidence": 0.34,
+      "processingTimeMs": 22609,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4611.HEIC",
+      "ocrConfidence": 0.24,
+      "processingTimeMs": 15173,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4612.HEIC",
+      "ocrConfidence": 0.32,
+      "processingTimeMs": 16617,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchedAliases": [
+            "No.6",
+            "NO 6",
+            "NO.6"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4614.HEIC",
+      "ocrConfidence": 0.39,
+      "processingTimeMs": 14685,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4615 2.HEIC",
+      "ocrConfidence": 0.18,
+      "processingTimeMs": 11717,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4616 2.HEIC",
+      "ocrConfidence": 0.54,
+      "processingTimeMs": 24775,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4617 2.HEIC",
+      "ocrConfidence": 0.19,
+      "processingTimeMs": 9601,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4618 2.HEIC",
+      "ocrConfidence": 0.74,
+      "processingTimeMs": 17569,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4619 2.HEIC",
+      "ocrConfidence": 0.2,
+      "processingTimeMs": 9618,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4620 2.HEIC",
+      "ocrConfidence": 0.56,
+      "processingTimeMs": 16528,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4621.HEIC",
+      "ocrConfidence": 0.31,
+      "processingTimeMs": 7568,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchedAliases": [
+            "No.6",
+            "NO 6",
+            "NO.6"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4622 2.HEIC",
+      "ocrConfidence": 0.11,
+      "processingTimeMs": 7107,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_4623 2.HEIC",
+      "ocrConfidence": 0.44,
+      "processingTimeMs": 6149,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchedAliases": [
+            "No.6",
+            "NO 6",
+            "NO.6"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_5187.HEIC",
+      "ocrConfidence": 0.19,
+      "processingTimeMs": 19425,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_5188.HEIC",
+      "ocrConfidence": 0.24,
+      "processingTimeMs": 5206,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_5189.HEIC",
+      "ocrConfidence": 0.56,
+      "processingTimeMs": 26068,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "角瓶",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchedAliases": [
+            "角"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_5378.HEIC",
+      "ocrConfidence": 0.17,
+      "processingTimeMs": 14325,
+      "textHit": true,
+      "meaningfulText": false,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_7535.HEIC",
+      "ocrConfidence": 0.34,
+      "processingTimeMs": 12574,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [
+        {
+          "productName": "No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchedAliases": [
+            "No.6",
+            "NO 6",
+            "NO.6"
+          ]
+        }
+      ],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    },
+    {
+      "fileName": "IMG_7536.HEIC",
+      "ocrConfidence": 0.33,
+      "processingTimeMs": 14148,
+      "textHit": true,
+      "meaningfulText": true,
+      "candidates": [],
+      "groundTruthStatus": "unknown",
+      "correctCandidateIncluded": null,
+      "correctCandidateTop1": null
+    }
+  ]
+}

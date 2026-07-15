@@ -43,12 +43,7 @@ describe('photoImport candidates', () => {
     });
   });
 
-  it('uses raw OCR text only as a low confidence editable candidate', () => {
-    const candidates = buildCandidates('Unknown Label\n720ml');
-    expect(candidates[0]).toMatchObject({
-      productName: 'Unknown Label',
-      confidence: 'low'
-    });
-    expect(candidates[0].warning).toBeTruthy();
+  it('does not turn an ungrounded OCR line into a product candidate', () => {
+    expect(buildCandidates('Unknown Label\n720ml')).toEqual([]);
   });
 });

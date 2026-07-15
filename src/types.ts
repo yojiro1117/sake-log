@@ -139,6 +139,8 @@ export interface OcrResult {
   engine: 'textDetector' | 'tesseract' | 'none';
   status: 'success' | 'empty' | 'failed' | 'cancelled';
   message: string;
+  preprocessing?: string[];
+  processingTimeMs?: number;
 }
 
 export interface ImportedPhotoDraft {
@@ -158,6 +160,9 @@ export interface ImportedPhotoDraft {
   imageType: ImageType;
   classification?: PhotoClassification;
   sortOrder: number;
+  fileKey?: string;
+  classificationConfirmed?: boolean;
+  processing?: PhotoProcessingMetrics;
 }
 
 export interface PersistedImportedPhoto {
@@ -176,6 +181,25 @@ export interface PersistedImportedPhoto {
   imageType: ImageType;
   classification?: PhotoClassification;
   sortOrder: number;
+  fileKey?: string;
+  classificationConfirmed?: boolean;
+  processing?: PhotoProcessingMetrics;
+}
+
+export interface PhotoProcessingMetrics {
+  startedAt: string;
+  previewReadyMs?: number;
+  heicConversionMs?: number;
+  exifMs?: number;
+  resizeMs?: number;
+  ocrMs?: number;
+  candidateMs?: number;
+  classificationMs?: number;
+  totalMs?: number;
+  ocrInputPixels?: number;
+  preprocessingVariants?: number;
+  originalBytes: number;
+  processedBytes?: number;
 }
 
 export interface SakeLogDraft {
@@ -191,6 +215,7 @@ export interface SakeLogDraft {
   expiresAt?: string;
   status: DraftStatus;
   schemaVersion: number;
+  revision?: number;
 }
 
 export interface OcrCorrectionEntry {
@@ -206,6 +231,7 @@ export interface OcrCorrectionEntry {
   lastUsedAt: string;
   createdAt: string;
   confidenceAdjustment: number;
+  learningEventIds?: string[];
 }
 
 export interface LabelAliasEntry {
@@ -223,6 +249,7 @@ export interface ClassificationCorrection {
   acceptedCount: number;
   rejectedCount: number;
   updatedAt: string;
+  learningEventIds?: string[];
 }
 
 export interface GeneratedTexts {
@@ -285,6 +312,14 @@ export interface SakeLog {
   sourceInfo?: string;
   userConfirmed: boolean;
   status?: LogStatus;
+  saveOperationId?: string;
+}
+
+export interface DeviceValidationResult {
+  id: 'default';
+  updatedAt: string;
+  results: Record<string, 'success' | 'failed' | 'untested'>;
+  notes: Record<string, string>;
 }
 
 export interface ToneSettings {

@@ -33,11 +33,38 @@ export async function findDuplicateLogs(payload: {
 }
 
 export async function saveLogTransaction({ log, images, priceCandidates }: SaveLogPayload) {
-  await db.transaction('rw', db.logs, db.images, db.priceCandidates, async () => {
+  return db.transaction('rw', db.logs, db.images, db.priceCandidates, async () => {
+    if (log.saveOperationId) {
+      const existing = await db.logs.where('saveOperationId').equals(log.saveOperationId).first();
+      if (existing) return { logId: existing.logId, created: false };
+    }
     await db.logs.add(log);
     if (images.length) await db.images.bulkAdd(images.map((image) => ({ ...image, logId: log.logId })));
     if (priceCandidates.length) {
       await db.priceCandidates.bulkAdd(priceCandidates.map((candidate) => ({ ...candidate, logId: log.logId })));
     }
+    return { logId: log.logId, created: true };
+  });
+}
+
+export async function updateLogTransaction(log: SakeLog, images?: SakeImage[], priceCandidates?: MarketPriceCandidate[]) {
+  await db.transaction('rw', db.logs, db.images, db.priceCandidates, async () => {
+    await db.logs.put({ ...log, updatedAt: new Date().toISOString() });
+    if (images) {
+      await db.images.where('logId').equals(log.logId).delete();
+      if (images.length) await db.images.bulkAdd(images.map((image) => ({ ...image, logId: log.logId })));
+    }
+    if (priceCandidates) {
+      await db.priceCandidates.where('logId').equals(log.logId).delete();
+      if (priceCandidates.length) await db.priceCandidates.bulkAdd(priceCandidates.map((candidate) => ({ ...candidate, logId: log.logId })));
+    }
+  });
+}
+
+export async function deleteLogTransaction(logId: string) {
+  await db.transaction('rw', db.logs, db.images, db.priceCandidates, async () => {
+    await db.images.where('logId').equals(logId).delete();
+    await db.priceCandidates.where('logId').equals(logId).delete();
+    await db.logs.delete(logId);
   });
 }

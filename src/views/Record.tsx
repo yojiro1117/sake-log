@@ -8,12 +8,15 @@ import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
 import { findDuplicateLogs, saveLogTransaction } from '../services/logRepository';
 import { confidenceLabel } from '../services/confidenceService';
-import { deleteDraft, hydratePhotos, loadDraft, saveDraft, serializePhotos } from '../services/draftService';
+import { deleteDraft, hydratePhotos, isDraftDirty, loadDraft, saveDraft, serializePhotos } from '../services/draftService';
 import { recordClassificationCorrection, recordOcrCorrection } from '../services/ocrLearning';
+import { aggregatePhotoOcr } from '../services/ocrAggregation';
+import { mergePhotoDraft, mergePhotoDrafts, uniqueImportFiles } from '../services/photoQueue';
 import {
   createImportedPhotoDraftsSequential,
   imageTypeLabel,
   MAX_IMPORT_FILES,
+  photoFileKey,
   type PhotoImportProgress
 } from '../services/photoImport';
 import { historyPriceCandidates, manualPriceCandidate, searchRakutenPrices, selectedPriceSnapshot } from '../services/priceService';
@@ -36,11 +39,17 @@ const imageTypeOptions: ImageType[] = ['frontLabel', 'backLabel', 'bottle', 'gla
 export function Record({
   importFiles = [],
   resumeDraftId,
-  onImportQueueDone
+  onImportQueueDone,
+  onOpenLogDetail,
+  onStartNewRecord,
+  onGoHome
 }: {
   importFiles?: File[];
   resumeDraftId?: string;
   onImportQueueDone?: () => void;
+  onOpenLogDetail: (logId: string) => void;
+  onStartNewRecord: () => void;
+  onGoHome: () => void;
 }) {
   const settings = useLiveQuery(() => db.userSettings.get('default'), undefined);
   const logs = useLiveQuery(() => db.logs.toArray(), []);
@@ -49,7 +58,7 @@ export function Record({
   const [importMode, setImportMode] = useState<ImportMode | undefined>();
   const [drafts, setDrafts] = useState<ImportedPhotoDraft[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [failures, setFailures] = useState<Array<{ fileName: string; reason: string }>>([]);
+  const [failures, setFailures] = useState<Array<{ fileName: string; fileKey: string; reason: string }>>([]);
   const [progress, setProgress] = useState<PhotoImportProgress | undefined>();
   const [isImporting, setIsImporting] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
@@ -63,8 +72,15 @@ export function Record({
   const [draftStatus, setDraftStatus] = useState('');
   const abortRef = useRef<AbortController | undefined>();
   const draftsRef = useRef<ImportedPhotoDraft[]>([]);
+  const draftCreatedAtRef = useRef(new Date().toISOString());
+  const draftRevisionRef = useRef(0);
+  const logIdRef = useRef(crypto.randomUUID());
+  const saveOperationIdRef = useRef(crypto.randomUUID());
+  const initialFormRef = useRef(createInitialFormState('sake'));
 
   const activeDraft = drafts[activeIndex];
+  const aggregatedOcr = useMemo(() => aggregatePhotoOcr(importMode === 'singleLog' ? drafts : activeDraft ? [activeDraft] : []), [activeDraft, drafts, importMode]);
+  const displayedCandidates = importMode === 'singleLog' ? aggregatedOcr.candidates : activeDraft?.candidates ?? [];
   const profile = alcoholProfiles[form.alcoholType];
   const baseAverage = averageScore(form.scores);
   const correction = correctedScore(baseAverage, form.satisfactionScore, {
@@ -81,7 +97,7 @@ export function Record({
     const priceSummary = summarizePrices(priceCandidates);
     const selectedSnapshot = selectedPriceSnapshot(selectedCandidate, form.manualMarketPrice);
     return {
-      logId: crypto.randomUUID(),
+      logId: logIdRef.current,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       drankAt: form.drankAt || undefined,
@@ -125,7 +141,8 @@ export function Record({
       memo: form.memo,
       tags: form.tags.split(',').map((tag) => tag.trim()).filter(Boolean),
       userConfirmed: true,
-      status: 'complete'
+      status: 'complete',
+      saveOperationId: saveOperationIdRef.current
     } satisfies SakeLog;
   }, [adoptedMarketPrice, correction.reason, correction.score, form, importMode, priceCandidates, selectedCandidate, value.valueScore]);
 
@@ -147,6 +164,8 @@ export function Record({
         setImportMode(draft.importMode);
         setActiveIndex(draft.activeImageIndex ?? 0);
         setPriceCandidates((draft.formState.priceCandidates as MarketPriceCandidate[] | undefined) ?? []);
+        draftCreatedAtRef.current = draft.createdAt;
+        draftRevisionRef.current = draft.revision ?? 0;
         setDraftStatus('入力途中の記録を復元しました。');
       } else if (error) setDraftStatus(error);
       setDraftReady(true);
@@ -161,7 +180,7 @@ export function Record({
   }, [drafts]);
 
   useEffect(() => {
-    if (!draftReady || savedLogId || (!form.productName && !form.memo && drafts.length === 0)) return;
+    if (!draftReady || savedLogId || !isDraftDirty(form as unknown as Record<string, unknown>, initialFormRef.current as unknown as Record<string, unknown>, drafts.length, priceCandidates.length)) return;
     const timer = window.setTimeout(() => {
       void persistCurrentDraft('editing');
     }, 750);
@@ -192,8 +211,9 @@ export function Record({
   }, []);
 
   async function persistCurrentDraft(nextStatus: 'editing' | 'paused' | 'ready') {
-    if (!draftReady || savedLogId || (!form.productName && !form.memo && drafts.length === 0)) return;
+    if (!draftReady || savedLogId || !isDraftDirty(form as unknown as Record<string, unknown>, initialFormRef.current as unknown as Record<string, unknown>, drafts.length, priceCandidates.length)) return;
     try {
+      const revision = ++draftRevisionRef.current;
       await saveDraft({
         id: draftId,
         source: drafts.length ? 'photo-import' : 'manual',
@@ -202,10 +222,11 @@ export function Record({
         photos: serializePhotos(drafts),
         activeImageIndex: activeIndex,
         queueState: { total: drafts.length + failures.length, processed: drafts.length, failed: failures.length },
-        createdAt: new Date().toISOString(),
+        createdAt: draftCreatedAtRef.current,
         updatedAt: new Date().toISOString(),
         status: nextStatus,
-        schemaVersion: 1
+        schemaVersion: 1,
+        revision
       });
       setDraftStatus('入力内容を端末内に自動保存しました。');
     } catch {
@@ -214,6 +235,7 @@ export function Record({
   }
 
   function receiveFiles(files: File[]) {
+    files = uniqueImportFiles(files);
     if (files.length > MAX_IMPORT_FILES) {
       setStatus(`一度に選択できる写真は最大${MAX_IMPORT_FILES}枚です。枚数を減らしてください。`);
       return;
@@ -223,26 +245,38 @@ export function Record({
     if (files.length === 1) void startImport(files, 'separateLogs');
   }
 
-  async function startImport(files = pendingFiles, mode = importMode) {
+  async function startImport(files = pendingFiles, mode = importMode, preserveExisting = false) {
     if (!mode || files.length === 0) return;
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
     setIsImporting(true);
-    setFailures([]);
+    if (!preserveExisting) setFailures([]);
+    if (!preserveExisting) setDrafts([]);
     setStatus('写真を読み込んでいます。');
-    resetFormState();
+    if (!preserveExisting) resetFormState();
+    let firstDisplayed = false;
 
     try {
       const result = await createImportedPhotoDraftsSequential(files, {
         signal: controller.signal,
-        onProgress: setProgress
+        onProgress: setProgress,
+        onDraftUpdate: (draft) => {
+          setDrafts((current) => mergePhotoDraft(preserveExisting ? current : current.filter((item) => !files.some((file) => photoFileKey(file) === item.fileKey)), draft));
+          if (!firstDisplayed) {
+            firstDisplayed = true;
+            setActiveIndex(0);
+            setImportMode(mode);
+            applyDraftToForm(draft, mode);
+            setStatus('最初の写真を表示しました。残りは順番に処理しています。');
+          }
+        }
       });
-      setDrafts(result.drafts);
-      setFailures(result.failures);
-      setActiveIndex(0);
+      setDrafts((current) => mergePhotoDrafts(preserveExisting ? current : current, result.drafts));
+      setFailures((current) => preserveExisting ? [...current.filter((failure) => !files.some((file) => photoFileKey(file) === failure.fileKey)), ...result.failures] : result.failures);
+      if (!preserveExisting) setActiveIndex(0);
       setImportMode(mode);
-      applyDraftToForm(result.drafts[0], mode);
+      if (!firstDisplayed) applyDraftToForm(result.drafts[0], mode);
       setStatus(result.failures.length ? '一部の写真は処理できませんでした。失敗一覧を確認してください。' : '写真の読み込みが完了しました。');
     } catch (error) {
       setStatus(error instanceof Error ? error.message : '写真の処理に失敗しました。');
@@ -258,17 +292,23 @@ export function Record({
   }
 
   function retryFailed() {
-    const failedFiles = pendingFiles.filter((file) => failures.some((failure) => failure.fileName === file.name));
-    if (failedFiles.length) void startImport(failedFiles, importMode);
+    const failedFiles = pendingFiles.filter((file) => failures.some((failure) => failure.fileKey === photoFileKey(file)));
+    if (failedFiles.length) void startImport(failedFiles, importMode, true);
   }
 
   function resetFormState(nextType: AlcoholType = 'sake') {
-    setForm(createInitialFormState(nextType));
+    const initial = createInitialFormState(nextType);
+    setForm(initial);
+    initialFormRef.current = initial;
     setPriceCandidates([]);
     setDuplicateChoices([]);
     setSavedLogId(undefined);
     setStatus('');
     setDraftId(crypto.randomUUID());
+    draftCreatedAtRef.current = new Date().toISOString();
+    draftRevisionRef.current = 0;
+    logIdRef.current = crypto.randomUUID();
+    saveOperationIdRef.current = crypto.randomUUID();
     setDraftStatus('');
   }
 
@@ -300,14 +340,6 @@ export function Record({
       volume: candidate.volume ?? current.volume,
       abv: candidate.abv ?? current.abv
     }));
-    if (activeDraft?.ocr.text && candidate.productName) {
-      void recordOcrCorrection({
-        observedText: activeDraft.ocr.text,
-        productName: candidate.productName,
-        makerName: candidate.makerName,
-        alcoholType: candidate.alcoholType
-      });
-    }
   }
 
   function setCapturedDateAsDrankAt() {
@@ -367,18 +399,29 @@ export function Record({
       const candidatesToSave =
         form.manualMarketPrice && !selectedCandidate ? [...priceCandidates, manualPriceCandidate(form.manualMarketPrice)] : priceCandidates;
       const log = { ...draftLog, productName: draftLog.productName || '銘柄未入力', status: logStatus };
-      await saveLogTransaction({ log, images, priceCandidates: candidatesToSave });
-      if (activeDraft?.ocr.text && form.productName.trim()) {
+      const saved = await saveLogTransaction({ log, images, priceCandidates: candidatesToSave });
+      setSavedLogId(saved.logId);
+      const warnings: string[] = [];
+      if (aggregatedOcr.text && form.productName.trim()) {
+        const eventId = `${saved.logId}|${activeDraft?.imageHash ?? 'manual'}|${form.productName.trim()}`;
         await recordOcrCorrection({
-          observedText: activeDraft.ocr.text,
+          observedText: aggregatedOcr.text,
           productName: form.productName,
           makerName: form.makerName,
-          alcoholType: form.alcoholType
-        });
+          alcoholType: form.alcoholType,
+          learningEventId: eventId
+        }).catch(() => warnings.push('OCR修正辞書の更新だけ失敗しました。'));
       }
-      await deleteDraft(draftId);
-      setSavedLogId(draftLog.logId);
-      setStatus(logStatus === 'complete' ? '酒ログを保存しました。' : 'あとで編集する記録として保存しました。');
+      for (const draft of drafts.filter((item) => item.classificationConfirmed && item.classification && item.classification.type !== item.imageType)) {
+        await recordClassificationCorrection(
+          draft.ocr.text.slice(0, 32),
+          draft.classification!.type,
+          draft.imageType,
+          `${saved.logId}|${draft.imageHash}|classification`
+        ).catch(() => warnings.push(`${draft.fileName}の分類学習だけ失敗しました。`));
+      }
+      await deleteDraft(draftId).catch(() => warnings.push('保存済みですが、入力途中データの削除だけ失敗しました。'));
+      setStatus(`${logStatus === 'complete' ? '酒ログを保存しました。' : 'あとで編集する記録として保存しました。'}${warnings.length ? ` ${warnings.join(' ')}` : ''}`);
     } catch (error) {
       setStatus(error instanceof Error ? `保存に失敗しました。入力内容は保持しています。${error.message}` : '保存に失敗しました。入力内容は保持しています。');
     } finally {
@@ -427,10 +470,7 @@ export function Record({
   function updateDraftType(id: string, imageType: ImageType) {
     setDrafts((current) => current.map((draft) => {
       if (draft.id !== id) return draft;
-      if (draft.classification && draft.classification.type !== imageType) {
-        void recordClassificationCorrection(draft.ocr.text.slice(0, 32), draft.classification.type, imageType);
-      }
-      return { ...draft, imageType };
+      return { ...draft, imageType, classificationConfirmed: true };
     }));
   }
 
@@ -441,24 +481,19 @@ export function Record({
           <CheckCircle2 className="mx-auto text-gold" size={44} />
           <h1 className="mt-4 text-2xl font-black">酒ログを保存しました</h1>
           <div className="mt-5 grid gap-3">
-            <button className="rounded-md bg-rice px-4 py-3 font-bold text-ink" onClick={() => setStatus(`保存済みID: ${savedLogId}`)}>
+            <button className="rounded-md bg-rice px-4 py-3 font-bold text-ink" onClick={() => onOpenLogDetail(savedLogId)}>
               ログ詳細を見る
             </button>
             <button
               className="rounded-md bg-moss px-4 py-3 font-bold text-rice"
               onClick={() => {
                 if (importMode === 'separateLogs' && drafts.length > activeIndex + 1) nextSeparatePhoto();
-                else {
-                  resetFormState();
-                  setDrafts([]);
-                  setActiveIndex(0);
-                  onImportQueueDone?.();
-                }
+                else onStartNewRecord();
               }}
             >
               新しいお酒を記録
             </button>
-            <button className="rounded-md bg-rice/10 px-4 py-3 font-bold" onClick={() => onImportQueueDone?.()}>
+            <button className="rounded-md bg-rice/10 px-4 py-3 font-bold" onClick={onGoHome}>
               ホームへ戻る
             </button>
           </div>
@@ -517,8 +552,11 @@ export function Record({
               {importMode === 'separateLogs' && <p className="text-sm font-bold text-gold">{activeIndex + 1} / {drafts.length}枚目を編集中</p>}
               <div className="grid grid-cols-3 gap-2">
                 {(importMode === 'singleLog' ? drafts : activeDraft ? [activeDraft] : []).map((draft) => (
-                  <div key={draft.id} className="rounded-md bg-rice/8 p-2">
-                    <img src={draft.previewUrl} className="aspect-square w-full rounded object-cover" alt={draft.fileName} />
+                  <div key={draft.id} className={`rounded-md bg-rice/8 p-2 ${draft.id === activeDraft?.id ? 'ring-1 ring-gold' : ''}`}>
+                    <button className="w-full" onClick={() => setActiveIndex(Math.max(0, drafts.findIndex((item) => item.id === draft.id)))}>
+                      <img src={draft.previewUrl} className="aspect-square w-full rounded object-cover" alt={draft.fileName} />
+                    </button>
+                    {draft.status === 'processing' ? <p className="mt-2 text-xs text-gold">OCR処理中</p> : null}
                     {draft.classification ? (
                       <p className="mt-2 text-xs text-gold">
                         {imageTypeLabel(draft.classification.type)}の可能性 {draft.classification.confidence}%
@@ -527,6 +565,7 @@ export function Record({
                     <select className={`${inputClass} mt-2 text-xs`} value={draft.imageType} onChange={(event) => updateDraftType(draft.id, event.target.value as ImageType)}>
                       {imageTypeOptions.map((type) => <option key={type} value={type}>{imageTypeLabel(type)}</option>)}
                     </select>
+                    <p className="mt-1 text-[11px] text-rice/50">{draft.classificationConfirmed ? '分類確認済み' : '分類未確認'}</p>
                   </div>
                 ))}
               </div>
@@ -550,8 +589,16 @@ export function Record({
               OCR信頼度 {Math.round(activeDraft.ocr.confidence * 100)}% / {confidenceLabel(activeDraft.ocr.confidence * 100)}
             </p>
           ) : null}
+          {activeDraft?.ocr.preprocessing?.length ? <p className="mt-1 text-xs text-rice/50">前処理: {activeDraft.ocr.preprocessing.join(' / ')}</p> : null}
+          {importMode === 'singleLog' && drafts.length > 1 ? (
+            <div className="mt-3 rounded-md bg-ink/50 p-3 text-xs text-rice/65">
+              <p className="font-bold text-gold">複数写真のOCRを統合</p>
+              {aggregatedOcr.sources.volume ? <p>容量: {aggregatedOcr.sources.volume}</p> : null}
+              {aggregatedOcr.sources.abv ? <p>度数: {aggregatedOcr.sources.abv}</p> : null}
+            </div>
+          ) : null}
           <div className="mt-3 grid gap-2">
-            {activeDraft?.candidates.map((candidate) => (
+            {displayedCandidates.map((candidate) => (
               <button key={`${candidate.productName}-${candidate.matchReasons.join(',')}`} className="rounded-md bg-ink/70 p-3 text-left" onClick={() => applyCandidate(candidate)}>
                 <span className="block font-bold">{candidate.productName ?? '候補名なし'}</span>
                 <span className="text-xs text-rice/60">

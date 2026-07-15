@@ -42,7 +42,19 @@ export function isValidDraft(value: unknown): value is SakeLogDraft {
 }
 
 export async function saveDraft(draft: SakeLogDraft) {
-  await db.drafts.put({ ...draft, schemaVersion: DRAFT_SCHEMA_VERSION, updatedAt: new Date().toISOString() });
+  return db.transaction('rw', db.drafts, async () => {
+    const existing = await db.drafts.get(draft.id);
+    const revision = draft.revision ?? 0;
+    if ((existing?.revision ?? -1) > revision) return false;
+    await db.drafts.put({
+      ...draft,
+      createdAt: existing?.createdAt ?? draft.createdAt,
+      schemaVersion: DRAFT_SCHEMA_VERSION,
+      revision,
+      updatedAt: new Date().toISOString()
+    });
+    return true;
+  });
 }
 
 export async function loadDraft(id: string) {
@@ -59,6 +71,27 @@ export function draftProgress(formState: Record<string, unknown>) {
   const fields = ['productName', 'makerName', 'alcoholType', 'volume', 'abv', 'drankAt', 'memo'];
   const completed = fields.filter((key) => Boolean(formState[key])).length;
   return Math.round((completed / fields.length) * 100);
+}
+
+export function isDraftDirty(
+  formState: Record<string, unknown>,
+  initialFormState: Record<string, unknown>,
+  photoCount = 0,
+  priceCandidateCount = 0
+) {
+  if (photoCount > 0 || priceCandidateCount > 0) return true;
+  return stableValue(formState) !== stableValue(initialFormState);
+}
+
+function stableValue(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(stableValue).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.entries(value as Record<string, unknown>)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([key, item]) => `${key}:${stableValue(item)}`)
+      .join(',')}}`;
+  }
+  return JSON.stringify(value);
 }
 
 export function createDebouncedDraftWriter(write: () => Promise<void>, delay = DRAFT_DEBOUNCE_MS) {

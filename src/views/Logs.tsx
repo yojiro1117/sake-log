@@ -1,21 +1,72 @@
 import { Search } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { RadarChart } from '../components/RadarChart';
 import { Field, Section } from '../components/Section';
 import { alcoholOptions, alcoholProfiles } from '../data/alcoholProfiles';
 import { db } from '../db/db';
 import { useLiveQuery } from '../hooks/useLiveQuery';
-import type { AlcoholType, LogStatus, SakeLog } from '../types';
+import { deleteLogTransaction, updateLogTransaction } from '../services/logRepository';
+import type { AlcoholType, LogStatus, SakeImage, SakeLog } from '../types';
 
 const inputClass = 'w-full rounded-md border border-rice/12 bg-ink/70 px-3 py-3 text-rice outline-none focus:border-gold';
 
-export function Logs() {
+export function Logs({ selectedLogId, onCloseSelected }: { selectedLogId?: string; onCloseSelected?: () => void }) {
   const logs = useLiveQuery(() => db.logs.orderBy('drankAt').reverse().toArray(), []);
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<AlcoholType | 'all'>('all');
   const [sort, setSort] = useState<'date' | 'capturedAt' | 'score' | 'price' | 'type'>('date');
   const [statusFilter, setStatusFilter] = useState<LogStatus | 'all'>('all');
   const [selected, setSelected] = useState<SakeLog | undefined>();
+  const [selectedImages, setSelectedImages] = useState<SakeImage[]>([]);
+  const [imageUrls, setImageUrls] = useState<Array<{ id: string; url: string; label: string }>>([]);
+  const [isEditing, setIsEditing] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const [detailStatus, setDetailStatus] = useState('');
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  const closeDetail = useCallback(() => {
+    setSelected(undefined);
+    setSelectedImages([]);
+    setIsEditing(false);
+    setConfirmDelete(false);
+    onCloseSelected?.();
+  }, [onCloseSelected]);
+
+  useEffect(() => {
+    if (!selectedLogId) return;
+    void db.logs.get(selectedLogId).then((log) => {
+      if (log) setSelected(log);
+    });
+  }, [selectedLogId]);
+
+  useEffect(() => {
+    if (!selected) return;
+    void db.images.where('logId').equals(selected.logId).sortBy('sortOrder').then(setSelectedImages);
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closeDetail();
+      if (event.key === 'Tab' && dialogRef.current) {
+        const focusable = [...dialogRef.current.querySelectorAll<HTMLElement>('button,input,select,textarea')].filter((element) => !element.hasAttribute('disabled'));
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKey);
+    window.setTimeout(() => dialogRef.current?.querySelector<HTMLElement>('button')?.focus(), 0);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [closeDetail, selected]);
+
+  useEffect(() => {
+    const urls = selectedImages.map((image) => ({ id: image.imageId, url: URL.createObjectURL(image.processedBlob ?? image.originalBlob), label: image.imageType }));
+    setImageUrls(urls);
+    return () => urls.forEach((item) => URL.revokeObjectURL(item.url));
+  }, [selectedImages]);
 
   const filtered = useMemo(() => {
     const keyword = query.trim().toLowerCase();
@@ -98,15 +149,16 @@ export function Logs() {
       </Section>
 
       {selected ? (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-ink/90 p-5 backdrop-blur">
-          <div className="mx-auto max-w-lg rounded-lg bg-lacquer p-5">
-            <button className="mb-4 rounded-md bg-rice/10 px-3 py-2" onClick={() => setSelected(undefined)}>閉じる</button>
-            <h2 className="text-2xl font-black">{selected.productName}</h2>
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-ink/90 p-5 backdrop-blur" role="dialog" aria-modal="true" aria-labelledby="log-detail-title">
+          <div ref={dialogRef} className="mx-auto max-w-lg rounded-lg bg-lacquer p-5">
+            <button className="mb-4 min-h-11 rounded-md bg-rice/10 px-3 py-2" onClick={closeDetail}>閉じる</button>
+            <h2 id="log-detail-title" className="text-2xl font-black">{selected.productName}</h2>
             <p className="mt-1 text-gold">{alcoholProfiles[selected.alcoholType].label} / 満足度 {selected.satisfactionScore}/6 / コスパ {selected.valueScore}</p>
             <div className="mt-4 h-72"><RadarChart type={selected.alcoholType} scores={selected.baseScores} /></div>
+            {imageUrls.length ? <div className="mt-4 grid grid-cols-2 gap-2">{imageUrls.map((image) => <figure key={image.id}><img className="aspect-square w-full rounded object-cover" src={image.url} alt="酒ログ写真" /><figcaption className="mt-1 text-xs text-rice/55">{image.label}</figcaption></figure>)}</div> : null}
             <p className="mt-4 rounded-md bg-rice/8 p-4 text-sm leading-7">{selected.memo || '感想メモは未入力です。'}</p>
             <p className="mt-3 text-sm text-rice/64">{selected.correctionReason}</p>
-            {(selected.status ?? 'complete') !== 'complete' ? (
+            {isEditing ? (
               <div className="mt-4 grid gap-3 rounded-md border border-gold/20 p-4">
                 <Field label="銘柄">
                   <input className={inputClass} value={selected.productName === '銘柄未入力' ? '' : selected.productName} onChange={(event) => setSelected({ ...selected, productName: event.target.value })} />
@@ -114,24 +166,32 @@ export function Logs() {
                 <Field label="蔵元・メーカー">
                   <input className={inputClass} value={selected.makerName ?? ''} onChange={(event) => setSelected({ ...selected, makerName: event.target.value })} />
                 </Field>
+                <div className="grid grid-cols-2 gap-3">
+                  <Field label="飲酒日"><input className={inputClass} type="date" value={selected.drankAt ?? ''} onChange={(event) => setSelected({ ...selected, drankAt: event.target.value || undefined })} /></Field>
+                  <Field label="撮影日"><input className={inputClass} type="date" value={selected.capturedAt ?? ''} onChange={(event) => setSelected({ ...selected, capturedAt: event.target.value || undefined })} /></Field>
+                </div>
+                <div className="grid grid-cols-3 gap-3">
+                  <Field label="容量ml"><input className={inputClass} type="number" value={selected.volume ?? ''} onChange={(event) => setSelected({ ...selected, volume: Number(event.target.value) || undefined })} /></Field>
+                  <Field label="度数%"><input className={inputClass} type="number" value={selected.abv ?? ''} onChange={(event) => setSelected({ ...selected, abv: Number(event.target.value) || undefined })} /></Field>
+                  <Field label="市場価格"><input className={inputClass} type="number" value={selected.adoptedMarketPrice ?? ''} onChange={(event) => setSelected({ ...selected, adoptedMarketPrice: Number(event.target.value) || undefined })} /></Field>
+                </div>
+                <Field label="コメント"><textarea className={`${inputClass} min-h-24`} value={selected.memo ?? ''} onChange={(event) => setSelected({ ...selected, memo: event.target.value })} /></Field>
                 <button
                   className="rounded-md bg-gold px-4 py-3 font-bold text-ink"
-                  onClick={() => void db.logs.put({ ...selected, status: selected.productName.trim() ? 'complete' : 'needs_review', updatedAt: new Date().toISOString() }).then(() => setSelected(undefined))}
+                  onClick={() => void updateLogTransaction({ ...selected, status: selected.productName.trim() ? 'complete' : 'needs_review' }).then(() => { setIsEditing(false); setDetailStatus('編集内容を保存しました。'); })}
                 >
                   編集内容を保存
                 </button>
               </div>
-            ) : null}
+            ) : <button className="mt-4 w-full rounded-md bg-gold px-4 py-3 font-bold text-ink" onClick={() => setIsEditing(true)}>この記録を編集</button>}
             <button
               className="mt-4 w-full rounded-md border border-red-300/20 px-4 py-3 text-red-200"
-              onClick={() => void db.transaction('rw', db.logs, db.images, db.priceCandidates, async () => {
-                await db.images.where('logId').equals(selected.logId).delete();
-                await db.priceCandidates.where('logId').equals(selected.logId).delete();
-                await db.logs.delete(selected.logId);
-              }).then(() => setSelected(undefined))}
+              onClick={() => setConfirmDelete(true)}
             >
               この記録を削除
             </button>
+            {confirmDelete ? <div className="mt-3 rounded-md border border-red-300/30 p-3"><p className="text-sm text-red-100">写真と価格候補も削除します。元に戻せません。</p><div className="mt-3 grid grid-cols-2 gap-2"><button className="rounded-md bg-rice/10 px-3 py-2" onClick={() => setConfirmDelete(false)}>キャンセル</button><button className="rounded-md bg-red-900 px-3 py-2" onClick={() => void deleteLogTransaction(selected.logId).then(closeDetail).catch(() => setDetailStatus('削除に失敗しました。記録は残っています。'))}>削除する</button></div></div> : null}
+            {detailStatus ? <p className="mt-3 rounded-md bg-gold/15 p-3 text-sm text-gold">{detailStatus}</p> : null}
           </div>
         </div>
       ) : null}

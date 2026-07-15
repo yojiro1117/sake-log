@@ -2,6 +2,7 @@ import Dexie, { type Table } from 'dexie';
 import type {
   BackupStatus,
   ClassificationCorrection,
+  DeviceValidationResult,
   LabelAliasEntry,
   MarketPriceCandidate,
   OcrCorrectionEntry,
@@ -13,7 +14,7 @@ import type {
 } from '../types';
 import { defaultTemplates, defaultToneSettings } from '../data/templates';
 
-class SakeLogDatabase extends Dexie {
+export class SakeLogDatabase extends Dexie {
   logs!: Table<SakeLog, string>;
   images!: Table<SakeImage, string>;
   userSettings!: Table<UserSettings, string>;
@@ -27,9 +28,10 @@ class SakeLogDatabase extends Dexie {
   ocrCorrections!: Table<OcrCorrectionEntry, string>;
   labelAliases!: Table<LabelAliasEntry, string>;
   classificationCorrections!: Table<ClassificationCorrection, string>;
+  deviceValidationResults!: Table<DeviceValidationResult, string>;
 
-  constructor() {
-    super('sake-log-db');
+  constructor(databaseName = 'sake-log-db') {
+    super(databaseName);
 
     this.version(1).stores({
       logs: 'logId, createdAt, drankAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore',
@@ -96,6 +98,31 @@ class SakeLogDatabase extends Dexie {
       .upgrade(async (tx) => {
         await tx.table<SakeLog, string>('logs').toCollection().modify((log) => {
           log.status ??= 'complete';
+        });
+      });
+
+    this.version(4)
+      .stores({
+        logs:
+          'logId, createdAt, updatedAt, drankAt, capturedAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore, selectedMarketPriceCandidateId, importMode, status, saveOperationId',
+        images:
+          'imageId, logId, imageType, createdAt, capturedAt, imageHash, createdFromImport, sortOrder, fileName, mimeType',
+        userSettings: 'id',
+        templates: 'templateId, targetSns, updatedAt',
+        personalityResults: 'id, createdAt',
+        reviewProfileResults: 'id, createdAt',
+        backupStatus: 'id',
+        priceCandidates: 'id, logId, source, fetchedAt, recommended, matchScore',
+        externalSources: 'id, type, createdAt',
+        drafts: 'id, updatedAt, status, source, revision',
+        ocrCorrections: 'id, observedText, correctedProductName, lastUsedAt',
+        labelAliases: 'id, alias, productName',
+        classificationCorrections: 'id, fingerprint, correctedType, updatedAt',
+        deviceValidationResults: 'id, updatedAt'
+      })
+      .upgrade(async (tx) => {
+        await tx.table<SakeLogDraft, string>('drafts').toCollection().modify((draft) => {
+          draft.revision ??= 0;
         });
       });
   }

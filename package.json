@@ -1,7 +1,7 @@
 {
   "name": "sake-log",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "packageManager": "pnpm@11.7.0",
   "scripts": {
@@ -11,19 +11,21 @@
     "preview": "vite preview --host 0.0.0.0",
     "lint": "eslint .",
     "test": "vitest run src",
-    "test:integration": "vitest run src/services/qualityFeatures.test.ts src/services/logRepository.test.ts",
+    "test:integration": "vitest run src/services/qualityFeatures.test.ts src/services/logRepository.test.ts src/services/resilience.test.ts",
     "test:e2e": "playwright test",
     "prepare:drive-list": "node scripts/prepare-drive-validation-list.mjs",
     "download:drive-images": "node scripts/download-drive-images.mjs",
     "validate:drive-images": "node scripts/validate-drive-images.mjs",
     "validate:photo-classification": "node scripts/validate-photo-classification.mjs",
-    "extract:drive-image-features": "node scripts/extract-drive-image-features.mjs"
+    "extract:drive-image-features": "node scripts/extract-drive-image-features.mjs",
+    "recalculate:validation-metrics": "node scripts/recalculate-validation-metrics.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "chart.js": "^4.4.7",
     "dexie": "^4.0.11",
     "exifreader": "^4.25.0",
+    "fflate": "^0.8.3",
     "heic2any": "^0.0.4",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
@@ -35,6 +37,7 @@
     "workbox-window": "^7.3.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
     "@eslint/js": "^9.17.0",
     "@playwright/test": "1.55.1",
     "@types/react": "^18.3.18",

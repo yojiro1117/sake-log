@@ -6,9 +6,12 @@ export async function recordOcrCorrection(input: {
   productName: string;
   makerName?: string;
   alcoholType?: AlcoholType;
+  learningEventId: string;
 }) {
   const observedText = input.observedText.trim().slice(0, 200);
   if (!observedText || !input.productName.trim()) return;
+  const alreadyRecorded = await db.ocrCorrections.filter((entry) => entry.learningEventIds?.includes(input.learningEventId) ?? false).first();
+  if (alreadyRecorded) return alreadyRecorded;
   const existing = await db.ocrCorrections.where('observedText').equals(observedText).first();
   const now = new Date().toISOString();
   const entry: OcrCorrectionEntry = existing
@@ -21,7 +24,8 @@ export async function recordOcrCorrection(input: {
         occurrenceCount: existing.occurrenceCount + 1,
         acceptedCount: existing.acceptedCount + 1,
         confidenceAdjustment: Math.min(15, existing.confidenceAdjustment + 2),
-        lastUsedAt: now
+        lastUsedAt: now,
+        learningEventIds: [...(existing.learningEventIds ?? []), input.learningEventId]
       }
     : {
         id: crypto.randomUUID(),
@@ -35,9 +39,11 @@ export async function recordOcrCorrection(input: {
         rejectedCount: 0,
         lastUsedAt: now,
         createdAt: now,
-        confidenceAdjustment: 2
+        confidenceAdjustment: 2,
+        learningEventIds: [input.learningEventId]
       };
   await db.ocrCorrections.put(entry);
+  return entry;
 }
 
 export async function learningCandidates(ocrText: string): Promise<CandidateMatch[]> {
@@ -66,16 +72,21 @@ function extractObservedAliases(value: string) {
     .slice(0, 10);
 }
 
-export async function recordClassificationCorrection(fingerprint: string, suggestedType: ImageType, correctedType: ImageType) {
+export async function recordClassificationCorrection(fingerprint: string, suggestedType: ImageType, correctedType: ImageType, learningEventId: string) {
   if (!fingerprint || suggestedType === correctedType) return;
+  const alreadyRecorded = await db.classificationCorrections.filter((entry) => entry.learningEventIds?.includes(learningEventId) ?? false).first();
+  if (alreadyRecorded) return alreadyRecorded;
   const existing = await db.classificationCorrections.where('fingerprint').equals(fingerprint).first();
-  await db.classificationCorrections.put({
+  const entry = {
     id: existing?.id ?? crypto.randomUUID(),
     fingerprint,
     suggestedType,
     correctedType,
     acceptedCount: (existing?.acceptedCount ?? 0) + 1,
     rejectedCount: existing?.rejectedCount ?? 0,
-    updatedAt: new Date().toISOString()
-  });
+    updatedAt: new Date().toISOString(),
+    learningEventIds: [...(existing?.learningEventIds ?? []), learningEventId]
+  };
+  await db.classificationCorrections.put(entry);
+  return entry;
 }

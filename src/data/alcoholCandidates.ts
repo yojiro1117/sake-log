@@ -12,9 +12,19 @@ export const alcoholLabelCandidates: AlcoholLabelCandidate[] = [
   { productName: '山崎', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['山崎', 'THE YAMAZAKI', 'YAMAZAKI'] },
   { productName: '白州', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['白州', 'HAKUSHU'] },
   { productName: '響', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['響', 'HIBIKI'] },
+  { productName: '宮城峡', makerName: 'ニッカウヰスキー', alcoholType: 'whisky', aliases: ['宮城峡', 'MIYAGIKYO'] },
+  { productName: '知多', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['知多', 'THE CHITA', 'CHITA SINGLE GRAIN'] },
+  { productName: '余市', makerName: 'ニッカウヰスキー', alcoholType: 'whisky', aliases: ['余市', 'YOICHI', 'SINGLE MALT YOICHI'] },
+  { productName: 'ラフロイグ', makerName: 'ラフロイグ蒸溜所', alcoholType: 'whisky', aliases: ['ラフロイグ', 'LAPHROAIG', 'ISLAY SINGLE MALT'] },
+  { productName: 'ニッカ カフェモルト', makerName: 'ニッカウヰスキー', alcoholType: 'whisky', aliases: ['ニッカ カフェモルト', 'NIKKA COFFEY MALT', 'COFFEY MALT'] },
   { productName: '角瓶', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['角瓶', '角', 'KAKU'] },
   { productName: '一番搾り', makerName: 'キリン', alcoholType: 'beer', aliases: ['一番搾り', 'ICHIBAN'] },
   { productName: '黒ラベル', makerName: 'サッポロ', alcoholType: 'beer', aliases: ['黒ラベル', 'KURO LABEL'] },
   { productName: 'プレミアムモルツ', makerName: 'サントリー', alcoholType: 'beer', aliases: ['プレミアムモルツ', 'PREMIUM MALT'] },
-  { productName: 'よなよなエール', makerName: 'ヤッホーブルーイング', alcoholType: 'beer', aliases: ['よなよな', 'YONA YONA'] }
+  { productName: 'よなよなエール', makerName: 'ヤッホーブルーイング', alcoholType: 'beer', aliases: ['よなよな', 'YONA YONA'] },
+  { productName: '久保田', makerName: '朝日酒造', alcoholType: 'sake', aliases: ['久保田', 'KUBOTA'] },
+  { productName: 'No.6', makerName: '新政酒造', alcoholType: 'sake', aliases: ['No.6', 'NO 6', 'NO.6', 'JAPAN BREWING SOCIETY NO.6'] },
+  { productName: '鍋島', makerName: '富久千代酒造', alcoholType: 'sake', aliases: ['鍋島', 'NABESHIMA'] },
+  { productName: '刈穂', makerName: '秋田清酒', alcoholType: 'sake', aliases: ['刈穂', 'KARIHO'] },
+  { productName: 'W', makerName: '渡辺酒造店', alcoholType: 'sake', aliases: ['THE JAPANESE SAKE W', 'W DARUMA'] }
 ];

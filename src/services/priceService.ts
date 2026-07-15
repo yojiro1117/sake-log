@@ -64,6 +64,22 @@ export async function searchRakutenPrices(params: {
   };
 }
 
+export async function testRakutenApplicationId(applicationId: string) {
+  const id = applicationId.trim();
+  if (!/^[A-Za-z0-9_-]{6,64}$/.test(id)) return { ok: false, message: 'Application IDの形式を確認してください。' };
+  const url = new URL('https://app.rakuten.co.jp/services/api/IchibaItem/Search/20220601');
+  url.searchParams.set('applicationId', id);
+  url.searchParams.set('keyword', '日本酒');
+  url.searchParams.set('hits', '1');
+  url.searchParams.set('format', 'json');
+  try {
+    const response = await fetch(url, { signal: AbortSignal.timeout(10_000) });
+    return response.ok ? { ok: true, message: '楽天市場APIへ接続できました。' } : { ok: false, message: `接続テストに失敗しました（HTTP ${response.status}）。` };
+  } catch {
+    return { ok: false, message: '接続テストに失敗しました。ネットワークを確認してください。' };
+  }
+}
+
 export function buildPriceSearchQueries(params: {
   productName: string;
   makerName?: string;

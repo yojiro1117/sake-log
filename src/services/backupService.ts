@@ -1,33 +1,219 @@
+import { strFromU8, strToU8, unzipSync, zipSync } from 'fflate';
+import { BUILD_INFO } from '../config/buildInfo';
 import { db } from '../db/db';
+import type { PersistedImportedPhoto, SakeImage, SakeLogDraft } from '../types';
+
+export const BACKUP_FORMAT_VERSION = 2;
+
+type BackupMode = 'merge' | 'replace';
+type ZipEntries = Record<string, Uint8Array>;
+type BackupPhotoMetadata = Omit<PersistedImportedPhoto, 'originalFile' | 'resizedBlob'> & {
+  originalPath: string;
+  processedPath: string;
+  originalMimeType?: string;
+  originalLastModified?: number;
+};
+type BackupDraftMetadata = Omit<SakeLogDraft, 'photos'> & { photos: BackupPhotoMetadata[] };
+
+export interface BackupManifest {
+  backupFormatVersion: number;
+  appVersion: string;
+  dbVersion: number;
+  createdAt: string;
+  counts: Record<string, number>;
+  totalSize: number;
+}
 
 export async function exportLocalData() {
-  const [logs, templates, settings, ocrCorrections, labelAliases, classificationCorrections] = await Promise.all([
-    db.logs.toArray(),
-    db.templates.toArray(),
-    db.userSettings.get('default'),
-    db.ocrCorrections.toArray(),
-    db.labelAliases.toArray(),
-    db.classificationCorrections.toArray()
-  ]);
-  const payload = {
-    exportedAt: new Date().toISOString(),
-    format: 'SAKEログ local backup v1',
-    googleDriveFuturePath: 'SAKEログ_Backup/logs/sake_logs.json',
-    logs,
-    templates,
-    settings,
-    ocrCorrections,
-    labelAliases,
-    classificationCorrections
+  const entries: ZipEntries = {};
+  const tables = await readAllTables();
+  addJson(entries, 'logs.json', tables.logs);
+  addJson(entries, 'price-candidates.json', tables.priceCandidates);
+  addJson(entries, 'settings.json', tables.settings);
+  addJson(entries, 'templates.json', tables.templates);
+  addJson(entries, 'ocr-corrections.json', tables.ocrCorrections);
+  addJson(entries, 'label-aliases.json', tables.labelAliases);
+  addJson(entries, 'classification-corrections.json', tables.classificationCorrections);
+  addJson(entries, 'external-sources.json', tables.externalSources);
+  addJson(entries, 'device-validation-results.json', tables.deviceValidationResults);
+  addJson(entries, 'personality-results.json', tables.personalityResults);
+  addJson(entries, 'review-profile-results.json', tables.reviewProfileResults);
+  addJson(entries, 'backup-status.json', tables.backupStatus);
+
+  const imageMetadata = [];
+  for (const image of tables.images) {
+    const originalPath = `images/original/${image.imageId}`;
+    entries[originalPath] = new Uint8Array(await image.originalBlob.arrayBuffer());
+    let processedPath: string | undefined;
+    if (image.processedBlob) {
+      processedPath = `images/processed/${image.imageId}`;
+      entries[processedPath] = new Uint8Array(await image.processedBlob.arrayBuffer());
+    }
+    imageMetadata.push({ ...withoutBlobFields(image), originalPath, processedPath });
+  }
+  addJson(entries, 'images.json', imageMetadata);
+
+  const draftMetadata = [];
+  for (const draft of tables.drafts) {
+    const photos = [];
+    for (const photo of draft.photos) {
+      const originalPath = `drafts/${draft.id}/original/${photo.id}`;
+      const processedPath = `drafts/${draft.id}/processed/${photo.id}`;
+      entries[originalPath] = new Uint8Array(await photo.originalFile.arrayBuffer());
+      entries[processedPath] = new Uint8Array(await photo.resizedBlob.arrayBuffer());
+      photos.push({ ...withoutPhotoBlobs(photo), originalPath, processedPath });
+    }
+    draftMetadata.push({ ...draft, photos });
+  }
+  addJson(entries, 'drafts.json', draftMetadata);
+
+  const checksums: Record<string, string> = {};
+  for (const [path, bytes] of Object.entries(entries)) checksums[path] = await sha256(bytes);
+  addJson(entries, 'checksums.json', checksums);
+  const manifest: BackupManifest = {
+    backupFormatVersion: BACKUP_FORMAT_VERSION,
+    appVersion: BUILD_INFO.version,
+    dbVersion: db.verno,
+    createdAt: new Date().toISOString(),
+    counts: {
+      logs: tables.logs.length,
+      images: tables.images.length,
+      drafts: tables.drafts.length,
+      priceCandidates: tables.priceCandidates.length,
+      ocrCorrections: tables.ocrCorrections.length,
+      classificationCorrections: tables.classificationCorrections.length
+    },
+    totalSize: Object.values(entries).reduce((sum, value) => sum + value.byteLength, 0)
   };
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  addJson(entries, 'manifest.json', manifest);
+  const blob = new Blob([zipSync(entries, { level: 6 }) as BlobPart], { type: 'application/zip' });
   await db.backupStatus.put({
     id: 'default',
-    lastLocalExportAt: payload.exportedAt,
+    lastLocalExportAt: manifest.createdAt,
     googleDriveStatus: 'readyForFuture',
-    message: 'ローカルJSONを書き出しました。Google Drive API連携は backupService に追加予定です。'
+    message: '写真を含む完全バックアップZIPを書き出しました。'
   });
   return blob;
+}
+
+export async function inspectBackup(blob: Blob) {
+  const entries = unzipSync(new Uint8Array(await blob.arrayBuffer()));
+  const manifest = readJson<BackupManifest>(entries, 'manifest.json');
+  if (manifest.backupFormatVersion > BACKUP_FORMAT_VERSION) throw new Error('このバックアップは新しい形式です。アプリを更新してください。');
+  const checksums = readJson<Record<string, string>>(entries, 'checksums.json');
+  for (const [path, checksum] of Object.entries(checksums)) {
+    const bytes = entries[path];
+    if (!bytes || await sha256(bytes) !== checksum) throw new Error(`チェックサムが一致しません: ${path}`);
+  }
+  return { entries, manifest };
+}
+
+export async function restoreLocalData(blob: Blob, mode: BackupMode) {
+  const { entries, manifest } = await inspectBackup(blob);
+  const logs = readJson<Parameters<typeof db.logs.bulkPut>[0]>(entries, 'logs.json');
+  const priceCandidates = readJson<Parameters<typeof db.priceCandidates.bulkPut>[0]>(entries, 'price-candidates.json');
+  const settings = readJson<Parameters<typeof db.userSettings.bulkPut>[0]>(entries, 'settings.json');
+  const templates = readJson<Parameters<typeof db.templates.bulkPut>[0]>(entries, 'templates.json');
+  const corrections = readJson<Parameters<typeof db.ocrCorrections.bulkPut>[0]>(entries, 'ocr-corrections.json');
+  const aliases = readJson<Parameters<typeof db.labelAliases.bulkPut>[0]>(entries, 'label-aliases.json');
+  const classifications = readJson<Parameters<typeof db.classificationCorrections.bulkPut>[0]>(entries, 'classification-corrections.json');
+  const externalSources = readJson<Parameters<typeof db.externalSources.bulkPut>[0]>(entries, 'external-sources.json');
+  const validationResults = readJson<Parameters<typeof db.deviceValidationResults.bulkPut>[0]>(entries, 'device-validation-results.json');
+  const personalityResults = readOptionalJson<Parameters<typeof db.personalityResults.bulkPut>[0]>(entries, 'personality-results.json', []);
+  const reviewProfileResults = readOptionalJson<Parameters<typeof db.reviewProfileResults.bulkPut>[0]>(entries, 'review-profile-results.json', []);
+  const backupStatus = readOptionalJson<Parameters<typeof db.backupStatus.bulkPut>[0]>(entries, 'backup-status.json', []);
+  const imageMetadata = readJson<Array<Record<string, unknown> & { originalPath: string; processedPath?: string }>>(entries, 'images.json');
+  const draftMetadata = readJson<BackupDraftMetadata[]>(entries, 'drafts.json');
+  const images = imageMetadata.map((item) => hydrateImage(item, entries));
+  const drafts = draftMetadata.map((draft) => hydrateDraft(draft, entries));
+
+  await db.transaction('rw', db.tables, async () => {
+    if (mode === 'replace') {
+      for (const table of db.tables) await table.clear();
+    }
+    await db.logs.bulkPut(logs);
+    await db.images.bulkPut(images);
+    await db.priceCandidates.bulkPut(priceCandidates);
+    await db.userSettings.bulkPut(settings);
+    await db.templates.bulkPut(templates);
+    await db.ocrCorrections.bulkPut(corrections);
+    await db.labelAliases.bulkPut(aliases);
+    await db.classificationCorrections.bulkPut(classifications);
+    await db.externalSources.bulkPut(externalSources);
+    await db.deviceValidationResults.bulkPut(validationResults);
+    await db.personalityResults.bulkPut(personalityResults);
+    await db.reviewProfileResults.bulkPut(reviewProfileResults);
+    await db.backupStatus.bulkPut(backupStatus);
+    await db.drafts.bulkPut(drafts);
+  });
+  return manifest;
+}
+
+async function readAllTables() {
+  const [logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus] = await Promise.all([
+    db.logs.toArray(), db.images.toArray(), db.drafts.toArray(), db.priceCandidates.toArray(), db.userSettings.toArray(), db.templates.toArray(),
+    db.ocrCorrections.toArray(), db.labelAliases.toArray(), db.classificationCorrections.toArray(), db.externalSources.toArray(), db.deviceValidationResults.toArray(),
+    db.personalityResults.toArray(), db.reviewProfileResults.toArray(), db.backupStatus.toArray()
+  ]);
+  return { logs, images, drafts, priceCandidates, settings, templates, ocrCorrections, labelAliases, classificationCorrections, externalSources, deviceValidationResults, personalityResults, reviewProfileResults, backupStatus };
+}
+
+function addJson(entries: ZipEntries, path: string, value: unknown) {
+  entries[path] = strToU8(JSON.stringify(value, null, 2));
+}
+
+function readJson<T>(entries: ZipEntries, path: string): T {
+  const bytes = entries[path];
+  if (!bytes) throw new Error(`バックアップに必要なファイルがありません: ${path}`);
+  return JSON.parse(strFromU8(bytes)) as T;
+}
+
+function readOptionalJson<T>(entries: ZipEntries, path: string, fallback: T): T {
+  return entries[path] ? readJson<T>(entries, path) : fallback;
+}
+
+function withoutBlobFields(image: SakeImage) {
+  const metadata: Partial<SakeImage> = { ...image };
+  delete metadata.originalBlob;
+  delete metadata.processedBlob;
+  return metadata;
+}
+
+function withoutPhotoBlobs(photo: PersistedImportedPhoto) {
+  const metadata: Partial<PersistedImportedPhoto> = { ...photo };
+  delete metadata.originalFile;
+  delete metadata.resizedBlob;
+  return { ...metadata, originalMimeType: photo.originalFile.type, originalLastModified: photo.originalFile.lastModified };
+}
+
+function hydrateImage(item: Record<string, unknown> & { originalPath: string; processedPath?: string }, entries: ZipEntries): SakeImage {
+  const { originalPath, processedPath, ...metadata } = item;
+  return {
+    ...(metadata as unknown as SakeImage),
+    originalBlob: new Blob([entries[originalPath] as BlobPart], { type: String(item.mimeType ?? 'application/octet-stream') }),
+    processedBlob: processedPath ? new Blob([entries[processedPath] as BlobPart], { type: 'image/jpeg' }) : undefined
+  };
+}
+
+function hydrateDraft(draft: BackupDraftMetadata, entries: ZipEntries): SakeLogDraft {
+  return {
+    ...draft,
+    photos: draft.photos.map((photo) => {
+      const { originalPath, processedPath, ...metadata } = photo;
+      const fileName = String(photo.fileName ?? 'photo');
+      const mimeType = String(photo.originalMimeType ?? 'application/octet-stream');
+      return {
+        ...(metadata as unknown as PersistedImportedPhoto),
+        originalFile: new File([entries[originalPath] as BlobPart], fileName, { type: mimeType, lastModified: Number(photo.originalLastModified ?? Date.now()) }),
+        resizedBlob: new Blob([entries[processedPath] as BlobPart], { type: 'image/jpeg' })
+      };
+    })
+  };
+}
+
+async function sha256(bytes: Uint8Array) {
+  const digest = await crypto.subtle.digest('SHA-256', bytes as BufferSource);
+  return [...new Uint8Array(digest)].map((value) => value.toString(16).padStart(2, '0')).join('');
 }
 
 export function downloadBlob(blob: Blob, filename: string) {

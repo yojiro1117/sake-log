@@ -26,23 +26,24 @@ export async function createImportedPhotoDraftsSequential(
   options: {
     signal?: AbortSignal;
     onProgress?: (progress: PhotoImportProgress) => void;
+    onDraftUpdate?: (draft: ImportedPhotoDraft) => void;
   } = {}
-): Promise<{ drafts: ImportedPhotoDraft[]; failures: Array<{ fileName: string; reason: string }> }> {
+): Promise<{ drafts: ImportedPhotoDraft[]; failures: Array<{ fileName: string; fileKey: string; reason: string }> }> {
   if (files.length > MAX_IMPORT_FILES) throw new Error(`一度に選択できる写真は最大${MAX_IMPORT_FILES}枚です。`);
 
   const drafts: ImportedPhotoDraft[] = [];
-  const failures: Array<{ fileName: string; reason: string }> = [];
+  const failures: Array<{ fileName: string; fileKey: string; reason: string }> = [];
 
   for (const [index, file] of files.entries()) {
     if (options.signal?.aborted) {
-      failures.push({ fileName: file.name, reason: '処理をキャンセルしました。' });
+      failures.push({ fileName: file.name, fileKey: photoFileKey(file), reason: '処理をキャンセルしました。' });
       continue;
     }
 
     try {
       drafts.push(await createImportedPhotoDraft(file, index, files.length, options));
     } catch (error) {
-      failures.push({ fileName: file.name, reason: error instanceof Error ? error.message : '写真の処理に失敗しました。' });
+      failures.push({ fileName: file.name, fileKey: photoFileKey(file), reason: error instanceof Error ? error.message : '写真の処理に失敗しました。' });
       options.onProgress?.({
         index,
         total: files.length,
@@ -63,25 +64,69 @@ async function createImportedPhotoDraft(
   options: {
     signal?: AbortSignal;
     onProgress?: (progress: PhotoImportProgress) => void;
+    onDraftUpdate?: (draft: ImportedPhotoDraft) => void;
   }
 ): Promise<ImportedPhotoDraft> {
+  const started = performance.now();
+  const startedAt = new Date().toISOString();
+  const id = crypto.randomUUID();
+  const fileKey = photoFileKey(file);
   assertSupportedImage(file);
   throwIfAborted(options.signal);
 
   options.onProgress?.({ index, total, fileName: file.name, phase: 'metadata', message: '撮影日を確認中です。' });
+  const metadataStarted = performance.now();
   const metadataPromise = readCapturedAt(file);
   const imageHashPromise = hashFile(file);
+  const conversionStarted = performance.now();
   const { file: displayFile, warning } = await normalizeImageFile(file);
+  const heicConversionMs = performance.now() - conversionStarted;
   const [capturedAt, imageHash] = await Promise.all([metadataPromise, imageHashPromise]);
+  const exifMs = performance.now() - metadataStarted;
 
   throwIfAborted(options.signal);
   options.onProgress?.({ index, total, fileName: file.name, phase: 'image', message: '画像を調整中です。' });
-  const resizedBlob = await fileToResizedBlob(displayFile, 1800, 0.88);
+  const resizeStarted = performance.now();
+  const resizedBlob = await fileToResizedBlob(displayFile, 1600, 0.86);
   const { width, height } = await readImageSize(resizedBlob);
+  const resizeMs = performance.now() - resizeStarted;
+  const previewUrl = URL.createObjectURL(resizedBlob);
+  const pendingDraft: ImportedPhotoDraft = {
+    id,
+    fileName: file.name,
+    originalFile: file,
+    resizedBlob,
+    previewUrl,
+    capturedAt,
+    imageHash,
+    width,
+    height,
+    ocr: { text: '', confidence: 0, engine: 'none', status: 'empty', message: 'OCRをバックグラウンドで処理中です。' },
+    candidates: [],
+    status: 'processing',
+    message: 'プレビューを表示しました。OCRをバックグラウンドで処理中です。',
+    imageType: 'other',
+    sortOrder: index,
+    fileKey,
+    classificationConfirmed: false,
+    processing: {
+      startedAt,
+      previewReadyMs: performance.now() - started,
+      heicConversionMs,
+      exifMs,
+      resizeMs,
+      originalBytes: file.size,
+      processedBytes: resizedBlob.size,
+      ocrInputPixels: (width ?? 0) * (height ?? 0),
+      preprocessingVariants: 0
+    }
+  };
+  options.onDraftUpdate?.(pendingDraft);
 
   throwIfAborted(options.signal);
   options.onProgress?.({ index, total, fileName: file.name, phase: 'ocr', message: '文字を読み取り中です。', ocrProgress: 0 });
-  const ocr = await readImageText(displayFile, {
+  const ocrStarted = performance.now();
+  const ocr = await readImageText(resizedBlob, {
     signal: options.signal,
     onProgress: (ocrProgress) => {
       options.onProgress?.({
@@ -94,11 +139,15 @@ async function createImportedPhotoDraft(
       });
     }
   });
+  const ocrMs = performance.now() - ocrStarted;
 
   options.onProgress?.({ index, total, fileName: file.name, phase: 'candidate', message: '候補を確認中です。' });
+  const candidateStarted = performance.now();
   const baseCandidates = buildCandidates(ocr.text, ocr.confidence);
   const learnedCandidates = await learningCandidates(ocr.text);
   const candidates = mergeCandidates(learnedCandidates, baseCandidates);
+  const candidateMs = performance.now() - candidateStarted;
+  const classificationStarted = performance.now();
   const classification = classifyPhoto({
     ocrText: ocr.text,
     width,
@@ -108,6 +157,7 @@ async function createImportedPhotoDraft(
     corrections: await db.classificationCorrections.toArray(),
     visualFeatures: await extractVisualImageFeatures(resizedBlob)
   });
+  const classificationMs = performance.now() - classificationStarted;
   const status = ocr.status === 'success' && candidates.length > 0 ? 'success' : 'warning';
   const message =
     warning ??
@@ -138,12 +188,13 @@ async function createImportedPhotoDraft(
 
   options.onProgress?.({ index, total, fileName: file.name, phase: 'done', message });
 
-  return {
-    id: crypto.randomUUID(),
+  const completedDraft: ImportedPhotoDraft = {
+    ...pendingDraft,
+    id,
     fileName: file.name,
     originalFile: file,
     resizedBlob,
-    previewUrl: URL.createObjectURL(resizedBlob),
+    previewUrl,
     capturedAt,
     imageHash,
     width,
@@ -154,8 +205,23 @@ async function createImportedPhotoDraft(
     message,
     imageType: classification.type,
     classification,
-    sortOrder: index
+    sortOrder: index,
+    fileKey,
+    processing: {
+      ...pendingDraft.processing!,
+      ocrMs,
+      candidateMs,
+      classificationMs,
+      totalMs: performance.now() - started,
+      preprocessingVariants: ocr.preprocessing?.length ?? 0
+    }
   };
+  options.onDraftUpdate?.(completedDraft);
+  return completedDraft;
+}
+
+export function photoFileKey(file: Pick<File, 'name' | 'size' | 'lastModified'>) {
+  return `${file.name}|${file.size}|${file.lastModified}`;
 }
 
 export async function readCapturedAt(file: File): Promise<string | undefined> {
@@ -218,6 +284,7 @@ async function readWithTesseractVariants(
   file: File | Blob,
   options: { signal?: AbortSignal; onProgress?: (progress: number) => void }
 ): Promise<OcrResult> {
+  const started = performance.now();
   throwIfAborted(options.signal);
   const { createWorker } = await import('tesseract.js');
   const worker = await createWorker('jpn+eng', 1, {
@@ -232,10 +299,39 @@ async function readWithTesseractVariants(
   options.signal?.addEventListener('abort', abort, { once: true });
 
   try {
-    const variants = await createOcrVariants(file).catch(() => [{ kind: 'original' as OcrVariantKind, label: '元画像', blob: file }]);
     let best: { text: string; confidence: number; kind: OcrVariantKind; score: number } | undefined;
+    const usedKinds: OcrVariantKind[] = [];
 
-    for (const [index, variant] of variants.entries()) {
+    await worker.setParameters({ tessedit_pageseg_mode: '11' as never, preserve_interword_spaces: '1' });
+    const fastResult = await worker.recognize(file);
+    const fastText = normalizeOcrText(fastResult.data.text.trim());
+    const fastConfidence = Math.max(0, Math.min(1, (fastResult.data.confidence ?? 0) / 100));
+    const fastCandidateCount = buildCandidates(fastText).length;
+    best = {
+      text: fastText,
+      confidence: fastConfidence,
+      kind: 'original',
+      score: scoreOcrVariant({ text: fastText, confidence: fastConfidence, candidateCount: fastCandidateCount, variantKind: 'original' })
+    };
+    usedKinds.push('original');
+    options.onProgress?.(25);
+
+    if (fastCandidateCount > 0 && fastConfidence >= 0.72 && fastText.replace(/\s/g, '').length >= 6) {
+      return {
+        text: fastText,
+        confidence: fastConfidence,
+        engine: 'tesseract',
+        status: 'success',
+        message: '簡易OCRで十分な候補を取得したため、追加前処理を省略しました。',
+        preprocessing: usedKinds,
+        processingTimeMs: performance.now() - started
+      };
+    }
+
+    const variants = await createOcrVariants(file).catch(() => [{ kind: 'original' as OcrVariantKind, label: '元画像', blob: file }]);
+    const fallbackVariants = variants.filter((variant) => variant.kind !== 'original').slice(0, 4);
+
+    for (const [index, variant] of fallbackVariants.entries()) {
       throwIfAborted(options.signal);
       await worker.setParameters({
         tessedit_pageseg_mode: (variant.kind === 'centerCrop' ? '6' : '11') as never,
@@ -247,7 +343,8 @@ async function readWithTesseractVariants(
       const candidateCount = buildCandidates(text).length;
       const score = scoreOcrVariant({ text, confidence, candidateCount, variantKind: variant.kind });
       if (!best || score > best.score) best = { text, confidence, kind: variant.kind, score };
-      options.onProgress?.(Math.round(((index + 1) / variants.length) * 100));
+      usedKinds.push(variant.kind);
+      options.onProgress?.(25 + Math.round(((index + 1) / Math.max(1, fallbackVariants.length)) * 75));
     }
 
     return {
@@ -255,7 +352,9 @@ async function readWithTesseractVariants(
       confidence: best?.confidence ?? 0,
       engine: 'tesseract',
       status: best?.text ? 'success' : 'empty',
-      message: best?.text ? `Tesseract.jsで文字を読み取りました。採用前処理: ${best.kind}` : '文字を読み取れませんでした。銘柄は手入力してください。'
+      message: best?.text ? `Tesseract.jsで文字を読み取りました。採用前処理: ${best.kind}` : '文字を読み取れませんでした。銘柄は手入力してください。',
+      preprocessing: usedKinds,
+      processingTimeMs: performance.now() - started
     };
   } finally {
     options.signal?.removeEventListener('abort', abort);
@@ -305,26 +404,6 @@ export function buildCandidates(ocrText?: string, ocrConfidence = 0): CandidateM
       mismatchReasons: [!makerMatched && candidate.makerName ? '蔵元名がOCR文字列と一致しません' : undefined].filter(Boolean) as string[],
       ...scores
     });
-  }
-
-  if (candidates.length === 0 && correctedRaw.trim()) {
-    const line = correctedRaw
-      .split(/\r?\n/)
-      .map((value) => value.trim())
-      .find((value) => value.length >= 2 && value.length <= 24);
-    if (line) {
-      const scores = scoreCandidate({ ocrConfidence, productMatch: 35, volumeMatch: volume ? 70 : 0 });
-      candidates.push({
-        productName: line,
-        volume,
-        abv,
-        confidence: 'low',
-        matchReasons: ['OCR文字列から抽出'],
-        mismatchReasons: ['候補マスターと一致しません'],
-        ...scores,
-        warning: '候補マスターとは一致していません。必ず内容を確認してください。'
-      });
-    }
   }
 
   return candidates.sort((a, b) => (b.totalConfidence ?? 0) - (a.totalConfidence ?? 0)).slice(0, 6);

@@ -62,9 +62,55 @@ jobs:
         with:
           path: dist
 
+      - name: Upload production build for QA
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-dist
+          path: dist
+          retention-days: 1
+
+  qa:
+    name: Production Preview E2E
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Download production build
+        uses: actions/download-artifact@v4
+        with:
+          name: production-dist
+          path: dist
+      - name: Install Chromium and WebKit
+        run: pnpm exec playwright install --with-deps chromium webkit
+      - name: Download Drive validation images to runner temp
+        run: pnpm run download:drive-images
+        env:
+          DRIVE_IMAGE_DIR: ${{ runner.temp }}/sake-drive-images
+      - name: Start production preview
+        run: pnpm exec vite preview --host 127.0.0.1 --port 4173 &
+      - name: E2E on production build
+        run: pnpm run test:e2e
+        env:
+          E2E_BASE_URL: http://127.0.0.1:4173/sake-log/
+          DRIVE_IMAGE_DIR: ${{ runner.temp }}/sake-drive-images
+
   deploy:
     name: Deploy
-    needs: build
+    needs:
+      - build
+      - qa
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -78,8 +124,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  e2e:
-    name: Public Pages E2E
+  smoke:
+    name: Public Pages Smoke Test
     needs: deploy
     runs-on: ubuntu-latest
     steps:
@@ -96,11 +142,11 @@ jobs:
           run_install: false
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Install Chromium and WebKit
-        run: pnpm exec playwright install --with-deps chromium webkit
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
       - name: Wait for Pages propagation
         run: sleep 20
-      - name: E2E test
-        run: pnpm run test:e2e
+      - name: Public smoke test
+        run: pnpm exec playwright test --project=Android --grep "mobile navigation"
         env:
           E2E_BASE_URL: https://yojiro1117.github.io/sake-log/
