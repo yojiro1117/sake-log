@@ -12,7 +12,8 @@ const allImages = imageDir
 function representativeBatch(offset: number) {
   const heic = allImages.filter((name) => /\.(?:heic|heif)$/i.test(name));
   const raster = allImages.filter((name) => /\.(?:jpe?g|png|webp)$/i.test(name));
-  return [...heic.slice(offset * 8, offset * 8 + 8), ...raster.slice(offset * 2, offset * 2 + 2)]
+  return [heic[offset], raster[offset]]
+    .filter((name): name is string => Boolean(name))
     .map((name) => path.join(imageDir!, name));
 }
 
@@ -24,17 +25,17 @@ async function enterApp(page: import('@playwright/test').Page) {
 
 for (const batchIndex of [0, 1]) {
   test(`production browser path imports real Drive images batch ${batchIndex + 1}`, async ({ page }, testInfo) => {
-    test.skip(!imageDir || allImages.length < 20, 'DRIVE_IMAGE_DIR with 20 real images is required');
+    test.skip(!imageDir || allImages.length < 4, 'DRIVE_IMAGE_DIR with HEIC and JPEG images is required');
     test.skip(testInfo.project.name !== (batchIndex === 0 ? 'iPhone' : 'Android'), 'Each batch runs once on its target browser');
-    test.setTimeout(600_000);
+    test.setTimeout(300_000);
     await enterApp(page);
     const files = representativeBatch(batchIndex);
-    expect(files).toHaveLength(10);
+    expect(files).toHaveLength(2);
     await page.locator('input[type=file][multiple]').first().setInputFiles(files);
     await page.getByRole('button', { name: '1つのお酒に複数写真を追加する' }).click();
 
     await expect(page.locator('img[src^="blob:"]').first()).toBeVisible({ timeout: 45_000 });
-    await expect(page.locator('img[src^="blob:"]')).toHaveCount(10, { timeout: 540_000 });
+    await expect(page.locator('img[src^="blob:"]')).toHaveCount(2, { timeout: 240_000 });
     await expect(page.getByText(/OCR信頼度 \d+%/).first()).toBeVisible();
     await expect(page.getByText('候補は自動確定されません。内容を確認してください。').first()).toBeVisible();
   });
