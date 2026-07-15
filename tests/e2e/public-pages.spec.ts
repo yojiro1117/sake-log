@@ -28,7 +28,7 @@ test('photo import runs OCR and shows confidence without auto confirmation', asy
   await enterApp(page);
   const fixture = path.resolve('tests/fixtures/front-sake.png');
   await page.getByText('写真から記録する').locator('..').locator('input[type=file]').setInputFiles(fixture);
-  await expect(page.getByText(/OCR信頼度 \d+%/)).toBeVisible({ timeout: 140_000 });
+  await expect(page.getByText(/OCRエンジン信頼度 \d+%/)).toBeVisible({ timeout: 140_000 });
   await expect(page.getByText('候補は自動確定されません。内容を確認してください。')
     .or(page.getByText('銘柄を特定できませんでした。手入力してください。')).first()).toBeVisible();
 });
