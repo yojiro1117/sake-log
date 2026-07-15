@@ -123,10 +123,27 @@ jobs:
       - name: Start production preview
         run: pnpm exec vite preview --host 127.0.0.1 --port 4173 &
       - name: E2E on production build
+        id: production-e2e
+        continue-on-error: true
         run: pnpm run test:e2e
         env:
           E2E_BASE_URL: http://127.0.0.1:4173/sake-log/
           DRIVE_IMAGE_DIR: ${{ runner.temp }}/sake-drive-images
+
+      - name: Upload Playwright diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-diagnostics
+          path: |
+            test-results
+            playwright-report
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Report E2E failures
+        if: steps.production-e2e.outcome == 'failure'
+        run: node scripts/report-playwright-failures.mjs
 
   deploy:
     name: Deploy
