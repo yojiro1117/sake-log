@@ -64,6 +64,9 @@ jobs:
       - name: Recalibrate visual matching validation
         run: pnpm run recalibrate:visual
 
+      - name: Reassess catalog candidates with strict evidence rules
+        run: pnpm run reassess:drive-candidates
+
       - name: Verify real-image identification results
         run: pnpm run verify:identification
 
@@ -145,11 +148,75 @@ jobs:
         if: steps.production-e2e.outcome == 'failure'
         run: node scripts/report-playwright-failures.mjs
 
+  ios:
+    name: iOS Vision Build
+    runs-on: macos-15
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build:native
+      - name: Sync Capacitor iOS
+        run: pnpm exec cap sync ios
+      - name: Build iOS simulator app
+        run: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+      - run: node scripts/check-native-contract.mjs ios
+
+  android:
+    name: Android ML Kit Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+          run_install: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build:native
+      - name: Sync Capacitor Android
+        run: pnpm exec cap sync android
+      - name: Build and test Android
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew testDebugUnitTest assembleDebug --stacktrace
+      - run: node scripts/check-native-contract.mjs android
+
+  native-contract:
+    name: Native Contract and License Boundary
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-native-contract.mjs all
+      - run: node scripts/check-native-models.mjs
+
   deploy:
     name: Deploy
     needs:
       - build
       - qa
+      - ios
+      - android
+      - native-contract
     runs-on: ubuntu-latest
     permissions:
       contents: read

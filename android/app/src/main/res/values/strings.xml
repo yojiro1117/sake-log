@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SAKEログ</string>
+    <string name="title_activity_main">SAKEログ</string>
+    <string name="package_name">jp.yojiro.sakelog</string>
+    <string name="custom_url_scheme">jp.yojiro.sakelog</string>
+</resources>

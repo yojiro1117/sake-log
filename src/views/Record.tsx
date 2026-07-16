@@ -1,4 +1,5 @@
 import { Camera, CheckCircle2, RotateCw, ScanLine, Search, XCircle } from 'lucide-react';
+import { Capacitor } from '@capacitor/core';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { RadarChart } from '../components/RadarChart';
 import { Field, Section } from '../components/Section';
@@ -15,12 +16,14 @@ import { determineLearningDecision, recordIdentificationRun, recordLearningDecis
 import { mergePhotoDraft, mergePhotoDrafts, uniqueImportFiles } from '../services/photoQueue';
 import {
   createImportedPhotoDraftsSequential,
+  createNativeCapturedPhotoDraft,
   imageTypeLabel,
   MAX_IMPORT_FILES,
   photoFileKey,
   reanalyzePhotoDraft,
   type PhotoImportProgress
 } from '../services/photoImport';
+import { captureLabelPhoto } from '../services/smartCaptureService';
 import { historyPriceCandidates, manualPriceCandidate, searchRakutenPrices, selectedPriceSnapshot } from '../services/priceService';
 import { createInitialFormState, initialScores, type RecordFormState } from '../services/recordForm';
 import { averageScore, correctedScore, evaluateValue, pairingSuggestions, summarizePrices } from '../services/scoring';
@@ -65,6 +68,7 @@ export function Record({
   const [failures, setFailures] = useState<Array<{ fileName: string; fileKey: string; reason: string }>>([]);
   const [progress, setProgress] = useState<PhotoImportProgress | undefined>();
   const [isImporting, setIsImporting] = useState(false);
+  const [isScanning, setIsScanning] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [priceCandidates, setPriceCandidates] = useState<MarketPriceCandidate[]>([]);
@@ -101,6 +105,25 @@ export function Record({
   const adoptedMarketPrice = selectedCandidate ? selectedCandidate.totalPrice ?? selectedCandidate.price : form.manualMarketPrice;
   const value = evaluateValue(form.satisfactionScore, adoptedMarketPrice);
   const pairings = pairingSuggestions(form.alcoholType, form.scores);
+
+  async function scanLabel() {
+    if (isScanning) return;
+    setIsScanning(true);
+    setStatus('ラベルを撮影しています。');
+    try {
+      const capture = await captureLabelPhoto('frontLabel');
+      const draft = await createNativeCapturedPhotoDraft(capture);
+      setDrafts([draft]);
+      setImportMode('singleLog');
+      setActiveIndex(0);
+      setForm((current) => ({ ...current, capturedAt: draft.capturedAt }));
+      setStatus(capture.warnings.length ? capture.warnings.join(' ') : '端末内でラベルを解析しました。候補を確認してください。');
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : 'ラベルを撮影できませんでした。');
+    } finally {
+      setIsScanning(false);
+    }
+  }
 
   const draftLog = useMemo(() => {
     const priceSummary = summarizePrices(priceCandidates);
@@ -598,6 +621,12 @@ export function Record({
 
       <Section title="1. 写真選択">
         <div className="glass-panel rounded-lg p-4">
+          {Capacitor.isNativePlatform() ? (
+            <button className="mb-3 flex w-full items-center justify-center gap-2 rounded-md bg-gold px-4 py-4 font-bold text-ink disabled:opacity-50" disabled={isScanning} onClick={() => void scanLabel()}>
+              <ScanLine size={18} />
+              {isScanning ? 'ラベルを解析中…' : 'ラベルをスキャン'}
+            </button>
+          ) : null}
           <label className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-rice px-4 py-4 font-bold text-ink">
             <Camera size={18} />
             写真を選択
@@ -750,7 +779,7 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="3. 酒種">
+      <Section title="3. 銘柄情報の確認">
         <div className="grid grid-cols-3 gap-2">
           {alcoholOptions.map((option) => (
             <button
@@ -764,7 +793,7 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="4. 銘柄情報">
+      <Section title="銘柄・蔵元・飲酒日の確認">
         <div className="grid gap-3">
           <Field label="銘柄"><input className={inputClass} value={form.productName} onChange={(event) => setForm({ ...form, productName: event.target.value })} /></Field>
           <Field label="蔵元・メーカー"><input className={inputClass} value={form.makerName} onChange={(event) => setForm({ ...form, makerName: event.target.value })} /></Field>
@@ -795,7 +824,7 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="5. 市場価格取得">
+      <Section title="市場価格の確認">
         <div className="space-y-3">
           <button className="flex w-full items-center justify-center gap-2 rounded-md bg-moss px-4 py-3 font-bold" onClick={searchPrice} disabled={isSearching}>
             <Search size={18} />
@@ -819,7 +848,7 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="6. 評価入力・味覚評価">
+      <Section title="4. 評価入力">
         <div className="grid gap-4">
           {profile.axes.map((axis) => (
             <label key={axis.key} className="rounded-lg bg-rice/7 p-4">
@@ -836,7 +865,7 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="7. 香り評価・コスパ評価">
+      <Section title="満足度・コスパ評価">
         <div className="grid gap-3">
           <ScoreInput label="総合満足度" value={form.satisfactionScore} onChange={(value) => setForm({ ...form, satisfactionScore: value })} />
           <ScoreInput label="また飲みたい度" value={form.repeatScore} onChange={(value) => setForm({ ...form, repeatScore: value })} />
@@ -848,7 +877,7 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="8. レーダーチャート">
+      <Section title="味覚レーダーチャート">
         <div className="glass-panel rounded-lg p-4">
           <div className="h-72"><RadarChart type={form.alcoholType} scores={form.scores} /></div>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center">
@@ -860,7 +889,7 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="9. ペアリング">
+      <Section title="料理ペアリング">
         <div className="rounded-lg bg-rice/8 p-4">
           <div className="flex flex-wrap gap-2">
             {pairings.map((pairing) => <span key={pairing} className="rounded-full bg-gold/15 px-3 py-2 text-sm font-bold text-gold">{pairing}</span>)}
@@ -868,14 +897,14 @@ export function Record({
         </div>
       </Section>
 
-      <Section title="10. コメント">
+      <Section title="記録コメント">
         <div className="grid gap-3">
           <Field label="タグ（カンマ区切り）"><input className={inputClass} value={form.tags} onChange={(event) => setForm({ ...form, tags: event.target.value })} /></Field>
           <Field label="記録コメント"><textarea className={`${inputClass} min-h-24`} value={form.memo} onChange={(event) => setForm({ ...form, memo: event.target.value })} /></Field>
         </div>
       </Section>
 
-      <Section title="11. 保存">
+      <Section title="5. 保存">
         <div className="grid gap-3">
           {duplicateChoices.length ? (
             <div className="rounded-md bg-gold/15 p-3 text-sm text-gold">

@@ -1,5 +1,6 @@
 import { BUILD_INFO } from '../config/buildInfo';
 import { db } from '../db/db';
+import { getVisionEnvironment } from '../platform/visionAdapter';
 
 export interface SafeDiagnostics {
   generatedAt: string;
@@ -13,6 +14,7 @@ export interface SafeDiagnostics {
 }
 
 export async function createSafeDiagnostics(): Promise<SafeDiagnostics> {
+  const vision = await getVisionEnvironment().catch(() => undefined);
   const estimate = await navigator.storage?.estimate?.().catch(() => undefined);
   const registration = 'serviceWorker' in navigator ? await navigator.serviceWorker.getRegistration().catch(() => undefined) : undefined;
   const cacheNames = 'caches' in globalThis ? await caches.keys().catch(() => []) : [];
@@ -30,6 +32,14 @@ export async function createSafeDiagnostics(): Promise<SafeDiagnostics> {
       textDetectorAvailable: 'TextDetector' in globalThis,
       heicFallbackAvailable: true,
       ocrLanguages: ['jpn', 'eng']
+      , visionEnvironment: vision?.environment ?? 'pwa'
+      , ocrEngine: vision?.ocrEngine ?? 'tesseract'
+      , barcodeEngine: vision?.barcodeEngine ?? 'BarcodeDetector / ZXing'
+      , visualEngine: vision?.visualEngine ?? 'sake-local-fingerprint-v1'
+      , modelVersion: vision?.modelVersion ?? 'web-v1'
+      , catalogVersion: vision?.catalogVersion ?? 'catalog-core-v1'
+      , thermalState: vision?.thermalState ?? null
+      , batteryLevel: vision?.batteryLevel ?? null
     },
     storage: { usage: estimate?.usage ?? null, quota: estimate?.quota ?? null },
     indexedDb: { name: db.name, version: db.verno, tableCounts },

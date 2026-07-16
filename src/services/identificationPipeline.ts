@@ -15,7 +15,7 @@ import { normalizeCatalogTerm } from './ocrNormalization';
 import { loadLocalProductCatalog } from './productCatalogService';
 import { scoreVisualReferences } from './visualMatching';
 
-export async function identifyAlcoholProductPipeline(input: {
+export async function identifyAlcoholProductEvidencePipeline(input: {
   images: ImageIdentificationInput[];
   path?: IdentificationPath;
   persist?: boolean;

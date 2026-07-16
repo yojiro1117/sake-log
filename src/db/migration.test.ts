@@ -10,7 +10,7 @@ afterEach(async () => {
 });
 
 describe('database migration', () => {
-  it('preserves version 1 logs and images through version 7', async () => {
+  it('preserves version 1 logs and images through version 8', async () => {
     const name = `migration-v1-${crypto.randomUUID()}`;
     names.push(name);
     const legacy = new Dexie(name);
@@ -29,12 +29,12 @@ describe('database migration', () => {
     await migrated.open();
     const log = await migrated.logs.get('legacy-log');
     const image = await migrated.images.get('legacy-image');
-    expect(migrated.verno).toBe(7);
+    expect(migrated.verno).toBe(8);
     expect(log).toMatchObject({ logId: 'legacy-log', status: 'complete', selectedMarketPriceCandidateId: null });
     expect(log?.generatedTexts).toBeUndefined();
     expect(image).toMatchObject({ imageId: 'legacy-image', imageType: 'frontLabel', sortOrder: 0, createdFromImport: false });
     expect(migrated.tables.map((table) => table.name)).toEqual(expect.arrayContaining([
-      'productAliases', 'productBarcodes', 'visualFeatures', 'identificationEvidence', 'identificationSettings'
+      'productAliases', 'productBarcodes', 'visualFeatures', 'identificationEvidence', 'identificationSettings', 'nativeAnalyses', 'unknownProductDrafts'
     ]));
     migrated.close();
   });

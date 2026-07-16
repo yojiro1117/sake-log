@@ -2,8 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-export default defineConfig({
-  base: '/sake-log/',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'native' ? './' : '/sake-log/',
   build: {
     rollupOptions: {
       output: {
@@ -17,6 +17,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      disable: mode === 'native',
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
@@ -45,4 +46,4 @@ export default defineConfig({
       }
     })
   ]
-});
+}));

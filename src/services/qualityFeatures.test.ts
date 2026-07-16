@@ -62,7 +62,7 @@ describe('quality features', () => {
   });
 
   it('keeps database migration version and new stores without deleting existing tables', () => {
-    expect(db.verno).toBe(7);
-    expect(db.tables.map((table) => table.name)).toEqual(expect.arrayContaining(['logs', 'images', 'drafts', 'ocrCorrections', 'labelAliases', 'classificationCorrections', 'identificationEvidence', 'visualFeatures']));
+    expect(db.verno).toBe(8);
+    expect(db.tables.map((table) => table.name)).toEqual(expect.arrayContaining(['logs', 'images', 'drafts', 'ocrCorrections', 'labelAliases', 'classificationCorrections', 'identificationEvidence', 'visualFeatures', 'nativeAnalyses', 'unknownProductDrafts']));
   });
 });

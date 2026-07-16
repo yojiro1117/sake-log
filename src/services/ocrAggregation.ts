@@ -1,5 +1,5 @@
 import type { CandidateMatch, ImportedPhotoDraft } from '../types';
-import { identifyAlcoholProductPipeline } from './identificationPipeline';
+import { identifyAlcoholProductPipeline } from './productIdentificationPipeline';
 
 export interface AggregatedOcrEvidence {
   text: string;

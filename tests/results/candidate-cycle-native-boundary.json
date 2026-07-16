@@ -1,0 +1,3131 @@
+{
+  "summary": {
+    "totalImages": 151,
+    "candidateHitRate": 0.132,
+    "noCandidateRate": 0.868,
+    "oneCharacterAliasesRejected": true,
+    "fuzzyMatchingScope": "normalized OCR tokens of 2-48 characters",
+    "groundTruthConfirmed": 0,
+    "falseCandidateCount": null,
+    "note": "No false-candidate rate is claimed because all current ground truth is unknown."
+  },
+  "results": [
+    {
+      "driveFileId": "1xem5i5_pReFqb9bHkpkf1DZ2eqSGQFzi",
+      "fileName": "107E3333-8341-400D-8E5C-839BBF2B9D91.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "いいっの\n\nの\n\nや\n\nZS\n\nTIL\n\nゃや",
+      "ocrConfidence": 0.57,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1776,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1uLaILvF1cpWtOCr5RGbKaAcnvYWxbxUp",
+      "fileName": "1ADFD1E9-B715-4B5E-AEED-348CECA61B64.JPG",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "*\nUE— _\nConiiia\nンー\nデンーー年 で\nrmr ー 7計 wi 』\n剛ー 串間ー ー 。 ー\n、財!虹同 上 山川\n- E_. go — ー\n ー\n』 /\nHIBIKI ——\nSUNTORY wirsky\nmaa ANESE HARMON)",
+      "ocrConfidence": 0.19,
+      "detectedProductName": "響",
+      "detectedMakerName": "サントリー",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "OCR別名一致: HIBIKI"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 3850,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "低信頼度",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: HIBIKI"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1_eFJ3K2lJh5hC1B8uZvsllKR-0L2zZlH",
+      "fileName": "3780045A-CF34-4840-A568-B8E57175AA1D.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "R\n\nb'\n\nミーニー\n\n次\n\nh .\n\nーー-。衝\n\nが引 way A\n\nリ\n\nohs\n\n[597,\n\nゃる\n\nし\n\nSN\n\nーー お旦\n\nhe Ja\n\nSaki\n\nWI\n\nY,\n\nNH\n\nSutdll\n\n5 語\n\nーッ\n\nom -ya\n\nる\n\nk\n\n2 衝\n\n aTN\n\nッー\n\nも",
+      "ocrConfidence": 0.28,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5323,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1ib6AHmLLVzi9UaDFqyvFsytLlMUqOOIB",
+      "fileName": "427EC644-CC5C-40F6-A7EB-63657F2B0EDC.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "ド誠\n\nJol) e\n\nペッンンメン\n\nf2s\n\n>\n\nTHIS WAY\n\nアマンカ\n\nーージョ\n\n#\n\nーーが7\n\nW\n\np\n\niN\n\nW\n\nー 一一\n\n> ®\n\n® l\n\nhalt ー\n\n—\n\n6\n\n= P\n\n¥:\n\nーーを\n\n5\n\nも\n\n$:\n\n競馬\n\n&",
+      "ocrConfidence": 0.33,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4250,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1NyCWFEcGXjseYXBqJhxWiN_nMRpSimNw",
+      "fileName": "4494288B-563B-4AD8-B556-FA97F692428A.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ーー 。。 論d鐘 ー-.\nf a はで 関計っ5\n NEE\\\n LET 7 ーー ンー\n導いNN計\n。 が NEEES / 」 (\n 人か ルンジンンアー ー\n— AN <が NGSL 7 “B 3 I Te\nd JiF Nd/ L C e\nる Y\n 0 をュパー オ 人 i>\nMalda@rn)\ne 。 oridNBlened Whis ー\n C) クーン / E.\n上 SSS (EAL 3\npkgiao Ad of che ihichibu Di\n- Re\". ー He ey of [シン 4\nAL 。 ny casky to pegfect his cn\nデー in addiedm to hiCHchik singlé falc\n7g his ss S orld Nb ded Yhisky\nー\nー Non Ch & Non (loloured : 。\nkt ;\n; ¢\n1r\n 4896\n】 lty ~ ジン _ammm",
+      "ocrConfidence": 0.27,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 10706,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "17GzQ1QoBS2NRgX9WIIUcuaklDSSzmxeI",
+      "fileName": "5077832F-9F46-42EB-A4A6-DE4A9F57C672.JPG",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "て 僚\nし湖上 2 5\nw=\n= ーージー ~J\n ・全、\n。 に、、\nh\n’ で4 E\n.. 7 =\nX\nNY\n<Y\nん パソ2\n【] 4\n6 ング\nミタアア\n ば のムシ",
+      "ocrConfidence": 0.31,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2458,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1MJYL3PjpvetNE6VPyjmwcqksNYmoynfy",
+      "fileName": "51B4D7FD-5F09-4D11-87E4-3D48C4A06230.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": ". J! - も にニー ー 一 一目 - ) :\nTHisway X om, ym\nーー 4 ー [EY /\n—_—\nEil: — pe—\nnp b ( ee 4\nrEl\n1 / NM 、\n .9 量\n0al t\nW \\E\n—_— ー y/ \\ 純 & \\ B と を\n&t ぶ 米 と\nだこ のる ーー\n = ) = [ の の ー ーー一 >\n—— Pn— ご\n人 をづ :\n Tr P 上\n IERN\nーー - ー}\nEN v - .\nA Y ー *《 / ..",
+      "ocrConfidence": 0.28,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5393,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "12fYhKeAd9NpjiWeKDasfa66WE4bl1au9",
+      "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "(をが\n\nQ\n\nId\n\nCSの7\n\nENTTO HRH THE PRINCE OF WarEe\n\nENSTON &CO。 (LAPHROAIG) ISLE OF isuay\n\nAND\n\nDSUPPLIER OF SINGLE MALT SCOTch ws\n\n\\PHROA\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\n11\n\nf\n\nTRIP\n\nTHPLEMATURED FOR PEAT\n\n【\n\nWost Tichly flavon\n\n3\n\n1\n\nESTD ー 軒\n\n3\n\nDammrmp AND BOTTLED IN 8007 -\n\n[4\n\nY &co, » LAPHROAIG DISTILE",
+      "ocrConfidence": 0.6,
+      "detectedProductName": "Laphroaig Triple Wood",
+      "detectedMakerName": "Laphroaig Distillery",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "OCR別名一致: Laphroaig"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 1377,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "Laphroaig Triple Wood",
+          "makerName": "Laphroaig Distillery",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: Laphroaig"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "10kQUF6wQSJmwDhhweFJc3YIKF2uNcLjA",
+      "fileName": "6577BD8F-A573-43F8-AA7E-C237F22C2118.JPG",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "2 パサ 日 2\n1 ー ママ\nーー —.\n ー § i7\nE X しごアッ\n= あこ\nら / ー\nるの ー\ny- 上\nーー 、いトールト\nタ (NO ロー一\nW2YER\". s\n(y N ー * ー 一朗 »\n り i o 本 ここで/\nF (vw しES\nーー 』 d 4\nL 」 J @ ー を ot -",
+      "ocrConfidence": 0.32,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5477,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1_rtmxLfD2X_ERkBggn4LjVO7NnjuSO8_",
+      "fileName": "8F50E7DC-EBEA-403E-A1EB-02730F0E4F68.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "e リリ 25 E\n ?\nE a. .\n/}\n/ & —hTMN &\n[ 人 & 9 4 ー 7 \"\nー 恒 ”\nLER ー 間\nHIKKA -\nCOFFEY MALT TM== —\nWHISKY S\nGo\n.LTD,, JAPAN 2 ツ\nがフェモルト -\n45% NIKKAWHISKY 7が\n 』\n. Y",
+      "ocrConfidence": 0.4,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3409,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1nbdUOLVbpi31GzAD2eDxUkdHLbMryeVS",
+      "fileName": "A0CFB8EB-5406-4ED8-A7ED-B52C734D9917.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "LT Jmy c IPUR —\n THISway 八 / ー\n) * / に い 』\no ¢\nンー £24 l\n/ / RG .\n/ \\ ーー\n4ず4 『 1\n/ - ー キ\nー :ー « きき\nSIEE. m\n人な ー リリーー\nに 鉛 & ーー S J\n4f [ のア\nBー CTRRE\nか 0 B\nどじ k 【 を 4 較\n (6ー 他世本 一>\nー , ) pi—J 7 q\n\\34 IEEY\n E2=Rany\n$。。 ーーアン 2 ー志を短表ラサ\nー 6 4 E——",
+      "ocrConfidence": 0.3,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6044,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1t4TS5Zt7PyJueci-ZsO9CQ1Ho25RvP8V",
+      "fileName": "A21AE476-AC95-435E-8AAE-CE2C69A21DD3.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "- 'y W —\nルリ \" ——\n“«1 \\\nルリWM <でご\n選 っ\nノ k : き —\nA } 3 、\nfl I\nm [0eR\nf ー\nー ii\nKO — -\n“higglvat CC、 <の 名\n0 Mi vVR * 区 t\nwaNbe BOuiy\n Y ジ liy\n: . Z / £ 時 4 3 4 AN \\ ¢ 上 。 0\nの本 2 映 En\nを ー N -\n2の : foe. に n\n() ーh 本 にーー、 . ¥ a",
+      "ocrConfidence": 0.28,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5644,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1qtJYwMqvE6Vpcy_qXKlAQeCpeDqnchWH",
+      "fileName": "B2B359C6-662B-4C7B-B971-773C9E2484C9.JPG",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": ". ー #\nB T za\nHA 、\nる ー %\n則 ヶ\n」 ーー WW 計関\n N ご\n/ いい\n一 CR\n。 ーー\n LA N—\n/ al いい\n/ 地主 -\nリ いい科。 i\\\n本 / I /生 is\n\\ ! 3 b h \\ ¥\n: ud ー しい識ー もー\nーー一 /午全ー -\nーー = ー 4\nー に1\nam ー のワク2のひ。\ng. ' 28 リン\n 」 _ f\n-. . ー ——\n FETTEELLll リィ",
+      "ocrConfidence": 0.3,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6488,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1um1RAXl0-FXIOs4h-evi-aA912a8IEMu",
+      "fileName": "DAAAD20B-44B1-4CB4-8814-51CDB9758698.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "—_\n\nMalt\n\nWorld\n\nClassie\n\nIOn\n\nイロ\n\nン\n\n*,\n\nアルソンアドアツ\n\nカルエ才ション\n\nilmd*\n\no\n\nA)\n\n€\n\nで\n\nし\n\n*4.3Eue annE\n\n(\n\ntト7オー\n\n700m\n\n反\n\n:モルト、グルーン アルコール分:48%\n\n難才\n\n株\n\n区会社ペンチャーウイスキー 埼玉県秋父市\n\nが\n\n(40\n\nYtFis\n\n県秩父市みどりが丘4番1\n\nARy\n\nな\n\n*旧然の風味を大切にするために、 EATIEEO\n\nue\n\n=4\n\nN\n\nっておりません。 この為、一般品に比\n\nべて>\n\nA\n\n#-\n\nルリますず。 また、キャップに天然コルク\n\nを使用ている\n\n\"入ることがあります。 これらは、昌み成\n\n<だ3い\n\nd\n\n\"は問題ありません。 尚、ボトルは立てで\n\n板\n\n20押なってからし <適量を。 og 拓中・ 授乳中の飲枯3\n\n17\n\n==] ウイ\n\n2時\n\nテア4 [",
+      "ocrConfidence": 0.63,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2789,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1MeLIadwZdVgBsosBsij1CPzN7Bv6PfRI",
+      "fileName": "E78D20E4-E2E9-42B7-84A4-29FB8A450A95.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "HIS WAY ギヤ し B に いて 区\nmg 光\nー ~4 !生 へ\nー //す用 } »\nー / ー # A >\nLil ー \\ B\nTIYTR の4 で\n 芝 { \\ 計時\nf ) ー\n& [Ip E3 .\n 用 ー -\n3E すき は BEL ud — \\\nSECRERS 衝間 - ’\nr 部ー AY\nvid C, i — 。 j に\n { 人めの 』 ー (el は - N\nーー ー 訓 ーー か\nT— ー EE\n 用前\nー 衝\nSl h\nだ 里 音 —\n? グ . : ーー\n! ダグ a Am a Bq 急/ 上上 sod #",
+      "ocrConfidence": 0.28,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6016,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Mpkn3AxtZxIudfLVRC7YamWW770F24e_",
+      "fileName": "E8A1A542-94AE-4884-A368-8CCAC773FDA8.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "«\n- 1 M R.\n5 コミリー一一\nop 79 : ~ { y\n— 。 ーー 5 ーー ロ\n本 ーー ンー\n_ oe交m】 fifs も4 』 \\ )\nゃ io 間 2\nて -\nーー l _\n全て THE [ 73 - ] に\nーー間 AMAZAKI & -\ny SINGLE MALT 』 ;\n[ APANESE WHISKY & 0 ai7\nAN ~Q ciinn, g F\nHH :\n ビー が にーー ゃ\n 第 ー [に 】\n山崎蒸汐所痢 = Seal!\nuTR oTh .\nV) E——\n Pod .",
+      "ocrConfidence": 0.31,
+      "detectedProductName": "山崎",
+      "detectedMakerName": "サントリー",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "OCR別名一致: 山崎"
+      ],
+      "candidateCount": 3,
+      "processingTimeMs": 5739,
+      "warnings": [
+        "ネイティブ形式のままOCR"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "山崎",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: 山崎"
+          ]
+        },
+        {
+          "productName": "山崎 12年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: 山崎"
+          ]
+        },
+        {
+          "productName": "山崎 18年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: 山崎"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1Clcan0MYRcwBqaQLhYa815s2ii96_HFh",
+      "fileName": "EF2F894B-8876-4A2C-AC88-FC24F7462935.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "1。.\n\nBie.\n\nを\n\n日腐 低温貯蔵酒\n\n技と革新の技術を駆使し、低星雌\n\n、さわやかな味わいと米の旨みを\n\n引き出した芳酵型本 fitio\n\nHANIH ormAms\n\n米、 米麹、\n\n造アルコール\n\n米: 国産米100%使用\n\n=)\n\n15度\n\n1.8L\n\n者:高木酒造株式会社\n\nI\n\nす山市大学賞\n\n並182\n\nめに\n\nおし\n\n保存方法: 冷暗所に保管し、\n\nBifi\n\n320\n\n年月は表貼りに記載)\n\n上\n\nなってから。\n\nJILL\n\n日月限定酒",
+      "ocrConfidence": 0.7,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8486,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1GG0eZ2T48PUzb2XwKC_uXGAi5O2YpSLG",
+      "fileName": "IMG_1703.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "——— ー \\ a— + EM* 。。\n1 y/ の -\nkt flly ごが\n) / - キャきり\nNs WAY 4) mf二\n/ Ts 閣1\n/』弟gs 1\n に\n/ ー ,\nf 4 ー\nリー ー ー\n 記 3 』\n間 ]\n癌本 こい\nN し 加導ー Jhe\n w B l ;\n。 RTN ここ、まっ\nーー 。 YT El\nー と (ー ー ~\n. l 4\n. :\n剛 4ュー\n/ & 2 v E\n\\ テー Pid Ne A/",
+      "ocrConfidence": 0.27,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6374,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1hJpyI6zgJO-klojvVNFssu9muiYXjOIl",
+      "fileName": "IMG_1704.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "N\n\n___=\"\n\nn\n\n所\n\n用(0\n\nTHIS WAY\n\nIy\n\nUE\n\n(』\n\nり\n\n計\n\naY)\n\nーー\n\n純\n\nママ\n\nt\n\nKUBoTa",
+      "ocrConfidence": 0.25,
+      "detectedProductName": "久保田",
+      "detectedMakerName": "朝日酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: KUBOTA"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 3109,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "久保田",
+          "makerName": "朝日酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: KUBOTA"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1vX-HdYX7SdrrG5YRY197yMOpgBG30MW_",
+      "fileName": "IMG_2048.JPG",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "レー 同人陰 ーー E=\" ~psewsmcon\n“5B Wgy —=——\nw —\nー ー ーー m を\naa ーー / »/ &F ~ 4\nヘッツン ルー &h\nー ・ I ーッ アア\n関時 モモキ7* 3\nに\n\n: - の Wi SeEE \\ ー } 1\nデーッー .基語語 ー 貞\n\n ジー Be. 5 4 ー / ーー ;\n= SE. [N ー\nrm B —\n1H] Blg in 回 ー\n邊引前 a ーー\n吉利旬 も a\nー ー て半 に\n 時 。\n。\n3\nキ\nに\n』 ー\n中 (\n. ー み\n\n~ しーー\n» ーーー7 d S P ~N\n\nー as て —\n\nで om T dd\nーー\n\n『 = — ーー\na /",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8523,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Ey-_b6Lj9mz9yLF7SNZF-oOVPQ0xb13b",
+      "fileName": "IMG_2050.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "い。\nNd Tp 』\nuu 凍)\nーーゴビ ー\n「 二王ーー ミミきす\nテーまそ\nプア - N\n’ : adる \\\nーー #A\nE ー fos \\ .\n Be\nー “5 —— — 1 一\n o*TMall KA WHISKY\n - に SINGLE MALT 剛一\n MIYAGIKYO\n- B —\n1 % ?\n :\nー & = S b た 1 de\nB C. (E\n導電了> 電孝\nー (必赤河所ジングルを - -\nter\n as j 。\n記イスキ ーー",
+      "ocrConfidence": 0.24,
+      "detectedProductName": "シングルモルト 宮城峡",
+      "detectedMakerName": "ニッカウヰスキー",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "OCR別名一致: MIYAGIKYO"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 5739,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "シングルモルト 宮城峡",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: MIYAGIKYO"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1M7F3DNH9gJv5xsdTZFc4_1jcoXgH9zOy",
+      "fileName": "IMG_2051.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ur 回 陸\nーー革\nfo\n ー ー\nL 。 ノ を :\nンー = So\n ーーミーテーで だ\ne EEE —. N\nー ニーデーニー一 ミー ーー で\nー B t ー 1 』 に ー\nー ー ー\n ー A由\n5\nこさで寺 ー\n本時 2 た\n B に\nS ー\nAA プ 上\n・間 f\nSHIBIKI“K に\nー還5 wmwy g 回学『マ\nR . ッ\n Tapanese HARMONY ーー 本\nて ーー blend of the finest selection 7 * Hi\nンー = に\n電 み\n、 m t» ーータマ ー ’",
+      "ocrConfidence": 0.32,
+      "detectedProductName": "響",
+      "detectedMakerName": "サントリー",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "OCR別名一致: HIBIKI"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 6082,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: HIBIKI"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1oPTLwgpMKSVp8JEv5zLMZdwS3iVnFww-",
+      "fileName": "IMG_2128.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ー aa \\!\n/ w\nー = / ー\n が )\n: Falih -\nve ( [ AEEE \\\n7 N\nR m ( E awSs\nのest の 】 He\ny Gral [1 ー ー p ー 上 』 ー\n\\ 2 y ! § '坊 0の 1\nSl pfi ELC\ns A\n ] ー\nうき\nE 」導\nン うち 議 。\n> hya ui テッンド ocEAN NINETY NINE の ア\n』 ByRTY :\n、 Jen iy \\\nri 8 ーーーニー一",
+      "ocrConfidence": 0.33,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4307,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1B8pY03pM5ocCUITB_UVl6YigvTaPMQb7",
+      "fileName": "IMG_2268.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "lo”\n\nl\n\nッッ\n\nーー\n\nーー\n\nTHg\n\nWMAZAKI\n\nSE Wsxy\n\nJA\n\n'HennessY\n\nビッ\n\nMEGD\n\nサントリー>\n\nグルモルレト*ウイスキー\n\n43\n\nL MF 125 45\n\n¥ 9300\n\nJEE SE",
+      "ocrConfidence": 0.4,
+      "detectedProductName": "響",
+      "detectedMakerName": "サントリー",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "蔵元一致"
+      ],
+      "candidateCount": 5,
+      "processingTimeMs": 7390,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "響",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "蔵元一致"
+          ]
+        },
+        {
+          "productName": "山崎",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: YAMAZAKI",
+            "蔵元一致"
+          ]
+        },
+        {
+          "productName": "山崎 12年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "蔵元一致"
+          ]
+        },
+        {
+          "productName": "山崎 18年",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "蔵元一致"
+          ]
+        },
+        {
+          "productName": "知多",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "蔵元一致"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1m6Cw4yXzRmnhmUvqpEGOvbzN92aahk9C",
+      "fileName": "IMG_2269.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "Ee ー ー 上 's\nSEiE ゴー ーー \\a!\n5 U\nいしい3ぷ ー ー を JROYAL\n l いいにム 』\nーー 上 CoFFgy MALTS “og\nWHisky Ja &\nノ www é IA k\n> D.JAPAN 6 5 cr E y »\n/ ェモルト ; ー 。\n2 1 NIKKAWRISKY 4 ド A の T\n -)\n— F\n= - em § 』\nao 引人衝放\nの\n_カフェモレトビ 2*\n ラッムロ ー HB /",
+      "ocrConfidence": 0.34,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5153,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1TXv2NIHHuLmtRkNADhqYXA7oSCx5wMfD",
+      "fileName": "IMG_2270.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "i yr4 AMSTHMVMMIN cpp 。 』\nF Nー A( FTLY\nSme — ー\nHE vR NVAV{“aL1\"0d ONITISIO\n 5 AISIHA VOIIN HL Ag 03D0d0Hd に\nWs 2 』 ¥\nAMSIHM [F\n11VM 人ヨコヨコ0” § 3\nvメ\"リド 議",
+      "ocrConfidence": 0.31,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3011,
+      "warnings": [
+        "heic-convert済み一時画像を再利用"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1OesbwPDaJOndXbNvbogZ7DhMRy3hK9nK",
+      "fileName": "IMG_2271.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ニー ii 。\n*a \" ーー —\nCEESZI eneet —\nAIHA NO oisi MA L L て 5 9DNmm\nA0 ASNOH THLA0Y 94033nq\nawm議 へ 大導4イキマツザウ>っ誠居間 器\nN “B Ta AWUTNNG ZAZ si,\n s 人 の リウ 1イエキイグズスズ 基本電昌\n 用 がく\n; 中 さ シン\nM 194NWI ー\nノ Wi3l 計 て1\n ー &J\n4 : [HOIO0!\nTTYW TDN\n、 WDW\nの ~. ーーニンンプ\n~ A — ー",
+      "ocrConfidence": 0.31,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6039,
+      "warnings": [
+        "heic-convert済み一時画像を再利用"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1J67mlbitmz29m9wabfQK8JzyrP0sEGPd",
+      "fileName": "IMG_2272.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "N\n\n<\n\nmals\n\nN\n\nしリョ\n\no.J\n\n[ー\n\n~ THIS WAY A\n\n』 K\n\nd] \\\n\nIIK\n\nCO\n\nWHI\n\n7x.\n\nak.45",
+      "ocrConfidence": 0.54,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 538,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1GFBdQgmgjAKeYw98PtvVSs_G-nDSN_X6",
+      "fileName": "IMG_2274.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": ", FRE.\nンド p—-\nに ピーコ\n。 ア ーー Re\nに 1\nし FER 、\nNIKKA ー ー\nCOFFEY MALT\nVHisky £2\nih\nNO & 158\nタクェモルト ば\n、 - =\n axgawmery 7 位 に =",
+      "ocrConfidence": 0.36,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3003,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1QIFqVrlJxh4uh5HP9weUjk4h9qLkn66P",
+      "fileName": "IMG_2291.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ンー 、記疾関牛をし 放\nー —=\n3仙一 ー - \\\n» THIS WAY ん -l \\ 2\n» \\ し っ ーー一一\nーー p\n/ ( 3 &\nルル = ぅ\n四 LL 上\n} 2 ーー - ’ に\n in\na_N 。\nPy o—\n3 I17 B%1 § 7 』 : - 的 !\n用由) ト Ol",
+      "ocrConfidence": 0.31,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4105,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1HpZkc1BuNn9SsUGIsNaPmSXivrGeFyVn",
+      "fileName": "IMG_2292.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ーー 店 誠導和生生拉\nー リー 玉 ー\nトド ん 引 も ー\n。 7 — 4\nyt 3 .\n_ 人1す _ 記\nH\n — §\n— 疾芝 q « 関癌 _\n— EL\nu = :\nM ー ~\nーー Y\n Me - —",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4454,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1hJLGDTSN23EWr8Vcuj0KIckXBuy8yZs3",
+      "fileName": "IMG_2293.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "iam OE\n~TM~ ば i にただこ 一 しり7 。ず\nー ーGi # ・ ー -=— >\nn.2 Y ー し\n衣 mw l&\n~Ey -\nY\n\\\naaN ー\n_——\nf ) #4\n/、純 。\no * を\n宮本者衝 BY <k 天天= 一\nの誠一上\n— 上 ヒゴ #\n? IT oF\nSERE] .\nー)- ; p—\n3 g に ForTeedn\nた\nm mm",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4895,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Cw-TWb9utxV-ibyrLaO5ziPHtnk3VT0w",
+      "fileName": "IMG_2296.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "4 5や、 和音。。。 、! :\nム T0y ー\n )\n“ 4 ぁ * \\ » b f NN A\ns療- ン 和幸 ー RA\nいあ >誠\n\"ペイ 百本 GBN e :\nmm テンズー 本いいいこ 語半\n8 7ie U ww B (ER) 74\nる いい\nへ xt f RORY N y\nの し名 7 NA *4\n-4 a いい E) 3\nーー WR 、 Nll -\nング ao\nに へ ーーこミミーーー\nnosン ンス p y いこきき 。 トド . ーー\n y, Ta v マン\nーッ *、 で タッンプ\n間シーー Ca 。 ご 4\nュージーニニニー いいててこ アト —\n4\n- 3 §\n3 に に 5 a",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 9237,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1biImtRqNNHAnAjya-VqoGJ9GWcciCyj6",
+      "fileName": "IMG_2297.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "あき で 出 区\n<央 へWS Wー\n、 ぶさ W\nヘー NNW MNT\n» ie AL 明り 内 ト N\n=_f R d,\nE\n<ンー Veatw I Yag —_\ng に 交略 ky 58 ^\npre -・ リ// y (EN =3 ノ\nガニジン にいい、\n— A\\ v、 N S\nーー一 ンー 14 いぶ、ミ . ンー\n、 必修き ヘー\nング ここ 近の\n、ミセル/ー ー 三\nSN $ ンク # , <\no へ ペペ ジー て\n=\n- ¢\n_— EE\nE.. €\nーー —",
+      "ocrConfidence": 0.22,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8821,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "12XULFwFpZPLPZQTFNf9IfoSG9LkONrdd",
+      "fileName": "IMG_2324.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "こき。\n\nmm\n\n上\n\n}\n\nNERA W\n\nSIN\n\nYOI\n\nーーマーー\n\nーー\n\n<\n\n5\n\nに -",
+      "ocrConfidence": 0.35,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1982,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Rvlgj6rUyA--J0gd2YtOp3paA1_onrJZ",
+      "fileName": "IMG_2325.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "に 1\n\n> ー 74\n\nし\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\nビタ\n\n作\n\n所 シングルモルト\n\nD By\n\n所でつくられたモル\n\nro\n\n(スミ",
+      "ocrConfidence": 0.65,
+      "detectedProductName": "シングルモルト 宮城峡",
+      "detectedMakerName": "ニッカウヰスキー",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "OCR別名一致: シングルモルト 宮城峡"
+      ],
+      "candidateCount": 2,
+      "processingTimeMs": 640,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "シングルモルト 宮城峡",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: シングルモルト 宮城峡"
+          ]
+        },
+        {
+          "productName": "シングルモルト 余市",
+          "makerName": "ニッカウヰスキー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: シングルモルト 余市"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1wWILi2O0sFGROVMdwMnj-9svfUj2EU9W",
+      "fileName": "IMG_2436.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "/ 王\n\n57\n\nーー ンク\n\n)\n\nのと Eer\n\n__、\n\nゅ\n\n人\n\n=- :\n\nWm",
+      "ocrConfidence": 0.35,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2718,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "171XcFGDIitB6bCfWbkU-OHtN9YUNxBzV",
+      "fileName": "IMG_2519.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "ー\n\n1!\n\n中\n\nー\n\na=\n\n1\n\nー\n\nAN\n\n7.\n\n¢ \\\n\nふるご\n\n o\n\n4#%\n\nききああ A\n\nL =\n\nに",
+      "ocrConfidence": 0.42,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2554,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1YhEe5hcLVNL0tVDfi5uGErHniW2kj8XQ",
+      "fileName": "IMG_2522.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "でて補半きき計 スウ っ\nの語3モーてで ロコ\nーー記丘店科税ーーブイバニ 。\nーー pemek Ss )\nて し ta 人\n<' 4 kd\na & <\n所 /\nきき 。 と\nmu 誠吉 4. ー\nX\nー き /\nーー で まま\n »\n1 WM' し n*",
+      "ocrConfidence": 0.21,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4121,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1OfoLzzbPgEjEOSO-_9CjZm8W6S_A7glt",
+      "fileName": "IMG_2523.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "UlUa3e\nーー TT\n : 3 ICON &\nRELl CYEEFEE §\n\nIY TEUPNARC:\nWi; TEeENE 攻\n 庫村本酒 ・ut華hm\n_ 原材料箱:米(国導)、米弟貞産*)\n精米歩便: 35% 4\n\n原料米 : FCHE IELA%: A HIX 72 1L E 100% 2A\n\nアルコール分 : 15度 内容量:720ml\n\n製造者高森酒造株式会社\n 山形県村山市大学富普18すい\n。 保奏方法:必ず冷蔵庫(-5てへ5て)で際どの\n\nおめにお召し上がり下さい。 Ri\n\n0%になってから.",
+      "ocrConfidence": 0.43,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 7265,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1pUA355Hep1fuc-ylYlpt9Pk_ckfavngh",
+      "fileName": "IMG_2554.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "_ 3 \"whe 0 / B NM ー ー\n{ ロ ーー\n5 a\n/ f =4 私\n志門で*\nー\nー\n【 ー\n ー\nS_ ーー\nETY\nーー プレー -\n、 JE デミ\nco>\n[.» ー E oe\n » 6Y mm",
+      "ocrConfidence": 0.41,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3591,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1p9FOCA4wkcTnupcv4tUeLB2Aes5Wdb4f",
+      "fileName": "IMG_2556.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "計\n\nCS\n\n\\\n\no UI\n\nJUYONDAL\n\n¥\n\nLREH\n\niif & on& LW RERAs\n\nスのどれた繊細な味わいの\n\n酒。\n\n本酒 ・幼米大吟醸\n\n米(国産) 、米次(国産米)\n\nit 米100%使用\n\n本\n\n分: 15度 内容量:1.8L\n\n者:高木酒造株式会社\n\n山形県村山市大学\n\n富並1826番叱\n\n保存方\n\nし、\n\n必ず冷蔵庫(-5て一5C)で 論\n\nお早めにお召し上がり下さい。\n\n(製造年月は表貼り\n\n5\n\nお酒は20歳になっで\n\nも\n\n0 v",
+      "ocrConfidence": 0.69,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2204,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1uCIPBNUb2KoRRLcMU4I-cftzPnRkbw89",
+      "fileName": "IMG_2557.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "ツマーー\n\nし\n\n2\n\n7983\n\nアッシン\n\nr\n\nes! ー]\n\n(ce\n\nバン\n\nTORICE\n\n話\n\ndg\n\nINAE THIS WM\n\n人に\n\nに\n\nて\n\n—\n\n人\n\n&\n\n中ンp5zezo K65 20",
+      "ocrConfidence": 0.27,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2149,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "13hj2sApdL918l2ywRLMvJZ9JGQGtuAsz",
+      "fileName": "IMG_2558.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "の 。\ny 4\n1\n\n時 ga R._ S\n4 B てーー :\n.論弱 co od oq\n4 R ce ーッ 【き】 , ) #\nyaw »Y\n3 bo 6\nまた\n財 0H中ンp eo ke5 2021",
+      "ocrConfidence": 0.29,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2949,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1hgU_bReOebsStumPbt3ZFQLvxW4sXWwg",
+      "fileName": "IMG_2559.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "由記て 6S 2 —-\n\n中:日本酒\n\ngibg :米・洲麹\n\n大料品種・ 水島産無農薬山田偶100y\n\nァルコール分 * 13度\n\n内容量・720ml\n\n製造年月 ・\n\nR0Riws0\n\n誠意者・有限会社白米酒造\n\n個県永島市本1986\n\nビン\n\nZ\n\n用\n\nお酒は\n\n20歳に\n\nになってから。おいしく適量を\n\n7\n\n用\n\nんwy\n\n0 raito.com\n\n4",
+      "ocrConfidence": 0.62,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1290,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "17kFZegbXHeJsqIguOPWY6NpjVBXGjPMo",
+      "fileName": "IMG_2569.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ーー 衝 ー\n® n PEE.A,\n7全品 ーーーーー一一 =\nー Iidi ~\n/ JRY に<\nwi h\n— 上 』 - ¢\nる\nB 問有。\n r\nA ー\n— — b. ;\nE Q% . *\nS Ichj ド Malt & TM\nuE, まっ\n_ 『、 を。\n で ーー\nを 3\nー\n = の —",
+      "ocrConfidence": 0.3,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3853,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1a_opf-ngPTe_2Uyd97nejK3oiWt5MZdK",
+      "fileName": "IMG_2574.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "リリ\n\n【が]\n\n)\n\nトニ\n\n66\n\nッッ ー\n\njp\n\n的\n\n<る\n\nTHIS Whgl\n\n4244/\n\n()\n\nVaid 1\n\n【有4 Es\n\nt)\n\nー AA\n\n』 §\n\nジヘ\n\n8あり\n\nChz\n\n店: ー\n\nc X\n\n』\n\nSP ARKLING\n\n+Y\n\n— <\n\n467\n\n$ ププ\n\nCALAXY\n\n_\n\n>\n\n_a\n\n; 参を月\n\nれい\n\n,\n\nFast\n\nLAf.\n\n#\n\n起き\n\nged )",
+      "ocrConfidence": 0.33,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8367,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1PyH10f4qoG9OxvLD85hXl93fdBIp5qRe",
+      "fileName": "IMG_2576.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "ガ り\n\nから\n\n、7回\n\nI\n\nAKA\n\nARKLING'\n\nさき\n\nを中にま\n\nぁる\n\nを込めて本した日本酒てす。\n\n導 ものは、到協せず仕込みひとっ\n\nひとつき大切に日々進化する酒造リてす。\n\n$名称日本酒@原材料名米(国産)洲克\n\n(国送米)@原料米 吟さんが100%使用8\n\n浦米歩合5096@製造年月は枠下部へ$アル\n\nコール分13度@お酒は二十歳に は b\n\n$内容量750mle保存方法 /2\n\nWtt AAL 株未会\n\n当才県盛岡市北飯岡 1-8-60\n\nLLS きめ\n\n埋め《 夜空に思わず息をのむ銀河の美\n\n(は\n\nbkの0 4 < 弾ける泡と酸がご地よ\n\nなお\n\nす、菜租にかけて酸味甘味の調和したクリ\n\n!\n\n較シティ ックな世界をお楽\n\n*らみ。 酵母からは泡、麹から\n\nドサーー\n\nここ析\n\n—\n\nレン\n\n2022.9\n\nーー\n\n—\n\nお酒はこ\n\nLizs\n\ni=\n\nンジ\n\nミ必の\n\nLI he TALED\n\nざて指などけが をしない は以\n\nュ=用\n\n人邊て た\n\nリー\n\nっ\n\n洒 内容量750m",
+      "ocrConfidence": 0.66,
+      "detectedProductName": "貴 特別純米 60",
+      "detectedMakerName": "永山本家酒造場",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: TAKA"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 4438,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "貴 特別純米 60",
+          "makerName": "永山本家酒造場",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: TAKA"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1PV6sJt6hei85JJfoV4tlgQOJmyGehm0b",
+      "fileName": "IMG_2706.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "¢ -\nTHIS WASRN i\nー * 計 ー ー ¥\nルルっすすーー\nyy「\n みん$ ー 。\nw\nは\nてさむ\ntogs のき\n-— 第\n. Au\nー b.r TEEb\n: f る\" E\n の L\nの と 4)\nw を\nーーを 2 >\na の 2 ーー で 3\n1 fe リ i\n- 4関識 4\n! ーー タン <(須ー- 0",
+      "ocrConfidence": 0.23,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4221,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1eUFGnjPQ3vQjhctxDabR-SszL3T5ksgu",
+      "fileName": "IMG_2707.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "gg Aannn 症諾2 区ー 4\n{soxmn SE F\nGarsEls 攻攻\n『識 き田 R\n\nB: EoE 革)\n\n滑計り 人ー\n4 B E\n本 E\nLEE ー\n\nZN » 洒\n 清\nWEE 720mー B_/ 品目 H\nOketnyrs segimkcitt]\ni E3 そのためオリの出ることが\n放店には問題ありません。また開人人\n中のため約首きで保管下さい",
+      "ocrConfidence": 0.35,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 7544,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Ba7ryBe1agrikRsZSYUCzP48XFr7XFpQ",
+      "fileName": "IMG_2708.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "LU\n ー\nylz —» 3 y\n『' >\n、 。 ’ ’\ny トブ 5 -\n0 *3 っ\nてて ) mm\n2 に\n~ — — 0\n. “\n- { _ :\nーー一 ma _\n議中、、 るイト\nタッァ ー CA ー A\nっ 詳 ( ol d\nー は時 ge\n「 2 ワウ 各. /\n: : 一- 」\n。 ー we HO\n ー (部 。",
+      "ocrConfidence": 0.35,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5271,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1ahuqtUAFXae6uBW6ZH84NgG7obaLpQmV",
+      "fileName": "IMG_2709.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "音k Hawgo ー U\nKK 也 4\n沙半拘など末材の喘詳いを生かすため\n. 4所欠甘母で仕込み、舞議員・無加水で仕上\nirUE . 生間\nメル世載半務のない加選馬前は一切使用してぉ\n95せん(人素剤醸造乳酸村上剤など)。\n原材料名 米(国産)』米麹(国産\n精米歩合 60% ©\nルコール分 15度\n53 洒 5時\n1月1皿 720m\nはげ\n風味を生かすため 無濾過無水て仕上\nOzsgrrn muamnktlsr\n部質には問題ありません。 = ;\nVitx o\n合名会社大木代吉本店\nB 償島県西白河郡矢吹町本町?\n6活は えい。\n人を所てか 間作にはすダはブを ー\nwir [R\nLl y\nRl0670071913 は\n 人 。(半導ー",
+      "ocrConfidence": 0.46,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8064,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1iL8E9fqykVkxG1nV6iPcnQ1a8SH-ASTH",
+      "fileName": "IMG_2716.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ノノプ aa\n27 YW\nリー\n94\n(Y the\n(RU\n6 K",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2874,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1JZSNyyAJqd-4iVNdKVfLPGQkdzHaNAmY",
+      "fileName": "IMG_2853.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "し [ 1 イイングラス<おぃ マー\nドに バ 吉でのいしい 』 c\nen ( マタ\nGOLD MEDATL WW\n。 てノ\n- ;\n中 ごジョ .\nJJ TE . .。、\n~ ー 5 >\n» ー ー\nr 圧電 4\n【 4 、 ーーで om 「\n。 ま H \\ NN タンンク ー 」 1\nMs <かニー ー =\n. 。 ihy#+ m Emp\nprmer / 際R m— mm C\nに 此紙 —\nここ EE は\nHER ~ea\n Ny\n 4\n上 . き ーー\n-.\n1 ペ ma も\n ]\n。 \\CiR ー 。\nIS\nN\nド輸mm」\n回 @",
+      "ocrConfidence": 0.31,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 7034,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "110yFY40XHgvu6FwDZzPNsa6imhzEd5Y4",
+      "fileName": "IMG_2873.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "2\n\n/]\n\n所\n\nレフ\n\n»\n\nmig\n\nは\n\nTHIS way 』\n\n_\n\n»\n\nうぅ\n\n記 ー\n\n《\n\nq\n\nーを4\n\npr.\n\neshir\n\nlew Mr\n\nタダをメ\n\nDiH)\n\n[3m\n\n人\n\nーRE »\n\nー2\n\nは発\n\nゎおの必\n\n[ー\n\n来:\n\nでチー飛\n\nにア\n\nえ自リサ\n\n®¥ T\n\nERAE)\n\nーー\n\nー 9\n\n刻ぁ",
+      "ocrConfidence": 0.39,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5194,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Ml-hRC2heB0yzRwLF85TY67mEUFIHph2",
+      "fileName": "IMG_2874.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "\"半\n\n¥\n\nN\n\nJol\n\nご\n\nしJ 有り)\n\n-h\n\nEv\n\nーー\n\n(へ\n\n【\n\n区.\n\nTHIS way\n\n»\n\n7\n\nが\n\nU\n\n店 ー\n\n3\n\n4\n\n=\n\n. 4\n\n1\n\neshir\n\nNew M\n\n28e\n\nの清\n\n#zp\n\nF]\n\nだた}\n\nる\n\n2% 。\n\n来#\n\n遇か\n\nB3\n\n様と\n\neZ\n\nすす 飛々\n\nを\n\n#[37\n\n$1\n\nタターあ\n\nが\n\nだ\n\n$ ま",
+      "ocrConfidence": 0.37,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5081,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1QQP9xoYZCHVgdF4Oa8z5uSAJatRfnoOC",
+      "fileName": "IMG_2876.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "Z ンー\n4 ー うい\na ノンノ ーー\nー = ;\nm =\nリ ー ー\nー 1\nー\nー\n ー 昌利林間誕利放ビニ .\nF\n E,\n E& 4 ’ 【\n5 ー いい\n5 にスン HU EE\nと ケーんア -\nて ー wepoerornew — 。\ni4 て . ダダ",
+      "ocrConfidence": 0.32,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3489,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1JL6PYW4bEBK_HiBfHDaVROiHX7jbar3E",
+      "fileName": "IMG_2943.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "1 WWWtam'\n党 WW (\n W\n\" に , 」 $-\n\\い」 \\—\n4 1 My (— ドド\n W リ /\n- ー 7\n Li i -\n- ii . 電電敵 WM 。\nリー ー 家過 &\nesly ー aY :\nHig ゆず し区 / 疾軸MV f 2 ぁ :\n敵にルンン導導放カル\n山側 7天才ジア/ ーー A\nUp 。 EEL \"\nIb 4- # - i W 7 y. スズ WE 5 を] し\n[「 鉛上 2 FEA . o.\nSR EE , i ay プー =",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6971,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "10IujhJRHrP_Ae9Sp-sFhZ-pJCRUFOz-b",
+      "fileName": "IMG_2996.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "- N. iy\n区ガ HAm A%g 7\nダがっ HAr SS\n欠才 B 009% 5c S\nタラ 16% =\nMo 50% S\nHiga の4アドの =\n2を =\n5のの\n0 てか E 3 lg\noe w に\nきき J5\n9 7 3\n ーー\nは。 25 09",
+      "ocrConfidence": 0.22,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5521,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1H-ueAiuGhik_XsA8s70wgqsLKhm-naT1",
+      "fileName": "IMG_2997.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "へ -沿天導5 ーー ーーーッッンンンご\nを 人 SE = 255 き- = y ンジンン p\nRiEr : ーーテテ拓き本計ーーー ニー ー\n附帝ーー ーー短計< だ 2半ーモーーーー ーー\n ーー ーー ー\n。 wIiSHSE SeTiees = 、、 ーー ニーンジーー ーー\n導導ーー ーーー\nRics DO~ SOISSPEES . ーーささーーっーー\nの-稚ご « 5 a ーー ーーミミこ- ミーこ\nとこ 。 。 と ーー 記さ幸Sお Ne —= hen 【\n; Ss C E AAR Ces\n C でき導ここーーニー\n の ss E o o て = さこ家々 ーー\n詩 CRRE% 。、 t さ ーー-こミニ本 ニーニージー -=\nRhene 2 へ SS誠ーー 2-\n、 で半 、こさてご - § v\n# 5 ・ =、ご さ、ー、、攻際 ーー\nCn SERE 誠才生また さと\n3 \" 人 本 4\n. EAR E すす\nb う . ・ = g こさミー天馬ーーニーニー一 p\nドー 生計さ后まこ で5 /\nー 、 に$ SS和ーー\nヨ も — ささ 基こで ag にここ\n[ d ) ・ sr ーー 1 .\n ISIEENE\n“ i) 5 は 拓にでて5ミニ ダ\n! { 人本 .\no ト —\n¥ さき ・\nーー 革>、\nae EN 較ち: \"\n “W wp P.\n【 医、 a & B UaL\nョ amu 導\n. = ーー チ 本",
+      "ocrConfidence": 0.19,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 20840,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1ov_HQwW1APjodis5BEu1VpgvF19bo15h",
+      "fileName": "IMG_3153.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "-\nンー きき y ーーの0の\nNN ) Ss\n、さ : 4 マブ\nA 全 4 E\nーー 作 リッ\na€aNy -\nは 0\n I&\n 3 E ia i\n2 3 )a a\n /\n上 5 半\n . .\n.\n. を ペー、,\n7 tyr\np\n]\nター",
+      "ocrConfidence": 0.18,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3085,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1V_Nl7pg-IP1gj6j3_OWuuHjnpcctTbYg",
+      "fileName": "IMG_3154.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "he\n\n3\n\nIi\n\nAs ORIVE, i 2\n\no\n\n(#]\n\nFa\n\nHy\n\n次\n\nAx\n\n、\n\n H) のの6ッ/ アル\n\nンテ\n\n260m\n\nRy\n\nる\n\n[3K (py)\n\nRy\n\nX(%\n\n7 KH /のの/ゾメガ\n\n2\n\n/\n\nAk (2o\n\n100%#A\n\n/\n\n/\n\nHigyy\n\nにんん7 7ラナアダイガ\n\nがネ\n\nは\n\n語族\n\nき\n\n* o\n\nNs\n\n922.0 5 (muns)\n\nv Hp\n\n光導茶式るみ\n\nKS\n\nBw 4 ay A TAE2®",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8288,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1GnIVgLLBLCUrSFYz8guvsx9DTgJ7opXp",
+      "fileName": "IMG_3155.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "】 _\nて ー ー ーー\n 用 Y\n Hi\n中\n。 ー\nリ化\n用暗、\nルル P\n= [者 E ーー ド\nー\nかをき ー NB\n< と kk S] ー Js\nIE T 半]\n B\nn - -\n9 ー B\nwi — ト",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3735,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1SWYHU-yx6Epbi-Hoypa_yYKxkXP6_V9a",
+      "fileName": "IMG_3426.heic",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ー L\nま で が\nを\nLIR\n ー",
+      "ocrConfidence": 0.52,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1023,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1ug8skPInseHEm_dnu5KVs1pXIHDll1dh",
+      "fileName": "IMG_3427.heic",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "ーー一一一一一邊md__ _o\n\nき\n\nラビーー\n\nしン ててに\n\n=\n\nクー pr\n\nN",
+      "ocrConfidence": 0.42,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2814,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1RqwbvOAjP2HjO8UQCUm606vkcq4Uj1yb",
+      "fileName": "IMG_3510.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "四作ジン -—\n STAEET.\nにーー a\nREs orE\n\\ ) Pass Th\nの Er)\nge\nだ にジー\n 半。\ny s) をーー\n JE ンー\n2 ーー a\nf Ey] ンー 癌\n/ = N\nas が\n無 SeT\naan と た て\n クンーーの\nAN ンジに設計\nー 選 ンー\nば 3衝\nwE\n: sid\n がて> T\nE =\n: le\nE\n3本科\nDAIYA\ni っ\nンーフン人\n 2 AeYUZOU\n HAMADA SYUZOU\nー JAPANESE\np 0\n1 でが\n』 BEVERLGARY, E\n) tREE の\n4 W= o\nALLET\n他 ジー\n導呈倫 ミラー\n』 he\n4 ーールル Geceg\nj 科褒本 ンー\nw 用\n 5 ーー CEe\n2 = ンー\n2 BSST\nEEL i\nソ Bes) ニーンク\nで 補 3\n = . の\n : るの\n上 隊 ンク\nA d 3 ケンーータタの\nr. - ンー\n紀 に 4 CEARIT",
+      "ocrConfidence": 0.13,
+      "detectedProductName": "だいやめ DAIYAME",
+      "detectedMakerName": "濵田酒造",
+      "detectedAlcoholType": "shochu",
+      "candidateReasons": [
+        "OCR別名一致: DAIYAME"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 10036,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "だいやめ DAIYAME",
+          "makerName": "濵田酒造",
+          "alcoholType": "shochu",
+          "matchReasons": [
+            "OCR別名一致: DAIYAME"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1WuOte24YBxoe2oT_qtooTeAjCf8ZLrTM",
+      "fileName": "IMG_3512.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ー ル\n」 fE fw\n -9\n1 —\nボ + (\nRoBl\n1 * ー\nB ad <\nピッ Kや\n \\ もい & 。 の\nア 。 ー\n N . 2\n0",
+      "ocrConfidence": 0.28,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3289,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1lZerwE440ZzEbVJ3EnkGAinYzrSOfMnS",
+      "fileName": "IMG_3640.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "8G ー) . ビン 生生生生.昌ラーシーニン\naltT ~ ¢\nK 贈 :\nWAY A Lu \\ー -0 い の —\n & d i\n» NP 補当\n IIES あぁ\n\\ ‘ 取 ド -\n/ % 0、\n# / 《 A— !\nEA NW/ に\ng ! [ 過有と\n \\ マ\n(を! F ー\nB",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4621,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1qJS2ThU4LEwtqNvQZuCGlhjv7LM4PJa2",
+      "fileName": "IMG_3642.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "[<4\n\n取\n\nが\n\n田酒 HARR;\n\n7ロ\n\nン購入後は品質保持の為、直\n\nけ、冷蔵で\n\n『\n\nの保存をお願いいたしまず 開\n\nかかわらず』\n\nできるだけお早めにお召し\n\nさい。\n\n【\n\nにcd\n\no\n\n日本\n\n~\n\n{\n\n西 本\n\nアルュール分 16度\n\nBH#Z 米(国産)\n\nRoIU (国産\n\n&$ & 40%\n\n利和月\n\n者\n\nXo\n\nN\n\n西田 酒\n\n店\n\n詩赤市大学 wlFk\n\nな\n\n8i\n\n中\n\n期の飲酒!\n\n條3\n\n4\n\n58\n\n過中\n\nに",
+      "ocrConfidence": 0.64,
+      "detectedProductName": "田酒 純米吟醸",
+      "detectedMakerName": "西田酒造店",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: 田酒"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 1640,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "田酒 純米吟醸",
+          "makerName": "西田酒造店",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: 田酒"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1qhsWYDHKNsWZoLKkT6eYNq1hBC0Iz6c0",
+      "fileName": "IMG_3643.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "2\n\nK\n\n&l\n\nてロロ\n\nガ\n\n>\n\nWeW\n\nAX\n\nョも\n\nma\n\nall\n\nの...ミーーー\n\nーーへ\n\nに /\n\nごど半\n\nる\n\nii:\n\nN",
+      "ocrConfidence": 0.3,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3302,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1ZMyu7SvyZf3n50OK5p2XLjFrOXB4-1rJ",
+      "fileName": "IMG_3645.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "T1T\n oNTTTIS.\nmisn,/ LE—TTEE 中 ー\nEEESITE S 邊 ー\n原材料名 : OR (E1E) SE(EIRER) o\nWREA:3%% 8 ー\n原料米 :兵庫県特A地較産山田旬100縛議\n\nアルコール分 : 16度 ” 内容量 : 720ml\n製造者:高木酒造株式会社。。 攻計\n\n山形県村山市大字富並1826和\n\nな:必ず冷蔵庫(-5て5て)で本語\n\nおめにお用し上がり下さい。 HE\n\nねお袖は20基にかニースラSA -",
+      "ocrConfidence": 0.51,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8240,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1PVdYHWLTgwhwM7AWAUp-umJ2LbtjSTeL",
+      "fileName": "IMG_3665.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "5 —— 2 本 到 メ\n\n 維\nに « 間導ーーンー\ntf 計 C\nLoWFld THE waY A BR ーー = a\n= i= ー 頑 = —\n ー 由 リリ ま\n\n5詳 ー ] 間邊ー 用に 時還\n\n0 Poll\n/ / マタ ザー / \\ /\n\nY fl NSAN Z\nりらm剛人 ーー\n=P { i 0 (あせぐらで昌和 HE :\nDlem ー\n\n BWO).\nB1 Lal\n\n、 HL 2の8 で ] 際誠\n\n = q y ct 出[5\n\nー - wa , \\ p 、 ま\nR.— J -— 7 7\nl ー oo mEE",
+      "ocrConfidence": 0.22,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 9778,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1RaIdH-rQqZPG3omDF-iypwZbw2zfoLUJ",
+      "fileName": "IMG_3666.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "Pi生半 0一080\n調 * - oe\n の way 4 1 ー 公 へが\n& ー 。 -%\n\\ ー i に を、 用\n9 ー. シコ\n; 。 る\n £ ER\nE\ns ー 5 き\n/。 :\n—\nーー ー {\ned 1w SNY ー\n5 ー\nーー 回品3\nE. 。 p-\n5 ul にdk\nWaiane 1 で 』 -\nー C\n» - &\n\\ ARN",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5469,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1VcbrV5uRsN_ClODPUANd-GMkcupFYfb3",
+      "fileName": "IMG_3667.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "5 ーッ」 。 ー/KE ーー 天井0\nClk ーB = “g\nLlR ー=3 Jeh\n4 < 705 WAY 4 リ 生 電 気ゝ >\n¢E 5 へ\nと し本 6 _>\n 酒\n_— v\n=\n と、 の ー\n—__SETEN\nVM e0 —\nー > いて ーー\n。 @ さき\n央 前 ー まぁ に。 & . W2d",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6450,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1rvWu4alCWCNNJ-u4lhzzJw9GAZ1GFdtg",
+      "fileName": "IMG_3668.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "< ーーリリ —_—_\nTEA C きき\nー ーー { py —=. 」 。 【 二\n» « ジジーー ソ\nTis way 4 リーウン ー そそ へお\nンジ作ー\nンプンー\n人ン\n ダイ 放電 _»\nーー \" し\nuu\nーー ー\nーー ト ニニニ\nET 2 ihm\n半生イー に\nビーニー 5 5% 区 。 。\nis 7T e.\n。 » - も>、 vA P\n人 ク\n (にで 貞\nTETR.ー F R\nPe p.\n1) ルン . :\nリラタダラー IESET\n(02 多\nーまま i 次> 。 :\nに をデラーー\n 名5 表ー 由\n- ‘ ) B= w : Rar .3\nーー 5 ERNL\nN A =I ラーテリ _",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8141,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1c3GQLwN-ge-WVsAAIzfRdkCF_t7zzzSV",
+      "fileName": "IMG_3669.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ーー E\n THIS WAY A / > ~ 所へ\n(2 っ\n7 1 に\n\n ・ < ンジ\n2 ~\n.\n/ \" §\n{ziim - 柳\n区 N 埋ミ\n f .\n\nー 4 ¥\n\n2 ’\n』 。 34 > +1\n\n{( Ad 。 に",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4560,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "19rOON6kNcLvDYrHnxtJjbFK3PZXp1Yih",
+      "fileName": "IMG_3670.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "の5WAY { [ー ¥ 3\n\\ a\nー a~\n. ー i めく r\n上 a ー\ni\n. ー 4 1\n: w ®\nLU お\n: き\nes >a\nMI 純 舞 リ >\n の欄間。 <-\n、 大 旬 [ 、\n 本四\" ( 。'\nー 評 放\nに 生 0\nレレ。 SEY 天天ー\nッッ デー",
+      "ocrConfidence": 0.35,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3631,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1-7aIKBXFJLuOlGqe3wiyXsWZ3g6PXXc6",
+      "fileName": "IMG_3671.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ーー w 了 し に\nDi5 WAY ] ー v\nN u\nキネ ’\n/ ~”\n: p\n。 I] v F\n。 { ーー =\nー一 。\n 4 。\nァ <グ3 [\n a o\nBifs, t WT\n20 の Sa 7 : ー\nクイーーググ ゃ\nを欠とさてSS ト\nペンクー T\nWSv es 2 £ て映 ます\nAS いい 1 y\nS S\n: アンの かme てて\nの/\n店 の き",
+      "ocrConfidence": 0.28,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5239,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1JRe7sk06VGDrlZNLcuG1YRwqyWIE2ePq",
+      "fileName": "IMG_3674.JPG",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "ロー\n\nしmm\n\nーー —\n\n—f\n\nWW\n\n[王后 和握 rg\n\nリ\n\n新滑\n\nいっ/\n\n2\n\n2\n\nシン\n\nf\n\nクデ\n\n4 =d\n\nRe",
+      "ocrConfidence": 0.33,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5243,
+      "warnings": [
+        "ネイティブ形式のままOCR",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1slQ9ULwrw2SIuPed0Gb8Qb8mbfraqXe9",
+      "fileName": "IMG_3882.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "/ \\\nノン の\nァン 枯誠ー\nし\nA : C\n=P::\n— ぃ り\n用\nREWN\n. O A\n人間\n~、",
+      "ocrConfidence": 0.37,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2047,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1hwtbDCJDC1qijnOanba8ZuxtZhLe5IN9",
+      "fileName": "IMG_3883.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "っ 一衝生本gc 中 w a\nCEAN2RYmMYTYEHy\nER DTED AKT\nsepLclorzor @\n\"TBLEBES Cora, WY\nくくこをすしり少良田部ぉ 人\nLES \"たこ量質にに6 P\nもさ 込 た軽 をなて 5\nK い め 味 Hh みす X 年\n\" た わな醸水 > 細ひ\n導 いななしを 創 eU\n と飲でて久 業 %)\n% みいい 全02\n者 ロロ まハ 酒こ\n上 ご です .\n品. BAHE こ\n容量:720ml り\n央幸名:米・米麹\n用素名:長野県産ひとごこち100%使用\n折歩合.麹米55%掛米70% 区\nアルコール分: 15度 00227 BF\n箕年月.2022 6 蔵元出荷年月:\n尼寺:賠崎酒造株式会社 ー\nー\n長野県上田市中央4-7-33 ー\nRT者放 . 5リス 6",
+      "ocrConfidence": 0.51,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 7558,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1vevkCEG-OmKIGv6NfL5N0iVbB8m36qLQ",
+      "fileName": "IMG_3885.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "i ー ー ー",
+      "ocrConfidence": 0.6,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 853,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "文字数不足",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1JeZT4InkpbBCUwblRdABXe07si88pZad",
+      "fileName": "IMG_3886.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "\\\n\no P\n\nB\n\nいり\n\nに\n\nfiss SO,\n\nうさぎ』\n\n, の伝統的な技術をペースに、 革新\n\n)テッドプローズ」が、直接、萬を旋\n\nたコレクション。\n\nだるまが、ユナイテッドブロースズでキヌ\n\n仙倉*\n\n酒の限定で醸きされた祝い酒, &\n\n門酸酒X にご\n\n注意計ミ\n\nいでくださV\n\ns7\n\nで活 放な なもろみもごし\n\n聞鞍めして\n\nいております。 そのため、本体を撲(\n\nHERCR\n\n莉な\n\nらの梨法で醸款する\n\n、如心の注意をって\n\n※ぷいます。品質には問題が\n\nませんので、 人\n\n¥\n\nRECREOL BED 落ち若いてからゎお\n\n者 株式会社せんさん\n\n匠木昌さくら市馬場 106\n\n60ce\n\nRA#E\n\n米(国産、米こうじ(国彦ネ\n\n還只\n\nB 料\n\nドメーヌさくら・ 山田釣\n\n(板木系さくら市産)10070\n\nし\n\n4\n\n歩合\n\n90%\n\nW\n\n4庶\n\nSSRFToy TE\n\nLS\n\nせんさきん\n\n(F\n\n お\n\nー 58\n\n720ml\n\nお\n\nあります\n\n—.\n\nーー\n\nMt\n\n格い\n\n9",
+      "ocrConfidence": 0.58,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3027,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1y1p3mH_U0AvCwz70_C_wPvIBpoveGTqi",
+      "fileName": "IMG_3892.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "の\n\nまア\n\nロロTS\n\nング2\n\nん\n\n27co)\n\nポリ\n\nくさ4ラク\n\n5 9\n\nTHIS Whggy.\n\nA\n\n~§&\n\nーーで\n\n/》\n\n7\n\n-\n\nN\n\n骨\n\n« 息コ\n\nf\n\n#\n\n[8\n\nノッ\n\nこ ん\n\nー\n\nー\n\n放",
+      "ocrConfidence": 0.36,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4206,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1IgpzbAh_7WkCebmKNBwA8TarZ8ndImXV",
+      "fileName": "IMG_3962.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "‘m?\n\nツラ\n\nPa ーー\n\nしJJ MI 前6\n\n”\n\n—\n\nいい\n\nろう一\n\n-\n\n¥\n\n_\n\n1Z ゃをま\n\n'Fa\n\nR vw\n\nルン\n\n部 ヶ を\n\nご",
+      "ocrConfidence": 0.27,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4102,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1k7cXB1BgJDoZR_kJcipJIDGWCOpDCgyG",
+      "fileName": "IMG_3965.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ーー 生8\n\nLe Llg (RE\n\n@® _ 名 。 に ー\n\nビ) w ー Yo\n\n6 に A y\" -\n\n hy (WEE\nた 3 .\n\nBEV, . C\n\nも 起 0 性 G 1aY . ー\n\nて 7' 0\n\n& QL ] ー \\ i - し\n\n( Takijiman _ _ 7 5\n\n 」 , 分議\n 導い 回\n』 ー - p 1 *\n\nー T aa\n\nー ー ん 條で",
+      "ocrConfidence": 0.31,
+      "detectedProductName": "瀧自慢 大吟醸",
+      "detectedMakerName": "瀧自慢酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: TAKIJIMAN"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 4876,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "瀧自慢 大吟醸",
+          "makerName": "瀧自慢酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: TAKIJIMAN"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1kqACrxcKVVv7VeqID1-o-b2VKxgzAJxx",
+      "fileName": "IMG_4010.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "ー\n\n\\\n\nいい\n\n+M\n\n代龍の落\n\n母系美山針\n\n間の:\n\n落とし子\n\n山較\n\n父系び山酒4\n\n[TL —\n\n山田\n\n竹種和\n\n低存方法・ 0\n\n品は加熱\n\nをーー切行っていない\n\n生酒の為、必\n\nRE (=3'C ~3C) TRATL.\n\nWEIED37)\n\nBAIMIEH11 し[がり 下Sい。\n\n品日本酒 ・李ん9\n\n属諸料名: 米(国産)、 洲麹(国産ネ)\n\n米歩合:35%\n\n子80%側\n\nアルコール\n\n民料米: LipSEROHEL\n\n社\n\nBikg: REA\n\nF1820\n\n山形県村出市大\n\nりに\n\n0\n\nー —\n\n(製造年月は\n\nっでから。\n\n.お滴は20歳にな",
+      "ocrConfidence": 0.53,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2382,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1qOhGqYSsDAn8H4WT7DnOb5NkbTScXmzF",
+      "fileName": "IMG_4011.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "が>\n\nAN\n\n、\n\n了",
+      "ocrConfidence": 0.43,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1373,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1OP8QxowmuNjvJlyZjCzCT_S8lISL7XdO",
+      "fileName": "IMG_4014.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "アノ S 。 E\n’ 4 2 に\n p EE\nP y \\\\ )\nr D \\ .\n= 』 ブラ ” » w’\nテー の ー\n】 /dx 州 ー 上\n半々2 \" . 。\nーーャァ の が A /\n~ PO e YE\nメ : i : ” ~ y\n ORR . 3 ;\no 本 eo 4 N 2 é\n EEEE C 、 J\nに に 本あ・・、ム ~\nBey 5 43 y い も $ マ\nを 1 ’ を < ャッッも\n _ 最島ス ト が\n導いさま 人\n “ の\n{ . ノ ロ / 1 :\nR wA } ¢\n KS き ; : ゝ",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6030,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1W9Adk0tAldc6YBhSpZEXUMMJC94EIaeo",
+      "fileName": "IMG_4130.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "=\\\nBRF\nリー\nタW)\nr 0\n名 ー ー\n3\n;",
+      "ocrConfidence": 0.29,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1502,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1DxCv3AM4YpdMpAVrA4WPu6YP7ZSmM1dy",
+      "fileName": "IMG_4133.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "g tre\n\n新年\n\n純米しぼりたて 2.\n\nea\n\nse 1\n\nムー\n\n-0軸は、年の瀬から新年\n\nげばてしばったお洒*\n\nに出共いたじます縁\n\nい和生酒です。\n\n順い、秋上量市9\n\nRRRERORMER - F\n\nたものです。\n\n幸山三吉神社でご祈本\n\nL0 mH\n\nET EERAKRD\n\n大号酵午にて財\n\nwARUEE\n\nSRHRHOMA% RARIC RAT\n\n( AAR\n\nYALT80 B kacEBLT OF\n\npiabhEY\n\nREAILIY) BRR (727\n\nR 災\n\n日本酒(\n\n純米\n\nロール人人\n\nRoty x\n\n12度 (原酒)\n\n(wm\n\nEFIN\n\n米 (秋田県産) 、 米半\n\nRy\n\n60% (麹米、掛米ともに60\n\nX 4\n\n秋田酒とまち100%使用\n\nし\n\nきょうかい6号\n\nき ょ*\n\n新政酒追株式会社 秋田軸\n\n大町が\n\n時年\n\n2023年1月1日\n\nは\n\n023年3月31昌\n\n規特約店で お買い求めくださり",
+      "ocrConfidence": 0.55,
+      "detectedProductName": "田酒 純米吟醸",
+      "detectedMakerName": "西田酒造店",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: 田酒"
+      ],
+      "candidateCount": 2,
+      "processingTimeMs": 3478,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "田酒 純米吟醸",
+          "makerName": "西田酒造店",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: 田酒"
+          ]
+        },
+        {
+          "productName": "新政 No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: 新政"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1nUoYRwkpLZyhrjq8ZeFe6YfSJq-0283n",
+      "fileName": "IMG_4293.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "o2 居/ 中 埋__記拉記\n A\\ まいる\nーッ 用 \\ ぷす*\nザ が ー z ー . E マ\n : bs すす、 a *\n/ / / が ー と ¢ “\n(EIN) 頭 己\n/ - INS ハル W\nリリ +<3 g-\nTE \\\n-{3 。\n20208% A 5 !\nーー 。 ー\n aanRaniE ー rill ス :\nFw 2\n居 ご 。 ツリ に ー\n. マッグ 識 。\nE — ミミクジ ーi",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5242,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1tQh_RUdA3lKuW78sxI5UPtWnDovC3fva",
+      "fileName": "IMG_4294.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "—_—\n\nー\n\nーー ら\n\n21\\\n\nて tg\n\n”~ て\n\n-\n\nーッ!\n\n—\n\n_e\n\n4\n\nTHE WeY\n\n\\\n\nーB\n\nー\n\nーーロミマーゴヨ\n\nSR\n\n202¢€\n\nESTTTCL\n\nザマ\n\n3\n\nャ 羅\n\nK\n\n6\n\n3\n\nンク\n\n美山錦\n\nリ",
+      "ocrConfidence": 0.35,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5076,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1_VpshPZ-SKenMTfVfyU5tPcRVccnUYzP",
+      "fileName": "IMG_4295.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "り 半生\nー cE ¢\nBE\nB a E\nー EE\naffe h5\nーーテー 11] ー\ndihRY wampwn RRALEー Cl\n9を ッ ーAE waBEAR His fall\nWNNEIAEE E TR\nWholBn wemsss srEA) の識\nRpEw ーon ーーてここことと半味ー l\nVIED ー暁劉秋新植信木き麹2美米7!用ー に本\nリサ 筐外田牙松林 Sk © dig 2 Usge) ERoMER\n計にに県洒語 2 5 60 2 見上0り度 の5) SLIEE\nBiale 記秋宮人酒写か0.」 RME 細 あぁ胡\nの5名日間下失人 途 いく和を を g xー) Tai\nGlakE 市代 Eeewull Sai\nWWsokR 大会 pEsREgL THOK\nMasS 町台 合 60秋合名 ーんご\nMrholE Nt8 %EgR Eー#\nTa きき & (\nDS 8 B B2OK ag\n計り ー 2 きき ¥4 補\nDi し る - A\nであーニーニーニー一一一 7%\nょかがょりり Wa as し\nNa mRo0cL-03 ] Z 4\nWE oo¥H2021.03, ー o",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 13878,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1CCzHRFPWM9HRxhq7XkvwUdyh9zcbZD2o",
+      "fileName": "IMG_4298.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "導 し ~, -\n A ~\n= 1 ア\n \\ p.\nが もも ) 生導\n W\nil\nーー一 ・財\n『\nが . 杜夫 =:\nJPN' \\R¥\n 5 1\n ー\nーー一 ( NTL . -\n。 輸放 ーッ\n* 8ip , »\nる\n—a Y ぼ\n. ~— y ; ト 』\nままは ; r!\n1 Vie {f\nに 305 — MS o\n\\ トド ー £i) { To ′\n\\ a TTA 、\n。 を 久光4がくae Nd ング 3 』\n \\ : \\Z Sty, N\nk: ENTS L NS 、\nャイイ7 SC 較\n 本 人で\nー n ペン で",
+      "ocrConfidence": 0.23,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6388,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Cyf9b8cLvrKB4148wu2xuZEO5Prg9bHv",
+      "fileName": "IMG_4300.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "P! - て きき /4\n<、 bd 因 へき5 —\nNENE__E\n: 4 4 さき NN \\ j ー — TTTIV 3 \" 時 』\n§R h i\n2o>8 & 2a\n= ー 誠司ー\n6 MN と ン ー ー i y) _ /\n? Ki に会 一4 ドー\nで 1 = ー\nN 3 \\ ロー\n。 N ) 2 E2=7\n9なの - \\ 7 1\nぅがらう いい\n.- \\w\n も っ\nE ,/ しに に條\nし 半生話導ー\nIAE 「\n-<Y 208 . 4. BE .\n 2 SE\n\\§ § る Sa0; So N\nE ) 中 eE=\n> E : ん\nv ー . ー\nb oa 直り 「枯5間者\nリン 本要ののりの導出 生生mm",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 9901,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1qCg4Y5K2EuYqvBYq5HwANDIex7EH5m7G",
+      "fileName": "IMG_4383.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "が ーッ 折党間\n§ o 0n G 3 委!革\ny ー し ーー 電\nー 。 リン SER - 1\n本 テ析竹生\n ER R WLI: &a,\nb Liad 0 Jif\nー , = & 米 料 ル 家. BTRdT\n “rrswy : 名硬分流 g\nー年 ER&ZL 2 はPO ひ・ 3\n。 oAER SERTEATE\nBRIESA ょ米 0 造本和弘5 て昔本 LA 時\nに REsnmh B2EE m0 洒 2\n ま間4伏うす 1適信県形 酒ーは員\nsiiasenlags Cal\nEEF Ea Rg gBi\n%i% % Sxalax id\n上ー 大人 よ TopdEg 。 菩誠名\nー ー 町 人 トン 人2 人 Zog\nーー ー 六社 N % 収 と 秋 E た>.記\n7 8 8x = ー r\nー ヨー & まま 革 内\n¥ . 85 _:. が\n5 ーー Mi\nー Tx 3 3 が a5 & $ B 当 はり\n; Ye y: ribi E & 1g7』\nー 292 s . iir\n. 7 oe 太\n0 72030 ー7",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 15307,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1sSwhymhgYYyHGpTiHv4FbMuuyVL-SdM2",
+      "fileName": "IMG_4384.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "anl TL s, G A RERY L\nー 0ワルンーン\nーー一 Yoaem.\n部計ル公。 すれトビ 5\nし ( リッイス SARRE RN\n科すか 有料ヘル 製 WS N 党 手 38 肢の - Sa\npo るさかな 問隊82 法でで発ち 肛 ~\npa Ea A]\nPliiin B2E fimyino M Ug\n[an 0 洒 0 gLBn N 地\nーー 、 ZiEp2u2ky 用\nii 酒 てまでるまきさき .\nH Sreaaid--\nHHL SpsririagEl (F\nか りきなと区静ンぁるが ・\nー ] 鳥杉デスる グクビクン EH 放\n5 ー B3tzsmcelM ・。\nー Peihel I リ\n0 い めアデアさき 酒 Le BEY .\nまま のンミに今で業も議引を\n回 て、- ーー コス 23Ethies 朋* X\n{ ー BE£7C 脱5\n: をる ーP\nー Sftn 7 1 {ian\na は5すー\n4 さ き - JE 間 m\n§ 5 た d + & 1d 半 H",
+      "ocrConfidence": 0.23,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 14361,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1ALjt38a0AoqdOmvz6_8RygVn6xUQ5jlx",
+      "fileName": "IMG_4385.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "= た R o 8% * ー\n ¥ 本人 5 Brvi ー に\nとこ木まで 杭業2 Cl Scosona 2 } 1\nに 。 た 放誠\nL Rrrlless : PRIVATE すす\nあの法 Co し酒 方 な\n人計てで基たは且7448\nq iThigr SRg 資藤河\nWESIII0]- Ee\nMitytwpou BN a ー\n4 (よて2来さべくの拓 = J5\n2テスのをア衝の EAE m\nusikzione ー 隆。\nかて三現名島 ®q .\\ Z\nはちらがガがすグツ の は 5 A\nB% +2 る酒で名 醸米 いい. 導 i\nENTITHc 、 誠\n3で酒めし2一 生 - AN\nGHYS e\nL agp # % ェ B BUR\nは2は立とをさ :§ ~N\n2 Lo J 込 ココ て H の 米 2 S\niLaBRln BEN p not0\nと 済 内目に池 (\nooてこしに用 脱各 WpEB AZ\nIikE f- § ” Fy )\n導き案しいぶ B3. REHEC\nEUEANE B aweT L",
+      "ocrConfidence": 0.29,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 12893,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1waKjawC0NURpoOZLk4hTOUsPUQy6Iwiz",
+      "fileName": "IMG_4387.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "/ 放\nリリ F ¥\nAd E\n_ faA\nfi.z .\nし7 / # 4\n3 WM\n# ー %\nが も6 ー\n5., EEE\n2 SEEE EEEEN\ny& «\nry~\n§ 5= ー\n % ーー\n4 &\n) / 7, 上 議\n7 E 上7",
+      "ocrConfidence": 0.2,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3719,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1By3mLkWavclQiCFBoGL9IGvJ6bl_2ruJ",
+      "fileName": "IMG_4528.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "[\nF \\!\n< ー4 K ; の\nー R\nん いこ\nン 了 翌議。 更mmp\nmw ー 中\n kid の i»\n——errl\n 5 of ©\n ー き こっ\n\\ ぶ タタ\nンタ \\ 発\nny W 則 リリ\nの し か: 上 \\ に(和央\n N\nw wm Q\n: L 、\nが 過失\ngoee. \\ T\nルッタイ - ご\n導林主夫 ノン a",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4038,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1DjX0vRLH5m0tKmKbIUBrqiFIQuj0yzmI",
+      "fileName": "IMG_4597.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "- RS o t し /詳し) に 央 -\n ー 了\nig f ー\n§ — — ク ーー\n » ーーでーー ーッ< < てつてで\nンジ — ーー こき\nング ーー ニテで SS\n/ > ag ~. さき、 F へさけ\n ( ミンミク\nB ンス 2\nRs コバ TINEA\n,o ンー\n唱 』 ! 條が に\n ー W ー {LA8!\nSp W % Y ーlR\n導い RRONS T\nに LLgs C oedie NTEC:\n te P s クベ \"4\n8 ARRFE いい 剖ー ささ r V\n: 信和 Jby ギヤ ー 」\nf 5 ー 廊 リ / FINE QUALITY ー\nーー 攻め) LTM\n-— * 生 ー ー ー 1 N -\n: 4 Te y= TI 。 証。\na e. に幼 Tihichn B:\ne 5 の S * , 用導1 ンー n\n pemie の i 』 、 J 11 ー\n科半ゲー 義\n[招いーー p ー\n8 2 aa のーー 剛\n財 ーー 也 E ume / 導革\n2) 人 - {\n[eal wprt/ f\nBbL RO . y\nで (3 ov の さく ー ilfl ~\nCo REEERE oie ー 1 ーー\n- との衝放下っ ーー メ 鐘 い にこま pe\nンーっっっ いい>ちら っ 0 a a\nにーーミワー y ジン M ーー ー 6",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 14281,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1vxLKQizHD3GdDsc_C07R9oTgZqXVwLh3",
+      "fileName": "IMG_4611.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "『 る\n- r\nE . 1\nー /\nに 0 《 ー\n% 。 2\nEUETURN\n 9 避織 』\n。 g 5 1\nに\n健、\nf 、 b き \\\nRa 導 ー\nに . 1\n遇ー 』 ]\nE 間 $ 4\n N 上 &で A\no ー © -\n& h\\.\n ッッ 用\nA wp 9 > ト\n4 (なを放ヨ\nマ : Ni 甘口 { E ) ー\nNT CES\n18] 内 ®\n て(し1+」 Ae 1",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 7036,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1_-W1-Ihwy-pa_Ow3NyjD5LuYjMC_T3bx",
+      "fileName": "IMG_4612.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "/A4 <\nを で .\n~ _\nPIC 《\nン\nD, G\nBY . てて お\noy -\ntae\n0 4\n2 X ¢ :\n“Y 5 ルー WW\nを 、 のや\nタン “A\ne ッッ\n名作 0いせ1\n{% 9 0\nの2だ2が 7 1ア9\n4 [ir (y ー 人 が\n 4 )\n0 [ AE\no 交人か。 当 [てと p 1\npeld Wer\nEB A\nYkdioA } § 1 b ina\n分シンが Japa Brewing Society Yoast ’ 人\nンク 』\nHa ー\n[用グッの 本 No.6\nアンルン\n菩軍クッルク . The: Oldese Siche 2を\nLn E N g\no が NN の/ eo",
+      "ocrConfidence": 0.22,
+      "detectedProductName": "新政 No.6",
+      "detectedMakerName": "新政酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: No.6"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 9016,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "新政 No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: No.6"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1WKefqamIrCOiGeHkRQznv6aZOQeVram8",
+      "fileName": "IMG_4614.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "員 ー は r ISTERIEA ー\ni ー\ns ーヨ ・ ー ノロ ー\n\\ otile—1 ー ー uly\nii THISwaY M ー \\ s § 4 y\nー ー > \\\nー 1 :\nん 1 7 WM / し半 3\n4 「 . 散\n, 1 N ー _&\n» f& ] 3\n 日 ー £\n~9 t 町\nりー ー ー 4\n3 ー 794 Brewing Society ー ~\nIn ー ~ 用 }\npi No.6 i A ) ー\nを リンンジンー 本\n。 :凍皿 <ご2 vountary ー 上症の\n® \\ 2021 3\n U へ 』\n時ジョルー / ー",
+      "ocrConfidence": 0.32,
+      "detectedProductName": "新政 No.6",
+      "detectedMakerName": "新政酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: No.6"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 5843,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "新政 No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: No.6"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "14b5VlIe8x5RKT6beeFn0ZRa3ds7lg7nh",
+      "fileName": "IMG_4615 2.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "りり —\n\ngoc\n\nmEISTO\n\nリノ\n\nーー\n\nir居\n\na v\n\nTHEWAY A\n\n;\n\n上 ー\n\nF.\n\ni\n\n一\n\n7-。 3\n\n5\n\n20症\n\nWouNTA以\n\nKN\n\nや\n\n2021",
+      "ocrConfidence": 0.32,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3554,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1pjv4RfIRiLwZsgu0AzeIxH8uZOZjJKI1",
+      "fileName": "IMG_4616 2.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "h_F~ TRAVANISEE\né ; - - - — = por\nLRER [EERZA #pald béー\nHRAESETREAWI-EY-. l\n ETbou, 2iheFaRa0E])\n“ot Riizg ZBb+ 2iEE] 7 』\n。 放り\nいく負私的で柱入な山 (MOUNTAIE ー\nた本洒です.\nジッoonrai caplg ー\nAKABU にお楽しみください.。 Kogfl\nいさか\nAB 林洒 (純未酒) @F サガる を\n$70 @upip 4 60% @ か\ntt人 1an @umua=+\nVeoal202187g\n て保存\nに 人寺 T SeT 188\nSu 、 呂手県盛岡市北飯周\nNaきにをーー ら ゃ ~ '\neE Ree ¢2 ,",
+      "ocrConfidence": 0.3,
+      "detectedProductName": "赤武 AKABU 純米吟醸",
+      "detectedMakerName": "赤武酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: AKABU"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 10568,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "赤武 AKABU 純米吟醸",
+          "makerName": "赤武酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: AKABU"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1j44iy4Jjl2zQCreHHvZM5ooc7spzO25-",
+      "fileName": "IMG_4617 2.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "p ¥ - Foo 韻 1 wa\n1448 W : 9\n 了 いい 【二\nf &\ne ー . 4\n「 1にる\nE & K\nョ いい 生き\n ’\nWak\nae ビー\n『\ni8 ー\n( ー\n3 者 』 i\nーー A 、\n。 5 近拉りりい\nーー 薄 と E 人 し\n \" w\nンー\nパー パロ\nー 。 §\n\\ 7\n人や E に\n」 ーメ\nゃ E.\nらい\n~\nさり",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4720,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1G-vSJby7u-6D7n-U9Pd-cBFbPGJdNb21",
+      "fileName": "IMG_4618 2.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "-の商品はク〇暑い真夏に「冷やして9\n\n内仁込みの酒」というテーマで仕込\n\nRRCT. 夏に太陽に向かって咲くひまか\n\n*イメージじ、 サンシャイン イエロー\n\nけけまじだ\n\n山府仕込みと云えば、 しっかり熟成さぜ7\n\n0をおぉ贈にして楽しむのが一般的ですか\n\nて振りたてのフレッシュな状態で\n\n出朋レして6\n\n・谷えた状態でバランス\n\n=\n\nが取\n\nれるよう2\n\nE\n\nR:3\n\n計しているため、 BHIC\n\nは向いて be\n\nで SfFERERN—LT\n\niitig,\n\n1 a\n\n県産米\n\n米 He 県産)、 ElE\n\n-,\n\nロロ\n\n55%\n\n回\n\nロール\n\n15度\n\nZ\n\n用用\n\n0\n\n山\n\n式会社 山 西造店\n\nz\n\n&;\n\n郡八峰町八森字八森2\n\nWa 坦になってから\n\n2021.7",
+      "ocrConfidence": 0.71,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2381,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1YUl9g1LOB85BIXFEMhjep7Trj66nuIUF",
+      "fileName": "IMG_4619 2.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "4 9 + ET NM\n(wi だ 1 】\n)\nh \\\n 4 )\nー) R)\n 1\n困\nる ーー 当\n B ) テー おら\nー i p A \"\n 8 ウス w いい\n碧にいて lEN\nて E 。\n! \" 。。\nり 2\nー ¢ ロン\n昌 。 7と\nli go ご\nドー =1 w",
+      "ocrConfidence": 0.19,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3980,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "151M8GmeqHILTxOwckhoi7Vgj8zUooIWR",
+      "fileName": "IMG_4620 2.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "A\n\n%\n\n7マ\n\nJEX\n\nL+56[¢\n\n=\n\nE)\n\n業 を\n\n#okoh BR\n\nい\n\n%\n\n&\n\n720m/z\n\nMEL, BERL, AZRT\n\n2なさまに愛き本る酒を目指します\n\n【串\n\n昭和\n\n日本酒】 【内容量 720 m】\n\n 本(国産)、米麹(国産米)\n\n—\n\n歩合 50%\n\nアル\n\nコール\n\n分 16度\n\n=\n\no 朋\n\n03.06\n\n=\n\nいい BemGuou Fon) =\n\n=\n\nWM\n\n5 入銘酸株式会社\n\n8\n\n=\n\nー #\n\n4)\n\n242(\n\n松市東\n\n8=7\n\nHig)\n\n)0031 FAX 0242(27)00% ,\n\nのが\n\nは\n\n%525 :\n\nませんが包質等には則\n\ntd B[ECTH",
+      "ocrConfidence": 0.54,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2117,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1VwpZOqmeIFIpXfT6yIqhk5prTs1hGAwO",
+      "fileName": "IMG_4621.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "19\n\nの\n\nアー ”\n\n/ノ\n\nmag\n\n[{.4\n\n»\n\n«\n\n\"て]\n\nるる、\n\nTHIS WY\n\nーーを\n\nし\n\n*¥\n\n“N\n\n2 Brewing 208の07\n\nNo.\n\nテウンン.ム\n\nクン\n\nLiscoveredy, アク?\n\n2\n\nFr-TL",
+      "ocrConfidence": 0.34,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2500,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1TcEPn1-tcKQQH1l31txnJ7oqUO407-Sa",
+      "fileName": "IMG_4622 2.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "」 ー\nbr : an\na し .\nE Bs. § 4 \"\n、 ー\ni3 ー\nig\n剛。\n院- 3\nfiim B\n 7\nS- こさ\n r E\nー E\n語- 78\nに -3\nーー\n1\n攻- トーマ\n も\n E\nj\nー",
+      "ocrConfidence": 0.19,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2352,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1GXsoJm1nb8_3tpn7LiLCAy-NINFNjuQK",
+      "fileName": "IMG_4623 2.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "E\n\nJapan Brewing Societ,\n\nNo.6\n\nThe Olest Sihe 5.\n\nングンクグングンオクアク\n\nのネンウンンジンク 795\n\nBUEL\n\nBi;\n\nPRODUCT OF AKITA\n\n(のアア BY\n\nZrIX",
+      "ocrConfidence": 0.49,
+      "detectedProductName": "新政 No.6",
+      "detectedMakerName": "新政酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: No.6"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 2765,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "新政 No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: No.6"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1POKiurdAJ6ZF_EeIvlu0Vd0zmaPc9ZyP",
+      "fileName": "IMG_4935.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ーー 前半 ーー 4 絡半ー\n中 #\n回衣。 いい N\nす\nー -8\nー P\nー 』\nが I\nf 市 か 8\n3 維\n.調 5 ー ~ 4 —\nべべ & E = = a o に\n人\nE @\nE ~ &\n4 が\nv ーー B Zs =eae 本\nて ーーある am N <\nー E~\\V gl V 4\nア四リンも リザがケガプ\nリア 作 すす F4 &\nリプしき 夕 劉\n] E 、 ア ー\n帳 3 ダ h\nAMVA た 作剛\n£ 大 ーー\n& :\nー\n3\n- 4\n /\nFo \\ A J)\nーー \\ » イル 6 1\nいい 1 2 r\nE r",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5842,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1jOHTydXkvw4pPQyz67lGjo6odEPd4Baf",
+      "fileName": "IMG_4936.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ー 、 Al\n\" f]\n! ー ンー\n件 W ンー\n中 し\n[ たーー !\n リー\nーー一\n/ ー リル\n/ ー ン目:日本酒\n/ 寺品0 アテーナー レーンジシン\n» { 3 はで ニーテランジラン ーー\n4 ー 量: 720ml ンー\nー N ・量・72Uml アルコー\n本 リリ ii導導\n貼り 料名 : 米(国産).米=う\n補い ィ7名・不(国産 不こ\"\n〆先 ーー\nー 歩合:65%。 ンー\nー \\少百・0D0\nー ミミ\nー - 所に保存\nロロ * 7脂所に 休仔\nー 年月・拓邊下可記寺\n1 =—1 アヨティ ビビノド ゅっ {= &f =\nー ジンデーンー ンー PobplLBY,\n生 ジー リー\n上 考自の圭 洒洗寿=\nご 且・山 Dr= ッy由ー ゴビ生ご\nーー {E JELZN A\nセーイイ EEIEL 2 BIk ーー\n_ 信和則宗大責不中\n。 ンー リー\nに シテーッメロー 一 へ 人\n ーー _ の九一一互所1\n[ ラー ーー一 ーー\n』 に) フル\n上は20茂にかなってから。\n 敵の折中各のルルkoんの介\nー ごトト邊孔期の女性は赤ち: の健康ー\nー ルン Ea aaan NADIE\nー Seenl て ださい。 上品用 re 3\nー 栓後はで しリー 四愉旅時\nー トーアン- きるだけ早目におー ヒナ\nー リン\nー bee— o\nTE ーー\nー 旗ー\nー ー",
+      "ocrConfidence": 0.4,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 26203,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1uC9YXjVHN-curk3hX608s_hCLWg_BZTH",
+      "fileName": "IMG_4937.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "'(} ー ー mm\n*3 1 [ ー ー 本 Ad\n1 ご\n\"5あ ー\neavey [ ー\n/ \\\nる ー' 時 替\na ¢\"Y INEN fa \\\nン , ん の / ー 。\n: ェ / ー\n- ー [し 細\nー 。 ¢, へ ー JR\ne <.』4 BW\n5 1 店\n諾。 。。。 し\nー ろうろ 関税\nは 2 に\n W1T\nl \" =\n上 に 1,\n\" i a ー\n~ §\nA\n1 ;",
+      "ocrConfidence": 0.29,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4676,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1PYmcyaczKup2Rkzvxph2PCZSXyCHTyNC",
+      "fileName": "IMG_5168.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ーー — : H に p\n=—— EAS 本\nーネ。 = し\n_ Rl : 【)\n用 a,\np Ea\nGb=\nFA= 55 ] 。\n3 店 こ L) k2 - .\nA\n(\n. に\n一 5\n し mm\n—= = 2 ー :\nーー一 ^\n0 に ぁ ら\nジー = ー\n= = 2\n 1 )\n2 i ーー一一一ーー一一一一\n— <ェ』\n 寺 『い ー\nで 4 S 2 i < ー\n に Mo NE 1 4 $\nテー 二 4 E\n= —— 45 )\nPN o e §\n— — em /\n== N -—",
+      "ocrConfidence": 0.32,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5599,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1LWEP-ENfGu5GB83sNeRuSar9CY1lLimD",
+      "fileName": "IMG_5170.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "愛し\nド >\nJUYONDAIL\nTIAR 中取り純吟 播州山田鈴\n揚げ槽時、香味のバランスが最良の補を集\nめることから「中取り」と呼ばれ、酒米の拓\nうカ、味わいを充分に堪能できる艶洒\n品:日 本酒 。純米吟酸\n記計料名: 米 (国産) kom (EIER)\n間米歩合 500 使用\n7ルル 米: 兵庫県特A地区産山田病100%\n き ル分 : 15度 内容量: 1.8L\n者:高木酒造株式会\n人 山形県村山市大字宮普1820秋條\n人入方法 : 必ず冷蔵庫 (-5てでー5C)で人錠\n お早めにお召 し上が0 E aw\n詰、志 は こ\n war",
+      "ocrConfidence": 0.58,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8164,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1rPACDZTqAJpG-A1fUHBoKgmf4dizn4or",
+      "fileName": "IMG_5183.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "。 『\"和 A\nをか 和憲ミ、\n_、 ー \"\n\" !馬 ーーペー\nEe 4 ~ ! 2 しいい\n\nー r sa\n内 ー し ー ! ゃ *\nEst — 7, CHITA\n 山名 q LE GSkY py ー\n着用 つり リリ fest K\n出 を REES タタ 左\nー月一 リ 導 26 ー\n4もし) 人 楽ー 4 の E\n7 選任 上 リリ 放二寺 -\n FR osemmam 旦\n伯ミ所 y GY ~\n半生 き ¥B\nWilR] E ー\n@0 しい # ンク ビシ 1 ー = に 』 1\n< § 肝と本ー L\n=N TBu NIR 人2 ー die- —2H (8\n BELERR=—= —",
+      "ocrConfidence": 0.26,
+      "detectedProductName": "知多",
+      "detectedMakerName": "サントリー",
+      "detectedAlcoholType": "whisky",
+      "candidateReasons": [
+        "OCR別名一致: CHITA"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 11951,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "知多",
+          "makerName": "サントリー",
+          "alcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: CHITA"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1STRboEd6zIbc_Z9GjKNpnGqrsezdgkCs",
+      "fileName": "IMG_5187.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "& h E Npaany トト ジア\n ー ヨ F\n9 マッ £ - に -\n人 てき アー =\nas 1 に :\n\\% R =\n : w ¢\n1 -. ue を\n・ E\n・・ぅ 葵 に 4\na RAN\n= 上 B 記 —\n~ 3 』 人倫 al - 公 、 ーー\n‘ » う 。沿 層 < . h= 3\nツイ \\ _ 5 = ビ & N » boe\n婦 « ーー ¢ p : Cha\nAl ーー 衝 - ーー 当\n~thh : —=\nB] ESaE ~&\nSi 5 ーー\nA R* € & E\nと ふさ 、、 へ邊 &\nded = a pi Ey - _el\n. に + .\nの 上 \\ a\n h! ー .当\n』 3 ーーンクジの\nak \\ - R F\n , - E v\nE & ) : 内\nが革 F 4 ーー\nA — みみで*",
+      "ocrConfidence": 0.19,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 10426,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1ZroFvTmFNXOrJ1nuzeWgLhsoacOUQ9XB",
+      "fileName": "IMG_5188.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ー\n\nー [オヨ\n\nー ヲ\n\n F/\n\n , て 4\nに : ーー T『攻2 【) 3\n\n : /\n\nnl 1 ュ だ\n\n、、凶軽g瑞 アグー\n\n —— 7 B",
+      "ocrConfidence": 0.25,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1907,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "11bcScj3KruqCVke1wdpROe2ZL15Oe0lb",
+      "fileName": "IMG_5189.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "Jsp美しい風時の中で作られる本物の共加を\nEALE REEADERRL L1AS\ne e srrvikuEE 上\nBTENE b hTV, しwit B\nい半[大地 で いい時を称み拓け 8\nALEABERRT §I LHTITTC\nFroLERsLEEBERRL2\n稚い優しきを纏っているオリジナリティ\nてを味わいをお楽しみいただけます。 が -\nRaccmieasFEE “\nMetony gamassiont .\ntxmg ramat B3\nLU Rither 10096 ー Z\nSs E\nsa E\nに ;",
+      "ocrConfidence": 0.4,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 10256,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1-tzz7ZMO7IRtXWEc_Qyn3uNnA9hNQJO3",
+      "fileName": "IMG_5203.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "に/ 4 - 5 めすずっうで圧 hdss WF: 7\nA Bt\nー リ Crcin\n SC8 蘭\n ANCE\nくままい\nだるる関\nらら購おに 。\nー \"Rary ー\nは吹おの\nWATAT \\\nああに (2022 3 、\n49 1 b\nタツ ーの、\n。 ー ー\n1 り\n[4\nの r\nL]\n。$ j\nや 3\n-\n ー SIRIUS ー\nY ンーンク\n 。 m ‘\nにジン",
+      "ocrConfidence": 0.43,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4364,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1wzn5iaP2Ea26DuA2s7w3Dxum7Nn9V7zs",
+      "fileName": "IMG_5207.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "日\n\n材\n\nI)\n\n8 ー\n\n本\n\n14 §\n\n7\n\nw/\n\nHg ol\n\n]\n\nand\n\n新座\n\n央 湯\n\n7\n\n県\n\nも人 庄\n\nsRND\n\n誕生年月\n\n2022年12月\n\n新\n\n出荷日\n\n2023年4月18日\n\n県 じ\n\nカス圧の関係\n\nから出荷\n\ngk\n\nE\n\n日より1ヶ月\n\nをおススメします\n\n内の飲酒\n\n市潟\n\n県\n\nFILT—)l5\n\n):13度\n\ni\n\nWi\n\nMM\n\ng 3%\n\n内容量\n\n3 5\n\n25\n\n衝\n\n地\n\n則ー\n\nll\n\nー\n\n<72ー\n\n町ー",
+      "ocrConfidence": 0.57,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 1300,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1-Q0oUlZsSjrYDLsu7tEI4auAE6rEnc48",
+      "fileName": "IMG_5378.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "We & 3\nリリ 特 天\n§ リリ 。 Ji; お 上 ー 還 ーー %\nelRE THE\n2 THPH2\n- __% wiINE\nWuLECTI0陸\n5 1生 ーー 詳\nこと",
+      "ocrConfidence": 0.14,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3857,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1rSpImQDjVF1Mgb3U2o2ukK6UW1XLAdsO",
+      "fileName": "IMG_5577.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "T A ー\n- - - Pt\nる 1 ーー一 wv ーS、\n! ! 敵 )\nー (TM 3\n[faltk }\n しとかで2 時\nVa r リ が\nし \\ 。\nーー テニーー - '\n\" プン 明 ゴー\nL / y' PS = ~¥4\nmu , SRIR-- - し\nN } £ 7イノ /\nに に きただ4\n[ Pa— ーー ¥\n: で・ 1で<で・, —— —= \\iy\n4 、 は e EEE v\nご ひ Rー AEE\n4 C aER) B\n ジン -= \\\\GP\nj el € ARET AANET\n PR C, CAR いいにNM\nゆ,。 阪ソ 所うらくい旧ー\n部どと もし ( る L\n則本條ーー ーーツリ S\n』 em y — き h\n1 — y &\nや OLD ._Vaul\nきい こも Y 回\nー\nLSES \"ULTENE\nも y\nSIN cKY\nSrs MALT scOTCH WS\nー Ak a\n~ rowinrue rom or\nl ー) meas に 。。\n: 12 enee [E ッッ\nOppe——y ー 。。。\n、 ンー てププエア\nに い 一一一一- — riud %",
+      "ocrConfidence": 0.3,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 15481,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1uD2rBJzeoWuKCtavNt1TwYBDbV-kAJVp",
+      "fileName": "IMG_5800.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "0 Ey 上\n訂 あい ¥y\nちん ー#F で ー\n0Wiw & 隔ていい ’\n... L-— oa\n@ 「 0 —-\nA1) b 4\n) h f R\nN 2 N 2ミニララ ー\nFR: : »30EZZ08H\n3 E w ークマミゞんが ー\ne 所 9 間還= e / . Be ・ ーー\n 8 Be R. そミ\n — 上\n— 0 て ド 用 )\n・で3 — i b:\nビー ーーー ;\n# a _ AM _- 阪和 上 M0) : 1\n& —— — _ 1 I 回 § し\nョーーー ー ー 1\n」 所 5 pi菩 1 d 】 -\n則 J . ー J\n 選計 。 E 導\n N o り ーー 回がて dd ト w\n を ーW う>沙40 0 L 1\nN いい SrAe o8\n= ンタ Ao N— 博章\ne ,ー や ーー LfT w",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 12079,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1zvoUjsKbsI5jPWiaNTKiTORngVbgxK0G",
+      "fileName": "IMG_5801.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ー 町生 邦表\ng > の -\nLLEEE 員 g\nowienk 純 8\niB 要560米特選 nm (.\n上 Baenhy K は\n 「電\n£A 米\n吹代 #\n\nS\n町本 導\n5 店 x\n\n5 二 油\n\nasm (半)。。消\n\n Qu ンー kcltY\nて いを生かす ため、鳥濾過無加ポ があま\nすめます そのためオリの出るとととっ\nには則昌ありません まだた開析\nりリドのため縦府きで保管下さ 。",
+      "ocrConfidence": 0.42,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6579,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1jpgdV31n4pcKdQpz43poFjdZop1WYjTi",
+      "fileName": "IMG_6289.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "-~ 所 ! \\ 1\nー \\\nLL :\nw7o ーH\ny\\/o% 4 ー\nLo/l \\W9 2\nムーとフンが 1\n& , 青 上\nーー導き 4\n& Nillllk =\n3 に\n0 o\nA 7 い\n島 、 W較みー N\nマー 衣\n2区 ー\n用入 N\nで TM 0 に き\n~-~ ) -\nーーて リ、 TR A : ia",
+      "ocrConfidence": 0.29,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5505,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1bZiMe15WZ58kENm0oAxHDeb-j-kZBPHJ",
+      "fileName": "IMG_6290.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "半邊5 F に -\nて 』 A\n_ C \" ;\n当 CS .』 まま ? 1\n。 1 Fa \"\n-\n # 3 。 2 d\n- —\nmy\nn 、meと。\n上 n\n=— - J. =\n5デードードン ーー 「\nラニ . シン\n= > H 【\n門5の67 ニニン /、 7 . . ae e\nーーンー = アン = N 上 ーー\n オメ E ) E=a\nロミ = =\nた た7 v る$ ルン 3 一 ーー ーー —\n+ =— y ーー\nたモア ーー \\ し5 ーー一 ニー ミ\nーー一クの2人8をーー . -— —\n=/ 2 シン パー一\n= クー テ. ーーシンーー\nーー — =—\n=— —— = =——\nーー ーー —at ーー ーーー W - ーー =",
+      "ocrConfidence": 0.27,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 11482,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1UbxGhoqZ3BJyJdO0x8kYvM9gB9Sy0pxG",
+      "fileName": "IMG_6293.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "\\ \\F きせ \\\n F WEWN\n. t 3 ー\nを し 四 -\nき ; 3\n-¥ \\\nH § \\\n2 を\n ー い\n r i ー\n\\ し",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2247,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1o_oABDSWlirvzeH4aHPh9O9BkbvWyS8z",
+      "fileName": "IMG_6343.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "に 内、 さあで\"本拓司語に てーー\nSS Ng計 さき38 3$2\nSN 2a まさ 3 二\n-) £- に FE QE\nーー一 ー 。 5 V補 = に 当 かを<\n 4 SS・ ョ ーー\n! で半計。\nで きるを 4\n E—= Ege\ni 1 ‘ < \\ TTNELS\n[ones § i8 ! %\nPt £ MI :\n\\ / % 。 5 。\n\\ . 4 上\nVi ー ¢ 。 ? 、\n8 ー\n<a 1I\nSh ー 、\njs電 ー\ni E\nも ] ー\nに5 過\n£J\n& 還能\nー E N\n§ ドドを M —\n i\n \\\n® Z .iA 7\n7. \\Y\\$O <\"\nML ルリ 0\nPN @\nクジ 】 j - ムー ー GF\n72e VaLY ーー\ngr る “N 19,\nー - \"wn .",
+      "ocrConfidence": 0.24,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 7938,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1G9YGAGIFVHj_s39Pvqluw-ndd_NHp4zA",
+      "fileName": "IMG_6348.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "_d 9こき\n2 w=p Vi\n5ごか\nいい3フク/\nる",
+      "ocrConfidence": 0.28,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 2820,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1oxCmN2NXWqwdUna5z986mTQ7dWdlO6UJ",
+      "fileName": "IMG_6456.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "ンー ーー 夫、 グー\nーー NW os\nw I9 SAH #\n2\ni XX y Sn なぶ d\nATIEAN is2 © ー\n EE Y Z=UAS RFCの\nr,: JASDE ZAWAS REG4 の\nOF - ッーー YWha & p>\n® ) = り 772 (の\n? Yis Z,. 、 Y/ w13= N\n1 1た * クス & RY ー\nいい ‘q しみる ンミ\nー に ー p\n_— 1 ACEDL ー BLENDED SCOTCH\nN ー = = = WHISKY w= 。\nof QASREC4 上に、、 _ Eaie\nV ー) org ー Dod ドア\nN 」 &itra \\ PY -i\nL\nENDED SCO\nE WHISKY に EEEN ーー\n —a Be",
+      "ocrConfidence": 0.27,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 8817,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1HetxLm8s0_JEwyksF40yK-sANypWdYze",
+      "fileName": "IMG_6494.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ーー一 l\nレーブー一 衣0 ーー一\nヒー一細 ニー\n用用ヨゴ ) 性\nーー一 ニニーー一一一一一一\nヒー一 AN ニニニニ一\n\n). - ー ビーニー一一一\n\n 2か ー —\n\nー = ニーニー一一\n\n/ 1 ーーズー一一\n\n/ ーー一一一一一一一一ーー\n\nー 5 —\n\nz デー一ーー\n\n リ \"一mm\n/ ニー一ーー\n\n— I5 —\n\nEs に WNW ー ニー一\n7 / ーー I § & ニーニーニー\n人ーー 上彰馬 ー 420 ¥ —_—\n\nと k 》 A 科 ここここーー\n\n0 N—\nルーョm (首証間8\nAN E\nRs 5T agt C h",
+      "ocrConfidence": 0.39,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 13215,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1mlUOp1kmeXQMwNcPqIiuW_ygDT-Zdd_0",
+      "fileName": "IMG_6496.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "- e Pny\nに こそミすき ロア// /\n会ごマッ\n/、\nルー一\n\\ y §\n— /! “ .\nN o J\n- \\ {\n2 上 ) “3 <\nー 4 & 3 U のあう 1 i 」\n& \\ \\ i» \\ F ご\n{ い、 和$ 0 究 : ー\nWW 5 1 ~",
+      "ocrConfidence": 0.38,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3806,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "10ZYeAjSnnxGFG_5qScNSUQFIomd8vD6Y",
+      "fileName": "IMG_7083.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "hw _ 本\n- - - § mw\n* ; ー We -\nKi We .\nーー TLTT\n+ 3 4る: iu T\nテリ\nー y 隊 { ー\n へ F の ミミ き 9 ・ — E\nー ー —gl ASE—\n) [ B : i . 、。 ® -\n ' ー SAE s\nいい Q\n1 ~ rms\nだ ーー —2ild L\ne 4 ニー Fl e o d (リリニー 一一ーー\n3 ! o のに H SSSENaY ー: をもをおき\nー YR NJ 1 「。 上 7/ タッミ 導用 ミ三\nー i \\Gprhak 4 ガザ 了 * ー 攻 ドミ\nー — “a 。ガ 用護s ご の且\n 由記才/へ導電 2 pdill If も こーー こ*\nN橋記 っ <が中屋 >\n央本周ー ーー のリマ デコ\nza し ー 必キ ーー鳥 0 0\nー + & > AN\ny に,赦v9 『 ます\n! FMEROMN REEy\n; RW間口mozをだ\nき る) mTE\nELEEN , ——g]\nーー 「マネッマッて・\n5ー ーー きる に\nRi LE AND AGED in THE BULLELT Bo No 4 rea\n BULLEIT'BOU に1 KE Yoi\nB rRoNTIER WH! n— -\nRENTUCKY stRAIGHT souRsOn isdy * B\nゝ でいいいいンー さい a\n= UN\nっーー ae 6\nヾで — ーー ミル\nts ヘー\nドReぶ、ーこーー ミー ーーか0半デーーの ;\n§ R アン",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 14912,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1EQXSU-TJ7iVmj7w-nYVMIXcxHtbuPiIp",
+      "fileName": "IMG_7083.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "hw _ 本\n- - - § mw\n* ; ー We -\nKi We .\nーー TLTT\n+ 3 4る: iu T\nテリ\nー y 隊 { ー\n へ F の ミミ き 9 ・ — E\nー ー —gl ASE—\n) [ B : i . 、。 ® -\n ' ー SAE s\nいい Q\n1 ~ rms\nだ ーー —2ild L\ne 4 ニー Fl e o d (リリニー 一一ーー\n3 ! o のに H SSSENaY ー: をもをおき\nー YR NJ 1 「。 上 7/ タッミ 導用 ミ三\nー i \\Gprhak 4 ガザ 了 * ー 攻 ドミ\nー — “a 。ガ 用護s ご の且\n 由記才/へ導電 2 pdill If も こーー こ*\nN橋記 っ <が中屋 >\n央本周ー ーー のリマ デコ\nza し ー 必キ ーー鳥 0 0\nー + & > AN\ny に,赦v9 『 ます\n! FMEROMN REEy\n; RW間口mozをだ\nき る) mTE\nELEEN , ——g]\nーー 「マネッマッて・\n5ー ーー きる に\nRi LE AND AGED in THE BULLELT Bo No 4 rea\n BULLEIT'BOU に1 KE Yoi\nB rRoNTIER WH! n— -\nRENTUCKY stRAIGHT souRsOn isdy * B\nゝ でいいいいンー さい a\n= UN\nっーー ae 6\nヾで — ーー ミル\nts ヘー\nドReぶ、ーこーー ミー ーーか0半デーーの ;\n§ R アン",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 14847,
+      "warnings": [
+        "heic-convert済み一時画像を再利用",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "15tD8IlOqEvWH43S_XK2G1HgHWq3pirim",
+      "fileName": "IMG_7085.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "『 トー ーー 「\n 151% 4\n4 中アメリカな間\nす ー 、。五阪全社 マッダ\niR先ー軌間市南区旧愉4-31-26\nに TEL (092)589-5317\nド 木成年者の修潤は法律で然じられています\n時 池は20成になってから\nゞ る 誠 『 $\n ミ紙、 害 1プラ キャップ\nニテンプ ム人る人2 ノ7\nーー、\nーー\nTTATTTュナナーーニー ーー\nーー一一一一 ADO POR 一 : ジジ\niMpORIED BYJIMPORIO AN\nWl=AD) S20d—{ー— “THE BULLEITDIS NILLING CRDAM — :ー攻デジ\n回ニー MOLENWERE 12,1014 BSペデェニーー ジジ\nL STIEEY L Te ES) LENWERY uFRIANDS 三星 : ンジ\nさこーーさこニニTTF NPTHPRDA と2 =\nlm UI ニニミニーーEvpOTIFLLADO POR_ ミー\nSORNNON ー E i : E きこ\numlul記ー",
+      "ocrConfidence": 0.36,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 11768,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1XeXcjSCsyEWGKr732ZcQ7JhDADToqiqu",
+      "fileName": "IMG_7090.HEIC",
+      "status": "success",
+      "bestCycle": 1,
+      "bestVariant": "converted-resized",
+      "ocrText": "5 Pifcc)\n\nバンンー\n\nば\n\n$\n\n[ §\n\nL\n\nin\n\nR\n\nTHIS waY [\\\n\n\\(4\n\n&\n\n==\n\n時 」\n\nTM.\n\nにー\n\n上\n\nー /4\n\nW\n\n\\ I\n\n#\n\nり\n\nり\n\n関 ンマ 」\n\nMM\n\nイセ\n\n邊2\n\nMk\n\nに",
+      "ocrConfidence": 0.35,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4086,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "10ROB7rr5T2K-ueg9PrGkrrx-ZSHHscz6",
+      "fileName": "IMG_7093.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "二。\nJUYONDAI_ 記。 a\n†四代 中取り純吟 播州赤田鈴\n前#模時、香味のバランスが最良の手を信\nめることから「中取り」と呼ばれ、 酒米の失\n2フカ、味わいを充分に堪能できる艶酒。\n唱:日本酒 >純炒吟醸洒\nRHRLE, : 米(国産)、米麹 (国産米)\n指米歩合: 50%\n料 米:兵庫県特A地区産山田錦100%使用\n7ルコール分 : 15度 内容量 : 1.8L\n党貴者:高木酒造株式会社 。\n周山形県村山市大字富並1826香すき\nf方法 : 必ず冷蔵庫 (-5 て ー5て ) oRE y\n。 お早めにお召し上がり下きい。",
+      "ocrConfidence": 0.68,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 5660,
+      "warnings": [
+        "heic-convertでJPEGへ変換"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "18AudM0IO4C98QJusX0MWIegjCJDFuXyZ",
+      "fileName": "IMG_7094.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ーー f\nニー Nssd\nンー ビ B\nー ge :\nロリいい秀生\nーー ーー 選ニ\n財還 ‘e\n 「 awa (T\n時 ald の # 4\n タダ h =\nー @ P ®. - 関し\nぽ。 4\n£ で 性\n\\ # w. ] .\n4 #\nー * ’\n @R Yamam。。 d\n関し 4 5 導\nNH glv?",
+      "ocrConfidence": 0.31,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4272,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1sh12-ULC9yQ59O11l6dS8WPuvEvCAWQh",
+      "fileName": "IMG_7535.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "L #HE W 。\n- . — と\n区革\nNo.6 “\nー 2e P\n ー 殿決吉 。\n1 yハさま B\n ] { Rk 4\n義人 上\n— 保答 則。\nd v 4 』 > 5\n生生 mmm ー ーー\n。 開語人R放基限 1\ny¢ 2021F 6A%E ー §\n- EEESGERAE 。\né . お飲みください 計 .\na 【裏面もみずすご覧下さい】 」\nの\noy \\\n6\n-",
+      "ocrConfidence": 0.34,
+      "detectedProductName": "新政 No.6",
+      "detectedMakerName": "新政酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: No.6"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 5399,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "新政 No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: No.6"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1wQ8F-WcDEMEE8JU9A0ppnyqeXGXcigrz",
+      "fileName": "IMG_7536.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": ". に *\n テ 『 放 る。 議 し\ny ¢ - めこ リリ\nいで し 7\nー 3\n- 2R\nー No.6 きき <\nーー一スム ー Xom \\\n§ i 70 COOL 』 。\n- § ゃ人 < B\nーー ae pey\nーー ここニ吊 保* が e\nて ~ E B !\n; 」 す\n_ - zー 1 3\n 埋 品質保証期限\n‘s 開ー の27oxa B 1\né ー rc W\n(iE om 】 E 。 訪\n、 、 fow\n E o “e\nE 2 \\\nF -d re L + §\nーー 。\nyY B\n% h &F ‘\nN\nQ =\nW\n i S08",
+      "ocrConfidence": 0.29,
+      "detectedProductName": "新政 No.6",
+      "detectedMakerName": "新政酒造",
+      "detectedAlcoholType": "sake",
+      "candidateReasons": [
+        "OCR別名一致: No.6"
+      ],
+      "candidateCount": 1,
+      "processingTimeMs": 6266,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": [
+        {
+          "productName": "新政 No.6",
+          "makerName": "新政酒造",
+          "alcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: No.6"
+          ]
+        }
+      ]
+    },
+    {
+      "driveFileId": "1Vkh4zVKTMOwACLk-aFAPiddr5CQOFIL3",
+      "fileName": "IMG_7586.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "or でム\nf 4\nT 大 1E%\nき オ 4\nリゼ -2\"\n\n_ 本間。\n\n ン 3 %\\、 ず に\n\n: T~— い\n\n\" ー\n\nA y oo\nSW 部めい\nいいのを.\n\n 2",
+      "ocrConfidence": 0.32,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 3432,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "18p7AONF-vXP5A6XJI4aQhnkG_xpeI7Vn",
+      "fileName": "IMG_7612.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "nway \\ ー ー { 3\n人\nー りり\n ーー 首 £ -.\nりき 。\n\"ー 居\n4がら4省\nay/ A\nmL ー\n央較較\nー: ^ま区 ・a ビデテマ3半\n4 で し ーーつっ\n_\n て 「'」-、 訓各詳 ーー\n YU\n、 内\n0 的 )\nきりは all\n (を -\n~ ンタ B\nAMる 2] の F .\nBEE\nR ペ 0 ーー 。\n0 e\n が ー\nーー Y >C A \\ 4 ーー 机放二衝ー",
+      "ocrConfidence": 0.19,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6189,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1xcTftrJ2qvsLlh3A89zi1NYkxE11Gfck",
+      "fileName": "IMG_7618.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "と & 1\n¥ # ]\n(上 W—\n remar ー ー4 4\nすす .\n 【。 は\nワリ9リリ ?\nブリ\nあ品に 識 ー e\nます N\nSE0, —\n e—\nや 4B っティーマエニニェマーー\nAe 3 、ぶさきラロ 基本の人SW _こにこ /\nロ つつ 』 / = ré F 0 区 』 ニ あな 、 + ー\n% Rogie » ゴ E (=~ ー 1 < X X3 4 1\nCOENN ー 4 vif RSOE\nCieRE\nDsnal. — \\ 4",
+      "ocrConfidence": 0.34,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 7585,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "155bKDwavLxYeJ1-Fuc6rwpv_Oixdqrcj",
+      "fileName": "IMG_8283.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "RSの てイプ Ape\nTa m _§\nR のが\n。 c ンジジン 誠。\nの入スと7テン ルクンタ\n【生半ー リウン 還 ンジンク0\nR- リ ンジング\nz で5 a 7 ンジ リン\ni T. ン須\nRa - 2 ンタ 2\n: で を ンジ リン\nAa ンジジンジジジンジン\ndir\nm :\n& P —\nタラ /a\n Fy ンプ\n& /\n# : の d 4 AT\n. LIY]\n? RC -\nBag cet I\njs L DE\nsg % に ーータイ fo @\n。 る2分 /グ多\n.』 » L - ; Er ” へ\nに Wtak -/2\nー ドド » S\nトド h ; グン 人 < 1\n 2 WMaz 18\n。 E\nD 1\nTrag AO ー\nRuiz x@\na< 8\nワレ 』\nPn. Tend\n43 74 』\n・ 3\nー Tinie\nEY",
+      "ocrConfidence": 0.19,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 10335,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "低信頼度"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1I944WhnnMdPjIN_fq_rNsuhyBch0aXYQ",
+      "fileName": "IMG_8284.HEIC",
+      "status": "success",
+      "bestCycle": 2,
+      "bestVariant": "center-label-gray-contrast",
+      "ocrText": "ー b1. y Lo WAS C e pv\ne EREESe\n\n> § 内容量 720mi Feo7\n\n’ アァアルコール分 14% 4\n\nー 精米歩合 50% ー\n\n 原材料名 lm)s が\nE. XSe@mER\n人 Eer %\n3 : 飲酒は20歳にな62用\n\nいい 放人。 F\n\n人 ししエーララ\n\nる \"知県土佐市再商2更誠\n\nBEE f\n\n回 -. /\n\n目順川川",
+      "ocrConfidence": 0.33,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 6771,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    },
+    {
+      "driveFileId": "1Li3bw8VCa1e1qB2hGH2LB648V25cQmdZ",
+      "fileName": "IMG_9647.HEIC",
+      "status": "success",
+      "bestCycle": 3,
+      "bestVariant": "label-band-crop",
+      "ocrText": "___ARAR N ygを \\ B \\\nリ § ー いいー —\n放さき罰\"一\n。 0\nms と 3\nー箇\n— * & —\nAEE Ih\n// 9 N\n- / に 7\nceey : 9\n ー\nー トル\n導 、 当 ー\n u [©) ., - —\nii \\ Z 問\n BL- ー\nchio'sValt\n WIREs ; Eee \"\n花、 od 』\nl B SYSを he を ¥\n: ー\n庫和きき人。\n- T Tie ra\n®",
+      "ocrConfidence": 0.26,
+      "candidateReasons": [],
+      "candidateCount": 0,
+      "processingTimeMs": 4845,
+      "warnings": [
+        "heic-convertでJPEGへ変換",
+        "記号ノイズ過多",
+        "小断片が多い"
+      ],
+      "errors": [],
+      "candidates": []
+    }
+  ]
+}

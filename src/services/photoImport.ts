@@ -11,12 +11,107 @@ import { readProductBarcodes } from './barcodeService';
 import { builtInAlcoholProductCatalog } from '../data/alcoholProductCatalog';
 import { rankCatalogCandidates } from './candidateRanking';
 import { retrieveCatalogCandidates } from './candidateRetrieval';
-import { identifyAlcoholProductPipeline } from './identificationPipeline';
+import { identifyAlcoholProductPipeline } from './productIdentificationPipeline';
+import type { SmartCaptureResult } from './smartCaptureService';
+import { aggregateNativeText } from './nativeOcrAggregation';
 
 type DetectedText = { rawValue?: string };
 type TextDetectorCtor = new () => { detect: (source: ImageBitmapSource) => Promise<DetectedText[]> };
 
 export const MAX_IMPORT_FILES = 10;
+
+export async function createNativeCapturedPhotoDraft(capture: SmartCaptureResult): Promise<ImportedPhotoDraft> {
+  const started = performance.now();
+  const sourceBlob = await (await fetch(capture.webPath)).blob();
+  const file = new File([sourceBlob], `sake-capture-${Date.now()}.jpg`, { type: sourceBlob.type || 'image/jpeg', lastModified: Date.now() });
+  const resizedBlob = await fileToResizedBlob(file, 1400, 0.86);
+  const [imageHash, size, fingerprint] = await Promise.all([hashFile(file), readImageSize(resizedBlob), createVisualFingerprint(resizedBlob)]);
+  const imageId = crypto.randomUUID();
+  const aggregated = aggregateNativeText(capture.analysis.textObservations);
+  const identification = await identifyAlcoholProductPipeline({ images: [{
+    imageId,
+    localFileUri: capture.localFileUri,
+    photoType: capture.photoType,
+    classificationConfidence: 1,
+    textObservations: capture.analysis.textObservations,
+    barcodeObservations: capture.analysis.barcodeObservations,
+    labelRegions: capture.analysis.labelRegions,
+    visualEmbedding: capture.analysis.visualEmbedding?.values,
+    imageQuality: capture.analysis.imageQuality
+  }] });
+  await db.nativeAnalyses.put({
+    id: identification.runId,
+    imageId,
+    environment: capture.analysis.textObservations[0]?.engine === 'apple-vision' ? 'ios-native' : 'android-native',
+    engine: capture.analysis.textObservations[0]?.engine ?? 'native',
+    payload: {
+      textObservations: capture.analysis.textObservations,
+      barcodeObservations: capture.analysis.barcodeObservations,
+      labelRegions: capture.analysis.labelRegions,
+      processingTimeMs: capture.analysis.processingTimeMs,
+      warnings: capture.analysis.warnings
+    },
+    createdAt: new Date().toISOString()
+  });
+  if (identification.abstained || identification.candidates.length === 0) {
+    await db.unknownProductDrafts.put({
+      id: crypto.randomUUID(),
+      extractedTexts: aggregated.text ? aggregated.text.split(/\r?\n/u) : [],
+      sourceImageIds: [imageId],
+      status: 'catalog-unregistered',
+      createdAt: new Date().toISOString()
+    });
+  }
+  const imageType: ImageType = capture.photoType === 'backLabel' ? 'backLabel' : capture.photoType === 'bottle' ? 'bottle' : 'frontLabel';
+  return {
+    id: imageId,
+    fileName: file.name,
+    originalFile: file,
+    resizedBlob,
+    previewUrl: URL.createObjectURL(resizedBlob),
+    capturedAt: new Date().toISOString(),
+    imageHash,
+    width: size.width,
+    height: size.height,
+    ocr: {
+      text: aggregated.text,
+      confidence: aggregated.confidence,
+      engine: capture.analysis.textObservations[0]?.engine === 'text-detector' ? 'textDetector' : capture.analysis.textObservations[0]?.engine ?? 'none',
+      status: aggregated.text ? 'success' : 'empty',
+      message: aggregated.text ? '端末のネイティブ画像認識でラベルを読み取りました。' : '銘柄を特定できませんでした。手入力してください。',
+      processingTimeMs: capture.analysis.processingTimeMs
+    },
+    candidates: identification.candidates,
+    status: identification.candidates.length ? 'success' : 'warning',
+    message: capture.warnings.join(' ') || '端末内で画像を解析しました。候補は確認してから採用してください。',
+    imageType,
+    sortOrder: 0,
+    fileKey: photoFileKey(file),
+    classificationConfirmed: true,
+    processing: { startedAt: new Date().toISOString(), totalMs: performance.now() - started, originalBytes: file.size, processedBytes: resizedBlob.size, ocrMs: capture.analysis.processingTimeMs },
+    quality: {
+      blurScore: capture.analysis.imageQuality.blurScore,
+      brightnessScore: capture.analysis.imageQuality.brightnessScore,
+      contrastScore: 0.5,
+      glareScore: capture.analysis.imageQuality.glareScore,
+      labelCoverage: capture.analysis.imageQuality.labelCoverage,
+      width: size.width,
+      height: size.height,
+      warnings: capture.analysis.imageQuality.warnings,
+      recommendedActions: capture.warnings
+    },
+    labelRegions: capture.analysis.labelRegions.map((region) => ({
+      id: region.id, x: region.boundingBox.x, y: region.boundingBox.y, width: region.boundingBox.width, height: region.boundingBox.height,
+      confidence: region.confidence, kind: region.regionType === 'backLabel' ? 'back' : region.regionType === 'neckLabel' ? 'neck' : region.regionType === 'barcode' ? 'barcode' : 'front', reasons: ['ネイティブラベル検出']
+    })),
+    barcodeValues: capture.analysis.barcodeObservations.map((item) => item.rawValue),
+    visualFingerprint: fingerprint,
+    identificationRunId: identification.runId,
+    identificationPath: identification.path,
+    identificationPhotoType: capture.photoType,
+    identificationPhotoTypeConfidence: 100
+  };
+}
 
 export interface PhotoImportProgress {
   index: number;
@@ -295,23 +390,50 @@ export async function readImageText(
   file: File | Blob,
   options: { signal?: AbortSignal; onProgress?: (progress: number) => void; session?: OcrWorkerSession; quality?: Awaited<ReturnType<typeof analyzePhotoQuality>>; mode?: 'standard' | 'vertical' | 'latin' } = {}
 ): Promise<OcrResult> {
-  const detectorResult = await tryTextDetector(file);
-  if (buildCandidates(detectorResult.text).length > 0 || detectorResult.text.trim().length >= 16) return detectorResult;
-
   try {
-    return await readWithTesseractVariants(file, options);
+    const quality = options.quality ?? await analyzePhotoQuality(file);
+    const regions = await detectLabelRegionsFromImage(file, quality);
+    const primaryRegion = regions
+      .filter((region) => region.kind === 'center' || region.kind === 'front' || region.kind === 'back')
+      .sort((left, right) => right.confidence - left.confidence)[0];
+    const primaryInput = primaryRegion ? await cropRegion(file, primaryRegion) : file;
+    const detectorResult = await tryTextDetector(primaryInput);
+    const croppedResult = await readWithTesseractVariants(primaryInput, { ...options, quality });
+    const croppedCandidateCount = buildCandidates(`${detectorResult.text}\n${croppedResult.text}`).length;
+    const needsFullImage = croppedCandidateCount === 0 || croppedResult.confidence < 0.62;
+    const fullResult = needsFullImage && primaryInput !== file
+      ? await readWithTesseractVariants(file, { ...options, quality })
+      : undefined;
+    return mergeOcrResults([detectorResult, croppedResult, ...(fullResult ? [fullResult] : [])]);
   } catch (error) {
     if (options.signal?.aborted) {
       return { text: '', confidence: 0, engine: 'tesseract', status: 'cancelled', message: 'OCR処理をキャンセルしました。' };
     }
     return {
-      text: detectorResult.text,
-      confidence: detectorResult.confidence,
-      engine: detectorResult.engine === 'none' ? 'tesseract' : detectorResult.engine,
-      status: detectorResult.text ? 'empty' : 'failed',
+      text: '',
+      confidence: 0,
+      engine: 'tesseract',
+      status: 'failed',
       message: error instanceof Error ? error.message : '文字を読み取れませんでした。'
     };
   }
+}
+
+function mergeOcrResults(results: OcrResult[]): OcrResult {
+  const lines = [...new Set(results.flatMap((result) => result.text.split(/\r?\n/u).map((line) => line.trim()).filter(Boolean)))];
+  const best = [...results].sort((left, right) => {
+    const candidateDifference = buildCandidates(right.text).length - buildCandidates(left.text).length;
+    return candidateDifference || right.confidence - left.confidence;
+  })[0];
+  return {
+    text: lines.join('\n'),
+    confidence: best?.confidence ?? 0,
+    engine: best?.engine === 'textDetector' && results.some((result) => result.engine === 'tesseract') ? 'tesseract' : best?.engine ?? 'tesseract',
+    status: lines.length ? 'success' : 'empty',
+    message: lines.length ? 'ラベル領域を優先し、複数のOCR結果を統合しました。' : '文字を読み取れませんでした。銘柄は手入力してください。',
+    preprocessing: [...new Set(results.flatMap((result) => result.preprocessing ?? []))],
+    processingTimeMs: results.reduce((sum, result) => sum + (result.processingTimeMs ?? 0), 0)
+  };
 }
 
 async function tryTextDetector(file: File | Blob): Promise<OcrResult> {
@@ -372,18 +494,6 @@ async function readWithTesseractVariants(
     usedKinds.push('original');
     options.onProgress?.(25);
 
-    if (fastCandidateCount > 0 && fastConfidence >= 0.72 && fastText.replace(/\s/g, '').length >= 6) {
-      return {
-        text: fastText,
-        confidence: fastConfidence,
-        engine: 'tesseract',
-        status: 'success',
-        message: '簡易OCRで十分な候補を取得したため、追加前処理を省略しました。',
-        preprocessing: usedKinds,
-        processingTimeMs: performance.now() - started
-      };
-    }
-
     const variants = await createOcrVariants(file, options.quality).catch(() => [{ kind: 'original' as OcrVariantKind, label: '元画像', blob: file }]);
     const fallbackVariants = variants.filter((variant) => variant.kind !== 'original').slice(0, 4);
 
@@ -401,7 +511,6 @@ async function readWithTesseractVariants(
       if (!best || score > best.score) best = { text, confidence, kind: variant.kind, score };
       usedKinds.push(variant.kind);
       options.onProgress?.(25 + Math.round(((index + 1) / Math.max(1, fallbackVariants.length)) * 75));
-      if (candidateCount > 0 && confidence >= 0.74) break;
     }
 
     return {

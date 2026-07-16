@@ -1,0 +1,1109 @@
+{
+  "version": "catalog-core-v1",
+  "entries": [
+    {
+      "productId": "sake-dassai-45",
+      "brandFamily": "獺祭",
+      "canonicalProductName": "獺祭 純米大吟醸45",
+      "makerName": "旭酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "獺祭45",
+        "獺祭 磨き四割五分"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "DASSAI 45"
+      ],
+      "commonOcrErrors": [
+        "DAS5AI 45"
+      ],
+      "volumesMl": [
+        180,
+        300,
+        720,
+        1800
+      ],
+      "janCodes": [],
+      "keywords": [
+        "純米大吟醸",
+        "45",
+        "四割五分"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "純米大吟醸45",
+      "abvMin": 16,
+      "abvMax": 16
+    },
+    {
+      "productId": "sake-dassai-39",
+      "brandFamily": "獺祭",
+      "canonicalProductName": "獺祭 純米大吟醸 磨き三割九分",
+      "makerName": "旭酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "獺祭",
+        "獺祭 純米大吟醸 磨き三割九分"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "DASSAI 39"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "39",
+        "三割九分"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "磨き三割九分"
+    },
+    {
+      "productId": "sake-dassai-23",
+      "brandFamily": "獺祭",
+      "canonicalProductName": "獺祭 純米大吟醸 磨き二割三分",
+      "makerName": "旭酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "獺祭",
+        "獺祭 純米大吟醸 磨き二割三分"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "DASSAI 23"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "23",
+        "二割三分"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "磨き二割三分"
+    },
+    {
+      "productId": "whisky-hibiki",
+      "brandFamily": "響",
+      "canonicalProductName": "響",
+      "makerName": "サントリー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "響",
+        "響"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "HIBIKI"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [
+        700
+      ],
+      "janCodes": [],
+      "keywords": [],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 43,
+      "abvMax": 43
+    },
+    {
+      "productId": "whisky-yamazaki",
+      "brandFamily": "山崎",
+      "canonicalProductName": "山崎",
+      "makerName": "サントリー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "山崎",
+        "山崎"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "THE YAMAZAKI",
+        "YAMAZAKI"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [],
+      "exclusionKeywords": [
+        "12年",
+        "18年",
+        "LIMITED"
+      ],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 43,
+      "abvMax": 43
+    },
+    {
+      "productId": "whisky-yamazaki-12",
+      "brandFamily": "山崎",
+      "canonicalProductName": "山崎 12年",
+      "makerName": "サントリー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "山崎",
+        "山崎 12年"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "THE YAMAZAKI 12 YEARS",
+        "YAMAZAKI 12"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "12年",
+        "12 YEARS"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "12年",
+      "abvMin": 43,
+      "abvMax": 43
+    },
+    {
+      "productId": "whisky-yamazaki-18",
+      "brandFamily": "山崎",
+      "canonicalProductName": "山崎 18年",
+      "makerName": "サントリー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "山崎",
+        "山崎 18年"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "THE YAMAZAKI 18 YEARS"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "18年",
+        "18 YEARS"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "18年",
+      "abvMin": 43,
+      "abvMax": 43
+    },
+    {
+      "productId": "whisky-miyagikyo",
+      "brandFamily": "宮城峡",
+      "canonicalProductName": "シングルモルト 宮城峡",
+      "makerName": "ニッカウヰスキー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "宮城峡",
+        "シングルモルト 宮城峡"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "MIYAGIKYO",
+        "NIKKA MIYAGIKYO"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "SINGLE MALT"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 45,
+      "abvMax": 45
+    },
+    {
+      "productId": "whisky-yoichi",
+      "brandFamily": "余市",
+      "canonicalProductName": "シングルモルト 余市",
+      "makerName": "ニッカウヰスキー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "余市",
+        "シングルモルト 余市"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "YOICHI",
+        "NIKKA YOICHI"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "SINGLE MALT"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 45,
+      "abvMax": 45
+    },
+    {
+      "productId": "whisky-chita",
+      "brandFamily": "知多",
+      "canonicalProductName": "知多",
+      "makerName": "サントリー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "知多",
+        "知多"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "THE CHITA",
+        "CHITA"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "SINGLE GRAIN"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 43,
+      "abvMax": 43
+    },
+    {
+      "productId": "whisky-nikka-coffey-malt",
+      "brandFamily": "ニッカ",
+      "canonicalProductName": "ニッカ カフェモルト",
+      "makerName": "ニッカウヰスキー",
+      "alcoholType": "whisky",
+      "aliases": [
+        "ニッカ",
+        "ニッカ カフェモルト"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "NIKKA COFFEY MALT",
+        "COFFEY MALT WHISKY"
+      ],
+      "commonOcrErrors": [
+        "NIKKA COFFEE MALT"
+      ],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 45,
+      "abvMax": 45
+    },
+    {
+      "productId": "whisky-laphroaig-triple-wood",
+      "brandFamily": "Laphroaig",
+      "canonicalProductName": "Laphroaig Triple Wood",
+      "makerName": "Laphroaig Distillery",
+      "alcoholType": "whisky",
+      "aliases": [
+        "Laphroaig",
+        "Laphroaig Triple Wood"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "LAPHROAIG TRIPLE WOOD"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "ISLAY",
+        "TRIPLE WOOD"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-w-yamadanishiki",
+      "brandFamily": "W",
+      "canonicalProductName": "W 純米 山田錦",
+      "makerName": "渡辺酒造店",
+      "alcoholType": "sake",
+      "aliases": [
+        "W",
+        "W 純米 山田錦"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "W JUNMAI YAMADA NISHIKI"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "山田錦",
+        "YAMADA NISHIKI"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-nabeshima-junmai-ginjo",
+      "brandFamily": "鍋島",
+      "canonicalProductName": "鍋島 純米吟醸",
+      "makerName": "富久千代酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "鍋島",
+        "鍋島 純米吟醸"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "NABESHIMA"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "純米吟醸"
+      ],
+      "exclusionKeywords": [
+        "NEW MOON"
+      ],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-nabeshima-new-moon",
+      "brandFamily": "鍋島",
+      "canonicalProductName": "鍋島 New Moon",
+      "makerName": "富久千代酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "鍋島",
+        "鍋島 New Moon"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "NABESHIMA NEW MOON"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "NEW MOON"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "New Moon"
+    },
+    {
+      "productId": "sake-kubota",
+      "brandFamily": "久保田",
+      "canonicalProductName": "久保田",
+      "makerName": "朝日酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "久保田",
+        "久保田"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "KUBOTA"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-toko-genshu",
+      "brandFamily": "東光",
+      "canonicalProductName": "東光 純米吟醸原酒",
+      "makerName": "小嶋総本店",
+      "alcoholType": "sake",
+      "aliases": [
+        "東光",
+        "東光 純米吟醸原酒"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "TOKO"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "純米吟醸原酒"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "shochu-daiyame",
+      "brandFamily": "だいやめ",
+      "canonicalProductName": "だいやめ DAIYAME",
+      "makerName": "濵田酒造",
+      "alcoholType": "shochu",
+      "aliases": [
+        "だいやめ",
+        "だいやめ DAIYAME"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "DAIYAME",
+        "HAMADA SYUZOU"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "本格焼酎",
+        "TRADITIONAL SHOCHU"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "shochu-kuro-kirishima",
+      "brandFamily": "黒霧島",
+      "canonicalProductName": "黒霧島",
+      "makerName": "霧島酒造",
+      "alcoholType": "shochu",
+      "aliases": [
+        "黒霧島",
+        "黒霧島"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "KURO KIRISHIMA"
+      ],
+      "commonOcrErrors": [
+        "黒霧鳥",
+        "黑霧島"
+      ],
+      "volumesMl": [
+        200,
+        720,
+        900,
+        1800
+      ],
+      "janCodes": [],
+      "keywords": [
+        "本格焼酎"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 20,
+      "abvMax": 25
+    },
+    {
+      "productId": "sake-sharaku-junmai-ginjo",
+      "brandFamily": "寫樂",
+      "canonicalProductName": "寫樂 純米吟醸",
+      "makerName": "宮泉銘醸",
+      "alcoholType": "sake",
+      "aliases": [
+        "寫樂",
+        "写楽",
+        "寫樂 純米吟醸"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "SHARAKU"
+      ],
+      "commonOcrErrors": [
+        "冩樂"
+      ],
+      "volumesMl": [
+        720,
+        1800
+      ],
+      "janCodes": [],
+      "keywords": [
+        "純米吟醸"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "abvMin": 16,
+      "abvMax": 16
+    },
+    {
+      "productId": "sake-denshu",
+      "brandFamily": "田酒",
+      "canonicalProductName": "田酒 純米吟醸",
+      "makerName": "西田酒造店",
+      "alcoholType": "sake",
+      "aliases": [
+        "田酒",
+        "田酒 純米吟醸"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "DENSHU",
+        "DENSYU"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "純米吟醸"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-akabu",
+      "brandFamily": "赤武",
+      "canonicalProductName": "赤武 AKABU 純米吟醸",
+      "makerName": "赤武酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "赤武",
+        "赤武 AKABU 純米吟醸"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "AKABU"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "純米吟醸"
+      ],
+      "exclusionKeywords": [
+        "MOUNTAIN"
+      ],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-akabu-mountain",
+      "brandFamily": "赤武",
+      "canonicalProductName": "赤武 AKABU MOUNTAIN 2021",
+      "makerName": "赤武酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "赤武",
+        "赤武 AKABU MOUNTAIN 2021"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "AKABU MOUNTAIN 2021"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [
+        720
+      ],
+      "janCodes": [],
+      "keywords": [
+        "MOUNTAIN",
+        "2021"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "MOUNTAIN 2021",
+      "abvMin": 14,
+      "abvMax": 14
+    },
+    {
+      "productId": "sake-aramasa-no6",
+      "brandFamily": "新政",
+      "canonicalProductName": "新政 No.6",
+      "makerName": "新政酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "新政 No.6",
+        "No.6"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "NO.6",
+        "NO6",
+        "JAPAN BREWING SOCIETY NO.6"
+      ],
+      "commonOcrErrors": [
+        "N0.6"
+      ],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "6"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-yamamoto",
+      "brandFamily": "山本",
+      "canonicalProductName": "山本",
+      "makerName": "山本酒造店",
+      "alcoholType": "sake",
+      "aliases": [
+        "山本",
+        "山本"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "YAMAMOTO"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-hououbiden-omachi",
+      "brandFamily": "鳳凰美田",
+      "canonicalProductName": "鳳凰美田 純米吟醸 雄町",
+      "makerName": "小林酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "鳳凰美田 雄町"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "HOUOU BIDEN"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "雄町",
+        "純米吟醸"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "純米吟醸 雄町",
+      "abvMin": 16,
+      "abvMax": 17
+    },
+    {
+      "productId": "sake-takijiman-daiginjo",
+      "brandFamily": "瀧自慢",
+      "canonicalProductName": "瀧自慢 大吟醸",
+      "makerName": "瀧自慢酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "瀧自慢",
+        "瀧自慢 大吟醸"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "TAKIJIMAN"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "大吟醸"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z",
+      "variantName": "大吟醸"
+    },
+    {
+      "productId": "sake-takanome",
+      "brandFamily": "鷹ノ目",
+      "canonicalProductName": "鷹ノ目",
+      "makerName": "はつもみぢ",
+      "alcoholType": "sake",
+      "aliases": [
+        "鷹ノ目",
+        "鷹ノ目"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "TAKANOME",
+        "HAWK EYE"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-kaze-no-mori",
+      "brandFamily": "風の森",
+      "canonicalProductName": "風の森",
+      "makerName": "油長酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "風の森",
+        "風の森"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "KAZE NO MORI"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "shochu-kameshizuku",
+      "brandFamily": "甕雫",
+      "canonicalProductName": "甕雫",
+      "makerName": "京屋酒造",
+      "alcoholType": "shochu",
+      "aliases": [
+        "甕雫",
+        "甕雫"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "KAMESHIZUKU"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "本格焼酎"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-kikota",
+      "brandFamily": "喜荒太",
+      "canonicalProductName": "喜荒太",
+      "makerName": "不明",
+      "alcoholType": "sake",
+      "aliases": [
+        "喜荒太",
+        "純米 喜荒太",
+        "喜荒太 初代"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "純米",
+        "初代"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-karine-premium",
+      "brandFamily": "香里音",
+      "canonicalProductName": "香里音 karine PREMIUM",
+      "makerName": "不明",
+      "alcoholType": "sake",
+      "aliases": [
+        "香里音",
+        "香里音 PREMIUM"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "KARINE PREMIUM"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "PREMIUM"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-asian-beauty",
+      "brandFamily": "Asian Beauty",
+      "canonicalProductName": "Asian Beauty 純米吟醸",
+      "makerName": "不明",
+      "alcoholType": "sake",
+      "aliases": [
+        "Asian Beauty",
+        "Asian Beauty 純米吟醸"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "ASIAN BEAUTY"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "純米吟醸"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-taka-60",
+      "brandFamily": "貴",
+      "canonicalProductName": "貴 特別純米 60",
+      "makerName": "永山本家酒造場",
+      "alcoholType": "sake",
+      "aliases": [
+        "貴 特別純米",
+        "貴 60"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "TAKA"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "特別純米",
+        "60"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "wine-koshu-no-antioxidant",
+      "brandFamily": "甲州",
+      "canonicalProductName": "甲州 酸化防止剤無添加",
+      "makerName": "不明",
+      "alcoholType": "wine",
+      "aliases": [
+        "甲州 無添加"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "酸化防止剤無添加",
+        "中口"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-tentaka-1814",
+      "brandFamily": "天鷹",
+      "canonicalProductName": "天鷹 夢ささら 1814",
+      "makerName": "天鷹酒造",
+      "alcoholType": "sake",
+      "aliases": [
+        "天鷹",
+        "天鷹 夢ささら 1814"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "TENTAKA 1814"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "夢ささら",
+        "1814"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "sake-tarumizu",
+      "brandFamily": "垂氷",
+      "canonicalProductName": "垂氷",
+      "makerName": "不明",
+      "alcoholType": "sake",
+      "aliases": [
+        "垂氷 吟醸生"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "吟醸生"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "productId": "wine-tapas-tempranillo-2018",
+      "brandFamily": "THE TAPAS WINE COLLECTION",
+      "canonicalProductName": "THE TAPAS WINE COLLECTION TEMPRANILLO 2018",
+      "makerName": "不明",
+      "alcoholType": "wine",
+      "aliases": [
+        "THE TAPAS WINE COLLECTION",
+        "THE TAPAS WINE COLLECTION TEMPRANILLO 2018"
+      ],
+      "kanaAliases": [],
+      "latinAliases": [
+        "TAPAS WINE",
+        "TEMPRANILLO 2018"
+      ],
+      "commonOcrErrors": [],
+      "volumesMl": [],
+      "janCodes": [],
+      "keywords": [
+        "TEMPRANILLO",
+        "2018"
+      ],
+      "exclusionKeywords": [],
+      "referenceImageIds": [],
+      "source": "built-in",
+      "userConfirmed": false,
+      "createdAt": "2026-07-15T00:00:00.000Z",
+      "updatedAt": "2026-07-15T00:00:00.000Z"
+    }
+  ]
+}

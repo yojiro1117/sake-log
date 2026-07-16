@@ -47,6 +47,8 @@ export class SakeLogDatabase extends Dexie {
   visualFeatures!: Table<StoredVisualFeature, string>;
   identificationEvidence!: Table<IdentificationEvidence, string>;
   identificationSettings!: Table<IdentificationSettings, string>;
+  nativeAnalyses!: Table<{ id: string; imageId: string; environment: string; engine: string; payload: unknown; createdAt: string }, string>;
+  unknownProductDrafts!: Table<{ id: string; possibleBrand?: string; possibleProductName?: string; makerName?: string; alcoholType?: string; volumeMl?: number; abv?: number; janCode?: string; extractedTexts: string[]; sourceImageIds: string[]; status: 'catalog-unregistered'; createdAt: string }, string>;
 
   constructor(databaseName = 'sake-log-db') {
     super(databaseName);
@@ -196,6 +198,22 @@ export class SakeLogDatabase extends Dexie {
       productAliases: 'id, productId, alias, kind, confirmed, updatedAt', productBarcodes: 'id, productId, rawValue, codeType, confirmed, updatedAt',
       visualFeatures: 'id, productId, imageHash, userConfirmed, createdAt', identificationEvidence: 'id, runId, field, method, sourceImageId, createdAt',
       identificationSettings: 'id, updatedAt'
+    });
+
+    this.version(8).stores({
+      logs: 'logId, createdAt, updatedAt, drankAt, capturedAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore, selectedMarketPriceCandidateId, importMode, status, saveOperationId',
+      images: 'imageId, logId, imageType, createdAt, capturedAt, imageHash, createdFromImport, sortOrder, fileName, mimeType',
+      userSettings: 'id', templates: 'templateId, targetSns, updatedAt', personalityResults: 'id, createdAt', reviewProfileResults: 'id, createdAt',
+      backupStatus: 'id', priceCandidates: 'id, logId, source, fetchedAt, recommended, matchScore', externalSources: 'id, type, createdAt',
+      drafts: 'id, updatedAt, status, source, revision', ocrCorrections: 'id, observedText, correctedProductName, lastUsedAt',
+      labelAliases: 'id, alias, productName', classificationCorrections: 'id, fingerprint, correctedType, updatedAt', deviceValidationResults: 'id, updatedAt',
+      productCatalog: 'productId, brandFamily, canonicalProductName, makerName, alcoholType, source, userConfirmed, updatedAt, *janCodes',
+      referenceImages: 'id, productId, imageHash, userConfirmed, photoType, createdAt', identificationRuns: 'id, createdAt, abstained, status, path, *imageIds, *candidateProductIds',
+      learningEvents: 'id, runId, proposedProductId, confirmedProductId, action, createdAt',
+      productAliases: 'id, productId, alias, kind, confirmed, updatedAt', productBarcodes: 'id, productId, rawValue, codeType, confirmed, updatedAt',
+      visualFeatures: 'id, productId, imageHash, userConfirmed, createdAt', identificationEvidence: 'id, runId, field, method, sourceImageId, createdAt',
+      identificationSettings: 'id, updatedAt', nativeAnalyses: 'id, imageId, environment, engine, createdAt',
+      unknownProductDrafts: 'id, possibleProductName, makerName, alcoholType, status, createdAt, *sourceImageIds'
     });
   }
 }

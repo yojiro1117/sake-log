@@ -356,7 +356,7 @@ export interface SakeImage {
 export interface OcrResult {
   text: string;
   confidence: number;
-  engine: 'textDetector' | 'tesseract' | 'none';
+  engine: 'textDetector' | 'tesseract' | 'apple-vision' | 'mlkit' | 'none';
   status: 'success' | 'empty' | 'failed' | 'cancelled';
   message: string;
   preprocessing?: string[];

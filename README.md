@@ -1,5 +1,40 @@
 # SAKEログ
 
+> Version 0.7.0 adds optional Capacitor iOS/Android shells. The GitHub Pages PWA remains available and uses the existing browser-only fallback.
+
+## Native image recognition
+
+The same React/TypeScript UI now runs in three environments through `platformVisionAdapter`.
+
+- iOS app: Apple Vision and Core Image are the primary path. `VNDetectRectanglesRequest` selects label regions, `VNRecognizeTextRequest` reads Japanese and English, `VNDetectBarcodesRequest` reads JAN-compatible barcodes, and `VNGenerateImageFeaturePrintRequest` compares confirmed reference images.
+- Android app: bundled, on-device ML Kit Japanese/Latin Text Recognition v2 and Barcode Scanning are the primary path. Label-region detection and compact visual fingerprints are local application code.
+- GitHub Pages PWA: Tesseract.js, BarcodeDetector/ZXing, and the existing local visual fingerprint remain the fallback. PWA results must not be presented as native Vision/ML Kit results.
+
+Images are passed to native plugins as temporary file URIs, not large Base64 strings. No image-recognition server, paid API, Firebase, or external database is introduced. Candidate results always require user confirmation.
+
+### Native build checks
+
+The GitHub Pages deployment workflow also builds both native projects before deployment:
+
+```text
+Web: install -> typecheck -> lint -> unit/integration/migration -> PWA build -> E2E
+iOS: install -> native web build -> Capacitor sync -> Xcode simulator build
+Android: install -> native web build -> Capacitor sync -> Gradle unit test -> debug APK build
+```
+
+GitHub Pages deploy runs only after Web, iOS, Android, and native contract jobs succeed. Physical iPhone/Android validation is recorded separately and must not be replaced by WebKit/Chromium results.
+
+### Native project commands
+
+```bash
+pnpm install --frozen-lockfile
+pnpm run build:native
+pnpm exec cap sync ios
+pnpm exec cap sync android
+```
+
+Store submission is not part of the current GitHub Pages deployment. See `docs/native-vision-licenses.md` and `docs/native-vision-validation.md` before distributing a native build.
+
 SAKEログは、お酒を写真・評価・コメントで記録し、味覚傾向やコスパを端末内で分析する無料PWAです。現在の公開版は「お酒の記録アプリ」として提供し、SNS投稿支援機能は後日拡張予定です。
 
 ## 主な機能

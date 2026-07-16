@@ -6,12 +6,14 @@ import convert from 'heic-convert';
 import ExifReader from 'exifreader';
 import { Jimp, JimpMime } from 'jimp';
 import { createWorker } from 'tesseract.js';
+import { buildCatalogCandidates } from './lib/catalog-candidate-match.mjs';
 
 const repoRoot = process.cwd();
 const imageDir = path.resolve(repoRoot, process.env.DRIVE_IMAGE_DIR ?? '../drive-image-temp');
 const resultsDir = path.join(repoRoot, 'tests', 'results');
 const fixturesDir = path.join(repoRoot, 'tests', 'fixtures');
 const tempDir = path.join(imageDir, '.converted-validation');
+const checkpointPath = path.join(imageDir, 'ocr-validation-checkpoint.json');
 const validationLimit = Number(process.env.VALIDATION_LIMIT ?? 0);
 const driveFileListPath = path.join(fixturesDir, 'google-drive-files.json');
 const groundTruthPath = path.join(fixturesDir, 'product-identification-ground-truth.json');
@@ -32,17 +34,7 @@ const groundTruthItems = Array.isArray(groundTruthDocument) ? groundTruthDocumen
 if (!Array.isArray(groundTruthItems)) throw new Error('Brand ground truth must be an array or contain an images array.');
 const groundTruthById = new Map(groundTruthItems.map((item) => [item.driveFileId, item]));
 
-const candidateMaster = [
-  { productName: '獺祭', makerName: '旭酒造', alcoholType: 'sake', aliases: ['獺祭', '獺祭45', 'DASSAI', 'DASSAI 45'] },
-  { productName: '十四代', makerName: '高木酒造', alcoholType: 'sake', aliases: ['十四代', 'JUYONDAI'] },
-  { productName: '新政', makerName: '新政酒造', alcoholType: 'sake', aliases: ['新政', 'ARAMASA'] },
-  { productName: '而今', makerName: '木屋正酒造', alcoholType: 'sake', aliases: ['而今', 'JIKON'] },
-  { productName: '田酒', makerName: '西田酒造店', alcoholType: 'sake', aliases: ['田酒', 'DENSYU', 'DENSHU'] },
-  { productName: '黒霧島', makerName: '霧島酒造', alcoholType: 'shochu', aliases: ['黒霧島', '黒霧', 'KURO KIRISHIMA'] },
-  { productName: '山崎', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['山崎', 'THE YAMAZAKI', 'YAMAZAKI'] },
-  { productName: '白州', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['白州', 'HAKUSHU'] },
-  { productName: '響', makerName: 'サントリー', alcoholType: 'whisky', aliases: ['響', 'HIBIKI'] }
-];
+const catalogDocument = JSON.parse(await readFile(path.join(repoRoot, 'public', 'catalog', 'catalog-core.json'), 'utf8'));
 
 await mkdir(resultsDir, { recursive: true });
 await mkdir(fixturesDir, { recursive: true });
@@ -53,13 +45,16 @@ const worker = await createWorker('jpn+eng');
 let peakRssMb = Math.round(process.memoryUsage().rss / 1024 / 1024);
 
 try {
-  const manifest = [];
-  const cycle1 = [];
-  const cycle2 = [];
-  const cycle3 = [];
-  const finalResults = [];
+  const checkpoint = JSON.parse(await readFile(checkpointPath, 'utf8').catch(() => '{"manifest":[],"cycle1":[],"cycle2":[],"cycle3":[],"finalResults":[]}'));
+  const manifest = checkpoint.manifest ?? [];
+  const cycle1 = checkpoint.cycle1 ?? [];
+  const cycle2 = checkpoint.cycle2 ?? [];
+  const cycle3 = checkpoint.cycle3 ?? [];
+  const finalResults = checkpoint.finalResults ?? [];
+  const completedIds = new Set(finalResults.map((item) => item.driveFileId).filter(Boolean));
 
   for (const file of driveFiles) {
+    if (completedIds.has(file.driveFileId)) continue;
     const localFileName = localNameById.get(file.driveFileId) ?? file.fileName;
     const sourcePath = path.join(imageDir, localFileName);
     const exists = available.has(localFileName);
@@ -69,7 +64,8 @@ try {
       cycle1.push({ fileName: file.fileName, status: 'failed', errors: missing.errors });
       cycle2.push({ fileName: file.fileName, status: 'failed', errors: missing.errors });
       cycle3.push({ fileName: file.fileName, status: 'failed', errors: missing.errors });
-      finalResults.push({ fileName: file.fileName, status: 'failed', errors: missing.errors });
+      finalResults.push({ driveFileId: file.driveFileId, fileName: file.fileName, status: 'failed', errors: missing.errors });
+      await writeCheckpoint();
       continue;
     }
 
@@ -111,7 +107,7 @@ try {
       : reuseCycle(file.fileName, 3, bestAfterCycle2, 'standard-path accepted previous result');
 
     const best = chooseBest([c1.best, c2.best, c3.best]);
-    const candidates = buildCandidates(best.text);
+    const candidates = buildCatalogCandidates(best.text, catalogDocument.entries);
     const final = {
       driveFileId: file.driveFileId,
       fileName: file.fileName,
@@ -152,7 +148,9 @@ try {
     cycle2.push(c2);
     cycle3.push(c3);
     finalResults.push(final);
+    completedIds.add(file.driveFileId);
     peakRssMb = Math.max(peakRssMb, Math.round(process.memoryUsage().rss / 1024 / 1024));
+    await writeCheckpoint();
     console.log(`${file.fileName}: best=${best.variant} confidence=${best.confidence.toFixed(2)} chars=${best.text.length}`);
   }
 
@@ -162,7 +160,12 @@ try {
   await writeJson(path.join(resultsDir, 'ocr-cycle-2.json'), { summary: summarizeCycle(cycle2), results: cycle2 });
   await writeJson(path.join(resultsDir, 'ocr-cycle-3.json'), { summary: summarizeCycle(cycle3), results: cycle3 });
   await writeJson(path.join(resultsDir, 'ocr-final.json'), { summary, results: finalResults });
+  await rm(checkpointPath, { force: true });
   console.log(JSON.stringify(summary, null, 2));
+
+  async function writeCheckpoint() {
+    await writeJson(checkpointPath, { manifest, cycle1, cycle2, cycle3, finalResults, updatedAt: new Date().toISOString() });
+  }
 } finally {
   await worker.terminate().catch(() => undefined);
   await rm(tempDir, { recursive: true, force: true });
@@ -215,8 +218,10 @@ async function normalizeImageBuffer(buffer, file) {
   if (!isHeic) return { status: 'native', buffer, warnings: ['ネイティブ形式のままOCR'], errors: [] };
 
   try {
-    const jpeg = await convert({ buffer, format: 'JPEG', quality: 0.84 });
     const out = path.join(tempDir, `${file.fileName}.jpg`);
+    const cached = await readFile(out).catch(() => undefined);
+    if (cached) return { status: 'converted', buffer: cached, warnings: ['heic-convert済み一時画像を再利用'], errors: [] };
+    const jpeg = await convert({ buffer, format: 'JPEG', quality: 0.84 });
     await writeFile(out, jpeg);
     return { status: 'converted', buffer: jpeg, warnings: ['heic-convertでJPEGへ変換'], errors: [] };
   } catch (error) {
@@ -235,7 +240,7 @@ async function runCycle(worker, fileName, cycle, variants) {
     const recognized = await worker.recognize(variant.buffer);
     const text = normalizeOcrText(recognized.data.text ?? '');
     const confidence = Math.max(0, Math.min(1, (recognized.data.confidence ?? 0) / 100));
-    const candidates = buildCandidates(text);
+    const candidates = buildCatalogCandidates(text, catalogDocument.entries);
     results.push({
       variant: variant.name,
       psm: variant.psm,
@@ -298,81 +303,6 @@ function normalizeExifDate(value) {
 
 function normalizeOcrText(value) {
   return value.normalize('NFKC').replace(/[|｜]/g, 'ー').replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
-}
-
-function buildCandidates(ocrText) {
-  const corrected = correctOcrConfusions(ocrText);
-  const normalized = normalizeForMatch(corrected);
-  if (!normalized) return [];
-  const matches = [];
-  for (const candidate of candidateMaster) {
-    const alias = candidate.aliases.find((item) => isLikelyMatch(normalized, normalizeForMatch(item)));
-    const maker = candidate.makerName ? normalized.includes(normalizeForMatch(candidate.makerName)) : false;
-    if (!alias && !maker) continue;
-    matches.push({
-      productName: candidate.productName,
-      makerName: candidate.makerName,
-      alcoholType: candidate.alcoholType,
-      matchReasons: [alias ? `OCR別名一致: ${alias}` : undefined, maker ? '蔵元一致' : undefined].filter(Boolean)
-    });
-  }
-  return matches;
-}
-
-function correctOcrConfusions(value) {
-  return value
-    .normalize('NFKC')
-    .replace(/黒霧鳥/g, '黒霧島')
-    .replace(/黑霧島/g, '黒霧島')
-    .replace(/獺蔡/g, '獺祭')
-    .replace(/獺察/g, '獺祭')
-    .replace(/DAS5AI/gi, 'DASSAI')
-    .replace(/YAMAZAK1/gi, 'YAMAZAKI')
-    .replace(/山碕/g, '山崎');
-}
-
-function normalizeForMatch(value) {
-  return value.normalize('NFKC').toLowerCase().replace(/[\\\s・.,/／|｜:：;；'"“”‘’()[\]{}<>＜＞【】「」『』]/g, '');
-}
-
-function isLikelyMatch(text, alias) {
-  if (!alias) return false;
-  if (text.includes(alias)) return true;
-  return ngramSimilarity(text, alias) >= 0.62 || levenshteinSimilarity(text, alias) >= 0.72;
-}
-
-function ngramSimilarity(a, b, n = 2) {
-  const gramsA = ngrams(a, n);
-  const gramsB = ngrams(b, n);
-  if (gramsA.size === 0 || gramsB.size === 0) return 0;
-  const intersection = [...gramsA].filter((gram) => gramsB.has(gram)).length;
-  return (2 * intersection) / (gramsA.size + gramsB.size);
-}
-
-function ngrams(value, n) {
-  const result = new Set();
-  for (let index = 0; index <= value.length - n; index += 1) result.add(value.slice(index, index + n));
-  if (result.size === 0 && value) result.add(value);
-  return result;
-}
-
-function levenshteinSimilarity(a, b) {
-  const window = a.length > b.length ? a.slice(0, Math.max(b.length + 2, 8)) : a;
-  const distance = levenshtein(window, b);
-  return 1 - distance / Math.max(window.length, b.length, 1);
-}
-
-function levenshtein(a, b) {
-  const dp = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
-  for (let i = 0; i <= a.length; i += 1) dp[i][0] = i;
-  for (let j = 0; j <= b.length; j += 1) dp[0][j] = j;
-  for (let i = 1; i <= a.length; i += 1) {
-    for (let j = 1; j <= b.length; j += 1) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost);
-    }
-  }
-  return dp[a.length][b.length];
 }
 
 function chooseBest(results) {

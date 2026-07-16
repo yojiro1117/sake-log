@@ -2,9 +2,9 @@
   "summary": {
     "total": 151,
     "textHitRate": 1,
-    "candidateHitRate": 0.06,
-    "averageProcessingTimeMs": 2274,
-    "maxProcessingTimeMs": 9103
+    "candidateHitRate": 0.742,
+    "averageProcessingTimeMs": 2176,
+    "maxProcessingTimeMs": 9108
   },
   "results": [
     {
@@ -32,7 +32,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 827,
+      "processingTimeMs": 804,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -48,7 +48,7 @@
         "text": "*\nUE— _\nConiiia\nンー\nデンーー年 で\nrmr ー 7計 wi 』\n剛ー 串間ー ー 。 ー\n、財!虹同 上 山川\n- E_. go — ー\n ー\n』 /\nHIBIKI ——\nSUNTORY wirsky\nmaa ANESE HARMON)",
         "confidence": 0.19,
         "charCount": 127,
-        "candidateCount": 1,
+        "candidateCount": 2,
         "detectedProductName": "響",
         "detectedMakerName": "サントリー",
         "detectedAlcoholType": "whisky",
@@ -64,7 +64,7 @@
           "text": "*\nUE— _\nConiiia\nンー\nデンーー年 で\nrmr ー 7計 wi 』\n剛ー 串間ー ー 。 ー\n、財!虹同 上 山川\n- E_. go — ー\n ー\n』 /\nHIBIKI ——\nSUNTORY wirsky\nmaa ANESE HARMON)",
           "confidence": 0.19,
           "charCount": 127,
-          "candidateCount": 1,
+          "candidateCount": 2,
           "detectedProductName": "響",
           "detectedMakerName": "サントリー",
           "detectedAlcoholType": "whisky",
@@ -73,7 +73,7 @@
           ]
         }
       ],
-      "processingTimeMs": 1349,
+      "processingTimeMs": 1316,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -89,8 +89,13 @@
         "text": "人操0 ,\n‘ THES way CT ー 。 . トム\n—— 41 = 4\nT =&\nー 計\n 癌表意 、 匠>\n\" oE ー ーー\n剛 N ー »\n ECT\nー . 癌所品こ mes\n ie ーッ\n7 全0\n; WM y pANISH R\nー 議 . ) ! ・ ) ー。 3 B— * に の",
         "confidence": 0.19,
         "charCount": 149,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -100,11 +105,16 @@
           "text": "人操0 ,\n‘ THES way CT ー 。 . トム\n—— 41 = 4\nT =&\nー 計\n 癌表意 、 匠>\n\" oE ー ーー\n剛 N ー »\n ECT\nー . 癌所品こ mes\n ie ーッ\n7 全0\n; WM y pANISH R\nー 議 . ) ! ・ ) ー。 3 B— * に の",
           "confidence": 0.19,
           "charCount": 149,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1923,
+      "processingTimeMs": 1972,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多"
@@ -120,8 +130,13 @@
         "text": "2 [ー Ea\n\n WW ARRY ー NM 。\n/ ーーニーニニーー 4\ny \\ 1\n\n B リ ! V\n\n —\n\n ー i 4 s ー\n\n合計 E ー —\n\n= W ーー\n\n生還本 (0 ーー\n\n - BERLF. ー\n\n_ E",
         "confidence": 0.32,
         "charCount": 116,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -131,11 +146,16 @@
           "text": "2 [ー Ea\n\n WW ARRY ー NM 。\n/ ーーニーニニーー 4\ny \\ 1\n\n B リ ! V\n\n —\n\n ー i 4 s ー\n\n合計 E ー —\n\n= W ーー\n\n生還本 (0 ーー\n\n - BERLF. ー\n\n_ E",
           "confidence": 0.32,
           "charCount": 116,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1449,
+      "processingTimeMs": 1487,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -151,8 +171,13 @@
         "text": "EE ペデア e. as ー\ni sw \\E oe\n 上 it :半電 必導 2 ; ー\nーー m 4 :夫 8 ッ\n/sa 0 に ( ミヲ本 ング\nドー 韻 1 ペー / 」』\n 才ンークア須\n: ー ー 天才ブー\n才 0 < $ CasE - Y/ /\nでドッ グリ\nsu 光導プン L ?\njj』 Wegpam/\n0 VeridBlenYed hi ー\nーー っの al leEEn p\nは \\ ATY / F% -\n-, - CINss YEALL!\nへ ー mkumdpuoAud lnder of the(hichibu Disie\nb ー He qvels to Bm caskl/ro pesfé his cnd\nFo in adYcidn ro hinChichilsi singl¢ al\nF This is Werld RibAded Whisky\ni3 ング\n9 ー or CE Sd Non Goloured d\nE ー\n AN 7 ノノ ーー 抽\n{ し\nph In 0",
         "confidence": 0.24,
         "charCount": 450,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -162,11 +187,16 @@
           "text": "EE ペデア e. as ー\ni sw \\E oe\n 上 it :半電 必導 2 ; ー\nーー m 4 :夫 8 ッ\n/sa 0 に ( ミヲ本 ング\nドー 韻 1 ペー / 」』\n 才ンークア須\n: ー ー 天才ブー\n才 0 < $ CasE - Y/ /\nでドッ グリ\nsu 光導プン L ?\njj』 Wegpam/\n0 VeridBlenYed hi ー\nーー っの al leEEn p\nは \\ ATY / F% -\n-, - CINss YEALL!\nへ ー mkumdpuoAud lnder of the(hichibu Disie\nb ー He qvels to Bm caskl/ro pesfé his cnd\nFo in adYcidn ro hinChichilsi singl¢ al\nF This is Werld RibAded Whisky\ni3 ング\n9 ー or CE Sd Non Goloured d\nE ー\n AN 7 ノノ ーー 抽\n{ し\nph In 0",
           "confidence": 0.24,
           "charCount": 450,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 4509,
+      "processingTimeMs": 4640,
       "problemClassification": []
     },
     {
@@ -179,8 +209,13 @@
         "text": "て 僚\nし湖上 2 5\nw=\n= ーージー ~J\n ・全、\n。 に、、\nh\n’ で4 E\n.. 7 =\nX\nNY\n<Y\nん パソ2\n【] 4\n6 ング\nミタアア\n ば のムシ",
         "confidence": 0.31,
         "charCount": 87,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -190,11 +225,16 @@
           "text": "て 僚\nし湖上 2 5\nw=\n= ーージー ~J\n ・全、\n。 に、、\nh\n’ で4 E\n.. 7 =\nX\nNY\n<Y\nん パソ2\n【] 4\n6 ング\nミタアア\n ば のムシ",
           "confidence": 0.31,
           "charCount": 87,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1063,
+      "processingTimeMs": 1065,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -210,8 +250,13 @@
         "text": "にに ” , ツヲ4 . ー にと B—— } R,\nmswy A em ー\nー 金貸 話ヨーニーー一一\nに ba に\n§ 7 電\nONR +\n §\n— y Mt\nーー &\nAET § -\n= E [ 米 る\nak e s\n_— N] でラ 3\n【生三世ー\n一一 ーー . . A 7て 0 < 。 。\n ・平半",
         "confidence": 0.33,
         "charCount": 156,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -221,11 +266,16 @@
           "text": "にに ” , ツヲ4 . ー にと B—— } R,\nmswy A em ー\nー 金貸 話ヨーニーー一一\nに ba に\n§ 7 電\nONR +\n §\n— y Mt\nーー &\nAET § -\n= E [ 米 る\nak e s\n_— N] でラ 3\n【生三世ー\n一一 ーー . . A 7て 0 < 。 。\n ・平半",
           "confidence": 0.33,
           "charCount": 156,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1934,
+      "processingTimeMs": 1960,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -234,30 +284,27 @@
     {
       "fileName": "560D093D-E0FA-4A4F-AEF1-BA731E9C0AB5.JPG",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "ー isnAY SINGLE MALT\nIL SCOTCH WHISKY\n\"弟 TIPEMATURED FOR PEAT, DAK AND SUSTLE NH\nA d 』 fot Tichly flavoured of all geote? WP",
-        "confidence": 0.49,
-        "charCount": 123,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "(をが\n\nQ\n\nId\n\nCSの7\n\nENTTO HRH THE PRINCE OF WarEe\n\nENSTON &CO。 (LAPHROAIG) ISLE OF isuay\n\nAND\n\nDSUPPLIER OF SINGLE MALT SCOTch ws\n\n\\PHROA\n\nISLAY SINGLE MALT\n\nSCOTCH WHISKY\n\n11\n\nf\n\nTRIP\n\nTHPLEMATURED FOR PEAT\n\n【\n\nWost Tichly flavon\n\n3\n\n1\n\nESTD ー 軒\n\n3\n\nDammrmp AND BOTTLED IN 8007 -\n\n[4\n\nY &co, » LAPHROAIG DISTILE",
+        "confidence": 0.6,
+        "charCount": 310,
+        "candidateCount": 2,
+        "detectedProductName": "Laphroaig Triple Wood",
+        "detectedMakerName": "Laphroaig Distillery",
+        "detectedAlcoholType": "whisky",
+        "matchReasons": [
+          "OCR別名一致: Laphroaig"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "ー isnAY SINGLE MALT\nIL SCOTCH WHISKY\n\"弟 TIPEMATURED FOR PEAT, DAK AND SUSTLE NH\nA d 』 fot Tichly flavoured of all geote? WP",
-          "confidence": 0.49,
-          "charCount": 123,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 641,
-      "problemClassification": []
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "fast-path accepted cycle 1"
+      ]
     },
     {
       "fileName": "6577BD8F-A573-43F8-AA7E-C237F22C2118.JPG",
@@ -269,8 +316,13 @@
         "text": "2 パサ 日 2\n1 ー ママ\nーー —.\n ー § i7\nE X しごアッ\n= あこ\nら / ー\nるの ー\ny- 上\nーー 、いトールト\nタ (NO ロー一\nW2YER\". s\n(y N ー * ー 一朗 »\n り i o 本 ここで/\nF (vw しES\nーー 』 d 4\nL 」 J @ ー を ot -",
         "confidence": 0.32,
         "charCount": 155,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -280,11 +332,16 @@
           "text": "2 パサ 日 2\n1 ー ママ\nーー —.\n ー § i7\nE X しごアッ\n= あこ\nら / ー\nるの ー\ny- 上\nーー 、いトールト\nタ (NO ロー一\nW2YER\". s\n(y N ー * ー 一朗 »\n り i o 本 ここで/\nF (vw しES\nーー 』 d 4\nL 」 J @ ー を ot -",
           "confidence": 0.32,
           "charCount": 155,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2100,
+      "processingTimeMs": 2065,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -299,8 +356,13 @@
         "text": "ー —\n。 のmv 上\nンー T -N\n等 —\n0 oe\n御:\nすー ー iM 骨\nHIKKA E—3\nCOFFEY MALT ==Jgmm\nWHISKY =\nの\n! がェモル ト Ns\nー ー Aedsy NIKKAWHISKY ウッ7が 。\n』\n= E",
         "confidence": 0.36,
         "charCount": 128,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -310,11 +372,16 @@
           "text": "ー —\n。 のmv 上\nンー T -N\n等 —\n0 oe\n御:\nすー ー iM 骨\nHIKKA E—3\nCOFFEY MALT ==Jgmm\nWHISKY =\nの\n! がェモル ト Ns\nー ー Aedsy NIKKAWHISKY ウッ7が 。\n』\n= E",
           "confidence": 0.36,
           "charCount": 128,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1355,
+      "processingTimeMs": 1391,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -329,8 +396,13 @@
         "text": "ョ敵遇ー一b リリ -= b\nWay 八 / N\n _ るるぬ\nには B\nん\nYY77\n= / る\nあこ. ー詳報症間一 臣\n人ダ」公 ー] リー\n4 一 にで ー\n』 N と — e\ni ®.o 5\n/ J wgoTH /\n—wory\nNMは f パイサッツ ゲト\n しま、まつう y",
         "confidence": 0.29,
         "charCount": 143,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -340,11 +412,16 @@
           "text": "ョ敵遇ー一b リリ -= b\nWay 八 / N\n _ るるぬ\nには B\nん\nYY77\n= / る\nあこ. ー詳報症間一 臣\n人ダ」公 ー] リー\n4 一 にで ー\n』 N と — e\ni ®.o 5\n/ J wgoTH /\n—wory\nNMは f パイサッツ ゲト\n しま、まつう y",
           "confidence": 0.29,
           "charCount": 143,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1963,
+      "processingTimeMs": 2010,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -374,7 +451,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1617,
+      "processingTimeMs": 1656,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多",
@@ -391,8 +468,13 @@
         "text": ". ー #\nB T za\nHA 、\nる ー %\n則 ヶ\n」 ーー WW 計関\n N ご\n/ いい\n一 CR\n。 ーー\n LA N—\n/ al いい\n/ 地主 -\nリ いい科。 i\\\n本 / I /生 is\n\\ ! 3 b h \\ ¥\n: ud ー しい識ー もー\nーー一 /午全ー -\nーー = ー 4\nー に1\nam ー のワク2のひ。\ng. ' 28 リン\n 」 _ f\n-. . ー ——\n FETTEELLll リィ",
         "confidence": 0.3,
         "charCount": 212,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -402,11 +484,16 @@
           "text": ". ー #\nB T za\nHA 、\nる ー %\n則 ヶ\n」 ーー WW 計関\n N ご\n/ いい\n一 CR\n。 ーー\n LA N—\n/ al いい\n/ 地主 -\nリ いい科。 i\\\n本 / I /生 is\n\\ ! 3 b h \\ ¥\n: ud ー しい識ー もー\nーー一 /午全ー -\nーー = ー 4\nー に1\nam ー のワク2のひ。\ng. ' 28 リン\n 」 _ f\n-. . ー ——\n FETTEELLll リィ",
           "confidence": 0.3,
           "charCount": 212,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2356,
+      "processingTimeMs": 2394,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -414,31 +501,26 @@
     {
       "fileName": "DAAAD20B-44B1-4CB4-8814-51CDB9758698.JPG",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "; E ATO red\nレー e: a . 脱\n\n。 ボルアド2科放ジグメッッ 『\n\nAu =» - . : - ー\n-_ pt B L\n\nxi の 中\n\n凍 、 & E vi £\n\n. ASPE © を ー\n\n3 F\nンス\n\n_ e . ー 論\n\n0 台馬地名:英国製造国内製造(モルトウイスキー) ー'Y\n” SURETIN Sl— FII-IAABk 本0 ー 8\n 所会社ペッチャーウイスキー SERERTAOIEN\n人 震角馬久市みどりが4番1 。 =\n£ AMERORIRE xyICT Brapic, HIEAPATIEN,\n』 がなてやりません。この為、一般品に比べて必物て守。 g。\n0 ルクのます。 また、キャップに天然コルクを使用 。sす 。較\n4 のam拓にいこことがあります。 これらは、旨み成ヤンav 閣議\n\nは Saa。 ては問題ありません。 尚、ボリレは立てて名 0いい\n器 3 20触なってかに てここ っ mORESEE ーーン",
-        "confidence": 0.46,
-        "charCount": 432,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "—_\n\nMalt\n\nWorld\n\nClassie\n\nIOn\n\nイロ\n\nン\n\n*,\n\nアルソンアドアツ\n\nカルエ才ション\n\nilmd*\n\no\n\nA)\n\n€\n\nで\n\nし\n\n*4.3Eue annE\n\n(\n\ntト7オー\n\n700m\n\n反\n\n:モルト、グルーン アルコール分:48%\n\n難才\n\n株\n\n区会社ペンチャーウイスキー 埼玉県秋父市\n\nが\n\n(40\n\nYtFis\n\n県秩父市みどりが丘4番1\n\nARy\n\nな\n\n*旧然の風味を大切にするために、 EATIEEO\n\nue\n\n=4\n\nN\n\nっておりません。 この為、一般品に比\n\nべて>\n\nA\n\n#-\n\nルリますず。 また、キャップに天然コルク\n\nを使用ている\n\n\"入ることがあります。 これらは、昌み成\n\n<だ3い\n\nd\n\n\"は問題ありません。 尚、ボトルは立てで\n\n板\n\n20押なってからし <適量を。 og 拓中・ 授乳中の飲枯3\n\n17\n\n==] ウイ\n\n2時\n\nテア4 [",
+        "confidence": 0.63,
+        "charCount": 413,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "; E ATO red\nレー e: a . 脱\n\n。 ボルアド2科放ジグメッッ 『\n\nAu =» - . : - ー\n-_ pt B L\n\nxi の 中\n\n凍 、 & E vi £\n\n. ASPE © を ー\n\n3 F\nンス\n\n_ e . ー 論\n\n0 台馬地名:英国製造国内製造(モルトウイスキー) ー'Y\n” SURETIN Sl— FII-IAABk 本0 ー 8\n 所会社ペッチャーウイスキー SERERTAOIEN\n人 震角馬久市みどりが4番1 。 =\n£ AMERORIRE xyICT Brapic, HIEAPATIEN,\n』 がなてやりません。この為、一般品に比べて必物て守。 g。\n0 ルクのます。 また、キャップに天然コルクを使用 。sす 。較\n4 のam拓にいこことがあります。 これらは、旨み成ヤンav 閣議\n\nは Saa。 ては問題ありません。 尚、ボリレは立てて名 0いい\n器 3 20触なってかに てここ っ mORESEE ーーン",
-          "confidence": 0.46,
-          "charCount": 432,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 4393,
+      "variants": [],
+      "processingTimeMs": 0,
       "problemClassification": [
-        "小断片が多い"
+        "fast-path accepted cycle 1"
       ]
     },
     {
@@ -451,8 +533,13 @@
         "text": "町」 で ー mam - 3\nTHS WAY ん し 『 境。 -r\n[f R Ci\n# 【\n) 5 * \\ いい\n. y が をー は 作、\nE 4\nbo4 時 て\nー 1 \\ 中\n「 幼 2 1\n川上\n着 ー に ー 1 -\nーー mom ー ゝ\n35 すさ 1 則四eg\nまま は ゴゴ 画庫 e、\nソソ 。球うお\n» iv R Hgte むす\nmm つつ話 ー\n に\nー 衝\nE =\n/ _ 放 )\n/ 語ig [e 28.2 F",
         "confidence": 0.27,
         "charCount": 219,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -462,11 +549,16 @@
           "text": "町」 で ー mam - 3\nTHS WAY ん し 『 境。 -r\n[f R Ci\n# 【\n) 5 * \\ いい\n. y が をー は 作、\nE 4\nbo4 時 て\nー 1 \\ 中\n「 幼 2 1\n川上\n着 ー に ー 1 -\nーー mom ー ゝ\n35 すさ 1 則四eg\nまま は ゴゴ 画庫 e、\nソソ 。球うお\n» iv R Hgte むす\nmm つつ話 ー\n に\nー 衝\nE =\n/ _ 放 )\n/ 語ig [e 28.2 F",
           "confidence": 0.27,
           "charCount": 219,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2493,
+      "processingTimeMs": 2527,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -482,8 +574,13 @@
         "text": "9 ~ ーー ・問 5 4\nビー ー るお,\n =\nイク ンー\n\ne= fo— a@t\n\n[ ain ー ーー 4\nテーン 、/ THE [ 加計\nア WMAZAKI ん。 -\nSINGLE MALT / ー\n[ JAPANESE WHISKY & oL\n4 る )\n[EGG \"\nw Ta 2キー ンジ 1 当\naes 2 507 8 1 て - '3",
         "confidence": 0.3,
         "charCount": 177,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -493,11 +590,16 @@
           "text": "9 ~ ーー ・問 5 4\nビー ー るお,\n =\nイク ンー\n\ne= fo— a@t\n\n[ ain ー ーー 4\nテーン 、/ THE [ 加計\nア WMAZAKI ん。 -\nSINGLE MALT / ー\n[ JAPANESE WHISKY & oL\n4 る )\n[EGG \"\nw Ta 2キー ンジ 1 当\naes 2 507 8 1 て - '3",
           "confidence": 0.3,
           "charCount": 177,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1627,
+      "processingTimeMs": 1630,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -505,27 +607,30 @@
     {
       "fileName": "EF2F894B-8876-4A2C-AC88-FC24F7462935.JPG",
       "cycle": 2,
-      "status": "reused",
+      "status": "success",
       "best": {
-        "variant": "converted-resized",
-        "psm": "11",
-        "text": "1。.\n\nBie.\n\nを\n\n日腐 低温貯蔵酒\n\n技と革新の技術を駆使し、低星雌\n\n、さわやかな味わいと米の旨みを\n\n引き出した芳酵型本 fitio\n\nHANIH ormAms\n\n米、 米麹、\n\n造アルコール\n\n米: 国産米100%使用\n\n=)\n\n15度\n\n1.8L\n\n者:高木酒造株式会社\n\nI\n\nす山市大学賞\n\n並182\n\nめに\n\nおし\n\n保存方法: 冷暗所に保管し、\n\nBifi\n\n320\n\n年月は表貼りに記載)\n\n上\n\nなってから。\n\nJILL\n\n日月限定酒",
-        "confidence": 0.7,
-        "charCount": 232,
-        "candidateCount": 1,
-        "detectedProductName": "十四代",
-        "detectedMakerName": "高木酒造",
-        "detectedAlcoholType": "sake",
-        "matchReasons": [
-          "蔵元一致"
-        ],
+        "variant": "center-label-gray-contrast",
+        "psm": "6",
+        "text": "ー 。 還史\nビ イイ\nN e a\n[E 91 1 imRRn\nー較計の技と革新の技術を駆使し、低内\nー 居且より、 さわやかを味わいとのを\nー 肖四分に引き出した芳前型本醸造\n\\ [lEe HAE esnsuas\n「 材料名 : 米、米麹、酸造アルコール\nー 精米歩合: 55%\nー 原料 米: 国産米100%使用\n\\ s h LE 内容量:1.8L\n造 者高木酒造株式会社\ni 人多県村山市大学語間90し\n) 人用罰計稚晴所に保管し、お早めにおリリ",
+        "confidence": 0.52,
+        "charCount": 226,
+        "candidateCount": 0,
+        "matchReasons": [],
         "cycle": 2
       },
-      "variants": [],
-      "processingTimeMs": 0,
-      "problemClassification": [
-        "fast-path accepted cycle 1"
-      ]
+      "variants": [
+        {
+          "variant": "center-label-gray-contrast",
+          "psm": "6",
+          "text": "ー 。 還史\nビ イイ\nN e a\n[E 91 1 imRRn\nー較計の技と革新の技術を駆使し、低内\nー 居且より、 さわやかを味わいとのを\nー 肖四分に引き出した芳前型本醸造\n\\ [lEe HAE esnsuas\n「 材料名 : 米、米麹、酸造アルコール\nー 精米歩合: 55%\nー 原料 米: 国産米100%使用\n\\ s h LE 内容量:1.8L\n造 者高木酒造株式会社\ni 人多県村山市大学語間90し\n) 人用罰計稚晴所に保管し、お早めにおリリ",
+          "confidence": 0.52,
+          "charCount": 226,
+          "candidateCount": 0,
+          "matchReasons": []
+        }
+      ],
+      "processingTimeMs": 3074,
+      "problemClassification": []
     },
     {
       "fileName": "IMG_1703.HEIC",
@@ -537,8 +642,13 @@
         "text": "——— ー \\ a— + EM* 。。\n1 y/ の -\nkt flly ごが\n) / - キャきり\nNs WAY 4) mf二\n/ Ts 閣1\n/』弟gs 1\n に\n/ ー ,\nf 4 ー\nリー ー ー\n 記 3 』\n間 ]\n癌本 こい\nN し 加導ー Jhe\n w B l ;\n。 RTN ここ、まっ\nーー 。 YT El\nー と (ー ー ~\n. l 4\n. :\n剛 4ュー\n/ & 2 v E\n\\ テー Pid Ne A/",
         "confidence": 0.27,
         "charCount": 215,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -548,11 +658,16 @@
           "text": "——— ー \\ a— + EM* 。。\n1 y/ の -\nkt flly ごが\n) / - キャきり\nNs WAY 4) mf二\n/ Ts 閣1\n/』弟gs 1\n に\n/ ー ,\nf 4 ー\nリー ー ー\n 記 3 』\n間 ]\n癌本 こい\nN し 加導ー Jhe\n w B l ;\n。 RTN ここ、まっ\nーー 。 YT El\nー と (ー ー ~\n. l 4\n. :\n剛 4ュー\n/ & 2 v E\n\\ テー Pid Ne A/",
           "confidence": 0.27,
           "charCount": 215,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2734,
+      "processingTimeMs": 2890,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -583,7 +698,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1051,
+      "processingTimeMs": 1048,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -614,7 +729,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3355,
+      "processingTimeMs": 3366,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -630,8 +745,13 @@
         "text": "a も KKA WHI ] ..\n』 GLE\n4 THIS waY A RG\nーー一サド -\n(PESELSNP\nー まき\nーロ 倫ー\nPe Vag\nga f= '\n 」\nペリーー一 一\nッッ に KA WHISKY\nd =98 SINGLE MALT —\n 』 MIYAGIKYO\n: E» ?\nリる,\n3\nE w ー\n 導 E\n(ジン ェョーー一\n回放導Onere w a",
         "confidence": 0.33,
         "charCount": 188,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 2,
+        "detectedProductName": "シングルモルト 宮城峡",
+        "detectedMakerName": "ニッカウヰスキー",
+        "detectedAlcoholType": "whisky",
+        "matchReasons": [
+          "OCR別名一致: MIYAGIKYO"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -641,11 +761,16 @@
           "text": "a も KKA WHI ] ..\n』 GLE\n4 THIS waY A RG\nーー一サド -\n(PESELSNP\nー まき\nーロ 倫ー\nPe Vag\nga f= '\n 」\nペリーー一 一\nッッ に KA WHISKY\nd =98 SINGLE MALT —\n 』 MIYAGIKYO\n: E» ?\nリる,\n3\nE w ー\n 導 E\n(ジン ェョーー一\n回放導Onere w a",
           "confidence": 0.33,
           "charCount": 188,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 2,
+          "detectedProductName": "シングルモルト 宮城峡",
+          "detectedMakerName": "ニッカウヰスキー",
+          "detectedAlcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: MIYAGIKYO"
+          ]
         }
       ],
-      "processingTimeMs": 2051,
+      "processingTimeMs": 2049,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -660,8 +785,13 @@
         "text": "ニー E\n< アー っーー やマ\nーー\nーな nod\n‘h を\n用 ' . ゃ\nP—— = TRa 、\n. ーー で NJY\nf _rmie pe. E —X\nhY TTRE wi\n時 ー 川上ー し過\n匿ペーー ー\na\nSas\nu\n本\n—\ne 1\nに UNrokv wsxy # ar\nFone ie 5 はて 答\n An JAPANESE HARMONY をーー\nきき Ma blend of the finest selection of *\"\nに = に",
         "confidence": 0.25,
         "charCount": 231,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -671,11 +801,16 @@
           "text": "ニー E\n< アー っーー やマ\nーー\nーな nod\n‘h を\n用 ' . ゃ\nP—— = TRa 、\n. ーー で NJY\nf _rmie pe. E —X\nhY TTRE wi\n時 ー 川上ー し過\n匿ペーー ー\na\nSas\nu\n本\n—\ne 1\nに UNrokv wsxy # ar\nFone ie 5 はて 答\n An JAPANESE HARMONY をーー\nきき Ma blend of the finest selection of *\"\nに = に",
           "confidence": 0.25,
           "charCount": 231,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2282,
+      "processingTimeMs": 2323,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -690,8 +825,13 @@
         "text": "ー かMV\n = ざき\n\" (ー\n・ さい も2222 和幸\n\nE ,ー (ol ー\nGi A ー 論 ー m\n ー +* 5 .B\nB oW T\np - M\nM ー\\\n\n, 0,\n\nN 4 ーデ- ンプ 1 9ceAN NINETY NINE の9\n\nい ー 放電きす]",
         "confidence": 0.28,
         "charCount": 136,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -701,11 +841,16 @@
           "text": "ー かMV\n = ざき\n\" (ー\n・ さい も2222 和幸\n\nE ,ー (ol ー\nGi A ー 論 ー m\n ー +* 5 .B\nB oW T\np - M\nM ー\\\n\n, 0,\n\nN 4 ーデ- ンプ 1 9ceAN NINETY NINE の9\n\nい ー 放電きす]",
           "confidence": 0.28,
           "charCount": 136,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1449,
+      "processingTimeMs": 1478,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -721,8 +866,13 @@
         "text": "5 - / — v\nwev H\n= _.\n/ の\n(S。 P 2N\nN Ne ョ ルケアスPANESE Se \\\nが っ<ここ。。\nm -» . -\n-\nに V.S.0.P— ー\nTHE ぁと\nWMAZAKI\n則EMALT\nプイ ーー用 ANESE Whisky 條\nShe, ==\nンー 1 sl2 YEARS é\nHennessYー s:.\n日 IDGmmN\n(グンンクググク2 の、 row wmawy\nングタグググググクノノリ 塊\nんーッ i ee oos' _— =\n, 一一胸買 5\nウッンーズル ChampagTM®\nアンルンング\n上 ッッッッフィメタで伯計庫画 _ =\nUno. coaNAC w ma\nmwっ\npry",
         "confidence": 0.34,
         "charCount": 317,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -732,11 +882,16 @@
           "text": "5 - / — v\nwev H\n= _.\n/ の\n(S。 P 2N\nN Ne ョ ルケアスPANESE Se \\\nが っ<ここ。。\nm -» . -\n-\nに V.S.0.P— ー\nTHE ぁと\nWMAZAKI\n則EMALT\nプイ ーー用 ANESE Whisky 條\nShe, ==\nンー 1 sl2 YEARS é\nHennessYー s:.\n日 IDGmmN\n(グンンクググク2 の、 row wmawy\nングタグググググクノノリ 塊\nんーッ i ee oos' _— =\n, 一一胸買 5\nウッンーズル ChampagTM®\nアンルンング\n上 ッッッッフィメタで伯計庫画 _ =\nUno. coaNAC w ma\nmwっ\npry",
           "confidence": 0.34,
           "charCount": 317,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2763,
+      "processingTimeMs": 2809,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -751,8 +906,13 @@
         "text": "Ee ー ー 上 's\nSEiE ゴー ーー \\a!\n5 U\nいしい3ぷ ー ー を JROYAL\n l いいにム 』\nーー 上 CoFFgy MALTS “og\nWHisky Ja &\nノ www é IA k\n> D.JAPAN 6 5 cr E y »\n/ ェモルト ; ー 。\n2 1 NIKKAWRISKY 4 ド A の T\n -)\n— F\n= - em § 』\nao 引人衝放\nの\n_カフェモレトビ 2*\n ラッムロ ー HB /",
         "confidence": 0.34,
         "charCount": 222,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -762,11 +922,16 @@
           "text": "Ee ー ー 上 's\nSEiE ゴー ーー \\a!\n5 U\nいしい3ぷ ー ー を JROYAL\n l いいにム 』\nーー 上 CoFFgy MALTS “og\nWHisky Ja &\nノ www é IA k\n> D.JAPAN 6 5 cr E y »\n/ ェモルト ; ー 。\n2 1 NIKKAWRISKY 4 ド A の T\n -)\n— F\n= - em § 』\nao 引人衝放\nの\n_カフェモレトビ 2*\n ラッムロ ー HB /",
           "confidence": 0.34,
           "charCount": 222,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2204,
+      "processingTimeMs": 2081,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -796,7 +961,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1104,
+      "processingTimeMs": 1120,
       "problemClassification": []
     },
     {
@@ -809,8 +974,13 @@
         "text": "ニー ii 。\n*a \" ーー —\nCEESZI eneet —\nAIHA NO oisi MA L L て 5 9DNmm\nA0 ASNOH THLA0Y 94033nq\nawm議 へ 大導4イキマツザウ>っ誠居間 器\nN “B Ta AWUTNNG ZAZ si,\n s 人 の リウ 1イエキイグズスズ 基本電昌\n 用 がく\n; 中 さ シン\nM 194NWI ー\nノ Wi3l 計 て1\n ー &J\n4 : [HOIO0!\nTTYW TDN\n、 WDW\nの ~. ーーニンンプ\n~ A — ー",
         "confidence": 0.31,
         "charCount": 250,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -820,41 +990,41 @@
           "text": "ニー ii 。\n*a \" ーー —\nCEESZI eneet —\nAIHA NO oisi MA L L て 5 9DNmm\nA0 ASNOH THLA0Y 94033nq\nawm議 へ 大導4イキマツザウ>っ誠居間 器\nN “B Ta AWUTNNG ZAZ si,\n s 人 の リウ 1イエキイグズスズ 基本電昌\n 用 がく\n; 中 さ シン\nM 194NWI ー\nノ Wi3l 計 て1\n ー &J\n4 : [HOIO0!\nTTYW TDN\n、 WDW\nの ~. ーーニンンプ\n~ A — ー",
           "confidence": 0.31,
           "charCount": 250,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2406,
+      "processingTimeMs": 2434,
       "problemClassification": []
     },
     {
       "fileName": "IMG_2272.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "TW weee. $ 1\n部 mw XO2\nCOFFEY MA}\nWHISKY この ne\nLas \\\n TEN\nS ーー ド\n キー本\n ー\nNIKKA ーー\nCOFFEY MALT —\nWHISKY 2\n—— — ー\nNG CO,LTD, JAPAN. B—3\nポわェモルト くす\n45% NIKKAWHISKY .彰\nn",
-        "confidence": 0.33,
-        "charCount": 163,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "N\n\n<\n\nmals\n\nN\n\nしリョ\n\no.J\n\n[ー\n\n~ THIS WAY A\n\n』 K\n\nd] \\\n\nIIK\n\nCO\n\nWHI\n\n7x.\n\nak.45",
+        "confidence": 0.54,
+        "charCount": 78,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "TW weee. $ 1\n部 mw XO2\nCOFFEY MA}\nWHISKY この ne\nLas \\\n TEN\nS ーー ド\n キー本\n ー\nNIKKA ーー\nCOFFEY MALT —\nWHISKY 2\n—— — ー\nNG CO,LTD, JAPAN. B—3\nポわェモルト くす\n45% NIKKAWHISKY .彰\nn",
-          "confidence": 0.33,
-          "charCount": 163,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 1604,
+      "variants": [],
+      "processingTimeMs": 0,
       "problemClassification": [
-        "小断片が多い"
+        "fast-path accepted cycle 1"
       ]
     },
     {
@@ -867,8 +1037,13 @@
         "text": ", FRE.\nンド p—-\nに ピーコ\n。 ア ーー Re\nに 1\nし FER 、\nNIKKA ー ー\nCOFFEY MALT\nVHisky £2\nih\nNO & 158\nタクェモルト ば\n、 - =\n axgawmery 7 位 に =",
         "confidence": 0.36,
         "charCount": 119,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -878,11 +1053,16 @@
           "text": ", FRE.\nンド p—-\nに ピーコ\n。 ア ーー Re\nに 1\nし FER 、\nNIKKA ー ー\nCOFFEY MALT\nVHisky £2\nih\nNO & 158\nタクェモルト ば\n、 - =\n axgawmery 7 位 に =",
           "confidence": 0.36,
           "charCount": 119,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1163,
+      "processingTimeMs": 1194,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -897,8 +1077,13 @@
         "text": "デジ ー ー Wis\ny f - y\nA mw X] まこ\nリノ 加で所ニニジローーペー と\nに- 4\n\n. * $ セ\n/ 5論 ー\nA\\ :\ny ー ーー S\n] -\n\n ーー 寺\n\nae_N B.\n\nに ) 8 し\n用語生",
         "confidence": 0.31,
         "charCount": 114,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -908,11 +1093,16 @@
           "text": "デジ ー ー Wis\ny f - y\nA mw X] まこ\nリノ 加で所ニニジローーペー と\nに- 4\n\n. * $ セ\n/ 5論 ー\nA\\ :\ny ー ーー S\n] -\n\n ーー 寺\n\nae_N B.\n\nに ) 8 し\n用語生",
           "confidence": 0.31,
           "charCount": 114,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1475,
+      "processingTimeMs": 1503,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -943,7 +1133,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1697,
+      "processingTimeMs": 1715,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多"
@@ -959,8 +1149,13 @@
         "text": "< fg\n1上ド詳ー W= d\nBE mswv l&\nPy 3 一\n. た や\n\\\nan l\nBE B v\nー L\n、純 。\n米 ・\nーデーー 陸一覧 でキク と\nめい記す\nペー g 上 ー\n5 ,\n!大 り . ご <\n3 商用 ETREF\nR",
         "confidence": 0.35,
         "charCount": 123,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -970,11 +1165,16 @@
           "text": "< fg\n1上ド詳ー W= d\nBE mswv l&\nPy 3 一\n. た や\n\\\nan l\nBE B v\nー L\n、純 。\n米 ・\nーデーー 陸一覧 でキク と\nめい記す\nペー g 上 ー\n5 ,\n!大 り . ご <\n3 商用 ETREF\nR",
           "confidence": 0.35,
           "charCount": 123,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1631,
+      "processingTimeMs": 1645,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -989,8 +1189,13 @@
         "text": "Te on IN 用デー\na- H ¢\nTNal NN TA ®\n_—F oRy\nーーニー て、 : NEW ¢\n——AVGRCT &\nーー > OYE 7;\nキー JARDs\nるい いい\nN Z4 . g\n= ヘン 稚いs、\nで 人の アー\n5サー 導いさこへへ E\no7) へ。 ーーニニミーニラ\nンク本 ーー ーーニーニー\n 導ン詳ーー・ ミー\n—l .. ーー\nーー に を A ジン\n> ーー S_",
         "confidence": 0.21,
         "charCount": 204,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1000,11 +1205,16 @@
           "text": "Te on IN 用デー\na- H ¢\nTNal NN TA ®\n_—F oRy\nーーニー て、 : NEW ¢\n——AVGRCT &\nーー > OYE 7;\nキー JARDs\nるい いい\nN Z4 . g\n= ヘン 稚いs、\nで 人の アー\n5サー 導いさこへへ E\no7) へ。 ーーニニミーニラ\nンク本 ーー ーーニーニー\n 導ン詳ーー・ ミー\n—l .. ーー\nーー に を A ジン\n> ーー S_",
           "confidence": 0.21,
           "charCount": 204,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3841,
+      "processingTimeMs": 3859,
       "problemClassification": []
     },
     {
@@ -1017,8 +1227,13 @@
         "text": "N N\n。、 導き MI\n~ N\nで い ud P EN\\ ! NN ー\n_a=me 、 り Ma\n- — 詞 : 革 - - : 0 Al ド\nング ジコ SLEPN / WW 。 記 NN マー\nERめ / 旧いいい だ\nン E] ーー it , Ns 5\nしeo ZVINN\n テー の いぶ 、 ンー\nーご必修き幸、\nーー aD ノル は ー の\nミン ル放融ぶヽ。 で\nw ちろちヽンクヨー ッッ __”\nSS琵ーーク 扶 c g\nNoy\nRa ae Aa ¢ =a ;\n_Ad _\n*\nーー ーー で、 EEE",
         "confidence": 0.2,
         "charCount": 261,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1028,11 +1243,16 @@
           "text": "N N\n。、 導き MI\n~ N\nで い ud P EN\\ ! NN ー\n_a=me 、 り Ma\n- — 詞 : 革 - - : 0 Al ド\nング ジコ SLEPN / WW 。 記 NN マー\nERめ / 旧いいい だ\nン E] ーー it , Ns 5\nしeo ZVINN\n テー の いぶ 、 ンー\nーご必修き幸、\nーー aD ノル は ー の\nミン ル放融ぶヽ。 で\nw ちろちヽンクヨー ッッ __”\nSS琵ーーク 扶 c g\nNoy\nRa ae Aa ¢ =a ;\n_Ad _\n*\nーー ーー で、 EEE",
           "confidence": 0.2,
           "charCount": 261,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3839,
+      "processingTimeMs": 3883,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1062,7 +1282,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 762,
+      "processingTimeMs": 784,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -1070,31 +1290,26 @@
     {
       "fileName": "IMG_2325.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "4 ー\n¢ NIKKA WHISKY\nと SINGLE MALT\n YOICHI ー\n‘ に ] ~ TM\nS\nm.\nTg シングルモル\nSiiagea\nの y\nウイスキこ 』",
-        "confidence": 0.52,
-        "charCount": 88,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "に 1\n\n> ー 74\n\nし\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\nビタ\n\n作\n\n所 シングルモルト\n\nD By\n\n所でつくられたモル\n\nro\n\n(スミ",
+        "confidence": 0.65,
+        "charCount": 97,
+        "candidateCount": 2,
+        "detectedProductName": "シングルモルト 余市",
+        "detectedMakerName": "ニッカウヰスキー",
+        "detectedAlcoholType": "whisky",
+        "matchReasons": [
+          "OCR別名一致: YOICHI"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "4 ー\n¢ NIKKA WHISKY\nと SINGLE MALT\n YOICHI ー\n‘ に ] ~ TM\nS\nm.\nTg シングルモル\nSiiagea\nの y\nウイスキこ 』",
-          "confidence": 0.52,
-          "charCount": 88,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 813,
+      "variants": [],
+      "processingTimeMs": 0,
       "problemClassification": [
-        "小断片が多い"
+        "fast-path accepted cycle 1"
       ]
     },
     {
@@ -1122,7 +1337,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 871,
+      "processingTimeMs": 968,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1153,7 +1368,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 886,
+      "processingTimeMs": 907,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1169,8 +1384,13 @@
         "text": "5 ee科科科時聞い入ーースーっ\n導い S\nAos半半 あー のでてる で 9\n\nTRRRLE 1\nンー ーー\nいい R e a A\n\nC 4\n\n) @\n &\nX /\n\n\"大 い\n ww \"て“ *$\n\nーープ に 5 2\n\nにに 誠\n直",
         "confidence": 0.15,
         "charCount": 119,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1180,11 +1400,16 @@
           "text": "5 ee科科科時聞い入ーースーっ\n導い S\nAos半半 あー のでてる で 9\n\nTRRRLE 1\nンー ーー\nいい R e a A\n\nC 4\n\n) @\n &\nX /\n\n\"大 い\n ww \"て“ *$\n\nーープ に 5 2\n\nにに 誠\n直",
           "confidence": 0.15,
           "charCount": 119,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1936,
+      "processingTimeMs": 1950,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -1200,8 +1425,13 @@
         "text": "UlUa3e\nーー TT\n : 3 ICON &\nRELl CYEEFEE §\n\nIY TEUPNARC:\nWi; TEeENE 攻\n 庫村本酒 ・ut華hm\n_ 原材料箱:米(国導)、米弟貞産*)\n精米歩便: 35% 4\n\n原料米 : FCHE IELA%: A HIX 72 1L E 100% 2A\n\nアルコール分 : 15度 内容量:720ml\n\n製造者高森酒造株式会社\n 山形県村山市大学富普18すい\n。 保奏方法:必ず冷蔵庫(-5てへ5て)で際どの\n\nおめにお召し上がり下さい。 Ri\n\n0%になってから.",
         "confidence": 0.43,
         "charCount": 259,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1211,11 +1441,16 @@
           "text": "UlUa3e\nーー TT\n : 3 ICON &\nRELl CYEEFEE §\n\nIY TEUPNARC:\nWi; TEeENE 攻\n 庫村本酒 ・ut華hm\n_ 原材料箱:米(国導)、米弟貞産*)\n精米歩便: 35% 4\n\n原料米 : FCHE IELA%: A HIX 72 1L E 100% 2A\n\nアルコール分 : 15度 内容量:720ml\n\n製造者高森酒造株式会社\n 山形県村山市大学富普18すい\n。 保奏方法:必ず冷蔵庫(-5てへ5て)で際どの\n\nおめにお召し上がり下さい。 Ri\n\n0%になってから.",
           "confidence": 0.43,
           "charCount": 259,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2720,
+      "processingTimeMs": 2751,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1245,7 +1480,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1169,
+      "processingTimeMs": 1132,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1262,11 +1497,11 @@
         "confidence": 0.69,
         "charCount": 239,
         "candidateCount": 1,
-        "detectedProductName": "十四代",
-        "detectedMakerName": "高木酒造",
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
         "detectedAlcoholType": "sake",
         "matchReasons": [
-          "蔵元一致"
+          "OCR別名一致: W"
         ],
         "cycle": 2
       },
@@ -1317,8 +1552,13 @@
         "text": "の 。\ny 4\n1\n\n時 ga R._ S\n4 B てーー :\n.論弱 co od oq\n4 R ce ーッ 【き】 , ) #\nyaw »Y\n3 bo 6\nまた\n財 0H中ンp eo ke5 2021",
         "confidence": 0.29,
         "charCount": 101,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1328,11 +1568,16 @@
           "text": "の 。\ny 4\n1\n\n時 ga R._ S\n4 B てーー :\n.論弱 co od oq\n4 R ce ーッ 【き】 , ) #\nyaw »Y\n3 bo 6\nまた\n財 0H中ンp eo ke5 2021",
           "confidence": 0.29,
           "charCount": 101,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1376,
+      "processingTimeMs": 1398,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1340,30 +1585,27 @@
     {
       "fileName": "IMG_2559.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "回直上日 本酒\n敵料名:米・米次\n放守料品種 : 米島産無農薬山田倍]00y\nァルコール分・ 13度\n内容量 720ml\n製造年月 2022.9\n製造者・有限会社白米酒造\n福岡県糸島市本1986\nB OF45 / 開栓注意 z\n暫し上がりの際は必ずよく冷やしてください. ン\nー がのガス圧でお酒が噴き出す場合があります Z\nREDLSDth 1 p 1) EBIELT Z\n <7:s( ク\nー 生かが 適量を。 %\nー y になってから。おいしく適\nになってが 7",
-        "confidence": 0.69,
-        "charCount": 234,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "由記て 6S 2 —-\n\n中:日本酒\n\ngibg :米・洲麹\n\n大料品種・ 水島産無農薬山田偶100y\n\nァルコール分 * 13度\n\n内容量・720ml\n\n製造年月 ・\n\nR0Riws0\n\n誠意者・有限会社白米酒造\n\n個県永島市本1986\n\nビン\n\nZ\n\n用\n\nお酒は\n\n20歳に\n\nになってから。おいしく適量を\n\n7\n\n用\n\nんwy\n\n0 raito.com\n\n4",
+        "confidence": 0.62,
+        "charCount": 183,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "回直上日 本酒\n敵料名:米・米次\n放守料品種 : 米島産無農薬山田倍]00y\nァルコール分・ 13度\n内容量 720ml\n製造年月 2022.9\n製造者・有限会社白米酒造\n福岡県糸島市本1986\nB OF45 / 開栓注意 z\n暫し上がりの際は必ずよく冷やしてください. ン\nー がのガス圧でお酒が噴き出す場合があります Z\nREDLSDth 1 p 1) EBIELT Z\n <7:s( ク\nー 生かが 適量を。 %\nー y になってから。おいしく適\nになってが 7",
-          "confidence": 0.69,
-          "charCount": 234,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 1780,
-      "problemClassification": []
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "fast-path accepted cycle 1"
+      ]
     },
     {
       "fileName": "IMG_2569.HEIC",
@@ -1390,7 +1632,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1141,
+      "processingTimeMs": 1164,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1405,8 +1647,13 @@
         "text": "My 。 レー —\nH] y ドド]\nしし 、ー 264/\nて し\nRIER ておお、\nE¥: ーー 7\nTTTEY &o\n[ cugasinx た\nww 「較と\n1導\n_— <\n8で\ncat -\n: ーーー?\n- . ー\nN q SPARKLING -\nしー しワオン 逢\ncer eetan T\noe gm\n»- : : ) ー r:\n2 ジン\nSGic s . 3 ー B まり\n EN\\V /\n 人ズー gee o\n- ーー議雪ソー = & N\neaメッ と<\n¢",
         "confidence": 0.23,
         "charCount": 236,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1416,11 +1663,16 @@
           "text": "My 。 レー —\nH] y ドド]\nしし 、ー 264/\nて し\nRIER ておお、\nE¥: ーー 7\nTTTEY &o\n[ cugasinx た\nww 「較と\n1導\n_— <\n8で\ncat -\n: ーーー?\n- . ー\nN q SPARKLING -\nしー しワオン 逢\ncer eetan T\noe gm\n»- : : ) ー r:\n2 ジン\nSGic s . 3 ー B まり\n EN\\V /\n 人ズー gee o\n- ーー議雪ソー = & N\neaメッ と<\n¢",
           "confidence": 0.23,
           "charCount": 236,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3032,
+      "processingTimeMs": 3089,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1428,30 +1680,27 @@
     {
       "fileName": "IMG_2576.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "社員が電を込めて杉した日本酒てす。\n昌指すものは、普協せず仕込みひとっ\nとつっを大切に日々進化する酒造りてす\n$名特日本酒き原村料名米(国産)、沙電\n(国導米)$原料米 !准さんが100%使用8\n精米歩合5096@刷造盾月は枠下部へ@7ル\nコール分13度@お酒は二十歳になってか5\n$内容量750mle 保存方法\n音叶者赤式酒各株式会社\n岩手県盛岡市北飯岡1-8-60\n電めく座空に思わすず 中をのむ銀河の美しゞ。 =a\n入れかて優して弾ける泡と酸が地よて液ビ し\n記束儲にかけて酸味甘味の調和したグリー\ntg ThA 本呈からは汽、枯かりら\nラクテンフェセを —\n~— \"ジン\nざき午月 2022.9 S=\nー トト : ==",
-        "confidence": 0.59,
-        "charCount": 314,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ガ り\n\nから\n\n、7回\n\nI\n\nAKA\n\nARKLING'\n\nさき\n\nを中にま\n\nぁる\n\nを込めて本した日本酒てす。\n\n導 ものは、到協せず仕込みひとっ\n\nひとつき大切に日々進化する酒造リてす。\n\n$名称日本酒@原材料名米(国産)洲克\n\n(国送米)@原料米 吟さんが100%使用8\n\n浦米歩合5096@製造年月は枠下部へ$アル\n\nコール分13度@お酒は二十歳に は b\n\n$内容量750mle保存方法 /2\n\nWtt AAL 株未会\n\n当才県盛岡市北飯岡 1-8-60\n\nLLS きめ\n\n埋め《 夜空に思わず息をのむ銀河の美\n\n(は\n\nbkの0 4 < 弾ける泡と酸がご地よ\n\nなお\n\nす、菜租にかけて酸味甘味の調和したクリ\n\n!\n\n較シティ ックな世界をお楽\n\n*らみ。 酵母からは泡、麹から\n\nドサーー\n\nここ析\n\n—\n\nレン\n\n2022.9\n\nーー\n\n—\n\nお酒はこ\n\nLizs\n\ni=\n\nンジ\n\nミ必の\n\nLI he TALED\n\nざて指などけが をしない は以\n\nュ=用\n\n人邊て た\n\nリー\n\nっ\n\n洒 内容量750m",
+        "confidence": 0.66,
+        "charCount": 466,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "社員が電を込めて杉した日本酒てす。\n昌指すものは、普協せず仕込みひとっ\nとつっを大切に日々進化する酒造りてす\n$名特日本酒き原村料名米(国産)、沙電\n(国導米)$原料米 !准さんが100%使用8\n精米歩合5096@刷造盾月は枠下部へ@7ル\nコール分13度@お酒は二十歳になってか5\n$内容量750mle 保存方法\n音叶者赤式酒各株式会社\n岩手県盛岡市北飯岡1-8-60\n電めく座空に思わすず 中をのむ銀河の美しゞ。 =a\n入れかて優して弾ける泡と酸が地よて液ビ し\n記束儲にかけて酸味甘味の調和したグリー\ntg ThA 本呈からは汽、枯かりら\nラクテンフェセを —\n~— \"ジン\nざき午月 2022.9 S=\nー トト : ==",
-          "confidence": 0.59,
-          "charCount": 314,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 3449,
-      "problemClassification": []
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "fast-path accepted cycle 1"
+      ]
     },
     {
       "fileName": "IMG_2706.HEIC",
@@ -1463,8 +1712,13 @@
         "text": "Yis\nー THiS W 。\n —\nー ol ー ば\nめ/2\nっああ ー\n「ラ リリ\nCo 4 ) !\na :\nアア\n] ここ\n3 p ー\nR = =\nてと\n/ 記 ドーヤ\n9 Ss か\nョ ー ー\n2 rat\np n\n のみ科ー\nd .\n>\ni に",
         "confidence": 0.3,
         "charCount": 125,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1474,11 +1728,16 @@
           "text": "Yis\nー THiS W 。\n —\nー ol ー ば\nめ/2\nっああ ー\n「ラ リリ\nCo 4 ) !\na :\nアア\n] ここ\n3 p ー\nR = =\nてと\n/ 記 ドーヤ\n9 Ss か\nョ ー ー\n2 rat\np n\n のみ科ー\nd .\n>\ni に",
           "confidence": 0.3,
           "charCount": 125,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1367,
+      "processingTimeMs": 1363,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1509,7 +1768,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2978,
+      "processingTimeMs": 3028,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1524,8 +1783,13 @@
         "text": "LU\n ー\nylz —» 3 y\n『' >\n、 。 ’ ’\ny トブ 5 -\n0 *3 っ\nてて ) mm\n2 に\n~ — — 0\n. “\n- { _ :\nーー一 ma _\n議中、、 るイト\nタッァ ー CA ー A\nっ 詳 ( ol d\nー は時 ge\n「 2 ワウ 各. /\n: : 一- 」\n。 ー we HO\n ー (部 。",
         "confidence": 0.35,
         "charCount": 166,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1535,11 +1799,16 @@
           "text": "LU\n ー\nylz —» 3 y\n『' >\n、 。 ’ ’\ny トブ 5 -\n0 *3 っ\nてて ) mm\n2 に\n~ — — 0\n. “\n- { _ :\nーー一 ma _\n議中、、 るイト\nタッァ ー CA ー A\nっ 詳 ( ol d\nー は時 ge\n「 2 ワウ 各. /\n: : 一- 」\n。 ー we HO\n ー (部 。",
           "confidence": 0.35,
           "charCount": 166,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1926,
+      "processingTimeMs": 1969,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1555,8 +1824,13 @@
         "text": "科中自然基本!ロ\n 内\n電灯意など素材の喘畔いを生かすため\nま失呈峡で仕込み、無議調・無加水で人\nWELIE -\nSASRIARIO5L ITR) —eRLT\nh RAL ISTLE ARA2).\n原材料名 米(国准改米麹(国産8\n精米歩合60 思\nルコール分 15度\nEE 由\nき情酒 5\n風味を生かすた 上加水て仕上げ\nOiteaeriy muannatih\n問題ありません。\nwee\nLBERHRARE :\nRERTs mata ;\nMimr——— 導",
         "confidence": 0.43,
         "charCount": 229,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1566,11 +1840,16 @@
           "text": "科中自然基本!ロ\n 内\n電灯意など素材の喘畔いを生かすため\nま失呈峡で仕込み、無議調・無加水で人\nWELIE -\nSASRIARIO5L ITR) —eRLT\nh RAL ISTLE ARA2).\n原材料名 米(国准改米麹(国産8\n精米歩合60 思\nルコール分 15度\nEE 由\nき情酒 5\n風味を生かすた 上加水て仕上げ\nOiteaeriy muannatih\n問題ありません。\nwee\nLBERHRARE :\nRERTs mata ;\nMimr——— 導",
           "confidence": 0.43,
           "charCount": 229,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2553,
+      "processingTimeMs": 2623,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1585,8 +1864,13 @@
         "text": "ノノプ aa\n27 YW\nリー\n94\n(Y the\n(RU\n6 K",
         "confidence": 0.24,
         "charCount": 33,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1596,11 +1880,16 @@
           "text": "ノノプ aa\n27 YW\nリー\n94\n(Y the\n(RU\n6 K",
           "confidence": 0.24,
           "charCount": 33,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 839,
+      "processingTimeMs": 841,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1615,8 +1904,13 @@
         "text": "し [ 1 イイングラス<おぃ マー\nドに バ 吉でのいしい 』 c\nen ( マタ\nGOLD MEDATL WW\n。 てノ\n- ;\n中 ごジョ .\nJJ TE . .。、\n~ ー 5 >\n» ー ー\nr 圧電 4\n【 4 、 ーーで om 「\n。 ま H \\ NN タンンク ー 」 1\nMs <かニー ー =\n. 。 ihy#+ m Emp\nprmer / 際R m— mm C\nに 此紙 —\nここ EE は\nHER ~ea\n Ny\n 4\n上 . き ーー\n-.\n1 ペ ma も\n ]\n。 \\CiR ー 。\nIS\nN\nド輸mm」\n回 @",
         "confidence": 0.31,
         "charCount": 271,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1626,11 +1920,16 @@
           "text": "し [ 1 イイングラス<おぃ マー\nドに バ 吉でのいしい 』 c\nen ( マタ\nGOLD MEDATL WW\n。 てノ\n- ;\n中 ごジョ .\nJJ TE . .。、\n~ ー 5 >\n» ー ー\nr 圧電 4\n【 4 、 ーーで om 「\n。 ま H \\ NN タンンク ー 」 1\nMs <かニー ー =\n. 。 ihy#+ m Emp\nprmer / 際R m— mm C\nに 此紙 —\nここ EE は\nHER ~ea\n Ny\n 4\n上 . き ーー\n-.\n1 ペ ma も\n ]\n。 \\CiR ー 。\nIS\nN\nド輸mm」\n回 @",
           "confidence": 0.31,
           "charCount": 271,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3209,
+      "processingTimeMs": 3261,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1646,8 +1945,13 @@
         "text": "由衣ー # ーーブリ ーー 本杉閥ー\nが まま\ntm\n%\n1 を 多 ー ) ) 1 ー J\nmEy im\nf\\ { feeto ー\n3 E\n7 部 ー唱「ご\n— 」\n Nabeshim: &\n’ lew Mr\n & ー 「 。\n, B 全品 _ 。\nの l¥p ® テロ § gil 3 ;\nEedr ー 急 。",
         "confidence": 0.31,
         "charCount": 157,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1657,11 +1961,16 @@
           "text": "由衣ー # ーーブリ ーー 本杉閥ー\nが まま\ntm\n%\n1 を 多 ー ) ) 1 ー J\nmEy im\nf\\ { feeto ー\n3 E\n7 部 ー唱「ご\n— 」\n Nabeshim: &\n’ lew Mr\n & ー 「 。\n, B 全品 _ 。\nの l¥p ® テロ § gil 3 ;\nEedr ー 急 。",
           "confidence": 0.31,
           "charCount": 157,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1696,
+      "processingTimeMs": 1722,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1692,7 +2001,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1690,
+      "processingTimeMs": 1634,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -1707,8 +2016,13 @@
         "text": "が ー Wis\n ®\n l T\nf E ーー ー W\nー\nー\nー\nー\nー\nー\n? <へ、 座。\nーー ー a@ 7 L\nンジ は 、 a\n9 ーー A HU EE\n。 回 SR 5ciors NIE E",
         "confidence": 0.28,
         "charCount": 101,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1718,11 +2032,16 @@
           "text": "が ー Wis\n ®\n l T\nf E ーー ー W\nー\nー\nー\nー\nー\nー\n? <へ、 座。\nーー ー a@ 7 L\nンジ は 、 a\n9 ーー A HU EE\n。 回 SR 5ciors NIE E",
           "confidence": 0.28,
           "charCount": 101,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1188,
+      "processingTimeMs": 1204,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1738,8 +2057,13 @@
         "text": "1 WWWtam'\n党 WW (\n W\n\" に , 」 $-\n\\い」 \\—\n4 1 My (— ドド\n W リ /\n- ー 7\n Li i -\n- ii . 電電敵 WM 。\nリー ー 家過 &\nesly ー aY :\nHig ゆず し区 / 疾軸MV f 2 ぁ :\n敵にルンン導導放カル\n山側 7天才ジア/ ーー A\nUp 。 EEL \"\nIb 4- # - i W 7 y. スズ WE 5 を] し\n[「 鉛上 2 FEA . o.\nSR EE , i ay プー =",
         "confidence": 0.25,
         "charCount": 238,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1749,11 +2073,16 @@
           "text": "1 WWWtam'\n党 WW (\n W\n\" に , 」 $-\n\\い」 \\—\n4 1 My (— ドド\n W リ /\n- ー 7\n Li i -\n- ii . 電電敵 WM 。\nリー ー 家過 &\nesly ー aY :\nHig ゆず し区 / 疾軸MV f 2 ぁ :\n敵にルンン導導放カル\n山側 7天才ジア/ ーー A\nUp 。 EEL \"\nIb 4- # - i W 7 y. スズ WE 5 を] し\n[「 鉛上 2 FEA . o.\nSR EE , i ay プー =",
           "confidence": 0.25,
           "charCount": 238,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2717,
+      "processingTimeMs": 2742,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1769,8 +2098,13 @@
         "text": "- N. iy\n区ガ HAm A%g 7\nダがっ HAr SS\n欠才 B 009% 5c S\nタラ 16% =\nMo 50% S\nHiga の4アドの =\n2を =\n5のの\n0 てか E 3 lg\noe w に\nきき J5\n9 7 3\n ーー\nは。 25 09",
         "confidence": 0.22,
         "charCount": 130,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1780,11 +2114,16 @@
           "text": "- N. iy\n区ガ HAm A%g 7\nダがっ HAr SS\n欠才 B 009% 5c S\nタラ 16% =\nMo 50% S\nHiga の4アドの =\n2を =\n5のの\n0 てか E 3 lg\noe w に\nきき J5\n9 7 3\n ーー\nは。 25 09",
           "confidence": 0.22,
           "charCount": 130,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1782,
+      "processingTimeMs": 1806,
       "problemClassification": []
     },
     {
@@ -1797,8 +2136,13 @@
         "text": "へ -沿天導5 ーー ーーーッッンンンご\nを 人 SE = 255 き- = y ンジンン p\nRiEr : ーーテテ拓き本計ーーー ニー ー\n附帝ーー ーー短計< だ 2半ーモーーーー ーー\n ーー ーー ー\n。 wIiSHSE SeTiees = 、、 ーー ニーンジーー ーー\n導導ーー ーーー\nRics DO~ SOISSPEES . ーーささーーっーー\nの-稚ご « 5 a ーー ーーミミこ- ミーこ\nとこ 。 。 と ーー 記さ幸Sお Ne —= hen 【\n; Ss C E AAR Ces\n C でき導ここーーニー\n の ss E o o て = さこ家々 ーー\n詩 CRRE% 。、 t さ ーー-こミニ本 ニーニージー -=\nRhene 2 へ SS誠ーー 2-\n、 で半 、こさてご - § v\n# 5 ・ =、ご さ、ー、、攻際 ーー\nCn SERE 誠才生また さと\n3 \" 人 本 4\n. EAR E すす\nb う . ・ = g こさミー天馬ーーニーニー一 p\nドー 生計さ后まこ で5 /\nー 、 に$ SS和ーー\nヨ も — ささ 基こで ag にここ\n[ d ) ・ sr ーー 1 .\n ISIEENE\n“ i) 5 は 拓にでて5ミニ ダ\n! { 人本 .\no ト —\n¥ さき ・\nーー 革>、\nae EN 較ち: \"\n “W wp P.\n【 医、 a & B UaL\nョ amu 導\n. = ーー チ 本",
         "confidence": 0.19,
         "charCount": 625,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1808,11 +2152,16 @@
           "text": "へ -沿天導5 ーー ーーーッッンンンご\nを 人 SE = 255 き- = y ンジンン p\nRiEr : ーーテテ拓き本計ーーー ニー ー\n附帝ーー ーー短計< だ 2半ーモーーーー ーー\n ーー ーー ー\n。 wIiSHSE SeTiees = 、、 ーー ニーンジーー ーー\n導導ーー ーーー\nRics DO~ SOISSPEES . ーーささーーっーー\nの-稚ご « 5 a ーー ーーミミこ- ミーこ\nとこ 。 。 と ーー 記さ幸Sお Ne —= hen 【\n; Ss C E AAR Ces\n C でき導ここーーニー\n の ss E o o て = さこ家々 ーー\n詩 CRRE% 。、 t さ ーー-こミニ本 ニーニージー -=\nRhene 2 へ SS誠ーー 2-\n、 で半 、こさてご - § v\n# 5 ・ =、ご さ、ー、、攻際 ーー\nCn SERE 誠才生また さと\n3 \" 人 本 4\n. EAR E すす\nb う . ・ = g こさミー天馬ーーニーニー一 p\nドー 生計さ后まこ で5 /\nー 、 に$ SS和ーー\nヨ も — ささ 基こで ag にここ\n[ d ) ・ sr ーー 1 .\n ISIEENE\n“ i) 5 は 拓にでて5ミニ ダ\n! { 人本 .\no ト —\n¥ さき ・\nーー 革>、\nae EN 較ち: \"\n “W wp P.\n【 医、 a & B UaL\nョ amu 導\n. = ーー チ 本",
           "confidence": 0.19,
           "charCount": 625,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 9015,
+      "processingTimeMs": 9089,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多"
@@ -1843,7 +2192,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 876,
+      "processingTimeMs": 894,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -1873,7 +2222,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3360,
+      "processingTimeMs": 3411,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -1888,8 +2237,13 @@
         "text": "】 _\nて ー ー ーー\n 用 Y\n Hi\n中\n。 ー\nリ化\n用暗、\nルル P\n= [者 E ーー ド\nー\nかをき ー NB\n< と kk S] ー Js\nIE T 半]\n B\nn - -\n9 ー B\nwi — ト",
         "confidence": 0.25,
         "charCount": 107,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1899,11 +2253,16 @@
           "text": "】 _\nて ー ー ーー\n 用 Y\n Hi\n中\n。 ー\nリ化\n用暗、\nルル P\n= [者 E ーー ド\nー\nかをき ー NB\n< と kk S] ー Js\nIE T 半]\n B\nn - -\n9 ー B\nwi — ト",
           "confidence": 0.25,
           "charCount": 107,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1225,
+      "processingTimeMs": 1290,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1934,7 +2293,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 300,
+      "processingTimeMs": 302,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1965,7 +2324,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1053,
+      "processingTimeMs": 1082,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -1981,8 +2340,13 @@
         "text": "。\n隊 ー 0 上\n。\n/ ーー\n固ジンー\n次 Fvd CE\nI gE E\n[ i= 3 E ーー :\n5た し VERSR z.\nと\nが で放導\na= ンー\nー 359 RTc i\nSs 4 2\n 人\nEe\n[ に : amed\nae\n; GlEme\nDAIYAME\n: SEEE\nHAMADA SYUZOU\nJAPANESE ._\n TRADITIONAESHGEHU\ne\ni o ': に\nーー\n】 がスンの本\n EA\nol\nKBL B E タテ\n> o\n 3 Eea\n& 人\n3 5 4 b ;\n“Z\n Z aEet\n』 を —\nンー »",
         "confidence": 0.17,
         "charCount": 273,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "だいやめ DAIYAME",
+        "detectedMakerName": "濵田酒造",
+        "detectedAlcoholType": "shochu",
+        "matchReasons": [
+          "OCR別名一致: DAIYAME"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -1992,11 +2356,16 @@
           "text": "。\n隊 ー 0 上\n。\n/ ーー\n固ジンー\n次 Fvd CE\nI gE E\n[ i= 3 E ーー :\n5た し VERSR z.\nと\nが で放導\na= ンー\nー 359 RTc i\nSs 4 2\n 人\nEe\n[ に : amed\nae\n; GlEme\nDAIYAME\n: SEEE\nHAMADA SYUZOU\nJAPANESE ._\n TRADITIONAESHGEHU\ne\ni o ': に\nーー\n】 がスンの本\n EA\nol\nKBL B E タテ\n> o\n 3 Eea\n& 人\n3 5 4 b ;\n“Z\n Z aEet\n』 を —\nンー »",
           "confidence": 0.17,
           "charCount": 273,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "だいやめ DAIYAME",
+          "detectedMakerName": "濵田酒造",
+          "detectedAlcoholType": "shochu",
+          "matchReasons": [
+            "OCR別名一致: DAIYAME"
+          ]
         }
       ],
-      "processingTimeMs": 3455,
+      "processingTimeMs": 3506,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -2027,7 +2396,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1363,
+      "processingTimeMs": 1400,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -2042,8 +2411,13 @@
         "text": "8G ー) . ビン 生生生生.昌ラーシーニン\naltT ~ ¢\nK 贈 :\nWAY A Lu \\ー -0 い の —\n & d i\n» NP 補当\n IIES あぁ\n\\ ‘ 取 ド -\n/ % 0、\n# / 《 A— !\nEA NW/ に\ng ! [ 過有と\n \\ マ\n(を! F ー\nB",
         "confidence": 0.26,
         "charCount": 145,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2053,11 +2427,16 @@
           "text": "8G ー) . ビン 生生生生.昌ラーシーニン\naltT ~ ¢\nK 贈 :\nWAY A Lu \\ー -0 い の —\n & d i\n» NP 補当\n IIES あぁ\n\\ ‘ 取 ド -\n/ % 0、\n# / 《 A— !\nEA NW/ に\ng ! [ 過有と\n \\ マ\n(を! F ー\nB",
           "confidence": 0.26,
           "charCount": 145,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1741,
+      "processingTimeMs": 1768,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -2072,12 +2451,12 @@
         "text": "[<4\n\n取\n\nが\n\n田酒 HARR;\n\n7ロ\n\nン購入後は品質保持の為、直\n\nけ、冷蔵で\n\n『\n\nの保存をお願いいたしまず 開\n\nかかわらず』\n\nできるだけお早めにお召し\n\nさい。\n\n【\n\nにcd\n\no\n\n日本\n\n~\n\n{\n\n西 本\n\nアルュール分 16度\n\nBH#Z 米(国産)\n\nRoIU (国産\n\n&$ & 40%\n\n利和月\n\n者\n\nXo\n\nN\n\n西田 酒\n\n店\n\n詩赤市大学 wlFk\n\nな\n\n8i\n\n中\n\n期の飲酒!\n\n條3\n\n4\n\n58\n\n過中\n\nに",
         "confidence": 0.64,
         "charCount": 232,
-        "candidateCount": 1,
-        "detectedProductName": "田酒",
-        "detectedMakerName": "西田酒造店",
+        "candidateCount": 2,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
         "detectedAlcoholType": "sake",
         "matchReasons": [
-          "OCR別名一致: 田酒"
+          "OCR別名一致: W"
         ],
         "cycle": 2
       },
@@ -2097,8 +2476,13 @@
         "text": "Mx すり 。、 あり\n— アグ る =\n\nーー 3p\n_ ). *\nFg\"q A 8 。\n - レー L\n\n-— . ws\n\n< I\n4 EN A 、\nー m\nA",
         "confidence": 0.22,
         "charCount": 82,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2108,11 +2492,16 @@
           "text": "Mx すり 。、 あり\n— アグ る =\n\nーー 3p\n_ ). *\nFg\"q A 8 。\n - レー L\n\n-— . ws\n\n< I\n4 EN A 、\nー m\nA",
           "confidence": 0.22,
           "charCount": 82,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1227,
+      "processingTimeMs": 1148,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2121,26 +2510,41 @@
     {
       "fileName": "IMG_3645.HEIC",
       "cycle": 2,
-      "status": "reused",
+      "status": "success",
       "best": {
-        "variant": "converted-resized",
-        "psm": "11",
-        "text": "6\n\nァテ\n\nJUYO!\n\n水温貯蔵大極\n\nノ七垂\n\nニニ十貰\n\nm\n\n本)\n\n吟醸洒\n\n原材料名: 米(国産)、\n\n(国産米)\n\n精米歩合: 35%\n\n原料米: 兵庫県特A地較\n\n田錦100\n\nアルコール分 : 16度 ” 内容量: 720m\n\n製造者高木酒造株式会社\n\n山形県村山市大学富並1820\n\n電信法: 必ず冷蔵庫(=5て5て)で\n\nめにお召し上がりり市きい。\n\nma rho\n\n生計 要)〉 SIE",
-        "confidence": 0.66,
-        "charCount": 206,
+        "variant": "center-label-gray-contrast",
+        "psm": "6",
+        "text": "T1T\n oNTTTIS.\nmisn,/ LE—TTEE 中 ー\nEEESITE S 邊 ー\n原材料名 : OR (E1E) SE(EIRER) o\nWREA:3%% 8 ー\n原料米 :兵庫県特A地較産山田旬100縛議\n\nアルコール分 : 16度 ” 内容量 : 720ml\n製造者:高木酒造株式会社。。 攻計\n\n山形県村山市大字富並1826和\n\nな:必ず冷蔵庫(-5て5て)で本語\n\nおめにお用し上がり下さい。 HE\n\nねお袖は20基にかニースラSA -",
+        "confidence": 0.51,
+        "charCount": 228,
         "candidateCount": 1,
-        "detectedProductName": "十四代",
-        "detectedMakerName": "高木酒造",
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
         "detectedAlcoholType": "sake",
         "matchReasons": [
-          "蔵元一致"
+          "OCR別名一致: W"
         ],
         "cycle": 2
       },
-      "variants": [],
-      "processingTimeMs": 0,
+      "variants": [
+        {
+          "variant": "center-label-gray-contrast",
+          "psm": "6",
+          "text": "T1T\n oNTTTIS.\nmisn,/ LE—TTEE 中 ー\nEEESITE S 邊 ー\n原材料名 : OR (E1E) SE(EIRER) o\nWREA:3%% 8 ー\n原料米 :兵庫県特A地較産山田旬100縛議\n\nアルコール分 : 16度 ” 内容量 : 720ml\n製造者:高木酒造株式会社。。 攻計\n\n山形県村山市大字富並1826和\n\nな:必ず冷蔵庫(-5て5て)で本語\n\nおめにお用し上がり下さい。 HE\n\nねお袖は20基にかニースラSA -",
+          "confidence": 0.51,
+          "charCount": 228,
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
+        }
+      ],
+      "processingTimeMs": 3019,
       "problemClassification": [
-        "fast-path accepted cycle 1"
+        "小断片が多い"
       ]
     },
     {
@@ -2153,8 +2557,13 @@
         "text": "5 —— 2 本 到 メ\n\n 維\nに « 間導ーーンー\ntf 計 C\nLoWFld THE waY A BR ーー = a\n= i= ー 頑 = —\n ー 由 リリ ま\n\n5詳 ー ] 間邊ー 用に 時還\n\n0 Poll\n/ / マタ ザー / \\ /\n\nY fl NSAN Z\nりらm剛人 ーー\n=P { i 0 (あせぐらで昌和 HE :\nDlem ー\n\n BWO).\nB1 Lal\n\n、 HL 2の8 で ] 際誠\n\n = q y ct 出[5\n\nー - wa , \\ p 、 ま\nR.— J -— 7 7\nl ー oo mEE",
         "confidence": 0.22,
         "charCount": 267,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2164,11 +2573,16 @@
           "text": "5 —— 2 本 到 メ\n\n 維\nに « 間導ーーンー\ntf 計 C\nLoWFld THE waY A BR ーー = a\n= i= ー 頑 = —\n ー 由 リリ ま\n\n5詳 ー ] 間邊ー 用に 時還\n\n0 Poll\n/ / マタ ザー / \\ /\n\nY fl NSAN Z\nりらm剛人 ーー\n=P { i 0 (あせぐらで昌和 HE :\nDlem ー\n\n BWO).\nB1 Lal\n\n、 HL 2の8 で ] 際誠\n\n = q y ct 出[5\n\nー - wa , \\ p 、 ま\nR.— J -— 7 7\nl ー oo mEE",
           "confidence": 0.22,
           "charCount": 267,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3608,
+      "processingTimeMs": 3686,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2184,8 +2598,13 @@
         "text": "5誠 7 ー gee\n4 Toes way 4 f けら5さきで\n難 *】\n2 & ¥ B4/ 4\n9 AA\n( 了 - 人る\n5 Ee_\n W >\n2 ー\nニニーー , : BlL\nee : タル sMN 5\n1 8 $ に\n_ ー 仙\nー INMAT y いい RI\nいい パパ B ー\n\\ E. で",
         "confidence": 0.25,
         "charCount": 152,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2195,11 +2614,16 @@
           "text": "5誠 7 ー gee\n4 Toes way 4 f けら5さきで\n難 *】\n2 & ¥ B4/ 4\n9 AA\n( 了 - 人る\n5 Ee_\n W >\n2 ー\nニニーー , : BlL\nee : タル sMN 5\n1 8 $ に\n_ ー 仙\nー INMAT y いい RI\nいい パパ B ー\n\\ E. で",
           "confidence": 0.25,
           "charCount": 152,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1802,
+      "processingTimeMs": 1844,
       "problemClassification": []
     },
     {
@@ -2212,8 +2636,13 @@
         "text": "にのmm ーe V mreleRLASE\nTEE 衣= 箇隊AN\nJ 「3 すす 央 ば * -\n4 < 店 \\ リ +=ー ー に *\n四半ー: て\n し ム JE\nAーB\n 1\n *igu\ncramsseSIN— Ba\nにas WW\nmm in ®\n ンー\n— p\nZ で EE-\n。 % 『\n1n. _ ¥ EE. = 抽 :",
         "confidence": 0.17,
         "charCount": 166,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2223,11 +2652,16 @@
           "text": "にのmm ーe V mreleRLASE\nTEE 衣= 箇隊AN\nJ 「3 すす 央 ば * -\n4 < 店 \\ リ +=ー ー に *\n四半ー: て\n し ム JE\nAーB\n 1\n *igu\ncramsseSIN— Ba\nにas WW\nmm in ®\n ンー\n— p\nZ で EE-\n。 % 『\n1n. _ ¥ EE. = 抽 :",
           "confidence": 0.17,
           "charCount": 166,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2661,
+      "processingTimeMs": 2691,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -2243,8 +2677,13 @@
         "text": "ーーヤー mmmmmmm計且 mmンーンリ7 O\ni : »\nk “ Ri ) ンン — -\nー 回 の { る ンジ参用 中 こ? に\nmsway \\\"UR っっ \"れれ\nンク な\n/ &Z\nフースジ —\nクジギー 融 -\n; # F へ r\n¢ ー.\n— ー\n1 に と\nにmeでこ幸二\n— EER B\nTERRT= *\n- Eim vA won\nCa B ー\nBiss Ad\ni ミ\nラー で\nに i» ® :. FE\nLe? e\nfo WS lamg ~ J.",
         "confidence": 0.22,
         "charCount": 234,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2254,11 +2693,16 @@
           "text": "ーーヤー mmmmmmm計且 mmンーンリ7 O\ni : »\nk “ Ri ) ンン — -\nー 回 の { る ンジ参用 中 こ? に\nmsway \\\"UR っっ \"れれ\nンク な\n/ &Z\nフースジ —\nクジギー 融 -\n; # F へ r\n¢ ー.\n— ー\n1 に と\nにmeでこ幸二\n— EER B\nTERRT= *\n- Eim vA won\nCa B ー\nBiss Ad\ni ミ\nラー で\nに i» ® :. FE\nLe? e\nfo WS lamg ~ J.",
           "confidence": 0.22,
           "charCount": 234,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2743,
+      "processingTimeMs": 2795,
       "problemClassification": []
     },
     {
@@ -2271,8 +2715,13 @@
         "text": "ーー E\n THIS WAY A / > ~ 所へ\n(2 っ\n7 1 に\n\n ・ < ンジ\n2 ~\n.\n/ \" §\n{ziim - 柳\n区 N 埋ミ\n f .\n\nー 4 ¥\n\n2 ’\n』 。 34 > +1\n\n{( Ad 。 に",
         "confidence": 0.24,
         "charCount": 114,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2282,11 +2731,16 @@
           "text": "ーー E\n THIS WAY A / > ~ 所へ\n(2 っ\n7 1 に\n\n ・ < ンジ\n2 ~\n.\n/ \" §\n{ziim - 柳\n区 N 埋ミ\n f .\n\nー 4 ¥\n\n2 ’\n』 。 34 > +1\n\n{( Ad 。 に",
           "confidence": 0.24,
           "charCount": 114,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1614,
+      "processingTimeMs": 1652,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2302,8 +2756,13 @@
         "text": "ーー ー 2 d ~¥\nE usway \\ ー ー $N %\n4 。 \"6\n人プ レコ\n. i n , -\n1 J3\n4 1 .\n(\n v\nー vN\nGus A キネ\nif 純 H* 4 B\n9 米 を-\nmg 「革計\n 内 ー上に 押護 . A\n 本\nik 」 伴",
         "confidence": 0.33,
         "charCount": 133,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2313,11 +2772,16 @@
           "text": "ーー ー 2 d ~¥\nE usway \\ ー ー $N %\n4 。 \"6\n人プ レコ\n. i n , -\n1 J3\n4 1 .\n(\n v\nー vN\nGus A キネ\nif 純 H* 4 B\n9 米 を-\nmg 「革計\n 内 ー上に 押護 . A\n 本\nik 」 伴",
           "confidence": 0.33,
           "charCount": 133,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1416,
+      "processingTimeMs": 1471,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2333,8 +2797,13 @@
         "text": "prinl にに?\nHes way 人 たい.\n4 8 ー ル。\n7 ー ~\nし7 ン F\n... Pa 敵の\n.\nーーター\nにうみ E\nー一 (\n. an\n 4 “\n7 77\n1 』 / て し て -\n誤り の 系\naG, 7 E\nーックラ バーグで に\nをを 2こき AS 、\nペン\nくいWW き坦 ア計\nEaN<e. 00 o レ\n2多きーー SATER\n ーー誰科で",
         "confidence": 0.25,
         "charCount": 188,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2344,11 +2813,16 @@
           "text": "prinl にに?\nHes way 人 たい.\n4 8 ー ル。\n7 ー ~\nし7 ン F\n... Pa 敵の\n.\nーーター\nにうみ E\nー一 (\n. an\n 4 “\n7 77\n1 』 / て し て -\n誤り の 系\naG, 7 E\nーックラ バーグで に\nをを 2こき AS 、\nペン\nくいWW き坦 ア計\nEaN<e. 00 o レ\n2多きーー SATER\n ーー誰科で",
           "confidence": 0.25,
           "charCount": 188,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2280,
+      "processingTimeMs": 2208,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2363,8 +2837,13 @@
         "text": "—————\nIm .\n\n生き\nーード <表維に ー\nリー ーー ーー一\nドッ\nv 内 = 次 -— 』\nロビ リ/ 前\n\n A AA\nで : a .\n井佑 2\nMM 上 YRa\ny が WRLTE",
         "confidence": 0.21,
         "charCount": 98,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2374,11 +2853,16 @@
           "text": "—————\nIm .\n\n生き\nーード <表維に ー\nリー ーー ーー一\nドッ\nv 内 = 次 -— 』\nロビ リ/ 前\n\n A AA\nで : a .\n井佑 2\nMM 上 YRa\ny が WRLTE",
           "confidence": 0.21,
           "charCount": 98,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2071,
+      "processingTimeMs": 2074,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2409,7 +2893,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 719,
+      "processingTimeMs": 747,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2424,8 +2908,13 @@
         "text": "お信つ中の精平置野文人\n放のて酒か込水す県で\n\nと亀思いになめ系るの年 &.\n\n(人赦いま適理ての上束+ 坦.\nおををしり少良田部6 A\n4さ 込 た衣量質にに6 あぶ\n区い め 。 味手をなて 5\n\nへ た わな 酸 水 £, 7\\\nに 6を fwo\n£ Bo® 灯米と\n者 ー画ー * ~ J ツマ\n。 、 です lEN\nmm 日本酒 -\n内容量:720ml と\n上材料名:米・米麹\n\n剖名.長野県産ひとごこち100%使用\nBRS8 tukoon- #x70% o\n\nコール分15度 0\n半生月20226 蔵元出荷年月:20227 ビ\n\n時:岡央酒造株式会社 illー\n\nJ =e a ul上上ー ー",
         "confidence": 0.51,
         "charCount": 302,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2435,11 +2924,16 @@
           "text": "お信つ中の精平置野文人\n放のて酒か込水す県で\n\nと亀思いになめ系るの年 &.\n\n(人赦いま適理ての上束+ 坦.\nおををしり少良田部6 A\n4さ 込 た衣量質にに6 あぶ\n区い め 。 味手をなて 5\n\nへ た わな 酸 水 £, 7\\\nに 6を fwo\n£ Bo® 灯米と\n者 ー画ー * ~ J ツマ\n。 、 です lEN\nmm 日本酒 -\n内容量:720ml と\n上材料名:米・米麹\n\n剖名.長野県産ひとごこち100%使用\nBRS8 tukoon- #x70% o\n\nコール分15度 0\n半生月20226 蔵元出荷年月:20227 ビ\n\n時:岡央酒造株式会社 illー\n\nJ =e a ul上上ー ー",
           "confidence": 0.51,
           "charCount": 302,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2524,
+      "processingTimeMs": 2527,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2469,7 +2963,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 336,
+      "processingTimeMs": 340,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2478,30 +2972,27 @@
     {
       "fileName": "IMG_3886.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "rfうるきり 13\n壮的テカ He Ci 。\n他 つ の信昌 es の 革新的な>\n[イテッドアプローズ」が、直接、間を衣癌\nまれたコレクション。 ~al\nWkEIBER IFATIFT I—XTy\ngl x 1-Z DEOBE THERI ET, 1\nご注意きき\n栓前 -絡対に折らないでください。\nO 』育品は元気で活性なもろみを粗ごしし、牧基のしていたか\nいております。 そのため、本体を楼にしない様お願い匠し1\nに 昔ながらの利法で醸造するため、加心の注意を色って5は M補\nています.双質には問題がございませんので、取り共いても3\n全て保存の上、お酒が落ち基いてからお8しがで\n報知者 株式会社せんさん の v 回\n栃木香きくら市合場 106\nBiig x(ma) koL(BER giEld\nBofR ドメーヌさくら・山田堆 は\nー GARICemDI00% BRR\n株歩合 9096 RW\n2分 14 度 I\nは 計 ユナイテッドアワロース Jos\n0 息 せんきん e\n RPEE O",
-        "confidence": 0.55,
-        "charCount": 450,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "\\\n\no P\n\nB\n\nいり\n\nに\n\nfiss SO,\n\nうさぎ』\n\n, の伝統的な技術をペースに、 革新\n\n)テッドプローズ」が、直接、萬を旋\n\nたコレクション。\n\nだるまが、ユナイテッドブロースズでキヌ\n\n仙倉*\n\n酒の限定で醸きされた祝い酒, &\n\n門酸酒X にご\n\n注意計ミ\n\nいでくださV\n\ns7\n\nで活 放な なもろみもごし\n\n聞鞍めして\n\nいております。 そのため、本体を撲(\n\nHERCR\n\n莉な\n\nらの梨法で醸款する\n\n、如心の注意をって\n\n※ぷいます。品質には問題が\n\nませんので、 人\n\n¥\n\nRECREOL BED 落ち若いてからゎお\n\n者 株式会社せんさん\n\n匠木昌さくら市馬場 106\n\n60ce\n\nRA#E\n\n米(国産、米こうじ(国彦ネ\n\n還只\n\nB 料\n\nドメーヌさくら・ 山田釣\n\n(板木系さくら市産)10070\n\nし\n\n4\n\n歩合\n\n90%\n\nW\n\n4庶\n\nSSRFToy TE\n\nLS\n\nせんさきん\n\n(F\n\n お\n\nー 58\n\n720ml\n\nお\n\nあります\n\n—.\n\nーー\n\nMt\n\n格い\n\n9",
+        "confidence": 0.58,
+        "charCount": 466,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "rfうるきり 13\n壮的テカ He Ci 。\n他 つ の信昌 es の 革新的な>\n[イテッドアプローズ」が、直接、間を衣癌\nまれたコレクション。 ~al\nWkEIBER IFATIFT I—XTy\ngl x 1-Z DEOBE THERI ET, 1\nご注意きき\n栓前 -絡対に折らないでください。\nO 』育品は元気で活性なもろみを粗ごしし、牧基のしていたか\nいております。 そのため、本体を楼にしない様お願い匠し1\nに 昔ながらの利法で醸造するため、加心の注意を色って5は M補\nています.双質には問題がございませんので、取り共いても3\n全て保存の上、お酒が落ち基いてからお8しがで\n報知者 株式会社せんさん の v 回\n栃木香きくら市合場 106\nBiig x(ma) koL(BER giEld\nBofR ドメーヌさくら・山田堆 は\nー GARICemDI00% BRR\n株歩合 9096 RW\n2分 14 度 I\nは 計 ユナイテッドアワロース Jos\n0 息 せんきん e\n RPEE O",
-          "confidence": 0.55,
-          "charCount": 450,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 3593,
-      "problemClassification": []
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "fast-path accepted cycle 1"
+      ]
     },
     {
       "fileName": "IMG_3892.HEIC",
@@ -2513,8 +3004,13 @@
         "text": "o ly - ん\nmn\nーー 誠人 で\n+ 記\n8 アザ ~ ー NN 、ミ.\n花. [ご '4 川 ー ー\nは な 7 和 —\nー 記 ーー 人馬半、。、\nam ] ー l *\nwm 3)) )\nol fo\nPAodE",
         "confidence": 0.23,
         "charCount": 110,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2524,11 +3020,16 @@
           "text": "o ly - ん\nmn\nーー 誠人 で\n+ 記\n8 アザ ~ ー NN 、ミ.\n花. [ご '4 川 ー ー\nは な 7 和 —\nー 記 ーー 人馬半、。、\nam ] ー l *\nwm 3)) )\nol fo\nPAodE",
           "confidence": 0.23,
           "charCount": 110,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1378,
+      "processingTimeMs": 1412,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2544,8 +3045,13 @@
         "text": "470訓導NN ン\n「 \\玉吾る\n / ビー\nも _革\nF w\n\nビー - -\n に 提 -\nwIER\nを 本5\n* 、ンー RESE\nぁ> の。 蘭誤\n\na 4",
         "confidence": 0.19,
         "charCount": 81,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2555,11 +3061,16 @@
           "text": "470訓導NN ン\n「 \\玉吾る\n / ビー\nも _革\nF w\n\nビー - -\n に 提 -\nwIER\nを 本5\n* 、ンー RESE\nぁ> の。 蘭誤\n\na 4",
           "confidence": 0.19,
           "charCount": 81,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1537,
+      "processingTimeMs": 1541,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -2575,8 +3086,13 @@
         "text": "ーー 生8\n\nLe Llg (RE\n\n@® _ 名 。 に ー\n\nビ) w ー Yo\n\n6 に A y\" -\n\n hy (WEE\nた 3 .\n\nBEV, . C\n\nも 起 0 性 G 1aY . ー\n\nて 7' 0\n\n& QL ] ー \\ i - し\n\n( Takijiman _ _ 7 5\n\n 」 , 分議\n 導い 回\n』 ー - p 1 *\n\nー T aa\n\nー ー ん 條で",
         "confidence": 0.31,
         "charCount": 191,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 2,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2586,11 +3102,16 @@
           "text": "ーー 生8\n\nLe Llg (RE\n\n@® _ 名 。 に ー\n\nビ) w ー Yo\n\n6 に A y\" -\n\n hy (WEE\nた 3 .\n\nBEV, . C\n\nも 起 0 性 G 1aY . ー\n\nて 7' 0\n\n& QL ] ー \\ i - し\n\n( Takijiman _ _ 7 5\n\n 」 , 分議\n 導い 回\n』 ー - p 1 *\n\nー T aa\n\nー ー ん 條で",
           "confidence": 0.31,
           "charCount": 191,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 2,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2004,
+      "processingTimeMs": 2037,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2599,41 +3120,26 @@
     {
       "fileName": "IMG_4010.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "FEE— ーー性き MR と\n直還放が いで WE\nEEL 0し.\nwap ウーで中\n リー E織\nー 時方な:本品は加熱名理を 一切行っていない\n。 4病のあ、必ず冷蔵庫(-5セー5C)で人し\n\n製半年月より3ヶ月以内にお客し上がり下さい。\nー mm日本酒 xxe0m\nー 距料名:米(国産)、米麹(国産米) ・\nし WREG35% 人\nー 屋枯米: 山形県産龍の落とし子80%催\n 1衝全ーッル分 :16度 de\n\n臣 者:高木酒造株式会社 ” ー\nし LpSHILREER a\n: (製造年月は表貼りに\"\n\n SERAR めms20mにをっでかの",
-        "confidence": 0.5,
-        "charCount": 276,
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "ー\n\n\\\n\nいい\n\n+M\n\n代龍の落\n\n母系美山針\n\n間の:\n\n落とし子\n\n山較\n\n父系び山酒4\n\n[TL —\n\n山田\n\n竹種和\n\n低存方法・ 0\n\n品は加熱\n\nをーー切行っていない\n\n生酒の為、必\n\nRE (=3'C ~3C) TRATL.\n\nWEIED37)\n\nBAIMIEH11 し[がり 下Sい。\n\n品日本酒 ・李ん9\n\n属諸料名: 米(国産)、 洲麹(国産ネ)\n\n米歩合:35%\n\n子80%側\n\nアルコール\n\n民料米: LipSEROHEL\n\n社\n\nBikg: REA\n\nF1820\n\n山形県村出市大\n\nりに\n\n0\n\nー —\n\n(製造年月は\n\nっでから。\n\n.お滴は20歳にな",
+        "confidence": 0.53,
+        "charCount": 293,
         "candidateCount": 1,
-        "detectedProductName": "十四代",
-        "detectedMakerName": "高木酒造",
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
         "detectedAlcoholType": "sake",
         "matchReasons": [
-          "蔵元一致"
+          "OCR別名一致: W"
         ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "FEE— ーー性き MR と\n直還放が いで WE\nEEL 0し.\nwap ウーで中\n リー E織\nー 時方な:本品は加熱名理を 一切行っていない\n。 4病のあ、必ず冷蔵庫(-5セー5C)で人し\n\n製半年月より3ヶ月以内にお客し上がり下さい。\nー mm日本酒 xxe0m\nー 距料名:米(国産)、米麹(国産米) ・\nし WREG35% 人\nー 屋枯米: 山形県産龍の落とし子80%催\n 1衝全ーッル分 :16度 de\n\n臣 者:高木酒造株式会社 ” ー\nし LpSHILREER a\n: (製造年月は表貼りに\"\n\n SERAR めms20mにをっでかの",
-          "confidence": 0.5,
-          "charCount": 276,
-          "candidateCount": 1,
-          "detectedProductName": "十四代",
-          "detectedMakerName": "高木酒造",
-          "detectedAlcoholType": "sake",
-          "matchReasons": [
-            "蔵元一致"
-          ]
-        }
-      ],
-      "processingTimeMs": 3586,
+      "variants": [],
+      "processingTimeMs": 0,
       "problemClassification": [
-        "小断片が多い"
+        "fast-path accepted cycle 1"
       ]
     },
     {
@@ -2661,7 +3167,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 635,
+      "processingTimeMs": 632,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2692,7 +3198,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2498,
+      "processingTimeMs": 2545,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2708,8 +3214,13 @@
         "text": "=\\\nBRF\nリー\nタW)\nr 0\n名 ー ー\n3\n;",
         "confidence": 0.29,
         "charCount": 27,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2719,11 +3230,16 @@
           "text": "=\\\nBRF\nリー\nタW)\nr 0\n名 ー ー\n3\n;",
           "confidence": 0.29,
           "charCount": 27,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 352,
+      "processingTimeMs": 362,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2739,12 +3255,12 @@
         "text": "g tre\n\n新年\n\n純米しぼりたて 2.\n\nea\n\nse 1\n\nムー\n\n-0軸は、年の瀬から新年\n\nげばてしばったお洒*\n\nに出共いたじます縁\n\nい和生酒です。\n\n順い、秋上量市9\n\nRRRERORMER - F\n\nたものです。\n\n幸山三吉神社でご祈本\n\nL0 mH\n\nET EERAKRD\n\n大号酵午にて財\n\nwARUEE\n\nSRHRHOMA% RARIC RAT\n\n( AAR\n\nYALT80 B kacEBLT OF\n\npiabhEY\n\nREAILIY) BRR (727\n\nR 災\n\n日本酒(\n\n純米\n\nロール人人\n\nRoty x\n\n12度 (原酒)\n\n(wm\n\nEFIN\n\n米 (秋田県産) 、 米半\n\nRy\n\n60% (麹米、掛米ともに60\n\nX 4\n\n秋田酒とまち100%使用\n\nし\n\nきょうかい6号\n\nき ょ*\n\n新政酒追株式会社 秋田軸\n\n大町が\n\n時年\n\n2023年1月1日\n\nは\n\n023年3月31昌\n\n規特約店で お買い求めくださり",
         "confidence": 0.55,
         "charCount": 429,
-        "candidateCount": 2,
-        "detectedProductName": "新政",
-        "detectedMakerName": "新政酒造",
+        "candidateCount": 3,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
         "detectedAlcoholType": "sake",
         "matchReasons": [
-          "OCR別名一致: 新政"
+          "OCR別名一致: W"
         ],
         "cycle": 2
       },
@@ -2764,8 +3280,13 @@
         "text": "。 \\l \\ 上 の 2 -\n ny e n M L\n; 喘 いい4\nし用 X\n1R ; n や\nJBl oN uu で\nBN u\nj/ 8 )\n/ / トト て内 、\n )\n202 の ー K)\nse ー w :\nN — 3 。』\nra 2 <",
         "confidence": 0.22,
         "charCount": 123,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2775,11 +3296,16 @@
           "text": "。 \\l \\ 上 の 2 -\n ny e n M L\n; 喘 いい4\nし用 X\n1R ; n や\nJBl oN uu で\nBN u\nj/ 8 )\n/ / トト て内 、\n )\n202 の ー K)\nse ー w :\nN — 3 。』\nra 2 <",
           "confidence": 0.22,
           "charCount": 123,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1826,
+      "processingTimeMs": 1863,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2810,7 +3336,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2067,
+      "processingTimeMs": 2105,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -2826,8 +3352,13 @@
         "text": "り 半生\nー cE ¢\nBE\nB a E\nー EE\naffe h5\nーーテー 11] ー\ndihRY wampwn RRALEー Cl\n9を ッ ーAE waBEAR His fall\nWNNEIAEE E TR\nWholBn wemsss srEA) の識\nRpEw ーon ーーてここことと半味ー l\nVIED ー暁劉秋新植信木き麹2美米7!用ー に本\nリサ 筐外田牙松林 Sk © dig 2 Usge) ERoMER\n計にに県洒語 2 5 60 2 見上0り度 の5) SLIEE\nBiale 記秋宮人酒写か0.」 RME 細 あぁ胡\nの5名日間下失人 途 いく和を を g xー) Tai\nGlakE 市代 Eeewull Sai\nWWsokR 大会 pEsREgL THOK\nMasS 町台 合 60秋合名 ーんご\nMrholE Nt8 %EgR Eー#\nTa きき & (\nDS 8 B B2OK ag\n計り ー 2 きき ¥4 補\nDi し る - A\nであーニーニーニー一一一 7%\nょかがょりり Wa as し\nNa mRo0cL-03 ] Z 4\nWE oo¥H2021.03, ー o",
         "confidence": 0.25,
         "charCount": 504,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2837,11 +3368,16 @@
           "text": "り 半生\nー cE ¢\nBE\nB a E\nー EE\naffe h5\nーーテー 11] ー\ndihRY wampwn RRALEー Cl\n9を ッ ーAE waBEAR His fall\nWNNEIAEE E TR\nWholBn wemsss srEA) の識\nRpEw ーon ーーてここことと半味ー l\nVIED ー暁劉秋新植信木き麹2美米7!用ー に本\nリサ 筐外田牙松林 Sk © dig 2 Usge) ERoMER\n計にに県洒語 2 5 60 2 見上0り度 の5) SLIEE\nBiale 記秋宮人酒写か0.」 RME 細 あぁ胡\nの5名日間下失人 途 いく和を を g xー) Tai\nGlakE 市代 Eeewull Sai\nWWsokR 大会 pEsREgL THOK\nMasS 町台 合 60秋合名 ーんご\nMrholE Nt8 %EgR Eー#\nTa きき & (\nDS 8 B B2OK ag\n計り ー 2 きき ¥4 補\nDi し る - A\nであーニーニーニー一一一 7%\nょかがょりり Wa as し\nNa mRo0cL-03 ] Z 4\nWE oo¥H2021.03, ー o",
           "confidence": 0.25,
           "charCount": 504,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5733,
+      "processingTimeMs": 5862,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2856,8 +3392,13 @@
         "text": "あご\nル q ララ\nー ーー l ノミ\n 1 ]\n問二um だ:\n5 欠\n/ 者\nf Cg —.\ni f X, \\% まき は SH]\nー @ ,\n5記す [ kt ーー\n+ 岬: 匠) 3 名\n回只 s ぁ\nEE 人\n T\n し きき\n: E. ぷ も )\n3 YY/ と\" まま\n# y 0 [7\nーー ー 2香\n上中 ののを衝スク\nいて 可 ドンジマ本 *\n. Svのmw\nャイ1 CSUNERe",
         "confidence": 0.25,
         "charCount": 201,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2867,11 +3408,16 @@
           "text": "あご\nル q ララ\nー ーー l ノミ\n 1 ]\n問二um だ:\n5 欠\n/ 者\nf Cg —.\ni f X, \\% まき は SH]\nー @ ,\n5記す [ kt ーー\n+ 岬: 匠) 3 名\n回只 s ぁ\nEE 人\n T\n し きき\n: E. ぷ も )\n3 YY/ と\" まま\n# y 0 [7\nーー ー 2香\n上中 ののを衝スク\nいて 可 ドンジマ本 *\n. Svのmw\nャイ1 CSUNERe",
           "confidence": 0.25,
           "charCount": 201,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2259,
+      "processingTimeMs": 2285,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -2886,8 +3432,13 @@
         "text": "Af し -ly\n3 か == . ー B\n= 」 R \\ = E — pR— W」\nR 本所 剛ー < -2\n ~ 本 。計 1\nod 自 の必\nWhve\\ を / \\=\nFe 暫く WE\nAA wol 4\ns0.0% \\ 「\n52う 時 いて\n ien ンー り1 \\ ] { g\n7 すま 2\nビー 導 @ 8 -淫 y_\n1いいを ニー ol/\ni 仁あ022 っンー ESNTE]\nBENGEE Rc E ー がーー\n$ 目 用の\nリー ここ ® o 前 るささ\n> ツジ @ 。 YE\n7 , Li 1 用 .",
         "confidence": 0.22,
         "charCount": 261,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2897,11 +3448,16 @@
           "text": "Af し -ly\n3 か == . ー B\n= 」 R \\ = E — pR— W」\nR 本所 剛ー < -2\n ~ 本 。計 1\nod 自 の必\nWhve\\ を / \\=\nFe 暫く WE\nAA wol 4\ns0.0% \\ 「\n52う 時 いて\n ien ンー り1 \\ ] { g\n7 すま 2\nビー 導 @ 8 -淫 y_\n1いいを ニー ol/\ni 仁あ022 っンー ESNTE]\nBENGEE Rc E ー がーー\n$ 目 用の\nリー ここ ® o 前 るささ\n> ツジ @ 。 YE\n7 , Li 1 用 .",
           "confidence": 0.22,
           "charCount": 261,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3456,
+      "processingTimeMs": 3488,
       "problemClassification": []
     },
     {
@@ -2914,8 +3470,13 @@
         "text": "が ーッ 折党間\n§ o 0n G 3 委!革\ny ー し ーー 電\nー 。 リン SER - 1\n本 テ析竹生\n ER R WLI: &a,\nb Liad 0 Jif\nー , = & 米 料 ル 家. BTRdT\n “rrswy : 名硬分流 g\nー年 ER&ZL 2 はPO ひ・ 3\n。 oAER SERTEATE\nBRIESA ょ米 0 造本和弘5 て昔本 LA 時\nに REsnmh B2EE m0 洒 2\n ま間4伏うす 1適信県形 酒ーは員\nsiiasenlags Cal\nEEF Ea Rg gBi\n%i% % Sxalax id\n上ー 大人 よ TopdEg 。 菩誠名\nー ー 町 人 トン 人2 人 Zog\nーー ー 六社 N % 収 と 秋 E た>.記\n7 8 8x = ー r\nー ヨー & まま 革 内\n¥ . 85 _:. が\n5 ーー Mi\nー Tx 3 3 が a5 & $ B 当 はり\n; Ye y: ribi E & 1g7』\nー 292 s . iir\n. 7 oe 太\n0 72030 ー7",
         "confidence": 0.24,
         "charCount": 468,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2925,11 +3486,16 @@
           "text": "が ーッ 折党間\n§ o 0n G 3 委!革\ny ー し ーー 電\nー 。 リン SER - 1\n本 テ析竹生\n ER R WLI: &a,\nb Liad 0 Jif\nー , = & 米 料 ル 家. BTRdT\n “rrswy : 名硬分流 g\nー年 ER&ZL 2 はPO ひ・ 3\n。 oAER SERTEATE\nBRIESA ょ米 0 造本和弘5 て昔本 LA 時\nに REsnmh B2EE m0 洒 2\n ま間4伏うす 1適信県形 酒ーは員\nsiiasenlags Cal\nEEF Ea Rg gBi\n%i% % Sxalax id\n上ー 大人 よ TopdEg 。 菩誠名\nー ー 町 人 トン 人2 人 Zog\nーー ー 六社 N % 収 と 秋 E た>.記\n7 8 8x = ー r\nー ヨー & まま 革 内\n¥ . 85 _:. が\n5 ーー Mi\nー Tx 3 3 が a5 & $ B 当 はり\n; Ye y: ribi E & 1g7』\nー 292 s . iir\n. 7 oe 太\n0 72030 ー7",
           "confidence": 0.24,
           "charCount": 468,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5727,
+      "processingTimeMs": 5851,
       "problemClassification": []
     },
     {
@@ -2942,8 +3508,13 @@
         "text": "anl TL s, G A RERY L\nー 0ワルンーン\nーー一 Yoaem.\n部計ル公。 すれトビ 5\nし ( リッイス SARRE RN\n科すか 有料ヘル 製 WS N 党 手 38 肢の - Sa\npo るさかな 問隊82 法でで発ち 肛 ~\npa Ea A]\nPliiin B2E fimyino M Ug\n[an 0 洒 0 gLBn N 地\nーー 、 ZiEp2u2ky 用\nii 酒 てまでるまきさき .\nH Sreaaid--\nHHL SpsririagEl (F\nか りきなと区静ンぁるが ・\nー ] 鳥杉デスる グクビクン EH 放\n5 ー B3tzsmcelM ・。\nー Peihel I リ\n0 い めアデアさき 酒 Le BEY .\nまま のンミに今で業も議引を\n回 て、- ーー コス 23Ethies 朋* X\n{ ー BE£7C 脱5\n: をる ーP\nー Sftn 7 1 {ian\na は5すー\n4 さ き - JE 間 m\n§ 5 た d + & 1d 半 H",
         "confidence": 0.23,
         "charCount": 449,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2953,11 +3524,16 @@
           "text": "anl TL s, G A RERY L\nー 0ワルンーン\nーー一 Yoaem.\n部計ル公。 すれトビ 5\nし ( リッイス SARRE RN\n科すか 有料ヘル 製 WS N 党 手 38 肢の - Sa\npo るさかな 問隊82 法でで発ち 肛 ~\npa Ea A]\nPliiin B2E fimyino M Ug\n[an 0 洒 0 gLBn N 地\nーー 、 ZiEp2u2ky 用\nii 酒 てまでるまきさき .\nH Sreaaid--\nHHL SpsririagEl (F\nか りきなと区静ンぁるが ・\nー ] 鳥杉デスる グクビクン EH 放\n5 ー B3tzsmcelM ・。\nー Peihel I リ\n0 い めアデアさき 酒 Le BEY .\nまま のンミに今で業も議引を\n回 て、- ーー コス 23Ethies 朋* X\n{ ー BE£7C 脱5\n: をる ーP\nー Sftn 7 1 {ian\na は5すー\n4 さ き - JE 間 m\n§ 5 た d + & 1d 半 H",
           "confidence": 0.23,
           "charCount": 449,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5840,
+      "processingTimeMs": 5879,
       "problemClassification": []
     },
     {
@@ -2970,8 +3546,13 @@
         "text": "= た R o 8% * ー\n ¥ 本人 5 Brvi ー に\nとこ木まで 杭業2 Cl Scosona 2 } 1\nに 。 た 放誠\nL Rrrlless : PRIVATE すす\nあの法 Co し酒 方 な\n人計てで基たは且7448\nq iThigr SRg 資藤河\nWESIII0]- Ee\nMitytwpou BN a ー\n4 (よて2来さべくの拓 = J5\n2テスのをア衝の EAE m\nusikzione ー 隆。\nかて三現名島 ®q .\\ Z\nはちらがガがすグツ の は 5 A\nB% +2 る酒で名 醸米 いい. 導 i\nENTITHc 、 誠\n3で酒めし2一 生 - AN\nGHYS e\nL agp # % ェ B BUR\nは2は立とをさ :§ ~N\n2 Lo J 込 ココ て H の 米 2 S\niLaBRln BEN p not0\nと 済 内目に池 (\nooてこしに用 脱各 WpEB AZ\nIikE f- § ” Fy )\n導き案しいぶ B3. REHEC\nEUEANE B aweT L",
         "confidence": 0.29,
         "charCount": 457,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -2981,11 +3562,16 @@
           "text": "= た R o 8% * ー\n ¥ 本人 5 Brvi ー に\nとこ木まで 杭業2 Cl Scosona 2 } 1\nに 。 た 放誠\nL Rrrlless : PRIVATE すす\nあの法 Co し酒 方 な\n人計てで基たは且7448\nq iThigr SRg 資藤河\nWESIII0]- Ee\nMitytwpou BN a ー\n4 (よて2来さべくの拓 = J5\n2テスのをア衝の EAE m\nusikzione ー 隆。\nかて三現名島 ®q .\\ Z\nはちらがガがすグツ の は 5 A\nB% +2 る酒で名 醸米 いい. 導 i\nENTITHc 、 誠\n3で酒めし2一 生 - AN\nGHYS e\nL agp # % ェ B BUR\nは2は立とをさ :§ ~N\n2 Lo J 込 ココ て H の 米 2 S\niLaBRln BEN p not0\nと 済 内目に池 (\nooてこしに用 脱各 WpEB AZ\nIikE f- § ” Fy )\n導き案しいぶ B3. REHEC\nEUEANE B aweT L",
           "confidence": 0.29,
           "charCount": 457,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5448,
+      "processingTimeMs": 5514,
       "problemClassification": []
     },
     {
@@ -3013,7 +3599,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1383,
+      "processingTimeMs": 1413,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3044,7 +3630,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1150,
+      "processingTimeMs": 1169,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3060,8 +3646,13 @@
         "text": "Wh Taa a? E\nまあ oraty\ni ー ーー ーーー二 ーークアター <ニー i うって -\nンジデーニーデーで\nデンジー ーーニラ SS、\nアー / ンー NOR\n sfad Ne\n 8 ンジ\n a コテ ング 6\n 人に2仙人\n。 ー iaー\n ’ (' he\n ー 還 7 朋宮測\n全て に os シラアタ\n科な 2こいベン\n操るたまく き 5 /< ai \\ all\nae ー間時/ _空笛有名 1\n本導くSSな 員 斑\nf (N S \\ l た の ー\n : 』 リリ FINE QUALITY ー\n—— HIR Hony TS つう\n 記 UIUUUUI B-\nii お8 Xa し2 ロクー\n 5 。 ーー . 和も 0 ¥ まま ! リ\n ー 5 -\n hen ー\nWige Tdhl. EE ー\nロン 半- んシン /居\nに 作 4。 nm ]\nスー ママ pe ーーミこう\n(EERRR 導衣 Eyr.\nみ RTR IRCTIRNIRC ー -",
         "confidence": 0.2,
         "charCount": 437,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3071,11 +3662,16 @@
           "text": "Wh Taa a? E\nまあ oraty\ni ー ーー ーーー二 ーークアター <ニー i うって -\nンジデーニーデーで\nデンジー ーーニラ SS、\nアー / ンー NOR\n sfad Ne\n 8 ンジ\n a コテ ング 6\n 人に2仙人\n。 ー iaー\n ’ (' he\n ー 還 7 朋宮測\n全て に os シラアタ\n科な 2こいベン\n操るたまく き 5 /< ai \\ all\nae ー間時/ _空笛有名 1\n本導くSSな 員 斑\nf (N S \\ l た の ー\n : 』 リリ FINE QUALITY ー\n—— HIR Hony TS つう\n 記 UIUUUUI B-\nii お8 Xa し2 ロクー\n 5 。 ーー . 和も 0 ¥ まま ! リ\n ー 5 -\n hen ー\nWige Tdhl. EE ー\nロン 半- んシン /居\nに 作 4。 nm ]\nスー ママ pe ーーミこう\n(EERRR 導衣 Eyr.\nみ RTR IRCTIRNIRC ー -",
           "confidence": 0.2,
           "charCount": 437,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5681,
+      "processingTimeMs": 5723,
       "problemClassification": []
     },
     {
@@ -3088,8 +3684,13 @@
         "text": "『 る\n- r\nE . 1\nー /\nに 0 《 ー\n% 。 2\nEUETURN\n 9 避織 』\n。 g 5 1\nに\n健、\nf 、 b き \\\nRa 導 ー\nに . 1\n遇ー 』 ]\nE 間 $ 4\n N 上 &で A\no ー © -\n& h\\.\n ッッ 用\nA wp 9 > ト\n4 (なを放ヨ\nマ : Ni 甘口 { E ) ー\nNT CES\n18] 内 ®\n て(し1+」 Ae 1",
         "confidence": 0.25,
         "charCount": 193,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3099,11 +3700,16 @@
           "text": "『 る\n- r\nE . 1\nー /\nに 0 《 ー\n% 。 2\nEUETURN\n 9 避織 』\n。 g 5 1\nに\n健、\nf 、 b き \\\nRa 導 ー\nに . 1\n遇ー 』 ]\nE 間 $ 4\n N 上 &で A\no ー © -\n& h\\.\n ッッ 用\nA wp 9 > ト\n4 (なを放ヨ\nマ : Ni 甘口 { E ) ー\nNT CES\n18] 内 ®\n て(し1+」 Ae 1",
           "confidence": 0.25,
           "charCount": 193,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2314,
+      "processingTimeMs": 2351,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3119,8 +3725,13 @@
         "text": "/A4 <\nを で .\n~ _\nPIC 《\nン\nD, G\nBY . てて お\noy -\ntae\n0 4\n2 X ¢ :\n“Y 5 ルー WW\nを 、 のや\nタン “A\ne ッッ\n名作 0いせ1\n{% 9 0\nの2だ2が 7 1ア9\n4 [ir (y ー 人 が\n 4 )\n0 [ AE\no 交人か。 当 [てと p 1\npeld Wer\nEB A\nYkdioA } § 1 b ina\n分シンが Japa Brewing Society Yoast ’ 人\nンク 』\nHa ー\n[用グッの 本 No.6\nアンルン\n菩軍クッルク . The: Oldese Siche 2を\nLn E N g\no が NN の/ eo",
         "confidence": 0.22,
         "charCount": 308,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 2,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3130,11 +3741,16 @@
           "text": "/A4 <\nを で .\n~ _\nPIC 《\nン\nD, G\nBY . てて お\noy -\ntae\n0 4\n2 X ¢ :\n“Y 5 ルー WW\nを 、 のや\nタン “A\ne ッッ\n名作 0いせ1\n{% 9 0\nの2だ2が 7 1ア9\n4 [ir (y ー 人 が\n 4 )\n0 [ AE\no 交人か。 当 [てと p 1\npeld Wer\nEB A\nYkdioA } § 1 b ina\n分シンが Japa Brewing Society Yoast ’ 人\nンク 』\nHa ー\n[用グッの 本 No.6\nアンルン\n菩軍クッルク . The: Oldese Siche 2を\nLn E N g\no が NN の/ eo",
           "confidence": 0.22,
           "charCount": 308,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 2,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3439,
+      "processingTimeMs": 3455,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3149,8 +3765,13 @@
         "text": "(ー 前 ー や 1 ー 70R【本 Is\ni . ・ = ーーCaa 人 ー\nee ー i ー\nー THISWAY J ー 也、 ー \\ ー\nー ー a に 1\nF 1 } $ 4 / § 』 ]\nの ー B\nー 匠\ne 径 ー :\n< SES ー ー\nLi 6 ー い\n 4 k ー L wll .\nIN p 66 リ 『 、 ー\nて本 ー Prd 4 ,」 民\nーー。 卓上 ご ー MouNTAIN ー 時本\nき : 1 2021 ーー",
         "confidence": 0.35,
         "charCount": 222,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3160,11 +3781,16 @@
           "text": "(ー 前 ー や 1 ー 70R【本 Is\ni . ・ = ーーCaa 人 ー\nee ー i ー\nー THISWAY J ー 也、 ー \\ ー\nー ー a に 1\nF 1 } $ 4 / § 』 ]\nの ー B\nー 匠\ne 径 ー :\n< SES ー ー\nLi 6 ー い\n 4 k ー L wll .\nIN p 66 リ 『 、 ー\nて本 ー Prd 4 ,」 民\nーー。 卓上 ご ー MouNTAIN ー 時本\nき : 1 2021 ーー",
           "confidence": 0.35,
           "charCount": 222,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1968,
+      "processingTimeMs": 1972,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -3179,8 +3805,13 @@
         "text": "2 i し TMS\nすす ー 4\n'8 t p\n/ ム\n1 ー\n:\nb\n- 3 A :\nmw全の - 遍笠\n: / .\nー ー\n; 3 ー 編 Moms 半 ーー —al に 5・",
         "confidence": 0.21,
         "charCount": 90,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3190,11 +3821,16 @@
           "text": "2 i し TMS\nすす ー 4\n'8 t p\n/ ム\n1 ー\n:\nb\n- 3 A :\nmw全の - 遍笠\n: / .\nー ー\n; 3 ー 編 Moms 半 ーー —al に 5・",
           "confidence": 0.21,
           "charCount": 90,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1347,
+      "processingTimeMs": 1359,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3225,7 +3861,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3388,
+      "processingTimeMs": 3382,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3240,8 +3876,13 @@
         "text": "p ¥ - Foo 韻 1 wa\n1448 W : 9\n 了 いい 【二\nf &\ne ー . 4\n「 1にる\nE & K\nョ いい 生き\n ’\nWak\nae ビー\n『\ni8 ー\n( ー\n3 者 』 i\nーー A 、\n。 5 近拉りりい\nーー 薄 と E 人 し\n \" w\nンー\nパー パロ\nー 。 §\n\\ 7\n人や E に\n」 ーメ\nゃ E.\nらい\n~\nさり",
         "confidence": 0.25,
         "charCount": 179,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3251,11 +3892,16 @@
           "text": "p ¥ - Foo 韻 1 wa\n1448 W : 9\n 了 いい 【二\nf &\ne ー . 4\n「 1にる\nE & K\nョ いい 生き\n ’\nWak\nae ビー\n『\ni8 ー\n( ー\n3 者 』 i\nーー A 、\n。 5 近拉りりい\nーー 薄 と E 人 し\n \" w\nンー\nパー パロ\nー 。 §\n\\ 7\n人や E に\n」 ーメ\nゃ E.\nらい\n~\nさり",
           "confidence": 0.25,
           "charCount": 179,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2072,
+      "processingTimeMs": 2057,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3264,30 +3910,27 @@
     {
       "fileName": "IMG_4618 2.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "-の商品はク〇暑い真夏に「冷やして鈴\n由仁込みの酒」 というテーマで仕入ん5 [8\n二です。夏に太陽に向かって咲くひまね\nをイメージし、サンシャイン イエロー\n則ました。 ーー\n由論仕込みと云えば、 しっかり熟成させた:\nをおぉ料にして楽しむのが一般的ですか %\nて捧りたてのフレッシュな状態で出荷レバ\n計。 冷えた状態でバランスが取れるよノン\n放設計しているため、 HMICEAVTE\nので お増好きの方はスルーしてくた\n科名 (秋田県 器 っ\n店 g8\nな 5和ai\nア ルコール分 15度 回 L 山 z\n論* 株式人直木酒造店 ご\nbas 株式会社 山本酒造店 —\nSs 條都八峰町八森字八森2?\" T",
-        "confidence": 0.67,
-        "charCount": 305,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "-の商品はク〇暑い真夏に「冷やして9\n\n内仁込みの酒」というテーマで仕込\n\nRRCT. 夏に太陽に向かって咲くひまか\n\n*イメージじ、 サンシャイン イエロー\n\nけけまじだ\n\n山府仕込みと云えば、 しっかり熟成さぜ7\n\n0をおぉ贈にして楽しむのが一般的ですか\n\nて振りたてのフレッシュな状態で\n\n出朋レして6\n\n・谷えた状態でバランス\n\n=\n\nが取\n\nれるよう2\n\nE\n\nR:3\n\n計しているため、 BHIC\n\nは向いて be\n\nで SfFERERN—LT\n\niitig,\n\n1 a\n\n県産米\n\n米 He 県産)、 ElE\n\n-,\n\nロロ\n\n55%\n\n回\n\nロール\n\n15度\n\nZ\n\n用用\n\n0\n\n山\n\n式会社 山 西造店\n\nz\n\n&;\n\n郡八峰町八森字八森2\n\nWa 坦になってから\n\n2021.7",
+        "confidence": 0.71,
+        "charCount": 350,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "-の商品はク〇暑い真夏に「冷やして鈴\n由仁込みの酒」 というテーマで仕入ん5 [8\n二です。夏に太陽に向かって咲くひまね\nをイメージし、サンシャイン イエロー\n則ました。 ーー\n由論仕込みと云えば、 しっかり熟成させた:\nをおぉ料にして楽しむのが一般的ですか %\nて捧りたてのフレッシュな状態で出荷レバ\n計。 冷えた状態でバランスが取れるよノン\n放設計しているため、 HMICEAVTE\nので お増好きの方はスルーしてくた\n科名 (秋田県 器 っ\n店 g8\nな 5和ai\nア ルコール分 15度 回 L 山 z\n論* 株式人直木酒造店 ご\nbas 株式会社 山本酒造店 —\nSs 條都八峰町八森字八森2?\" T",
-          "confidence": 0.67,
-          "charCount": 305,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 2575,
-      "problemClassification": []
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "fast-path accepted cycle 1"
+      ]
     },
     {
       "fileName": "IMG_4619 2.HEIC",
@@ -3299,8 +3942,13 @@
         "text": "販いッッリー 1\nRRー —\nー ? く\nー) 7 __\nAm\nー 1 ー\nる _\n- がこと —\nl W5 * ー\nye 関間0\n & 4 =\nいた A\n(革ー N 』\nは 9 いい導 し\n較 : /全み\n! 2し",
         "confidence": 0.24,
         "charCount": 108,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3310,11 +3958,16 @@
           "text": "販いッッリー 1\nRRー —\nー ? く\nー) 7 __\nAm\nー 1 ー\nる _\n- がこと —\nl W5 * ー\nye 関間0\n & 4 =\nいた A\n(革ー N 』\nは 9 いい導 し\n較 : /全み\n! 2し",
           "confidence": 0.24,
           "charCount": 108,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1562,
+      "processingTimeMs": 1560,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3323,30 +3976,27 @@
     {
       "fileName": "IMG_4620 2.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "9 2 —\n介炒内 7o0mz\n多肉酸 :3 N 720友ー\nREL BERL, 人を愛す。\n2なさまに愛き導る酒を昌指します。 4\nーー一 EERRR - —\nEg < 【内容量 720 mg】\nメみさ 礎(国産)、米麹(国産米) —=\nBREa 50% =\nコール分 16E =\nig p =\nWW pg 用\nbigy 表倫蔵(10C以下で保存) =Z\nCihReARE =\n上 =\n[内05ぶ電装松市吉攻reニーニー",
-        "confidence": 0.41,
-        "charCount": 211,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "A\n\n%\n\n7マ\n\nJEX\n\nL+56[¢\n\n=\n\nE)\n\n業 を\n\n#okoh BR\n\nい\n\n%\n\n&\n\n720m/z\n\nMEL, BERL, AZRT\n\n2なさまに愛き本る酒を目指します\n\n【串\n\n昭和\n\n日本酒】 【内容量 720 m】\n\n 本(国産)、米麹(国産米)\n\n—\n\n歩合 50%\n\nアル\n\nコール\n\n分 16度\n\n=\n\no 朋\n\n03.06\n\n=\n\nいい BemGuou Fon) =\n\n=\n\nWM\n\n5 入銘酸株式会社\n\n8\n\n=\n\nー #\n\n4)\n\n242(\n\n松市東\n\n8=7\n\nHig)\n\n)0031 FAX 0242(27)00% ,\n\nのが\n\nは\n\n%525 :\n\nませんが包質等には則\n\ntd B[ECTH",
+        "confidence": 0.54,
+        "charCount": 319,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "9 2 —\n介炒内 7o0mz\n多肉酸 :3 N 720友ー\nREL BERL, 人を愛す。\n2なさまに愛き導る酒を昌指します。 4\nーー一 EERRR - —\nEg < 【内容量 720 mg】\nメみさ 礎(国産)、米麹(国産米) —=\nBREa 50% =\nコール分 16E =\nig p =\nWW pg 用\nbigy 表倫蔵(10C以下で保存) =Z\nCihReARE =\n上 =\n[内05ぶ電装松市吉攻reニーニー",
-          "confidence": 0.41,
-          "charCount": 211,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 2555,
-      "problemClassification": []
+      "variants": [],
+      "processingTimeMs": 0,
+      "problemClassification": [
+        "fast-path accepted cycle 1"
+      ]
     },
     {
       "fileName": "IMG_4621.HEIC",
@@ -3358,8 +4008,13 @@
         "text": "5導 ii5Wi7 ' ビー ey 7\n5る\nて\nー ERR\n遇\n\"y 訂\n.」] 6",
         "confidence": 0.21,
         "charCount": 43,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3369,11 +4024,16 @@
           "text": "5導 ii5Wi7 ' ビー ey 7\n5る\nて\nー ERR\n遇\n\"y 訂\n.」] 6",
           "confidence": 0.21,
           "charCount": 43,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 638,
+      "processingTimeMs": 620,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3403,7 +4063,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 736,
+      "processingTimeMs": 744,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3419,8 +4079,13 @@
         "text": "Japan Brewing Society us\nNo.6\nThe Olttose Sirhe クッ\nUsed i Modlerss GBrew\nDiscoveredie 7950\nEE\n上\nいい &\nのmp ハクリーペー ティ",
         "confidence": 0.31,
         "charCount": 114,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 2,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3430,11 +4095,16 @@
           "text": "Japan Brewing Society us\nNo.6\nThe Olttose Sirhe クッ\nUsed i Modlerss GBrew\nDiscoveredie 7950\nEE\n上\nいい &\nのmp ハクリーペー ティ",
           "confidence": 0.31,
           "charCount": 114,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 2,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1102,
+      "processingTimeMs": 1106,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3464,7 +4134,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1827,
+      "processingTimeMs": 1768,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3480,8 +4150,13 @@
         "text": "ー 、 Al\n\" f]\n! ー ンー\n件 W ンー\n中 し\n[ たーー !\n リー\nーー一\n/ ー リル\n/ ー ン目:日本酒\n/ 寺品0 アテーナー レーンジシン\n» { 3 はで ニーテランジラン ーー\n4 ー 量: 720ml ンー\nー N ・量・72Uml アルコー\n本 リリ ii導導\n貼り 料名 : 米(国産).米=う\n補い ィ7名・不(国産 不こ\"\n〆先 ーー\nー 歩合:65%。 ンー\nー \\少百・0D0\nー ミミ\nー - 所に保存\nロロ * 7脂所に 休仔\nー 年月・拓邊下可記寺\n1 =—1 アヨティ ビビノド ゅっ {= &f =\nー ジンデーンー ンー PobplLBY,\n生 ジー リー\n上 考自の圭 洒洗寿=\nご 且・山 Dr= ッy由ー ゴビ生ご\nーー {E JELZN A\nセーイイ EEIEL 2 BIk ーー\n_ 信和則宗大責不中\n。 ンー リー\nに シテーッメロー 一 へ 人\n ーー _ の九一一互所1\n[ ラー ーー一 ーー\n』 に) フル\n上は20茂にかなってから。\n 敵の折中各のルルkoんの介\nー ごトト邊孔期の女性は赤ち: の健康ー\nー ルン Ea aaan NADIE\nー Seenl て ださい。 上品用 re 3\nー 栓後はで しリー 四愉旅時\nー トーアン- きるだけ早目におー ヒナ\nー リン\nー bee— o\nTE ーー\nー 旗ー\nー ー",
         "confidence": 0.4,
         "charCount": 600,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3491,11 +4166,16 @@
           "text": "ー 、 Al\n\" f]\n! ー ンー\n件 W ンー\n中 し\n[ たーー !\n リー\nーー一\n/ ー リル\n/ ー ン目:日本酒\n/ 寺品0 アテーナー レーンジシン\n» { 3 はで ニーテランジラン ーー\n4 ー 量: 720ml ンー\nー N ・量・72Uml アルコー\n本 リリ ii導導\n貼り 料名 : 米(国産).米=う\n補い ィ7名・不(国産 不こ\"\n〆先 ーー\nー 歩合:65%。 ンー\nー \\少百・0D0\nー ミミ\nー - 所に保存\nロロ * 7脂所に 休仔\nー 年月・拓邊下可記寺\n1 =—1 アヨティ ビビノド ゅっ {= &f =\nー ジンデーンー ンー PobplLBY,\n生 ジー リー\n上 考自の圭 洒洗寿=\nご 且・山 Dr= ッy由ー ゴビ生ご\nーー {E JELZN A\nセーイイ EEIEL 2 BIk ーー\n_ 信和則宗大責不中\n。 ンー リー\nに シテーッメロー 一 へ 人\n ーー _ の九一一互所1\n[ ラー ーー一 ーー\n』 に) フル\n上は20茂にかなってから。\n 敵の折中各のルルkoんの介\nー ごトト邊孔期の女性は赤ち: の健康ー\nー ルン Ea aaan NADIE\nー Seenl て ださい。 上品用 re 3\nー 栓後はで しリー 四愉旅時\nー トーアン- きるだけ早目におー ヒナ\nー リン\nー bee— o\nTE ーー\nー 旗ー\nー ー",
           "confidence": 0.4,
           "charCount": 600,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 9103,
+      "processingTimeMs": 9108,
       "problemClassification": []
     },
     {
@@ -3523,7 +4203,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1639,
+      "processingTimeMs": 1669,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3554,7 +4234,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 1847,
+      "processingTimeMs": 1886,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3570,13 +4250,8 @@
         "text": "T¥\nを\nJUYONDAI\n本代 中取り純吟 播州山田鈴\n揚げ槽時、 香味のバランスが最良の補を集\nめることから「中取り」と呼ばれ、酒米の#\n2 味わいを充分に堪能できる葬酒\n曲:日 本酒 。純米吟醸酒\n作料名 : 米(国産) 、米麺(国産米\n半生:50% -\n7ルル 米兵庫県特A地区産山田錦100%\niy きど分 ) 5度 内容量 1.8L\n* 合:高2 酒造 \\\nB o r\nN {方 法 は 必ず冷蔵庫 (-5てー5C)で名\n、 お叶めにお妊し上がり下“人\n (製造年月は表周りに\"",
         "confidence": 0.65,
         "charCount": 245,
-        "candidateCount": 1,
-        "detectedProductName": "十四代",
-        "detectedMakerName": "高木酒造",
-        "detectedAlcoholType": "sake",
-        "matchReasons": [
-          "OCR別名一致: JUYONDAI"
-        ],
+        "candidateCount": 0,
+        "matchReasons": [],
         "cycle": 2
       },
       "variants": [
@@ -3586,16 +4261,11 @@
           "text": "T¥\nを\nJUYONDAI\n本代 中取り純吟 播州山田鈴\n揚げ槽時、 香味のバランスが最良の補を集\nめることから「中取り」と呼ばれ、酒米の#\n2 味わいを充分に堪能できる葬酒\n曲:日 本酒 。純米吟醸酒\n作料名 : 米(国産) 、米麺(国産米\n半生:50% -\n7ルル 米兵庫県特A地区産山田錦100%\niy きど分 ) 5度 内容量 1.8L\n* 合:高2 酒造 \\\nB o r\nN {方 法 は 必ず冷蔵庫 (-5てー5C)で名\n、 お叶めにお妊し上がり下“人\n (製造年月は表周りに\"",
           "confidence": 0.65,
           "charCount": 245,
-          "candidateCount": 1,
-          "detectedProductName": "十四代",
-          "detectedMakerName": "高木酒造",
-          "detectedAlcoholType": "sake",
-          "matchReasons": [
-            "OCR別名一致: JUYONDAI"
-          ]
+          "candidateCount": 0,
+          "matchReasons": []
         }
       ],
-      "processingTimeMs": 2645,
+      "processingTimeMs": 2650,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3610,8 +4280,13 @@
         "text": "。 『\"和 A\nをか 和憲ミ、\n_、 ー \"\n\" !馬 ーーペー\nEe 4 ~ ! 2 しいい\n\nー r sa\n内 ー し ー ! ゃ *\nEst — 7, CHITA\n 山名 q LE GSkY py ー\n着用 つり リリ fest K\n出 を REES タタ 左\nー月一 リ 導 26 ー\n4もし) 人 楽ー 4 の E\n7 選任 上 リリ 放二寺 -\n FR osemmam 旦\n伯ミ所 y GY ~\n半生 き ¥B\nWilR] E ー\n@0 しい # ンク ビシ 1 ー = に 』 1\n< § 肝と本ー L\n=N TBu NIR 人2 ー die- —2H (8\n BELERR=—= —",
         "confidence": 0.26,
         "charCount": 299,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 2,
+        "detectedProductName": "知多",
+        "detectedMakerName": "サントリー",
+        "detectedAlcoholType": "whisky",
+        "matchReasons": [
+          "OCR別名一致: CHITA"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3621,11 +4296,16 @@
           "text": "。 『\"和 A\nをか 和憲ミ、\n_、 ー \"\n\" !馬 ーーペー\nEe 4 ~ ! 2 しいい\n\nー r sa\n内 ー し ー ! ゃ *\nEst — 7, CHITA\n 山名 q LE GSkY py ー\n着用 つり リリ fest K\n出 を REES タタ 左\nー月一 リ 導 26 ー\n4もし) 人 楽ー 4 の E\n7 選任 上 リリ 放二寺 -\n FR osemmam 旦\n伯ミ所 y GY ~\n半生 き ¥B\nWilR] E ー\n@0 しい # ンク ビシ 1 ー = に 』 1\n< § 肝と本ー L\n=N TBu NIR 人2 ー die- —2H (8\n BELERR=—= —",
           "confidence": 0.26,
           "charCount": 299,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 2,
+          "detectedProductName": "知多",
+          "detectedMakerName": "サントリー",
+          "detectedAlcoholType": "whisky",
+          "matchReasons": [
+            "OCR別名一致: CHITA"
+          ]
         }
       ],
-      "processingTimeMs": 4267,
+      "processingTimeMs": 4268,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3640,8 +4320,13 @@
         "text": "& h E Npaany トト ジア\n ー ヨ F\n9 マッ £ - に -\n人 てき アー =\nas 1 に :\n\\% R =\n : w ¢\n1 -. ue を\n・ E\n・・ぅ 葵 に 4\na RAN\n= 上 B 記 —\n~ 3 』 人倫 al - 公 、 ーー\n‘ » う 。沿 層 < . h= 3\nツイ \\ _ 5 = ビ & N » boe\n婦 « ーー ¢ p : Cha\nAl ーー 衝 - ーー 当\n~thh : —=\nB] ESaE ~&\nSi 5 ーー\nA R* € & E\nと ふさ 、、 へ邊 &\nded = a pi Ey - _el\n. に + .\nの 上 \\ a\n h! ー .当\n』 3 ーーンクジの\nak \\ - R F\n , - E v\nE & ) : 内\nが革 F 4 ーー\nA — みみで*",
         "confidence": 0.19,
         "charCount": 365,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3651,11 +4336,16 @@
           "text": "& h E Npaany トト ジア\n ー ヨ F\n9 マッ £ - に -\n人 てき アー =\nas 1 に :\n\\% R =\n : w ¢\n1 -. ue を\n・ E\n・・ぅ 葵 に 4\na RAN\n= 上 B 記 —\n~ 3 』 人倫 al - 公 、 ーー\n‘ » う 。沿 層 < . h= 3\nツイ \\ _ 5 = ビ & N » boe\n婦 « ーー ¢ p : Cha\nAl ーー 衝 - ーー 当\n~thh : —=\nB] ESaE ~&\nSi 5 ーー\nA R* € & E\nと ふさ 、、 へ邊 &\nded = a pi Ey - _el\n. に + .\nの 上 \\ a\n h! ー .当\n』 3 ーーンクジの\nak \\ - R F\n , - E v\nE & ) : 内\nが革 F 4 ーー\nA — みみで*",
           "confidence": 0.19,
           "charCount": 365,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 4331,
+      "processingTimeMs": 4315,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多"
@@ -3686,7 +4376,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 509,
+      "processingTimeMs": 531,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -3716,7 +4406,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 3123,
+      "processingTimeMs": 3377,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3731,8 +4421,13 @@
         "text": "832E2 . )\n陸時 メ\n蜂細 _」 論絆和 記さ\n、 Bah —\n5 Whgy 「議圭\nが5g 計 ーー\ny 2ウラままいべ\nだするたよ問 -\n+8 £3t% :\nー BET ルレご\n後が分栓\nは吹おの\n NN\nATATH 5\n/ の\nッー\nの っ\nダダ W,\n“ wy\n<\na 。 /\nー ~ ー ご\nA,\n ー a\nr\n; - 生ま 0\n。 $ ’\nに - ィ\n: SIRIUS 4\nいい View",
         "confidence": 0.36,
         "charCount": 204,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3742,11 +4437,16 @@
           "text": "832E2 . )\n陸時 メ\n蜂細 _」 論絆和 記さ\n、 Bah —\n5 Whgy 「議圭\nが5g 計 ーー\ny 2ウラままいべ\nだするたよ問 -\n+8 £3t% :\nー BET ルレご\n後が分栓\nは吹おの\n NN\nATATH 5\n/ の\nッー\nの っ\nダダ W,\n“ wy\n<\na 。 /\nー ~ ー ご\nA,\n ー a\nr\n; - 生ま 0\n。 $ ’\nに - ィ\n: SIRIUS 4\nいい View",
           "confidence": 0.36,
           "charCount": 204,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1809,
+      "processingTimeMs": 1799,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3754,31 +4454,26 @@
     {
       "fileName": "IMG_5207.HEIC",
       "cycle": 2,
-      "status": "success",
+      "status": "reused",
       "best": {
-        "variant": "center-label-gray-contrast",
-        "psm": "6",
-        "text": "1TEIEN 人能\n\nNEYe ;\n\n1:2 . 要 SF\n\n2だ 渦 h\n\n ロ [—\n\n5人 族 ー\n\n生か -\n\nー 誕生年月 。\n\n& 1 C 2022年12月\n\n5 潟う 出荷日\n\n 2023年4月18日\n\n7p ~ HZEJ\n\nFIE ガカス圧の関係から出茶 )\n\nK 崎 日より1ヶ月以げ :\nジジ .\n$is アル 4\n\n; E コール分:13度 1]\n\n 3 不 ~ に = Ld\n\n3 5 *丘 内容重\n\nは 生酒 500mー\n\n% 0 中\n\n前 則ー\n\nNM 地 ー 上",
-        "confidence": 0.51,
-        "charCount": 246,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "variant": "converted-resized",
+        "psm": "11",
+        "text": "日\n\n材\n\nI)\n\n8 ー\n\n本\n\n14 §\n\n7\n\nw/\n\nHg ol\n\n]\n\nand\n\n新座\n\n央 湯\n\n7\n\n県\n\nも人 庄\n\nsRND\n\n誕生年月\n\n2022年12月\n\n新\n\n出荷日\n\n2023年4月18日\n\n県 じ\n\nカス圧の関係\n\nから出荷\n\ngk\n\nE\n\n日より1ヶ月\n\nをおススメします\n\n内の飲酒\n\n市潟\n\n県\n\nFILT—)l5\n\n):13度\n\ni\n\nWi\n\nMM\n\ng 3%\n\n内容量\n\n3 5\n\n25\n\n衝\n\n地\n\n則ー\n\nll\n\nー\n\n<72ー\n\n町ー",
+        "confidence": 0.57,
+        "charCount": 239,
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
-      "variants": [
-        {
-          "variant": "center-label-gray-contrast",
-          "psm": "6",
-          "text": "1TEIEN 人能\n\nNEYe ;\n\n1:2 . 要 SF\n\n2だ 渦 h\n\n ロ [—\n\n5人 族 ー\n\n生か -\n\nー 誕生年月 。\n\n& 1 C 2022年12月\n\n5 潟う 出荷日\n\n 2023年4月18日\n\n7p ~ HZEJ\n\nFIE ガカス圧の関係から出茶 )\n\nK 崎 日より1ヶ月以げ :\nジジ .\n$is アル 4\n\n; E コール分:13度 1]\n\n 3 不 ~ に = Ld\n\n3 5 *丘 内容重\n\nは 生酒 500mー\n\n% 0 中\n\n前 則ー\n\nNM 地 ー 上",
-          "confidence": 0.51,
-          "charCount": 246,
-          "candidateCount": 0,
-          "matchReasons": []
-        }
-      ],
-      "processingTimeMs": 1874,
+      "variants": [],
+      "processingTimeMs": 0,
       "problemClassification": [
-        "小断片が多い"
+        "fast-path accepted cycle 1"
       ]
     },
     {
@@ -3791,8 +4486,13 @@
         "text": "We & 3\nリリ 特 天\n§ リリ 。 Ji; お 上 ー 還 ーー %\nelRE THE\n2 THPH2\n- __% wiINE\nWuLECTI0陸\n5 1生 ーー 詳\nこと",
         "confidence": 0.14,
         "charCount": 89,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3802,11 +4502,16 @@
           "text": "We & 3\nリリ 特 天\n§ リリ 。 Ji; お 上 ー 還 ーー %\nelRE THE\n2 THPH2\n- __% wiINE\nWuLECTI0陸\n5 1生 ーー 詳\nこと",
           "confidence": 0.14,
           "charCount": 89,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1785,
+      "processingTimeMs": 1787,
       "problemClassification": [
         "低信頼度"
       ]
@@ -3821,8 +4526,13 @@
         "text": "T A ー\n- - - Pt\nる 1 ーー一 wv ーS、\n! ! 敵 )\nー (TM 3\n[faltk }\n しとかで2 時\nVa r リ が\nし \\ 。\nーー テニーー - '\n\" プン 明 ゴー\nL / y' PS = ~¥4\nmu , SRIR-- - し\nN } £ 7イノ /\nに に きただ4\n[ Pa— ーー ¥\n: で・ 1で<で・, —— —= \\iy\n4 、 は e EEE v\nご ひ Rー AEE\n4 C aER) B\n ジン -= \\\\GP\nj el € ARET AANET\n PR C, CAR いいにNM\nゆ,。 阪ソ 所うらくい旧ー\n部どと もし ( る L\n則本條ーー ーーツリ S\n』 em y — き h\n1 — y &\nや OLD ._Vaul\nきい こも Y 回\nー\nLSES \"ULTENE\nも y\nSIN cKY\nSrs MALT scOTCH WS\nー Ak a\n~ rowinrue rom or\nl ー) meas に 。。\n: 12 enee [E ッッ\nOppe——y ー 。。。\n、 ンー てププエア\nに い 一一一一- — riud %",
         "confidence": 0.3,
         "charCount": 500,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3832,11 +4542,16 @@
           "text": "T A ー\n- - - Pt\nる 1 ーー一 wv ーS、\n! ! 敵 )\nー (TM 3\n[faltk }\n しとかで2 時\nVa r リ が\nし \\ 。\nーー テニーー - '\n\" プン 明 ゴー\nL / y' PS = ~¥4\nmu , SRIR-- - し\nN } £ 7イノ /\nに に きただ4\n[ Pa— ーー ¥\n: で・ 1で<で・, —— —= \\iy\n4 、 は e EEE v\nご ひ Rー AEE\n4 C aER) B\n ジン -= \\\\GP\nj el € ARET AANET\n PR C, CAR いいにNM\nゆ,。 阪ソ 所うらくい旧ー\n部どと もし ( る L\n則本條ーー ーーツリ S\n』 em y — き h\n1 — y &\nや OLD ._Vaul\nきい こも Y 回\nー\nLSES \"ULTENE\nも y\nSIN cKY\nSrs MALT scOTCH WS\nー Ak a\n~ rowinrue rom or\nl ー) meas に 。。\n: 12 enee [E ッッ\nOppe——y ー 。。。\n、 ンー てププエア\nに い 一一一一- — riud %",
           "confidence": 0.3,
           "charCount": 500,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 6190,
+      "processingTimeMs": 6288,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3851,8 +4566,13 @@
         "text": "0 Ey 上\n訂 あい ¥y\nちん ー#F で ー\n0Wiw & 隔ていい ’\n... L-— oa\n@ 「 0 —-\nA1) b 4\n) h f R\nN 2 N 2ミニララ ー\nFR: : »30EZZ08H\n3 E w ークマミゞんが ー\ne 所 9 間還= e / . Be ・ ーー\n 8 Be R. そミ\n — 上\n— 0 て ド 用 )\n・で3 — i b:\nビー ーーー ;\n# a _ AM _- 阪和 上 M0) : 1\n& —— — _ 1 I 回 § し\nョーーー ー ー 1\n」 所 5 pi菩 1 d 】 -\n則 J . ー J\n 選計 。 E 導\n N o り ーー 回がて dd ト w\n を ーW う>沙40 0 L 1\nN いい SrAe o8\n= ンタ Ao N— 博章\ne ,ー や ーー LfT w",
         "confidence": 0.24,
         "charCount": 369,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3862,11 +4582,16 @@
           "text": "0 Ey 上\n訂 あい ¥y\nちん ー#F で ー\n0Wiw & 隔ていい ’\n... L-— oa\n@ 「 0 —-\nA1) b 4\n) h f R\nN 2 N 2ミニララ ー\nFR: : »30EZZ08H\n3 E w ークマミゞんが ー\ne 所 9 間還= e / . Be ・ ーー\n 8 Be R. そミ\n — 上\n— 0 て ド 用 )\n・で3 — i b:\nビー ーーー ;\n# a _ AM _- 阪和 上 M0) : 1\n& —— — _ 1 I 回 § し\nョーーー ー ー 1\n」 所 5 pi菩 1 d 】 -\n則 J . ー J\n 選計 。 E 導\n N o り ーー 回がて dd ト w\n を ーW う>沙40 0 L 1\nN いい SrAe o8\n= ンタ Ao N— 博章\ne ,ー や ーー LfT w",
           "confidence": 0.24,
           "charCount": 369,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 4203,
+      "processingTimeMs": 4298,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -3881,8 +4606,13 @@
         "text": "% ル EA\n上5 保コ精原特 WEH\n者 存1米材定 HB%%\n0 をおる が \\\n} 名称 一純 郷 内\nド 要1560 米 ビー 。 。\niogay *g\niVL 1-\n。 対 炒\n区代\nb\n町本 産\n9 店 *\nww (), oTHP\n0 ていを生かす ため、 LUが\nれが品めます そのためオリの出ること。 pi\n のM折には品記ためオリ と開栓傍けどー",
         "confidence": 0.4,
         "charCount": 182,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3892,11 +4622,16 @@
           "text": "% ル EA\n上5 保コ精原特 WEH\n者 存1米材定 HB%%\n0 をおる が \\\n} 名称 一純 郷 内\nド 要1560 米 ビー 。 。\niogay *g\niVL 1-\n。 対 炒\n区代\nb\n町本 産\n9 店 *\nww (), oTHP\n0 ていを生かす ため、 LUが\nれが品めます そのためオリの出ること。 pi\n のM折には品記ためオリ と開栓傍けどー",
           "confidence": 0.4,
           "charCount": 182,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2138,
+      "processingTimeMs": 2040,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -3911,8 +4646,13 @@
         "text": "-~ 所 ! \\ 1\nー \\\nLL :\nw7o ーH\ny\\/o% 4 ー\nLo/l \\W9 2\nムーとフンが 1\n& , 青 上\nーー導き 4\n& Nillllk =\n3 に\n0 o\nA 7 い\n島 、 W較みー N\nマー 衣\n2区 ー\n用入 N\nで TM 0 に き\n~-~ ) -\nーーて リ、 TR A : ia",
         "confidence": 0.29,
         "charCount": 159,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3922,11 +4662,16 @@
           "text": "-~ 所 ! \\ 1\nー \\\nLL :\nw7o ーH\ny\\/o% 4 ー\nLo/l \\W9 2\nムーとフンが 1\n& , 青 上\nーー導き 4\n& Nillllk =\n3 に\n0 o\nA 7 い\n島 、 W較みー N\nマー 衣\n2区 ー\n用入 N\nで TM 0 に き\n~-~ ) -\nーーて リ、 TR A : ia",
           "confidence": 0.29,
           "charCount": 159,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2024,
+      "processingTimeMs": 2058,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -3941,8 +4686,13 @@
         "text": "半邊5 F に -\nて 』 A\n_ C \" ;\n当 CS .』 まま ? 1\n。 1 Fa \"\n-\n # 3 。 2 d\n- —\nmy\nn 、meと。\n上 n\n=— - J. =\n5デードードン ーー 「\nラニ . シン\n= > H 【\n門5の67 ニニン /、 7 . . ae e\nーーンー = アン = N 上 ーー\n オメ E ) E=a\nロミ = =\nた た7 v る$ ルン 3 一 ーー ーー —\n+ =— y ーー\nたモア ーー \\ し5 ーー一 ニー ミ\nーー一クの2人8をーー . -— —\n=/ 2 シン パー一\n= クー テ. ーーシンーー\nーー — =—\n=— —— = =——\nーー ーー —at ーー ーーー W - ーー =",
         "confidence": 0.27,
         "charCount": 328,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -3952,11 +4702,16 @@
           "text": "半邊5 F に -\nて 』 A\n_ C \" ;\n当 CS .』 まま ? 1\n。 1 Fa \"\n-\n # 3 。 2 d\n- —\nmy\nn 、meと。\n上 n\n=— - J. =\n5デードードン ーー 「\nラニ . シン\n= > H 【\n門5の67 ニニン /、 7 . . ae e\nーーンー = アン = N 上 ーー\n オメ E ) E=a\nロミ = =\nた た7 v る$ ルン 3 一 ーー ーー —\n+ =— y ーー\nたモア ーー \\ し5 ーー一 ニー ミ\nーー一クの2人8をーー . -— —\n=/ 2 シン パー一\n= クー テ. ーーシンーー\nーー — =—\n=— —— = =——\nーー ーー —at ーー ーーー W - ーー =",
           "confidence": 0.27,
           "charCount": 328,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5050,
+      "processingTimeMs": 5015,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -3987,7 +4742,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 954,
+      "processingTimeMs": 962,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -4018,7 +4773,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 2905,
+      "processingTimeMs": 2963,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -4049,7 +4804,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 923,
+      "processingTimeMs": 922,
       "problemClassification": [
         "低信頼度"
       ]
@@ -4064,8 +4819,13 @@
         "text": "ョ ォ} 2倫 1 »~”\nF メメ旋仁ノノ\nーー 1 L\n し プッ\nに F 4 , Pa ] Hne\nし ) 導に4 £A ーー p\nリリ有 電 店\n R -h 5 ーーで pg\nと で 中間CAVAS REGA7)\nRE ) _—. \\p) OZの2 (の\n> ツリ5\nドド 5 \\ {=13= ー\nいき ぐーシーツ\n< A\nさきお (mAS REGAL JRS o—\nいい ビー 7 「 AN - ドアー ‘\nN ー6ara ー SOuESー\n {m3Es, WERE\nペン 品、 っ",
         "confidence": 0.24,
         "charCount": 246,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4075,11 +4835,16 @@
           "text": "ョ ォ} 2倫 1 »~”\nF メメ旋仁ノノ\nーー 1 L\n し プッ\nに F 4 , Pa ] Hne\nし ) 導に4 £A ーー p\nリリ有 電 店\n R -h 5 ーーで pg\nと で 中間CAVAS REGA7)\nRE ) _—. \\p) OZの2 (の\n> ツリ5\nドド 5 \\ {=13= ー\nいき ぐーシーツ\n< A\nさきお (mAS REGAL JRS o—\nいい ビー 7 「 AN - ドアー ‘\nN ー6ara ー SOuESー\n {m3Es, WERE\nペン 品、 っ",
           "confidence": 0.24,
           "charCount": 246,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 3378,
+      "processingTimeMs": 3433,
       "problemClassification": []
     },
     {
@@ -4092,8 +4857,13 @@
         "text": "ーー一 l\nレーブー一 衣0 ーー一\nヒー一細 ニー\n用用ヨゴ ) 性\nーー一 ニニーー一一一一一一\nヒー一 AN ニニニニ一\n\n). - ー ビーニー一一一\n\n 2か ー —\n\nー = ニーニー一一\n\n/ 1 ーーズー一一\n\n/ ーー一一一一一一一一ーー\n\nー 5 —\n\nz デー一ーー\n\n リ \"一mm\n/ ニー一ーー\n\n— I5 —\n\nEs に WNW ー ニー一\n7 / ーー I § & ニーニーニー\n人ーー 上彰馬 ー 420 ¥ —_—\n\nと k 》 A 科 ここここーー\n\n0 N—\nルーョm (首証間8\nAN E\nRs 5T agt C h",
         "confidence": 0.39,
         "charCount": 279,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4103,11 +4873,16 @@
           "text": "ーー一 l\nレーブー一 衣0 ーー一\nヒー一細 ニー\n用用ヨゴ ) 性\nーー一 ニニーー一一一一一一\nヒー一 AN ニニニニ一\n\n). - ー ビーニー一一一\n\n 2か ー —\n\nー = ニーニー一一\n\n/ 1 ーーズー一一\n\n/ ーー一一一一一一一一ーー\n\nー 5 —\n\nz デー一ーー\n\n リ \"一mm\n/ ニー一ーー\n\n— I5 —\n\nEs に WNW ー ニー一\n7 / ーー I § & ニーニーニー\n人ーー 上彰馬 ー 420 ¥ —_—\n\nと k 》 A 科 ここここーー\n\n0 N—\nルーョm (首証間8\nAN E\nRs 5T agt C h",
           "confidence": 0.39,
           "charCount": 279,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 4345,
+      "processingTimeMs": 4407,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -4123,8 +4898,13 @@
         "text": "- e Pny\nに こそミすき ロア// /\n会ごマッ\n/、\nルー一\n\\ y §\n— /! “ .\nN o J\n- \\ {\n2 上 ) “3 <\nー 4 & 3 U のあう 1 i 」\n& \\ \\ i» \\ F ご\n{ い、 和$ 0 究 : ー\nWW 5 1 ~",
         "confidence": 0.38,
         "charCount": 132,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4134,11 +4914,16 @@
           "text": "- e Pny\nに こそミすき ロア// /\n会ごマッ\n/、\nルー一\n\\ y §\n— /! “ .\nN o J\n- \\ {\n2 上 ) “3 <\nー 4 & 3 U のあう 1 i 」\n& \\ \\ i» \\ F ご\n{ い、 和$ 0 究 : ー\nWW 5 1 ~",
           "confidence": 0.38,
           "charCount": 132,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1407,
+      "processingTimeMs": 1437,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -4154,8 +4939,13 @@
         "text": "し ん __\n。 _ . v Ton\n* 日 HL -,\nー 尊し 4\nHE oe .®\nf\n{yayata ー\nAe\n7 .\nーッ < 1 — に\n} ー+ & *. 誠\nー っ旗唐 そ、款計一\n4 ) 1 7衝呈ーー ・ g\n人な 14 ーー =—=\n- IR ーー o S 一-一ニニーー ーー\nー ー K ag シッ 所 NE をををとヨ\n1 ー ー aa 上 。、 (o= に が ゲだ は - ーーをを\nSMaall * AlE — .- つま\nしり 9 WeE srri — =3\no i の6のML人WIのAI 。\nー し 半まっ . ill り る$。 マツ 人 ブ\n前二ms Nuタター一\nき ! . 、 Fiz ~ INH UE 制\nま 吉 5 WW人選! 還に9グ 誠ごペン\nTEEE T\n\\ } ト & : =\n } とせ し\nーー\n隊DkN5 AGED 5 ママ6アでッ\nW BULLEIT'BOURBO=E\nBL FRONTIER WHISEEo 。 ー\nは TUCKYaSTRAiGHT_BOUREB 0ビンンク 人生た % h\noy\nammen ti いい",
         "confidence": 0.24,
         "charCount": 495,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4165,11 +4955,16 @@
           "text": "し ん __\n。 _ . v Ton\n* 日 HL -,\nー 尊し 4\nHE oe .®\nf\n{yayata ー\nAe\n7 .\nーッ < 1 — に\n} ー+ & *. 誠\nー っ旗唐 そ、款計一\n4 ) 1 7衝呈ーー ・ g\n人な 14 ーー =—=\n- IR ーー o S 一-一ニニーー ーー\nー ー K ag シッ 所 NE をををとヨ\n1 ー ー aa 上 。、 (o= に が ゲだ は - ーーをを\nSMaall * AlE — .- つま\nしり 9 WeE srri — =3\no i の6のML人WIのAI 。\nー し 半まっ . ill り る$。 マツ 人 ブ\n前二ms Nuタター一\nき ! . 、 Fiz ~ INH UE 制\nま 吉 5 WW人選! 還に9グ 誠ごペン\nTEEE T\n\\ } ト & : =\n } とせ し\nーー\n隊DkN5 AGED 5 ママ6アでッ\nW BULLEIT'BOURBO=E\nBL FRONTIER WHISEEo 。 ー\nは TUCKYaSTRAiGHT_BOUREB 0ビンンク 人生た % h\noy\nammen ti いい",
           "confidence": 0.24,
           "charCount": 495,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5737,
+      "processingTimeMs": 5795,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -4184,8 +4979,13 @@
         "text": "し ん __\n。 _ . v Ton\n* 日 HL -,\nー 尊し 4\nHE oe .®\nf\n{yayata ー\nAe\n7 .\nーッ < 1 — に\n} ー+ & *. 誠\nー っ旗唐 そ、款計一\n4 ) 1 7衝呈ーー ・ g\n人な 14 ーー =—=\n- IR ーー o S 一-一ニニーー ーー\nー ー K ag シッ 所 NE をををとヨ\n1 ー ー aa 上 。、 (o= に が ゲだ は - ーーをを\nSMaall * AlE — .- つま\nしり 9 WeE srri — =3\no i の6のML人WIのAI 。\nー し 半まっ . ill り る$。 マツ 人 ブ\n前二ms Nuタター一\nき ! . 、 Fiz ~ INH UE 制\nま 吉 5 WW人選! 還に9グ 誠ごペン\nTEEE T\n\\ } ト & : =\n } とせ し\nーー\n隊DkN5 AGED 5 ママ6アでッ\nW BULLEIT'BOURBO=E\nBL FRONTIER WHISEEo 。 ー\nは TUCKYaSTRAiGHT_BOUREB 0ビンンク 人生た % h\noy\nammen ti いい",
         "confidence": 0.24,
         "charCount": 495,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4195,11 +4995,16 @@
           "text": "し ん __\n。 _ . v Ton\n* 日 HL -,\nー 尊し 4\nHE oe .®\nf\n{yayata ー\nAe\n7 .\nーッ < 1 — に\n} ー+ & *. 誠\nー っ旗唐 そ、款計一\n4 ) 1 7衝呈ーー ・ g\n人な 14 ーー =—=\n- IR ーー o S 一-一ニニーー ーー\nー ー K ag シッ 所 NE をををとヨ\n1 ー ー aa 上 。、 (o= に が ゲだ は - ーーをを\nSMaall * AlE — .- つま\nしり 9 WeE srri — =3\no i の6のML人WIのAI 。\nー し 半まっ . ill り る$。 マツ 人 ブ\n前二ms Nuタター一\nき ! . 、 Fiz ~ INH UE 制\nま 吉 5 WW人選! 還に9グ 誠ごペン\nTEEE T\n\\ } ト & : =\n } とせ し\nーー\n隊DkN5 AGED 5 ママ6アでッ\nW BULLEIT'BOURBO=E\nBL FRONTIER WHISEEo 。 ー\nは TUCKYaSTRAiGHT_BOUREB 0ビンンク 人生た % h\noy\nammen ti いい",
           "confidence": 0.24,
           "charCount": 495,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5733,
+      "processingTimeMs": 5797,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -4214,8 +5019,13 @@
         "text": "! ロワーー一一一 上上ー 軸\n較ーー上ーーぼぼほぼ -\nsiE 則ー アメリカ合衆国 #e\nW li wー TTRREREE = マッダ\n£ て (STPTIPY\n4ミトーTEL (092)589-5317\nL] 森成年放の令消は法律で灸じられています\n時 人洒は20歳になってから\nロペ 「 2\n目 紙! 逢 +プララ キャップ\n記。 にン ピラ :\nノ^\n_enlt z\nウママニーー\n間の0マママジーー —\nーーてい2の いり どらてウラーー =\nーーニー ADOPOR 。 : =\nA— ーー OkitDBY NmNecOMAN : ==\nHD BGANSTEROA, : =\n加S0 JAOul= MOLENWERF12.10サジニーー =\nーーー内LHE'NETHERLD IEmeaSs Z\naee SREE — SreTADO PORSS\nLETR GL に porTiEDBY EMBOTELLAD® *\nいい mn ー sommenBYEROT\nSORWMmoN\nmm一\nIWNmmlmwmlw1\nWNW\nuulwl上wl",
         "confidence": 0.3,
         "charCount": 472,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4225,11 +5035,16 @@
           "text": "! ロワーー一一一 上上ー 軸\n較ーー上ーーぼぼほぼ -\nsiE 則ー アメリカ合衆国 #e\nW li wー TTRREREE = マッダ\n£ て (STPTIPY\n4ミトーTEL (092)589-5317\nL] 森成年放の令消は法律で灸じられています\n時 人洒は20歳になってから\nロペ 「 2\n目 紙! 逢 +プララ キャップ\n記。 にン ピラ :\nノ^\n_enlt z\nウママニーー\n間の0マママジーー —\nーーてい2の いり どらてウラーー =\nーーニー ADOPOR 。 : =\nA— ーー OkitDBY NmNecOMAN : ==\nHD BGANSTEROA, : =\n加S0 JAOul= MOLENWERF12.10サジニーー =\nーーー内LHE'NETHERLD IEmeaSs Z\naee SREE — SreTADO PORSS\nLETR GL に porTiEDBY EMBOTELLAD® *\nいい mn ー sommenBYEROT\nSORWMmoN\nmm一\nIWNmmlmwmlw1\nWNW\nuulwl上wl",
           "confidence": 0.3,
           "charCount": 472,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 5236,
+      "processingTimeMs": 5222,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -4244,8 +5059,13 @@
         "text": "y¥ ] um\nアモ HE\n34*\nWoviy\nー ER BY—\n回上 2\nにュー ay damm\n 設ゝ l 5 庫 ーー 3\n ) ’ に ) 、 6 o\n。 ) 5 y\n癌ー ご —\n際衝",
         "confidence": 0.19,
         "charCount": 97,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4255,11 +5075,16 @@
           "text": "y¥ ] um\nアモ HE\n34*\nWoviy\nー ER BY—\n回上 2\nにュー ay damm\n 設ゝ l 5 庫 ーー 3\n ) ’ に ) 、 6 o\n。 ) 5 y\n癌ー ご —\n際衝",
           "confidence": 0.19,
           "charCount": 97,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1898,
+      "processingTimeMs": 1862,
       "problemClassification": [
         "低信頼度",
         "記号ノイズ過多"
@@ -4268,27 +5093,40 @@
     {
       "fileName": "IMG_7093.HEIC",
       "cycle": 2,
-      "status": "reused",
+      "status": "success",
       "best": {
-        "variant": "converted-resized",
-        "psm": "11",
-        "text": "-\n\nJUYOND!\n\n上四代 中取り純吟 播州重田釣\n\n揚げ槽時、 香味のバラ ンス》ヵ\n\nDFEE\n\nめることから「中取り」と呼ばれ、酒米の持\n\n2カカ、味わいを充分に堪能できる艶洒。\n\n串:日本酒 。細米吟醸酒\n\nルル レン 米麹(国産米)\n\n x: TL\n\n#\n\nコール分 : 15度 内容量:1.8L\n\n 者: 高木酒造\n\n山形県村山市大字富並1826草\n\n人方法:\n\n必ず冷蔵庫(-5て一5て)で\n\nYo\n\nB\n\nの お召し上がり上人\n\n(製造年月は表由のりに『\n\n【\n\nお酒は20歳になっ でかの\n\n-",
-        "confidence": 0.67,
-        "charCount": 258,
+        "variant": "center-label-gray-contrast",
+        "psm": "6",
+        "text": "二。\nJUYONDAI_ 記。 a\n†四代 中取り純吟 播州赤田鈴\n前#模時、香味のバランスが最良の手を信\nめることから「中取り」と呼ばれ、 酒米の失\n2フカ、味わいを充分に堪能できる艶酒。\n唱:日本酒 >純炒吟醸洒\nRHRLE, : 米(国産)、米麹 (国産米)\n指米歩合: 50%\n料 米:兵庫県特A地区産山田錦100%使用\n7ルコール分 : 15度 内容量 : 1.8L\n党貴者:高木酒造株式会社 。\n周山形県村山市大字富並1826香すき\nf方法 : 必ず冷蔵庫 (-5 て ー5て ) oRE y\n。 お早めにお召し上がり下きい。",
+        "confidence": 0.68,
+        "charCount": 269,
         "candidateCount": 1,
-        "detectedProductName": "十四代",
-        "detectedMakerName": "高木酒造",
+        "detectedProductName": "貴 特別純米 60",
+        "detectedMakerName": "永山本家酒造場",
         "detectedAlcoholType": "sake",
         "matchReasons": [
-          "蔵元一致"
+          "OCR別名一致: 貴"
         ],
         "cycle": 2
       },
-      "variants": [],
-      "processingTimeMs": 0,
-      "problemClassification": [
-        "fast-path accepted cycle 1"
-      ]
+      "variants": [
+        {
+          "variant": "center-label-gray-contrast",
+          "psm": "6",
+          "text": "二。\nJUYONDAI_ 記。 a\n†四代 中取り純吟 播州赤田鈴\n前#模時、香味のバランスが最良の手を信\nめることから「中取り」と呼ばれ、 酒米の失\n2フカ、味わいを充分に堪能できる艶酒。\n唱:日本酒 >純炒吟醸洒\nRHRLE, : 米(国産)、米麹 (国産米)\n指米歩合: 50%\n料 米:兵庫県特A地区産山田錦100%使用\n7ルコール分 : 15度 内容量 : 1.8L\n党貴者:高木酒造株式会社 。\n周山形県村山市大字富並1826香すき\nf方法 : 必ず冷蔵庫 (-5 て ー5て ) oRE y\n。 お早めにお召し上がり下きい。",
+          "confidence": 0.68,
+          "charCount": 269,
+          "candidateCount": 1,
+          "detectedProductName": "貴 特別純米 60",
+          "detectedMakerName": "永山本家酒造場",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: 貴"
+          ]
+        }
+      ],
+      "processingTimeMs": 2909,
+      "problemClassification": []
     },
     {
       "fileName": "IMG_7094.HEIC",
@@ -4300,8 +5138,13 @@
         "text": "ーー f\nニー Nssd\nンー ビ B\nー ge :\nロリいい秀生\nーー ーー 選ニ\n財還 ‘e\n 「 awa (T\n時 ald の # 4\n タダ h =\nー @ P ®. - 関し\nぽ。 4\n£ で 性\n\\ # w. ] .\n4 #\nー * ’\n @R Yamam。。 d\n関し 4 5 導\nNH glv?",
         "confidence": 0.31,
         "charCount": 155,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4311,11 +5154,16 @@
           "text": "ーー f\nニー Nssd\nンー ビ B\nー ge :\nロリいい秀生\nーー ーー 選ニ\n財還 ‘e\n 「 awa (T\n時 ald の # 4\n タダ h =\nー @ P ®. - 関し\nぽ。 4\n£ で 性\n\\ # w. ] .\n4 #\nー * ’\n @R Yamam。。 d\n関し 4 5 導\nNH glv?",
           "confidence": 0.31,
           "charCount": 155,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1639,
+      "processingTimeMs": 1623,
       "problemClassification": [
         "記号ノイズ過多"
       ]
@@ -4330,8 +5178,13 @@
         "text": "L #HE W 。\n- . — と\n区革\nNo.6 “\nー 2e P\n ー 殿決吉 。\n1 yハさま B\n ] { Rk 4\n義人 上\n— 保答 則。\nd v 4 』 > 5\n生生 mmm ー ーー\n。 開語人R放基限 1\ny¢ 2021F 6A%E ー §\n- EEESGERAE 。\né . お飲みください 計 .\na 【裏面もみずすご覧下さい】 」\nの\noy \\\n6\n-",
         "confidence": 0.34,
         "charCount": 188,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 2,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4341,11 +5194,16 @@
           "text": "L #HE W 。\n- . — と\n区革\nNo.6 “\nー 2e P\n ー 殿決吉 。\n1 yハさま B\n ] { Rk 4\n義人 上\n— 保答 則。\nd v 4 』 > 5\n生生 mmm ー ーー\n。 開語人R放基限 1\ny¢ 2021F 6A%E ー §\n- EEESGERAE 。\né . お飲みください 計 .\na 【裏面もみずすご覧下さい】 」\nの\noy \\\n6\n-",
           "confidence": 0.34,
           "charCount": 188,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 2,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2102,
+      "processingTimeMs": 2088,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -4360,8 +5218,13 @@
         "text": "ムー リン り\nる の6 ー\nる7 ーー\nー\n»—T2%\nE や\nー P-\nーー wa\no > Pi yム、 CO 3\n_ Cett? 居 k B\nデーーー 一届 保管 =\n—E ar\n本 』 ご\n# [ー 品質保証期限 」\n【 。 店 2021% 6ARE b B\n® かお償みがさい。 。 肛 。\nビ 【真向もみす=臣下*】 。 詳 と 攻 .\n、 ー 4 \\ を\n_基に\nっ 、 at\n る\n過",
         "confidence": 0.25,
         "charCount": 200,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4371,11 +5234,16 @@
           "text": "ムー リン り\nる の6 ー\nる7 ーー\nー\n»—T2%\nE や\nー P-\nーー wa\no > Pi yム、 CO 3\n_ Cett? 居 k B\nデーーー 一届 保管 =\n—E ar\n本 』 ご\n# [ー 品質保証期限 」\n【 。 店 2021% 6ARE b B\n® かお償みがさい。 。 肛 。\nビ 【真向もみす=臣下*】 。 詳 と 攻 .\n、 ー 4 \\ を\n_基に\nっ 、 at\n る\n過",
           "confidence": 0.25,
           "charCount": 200,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2381,
+      "processingTimeMs": 2338,
       "problemClassification": [
         "記号ノイズ過多",
         "小断片が多い"
@@ -4406,7 +5274,7 @@
           "matchReasons": []
         }
       ],
-      "processingTimeMs": 995,
+      "processingTimeMs": 1026,
       "problemClassification": [
         "低信頼度",
         "小断片が多い"
@@ -4422,8 +5290,13 @@
         "text": "au ー d H ビィ ¥\n\"sway A\\ ー ー 1\nIE\nー Raanl .\ny / トゥ ©\nりす 議\nパパ4*\n二し\nrc7 導電 I\n今 ー ご. / & デー ーーデ==\nまう ; 半生\n—\n—l 2 ー\nー 8 [ ペ Ju ーー\n)\ny & ィイン\n1 ンス き\nTa導5画\nの アタ\nN <と2 ee\nー る -_ aeone llNEELL L",
         "confidence": 0.25,
         "charCount": 183,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4433,11 +5306,16 @@
           "text": "au ー d H ビィ ¥\n\"sway A\\ ー ー 1\nIE\nー Raanl .\ny / トゥ ©\nりす 議\nパパ4*\n二し\nrc7 導電 I\n今 ー ご. / & デー ーーデ==\nまう ; 半生\n—\n—l 2 ー\nー 8 [ ペ Ju ーー\n)\ny & ィイン\n1 ンス き\nTa導5画\nの アタ\nN <と2 ee\nー る -_ aeone llNEELL L",
           "confidence": 0.25,
           "charCount": 183,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2436,
+      "processingTimeMs": 2417,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -4452,8 +5330,13 @@
         "text": "と & 1\n¥ # ]\n(上 W—\n remar ー ー4 4\nすす .\n 【。 は\nワリ9リリ ?\nブリ\nあ品に 識 ー e\nます N\nSE0, —\n e—\nや 4B っティーマエニニェマーー\nAe 3 、ぶさきラロ 基本の人SW _こにこ /\nロ つつ 』 / = ré F 0 区 』 ニ あな 、 + ー\n% Rogie » ゴ E (=~ ー 1 < X X3 4 1\nCOENN ー 4 vif RSOE\nCieRE\nDsnal. — \\ 4",
         "confidence": 0.34,
         "charCount": 227,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4463,11 +5346,16 @@
           "text": "と & 1\n¥ # ]\n(上 W—\n remar ー ー4 4\nすす .\n 【。 は\nワリ9リリ ?\nブリ\nあ品に 識 ー e\nます N\nSE0, —\n e—\nや 4B っティーマエニニェマーー\nAe 3 、ぶさきラロ 基本の人SW _こにこ /\nロ つつ 』 / = ré F 0 区 』 ニ あな 、 + ー\n% Rogie » ゴ E (=~ ー 1 < X X3 4 1\nCOENN ー 4 vif RSOE\nCieRE\nDsnal. — \\ 4",
           "confidence": 0.34,
           "charCount": 227,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2943,
+      "processingTimeMs": 2908,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -4482,8 +5370,13 @@
         "text": "SS 5 ッッ A 交近0 上。\nNM ンー 人\npE 内 aa ン p, 7 中 似 V\nCl C sa\n3 c 0 ンン ンジルン -_\n0 有ジリンルル間\n 3 作 インンク\n隊二 ーー s E\nー Re P o クン ジリ\n時半生敵c 4 ンタジン\n夫培ご - ジノ\nEEm\nB i\n8 。 誠 に\nー ' ダー\n人が\n- 1F f\nferoakAN\nYS\nS0xR% M\nHeg cz-% B\nry 人 ーー の 区 て\nた ゃ2人 rél\nー otaR -/2\n-/. を\nー 4 7f CEE\nいき WE 18\n o 4\nTreg 408\nRuig xEd\nスイ 3と 』\nHip, TT",
         "confidence": 0.13,
         "charCount": 301,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4493,8 +5386,13 @@
           "text": "SS 5 ッッ A 交近0 上。\nNM ンー 人\npE 内 aa ン p, 7 中 似 V\nCl C sa\n3 c 0 ンン ンジルン -_\n0 有ジリンルル間\n 3 作 インンク\n隊二 ーー s E\nー Re P o クン ジリ\n時半生敵c 4 ンタジン\n夫培ご - ジノ\nEEm\nB i\n8 。 誠 に\nー ' ダー\n人が\n- 1F f\nferoakAN\nYS\nS0xR% M\nHeg cz-% B\nry 人 ーー の 区 て\nた ゃ2人 rél\nー otaR -/2\n-/. を\nー 4 7f CEE\nいき WE 18\n o 4\nTreg 408\nRuig xEd\nスイ 3と 』\nHip, TT",
           "confidence": 0.13,
           "charCount": 301,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
       "processingTimeMs": 4186,
@@ -4513,8 +5411,13 @@
         "text": "ー b1. y Lo WAS C e pv\ne EREESe\n\n> § 内容量 720mi Feo7\n\n’ アァアルコール分 14% 4\n\nー 精米歩合 50% ー\n\n 原材料名 lm)s が\nE. XSe@mER\n人 Eer %\n3 : 飲酒は20歳にな62用\n\nいい 放人。 F\n\n人 ししエーララ\n\nる \"知県土佐市再商2更誠\n\nBEE f\n\n回 -. /\n\n目順川川",
         "confidence": 0.33,
         "charCount": 187,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4524,11 +5427,16 @@
           "text": "ー b1. y Lo WAS C e pv\ne EREESe\n\n> § 内容量 720mi Feo7\n\n’ アァアルコール分 14% 4\n\nー 精米歩合 50% ー\n\n 原材料名 lm)s が\nE. XSe@mER\n人 Eer %\n3 : 飲酒は20歳にな62用\n\nいい 放人。 F\n\n人 ししエーララ\n\nる \"知県土佐市再商2更誠\n\nBEE f\n\n回 -. /\n\n目順川川",
           "confidence": 0.33,
           "charCount": 187,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 2653,
+      "processingTimeMs": 2660,
       "problemClassification": [
         "小断片が多い"
       ]
@@ -4543,8 +5451,13 @@
         "text": "11y) 1 ロ ー\n o WAT A に )\nー ー が \\ ー ーー ーー ーー\nーー ー\nンー _ 、\n) ン し \\\nデー 位融 4 ー\ngec ' ー\n2 l\nFo\" ー 。\n- W > 」。 導\n。 [chirols Malt [\n NEE ー 。』\n\\ Ro 0",
         "confidence": 0.33,
         "charCount": 138,
-        "candidateCount": 0,
-        "matchReasons": [],
+        "candidateCount": 1,
+        "detectedProductName": "W 純米 山田錦",
+        "detectedMakerName": "渡辺酒造店",
+        "detectedAlcoholType": "sake",
+        "matchReasons": [
+          "OCR別名一致: W"
+        ],
         "cycle": 2
       },
       "variants": [
@@ -4554,11 +5467,16 @@
           "text": "11y) 1 ロ ー\n o WAT A に )\nー ー が \\ ー ーー ーー ーー\nーー ー\nンー _ 、\n) ン し \\\nデー 位融 4 ー\ngec ' ー\n2 l\nFo\" ー 。\n- W > 」。 導\n。 [chirols Malt [\n NEE ー 。』\n\\ Ro 0",
           "confidence": 0.33,
           "charCount": 138,
-          "candidateCount": 0,
-          "matchReasons": []
+          "candidateCount": 1,
+          "detectedProductName": "W 純米 山田錦",
+          "detectedMakerName": "渡辺酒造店",
+          "detectedAlcoholType": "sake",
+          "matchReasons": [
+            "OCR別名一致: W"
+          ]
         }
       ],
-      "processingTimeMs": 1482,
+      "processingTimeMs": 1478,
       "problemClassification": [
         "記号ノイズ過多"
       ]

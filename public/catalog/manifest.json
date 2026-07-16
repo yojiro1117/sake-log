@@ -1,0 +1,24 @@
+{
+  "version": "catalog-core-v1",
+  "generatedAt": "2026-07-16T00:08:04.662Z",
+  "entries": 38,
+  "files": [
+    {
+      "name": "core-001.json.gz",
+      "bytes": 2775,
+      "sha256": "cf0894381f0bca9c0d0a332afc34d2775f3fae418135c2192e48868606139013"
+    },
+    {
+      "name": "jan-index-001.json.gz",
+      "bytes": 22,
+      "sha256": "192208a0ee0e6fa724d45a6f13a07b13154efe4f1c6854743ffeaeb29891f882"
+    },
+    {
+      "name": "text-index-001.json.gz",
+      "bytes": 1455,
+      "sha256": "17879c91196241ed461eb06c573099f89cc90ae15683caffd5f83fdc5817f15f"
+    }
+  ],
+  "imageDataIncluded": false,
+  "license": "Application-maintained factual metadata; no third-party product images."
+}
