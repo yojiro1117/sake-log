@@ -683,7 +683,7 @@ export function Record({
                 {(importMode === 'singleLog' ? drafts : activeDraft ? [activeDraft] : []).map((draft) => (
                   <div key={draft.id} className={`rounded-md bg-rice/8 p-2 ${draft.id === activeDraft?.id ? 'ring-1 ring-gold' : ''}`}>
                     <button className="w-full" onClick={() => setActiveIndex(Math.max(0, drafts.findIndex((item) => item.id === draft.id)))}>
-                      <img src={draft.previewUrl} className="aspect-square w-full rounded object-cover" alt={draft.fileName} />
+                      <img data-testid="imported-photo-preview" src={draft.previewUrl} className="aspect-square w-full rounded object-cover" alt={draft.fileName} />
                     </button>
                     {draft.status === 'processing' ? <p className="mt-2 text-xs text-gold">OCR処理中</p> : null}
                     {draft.classification ? (

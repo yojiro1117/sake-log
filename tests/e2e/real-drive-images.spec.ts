@@ -34,8 +34,9 @@ for (const batchIndex of [0, 1]) {
     await page.locator('input[type=file][multiple]').first().setInputFiles(files);
     await page.getByRole('button', { name: '1つのお酒に複数写真を追加する' }).click();
 
-    await expect(page.locator('img[src^="blob:"]').first()).toBeVisible({ timeout: 45_000 });
-    await expect(page.locator('img[src^="blob:"]')).toHaveCount(2, { timeout: 240_000 });
+    const importedPreviews = page.getByTestId('imported-photo-preview');
+    await expect(importedPreviews.first()).toBeVisible({ timeout: 45_000 });
+    await expect(importedPreviews).toHaveCount(2, { timeout: 240_000 });
     await expect(page.getByText(/OCRエンジン信頼度 \d+%/).first()).toBeVisible({ timeout:140_000 });
     await expect(page.getByText('候補は自動確定されません。内容を確認してください。')
       .or(page.getByText('銘柄を特定できませんでした。手入力してください。')).first()).toBeVisible();
