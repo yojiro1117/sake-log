@@ -86,11 +86,12 @@ export interface CandidateEvidence {
   conflict?: string;
 }
 
-export type CandidateSource = 'text' | 'barcode' | 'visual' | 'history' | 'correction' | 'multi-photo';
+export type CandidateSource = 'text' | 'barcode' | 'exact-image' | 'visual' | 'history' | 'correction' | 'multi-photo';
 
 export interface CandidateRetrievalSummary {
   textCandidates: string[];
   barcodeCandidates: string[];
+  exactImageCandidates: string[];
   visualCandidates: string[];
   historyCandidates: string[];
   correctionCandidates: string[];
@@ -124,10 +125,15 @@ export interface LabelRegion {
   height: number;
   confidence: number;
   kind: 'front' | 'back' | 'neck' | 'barcode' | 'manual' | 'center';
+  quad?: PerspectiveQuad;
+  areaRatio?: number;
+  detectionMethod?: string;
   reasons: string[];
 }
 
 export interface VisualFingerprint {
+  embeddingModel?: string;
+  embeddingVersion?: string;
   hash: string;
   averageHash?: string;
   perceptualHash?: string;
@@ -144,11 +150,17 @@ export interface ProductReferenceImage {
   productId: string;
   imageHash: string;
   fingerprint: VisualFingerprint;
+  embeddingModel?: string;
+  embeddingVersion?: string;
   sourceImageId?: string;
   photoType?: IdentificationPhotoType;
   qualityLevel?: PhotoQualityAnalysis['qualityLevel'];
+  source?: 'built-in' | 'user-confirmed' | 'imported';
+  confirmationCount?: number;
+  rejectionCount?: number;
   userConfirmed: boolean;
   createdAt: string;
+  updatedAt?: string;
 }
 
 export interface IdentificationRun {
@@ -277,6 +289,12 @@ export interface CandidateMatch {
   evidences?: CandidateEvidence[];
   barcode?: string;
   visualSimilarity?: number;
+  exactImageScore?: number;
+  barcodeScore?: number;
+  visualEmbeddingScore?: number;
+  localFeatureScore?: number;
+  conflictPenalty?: number;
+  rawMatchScore?: number;
 }
 
 export interface PhotoClassification {
@@ -387,6 +405,9 @@ export interface ImportedPhotoDraft {
   labelRegions?: LabelRegion[];
   barcodeValues?: string[];
   visualFingerprint?: VisualFingerprint;
+  labelVisualFingerprint?: VisualFingerprint;
+  labelCropBlob?: Blob;
+  labelCropPreviewUrl?: string;
   identificationRunId?: string;
   identificationPath?: IdentificationPath;
   identificationPhotoType?: IdentificationPhotoType;
@@ -412,6 +433,16 @@ export interface PersistedImportedPhoto {
   fileKey?: string;
   classificationConfirmed?: boolean;
   processing?: PhotoProcessingMetrics;
+  quality?: PhotoQualityAnalysis;
+  labelRegions?: LabelRegion[];
+  barcodeValues?: string[];
+  visualFingerprint?: VisualFingerprint;
+  labelVisualFingerprint?: VisualFingerprint;
+  labelCropBlob?: Blob;
+  identificationRunId?: string;
+  identificationPath?: IdentificationPath;
+  identificationPhotoType?: IdentificationPhotoType;
+  identificationPhotoTypeConfidence?: number;
 }
 
 export interface PhotoProcessingMetrics {

@@ -26,10 +26,14 @@ export function rankCatalogCandidates(retrieved: RetrievedCatalogCandidate[], co
     if (normalized.searchable.includes(canonical)) add('exact', 62, `正式商品名一致: ${entry.canonicalProductName}`);
     else if (normalized.searchable.includes(brand)) add('alias', 46, `ブランド一致: ${entry.brandFamily}`);
     else if (aliasMatch) add('alias', 46, `別名一致: ${aliasMatch}`);
-    else add('fuzzy', retrievalScore * 0.5, retrievalReasons[0] ?? '類似文字一致');
+    else if (!retrievalReasons.some((reason) => /視覚類似|同じ画像|過去ログ|修正履歴/u.test(reason))) {
+      add('fuzzy', retrievalScore * 0.5, retrievalReasons[0] ?? '類似文字一致');
+    }
     if (maker && normalized.searchable.includes(maker)) add('maker', 20, `蔵元・メーカー一致: ${entry.makerName}`);
     const barcode = context.barcodeValues?.find((value) => entry.janCodes.includes(value));
     if (barcode) add('jan', 100, `JAN/EAN完全一致: ${barcode}`);
+    const exactImage = retrievalReasons.some((reason) => reason.includes('同じ画像'));
+    if (exactImage) add('exact', 96, '同じ画像の確認済み参照と一致');
     const volume = fields.volumes.find((value) => entry.volumesMl.includes(value));
     if (volume) add('volume', 8, `容量一致: ${volume}ml`);
     const abv = fields.abvs.find((value) => entry.abvMin !== undefined && entry.abvMax !== undefined && value >= entry.abvMin && value <= entry.abvMax);
@@ -37,7 +41,7 @@ export function rankCatalogCandidates(retrieved: RetrievedCatalogCandidate[], co
     if (context.alcoholTypeHint === entry.alcoholType) add('type', 5, `酒種一致: ${entry.alcoholType}`);
     if ((context.imageCount ?? 1) > 1 && context.repeatedTerms?.some((term) => normalizeCatalogTerm(term).includes(brand))) add('multi-photo', 12, '複数写真でブランド文字が反復');
     const visual = context.visualScores?.[entry.productId];
-    if (visual !== undefined && visual >= 0.56) add('visual', Math.min(34, visual * 34), `確認済み写真との視覚類似 ${Math.round(visual * 100)}%`);
+    if (visual !== undefined && visual >= 0.56) add('visual', Math.min(48, visual * 48), `確認済み写真との視覚類似 ${Math.round(visual * 100)}%`);
     if (retrievalReasons.some((reason) => reason.includes('過去ログ'))) add('history', 24, '過去ログの確認済み銘柄と一致');
     if (retrievalReasons.some((reason) => reason.includes('修正履歴'))) add('history', 30, 'ユーザー修正履歴と一致');
     for (const keyword of entry.keywords) if (normalized.searchable.includes(normalizeCatalogTerm(keyword))) add('alias', 5, `バリエーション語一致: ${keyword}`);
@@ -48,8 +52,16 @@ export function rankCatalogCandidates(retrieved: RetrievedCatalogCandidate[], co
       raw -= 24;
       mismatchReasons.push(`除外語が存在: ${keyword}`);
     }
-    if (fields.volumes.length && entry.volumesMl.length && !volume) { raw -= 6; mismatchReasons.push(`容量不一致: OCR ${fields.volumes.join('/')}ml`); }
-    if (fields.abvs.length && entry.abvMin !== undefined && !abv) { raw -= 5; mismatchReasons.push(`度数不一致: OCR ${fields.abvs.join('/')}%`); }
+    if (fields.volumes.length && entry.volumesMl.length && !volume) { raw -= 22; mismatchReasons.push(`容量不一致: OCR ${fields.volumes.join('/')}ml`); }
+    if (fields.abvs.length && entry.abvMin !== undefined && !abv) { raw -= 18; mismatchReasons.push(`度数不一致: OCR ${fields.abvs.join('/')}%`); }
+    if ((context.barcodeValues?.length ?? 0) > 0 && entry.janCodes.length > 0 && !barcode) {
+      raw -= 80;
+      mismatchReasons.push('読取JAN/EANが候補商品と不一致');
+    }
+    if (context.alcoholTypeHint && context.alcoholTypeHint !== entry.alcoholType) {
+      raw -= 24;
+      mismatchReasons.push(`酒種不一致: 候補は${entry.alcoholType}`);
+    }
     const calibrated = calibrateConfidence(raw, context.ocrConfidence, evidences);
     return {
       productId: entry.productId, brandFamily: entry.brandFamily, productName: entry.canonicalProductName,
@@ -63,8 +75,18 @@ export function rankCatalogCandidates(retrieved: RetrievedCatalogCandidate[], co
       totalConfidence: calibrated, calibratedConfidence: calibrated,
       confidence: calibrated >= 86 ? 'high' as const : calibrated >= 62 ? 'medium' as const : 'low' as const,
       requiresConfirmation: true, visualSimilarity: visual
+      , exactImageScore: exactImage ? 100 : 0
+      , barcodeScore: barcode ? 100 : 0
+      , visualEmbeddingScore: visual === undefined ? 0 : Math.round(visual * 100)
+      , localFeatureScore: visual === undefined ? 0 : Math.round(visual * 100)
+      , conflictPenalty: mismatchReasons.length * 10
+      , rawMatchScore: Math.round(raw)
     };
-  }).filter((item) => item.evidences?.some((evidence) => evidence.kind === 'jan') || (item.totalConfidence ?? 0) >= 34)
+  }).filter((item) => {
+    const hasJanMatch = item.evidences?.some((evidence) => evidence.kind === 'jan');
+    const hasStrongVisualMatch = (item.visualSimilarity ?? 0) >= 0.78 && (item.rawMatchScore ?? 0) > 0;
+    return hasJanMatch || hasStrongVisualMatch || (item.totalConfidence ?? 0) >= 34;
+  })
     .sort((left, right) => (right.totalConfidence ?? 0) - (left.totalConfidence ?? 0));
   return ranked.slice(0, 5).map((item, index) => ({ ...item, rank: index + 1 }));
 }

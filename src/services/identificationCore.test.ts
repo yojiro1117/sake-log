@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest';
 import type { AlcoholProductCatalogEntry, ProductReferenceImage, VisualFingerprint } from '../types';
 import { isPlausibleCode } from './barcodeService';
 import { rankCatalogCandidates } from './candidateRanking';
-import { retrieveCatalogCandidates } from './candidateRetrieval';
+import { retrieveCatalogCandidates, retrieveVisualCandidates } from './candidateRetrieval';
 import { extractStructuredFields, normalizeOcrForIdentification } from './ocrNormalization';
-import { scoreVisualReferences, visualSimilarity } from './visualMatching';
+import { areVisualModelsCompatible, scoreVisualReferences, visualSimilarity } from './visualMatching';
 
 const entry: AlcoholProductCatalogEntry = {
   productId: 'whisky-yamazaki', canonicalProductName: '山崎', brandFamily: '山崎', makerName: 'サントリー',
@@ -47,5 +47,37 @@ describe('identification pipeline core', () => {
     expect(visualSimilarity(fingerprint, fingerprint)).toBe(1);
     expect(visualSimilarity(fingerprint, different)).toBeLessThan(0.3);
     expect(scoreVisualReferences(fingerprint, references)).toEqual({ [entry.productId]: 1 });
+  });
+
+  it('does not retrieve a product from maker text alone', () => {
+    expect(retrieveCatalogCandidates('サントリー', [entry])).toEqual([]);
+  });
+
+  it('prefers an exact product alias over a generic category phrase', () => {
+    const miyagikyo = { ...entry, productId:'miyagikyo', canonicalProductName:'シングルモルト 宮城峡', brandFamily:'宮城峡', aliases:['宮城峡'], latinAliases:['MIYAGIKYO'] };
+    const yoichi = { ...entry, productId:'yoichi', canonicalProductName:'シングルモルト 余市', brandFamily:'余市', aliases:['余市'], latinAliases:['YOICHI'] };
+    expect(retrieveCatalogCandidates('NIKKA WHISKY SINGLE MALT YOICHI', [miyagikyo, yoichi])[0]?.entry.productId).toBe('yoichi');
+  });
+
+  it('never compares incompatible visual model versions', () => {
+    const left: VisualFingerprint = { embeddingModel:'label-model', embeddingVersion:'1', hash:'0'.repeat(64), luminance:[], colorHistogram:[], aspectRatio:1 };
+    const right: VisualFingerprint = { ...left, embeddingVersion:'2' };
+    expect(areVisualModelsCompatible(left, right)).toBe(false);
+    expect(visualSimilarity(left, right)).toBe(0);
+  });
+
+  it('ranks a confirmed visual match when OCR is empty', () => {
+    const ranked = rankCatalogCandidates(retrieveVisualCandidates({ [entry.productId]:0.92 }, [entry]), {
+      text:'', ocrConfidence:0, visualScores:{ [entry.productId]:0.92 }
+    });
+    expect(ranked[0]).toMatchObject({ productId:entry.productId, requiresConfirmation:true });
+    expect(ranked[0].visualEmbeddingScore).toBe(92);
+  });
+
+  it('strongly penalizes a visual candidate when a different JAN was read', () => {
+    const ranked = rankCatalogCandidates(retrieveVisualCandidates({ [entry.productId]:0.95 }, [entry]), {
+      text:'', ocrConfidence:0, visualScores:{ [entry.productId]:0.95 }, barcodeValues:['4900000000000']
+    });
+    expect(ranked).toEqual([]);
   });
 });

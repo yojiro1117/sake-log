@@ -7,6 +7,7 @@ export interface ImageIdentificationInput {
   ocrText: string;
   ocrConfidence: number;
   barcodeValues?: string[];
+  imageHash?: string;
   fingerprint?: VisualFingerprint;
 }
 

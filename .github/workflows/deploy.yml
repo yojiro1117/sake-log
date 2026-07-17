@@ -58,6 +58,9 @@ jobs:
       - name: Client dependency license check
         run: pnpm run check:licenses
 
+      - name: Visual retrieval catalog and license check
+        run: pnpm run check:visual-retrieval
+
       - name: Brand identification benchmark
         run: pnpm run benchmark:brand
 

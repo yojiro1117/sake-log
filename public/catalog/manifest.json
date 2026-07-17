@@ -1,7 +1,12 @@
 {
   "version": "catalog-core-v1",
-  "generatedAt": "2026-07-16T00:08:04.662Z",
+  "generatedAt": "2026-07-17T03:04:08.920Z",
   "entries": 38,
+  "productCount": 38,
+  "janCount": 0,
+  "referenceCount": 0,
+  "embeddingModel": "sake-local-label-composite",
+  "embeddingVersion": "2",
   "files": [
     {
       "name": "core-001.json.gz",
@@ -20,5 +25,6 @@
     }
   ],
   "imageDataIncluded": false,
-  "license": "Application-maintained factual metadata; no third-party product images."
+  "license": "Application-maintained factual metadata; no third-party product images.",
+  "licenseSummary": "No product image or derived third-party visual feature is distributed."
 }

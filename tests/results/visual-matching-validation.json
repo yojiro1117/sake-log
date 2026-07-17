@@ -732,6 +732,6 @@
     "falsePositivePoints": 0
   },
   "note": "Seen-before leave-one-photo-out evaluation. Only other user-reviewed tuning images are references; the query image, validation, and holdout images never become references.",
-  "recalibratedAt": "2026-07-15T07:53:35.769Z",
+  "recalibratedAt": "2026-07-17T03:04:52.683Z",
   "recalibrationSource": "Stored seen-before multi-crop similarity records from cycle 3; no image was decoded again."
 }

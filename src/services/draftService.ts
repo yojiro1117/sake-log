@@ -20,12 +20,27 @@ export function serializePhotos(photos: ImportedPhotoDraft[]): PersistedImported
     message: photo.message,
     imageType: photo.imageType,
     classification: photo.classification,
-    sortOrder: photo.sortOrder
+    sortOrder: photo.sortOrder,
+    processing: photo.processing,
+    quality: photo.quality,
+    labelRegions: photo.labelRegions,
+    barcodeValues: photo.barcodeValues,
+    visualFingerprint: photo.visualFingerprint,
+    labelVisualFingerprint: photo.labelVisualFingerprint,
+    labelCropBlob: photo.labelCropBlob,
+    identificationRunId: photo.identificationRunId,
+    identificationPath: photo.identificationPath,
+    identificationPhotoType: photo.identificationPhotoType,
+    identificationPhotoTypeConfidence: photo.identificationPhotoTypeConfidence
   }));
 }
 
 export function hydratePhotos(photos: PersistedImportedPhoto[]): ImportedPhotoDraft[] {
-  return photos.map((photo) => ({ ...photo, previewUrl: URL.createObjectURL(photo.resizedBlob) }));
+  return photos.map((photo) => ({
+    ...photo,
+    previewUrl: URL.createObjectURL(photo.resizedBlob),
+    labelCropPreviewUrl: photo.labelCropBlob ? URL.createObjectURL(photo.labelCropBlob) : undefined
+  }));
 }
 
 export function isValidDraft(value: unknown): value is SakeLogDraft {

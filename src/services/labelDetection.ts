@@ -8,8 +8,9 @@ export function detectLabelRegions(quality: PhotoQualityAnalysis): LabelRegion[]
     confidence: quality.blurScore >= 0.25 ? 0.62 : 0.44, kind: 'center',
     reasons: ['ボトル写真の中央ラベル領域']
   }];
-  regions.push({ id:'neck-label', x:0.28, y:0.03, width:0.44, height:0.25, confidence:0.38, kind:'neck', reasons:['首ラベル候補'] });
-  regions.push({ id:'barcode-region', x:0.48, y:0.42, width:0.48, height:0.52, confidence:0.34, kind:'barcode', reasons:['裏ラベル右下のコード候補'] });
+  for (const region of regions) attachRegionGeometry(region, 'bottle-axis-fallback');
+  regions.push(attachRegionGeometry({ id:'neck-label', x:0.28, y:0.03, width:0.44, height:0.25, confidence:0.38, kind:'neck', reasons:['首ラベル候補'] }, 'bottle-axis-fallback'));
+  regions.push(attachRegionGeometry({ id:'barcode-region', x:0.48, y:0.42, width:0.48, height:0.52, confidence:0.34, kind:'barcode', reasons:['裏ラベル右下のコード候補'] }, 'barcode-prior'));
   return regions;
 }
 
@@ -55,10 +56,20 @@ export async function detectLabelRegionsFromImage(blob: Blob, quality: PhotoQual
       .filter((group) => group.some((cell) => cell.x >= 1 && cell.x <= columns - 2))
       .sort((left, right) => groupScore(right) - groupScore(left))[0];
     const adaptive = connected?.length ? regionFromCells(connected, columns, rows, best.score) : undefined;
-    return [region, ...(adaptive ? [adaptive] : []), ...fallback.filter((item) => item.kind !== 'center')];
+    return [attachRegionGeometry(region, 'edge-density'), ...(adaptive ? [attachRegionGeometry(adaptive, 'adaptive-connected-components')] : []), ...fallback.filter((item) => item.kind !== 'center')];
   } catch {
     return fallback;
   }
+}
+
+function attachRegionGeometry<T extends LabelRegion>(region: T, detectionMethod: string): T {
+  region.quad = {
+    nw:{ x:region.x, y:region.y }, ne:{ x:region.x + region.width, y:region.y },
+    se:{ x:region.x + region.width, y:region.y + region.height }, sw:{ x:region.x, y:region.y + region.height }
+  };
+  region.areaRatio = region.width * region.height;
+  region.detectionMethod = detectionMethod;
+  return region;
 }
 
 export async function cropRegion(blob: Blob, region: LabelRegion, rotateDegrees = 0): Promise<Blob> {

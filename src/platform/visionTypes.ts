@@ -1,4 +1,5 @@
 import type { AlcoholType, IdentificationPhotoType } from '../types';
+import type { VisualFingerprint } from '../types';
 
 export interface NormalizedPoint { x: number; y: number }
 export interface NormalizedRect { x: number; y: number; width: number; height: number }
@@ -99,6 +100,8 @@ export interface ProductIdentificationImage {
   barcodeObservations: NativeBarcodeObservation[];
   labelRegions: NativeLabelRegion[];
   visualEmbedding?: number[];
+  localFingerprint?: VisualFingerprint;
+  imageHash?: string;
   imageQuality: NativeImageQuality;
 }
 

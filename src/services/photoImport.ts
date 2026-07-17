@@ -14,6 +14,7 @@ import { retrieveCatalogCandidates } from './candidateRetrieval';
 import { identifyAlcoholProductPipeline } from './productIdentificationPipeline';
 import type { SmartCaptureResult } from './smartCaptureService';
 import { aggregateNativeText } from './nativeOcrAggregation';
+import { extractStructuredFields } from './ocrNormalization';
 
 type DetectedText = { rawValue?: string };
 type TextDetectorCtor = new () => { detect: (source: ImageBitmapSource) => Promise<DetectedText[]> };
@@ -25,9 +26,32 @@ export async function createNativeCapturedPhotoDraft(capture: SmartCaptureResult
   const sourceBlob = await (await fetch(capture.webPath)).blob();
   const file = new File([sourceBlob], `sake-capture-${Date.now()}.jpg`, { type: sourceBlob.type || 'image/jpeg', lastModified: Date.now() });
   const resizedBlob = await fileToResizedBlob(file, 1400, 0.86);
-  const [imageHash, size, fingerprint] = await Promise.all([hashFile(file), readImageSize(resizedBlob), createVisualFingerprint(resizedBlob)]);
+  const [imageHash, size, fullFingerprint] = await Promise.all([hashFile(file), readImageSize(resizedBlob), createVisualFingerprint(resizedBlob)]);
   const imageId = crypto.randomUUID();
   const aggregated = aggregateNativeText(capture.analysis.textObservations);
+  const nativeRegions = capture.analysis.labelRegions.map((region) => ({
+    id: region.id,
+    x: region.boundingBox.x,
+    y: region.boundingBox.y,
+    width: region.boundingBox.width,
+    height: region.boundingBox.height,
+    confidence: region.confidence,
+    kind: region.regionType === 'backLabel' ? 'back' as const : region.regionType === 'neckLabel' ? 'neck' as const : region.regionType === 'barcode' ? 'barcode' as const : 'front' as const,
+    reasons: ['ネイティブラベル検出'],
+    quad: region.cornerPoints?.length === 4 ? {
+      nw: { x:region.cornerPoints[0].x, y:1 - region.cornerPoints[0].y },
+      ne: { x:region.cornerPoints[1].x, y:1 - region.cornerPoints[1].y },
+      se: { x:region.cornerPoints[2].x, y:1 - region.cornerPoints[2].y },
+      sw: { x:region.cornerPoints[3].x, y:1 - region.cornerPoints[3].y }
+    } : undefined,
+    areaRatio: region.boundingBox.width * region.boundingBox.height,
+    detectionMethod: 'native-vision'
+  }));
+  const strongestRegion = [...nativeRegions].filter((region) => region.kind !== 'barcode').sort((left, right) => right.confidence - left.confidence)[0];
+  const labelCropBlob = strongestRegion
+    ? await (strongestRegion.quad ? cropPerspectiveQuad(resizedBlob, strongestRegion.quad) : cropRegion(resizedBlob, strongestRegion)).catch(() => resizedBlob)
+    : resizedBlob;
+  const labelFingerprint = await createVisualFingerprint(labelCropBlob);
   const identification = await identifyAlcoholProductPipeline({ images: [{
     imageId,
     localFileUri: capture.localFileUri,
@@ -37,6 +61,8 @@ export async function createNativeCapturedPhotoDraft(capture: SmartCaptureResult
     barcodeObservations: capture.analysis.barcodeObservations,
     labelRegions: capture.analysis.labelRegions,
     visualEmbedding: capture.analysis.visualEmbedding?.values,
+    localFingerprint: labelFingerprint,
+    imageHash,
     imageQuality: capture.analysis.imageQuality
   }] });
   await db.nativeAnalyses.put({
@@ -100,12 +126,12 @@ export async function createNativeCapturedPhotoDraft(capture: SmartCaptureResult
       warnings: capture.analysis.imageQuality.warnings,
       recommendedActions: capture.warnings
     },
-    labelRegions: capture.analysis.labelRegions.map((region) => ({
-      id: region.id, x: region.boundingBox.x, y: region.boundingBox.y, width: region.boundingBox.width, height: region.boundingBox.height,
-      confidence: region.confidence, kind: region.regionType === 'backLabel' ? 'back' : region.regionType === 'neckLabel' ? 'neck' : region.regionType === 'barcode' ? 'barcode' : 'front', reasons: ['ネイティブラベル検出']
-    })),
+    labelRegions: nativeRegions,
     barcodeValues: capture.analysis.barcodeObservations.map((item) => item.rawValue),
-    visualFingerprint: fingerprint,
+    visualFingerprint: fullFingerprint,
+    labelVisualFingerprint: labelFingerprint,
+    labelCropBlob,
+    labelCropPreviewUrl: URL.createObjectURL(labelCropBlob),
     identificationRunId: identification.runId,
     identificationPath: identification.path,
     identificationPhotoType: capture.photoType,
@@ -206,9 +232,38 @@ async function createImportedPhotoDraft(
     extractVisualImageFeatures(resizedBlob)
   ]);
   const labelRegions = await detectLabelRegionsFromImage(resizedBlob, quality);
+  const strongestLabelRegion = [...labelRegions]
+    .filter((region) => region.kind !== 'barcode' && region.kind !== 'neck')
+    .sort((left, right) => right.confidence - left.confidence)[0];
+  const labelCropBlob = strongestLabelRegion
+    ? await (strongestLabelRegion.quad ? cropPerspectiveQuad(resizedBlob, strongestLabelRegion.quad) : cropRegion(resizedBlob, strongestLabelRegion)).catch(() => resizedBlob)
+    : resizedBlob;
+  const labelVisualFingerprint = await createVisualFingerprint(labelCropBlob);
   const preliminaryClassification = classifyPhoto({
     ocrText:'', width, height, knownCandidateCount:0, ocrConfidence:0,
     corrections:await db.classificationCorrections.toArray(), visualFeatures:classificationVisual
+  });
+  options.onProgress?.({ index, total, fileName: file.name, phase: 'visual', message: 'ラベル画像から確認済み商品を検索しています。' });
+  const earlyIdentification = await identifyAlcoholProductPipeline({
+    images: [{
+      imageId: id,
+      imageType: classifyIdentificationPhoto({
+        baseType: preliminaryClassification.type,
+        baseConfidence: preliminaryClassification.confidence,
+        ocrText: '',
+        barcodeValues: barcode.values,
+        width,
+        height,
+        visualFeatures: classificationVisual
+      }).type,
+      ocrText: '',
+      ocrConfidence: 0,
+      barcodeValues: barcode.values,
+      imageHash,
+      fingerprint: labelVisualFingerprint
+    }],
+    persist: false,
+    signal: options.signal
   });
   options.onProgress?.({ index, total, fileName: file.name, phase: 'region', message: 'ラベル領域を探しています。' });
   const pendingDraft: ImportedPhotoDraft = {
@@ -222,9 +277,11 @@ async function createImportedPhotoDraft(
     width,
     height,
     ocr: { text: '', confidence: 0, engine: 'none', status: 'empty', message: 'OCRをバックグラウンドで処理中です。' },
-    candidates: [],
+    candidates: earlyIdentification.candidates,
     status: 'processing',
-    message: 'プレビューを表示しました。OCRをバックグラウンドで処理中です。',
+    message: earlyIdentification.candidates.length
+      ? 'ラベル画像またはJANから候補を表示しました。文字解析を続けています。'
+      : 'プレビューを表示しました。端末内で候補を検索しています。',
     imageType: 'other',
     sortOrder: index,
     fileKey,
@@ -243,7 +300,10 @@ async function createImportedPhotoDraft(
     quality,
     labelRegions,
     barcodeValues: barcode.values,
-    visualFingerprint
+    visualFingerprint,
+    labelVisualFingerprint,
+    labelCropBlob,
+    labelCropPreviewUrl: URL.createObjectURL(labelCropBlob)
   };
   options.onDraftUpdate?.(pendingDraft);
 
@@ -295,17 +355,32 @@ async function createImportedPhotoDraft(
   options.onProgress?.({ index, total, fileName: file.name, phase: 'fusion', message: '文字・バーコード・ラベル特徴を統合しています。' });
   const candidateStarted = performance.now();
   const identification = await identifyAlcoholProductPipeline({
-    images: [{ imageId:id, imageType:detailedClassification.type, ocrText:ocr.text, ocrConfidence:ocr.confidence, barcodeValues:barcode.values, fingerprint:visualFingerprint }],
+    images: [{ imageId:id, imageType:detailedClassification.type, ocrText:ocr.text, ocrConfidence:ocr.confidence, barcodeValues:barcode.values, imageHash, fingerprint:labelVisualFingerprint }],
     signal:options.signal
   });
   const candidates = identification.candidates;
+  if (identification.abstained || candidates.length === 0) {
+    const fields = extractStructuredFields(ocr.text);
+    await db.unknownProductDrafts.put({
+      id: `unknown:${imageHash}`,
+      volumeMl: fields.volumes[0],
+      abv: fields.abvs[0],
+      janCode: barcode.values[0],
+      extractedTexts: ocr.text ? ocr.text.split(/\r?\n/u).filter(Boolean) : [],
+      sourceImageIds: [id],
+      status: 'catalog-unregistered',
+      createdAt: new Date().toISOString()
+    });
+  }
   const candidateMs = performance.now() - candidateStarted;
   const status = ocr.status === 'success' && candidates.length > 0 ? 'success' : 'warning';
   const message =
     warning ??
-    (ocr.status === 'success' && candidates.length > 0
-      ? 'OCR結果から候補を表示しました。内容を確認してください。'
-      : '銘柄を特定できませんでした。手入力してください。');
+    (candidates.length > 0
+      ? 'ラベル画像・JAN・文字・履歴を統合した候補です。内容を確認してください。'
+      : ocr.text || barcode.values.length
+        ? 'ラベル情報を取得しましたが、端末内商品カタログに未登録の可能性があります。'
+        : '銘柄を特定できませんでした。手入力してください。');
 
   await db.externalSources.put({
     id: 'diagnostic:last-photo-import',
@@ -323,6 +398,24 @@ async function createImportedPhotoDraft(
       ocrTextPreview: ocr.text.slice(0, 160),
       classification: classification.type,
       classificationConfidence: classification.confidence,
+      labelRegions: labelRegions.map((region) => ({
+        id:region.id, kind:region.kind, confidence:region.confidence, areaRatio:region.areaRatio,
+        detectionMethod:region.detectionMethod, quad:region.quad
+      })),
+      visualModel: labelVisualFingerprint.embeddingModel,
+      visualVersion: labelVisualFingerprint.embeddingVersion,
+      topCandidates: candidates.slice(0, 5).map((candidate) => ({
+        productId:candidate.productId,
+        productName:candidate.productName,
+        matchScore:candidate.totalConfidence,
+        visualScore:candidate.visualEmbeddingScore,
+        exactImageScore:candidate.exactImageScore,
+        barcodeScore:candidate.barcodeScore,
+        reasons:candidate.matchReasons,
+        conflicts:candidate.mismatchReasons ?? []
+      })),
+      abstained: identification.abstained,
+      stageTimings: identification.stageTimings,
       warning: warning ?? null
     },
     createdAt: new Date().toISOString()
@@ -551,8 +644,9 @@ async function normalizeImageFile(file: File): Promise<{ file: File; warning?: s
   }
 }
 
-export function revokeDraftPreview(draft?: Pick<ImportedPhotoDraft, 'previewUrl'>) {
+export function revokeDraftPreview(draft?: Pick<ImportedPhotoDraft, 'previewUrl' | 'labelCropPreviewUrl'>) {
   if (draft?.previewUrl) URL.revokeObjectURL(draft.previewUrl);
+  if (draft?.labelCropPreviewUrl && draft.labelCropPreviewUrl !== draft.previewUrl) URL.revokeObjectURL(draft.labelCropPreviewUrl);
 }
 
 export function imageTypeLabel(type: ImageType) {
@@ -590,7 +684,7 @@ export async function reanalyzePhotoDraft(
     height:draft.height
   });
   const identification = await identifyAlcoholProductPipeline({
-    images: [{ imageId:draft.id, imageType:detailedClassification.type, ocrText:ocr.text, ocrConfidence:ocr.confidence, barcodeValues:barcode.values, fingerprint }]
+    images: [{ imageId:draft.id, imageType:detailedClassification.type, ocrText:ocr.text, ocrConfidence:ocr.confidence, barcodeValues:barcode.values, imageHash:draft.imageHash, fingerprint }]
   });
   const candidates = identification.candidates;
   return {
@@ -599,7 +693,10 @@ export async function reanalyzePhotoDraft(
     candidates,
     quality,
     barcodeValues: barcode.values,
-    visualFingerprint: fingerprint,
+    visualFingerprint: draft.visualFingerprint,
+    labelVisualFingerprint: fingerprint,
+    labelCropBlob: input,
+    labelCropPreviewUrl: URL.createObjectURL(input),
     identificationRunId: identification.runId,
     identificationPath: identification.path,
     labelRegions: region ? [region] : await detectLabelRegionsFromImage(input, quality),

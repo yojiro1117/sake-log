@@ -215,6 +215,36 @@ export class SakeLogDatabase extends Dexie {
       identificationSettings: 'id, updatedAt', nativeAnalyses: 'id, imageId, environment, engine, createdAt',
       unknownProductDrafts: 'id, possibleProductName, makerName, alcoholType, status, createdAt, *sourceImageIds'
     });
+
+    this.version(9)
+      .stores({
+        logs: 'logId, createdAt, updatedAt, drankAt, capturedAt, alcoholType, productName, makerName, adoptedMarketPrice, valueScore, selectedMarketPriceCandidateId, importMode, status, saveOperationId',
+        images: 'imageId, logId, imageType, createdAt, capturedAt, imageHash, createdFromImport, sortOrder, fileName, mimeType',
+        userSettings: 'id', templates: 'templateId, targetSns, updatedAt', personalityResults: 'id, createdAt', reviewProfileResults: 'id, createdAt',
+        backupStatus: 'id', priceCandidates: 'id, logId, source, fetchedAt, recommended, matchScore', externalSources: 'id, type, createdAt',
+        drafts: 'id, updatedAt, status, source, revision', ocrCorrections: 'id, observedText, correctedProductName, lastUsedAt',
+        labelAliases: 'id, alias, productName', classificationCorrections: 'id, fingerprint, correctedType, updatedAt', deviceValidationResults: 'id, updatedAt',
+        productCatalog: 'productId, brandFamily, canonicalProductName, makerName, alcoholType, source, userConfirmed, updatedAt, *janCodes',
+        referenceImages: 'id, productId, imageHash, embeddingModel, embeddingVersion, userConfirmed, photoType, source, createdAt',
+        identificationRuns: 'id, createdAt, abstained, status, path, *imageIds, *candidateProductIds',
+        learningEvents: 'id, runId, proposedProductId, confirmedProductId, action, createdAt',
+        productAliases: 'id, productId, alias, kind, confirmed, updatedAt', productBarcodes: 'id, productId, rawValue, codeType, confirmed, updatedAt',
+        visualFeatures: 'id, productId, imageHash, userConfirmed, createdAt', identificationEvidence: 'id, runId, field, method, sourceImageId, createdAt',
+        identificationSettings: 'id, updatedAt', nativeAnalyses: 'id, imageId, environment, engine, createdAt',
+        unknownProductDrafts: 'id, possibleProductName, makerName, alcoholType, status, createdAt, *sourceImageIds'
+      })
+      .upgrade(async (tx) => {
+        await tx.table<ProductReferenceImage, string>('referenceImages').toCollection().modify((reference) => {
+          reference.embeddingModel ??= reference.fingerprint.embeddingModel ?? 'sake-local-label-composite';
+          reference.embeddingVersion ??= reference.fingerprint.embeddingVersion ?? '2';
+          reference.fingerprint.embeddingModel ??= reference.embeddingModel;
+          reference.fingerprint.embeddingVersion ??= reference.embeddingVersion;
+          reference.source ??= reference.userConfirmed ? 'user-confirmed' : 'imported';
+          reference.confirmationCount ??= reference.userConfirmed ? 1 : 0;
+          reference.rejectionCount ??= 0;
+          reference.updatedAt ??= reference.createdAt;
+        });
+      });
   }
 }
 

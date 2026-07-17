@@ -21,6 +21,7 @@ import {
   MAX_IMPORT_FILES,
   photoFileKey,
   reanalyzePhotoDraft,
+  revokeDraftPreview,
   type PhotoImportProgress
 } from '../services/photoImport';
 import { captureLabelPhoto } from '../services/smartCaptureService';
@@ -93,7 +94,10 @@ export function Record({
 
   const activeDraft = drafts[activeIndex];
   const [aggregatedOcr, setAggregatedOcr] = useState(emptyAggregatedOcr);
-  const displayedCandidates = importMode === 'singleLog' ? aggregatedOcr.candidates : activeDraft?.candidates ?? [];
+  const displayedCandidates = useMemo(
+    () => importMode === 'singleLog' ? aggregatedOcr.candidates : activeDraft?.candidates ?? [],
+    [activeDraft?.candidates, aggregatedOcr.candidates, importMode]
+  );
   const profile = alcoholProfiles[form.alcoholType];
   const baseAverage = averageScore(form.scores);
   const correction = correctedScore(baseAverage, form.satisfactionScore, {
@@ -223,6 +227,12 @@ export function Record({
   }, [activeDraft, drafts, importMode]);
 
   useEffect(() => {
+    const provisional = displayedCandidates[0];
+    if (!provisional || selectedProductCandidate || form.productName.trim() || form.makerName.trim()) return;
+    applyCandidate(provisional);
+  }, [displayedCandidates, form.makerName, form.productName, selectedProductCandidate]);
+
+  useEffect(() => {
     const region = activeDraft?.labelRegions?.find((item) => item.kind === 'center' || item.kind === 'manual');
     if (region) setCropQuad(quadFromRegion(region));
   }, [activeDraft?.id, activeDraft?.labelRegions]);
@@ -253,7 +263,7 @@ export function Record({
 
   useEffect(() => {
     return () => {
-      draftsRef.current.forEach((draft) => URL.revokeObjectURL(draft.previewUrl));
+      draftsRef.current.forEach(revokeDraftPreview);
       abortRef.current?.abort();
     };
   }, []);
@@ -363,14 +373,18 @@ export function Record({
 
   function applyDraftToForm(draft: ImportedPhotoDraft | undefined, mode: ImportMode) {
     if (!draft) return;
+    const provisional = draft.candidates[0];
+    setSelectedProductCandidate(provisional);
     setForm((current) => ({
       ...current,
       capturedAt: draft.capturedAt,
       drankAt: '',
-      productName: '',
-      makerName: '',
-      volume: undefined,
-      abv: undefined,
+      productName: provisional?.productName ?? '',
+      makerName: provisional?.makerName ?? '',
+      alcoholType: provisional?.alcoholType ?? current.alcoholType,
+      scores: provisional?.alcoholType && provisional.alcoholType !== current.alcoholType ? initialScores(provisional.alcoholType) : current.scores,
+      volume: provisional?.volume,
+      abv: provisional?.abv,
       selectedMarketPriceCandidateId: null
     }));
     if (mode === 'separateLogs') {
@@ -458,8 +472,8 @@ export function Record({
           barcodes:[...new Set(drafts.flatMap((draft) => draft.barcodeValues ?? []))],
           candidates:displayedCandidates, processingTimeMs:drafts.reduce((sum, draft) => sum + (draft.processing?.totalMs ?? 0), 0)
         });
-        const referenceDraft = activeDraft?.visualFingerprint ? activeDraft : drafts.find((draft) => draft.visualFingerprint);
         const decision = determineLearningDecision(selectedProductCandidate, { productName:form.productName, makerName:form.makerName });
+        const referenceDrafts = drafts.filter((draft) => draft.labelVisualFingerprint);
         await recordLearningDecision({
           candidate:selectedProductCandidate,
           runId,
@@ -467,14 +481,14 @@ export function Record({
           finalProductName:form.productName,
           finalMakerName:form.makerName,
           finalAlcoholType:form.alcoholType,
-          reference:referenceDraft?.visualFingerprint ? {
+          references:referenceDrafts.map((referenceDraft, index) => ({
             imageHash:referenceDraft.imageHash,
             sourceImageId:referenceDraft.id,
-            fingerprint:referenceDraft.visualFingerprint,
+            fingerprint:referenceDraft.labelVisualFingerprint!,
             photoType:referenceDraft.identificationPhotoType ?? referenceDraft.imageType,
             qualityLevel:referenceDraft.quality?.qualityLevel,
-            learningEventId:`${saved.logId}|${referenceDraft.imageHash}|${selectedProductCandidate?.productId ?? form.productName}`
-          } : undefined
+            learningEventId:index === 0 ? `${saved.logId}|${referenceDraft.imageHash}|${selectedProductCandidate?.productId ?? form.productName}` : undefined
+          }))
         })
           .catch(() => warnings.push('確認済み商品マスターの更新だけ失敗しました。'));
       }
@@ -726,6 +740,16 @@ export function Record({
               {activeDraft.quality.warnings.length ? <p className="mt-1 text-red-200">注意: {activeDraft.quality.warnings.join(' / ')}</p> : <p className="mt-1">重大な品質警告なし</p>}
             </div>
           ) : null}
+          {activeDraft?.labelCropPreviewUrl ? (
+            <div className="mt-3 grid grid-cols-[88px_1fr] items-center gap-3 rounded-md bg-ink/50 p-3 text-xs text-rice/65">
+              <img src={activeDraft.labelCropPreviewUrl} alt="画像検索に使用したラベル範囲" className="h-24 w-[88px] rounded object-contain" />
+              <div>
+                <p className="font-bold text-gold">画像検索に使用したラベル</p>
+                <p>透視補正または自動切り出し後の画像特徴を候補検索に使用しています。</p>
+                <p className="mt-1">モデル: {activeDraft.labelVisualFingerprint?.embeddingModel ?? '未生成'} / {activeDraft.labelVisualFingerprint?.embeddingVersion ?? '-'}</p>
+              </div>
+            </div>
+          ) : null}
           {activeDraft && (displayedCandidates.length === 0 || (displayedCandidates[0]?.calibratedConfidence ?? 0) < 86) ? (
             <div className="mt-4 space-y-3 rounded-md border border-gold/25 bg-ink/50 p-3">
               <div className="flex items-center gap-2 font-bold text-gold"><ScanLine size={17} />ラベル範囲を指定して再解析</div>
@@ -770,11 +794,17 @@ export function Record({
                 <span className="mt-1 block text-xs text-rice/50">
                   OCR {Math.round((candidate.ocrConfidence ?? 0) * 100)}%・銘柄一致 {candidate.productConfidence ?? 0}{candidate.makerConfidence !== undefined ? `・蔵元根拠 ${candidate.makerConfidence}` : ''}{candidate.volumeConfidence !== undefined ? `・容量根拠 ${candidate.volumeConfidence}` : ''}
                 </span>
+                <span className="mt-1 block text-xs text-rice/50">画像 {candidate.visualEmbeddingScore ?? 0}・完全画像 {candidate.exactImageScore ?? 0}・JAN {candidate.barcodeScore ?? 0}</span>
                 {candidate.mismatchReasons?.length ? <span className="mt-1 block text-xs text-red-200">不一致: {candidate.mismatchReasons.join(' / ')}</span> : null}
                 <span className="mt-1 block text-xs text-gold">候補は自動確定されません。内容を確認してください。</span>
                 {candidate.warning ? <span className="mt-1 block text-xs text-gold">{candidate.warning}</span> : null}
               </button>
             ))}
+            {displayedCandidates.length ? (
+              <button className="rounded-md border border-rice/20 px-3 py-3 text-left text-sm text-rice/70" onClick={() => setSelectedProductCandidate(undefined)}>
+                該当なし（入力内容を確認して新規商品として保存）
+              </button>
+            ) : null}
           </div>
         </div>
       </Section>

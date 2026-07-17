@@ -2,8 +2,8 @@ import 'fake-indexeddb/auto';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { SakeLogDatabase } from '../db/db';
 import type { AlcoholProductCatalogEntry, ProductReferenceImage, VisualFingerprint } from '../types';
-import { retrieveBarcodeCandidates, retrieveVisualCandidates, unionRetrievedCandidates } from './candidateRetrieval';
-import { determineLearningDecision } from './identificationLearningService';
+import { retrieveBarcodeCandidates, retrieveExactImageCandidates, retrieveVisualCandidates, unionRetrievedCandidates } from './candidateRetrieval';
+import { buildReferenceId, determineLearningDecision, isReferenceEligible } from './identificationLearningService';
 
 const fingerprint:VisualFingerprint = {
   hash:'0'.repeat(64), luminance:Array(256).fill(120), colorHistogram:Array(24).fill(1 / 24), aspectRatio:0.7
@@ -26,6 +26,11 @@ describe('independent identification retrieval', () => {
     expect(candidates[0]).toMatchObject({ entry:{ productId:'yamazaki' }, sources:['visual'] });
   });
 
+  it('retrieves by exact confirmed image when OCR and JAN are empty', () => {
+    const candidates = retrieveExactImageCandidates(['yamazaki'], catalog);
+    expect(candidates[0]).toMatchObject({ entry:{ productId:'yamazaki' }, sources:['exact-image'] });
+  });
+
   it('unions evidence sources before ranking', () => {
     const barcode = retrieveBarcodeCandidates(['4901777233812'], catalog);
     const visual = retrieveVisualCandidates({ yamazaki:0.88 }, catalog);
@@ -43,6 +48,19 @@ describe('learning decision safety', () => {
 
   it('treats an unselected saved product as a new manual product', () => {
     expect(determineLearningDecision(undefined, { productName:'新しい銘柄' })).toBe('manual-new');
+  });
+
+  it('rejects inappropriate photos and poor images from learning', () => {
+    expect(isReferenceEligible('frontLabel', 'good')).toBe(true);
+    expect(isReferenceEligible('barcode', 'fair')).toBe(true);
+    expect(isReferenceEligible('food', 'good')).toBe(false);
+    expect(isReferenceEligible('frontLabel', 'poor')).toBe(false);
+  });
+
+  it('uses an idempotent reference key for the same product image and model version', () => {
+    const first = buildReferenceId('yamazaki', 'image-hash', 'label-model', '2');
+    expect(buildReferenceId('yamazaki', 'image-hash', 'label-model', '2')).toBe(first);
+    expect(buildReferenceId('yamazaki', 'image-hash', 'label-model', '3')).not.toBe(first);
   });
 });
 

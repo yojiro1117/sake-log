@@ -1,5 +1,8 @@
 import type { ProductReferenceImage, VisualFingerprint } from '../types';
 
+export const WEB_VISUAL_MODEL = 'sake-local-label-composite';
+export const WEB_VISUAL_VERSION = '2';
+
 export async function createVisualFingerprint(blob: Blob): Promise<VisualFingerprint> {
   const bitmap = await createImageBitmap(blob);
   const aspectRatio = bitmap.width / bitmap.height;
@@ -34,12 +37,15 @@ export function createVisualFingerprintFromRgba(data: ArrayLike<number>, aspectR
   const layoutSignature = createLayoutSignature(body, 16, 16);
   const dominantColors = dominantHistogramColors(histogram);
   return {
+    embeddingModel: WEB_VISUAL_MODEL,
+    embeddingVersion: WEB_VISUAL_VERSION,
     hash, averageHash, perceptualHash, luminance: body,
     colorHistogram: histogram.map((value) => value / (17 * 16)), edgeHistogram, layoutSignature, dominantColors, aspectRatio
   };
 }
 
 export function visualSimilarity(left: VisualFingerprint, right: VisualFingerprint) {
+  if (!areVisualModelsCompatible(left, right)) return 0;
   let differingBits = 0;
   for (let index = 0; index < Math.min(left.hash.length, right.hash.length); index += 1) {
     let xor = Number.parseInt(left.hash[index], 16) ^ Number.parseInt(right.hash[index], 16);
@@ -62,8 +68,22 @@ export function visualSimilarity(left: VisualFingerprint, right: VisualFingerpri
 
 export function scoreVisualReferences(fingerprint: VisualFingerprint, references: ProductReferenceImage[]) {
   const result: Record<string, number> = {};
-  for (const reference of references.filter((item) => item.userConfirmed)) result[reference.productId] = Math.max(result[reference.productId] ?? 0, visualSimilarity(fingerprint, reference.fingerprint));
+  for (const reference of references.filter((item) => item.userConfirmed && areVisualModelsCompatible(fingerprint, item.fingerprint))) {
+    result[reference.productId] = Math.max(result[reference.productId] ?? 0, visualSimilarity(fingerprint, reference.fingerprint));
+  }
   return result;
+}
+
+export function exactImageReferenceProducts(imageHash: string, references: ProductReferenceImage[]) {
+  return [...new Set(references.filter((item) => item.userConfirmed && item.imageHash === imageHash).map((item) => item.productId))];
+}
+
+export function areVisualModelsCompatible(left: VisualFingerprint, right: VisualFingerprint) {
+  const leftModel = left.embeddingModel ?? WEB_VISUAL_MODEL;
+  const rightModel = right.embeddingModel ?? WEB_VISUAL_MODEL;
+  const leftVersion = left.embeddingVersion ?? WEB_VISUAL_VERSION;
+  const rightVersion = right.embeddingVersion ?? WEB_VISUAL_VERSION;
+  return leftModel === rightModel && leftVersion === rightVersion;
 }
 
 function bitsToHex(bits: string) {

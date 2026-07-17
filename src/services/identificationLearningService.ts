@@ -22,17 +22,18 @@ export async function recordLearningDecision(input: {
   finalProductName:string;
   finalMakerName?:string;
   finalAlcoholType:AlcoholType;
-  reference?:{
+  references?:Array<{
     imageHash:string;
     sourceImageId:string;
     fingerprint:VisualFingerprint;
     photoType?:'frontLabel'|'backLabel'|'bottle'|'neckLabel'|'barcode'|'receipt'|'glass'|'food'|'cap'|'shelf'|'multipleBottles'|'other'|'unknown';
     qualityLevel?:'good'|'fair'|'poor';
     learningEventId?:string;
-  };
+  }>;
 }) {
-  const eventId = input.reference?.learningEventId
-    ?? `${input.runId}:${input.reference?.imageHash ?? 'no-image'}:${input.candidate?.productId ?? input.finalProductName}:${input.decision}`;
+  const references = input.references ?? [];
+  const eventId = references[0]?.learningEventId
+    ?? `${input.runId}:${references[0]?.imageHash ?? 'no-image'}:${input.candidate?.productId ?? input.finalProductName}:${input.decision}`;
   await db.transaction('rw', db.learningEvents, db.productCatalog, db.referenceImages, async () => {
     if (await db.learningEvents.get(eventId)) return;
     const now = new Date().toISOString();
@@ -70,16 +71,41 @@ export async function recordLearningDecision(input: {
       if (existing) await db.productCatalog.update(confirmedProductId, { userConfirmed:true, source:'user-confirmed', updatedAt:now });
       else if (builtIn) await db.productCatalog.put({ ...builtIn, userConfirmed:true, source:'user-confirmed', updatedAt:now });
     }
-    const referenceAllowed = input.reference
-      && ['frontLabel','backLabel','bottle','neckLabel'].includes(input.reference.photoType ?? '')
-      && ['good','fair'].includes(input.reference.qualityLevel ?? '');
-    if (referenceAllowed && input.reference) await db.referenceImages.put({
-      id:`${confirmedProductId}:${input.reference.imageHash}`, productId:confirmedProductId, imageHash:input.reference.imageHash,
-      fingerprint:input.reference.fingerprint, sourceImageId:input.reference.sourceImageId,
-      photoType:input.reference.photoType, qualityLevel:input.reference.qualityLevel,
-      userConfirmed:true, createdAt:now
-    });
+    for (const reference of references) {
+      const referenceAllowed = isReferenceEligible(reference.photoType, reference.qualityLevel);
+      if (!referenceAllowed) continue;
+      const model = reference.fingerprint.embeddingModel ?? 'sake-local-label-composite';
+      const version = reference.fingerprint.embeddingVersion ?? '2';
+      const id = buildReferenceId(confirmedProductId, reference.imageHash, model, version);
+      const existingReference = await db.referenceImages.get(id);
+      await db.referenceImages.put({
+        id,
+        productId:confirmedProductId,
+        imageHash:reference.imageHash,
+        fingerprint:reference.fingerprint,
+        embeddingModel:model,
+        embeddingVersion:version,
+        sourceImageId:reference.sourceImageId,
+        photoType:reference.photoType,
+        qualityLevel:reference.qualityLevel,
+        source:'user-confirmed',
+        confirmationCount:(existingReference?.confirmationCount ?? 0) + 1,
+        rejectionCount:existingReference?.rejectionCount ?? 0,
+        userConfirmed:true,
+        createdAt:existingReference?.createdAt ?? now,
+        updatedAt:now
+      });
+    }
   });
+}
+
+export function isReferenceEligible(photoType?: string, qualityLevel?: string) {
+  return ['frontLabel','backLabel','bottle','neckLabel','barcode'].includes(photoType ?? '')
+    && ['good','fair'].includes(qualityLevel ?? '');
+}
+
+export function buildReferenceId(productId:string, imageHash:string, model:string, version:string) {
+  return `${productId}:${imageHash}:${model}:${version}`;
 }
 
 export function determineLearningDecision(

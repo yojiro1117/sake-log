@@ -22,9 +22,15 @@ const manifest = {
   version,
   generatedAt: new Date().toISOString(),
   entries: builtInAlcoholProductCatalog.length,
+  productCount: builtInAlcoholProductCatalog.length,
+  janCount: Object.keys(jan).length,
+  referenceCount: 0,
+  embeddingModel: 'sake-local-label-composite',
+  embeddingVersion: '2',
   files: files.map(([name, data]) => ({ name, bytes: data.byteLength, sha256: createHash('sha256').update(data).digest('hex') })),
   imageDataIncluded: false,
-  license: 'Application-maintained factual metadata; no third-party product images.'
+  license: 'Application-maintained factual metadata; no third-party product images.',
+  licenseSummary: 'No product image or derived third-party visual feature is distributed.'
 };
 await writeFile(new URL('manifest.json', output), `${JSON.stringify(manifest, null, 2)}\n`);
 await writeFile(new URL('catalog-core.json', output), `${JSON.stringify({ version, entries: builtInAlcoholProductCatalog }, null, 2)}\n`);

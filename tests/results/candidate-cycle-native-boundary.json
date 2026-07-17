@@ -1,13 +1,18 @@
 {
   "summary": {
     "totalImages": 151,
-    "candidateHitRate": 0.132,
-    "noCandidateRate": 0.868,
+    "candidateHitRate": 0.119,
+    "noCandidateRate": 0.881,
     "oneCharacterAliasesRejected": true,
     "fuzzyMatchingScope": "normalized OCR tokens of 2-48 characters",
-    "groundTruthConfirmed": 0,
-    "falseCandidateCount": null,
-    "note": "No false-candidate rate is claimed because all current ground truth is unknown."
+    "groundTruthConfirmed": 48,
+    "groundTruthPartiallyConfirmed": 15,
+    "exactProductTop1": 0.125,
+    "brandTop1": 0.222,
+    "falseCandidateCount": 0,
+    "unknownCandidateCount": 4,
+    "unknownCandidateRate": 0.045,
+    "note": "Accuracy denominators exclude unknown ground truth; every displayed candidate still requires user confirmation."
   },
   "results": [
     {
@@ -26,6 +31,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "Laphroaig Triple Wood",
+      "expectedBrandFamily": "Laphroaig",
       "candidates": []
     },
     {
@@ -50,6 +58,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "響 Japanese Harmony",
+      "expectedBrandFamily": "響",
       "candidates": [
         {
           "productName": "響",
@@ -78,6 +89,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "W 純米 山田錦",
+      "expectedBrandFamily": "W",
       "candidates": []
     },
     {
@@ -97,6 +111,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鍋島 純米吟醸",
+      "expectedBrandFamily": "鍋島",
       "candidates": []
     },
     {
@@ -115,6 +132,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -134,6 +152,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "甕雫",
+      "expectedBrandFamily": "甕雫",
       "candidates": []
     },
     {
@@ -152,6 +173,9 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "喜荒太",
+      "expectedBrandFamily": "喜荒太",
       "candidates": []
     },
     {
@@ -175,6 +199,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "Laphroaig Triple Wood",
+      "expectedBrandFamily": "Laphroaig",
       "candidates": [
         {
           "productName": "Laphroaig Triple Wood",
@@ -202,6 +229,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -220,6 +248,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "ニッカ カフェモルト",
+      "expectedBrandFamily": "ニッカ",
       "candidates": []
     },
     {
@@ -238,6 +269,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -256,6 +288,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -274,6 +307,9 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "新政 2020 美山錦",
+      "expectedBrandFamily": "新政",
       "candidates": []
     },
     {
@@ -292,6 +328,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -310,6 +347,9 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "香里音 karine PREMIUM",
+      "expectedBrandFamily": "香里音",
       "candidates": []
     },
     {
@@ -332,6 +372,9 @@
         "ネイティブ形式のままOCR"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "山崎",
+      "expectedBrandFamily": "山崎",
       "candidates": [
         {
           "productName": "山崎",
@@ -375,6 +418,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -394,6 +438,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "香里音 karine PREMIUM",
+      "expectedBrandFamily": "香里音",
       "candidates": []
     },
     {
@@ -418,6 +465,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "久保田 千寿 純米吟醸",
+      "expectedBrandFamily": "久保田",
       "candidates": [
         {
           "productName": "久保田",
@@ -446,6 +496,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -469,6 +520,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "シングルモルト 宮城峡",
+      "expectedBrandFamily": "宮城峡",
       "candidates": [
         {
           "productName": "シングルモルト 宮城峡",
@@ -501,6 +555,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "響 Japanese Harmony",
+      "expectedBrandFamily": "響",
       "candidates": [
         {
           "productName": "響",
@@ -528,6 +585,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -538,62 +596,18 @@
       "bestVariant": "converted-resized",
       "ocrText": "lo”\n\nl\n\nッッ\n\nーー\n\nーー\n\nTHg\n\nWMAZAKI\n\nSE Wsxy\n\nJA\n\n'HennessY\n\nビッ\n\nMEGD\n\nサントリー>\n\nグルモルレト*ウイスキー\n\n43\n\nL MF 125 45\n\n¥ 9300\n\nJEE SE",
       "ocrConfidence": 0.4,
-      "detectedProductName": "響",
-      "detectedMakerName": "サントリー",
-      "detectedAlcoholType": "whisky",
-      "candidateReasons": [
-        "蔵元一致"
-      ],
-      "candidateCount": 5,
+      "candidateReasons": [],
+      "candidateCount": 0,
       "processingTimeMs": 7390,
       "warnings": [
         "heic-convert済み一時画像を再利用",
         "小断片が多い"
       ],
       "errors": [],
-      "candidates": [
-        {
-          "productName": "響",
-          "makerName": "サントリー",
-          "alcoholType": "whisky",
-          "matchReasons": [
-            "蔵元一致"
-          ]
-        },
-        {
-          "productName": "山崎",
-          "makerName": "サントリー",
-          "alcoholType": "whisky",
-          "matchReasons": [
-            "OCR別名一致: YAMAZAKI",
-            "蔵元一致"
-          ]
-        },
-        {
-          "productName": "山崎 12年",
-          "makerName": "サントリー",
-          "alcoholType": "whisky",
-          "matchReasons": [
-            "蔵元一致"
-          ]
-        },
-        {
-          "productName": "山崎 18年",
-          "makerName": "サントリー",
-          "alcoholType": "whisky",
-          "matchReasons": [
-            "蔵元一致"
-          ]
-        },
-        {
-          "productName": "知多",
-          "makerName": "サントリー",
-          "alcoholType": "whisky",
-          "matchReasons": [
-            "蔵元一致"
-          ]
-        }
-      ]
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "山崎 12年",
+      "expectedBrandFamily": "山崎",
+      "candidates": []
     },
     {
       "driveFileId": "1m6Cw4yXzRmnhmUvqpEGOvbzN92aahk9C",
@@ -611,6 +625,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -628,6 +643,7 @@
         "heic-convert済み一時画像を再利用"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -645,6 +661,7 @@
         "heic-convert済み一時画像を再利用"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -664,6 +681,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "ニッカ カフェモルト",
+      "expectedBrandFamily": "ニッカ",
       "candidates": []
     },
     {
@@ -682,6 +702,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "ニッカ カフェモルト",
+      "expectedBrandFamily": "ニッカ",
       "candidates": []
     },
     {
@@ -700,6 +723,9 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鍋島 純米吟醸",
+      "expectedBrandFamily": "鍋島",
       "candidates": []
     },
     {
@@ -719,6 +745,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鍋島 純米吟醸",
+      "expectedBrandFamily": "鍋島",
       "candidates": []
     },
     {
@@ -738,6 +767,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "喜荒太",
+      "expectedBrandFamily": "喜荒太",
       "candidates": []
     },
     {
@@ -756,6 +788,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "知多",
+      "expectedBrandFamily": "知多",
       "candidates": []
     },
     {
@@ -775,6 +810,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "知多",
+      "expectedBrandFamily": "知多",
       "candidates": []
     },
     {
@@ -794,6 +832,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "シングルモルト 余市",
+      "expectedBrandFamily": "余市",
       "candidates": []
     },
     {
@@ -804,34 +845,29 @@
       "bestVariant": "converted-resized",
       "ocrText": "に 1\n\n> ー 74\n\nし\n\nNIKKA WHISKY\n\nSINGLE MALT\n\n/4\n\nYOICHI\n\nビタ\n\n作\n\n所 シングルモルト\n\nD By\n\n所でつくられたモル\n\nro\n\n(スミ",
       "ocrConfidence": 0.65,
-      "detectedProductName": "シングルモルト 宮城峡",
+      "detectedProductName": "シングルモルト 余市",
       "detectedMakerName": "ニッカウヰスキー",
       "detectedAlcoholType": "whisky",
       "candidateReasons": [
-        "OCR別名一致: シングルモルト 宮城峡"
+        "OCR別名一致: YOICHI"
       ],
-      "candidateCount": 2,
+      "candidateCount": 1,
       "processingTimeMs": 640,
       "warnings": [
         "heic-convert済み一時画像を再利用",
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "シングルモルト 余市",
+      "expectedBrandFamily": "余市",
       "candidates": [
-        {
-          "productName": "シングルモルト 宮城峡",
-          "makerName": "ニッカウヰスキー",
-          "alcoholType": "whisky",
-          "matchReasons": [
-            "OCR別名一致: シングルモルト 宮城峡"
-          ]
-        },
         {
           "productName": "シングルモルト 余市",
           "makerName": "ニッカウヰスキー",
           "alcoholType": "whisky",
           "matchReasons": [
-            "OCR別名一致: シングルモルト 余市"
+            "OCR別名一致: YOICHI"
           ]
         }
       ]
@@ -853,6 +889,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "Asian Beauty 純米吟醸",
+      "expectedBrandFamily": "Asian Beauty",
       "candidates": []
     },
     {
@@ -872,6 +911,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -890,6 +930,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -908,6 +949,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -927,6 +969,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -945,6 +988,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -963,6 +1007,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -981,6 +1026,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -999,6 +1045,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1018,6 +1065,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1037,6 +1085,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1047,29 +1096,16 @@
       "bestVariant": "converted-resized",
       "ocrText": "ガ り\n\nから\n\n、7回\n\nI\n\nAKA\n\nARKLING'\n\nさき\n\nを中にま\n\nぁる\n\nを込めて本した日本酒てす。\n\n導 ものは、到協せず仕込みひとっ\n\nひとつき大切に日々進化する酒造リてす。\n\n$名称日本酒@原材料名米(国産)洲克\n\n(国送米)@原料米 吟さんが100%使用8\n\n浦米歩合5096@製造年月は枠下部へ$アル\n\nコール分13度@お酒は二十歳に は b\n\n$内容量750mle保存方法 /2\n\nWtt AAL 株未会\n\n当才県盛岡市北飯岡 1-8-60\n\nLLS きめ\n\n埋め《 夜空に思わず息をのむ銀河の美\n\n(は\n\nbkの0 4 < 弾ける泡と酸がご地よ\n\nなお\n\nす、菜租にかけて酸味甘味の調和したクリ\n\n!\n\n較シティ ックな世界をお楽\n\n*らみ。 酵母からは泡、麹から\n\nドサーー\n\nここ析\n\n—\n\nレン\n\n2022.9\n\nーー\n\n—\n\nお酒はこ\n\nLizs\n\ni=\n\nンジ\n\nミ必の\n\nLI he TALED\n\nざて指などけが をしない は以\n\nュ=用\n\n人邊て た\n\nリー\n\nっ\n\n洒 内容量750m",
       "ocrConfidence": 0.66,
-      "detectedProductName": "貴 特別純米 60",
-      "detectedMakerName": "永山本家酒造場",
-      "detectedAlcoholType": "sake",
-      "candidateReasons": [
-        "OCR別名一致: TAKA"
-      ],
-      "candidateCount": 1,
+      "candidateReasons": [],
+      "candidateCount": 0,
       "processingTimeMs": 4438,
       "warnings": [
         "heic-convertでJPEGへ変換",
         "小断片が多い"
       ],
       "errors": [],
-      "candidates": [
-        {
-          "productName": "貴 特別純米 60",
-          "makerName": "永山本家酒造場",
-          "alcoholType": "sake",
-          "matchReasons": [
-            "OCR別名一致: TAKA"
-          ]
-        }
-      ]
+      "groundTruthStatus": "unknown",
+      "candidates": []
     },
     {
       "driveFileId": "1PV6sJt6hei85JJfoV4tlgQOJmyGehm0b",
@@ -1088,6 +1124,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1106,6 +1143,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1125,6 +1163,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1143,6 +1182,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1161,6 +1201,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1180,6 +1221,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "東光 純米吟醸原酒",
+      "expectedBrandFamily": "東光",
       "candidates": []
     },
     {
@@ -1199,6 +1243,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鍋島 New Moon",
+      "expectedBrandFamily": "鍋島",
       "candidates": []
     },
     {
@@ -1218,6 +1265,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鍋島 New Moon",
+      "expectedBrandFamily": "鍋島",
       "candidates": []
     },
     {
@@ -1237,6 +1287,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鷹ノ目",
+      "expectedBrandFamily": "鷹ノ目",
       "candidates": []
     },
     {
@@ -1256,6 +1309,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "風の森",
+      "expectedBrandFamily": "風の森",
       "candidates": []
     },
     {
@@ -1273,6 +1329,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1292,6 +1349,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1312,6 +1370,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1330,6 +1389,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1349,6 +1409,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1368,6 +1429,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "貴 特別純米 60",
+      "expectedBrandFamily": "貴",
       "candidates": []
     },
     {
@@ -1386,6 +1450,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "貴 特別純米 60",
+      "expectedBrandFamily": "貴",
       "candidates": []
     },
     {
@@ -1400,7 +1467,7 @@
       "detectedMakerName": "濵田酒造",
       "detectedAlcoholType": "shochu",
       "candidateReasons": [
-        "OCR別名一致: DAIYAME"
+        "OCR別名一致: HAMADA SYUZOU"
       ],
       "candidateCount": 1,
       "processingTimeMs": 10036,
@@ -1410,13 +1477,16 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "だいやめ DAIYAME",
+      "expectedBrandFamily": "だいやめ",
       "candidates": [
         {
           "productName": "だいやめ DAIYAME",
           "makerName": "濵田酒造",
           "alcoholType": "shochu",
           "matchReasons": [
-            "OCR別名一致: DAIYAME"
+            "OCR別名一致: HAMADA SYUZOU"
           ]
         }
       ]
@@ -1437,6 +1507,9 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "甲州 酸化防止剤無添加",
+      "expectedBrandFamily": "甲州",
       "candidates": []
     },
     {
@@ -1455,6 +1528,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1478,6 +1552,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": [
         {
           "productName": "田酒 純米吟醸",
@@ -1506,6 +1581,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1524,6 +1600,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1543,6 +1620,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1562,6 +1640,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "W 純米 山田錦",
+      "expectedBrandFamily": "W",
       "candidates": []
     },
     {
@@ -1581,6 +1662,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "天鷹 夢ささら 1814",
+      "expectedBrandFamily": "天鷹",
       "candidates": []
     },
     {
@@ -1600,6 +1684,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "寫樂 純米吟醸",
+      "expectedBrandFamily": "寫樂",
       "candidates": []
     },
     {
@@ -1619,6 +1706,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "田酒 純米吟醸",
+      "expectedBrandFamily": "田酒",
       "candidates": []
     },
     {
@@ -1638,6 +1728,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "獺祭 純米大吟醸45",
+      "expectedBrandFamily": "獺祭",
       "candidates": []
     },
     {
@@ -1656,6 +1749,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "赤武 AKABU 純米吟醸",
+      "expectedBrandFamily": "赤武",
       "candidates": []
     },
     {
@@ -1675,6 +1771,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1694,6 +1791,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1712,6 +1810,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1731,6 +1830,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1749,6 +1849,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1768,6 +1869,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1787,6 +1889,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "垂氷",
+      "expectedBrandFamily": "垂氷",
       "candidates": []
     },
     {
@@ -1811,6 +1916,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "瀧自慢 大吟醸",
+      "expectedBrandFamily": "瀧自慢",
       "candidates": [
         {
           "productName": "瀧自慢 大吟醸",
@@ -1838,6 +1946,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1857,6 +1966,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1875,6 +1985,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1894,6 +2005,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -1917,6 +2029,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": [
         {
           "productName": "田酒 純米吟醸",
@@ -1952,6 +2065,9 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "新政 2020 美山錦",
+      "expectedBrandFamily": "新政",
       "candidates": []
     },
     {
@@ -1971,6 +2087,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "新政 2020 美山錦",
+      "expectedBrandFamily": "新政",
       "candidates": []
     },
     {
@@ -1989,6 +2108,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "寫樂 純米吟醸",
+      "expectedBrandFamily": "寫樂",
       "candidates": []
     },
     {
@@ -2008,6 +2130,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "赤武 AKABU 純米吟醸",
+      "expectedBrandFamily": "赤武",
       "candidates": []
     },
     {
@@ -2026,6 +2151,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2043,6 +2169,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2060,6 +2187,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2077,6 +2205,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2095,6 +2224,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2113,6 +2243,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2130,6 +2261,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2149,6 +2281,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2172,6 +2305,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "新政 No.6 X-type",
+      "expectedBrandFamily": "新政",
       "candidates": [
         {
           "productName": "新政 No.6",
@@ -2204,6 +2340,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": [
         {
           "productName": "新政 No.6",
@@ -2231,6 +2368,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "赤武 AKABU MOUNTAIN 2021",
+      "expectedBrandFamily": "赤武",
       "candidates": []
     },
     {
@@ -2253,6 +2393,9 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "赤武 AKABU MOUNTAIN 2021",
+      "expectedBrandFamily": "赤武",
       "candidates": [
         {
           "productName": "赤武 AKABU 純米吟醸",
@@ -2281,6 +2424,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "山本",
+      "expectedBrandFamily": "山本",
       "candidates": []
     },
     {
@@ -2299,6 +2445,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "山本",
+      "expectedBrandFamily": "山本",
       "candidates": []
     },
     {
@@ -2319,6 +2468,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "寫樂 純米吟醸",
+      "expectedBrandFamily": "寫樂",
       "candidates": []
     },
     {
@@ -2337,6 +2489,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "寫樂 純米吟醸",
+      "expectedBrandFamily": "寫樂",
       "candidates": []
     },
     {
@@ -2355,6 +2510,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "新政 No.6 X-type",
+      "expectedBrandFamily": "新政",
       "candidates": []
     },
     {
@@ -2375,6 +2533,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "新政 No.6 X-type",
+      "expectedBrandFamily": "新政",
       "candidates": []
     },
     {
@@ -2398,6 +2559,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "新政 No.6 X-type",
+      "expectedBrandFamily": "新政",
       "candidates": [
         {
           "productName": "新政 No.6",
@@ -2426,6 +2590,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2443,6 +2608,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2462,6 +2628,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2481,6 +2648,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2498,6 +2666,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2521,6 +2690,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": [
         {
           "productName": "知多",
@@ -2549,6 +2719,9 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鳳凰美田 純米吟醸 雄町",
+      "expectedBrandFamily": "鳳凰美田",
       "candidates": []
     },
     {
@@ -2568,6 +2741,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鳳凰美田 純米吟醸 雄町",
+      "expectedBrandFamily": "鳳凰美田",
       "candidates": []
     },
     {
@@ -2585,6 +2761,9 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "鳳凰美田 純米吟醸 雄町",
+      "expectedBrandFamily": "鳳凰美田",
       "candidates": []
     },
     {
@@ -2603,6 +2782,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2621,6 +2801,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2639,6 +2820,9 @@
         "低信頼度"
       ],
       "errors": [],
+      "groundTruthStatus": "partiallyConfirmed",
+      "expectedProductName": "THE TAPAS WINE COLLECTION TEMPRANILLO 2018",
+      "expectedBrandFamily": "THE TAPAS WINE COLLECTION",
       "candidates": []
     },
     {
@@ -2657,6 +2841,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2675,6 +2860,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2693,6 +2879,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2711,6 +2898,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2730,6 +2918,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2748,6 +2937,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2767,6 +2957,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2784,6 +2975,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2802,6 +2994,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2821,6 +3014,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2840,6 +3034,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2858,6 +3053,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2876,6 +3072,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2894,6 +3091,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2913,6 +3111,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2930,6 +3129,7 @@
         "heic-convertでJPEGへ変換"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2948,6 +3148,7 @@
         "記号ノイズ過多"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -2971,6 +3172,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "新政 No.6 X-type",
+      "expectedBrandFamily": "新政",
       "candidates": [
         {
           "productName": "新政 No.6",
@@ -3004,6 +3208,9 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "confirmed",
+      "expectedProductName": "新政 No.6 X-type",
+      "expectedBrandFamily": "新政",
       "candidates": [
         {
           "productName": "新政 No.6",
@@ -3032,6 +3239,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -3052,6 +3260,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -3070,6 +3279,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -3088,6 +3298,7 @@
         "低信頼度"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -3106,6 +3317,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     },
     {
@@ -3125,6 +3337,7 @@
         "小断片が多い"
       ],
       "errors": [],
+      "groundTruthStatus": "unknown",
       "candidates": []
     }
   ]

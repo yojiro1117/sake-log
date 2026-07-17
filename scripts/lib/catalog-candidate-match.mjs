@@ -8,7 +8,7 @@ export function buildCatalogCandidates(ocrText, catalogEntries) {
     const alias = aliases.find((item) => isGroundedMatch(normalized, tokens, normalizeForMatch(item)));
     const makerValue = normalizeForMatch(entry.makerName ?? '');
     const maker = makerValue.length >= 2 && normalized.includes(makerValue);
-    if (!alias && !maker) return [];
+    if (!alias) return [];
     return [{
       productName: entry.canonicalProductName,
       makerName: entry.makerName,
@@ -24,7 +24,7 @@ function isGroundedMatch(text, tokens, alias) {
   if (alias.length < 4) return false;
   return tokens.some((token) => {
     const lengthRatio = Math.min(token.length, alias.length) / Math.max(token.length, alias.length);
-    return lengthRatio >= 0.65 && (ngramSimilarity(token, alias) >= 0.72 || levenshteinSimilarity(token, alias) >= 0.78);
+    return lengthRatio >= 0.8 && (ngramSimilarity(token, alias) >= 0.78 || levenshteinSimilarity(token, alias) >= 0.82);
   });
 }
 

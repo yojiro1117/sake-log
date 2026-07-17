@@ -11,6 +11,7 @@ export interface SafeDiagnostics {
   serviceWorker: Record<string, unknown>;
   cacheNames: string[];
   lastPhotoImport: Record<string, unknown> | null;
+  visualRetrieval: Record<string, unknown>;
 }
 
 export async function createSafeDiagnostics(): Promise<SafeDiagnostics> {
@@ -20,6 +21,12 @@ export async function createSafeDiagnostics(): Promise<SafeDiagnostics> {
   const cacheNames = 'caches' in globalThis ? await caches.keys().catch(() => []) : [];
   const tableCounts = Object.fromEntries(await Promise.all(db.tables.map(async (table) => [table.name, await table.count().catch(() => -1)])));
   const lastPhotoImport = await db.externalSources.get('diagnostic:last-photo-import');
+  const [latestRun, references] = await Promise.all([
+    db.identificationRuns.orderBy('createdAt').reverse().first(),
+    db.referenceImages.toArray()
+  ]);
+  const referencesByModel = Object.fromEntries([...new Set(references.map((reference) => `${reference.embeddingModel ?? reference.fingerprint.embeddingModel ?? 'legacy'}@${reference.embeddingVersion ?? reference.fingerprint.embeddingVersion ?? 'legacy'}`))]
+    .map((model) => [model, references.filter((reference) => `${reference.embeddingModel ?? reference.fingerprint.embeddingModel ?? 'legacy'}@${reference.embeddingVersion ?? reference.fingerprint.embeddingVersion ?? 'legacy'}` === model).length]));
   return {
     generatedAt: new Date().toISOString(),
     app: { version: BUILD_INFO.version, commit: BUILD_INFO.commit, buildTime: BUILD_INFO.buildTime },
@@ -50,7 +57,20 @@ export async function createSafeDiagnostics(): Promise<SafeDiagnostics> {
       installing: Boolean(registration?.installing)
     },
     cacheNames,
-    lastPhotoImport: (lastPhotoImport?.payload as Record<string, unknown> | undefined) ?? null
+    lastPhotoImport: (lastPhotoImport?.payload as Record<string, unknown> | undefined) ?? null,
+    visualRetrieval: {
+      referenceCount: references.length,
+      referencesByModel,
+      latestRun: latestRun ? {
+        id: latestRun.id,
+        imageCount: latestRun.imageIds.length,
+        candidateProductIds: latestRun.candidateProductIds.slice(0, 5),
+        abstained: latestRun.abstained,
+        processingTimeMs: latestRun.processingTimeMs,
+        warnings: latestRun.warnings ?? [],
+        errors: latestRun.errors ?? []
+      } : null
+    }
   };
 }
 

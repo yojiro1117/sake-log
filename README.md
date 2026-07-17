@@ -1,8 +1,13 @@
 # SAKEログ
 
-> Version 0.7.0 adds optional Capacitor iOS/Android shells. The GitHub Pages PWA remains available and uses the existing browser-only fallback.
+> Version 0.8.0 adds local label-image retrieval to the optional Capacitor iOS/Android shells and the GitHub Pages PWA fallback.
 
 ## Native image recognition
+
+- Photo selection immediately starts local label-crop retrieval and JAN matching; heavy OCR is not the only discovery path.
+- After a successful log save, user-confirmed front/back/neck labels, bottles, and barcodes can become local references. Food, glass, receipt, unknown, and poor-quality photos are excluded.
+- Visual features are compared only when both `embeddingModel` and `embeddingVersion` are compatible.
+- Product photos and visual features are not uploaded to an external recognition service.
 
 The same React/TypeScript UI now runs in three environments through `platformVisionAdapter`.
 
@@ -33,7 +38,7 @@ pnpm exec cap sync ios
 pnpm exec cap sync android
 ```
 
-Store submission is not part of the current GitHub Pages deployment. See `docs/native-vision-licenses.md` and `docs/native-vision-validation.md` before distributing a native build.
+Store submission is not part of the current GitHub Pages deployment. See `docs/native-vision-licenses.md`, `docs/native-vision-validation.md`, `docs/visual-product-recognition-licenses.md`, and `docs/visual-product-recognition-validation.md` before distributing a native build.
 
 SAKEログは、お酒を写真・評価・コメントで記録し、味覚傾向やコスパを端末内で分析する無料PWAです。現在の公開版は「お酒の記録アプリ」として提供し、SNS投稿支援機能は後日拡張予定です。
 

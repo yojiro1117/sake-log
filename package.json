@@ -1,7 +1,7 @@
 {
   "name": "sake-log",
   "private": true,
-  "version": "0.7.0",
+  "version": "0.8.0",
   "type": "module",
   "packageManager": "pnpm@11.7.0",
   "scripts": {
@@ -20,6 +20,7 @@
     "test:e2e": "playwright test",
     "check:licenses": "node scripts/check-client-licenses.mjs",
     "check:bundle": "node scripts/check-bundle-size.mjs",
+    "check:visual-retrieval": "node scripts/check-visual-retrieval.mjs",
     "prepare:drive-list": "node scripts/prepare-drive-validation-list.mjs",
     "download:drive-images": "node scripts/download-drive-images.mjs",
     "build:drive-fixtures": "node scripts/build-drive-identification-fixtures.mjs",

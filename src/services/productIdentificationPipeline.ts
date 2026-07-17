@@ -10,6 +10,7 @@ export type LegacyIdentificationInput = {
   path?: IdentificationPath;
   persist?: boolean;
   signal?: AbortSignal;
+  alcoholTypeHint?: import('../types').AlcoholType;
 };
 
 export async function identifyAlcoholProductPipeline(
@@ -26,10 +27,17 @@ export async function identifyAlcoholProductPipeline(
       ocrText: aggregated.text,
       ocrConfidence: aggregated.confidence,
       barcodeValues: barcodes.map((item) => item.rawValue),
-      fingerprint: image.visualEmbedding ? embeddingToFingerprint(image.visualEmbedding) : undefined
+      imageHash: image.imageHash,
+      fingerprint: image.localFingerprint ?? (image.visualEmbedding ? embeddingToFingerprint(image.visualEmbedding) : undefined)
     };
   });
-  return identifyAlcoholProductEvidencePipeline({ images, path: options.path, persist: options.persist, signal: options.signal });
+  return identifyAlcoholProductEvidencePipeline({
+    images,
+    path: options.path,
+    persist: options.persist,
+    signal: options.signal,
+    alcoholTypeHint: input.userHints?.alcoholType
+  });
 }
 
 function isLegacyInput(input: ProductIdentificationInput | LegacyIdentificationInput): input is LegacyIdentificationInput {
@@ -39,6 +47,8 @@ function isLegacyInput(input: ProductIdentificationInput | LegacyIdentificationI
 
 function embeddingToFingerprint(values: number[]): VisualFingerprint {
   return {
+    embeddingModel: 'native-compact-luminance',
+    embeddingVersion: '1',
     hash: `native-${values.slice(0, 8).map((value) => Math.round(value * 255).toString(16).padStart(2, '0')).join('')}`,
     luminance: values,
     colorHistogram: [],

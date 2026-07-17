@@ -14,14 +14,21 @@ export function retrieveCatalogCandidates(text: string, catalog: AlcoholProductC
   if (!normalized.searchable) return [];
 
   return catalog.map((entry) => {
-    const terms = [entry.canonicalProductName, entry.brandFamily, entry.makerName, ...entry.aliases, ...entry.kanaAliases, ...entry.latinAliases, ...entry.commonOcrErrors]
-      .filter(Boolean).map((term) => ({ raw: term, normalized: normalizeCatalogTerm(term) })).filter((term) => term.normalized.length >= 2);
+    const terms = [
+      { raw:entry.canonicalProductName, kind:'product' as const },
+      { raw:entry.brandFamily, kind:'brand' as const },
+      ...entry.aliases.map((raw) => ({ raw, kind:'alias' as const })),
+      ...entry.kanaAliases.map((raw) => ({ raw, kind:'alias' as const })),
+      ...entry.latinAliases.map((raw) => ({ raw, kind:'alias' as const })),
+      ...entry.commonOcrErrors.map((raw) => ({ raw, kind:'ocr-error' as const })),
+      { raw:entry.makerName, kind:'maker' as const }
+    ].filter((term) => Boolean(term.raw)).map((term) => ({ ...term, normalized: normalizeCatalogTerm(term.raw) })).filter((term) => term.normalized.length >= 2);
     let score = 0;
     const reasons: string[] = [];
     const matchedTerms: string[] = [];
     for (const term of terms) {
       if (normalized.searchable.includes(term.normalized)) {
-        const exactScore = term.normalized === normalizeCatalogTerm(entry.canonicalProductName) ? 100 : 88;
+        const exactScore = term.kind === 'maker' ? 34 : term.normalized === normalizeCatalogTerm(entry.canonicalProductName) ? 100 : 88;
         if (exactScore > score) score = exactScore;
         reasons.push(`OCR一致: ${term.raw}`);
         matchedTerms.push(term.raw);
@@ -29,7 +36,8 @@ export function retrieveCatalogCandidates(text: string, catalog: AlcoholProductC
       }
       const windows = normalized.tokens.length ? normalized.tokens : [normalized.corrected];
       const fuzzy = Math.max(...windows.map((token) => Math.max(levenshteinSimilarity(token, term.raw), ngramSimilarity(token, term.raw))));
-      const threshold = term.normalized.length <= 3 ? 0.78 : 0.56;
+      if (term.kind === 'maker') continue;
+      const threshold = term.normalized.length <= 3 ? 0.82 : 0.74;
       if (fuzzy >= threshold) {
         score = Math.max(score, Math.round(fuzzy * 72));
         reasons.push(`類似文字 ${Math.round(fuzzy * 100)}%: ${term.raw}`);
@@ -51,6 +59,10 @@ export function retrieveBarcodeCandidates(values: string[], catalog: AlcoholProd
   });
 }
 
+export function retrieveExactImageCandidates(productIds: string[], catalog: AlcoholProductCatalogEntry[]): RetrievedCatalogCandidate[] {
+  return retrieveProductIdCandidates(productIds, catalog, 'exact-image', '同じ画像の確認済み参照と一致', 100);
+}
+
 export function retrieveVisualCandidates(scores: Record<string, number>, catalog: AlcoholProductCatalogEntry[], minimum = 0.84): RetrievedCatalogCandidate[] {
   const byId = new Map(catalog.map((entry) => [entry.productId, entry]));
   return Object.entries(scores).flatMap(([productId, similarity]) => {
@@ -64,7 +76,7 @@ export function retrieveVisualCandidates(scores: Record<string, number>, catalog
 export function retrieveProductIdCandidates(
   productIds: string[],
   catalog: AlcoholProductCatalogEntry[],
-  source: Extract<CandidateSource, 'history' | 'correction' | 'multi-photo'>,
+  source: Extract<CandidateSource, 'exact-image' | 'history' | 'correction' | 'multi-photo'>,
   reason: string,
   score = 64
 ): RetrievedCatalogCandidate[] {

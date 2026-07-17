@@ -1,26 +1,26 @@
 {
-  "evaluatedAt": "2026-07-15T08:01:54.343Z",
+  "evaluatedAt": "2026-07-17T03:16:03.579Z",
   "cycle": 6,
   "metrics": {
     "images": 33,
     "knownImages": 20,
     "exactProductDenominator": 17,
-    "candidateDisplayRate": 0.35,
-    "top1Accuracy": 0.0588,
-    "top3Recall": 0.0588,
-    "top5Recall": 0.0588,
-    "brandFamilyAccuracy": 0.35,
-    "makerAccuracy": 0.35,
-    "alcoholTypeAccuracy": 0.35,
+    "candidateDisplayRate": 0.55,
+    "top1Accuracy": 0.1765,
+    "top3Recall": 0.1765,
+    "top5Recall": 0.1765,
+    "brandFamilyAccuracy": 0.55,
+    "makerAccuracy": 0.55,
+    "alcoholTypeAccuracy": 0.55,
     "volumeAccuracy": 0,
     "abvAccuracy": 0,
     "falsePositiveRate": 0,
     "unknownCandidateRate": 0,
-    "abstentionRate": 0.7879,
-    "missedCandidateRate": 0.65,
+    "abstentionRate": 0.6667,
+    "missedCandidateRate": 0.45,
     "highConfidenceWrong": 0,
-    "p50ProcessingTimeMs": 4823,
-    "p95ProcessingTimeMs": 10552,
+    "p50ProcessingTimeMs": 4560,
+    "p95ProcessingTimeMs": 10036,
     "averageIdentificationTimeMs": 0
   },
   "records": [
@@ -38,7 +38,7 @@
       "alcoholTypeTop1": true,
       "ocrText": "LT Jmy c IPUR —\n THISway 八 / ー\n) * / に い 』\no ¢\nンー £24 l\n/ / RG .\n/ \\ ーー\n4ず4 『 1\n/ - ー キ\nー :ー « きき\nSIEE. m\n人な ー リリーー\nに 鉛 & ーー S J\n4f [ のア\nBー CTRRE\nか 0 B\nどじ k 【 を 4 較\n (6ー 他世本 一>\nー , ) pi—J 7 q\n\\34 IEEY\n E2=Rany\n$。。 ーーアン 2 ー志を短表ラサ\nー 6 4 E——",
       "ocrConfidence": 0.3,
-      "processingTimeMs": 5939,
+      "processingTimeMs": 6044,
       "identificationTimeMs": 0.0003000000142492354,
       "abstained": true
     },
@@ -58,8 +58,8 @@
       "alcoholTypeTop1": false,
       "ocrText": "4 5や、 和音。。。 、! :\nム T0y ー\n )\n“ 4 ぁ * \\ » b f NN A\ns療- ン 和幸 ー RA\nいあ >誠\n\"ペイ 百本 GBN e :\nmm テンズー 本いいいこ 語半\n8 7ie U ww B (ER) 74\nる いい\nへ xt f RORY N y\nの し名 7 NA *4\n-4 a いい E) 3\nーー WR 、 Nll -\nング ao\nに へ ーーこミミーーー\nnosン ンス p y いこきき 。 トド . ーー\n y, Ta v マン\nーッ *、 で タッンプ\n間シーー Ca 。 ご 4\nュージーニニニー いいててこ アト —\n4\n- 3 §\n3 に に 5 a",
       "ocrConfidence": 0.26,
-      "processingTimeMs": 9189,
-      "identificationTimeMs": 0.00020000000949949026,
+      "processingTimeMs": 9237,
+      "identificationTimeMs": 0.0001999999803956598,
       "abstained": true
     },
     {
@@ -78,8 +78,8 @@
       "alcoholTypeTop1": false,
       "ocrText": "あき で 出 区\n<央 へWS Wー\n、 ぶさ W\nヘー NNW MNT\n» ie AL 明り 内 ト N\n=_f R d,\nE\n<ンー Veatw I Yag —_\ng に 交略 ky 58 ^\npre -・ リ// y (EN =3 ノ\nガニジン にいい、\n— A\\ v、 N S\nーー一 ンー 14 いぶ、ミ . ンー\n、 必修き ヘー\nング ここ 近の\n、ミセル/ー ー 三\nSN $ ンク # , <\no へ ペペ ジー て\n=\n- ¢\n_— EE\nE.. €\nーー —",
       "ocrConfidence": 0.22,
-      "processingTimeMs": 8731,
-      "identificationTimeMs": 0.0001999999803956598,
+      "processingTimeMs": 8821,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
     {
@@ -96,10 +96,10 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": false,
-      "ocrText": "ーー / —.\n/ 「 ーーテテ v\n=l\nR キャマーンド ー ~i .\n 5\nLom\nーース ー 選\n * 「 アー ~ “-\n )\\\n一 ) )\nNi M\n -\n1 _\n— 回255",
-      "ocrConfidence": 0.29,
-      "processingTimeMs": 2551,
-      "identificationTimeMs": 0.0003000000142492354,
+      "ocrText": "/ 王\n\n57\n\nーー ンク\n\n)\n\nのと Eer\n\n__、\n\nゅ\n\n人\n\n=- :\n\nWm",
+      "ocrConfidence": 0.35,
+      "processingTimeMs": 2718,
+      "identificationTimeMs": 0.00039999998989515007,
       "abstained": true
     },
     {
@@ -116,8 +116,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "ツマーー\n\nし\n\n2\n\n7983\n\nアッシン\n\nr\n\nes! ー]\n\n(ce\n\nバン\n\nTORICE\n\n話\n\ndg\n\nINAE THIS WM\n\n人に\n\nに\n\nて\n\n—\n\n人\n\n&\n\n中ンp5zezo K65 20",
       "ocrConfidence": 0.27,
-      "processingTimeMs": 2132,
-      "identificationTimeMs": 0.00029999998514540493,
+      "processingTimeMs": 2149,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
     {
@@ -132,10 +132,10 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": true,
-      "ocrText": "回直上日 本酒\n敵料名:米・米次\n放守料品種 : 米島産無農薬山田倍]00y\nァルコール分・ 13度\n内容量 720ml\n製造年月 2022.9\n製造者・有限会社白米酒造\n福岡県糸島市本1986\nB OF45 / 開栓注意 z\n暫し上がりの際は必ずよく冷やしてください. ン\nー がのガス圧でお酒が噴き出す場合があります Z\nREDLSDth 1 p 1) EBIELT Z\n <7:s( ク\nー 生かが 適量を。 %\nー y になってから。おいしく適\nになってが 7",
-      "ocrConfidence": 0.69,
-      "processingTimeMs": 4942,
-      "identificationTimeMs": 0.0003000000142492354,
+      "ocrText": "由記て 6S 2 —-\n\n中:日本酒\n\ngibg :米・洲麹\n\n大料品種・ 水島産無農薬山田偶100y\n\nァルコール分 * 13度\n\n内容量・720ml\n\n製造年月 ・\n\nR0Riws0\n\n誠意者・有限会社白米酒造\n\n個県永島市本1986\n\nビン\n\nZ\n\n用\n\nお酒は\n\n20歳に\n\nになってから。おいしく適量を\n\n7\n\n用\n\nんwy\n\n0 raito.com\n\n4",
+      "ocrConfidence": 0.62,
+      "processingTimeMs": 1290,
+      "identificationTimeMs": 0.0001999999803956598,
       "abstained": true
     },
     {
@@ -152,7 +152,7 @@
       "alcoholTypeTop1": true,
       "ocrText": "¢ -\nTHIS WASRN i\nー * 計 ー ー ¥\nルルっすすーー\nyy「\n みん$ ー 。\nw\nは\nてさむ\ntogs のき\n-— 第\n. Au\nー b.r TEEb\n: f る\" E\n の L\nの と 4)\nw を\nーーを 2 >\na の 2 ーー で 3\n1 fe リ i\n- 4関識 4\n! ーー タン <(須ー- 0",
       "ocrConfidence": 0.23,
-      "processingTimeMs": 4164,
+      "processingTimeMs": 4221,
       "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
@@ -172,7 +172,7 @@
       "alcoholTypeTop1": false,
       "ocrText": "ー L\nま で が\nを\nLIR\n ー",
       "ocrConfidence": 0.52,
-      "processingTimeMs": 1039,
+      "processingTimeMs": 1023,
       "identificationTimeMs": 0.0001999999803956598,
       "abstained": true
     },
@@ -192,8 +192,8 @@
       "alcoholTypeTop1": false,
       "ocrText": "ーー一一一一一邊md__ _o\n\nき\n\nラビーー\n\nしン ててに\n\n=\n\nクー pr\n\nN",
       "ocrConfidence": 0.42,
-      "processingTimeMs": 2753,
-      "identificationTimeMs": 0.00029999998514540493,
+      "processingTimeMs": 2814,
+      "identificationTimeMs": 0.0001999999803956598,
       "abstained": true
     },
     {
@@ -210,9 +210,9 @@
           "productName": "だいやめ DAIYAME",
           "makerName": "濵田酒造",
           "alcoholType": "shochu",
-          "confidence": 38,
+          "confidence": 37,
           "reasons": [
-            "別名一致: DAIYAME"
+            "別名一致: HAMADA SYUZOU"
           ],
           "mismatchReasons": []
         }
@@ -223,10 +223,10 @@
       "brandTop1": true,
       "makerTop1": true,
       "alcoholTypeTop1": true,
-      "ocrText": "。\n隊 ー 0 上\n。\n/ ーー\n固ジンー\n次 Fvd CE\nI gE E\n[ i= 3 E ーー :\n5た し VERSR z.\nと\nが で放導\na= ンー\nー 359 RTc i\nSs 4 2\n 人\nEe\n[ に : amed\nae\n; GlEme\nDAIYAME\n: SEEE\nHAMADA SYUZOU\nJAPANESE ._\n TRADITIONAESHGEHU\ne\ni o ': に\nーー\n】 がスンの本\n EA\nol\nKBL B E タテ\n> o\n 3 Eea\n& 人\n3 5 4 b ;\n“Z\n Z aEet\n』 を —\nンー »",
-      "ocrConfidence": 0.17,
-      "processingTimeMs": 9867,
-      "identificationTimeMs": 0.00020000000949949026,
+      "ocrText": "四作ジン -—\n STAEET.\nにーー a\nREs orE\n\\ ) Pass Th\nの Er)\nge\nだ にジー\n 半。\ny s) をーー\n JE ンー\n2 ーー a\nf Ey] ンー 癌\n/ = N\nas が\n無 SeT\naan と た て\n クンーーの\nAN ンジに設計\nー 選 ンー\nば 3衝\nwE\n: sid\n がて> T\nE =\n: le\nE\n3本科\nDAIYA\ni っ\nンーフン人\n 2 AeYUZOU\n HAMADA SYUZOU\nー JAPANESE\np 0\n1 でが\n』 BEVERLGARY, E\n) tREE の\n4 W= o\nALLET\n他 ジー\n導呈倫 ミラー\n』 he\n4 ーールル Geceg\nj 科褒本 ンー\nw 用\n 5 ーー CEe\n2 = ンー\n2 BSST\nEEL i\nソ Bes) ニーンク\nで 補 3\n = . の\n : るの\n上 隊 ンク\nA d 3 ケンーータタの\nr. - ンー\n紀 に 4 CEARIT",
+      "ocrConfidence": 0.13,
+      "processingTimeMs": 10036,
+      "identificationTimeMs": 0.0001999999803956598,
       "abstained": false
     },
     {
@@ -243,10 +243,10 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": false,
-      "ocrText": "思\n\nl\n\n化\n\n4mr\n\n%]\n\n#l\n\n[し\n\n2\n\nできるだけお早め\n\n県時州市中泌\n\n式会社多",
-      "ocrConfidence": 0.51,
-      "processingTimeMs": 3236,
-      "identificationTimeMs": 0.00029999998514540493,
+      "ocrText": "ー ル\n」 fE fw\n -9\n1 —\nボ + (\nRoBl\n1 * ー\nB ad <\nピッ Kや\n \\ もい & 。 の\nア 。 ー\n N . 2\n0",
+      "ocrConfidence": 0.28,
+      "processingTimeMs": 3289,
+      "identificationTimeMs": 0.0003000000142492354,
       "abstained": true
     },
     {
@@ -261,10 +261,10 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": true,
-      "ocrText": "作ら 識科 Be E— T\nie ー ー 7 iC¢\nーー 細 \\銘 y\nRy 」 Te\n~ EER C\n 。 取 ハラ\nq %\nye X\n; ー ー ュョーー一 !\n- [ ーー 朋各な\n CY ー ご\n』 d a \" *\n¥ » A\nー ヤラ科目 5\n( 』 E0 r\n! ー 誠。 ~ <\n: F\nB Eo",
-      "ocrConfidence": 0.28,
-      "processingTimeMs": 4560,
-      "identificationTimeMs": 0.00020000000949949026,
+      "ocrText": "8G ー) . ビン 生生生生.昌ラーシーニン\naltT ~ ¢\nK 贈 :\nWAY A Lu \\ー -0 い の —\n & d i\n» NP 補当\n IIES あぁ\n\\ ‘ 取 ド -\n/ % 0、\n# / 《 A— !\nEA NW/ に\ng ! [ 過有と\n \\ マ\n(を! F ー\nB",
+      "ocrConfidence": 0.26,
+      "processingTimeMs": 4621,
+      "identificationTimeMs": 0.0003000000142492354,
       "abstained": true
     },
     {
@@ -279,10 +279,10 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": true,
-      "ocrText": "6\n\nァテ\n\nJUYO!\n\n水温貯蔵大極\n\nノ七垂\n\nニニ十貰\n\nm\n\n本)\n\n吟醸洒\n\n原材料名: 米(国産)、\n\n(国産米)\n\n精米歩合: 35%\n\n原料米: 兵庫県特A地較\n\n田錦100\n\nアルコール分 : 16度 ” 内容量: 720m\n\n製造者高木酒造株式会社\n\n山形県村山市大学富並1820\n\n電信法: 必ず冷蔵庫(=5て5て)で\n\nめにお召し上がりり市きい。\n\nma rho\n\n生計 要)〉 SIE",
-      "ocrConfidence": 0.66,
-      "processingTimeMs": 1974,
-      "identificationTimeMs": 0.00029999998514540493,
+      "ocrText": "T1T\n oNTTTIS.\nmisn,/ LE—TTEE 中 ー\nEEESITE S 邊 ー\n原材料名 : OR (E1E) SE(EIRER) o\nWREA:3%% 8 ー\n原料米 :兵庫県特A地較産山田旬100縛議\n\nアルコール分 : 16度 ” 内容量 : 720ml\n製造者:高木酒造株式会社。。 攻計\n\n山形県村山市大字富並1826和\n\nな:必ず冷蔵庫(-5て5て)で本語\n\nおめにお用し上がり下さい。 HE\n\nねお袖は20基にかニースラSA -",
+      "ocrConfidence": 0.51,
+      "processingTimeMs": 8240,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
     {
@@ -301,8 +301,8 @@
       "alcoholTypeTop1": false,
       "ocrText": "5 ーッ」 。 ー/KE ーー 天井0\nClk ーB = “g\nLlR ー=3 Jeh\n4 < 705 WAY 4 リ 生 電 気ゝ >\n¢E 5 へ\nと し本 6 _>\n 酒\n_— v\n=\n と、 の ー\n—__SETEN\nVM e0 —\nー > いて ーー\n。 @ さき\n央 前 ー まぁ に。 & . W2d",
       "ocrConfidence": 0.26,
-      "processingTimeMs": 6347,
-      "identificationTimeMs": 0.0001999999803956598,
+      "processingTimeMs": 6450,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
     {
@@ -321,8 +321,8 @@
       "alcoholTypeTop1": false,
       "ocrText": "ーー E\n THIS WAY A / > ~ 所へ\n(2 っ\n7 1 に\n\n ・ < ンジ\n2 ~\n.\n/ \" §\n{ziim - 柳\n区 N 埋ミ\n f .\n\nー 4 ¥\n\n2 ’\n』 。 34 > +1\n\n{( Ad 。 に",
       "ocrConfidence": 0.24,
-      "processingTimeMs": 4445,
-      "identificationTimeMs": 0.00020000000949949026,
+      "processingTimeMs": 4560,
+      "identificationTimeMs": 0.00010000000474974513,
       "abstained": true
     },
     {
@@ -332,18 +332,31 @@
       "groundTruthStatus": "confirmed",
       "expectedBrandFamily": "赤武",
       "expectedProductName": "赤武 AKABU 純米吟醸",
-      "topCandidates": [],
-      "correctTop1": false,
-      "correctTop3": false,
-      "correctTop5": false,
-      "brandTop1": false,
-      "makerTop1": false,
-      "alcoholTypeTop1": false,
+      "topCandidates": [
+        {
+          "productId": "sake-akabu",
+          "brandFamily": "赤武",
+          "productName": "赤武 AKABU 純米吟醸",
+          "makerName": "赤武酒造",
+          "alcoholType": "sake",
+          "confidence": 41,
+          "reasons": [
+            "別名一致: AKABU"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "ーー w 了 し に\nDi5 WAY ] ー v\nN u\nキネ ’\n/ ~”\n: p\n。 I] v F\n。 { ーー =\nー一 。\n 4 。\nァ <グ3 [\n a o\nBifs, t WT\n20 の Sa 7 : ー\nクイーーググ ゃ\nを欠とさてSS ト\nペンクー T\nWSv es 2 £ て映 ます\nAS いい 1 y\nS S\n: アンの かme てて\nの/\n店 の き",
       "ocrConfidence": 0.28,
-      "processingTimeMs": 5268,
-      "identificationTimeMs": 0.00029999998514540493,
-      "abstained": true
+      "processingTimeMs": 5239,
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": false
     },
     {
       "fileName": "IMG_3886.HEIC",
@@ -359,8 +372,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "\\\n\no P\n\nB\n\nいり\n\nに\n\nfiss SO,\n\nうさぎ』\n\n, の伝統的な技術をペースに、 革新\n\n)テッドプローズ」が、直接、萬を旋\n\nたコレクション。\n\nだるまが、ユナイテッドブロースズでキヌ\n\n仙倉*\n\n酒の限定で醸きされた祝い酒, &\n\n門酸酒X にご\n\n注意計ミ\n\nいでくださV\n\ns7\n\nで活 放な なもろみもごし\n\n聞鞍めして\n\nいております。 そのため、本体を撲(\n\nHERCR\n\n莉な\n\nらの梨法で醸款する\n\n、如心の注意をって\n\n※ぷいます。品質には問題が\n\nませんので、 人\n\n¥\n\nRECREOL BED 落ち若いてからゎお\n\n者 株式会社せんさん\n\n匠木昌さくら市馬場 106\n\n60ce\n\nRA#E\n\n米(国産、米こうじ(国彦ネ\n\n還只\n\nB 料\n\nドメーヌさくら・ 山田釣\n\n(板木系さくら市産)10070\n\nし\n\n4\n\n歩合\n\n90%\n\nW\n\n4庶\n\nSSRFToy TE\n\nLS\n\nせんさきん\n\n(F\n\n お\n\nー 58\n\n720ml\n\nお\n\nあります\n\n—.\n\nーー\n\nMt\n\n格い\n\n9",
       "ocrConfidence": 0.58,
-      "processingTimeMs": 10619,
-      "identificationTimeMs": 0.00010000000474974513,
+      "processingTimeMs": 3027,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
     {
@@ -370,18 +383,31 @@
       "groundTruthStatus": "confirmed",
       "expectedBrandFamily": "赤武",
       "expectedProductName": "赤武 AKABU 純米吟醸",
-      "topCandidates": [],
-      "correctTop1": false,
-      "correctTop3": false,
-      "correctTop5": false,
-      "brandTop1": false,
-      "makerTop1": false,
-      "alcoholTypeTop1": false,
+      "topCandidates": [
+        {
+          "productId": "sake-akabu",
+          "brandFamily": "赤武",
+          "productName": "赤武 AKABU 純米吟醸",
+          "makerName": "赤武酒造",
+          "alcoholType": "sake",
+          "confidence": 41,
+          "reasons": [
+            "別名一致: AKABU"
+          ],
+          "mismatchReasons": []
+        }
+      ],
+      "correctTop1": true,
+      "correctTop3": true,
+      "correctTop5": true,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "導 し ~, -\n A ~\n= 1 ア\n \\ p.\nが もも ) 生導\n W\nil\nーー一 ・財\n『\nが . 杜夫 =:\nJPN' \\R¥\n 5 1\n ー\nーー一 ( NTL . -\n。 輸放 ーッ\n* 8ip , »\nる\n—a Y ぼ\n. ~— y ; ト 』\nままは ; r!\n1 Vie {f\nに 305 — MS o\n\\ トド ー £i) { To ′\n\\ a TTA 、\n。 を 久光4がくae Nd ング 3 』\n \\ : \\Z Sty, N\nk: ENTS L NS 、\nャイイ7 SC 較\n 本 人で\nー n ペン で",
       "ocrConfidence": 0.23,
-      "processingTimeMs": 6292,
-      "identificationTimeMs": 0.0001999999803956598,
-      "abstained": true
+      "processingTimeMs": 6388,
+      "identificationTimeMs": 0.00020000000949949026,
+      "abstained": false
     },
     {
       "fileName": "IMG_4597.HEIC",
@@ -397,8 +423,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "- RS o t し /詳し) に 央 -\n ー 了\nig f ー\n§ — — ク ーー\n » ーーでーー ーッ< < てつてで\nンジ — ーー こき\nング ーー ニテで SS\n/ > ag ~. さき、 F へさけ\n ( ミンミク\nB ンス 2\nRs コバ TINEA\n,o ンー\n唱 』 ! 條が に\n ー W ー {LA8!\nSp W % Y ーlR\n導い RRONS T\nに LLgs C oedie NTEC:\n te P s クベ \"4\n8 ARRFE いい 剖ー ささ r V\n: 信和 Jby ギヤ ー 」\nf 5 ー 廊 リ / FINE QUALITY ー\nーー 攻め) LTM\n-— * 生 ー ー ー 1 N -\n: 4 Te y= TI 。 証。\na e. に幼 Tihichn B:\ne 5 の S * , 用導1 ンー n\n pemie の i 』 、 J 11 ー\n科半ゲー 義\n[招いーー p ー\n8 2 aa のーー 剛\n財 ーー 也 E ume / 導革\n2) 人 - {\n[eal wprt/ f\nBbL RO . y\nで (3 ov の さく ー ilfl ~\nCo REEERE oie ー 1 ーー\n- との衝放下っ ーー メ 鐘 い にこま pe\nンーっっっ いい>ちら っ 0 a a\nにーーミワー y ジン M ーー ー 6",
       "ocrConfidence": 0.26,
-      "processingTimeMs": 14062,
-      "identificationTimeMs": 0.00010000000474974513,
+      "processingTimeMs": 14281,
+      "identificationTimeMs": 0.0001999999803956598,
       "abstained": true
     },
     {
@@ -431,7 +457,7 @@
       "alcoholTypeTop1": true,
       "ocrText": "/A4 <\nを で .\n~ _\nPIC 《\nン\nD, G\nBY . てて お\noy -\ntae\n0 4\n2 X ¢ :\n“Y 5 ルー WW\nを 、 のや\nタン “A\ne ッッ\n名作 0いせ1\n{% 9 0\nの2だ2が 7 1ア9\n4 [ir (y ー 人 が\n 4 )\n0 [ AE\no 交人か。 当 [てと p 1\npeld Wer\nEB A\nYkdioA } § 1 b ina\n分シンが Japa Brewing Society Yoast ’ 人\nンク 』\nHa ー\n[用グッの 本 No.6\nアンルン\n菩軍クッルク . The: Oldese Siche 2を\nLn E N g\no が NN の/ eo",
       "ocrConfidence": 0.22,
-      "processingTimeMs": 9262,
+      "processingTimeMs": 9016,
       "identificationTimeMs": 0.0001999999803956598,
       "abstained": false
     },
@@ -442,18 +468,31 @@
       "groundTruthStatus": "confirmed",
       "expectedBrandFamily": "赤武",
       "expectedProductName": "赤武 AKABU MOUNTAIN 2021",
-      "topCandidates": [],
+      "topCandidates": [
+        {
+          "productId": "sake-akabu",
+          "brandFamily": "赤武",
+          "productName": "赤武 AKABU 純米吟醸",
+          "makerName": "赤武酒造",
+          "alcoholType": "sake",
+          "confidence": 41,
+          "reasons": [
+            "別名一致: AKABU"
+          ],
+          "mismatchReasons": []
+        }
+      ],
       "correctTop1": false,
       "correctTop3": false,
       "correctTop5": false,
-      "brandTop1": false,
-      "makerTop1": false,
-      "alcoholTypeTop1": false,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "ocrText": "りり —\n\ngoc\n\nmEISTO\n\nリノ\n\nーー\n\nir居\n\na v\n\nTHEWAY A\n\n;\n\n上 ー\n\nF.\n\ni\n\n一\n\n7-。 3\n\n5\n\n20症\n\nWouNTA以\n\nKN\n\nや\n\n2021",
       "ocrConfidence": 0.32,
-      "processingTimeMs": 3505,
-      "identificationTimeMs": 0.0003000000142492354,
-      "abstained": true
+      "processingTimeMs": 3554,
+      "identificationTimeMs": 0.0001999999803956598,
+      "abstained": false
     },
     {
       "fileName": "IMG_4616 2.HEIC",
@@ -462,20 +501,33 @@
       "groundTruthStatus": "confirmed",
       "expectedBrandFamily": "赤武",
       "expectedProductName": "赤武 AKABU MOUNTAIN 2021",
-      "topCandidates": [],
+      "topCandidates": [
+        {
+          "productId": "sake-akabu",
+          "brandFamily": "赤武",
+          "productName": "赤武 AKABU 純米吟醸",
+          "makerName": "赤武酒造",
+          "alcoholType": "sake",
+          "confidence": 41,
+          "reasons": [
+            "別名一致: AKABU"
+          ],
+          "mismatchReasons": []
+        }
+      ],
       "correctTop1": false,
       "correctTop3": false,
       "correctTop5": false,
-      "brandTop1": false,
-      "makerTop1": false,
-      "alcoholTypeTop1": false,
+      "brandTop1": true,
+      "makerTop1": true,
+      "alcoholTypeTop1": true,
       "volumeTop1": false,
       "abvTop1": false,
-      "ocrText": "RABPU MOUNT\n\nEUER [F4Ede2A] 2 Puid\n\n依が魂を込めて醸した日本酒\n\n上昨すものは\n\n5,\n\nZHheTHR\n\nSoEARRA idl of 6 AEI, 』\n\nHE\n\nよく昌\n\n0で大な山 (MOUNTARS\n\nを山 5OUNTAIN を想像し\n\nにお楽しみください。\n\nゆめ\n\nした新紀代の\n\nact.\n\nョ 本酒(鈍未洒) @RAHIE\n\n£@\n\nドドは\n\nTha\n\n$六未歩合 6096\n\n内容\n\n8\n\nトド\n\n14度 @BiEI~\n\n$\n\n月: :2\n\n021年7月\n\n準滅店にて保存\n\nFREGRAEE o0\n\nAFpamiiied\n\nリル とくかな っ\n\nae\n\n#adSies { ださい\n\nS¥us\n\nぎざぎざいま\n\nRiy\n\n内 2% 720ml\n\n———",
-      "ocrConfidence": 0.46,
-      "processingTimeMs": 10552,
-      "identificationTimeMs": 0.00010000000474974513,
-      "abstained": true
+      "ocrText": "h_F~ TRAVANISEE\né ; - - - — = por\nLRER [EERZA #pald béー\nHRAESETREAWI-EY-. l\n ETbou, 2iheFaRa0E])\n“ot Riizg ZBb+ 2iEE] 7 』\n。 放り\nいく負私的で柱入な山 (MOUNTAIE ー\nた本洒です.\nジッoonrai caplg ー\nAKABU にお楽しみください.。 Kogfl\nいさか\nAB 林洒 (純未酒) @F サガる を\n$70 @upip 4 60% @ か\ntt人 1an @umua=+\nVeoal202187g\n て保存\nに 人寺 T SeT 188\nSu 、 呂手県盛岡市北飯周\nNaきにをーー ら ゃ ~ '\neE Ree ¢2 ,",
+      "ocrConfidence": 0.3,
+      "processingTimeMs": 10568,
+      "identificationTimeMs": 0.0003000000142492354,
+      "abstained": false
     },
     {
       "fileName": "IMG_4621.HEIC",
@@ -507,8 +559,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "19\n\nの\n\nアー ”\n\n/ノ\n\nmag\n\n[{.4\n\n»\n\n«\n\n\"て]\n\nるる、\n\nTHIS WY\n\nーーを\n\nし\n\n*¥\n\n“N\n\n2 Brewing 208の07\n\nNo.\n\nテウンン.ム\n\nクン\n\nLiscoveredy, アク?\n\n2\n\nFr-TL",
       "ocrConfidence": 0.34,
-      "processingTimeMs": 2487,
-      "identificationTimeMs": 0.0003000000142492354,
+      "processingTimeMs": 2500,
+      "identificationTimeMs": 0.0005999999993946403,
       "abstained": false
     },
     {
@@ -541,7 +593,7 @@
       "alcoholTypeTop1": true,
       "ocrText": "」 ー\nbr : an\na し .\nE Bs. § 4 \"\n、 ー\ni3 ー\nig\n剛。\n院- 3\nfiim B\n 7\nS- こさ\n r E\nー E\n語- 78\nに -3\nーー\n1\n攻- トーマ\n も\n E\nj\nー",
       "ocrConfidence": 0.19,
-      "processingTimeMs": 2298,
+      "processingTimeMs": 2352,
       "identificationTimeMs": 0.00020000000949949026,
       "abstained": false
     },
@@ -575,8 +627,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "E\n\nJapan Brewing Societ,\n\nNo.6\n\nThe Olest Sihe 5.\n\nングンクグングンオクアク\n\nのネンウンンジンク 795\n\nBUEL\n\nBi;\n\nPRODUCT OF AKITA\n\n(のアア BY\n\nZrIX",
       "ocrConfidence": 0.49,
-      "processingTimeMs": 2783,
-      "identificationTimeMs": 0.00020000000949949026,
+      "processingTimeMs": 2765,
+      "identificationTimeMs": 0.0009999999892897904,
       "abstained": false
     },
     {
@@ -593,8 +645,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "日\n\n材\n\nI)\n\n8 ー\n\n本\n\n14 §\n\n7\n\nw/\n\nHg ol\n\n]\n\nand\n\n新座\n\n央 湯\n\n7\n\n県\n\nも人 庄\n\nsRND\n\n誕生年月\n\n2022年12月\n\n新\n\n出荷日\n\n2023年4月18日\n\n県 じ\n\nカス圧の関係\n\nから出荷\n\ngk\n\nE\n\n日より1ヶ月\n\nをおススメします\n\n内の飲酒\n\n市潟\n\n県\n\nFILT—)l5\n\n):13度\n\ni\n\nWi\n\nMM\n\ng 3%\n\n内容量\n\n3 5\n\n25\n\n衝\n\n地\n\n則ー\n\nll\n\nー\n\n<72ー\n\n町ー",
       "ocrConfidence": 0.57,
-      "processingTimeMs": 4823,
-      "identificationTimeMs": 0.00010000000474974513,
+      "processingTimeMs": 1300,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
     {
@@ -611,10 +663,10 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": false,
-      "ocrText": "@.H\n\ny なく\n\n第\n\nIE\n\nHE\n\n% TAPAS\n\ni ー\n\nOLLECTIO\n\nTEMPRANILL?\n\n2018\n\nデン:\n\nA\\ ¢ [8",
-      "ocrConfidence": 0.33,
-      "processingTimeMs": 3821,
-      "identificationTimeMs": 0.0001999999803956598,
+      "ocrText": "We & 3\nリリ 特 天\n§ リリ 。 Ji; お 上 ー 還 ーー %\nelRE THE\n2 THPH2\n- __% wiINE\nWuLECTI0陸\n5 1生 ーー 詳\nこと",
+      "ocrConfidence": 0.14,
+      "processingTimeMs": 3857,
+      "identificationTimeMs": 0.0003000000142492354,
       "abstained": true
     },
     {
@@ -629,10 +681,10 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": true,
-      "ocrText": "—\n\nML ー\n\n? !\n\nー\n\n導 ー\n\nビン\n\nilY\n\nUY\n\n«1\n\n者\n\nV\n\n2\n\nん\n\nもてでてそノ\n\nうふ\n\nK\n\n_\"\n\nンジ\n\nョンジンンン\n\nー ~\n\nプクンジ\n\nピー",
+      "ocrText": "_d 9こき\n2 w=p Vi\n5ごか\nいい3フク/\nる",
       "ocrConfidence": 0.28,
-      "processingTimeMs": 2789,
-      "identificationTimeMs": 0.0001999999803956598,
+      "processingTimeMs": 2820,
+      "identificationTimeMs": 0.00010000000474974513,
       "abstained": true
     },
     {
@@ -649,8 +701,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "ンー ーー 夫、 グー\nーー NW os\nw I9 SAH #\n2\ni XX y Sn なぶ d\nATIEAN is2 © ー\n EE Y Z=UAS RFCの\nr,: JASDE ZAWAS REG4 の\nOF - ッーー YWha & p>\n® ) = り 772 (の\n? Yis Z,. 、 Y/ w13= N\n1 1た * クス & RY ー\nいい ‘q しみる ンミ\nー に ー p\n_— 1 ACEDL ー BLENDED SCOTCH\nN ー = = = WHISKY w= 。\nof QASREC4 上に、、 _ Eaie\nV ー) org ー Dod ドア\nN 」 &itra \\ PY -i\nL\nENDED SCO\nE WHISKY に EEEN ーー\n —a Be",
       "ocrConfidence": 0.27,
-      "processingTimeMs": 8684,
-      "identificationTimeMs": 0.00020000000949949026,
+      "processingTimeMs": 8817,
+      "identificationTimeMs": 0.00010000000474974513,
       "abstained": true
     },
     {
@@ -667,8 +719,8 @@
       "alcoholTypeTop1": true,
       "ocrText": "5 Pifcc)\n\nバンンー\n\nば\n\n$\n\n[ §\n\nL\n\nin\n\nR\n\nTHIS waY [\\\n\n\\(4\n\n&\n\n==\n\n時 」\n\nTM.\n\nにー\n\n上\n\nー /4\n\nW\n\n\\ I\n\n#\n\nり\n\nり\n\n関 ンマ 」\n\nMM\n\nイセ\n\n邊2\n\nMk\n\nに",
       "ocrConfidence": 0.35,
-      "processingTimeMs": 4128,
-      "identificationTimeMs": 0.00010000000474974513,
+      "processingTimeMs": 4086,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": true
     },
     {
@@ -699,10 +751,10 @@
       "brandTop1": true,
       "makerTop1": true,
       "alcoholTypeTop1": true,
-      "ocrText": "本 Ve し &\nv\nンー\nー Wo.6 【\nー W 1\nた J の COOL ー&\nFe yA 3\n。 用 女滞成島\nーーー RrLaa\nw— EZNEE I\n ー h JA\nEu au E ー 。5和0\n# 品質保証期限 し\nピロ 回問202ー年6月 __ B $\ne までに速やかに . g\n- お飲みください 。 得\nー 【亡面もみずすご覧下さい】 に o\nヅ A\nE ー a ー\n ge -\nと =. 'Y\ny N\nv'E ジー\n寺。 憶 』\nJH =\n ap\nDd G=n 2 7\nnTy) の",
+      "ocrText": "L #HE W 。\n- . — と\n区革\nNo.6 “\nー 2e P\n ー 殿決吉 。\n1 yハさま B\n ] { Rk 4\n義人 上\n— 保答 則。\nd v 4 』 > 5\n生生 mmm ー ーー\n。 開語人R放基限 1\ny¢ 2021F 6A%E ー §\n- EEESGERAE 。\né . お飲みください 計 .\na 【裏面もみずすご覧下さい】 」\nの\noy \\\n6\n-",
       "ocrConfidence": 0.34,
-      "processingTimeMs": 5463,
-      "identificationTimeMs": 0.00029999998514540493,
+      "processingTimeMs": 5399,
+      "identificationTimeMs": 0.0001999999803956598,
       "abstained": false
     },
     {
@@ -735,8 +787,8 @@
       "alcoholTypeTop1": true,
       "ocrText": ". に *\n テ 『 放 る。 議 し\ny ¢ - めこ リリ\nいで し 7\nー 3\n- 2R\nー No.6 きき <\nーー一スム ー Xom \\\n§ i 70 COOL 』 。\n- § ゃ人 < B\nーー ae pey\nーー ここニ吊 保* が e\nて ~ E B !\n; 」 す\n_ - zー 1 3\n 埋 品質保証期限\n‘s 開ー の27oxa B 1\né ー rc W\n(iE om 】 E 。 訪\n、 、 fow\n E o “e\nE 2 \\\nF -d re L + §\nーー 。\nyY B\n% h &F ‘\nN\nQ =\nW\n i S08",
       "ocrConfidence": 0.29,
-      "processingTimeMs": 6322,
-      "identificationTimeMs": 0.00029999998514540493,
+      "processingTimeMs": 6266,
+      "identificationTimeMs": 0.00020000000949949026,
       "abstained": false
     },
     {
@@ -751,9 +803,9 @@
       "brandTop1": false,
       "makerTop1": false,
       "alcoholTypeTop1": true,
-      "ocrText": "イン\n\n»\n\nbk\n\nディジ コス\n\n品目 日 た の\n\n内容量 720ml\n\nララ\n\nアルコール分 14%\n\n精米歩合50用\n\n原材料名 (EmE),\n\n米こうじ(国産9\n\n保存方法 要冷蔵\n\n¥ 欲酒は20歳になっで2の\n\n55\n\ni052 psh a\n\n4\n\n“SRIR pits pp2128\n\nUisgeg\n\n202g6 3. 4\n\n則\n\n岬l\n\n者",
-      "ocrConfidence": 0.47,
-      "processingTimeMs": 6824,
+      "ocrText": "ー b1. y Lo WAS C e pv\ne EREESe\n\n> § 内容量 720mi Feo7\n\n’ アァアルコール分 14% 4\n\nー 精米歩合 50% ー\n\n 原材料名 lm)s が\nE. XSe@mER\n人 Eer %\n3 : 飲酒は20歳にな62用\n\nいい 放人。 F\n\n人 ししエーララ\n\nる \"知県土佐市再商2更誠\n\nBEE f\n\n回 -. /\n\n目順川川",
+      "ocrConfidence": 0.33,
+      "processingTimeMs": 6771,
       "identificationTimeMs": 0.00010000000474974513,
       "abstained": true
     }

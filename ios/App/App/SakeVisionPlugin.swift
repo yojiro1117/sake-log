@@ -228,13 +228,23 @@ public class SakeVisionPlugin: CAPPlugin, CAPBridgedPlugin {
     private func compactEmbedding(_ image: CIImage) -> [Double] {
         let context = CIContext(options: [.workingColorSpace: NSNull()])
         let target = CGRect(x: 0, y: 0, width: 8, height: 8)
-        let scale = CGAffineTransform(scaleX: 8 / max(1, image.extent.width), y: 8 / max(1, image.extent.height))
+        let sourceWidth = max(CGFloat(1), image.extent.width)
+        let sourceHeight = max(CGFloat(1), image.extent.height)
+        let scale = CGAffineTransform(scaleX: CGFloat(8) / sourceWidth, y: CGFloat(8) / sourceHeight)
         let normalized = image.transformed(by: scale).cropped(to: target)
         var bytes = [UInt8](repeating: 0, count: 8 * 8 * 4)
         context.render(normalized, toBitmap: &bytes, rowBytes: 8 * 4, bounds: target, format: .RGBA8, colorSpace: CGColorSpaceCreateDeviceRGB())
-        return stride(from: 0, to: bytes.count, by: 4).map { index in
-            (0.299 * Double(bytes[index]) + 0.587 * Double(bytes[index + 1]) + 0.114 * Double(bytes[index + 2])) / 255
+
+        var embedding: [Double] = []
+        embedding.reserveCapacity(64)
+        for index in stride(from: 0, to: bytes.count, by: 4) {
+            let red = Double(bytes[index])
+            let green = Double(bytes[index + 1])
+            let blue = Double(bytes[index + 2])
+            let luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255.0
+            embedding.append(luminance)
         }
+        return embedding
     }
 
     private func quality(_ image: CIImage, regions: [VNRectangleObservation]) -> [String: Any] {

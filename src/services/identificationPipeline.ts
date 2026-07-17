@@ -1,9 +1,10 @@
 import { db } from '../db/db';
-import type { IdentificationPath, IdentificationResult } from '../types';
+import type { AlcoholType, IdentificationPath, IdentificationResult } from '../types';
 import { rankCatalogCandidates } from './candidateRanking';
 import {
   retrieveBarcodeCandidates,
   retrieveCatalogCandidates,
+  retrieveExactImageCandidates,
   retrieveProductIdCandidates,
   retrieveVisualCandidates,
   unionRetrievedCandidates
@@ -13,13 +14,14 @@ import { fuseImageEvidence, type ImageIdentificationInput } from './evidenceFusi
 import { saveIdentificationResult } from './identificationRepository';
 import { normalizeCatalogTerm } from './ocrNormalization';
 import { loadLocalProductCatalog } from './productCatalogService';
-import { scoreVisualReferences } from './visualMatching';
+import { exactImageReferenceProducts, scoreVisualReferences } from './visualMatching';
 
 export async function identifyAlcoholProductEvidencePipeline(input: {
   images: ImageIdentificationInput[];
   path?: IdentificationPath;
   persist?: boolean;
   signal?: AbortSignal;
+  alcoholTypeHint?: AlcoholType;
 }): Promise<IdentificationResult> {
   const started = performance.now();
   const runId = crypto.randomUUID();
@@ -62,6 +64,8 @@ export async function identifyAlcoholProductEvidencePipeline(input: {
   });
   const textCandidates = retrieveCatalogCandidates(fused.text, catalog, path === 'deep' ? 50 : 30);
   const barcodeCandidates = retrieveBarcodeCandidates(fused.barcodeValues, catalog);
+  const exactImageIds = input.images.flatMap((image) => image.imageHash ? exactImageReferenceProducts(image.imageHash, references) : []);
+  const exactImageCandidates = retrieveExactImageCandidates(exactImageIds, catalog);
   const visualCandidates = retrieveVisualCandidates(visualScores, catalog, 0.84);
   const historyCandidates = retrieveProductIdCandidates(historyIds, catalog, 'history', '過去ログの確認済み銘柄と一致', 68);
   const correctionCandidates = retrieveProductIdCandidates(correctionIds, catalog, 'correction', 'ユーザー修正履歴と一致', 74);
@@ -69,7 +73,7 @@ export async function identifyAlcoholProductEvidencePipeline(input: {
     ? textCandidates.filter((item) => fused.repeatedTerms.some((term) => item.matchedTerms.some((matched) => normalizeCatalogTerm(matched).includes(term)))).map((item) => item.entry.productId)
     : [];
   const multiPhotoCandidates = retrieveProductIdCandidates(multiPhotoIds, catalog, 'multi-photo', '複数写真で一致語を確認', 72);
-  const retrieved = unionRetrievedCandidates(textCandidates, barcodeCandidates, visualCandidates, historyCandidates, correctionCandidates, multiPhotoCandidates);
+  const retrieved = unionRetrievedCandidates(textCandidates, barcodeCandidates, exactImageCandidates, visualCandidates, historyCandidates, correctionCandidates, multiPhotoCandidates);
   const retrievalMs = performance.now() - loadStarted - loadMs;
   const rankingStarted = performance.now();
   const ranked = rankCatalogCandidates(retrieved, {
@@ -78,7 +82,8 @@ export async function identifyAlcoholProductEvidencePipeline(input: {
     barcodeValues: fused.barcodeValues,
     imageCount: fused.imageCount,
     repeatedTerms: fused.repeatedTerms,
-    visualScores
+    visualScores,
+    alcoholTypeHint: input.alcoholTypeHint
   });
   const calibration = calibrateIdentificationCandidates(ranked);
   const rankingMs = performance.now() - rankingStarted;
@@ -90,6 +95,7 @@ export async function identifyAlcoholProductEvidencePipeline(input: {
     retrieval: {
       textCandidates:textCandidates.map((item) => item.entry.productId),
       barcodeCandidates:barcodeCandidates.map((item) => item.entry.productId),
+      exactImageCandidates:exactImageCandidates.map((item) => item.entry.productId),
       visualCandidates:visualCandidates.map((item) => item.entry.productId),
       historyCandidates:historyCandidates.map((item) => item.entry.productId),
       correctionCandidates:correctionCandidates.map((item) => item.entry.productId),
